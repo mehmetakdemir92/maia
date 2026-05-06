@@ -1,0 +1,40 @@
+//
+//  Word.swift
+//  vocability
+//
+//  Created by Mehmet Akdemir on 19.01.2026.
+//
+
+import Foundation
+import CryptoKit
+
+extension UUID {
+    static func stable(from string: String) -> UUID {
+        let hash = SHA256.hash(data: Data(string.utf8))
+        let bytes = Array(hash.prefix(16))
+        return UUID(uuid: (
+            bytes[0], bytes[1], bytes[2], bytes[3],
+            bytes[4], bytes[5],
+            (bytes[6] & 0x0F) | 0x40, bytes[7], // Version 4
+            (bytes[8] & 0x3F) | 0x80, bytes[9], // Variant
+            bytes[10], bytes[11], bytes[12], bytes[13], bytes[14], bytes[15]
+        ))
+    }
+}
+
+struct Word: Identifiable, Codable, Equatable {
+    let id: UUID
+    let word: String
+    let definition: String
+    let exampleSentence: String
+    let phonetic: String?
+    
+    init(id: UUID = UUID(), word: String, definition: String, exampleSentence: String, phonetic: String? = nil) {
+        self.id = id
+        self.word = word
+        self.definition = definition
+        self.exampleSentence = exampleSentence
+        self.phonetic = phonetic
+    }
+}
+
