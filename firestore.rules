@@ -1,0 +1,20 @@
+// Firebase Console > Firestore Database > Rules'a yapıştırıp "Publish" tıkla.
+// Kapsar: users/appData, scores, diaryEntries, wordProgress, quizEvents, dailyWords
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    // Sıralama: her kullanıcı kendi puanını yazar; giriş yapmış herkes okuyabilir (rank sorgusu için).
+    match /scores/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    // Günün kelimeleri: yalnızca Cloud Functions (Admin SDK) yazar; istemci sadece okur.
+    match /dailyWords/{date} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+  }
+}

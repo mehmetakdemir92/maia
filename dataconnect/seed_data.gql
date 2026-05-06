@@ -1,0 +1,56 @@
+mutation CreateSeedData @transaction @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      createdAt: "2024-04-26T12:00:00Z",
+      displayName: "demouser1",
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      createdAt: "2024-04-26T12:00:00Z",
+      displayName: "demouser2",
+    }
+  ])
+  tag_insertMany(data: [
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      userId: "550e8400-e29b-41d4-a716-446655440000",
+      name: "ExampleTag1",
+    },
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a12",
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      name: "ExampleTag2",
+    }
+  ])
+  entry_insertMany(data: [
+    {
+      id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      userId: "550e8400-e29b-41d4-a716-446655440000",
+      content: "Example entry from demouser1",
+      createdAt: "2024-04-26T12:00:00Z",
+      date: "2024-04-26",
+      updatedAt: "2024-04-26T12:00:00Z",
+      isHighlight: true,
+    },
+    {
+      id: "f47ac10b-58cc-4372-a567-0e02b2c3d480",
+      userId: "550e8400-e29b-41d4-a716-446655440001",
+      content: "Example entry from demouser2",
+      createdAt: "2024-04-26T12:00:00Z",
+      date: "2024-04-26",
+      updatedAt: "2024-04-26T12:00:00Z",
+      isHighlight: false,
+    }
+  ])
+  entryTag_insertMany(data: [
+    {
+      entryId: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      tagId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    },
+    {
+      entryId: "f47ac10b-58cc-4372-a567-0e02b2c3d480",
+      tagId: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a12",
+    }
+  ])
+}

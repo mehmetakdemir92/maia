@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "maia-6f0f3",
+    "prod": "vocability-6f0f3"
+  },
+  "targets": {},
+  "etags": {}
+}

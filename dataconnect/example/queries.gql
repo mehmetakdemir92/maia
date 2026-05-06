@@ -1,0 +1,25 @@
+mutation CreateUserMutation($displayName: String!, $email: String, $profilePictureUrl: String) @auth(level: USER, insecureReason: "This operation is safe to expose to all logged in users.") {
+  user_insert(data: {displayName: $displayName, email: $email, profilePictureUrl: $profilePictureUrl, createdAt_expr: "request.time"})
+}
+
+query GetEntriesByUser($userId: UUID!) @auth(level: USER) {
+  entries(where: {userId: {eq: $userId}}) {
+    id
+    content
+    createdAt
+    date
+    isHighlight
+    updatedAt
+  }
+}
+
+mutation CreateTag($name: String!) @auth(level: USER) {
+  tag_insert(data: {name: $name, userId_expr: "auth.uid"})
+}
+
+query ListAllTags @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  tags {
+    id
+    name
+  }
+}
