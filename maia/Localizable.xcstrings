@@ -1,0 +1,1713 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld day streak" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld günlük seri"
+          }
+        }
+      }
+    },
+    "%lld learned words" : {
+
+    },
+    "•" : {
+
+    },
+    "🎉 Great Job!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 Harika iş!"
+          }
+        }
+      }
+    },
+    "7 day streak" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 günlük seri"
+          }
+        }
+      }
+    },
+    "7 perfect quiz scores" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 mükemmel quiz skoru"
+          }
+        }
+      }
+    },
+    "7 perfect scores" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 mükemmel skor"
+          }
+        }
+      }
+    },
+    "15 day streak in a month" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir ayda 15 günlük seri"
+          }
+        }
+      }
+    },
+    "15-day streak in a month" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir ayda 15 günlük seri"
+          }
+        }
+      }
+    },
+    "ABONELIK KOSULLARI\n\n- Satin alma onayinda odeme Apple ID hesabiniza yansitilir.\n- Abonelik, mevcut donem bitiminden en az 24 saat once iptal edilmezse otomatik yenilenir.\n- Yenileme ucreti, mevcut donemin bitimine 24 saat kala hesabiniza yansitilabilir.\n- Abonelik yonetimi ve iptal islemleri App Store hesap ayarlarindan yapilir.\n- Sunulmasi halinde ucretsiz deneme suresi, sure sonunda iptal edilmezse ucretli abonelige donusur." : {
+
+    },
+    "Ad Error" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reklam hatası"
+          }
+        }
+      }
+    },
+    "Add a note or example..." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not veya örnek ekle..."
+          }
+        }
+      }
+    },
+    "Add example sentence" : {
+
+    },
+    "An error occurred" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir hata oluştu"
+          }
+        }
+      }
+    },
+    "App language applies immediately. System follows your device language." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulama dili hemen uygulanır. Sistem seçeneği cihaz dilinizi kullanır."
+          }
+        }
+      }
+    },
+    "Are you sure you want to sign out?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çıkış yapmak istediğinize emin misiniz?"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geri"
+          }
+        }
+      }
+    },
+    "Build your daily English habit" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her gün İngilizce alışkanlığı oluştur"
+          }
+        }
+      }
+    },
+    "By continuing, you agree to our Terms of Use and Privacy Policy." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devam ederek Kullanım Koşulları ve Gizlilik Politikası'nı kabul etmiş olursunuz."
+          }
+        }
+      }
+    },
+    "By using Maia, you agree to the following terms and conditions:\n\n1. You will use the app for educational purposes only.\n2. You are responsible for maintaining the confidentiality of your account.\n3. We reserve the right to modify these terms at any time.\n4. Premium features require a subscription.\n\nFor questions, please contact support." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maia’ı kullanarak aşağıdaki şartları kabul etmiş olursunuz:\n\n1. Uygulamayı yalnızca eğitim amaçlı kullanacaksınız.\n2. Hesabınızın gizliliğini koruma sorumluluğu size aittir.\n3. Bu şartları istediğimiz zaman değiştirme hakkını saklı tutarız.\n4. Premium özellikler abonelik gerektirir.\n\nSorularınız için lütfen destek ile iletişime geçin."
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İptal"
+          }
+        }
+      }
+    },
+    "Career" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kariyer"
+          }
+        }
+      }
+    },
+    "CEFR Journey" : {
+
+    },
+    "Change your CEFR step anytime. This affects your learning difficulty." : {
+
+    },
+    "Check Answer" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cevabı kontrol et"
+          }
+        }
+      }
+    },
+    "Choose a category with Premium. Current: General." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori seçmek için Premium’a geçin. Şu an: Genel."
+          }
+        }
+      }
+    },
+    "Choose from Library" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Galeriden seç"
+          }
+        }
+      }
+    },
+    "Choose Photo" : {
+
+    },
+    "Choose the best word to complete:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamamlamak için en uygun kelimeyi seç:"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapat"
+          }
+        }
+      }
+    },
+    "Collection" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koleksiyon"
+          }
+        }
+      }
+    },
+    "Complete 1 quiz" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1 quiz tamamla"
+          }
+        }
+      }
+    },
+    "Complete 10 quizzes" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10 quiz tamamla"
+          }
+        }
+      }
+    },
+    "Complete quizzes to start building your vocabulary diary!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelime günlüğünü oluşturmak için quizleri tamamla!"
+          }
+        }
+      }
+    },
+    "Complete the sentence:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cümleyi tamamla:"
+          }
+        }
+      }
+    },
+    "Complete your first quiz" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk quizini tamamla"
+          }
+        }
+      }
+    },
+    "Complete your profile" : {
+
+    },
+    "Confirm password" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre tekrar"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devam"
+          }
+        }
+      }
+    },
+    "Continue with Apple" : {
+
+    },
+    "Continue with Google" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google ile devam et"
+          }
+        }
+      }
+    },
+    "Correct" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğru"
+          }
+        }
+      }
+    },
+    "Correct ✅" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğru ✅"
+          }
+        }
+      }
+    },
+    "Correct answer:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğru cevap:"
+          }
+        }
+      }
+    },
+    "Correct: %lld" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğru: %lld"
+          }
+        }
+      }
+    },
+    "Could not load image" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görsel yüklenemedi"
+          }
+        }
+      }
+    },
+    "Could not load rewarded ad right now." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ödüllü reklam şu anda yüklenemedi. Lütfen biraz sonra tekrar deneyin."
+          }
+        }
+      }
+    },
+    "Couldn’t generate an example right now. Please try again." : {
+
+    },
+    "Couldn’t sync your diary with the cloud. Showing entries saved on this device." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük bulutla eşitlenemedi. Bu cihaza kaydedilmiş kayıtlar gösteriliyor."
+          }
+        }
+      }
+    },
+    "Create account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesap oluştur"
+          }
+        }
+      }
+    },
+    "Current level: %@" : {
+
+    },
+    "Current Streak" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Güncel seri"
+          }
+        }
+      }
+    },
+    "Daily streak completed!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük seri tamamlandı!"
+          }
+        }
+      }
+    },
+    "Daily words are drawn from this category. Default: General." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük kelimeler bu kategoriden seçilir. Varsayılan: Genel."
+          }
+        }
+      }
+    },
+    "Day completed!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gün tamamlandı!"
+          }
+        }
+      }
+    },
+    "Day Streak" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük seri"
+          }
+        }
+      }
+    },
+    "days" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gün"
+          }
+        }
+      }
+    },
+    "Debug: force Premium" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debug: Premium’u zorla"
+          }
+        }
+      }
+    },
+    "Definition" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanım"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sil"
+          }
+        }
+      }
+    },
+    "Delete Account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı sil"
+          }
+        }
+      }
+    },
+    "Diary" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük"
+          }
+        }
+      }
+    },
+    "Discard" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vazgeç"
+          }
+        }
+      }
+    },
+    "Dismiss" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapat"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitti"
+          }
+        }
+      }
+    },
+    "Edit Name" : {
+
+    },
+    "Edit note..." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notu düzenle..."
+          }
+        }
+      }
+    },
+    "Email" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-posta"
+          }
+        }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İngilizce"
+          }
+        }
+      }
+    },
+    "English level" : {
+
+    },
+    "Enjoy an ad-free experience, word focus categories, and AI-powered extra example sentences." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reklamsız deneyim, kelime odağı kategorileri ve yapay zekâ destekli ek örnek cümleler."
+          }
+        }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hata"
+          }
+        }
+      }
+    },
+    "Example" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Örnek"
+          }
+        }
+      }
+    },
+    "Example Sentences" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Örnek cümleler"
+          }
+        }
+      }
+    },
+    "Fill in the blank:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boşluğu doldur:"
+          }
+        }
+      }
+    },
+    "Firestore couldn’t connect. Check your internet connection, then tap Try Again." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firestore’a ulaşılamıyor. İnternet bağlantınızı kontrol edip Tekrar dene’ye basın."
+          }
+        }
+      }
+    },
+    "First Steps" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk adımlar"
+          }
+        }
+      }
+    },
+    "Freeze & Delete Account" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı dondur ve sil"
+          }
+        }
+      }
+    },
+    "G" : {
+
+    },
+    "General" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genel"
+          }
+        }
+      }
+    },
+    "Generate More" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha fazla oluştur"
+          }
+        }
+      }
+    },
+    "Generate more example sentences" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha fazla örnek cümle oluştur"
+          }
+        }
+      }
+    },
+    "Generated" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oluşturuldu"
+          }
+        }
+      }
+    },
+    "Generating questions..." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorular oluşturuluyor..."
+          }
+        }
+      }
+    },
+    "Get Premium" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium’a geç"
+          }
+        }
+      }
+    },
+    "GIZLILIK POLITIKASI\n\nBu politika, Maia'nin hangi verileri hangi amaclarla isledigini aciklar.\n\n1) Islenen veri kategorileri\n- Hesap verileri (e-posta, kullanici kimligi)\n- Uygulama kullanim ve teknik verileri (analitik, hata kayitlari)\n- Abonelik ve yetki durum bilgileri\n\n2) Isleme amaclari\n- Giris islemlerini ve temel uygulama ozelliklerini saglamak\n- Guvenlik, performans ve urun kalitesini iyilestirmek\n- Premium ozellikleri sunmak\n\n3) Ucuncu taraf hizmetler\n- Kimlik dogrulama, depolama ve analitik icin Firebase/Google servisleri kullanilabilir.\n\n4) Veri saklama\n- Veriler, isleme amaci icin gerekli sure boyunca saklanir.\n- Yasal zorunluluk yoksa silme talepleri dogrultusunda kaldirilir veya anonimlestirilir.\n\n5) Kullanici haklari\n- Uygulanabilir mevzuata gore erisim, duzeltme ve silme taleplerinde bulunabilirsiniz.\n\n6) Iletisim\n- Gizlilik talepleri icin: privacy@yourdomain.com" : {
+
+    },
+    "Head Of The Ambitious Poets Department" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hırslı şairler departmanı başkanı"
+          }
+        }
+      }
+    },
+    "IELTS / TOEFL" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IELTS / TOEFL"
+          }
+        }
+      }
+    },
+    "KULLANIM KOSULLARI\n\nMaia uygulamasini kullanarak bu kosullari kabul etmis sayilirsiniz.\n\n1) Hesap ve guvenlik\n- Hesap bilgilerinizin guvenliginden siz sorumlusunuz.\n- Hesabinizin yetkisiz kullanimini fark etmeniz halinde bize bildirmeniz gerekir.\n\n2) Izin verilen kullanim\n- Uygulama yalnizca hukuka uygun ve egitim amacli kullanilabilir.\n- Sisteme yetkisiz erisim, hizmeti bozma girisimi veya tersine muhendislik yasaktir.\n\n3) Ucretli ozellikler ve abonelik\n- Premium icerikler abonelik kapsaminda sunulabilir.\n- Ucretlendirme, yenileme ve iptal surecleri Apple App Store tarafindan yonetilir.\n\n4) Degisiklik hakki\n- Uygulama ozellikleri ve bu kosullar zaman zaman guncellenebilir.\n- Onemli degisiklikler uygulama icinden duyurulur.\n\n5) Sorumlulugun sinirlandirilmasi\n- Uygulama \"oldugu gibi\" sunulur.\n- Yasal olarak izin verilen olcude, dolayli zararlar ve hizmet kesintilerinden sorumluluk kabul edilmez.\n\n6) Iletisim\n- Hukuki konular icin: support@yourdomain.com" : {
+
+    },
+    "Languages" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diller"
+          }
+        }
+      }
+    },
+    "Learn 100 words" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100 kelime öğren"
+          }
+        }
+      }
+    },
+    "Learn 200 words" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "200 kelime öğren"
+          }
+        }
+      }
+    },
+    "Learn 300 words" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "300 kelime öğren"
+          }
+        }
+      }
+    },
+    "learned" : {
+
+    },
+    "Legal" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yasal"
+          }
+        }
+      }
+    },
+    "Loading quiz..." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz yükleniyor..."
+          }
+        }
+      }
+    },
+    "Log in" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş yap"
+          }
+        }
+      }
+    },
+    "Maia" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maia"
+          }
+        }
+      }
+    },
+    "Maintain a 7-day streak" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 günlük seri sürdür"
+          }
+        }
+      }
+    },
+    "Max. Streak" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En uzun seri"
+          }
+        }
+      }
+    },
+    "Maximum attempts reached for today" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün için deneme hakkın doldu"
+          }
+        }
+      }
+    },
+    "Missed yesterday? Watch a short ad to save your streak." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dünü mü kaçırdınız? Seriyi kurtarmak için kısa bir reklam izleyin."
+          }
+        }
+      }
+    },
+    "Monthly Master" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ay ustası"
+          }
+        }
+      }
+    },
+    "My example sentences" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Örnek cümlelerim"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad"
+          }
+        }
+      }
+    },
+    "Name Surname" : {
+
+    },
+    "Next Question" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonraki soru"
+          }
+        }
+      }
+    },
+    "Next review: %@" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonraki tekrar: %@"
+          }
+        }
+      }
+    },
+    "No active subscription found for this Apple ID." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Apple Kimliği için aktif abonelik bulunamadı."
+          }
+        }
+      }
+    },
+    "No ads" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reklam yok"
+          }
+        }
+      }
+    },
+    "No Diary Entries Yet" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz günlük kaydı yok"
+          }
+        }
+      }
+    },
+    "Not quite ❌" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tam değil ❌"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamam"
+          }
+        }
+      }
+    },
+    "Only in DEBUG builds. Mimics App Store subscription." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca DEBUG derlemesinde. App Store aboneliğini taklit eder."
+          }
+        }
+      }
+    },
+    "or" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "veya"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifre"
+          }
+        }
+      }
+    },
+    "Passwords don't match" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifreler eşleşmiyor"
+          }
+        }
+      }
+    },
+    "Perfect Quizzes" : {
+
+    },
+    "Perfect Week" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kusursuz hafta"
+          }
+        }
+      }
+    },
+    "Pick the most natural word:" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En doğal kelimeyi seç:"
+          }
+        }
+      }
+    },
+    "Practice with learned words" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öğrendiğin kelimelerle pratik yap"
+          }
+        }
+      }
+    },
+    "Premium" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium"
+          }
+        }
+      }
+    },
+    "Premium removes ads and unlocks word focus categories and AI example sentences." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium reklamları kaldırır, kelime odağı kategorilerini ve yapay zekâ destekli ek örnek cümleleri açar."
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gizlilik Politikası"
+          }
+        }
+      }
+    },
+    "Products unavailable. Check App Store Connect / StoreKit config." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ürünler kullanılamıyor. App Store Connect veya StoreKit yapılandırmasını kontrol edin."
+          }
+        }
+      }
+    },
+    "Profile" : {
+
+    },
+    "Profile Photo Error" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil fotoğrafı hatası"
+          }
+        }
+      }
+    },
+    "Question %1$lld of %2$lld" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soru %1$lld / %2$lld"
+          }
+        }
+      }
+    },
+    "Quiz Achievement" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz başarısı"
+          }
+        }
+      }
+    },
+    "Quiz Champion" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz şampiyonu"
+          }
+        }
+      }
+    },
+    "Rank" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sıra"
+          }
+        }
+      }
+    },
+    "Recover yesterday streak by watching ad" : {
+
+    },
+    "Remember Me" : {
+
+    },
+    "Restore purchases" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Satın alımları geri yükle"
+          }
+        }
+      }
+    },
+    "Retry Quiz" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quizi yeniden dene"
+          }
+        }
+      }
+    },
+    "Review" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekrar"
+          }
+        }
+      }
+    },
+    "Right now there are no words that need review. Keep it up!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu an tekrar etmen gereken kelime yok. Böyle devam!"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydet"
+          }
+        }
+      }
+    },
+    "Saving..." : {
+
+    },
+    "See Results" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonuçları gör"
+          }
+        }
+      }
+    },
+    "Server is temporarily busy. Please tap Try Again in a few seconds." : {
+
+    },
+    "Set your English level" : {
+
+    },
+    "Set your name." : {
+
+    },
+    "Settings" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar"
+          }
+        }
+      }
+    },
+    "Setup error" : {
+
+    },
+    "Shakespeare is Calling" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shakespeare çağırıyor"
+          }
+        }
+      }
+    },
+    "Sign In" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş yap"
+          }
+        }
+      }
+    },
+    "Sign in error" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş hatası"
+          }
+        }
+      }
+    },
+    "Sign in to view your profile" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilini görmek için giriş yap"
+          }
+        }
+      }
+    },
+    "Sign in with Apple" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple ile oturum aç"
+          }
+        }
+      }
+    },
+    "Sign in with Google" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google ile oturum aç"
+          }
+        }
+      }
+    },
+    "Sign Out" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çıkış yap"
+          }
+        }
+      }
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kayıt ol"
+          }
+        }
+      }
+    },
+    "Start with your first word today." : {
+
+    },
+    "Streak" : {
+
+    },
+    "Streak Rank" : {
+
+    },
+    "Subscribe" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abone ol"
+          }
+        }
+      }
+    },
+    "Subscription" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonelik"
+          }
+        }
+      }
+    },
+    "Subscription renews automatically until cancelled in App Store account settings." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonelik, App Store hesap ayarlarından iptal edilene kadar otomatik yenilenir."
+          }
+        }
+      }
+    },
+    "Subscription Terms" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonelik Koşulları"
+          }
+        }
+      }
+    },
+    "Suggestion" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öneri"
+          }
+        }
+      }
+    },
+    "System language" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistem dili"
+          }
+        }
+      }
+    },
+    "Take Photo" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraf çek"
+          }
+        }
+      }
+    },
+    "Take Quiz" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quize gir"
+          }
+        }
+      }
+    },
+    "Tap to view plans" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planları görmek için dokun"
+          }
+        }
+      }
+    },
+    "Terms of Use" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullanım Koşulları"
+          }
+        }
+      }
+    },
+    "Terms of use (EULA)" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullanım şartları (EULA)"
+          }
+        }
+      }
+    },
+    "The AI service is busy right now. Please wait a few seconds and try again." : {
+
+    },
+    "The AI service is temporarily unavailable. Please try again in a moment." : {
+
+    },
+    "This action cannot be undone. Are you sure you want to delete your account?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu işlem geri alınamaz. Hesabınızı silmek istediğinize emin misiniz?"
+          }
+        }
+      }
+    },
+    "Today" : {
+
+    },
+    "Today's words couldn't be loaded." : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günün kelimeleri yüklenemedi. Bağlantınızı kontrol edin."
+          }
+        }
+      }
+    },
+    "Travel" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seyahat"
+          }
+        }
+      }
+    },
+    "Try Again" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekrar dene"
+          }
+        }
+      }
+    },
+    "Turkish" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Türkçe"
+          }
+        }
+      }
+    },
+    "Unlocked" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açıldı"
+          }
+        }
+      }
+    },
+    "Upgrade to Premium to see rest of your stats" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalan istatistiklerini görmek için Premium’a geç"
+          }
+        }
+      }
+    },
+    "Use this example" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu örneği kullan"
+          }
+        }
+      }
+    },
+    "User Agreement" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullanıcı sözleşmesi"
+          }
+        }
+      }
+    },
+    "Vocabulary Master" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelime ustası"
+          }
+        }
+      }
+    },
+    "Watch ad" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reklamı izle"
+          }
+        }
+      }
+    },
+    "Week Warrior" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hafta savaşçısı"
+          }
+        }
+      }
+    },
+    "What does \"%@\" mean?" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%@” kelimesi ne anlama gelir?"
+          }
+        }
+      }
+    },
+    "Word focus" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelime odağı"
+          }
+        }
+      }
+    },
+    "Word focus categories" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelime odağı kategorileri"
+          }
+        }
+      }
+    },
+    "Word of the Day" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günün kelimesi"
+          }
+        }
+      }
+    },
+    "Word Rank" : {
+
+    },
+    "Words" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelimeler"
+          }
+        }
+      }
+    },
+    "You got %1$lld out of %2$lld correct" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%2$lld sorudan %1$lld tanesini doğru yaptın"
+          }
+        }
+      }
+    },
+    "You learned it!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öğrendin!"
+          }
+        }
+      }
+    },
+    "You're all caught up!" : {
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Her şey güncel!"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,25 @@
+type User @table {
+  displayName: String!
+  createdAt: Timestamp!
+  email: String
+  profilePictureUrl: String
+}
+
+type Entry @table {
+  user: User!
+  date: Date!
+  content: String!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  isHighlight: Boolean
+}
+
+type Tag @table {
+  user: User!
+  name: String!
+}
+
+type EntryTag @table(key: ["entry", "tag"]) {
+  entry: Entry!
+  tag: Tag!
+}
