@@ -71,3 +71,17 @@ functions/.env.*
 
 # dataconnect generated files
 .dataconnect
+
+# IDE / OS
+.idea/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+.cursor/
+
+# Python
+__pycache__/
+*.pyc
+
+# Firebase iOS config (use GoogleService-Info.plist.example)
+maia/GoogleService-Info.plist
