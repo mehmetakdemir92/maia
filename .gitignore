@@ -88,3 +88,6 @@ maia/GoogleService-Info.plist
 
 # Local screenshot exports (canonical copies live in docs/screenshots/)
 screenshotsmaia/
+
+# Personal / internal planning (keep locally only; not for public repo)
+planning/
