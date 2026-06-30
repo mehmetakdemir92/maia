@@ -2,7 +2,8 @@
  * Maia Cloud Functions
  * - generateExample: Gemini (AI Studio) ile kelime için yeni örnek cümle üretir
  * - correctSentence: Gemini ile diary'deki kullanıcı cümlesini düzeltir (grammar/vocab)
- * - scheduledDailyWords / ensureDailyWords: Firestore dailyWords/{yyyy-MM-dd} (yalnızca Admin / callable + zamanlanmış iş)
+ * - scheduledDailyWords / ensureDailyWords: Firestore dailyWords + Cloud TTS telaffuz URL’leri
+ * - ensureWordPronunciation: tek kelime TTS (Storage önbellek)
  *
  * API key: firebase functions:secrets:set GEMINI_API_KEY
  * Key al: https://aistudio.google.com/app/apikey
@@ -17,6 +18,7 @@ const {
   ALLOWED_DAILY_WORD_CATEGORIES,
   normalizeLevel,
 } = require("./dailyWordsScheduler");
+const { ensureWordPronunciation } = require("./pronunciation");
 
 admin.initializeApp();
 
@@ -203,6 +205,28 @@ exports.scheduledDailyWords = functions
  * Callable: { date?: string, category?: string, userLevel: number, forceRegenerate?: boolean }
  * Güvenlik: yalnızca admin claim olan kullanıcılar.
  */
+/**
+ * Kelime telaffuzu: Storage'da MP3 yoksa Cloud TTS ile üretir, kalıcı download URL döner.
+ * Callable: { word: string }
+ */
+exports.ensureWordPronunciation = functions
+  .runWith({ timeoutSeconds: 60, memory: "256MB" })
+  .https.onCall(async (data, context) => {
+    if (!context.auth) {
+      throw new functions.https.HttpsError("unauthenticated", "Must be signed in.");
+    }
+    const word = typeof data?.word === "string" ? data.word.trim() : "";
+    if (!word || word.length > 64) {
+      throw new functions.https.HttpsError("invalid-argument", "word is required (max 64 chars).");
+    }
+    try {
+      return await ensureWordPronunciation(word);
+    } catch (err) {
+      console.error("ensureWordPronunciation error:", err.message || err);
+      throw new functions.https.HttpsError("internal", err.message || "Pronunciation failed");
+    }
+  });
+
 exports.regenerateDailyWords = functions
   .runWith({
     secrets: ["GEMINI_API_KEY"],

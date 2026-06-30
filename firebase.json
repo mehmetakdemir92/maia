@@ -2,7 +2,9 @@
   "functions": [
     {
       "codebase": "default",
-      "predeploy": [],
+      "predeploy": [
+        "cp \"$PROJECT_DIR/maia/DailyWordPool.txt\" \"$RESOURCE_DIR/DailyWordPool.txt\""
+      ],
       "source": "functions"
     },
     {
@@ -32,5 +34,43 @@
     "location": "eur3",
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/auth/action",
+        "destination": "/auth/action/index.html"
+      },
+      {
+        "source": "/auth/verified",
+        "destination": "/auth/verified/index.html"
+      },
+      {
+        "source": "/privacy",
+        "destination": "/privacy/index.html"
+      },
+      {
+        "source": "/support",
+        "destination": "/support/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/app-ads.txt",
+        "headers": [
+          { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+          { "key": "Cache-Control", "value": "public, max-age=3600" }
+        ]
+      }
+    ]
   }
 }

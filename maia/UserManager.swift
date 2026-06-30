@@ -23,7 +23,7 @@ class UserManager: ObservableObject {
     @Published var profileImageURL: String? = nil
     @Published var followers: Int = 0
     @Published var following: Int = 0
-    /// StoreKit aboneliği ve (yalnızca DEBUG) test anahtarı birleşimi.
+    /// StoreKit aboneliği ve (DEBUG / TestFlight) test anahtarı birleşimi.
     @Published var isPremium: Bool = false
     @Published var userLevel: Int = 1 // 1-11 scale (CEFR + intermediate steps)
     @Published var registrationDate: Date = Date()
@@ -40,6 +40,7 @@ class UserManager: ObservableObject {
     private static let onboardingCompletedPrefix = "onboardingCompleted."
     private static let rememberMeDefaultsKey = "rememberMeEnabled"
     private static let signOutOnNextLaunchDefaultsKey = "signOutOnNextLaunch"
+    private static let profilePhotoHiddenPrefix = "profilePhotoHidden."
     private var currentAppleSignInNonce: String?
     private var pendingNewSignUpUID: String?
     @Published var rememberMeEnabled: Bool
@@ -115,7 +116,7 @@ class UserManager: ObservableObject {
             isSignedIn = true
             userEmail = user.email ?? ""
             userName = user.displayName ?? userEmail.components(separatedBy: "@").first ?? "User"
-            profileImageURL = user.photoURL?.absoluteString
+            profileImageURL = resolvedProfileImageURL(for: user)
             registrationDate = user.metadata.creationDate ?? Date()
             applyInitialSetupState(for: user.uid)
             saveUserData()
@@ -142,7 +143,8 @@ class UserManager: ObservableObject {
     func signIn(email: String, password: String) async throws {
         persistSessionPreferenceForNextLaunch()
         do {
-            _ = try await Auth.auth().signIn(withEmail: email, password: password)
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            try await result.user.reload()
             AppAnalytics.shared.log(AppAnalyticsEventName.signInCompleted, params: ["method": "email"])
         } catch {
             AppAnalytics.shared.log(AppAnalyticsEventName.signInFailed, params: [
@@ -174,7 +176,7 @@ class UserManager: ObservableObject {
 
         pendingNewSignUpUID = result.user.uid
         UserDefaults.standard.set(false, forKey: Self.onboardingCompletedKey(for: result.user.uid))
-        requiresInitialSetup = true
+        applyInitialSetupState(for: result.user.uid)
 
         registrationDate = Date()
         saveUserData()
@@ -302,9 +304,9 @@ class UserManager: ObservableObject {
         pendingNewSignUpUID = nil
     }
 
-    #if DEBUG
-    /// Yalnızca DEBUG: mağaza aboneliği olmadan premium davranışını test etmek için.
+    /// DEBUG / TestFlight: mağaza aboneliği olmadan premium davranışını test etmek için.
     func setDebugPremiumOverride(_ value: Bool) {
+        guard BuildFeatures.allowsInternalPremiumOverride else { return }
         UserDefaults.standard.set(value, forKey: Self.debugPremiumDefaultsKey)
         publishPremiumState()
     }
@@ -312,7 +314,6 @@ class UserManager: ObservableObject {
     private var debugPremiumOverride: Bool {
         UserDefaults.standard.bool(forKey: Self.debugPremiumDefaultsKey)
     }
-    #endif
 
     // MARK: - StoreKit
 
@@ -344,11 +345,7 @@ class UserManager: ObservableObject {
     }
 
     func purchase(_ product: Product) async throws {
-        let planType: String = {
-            if product.id == SubscriptionConfig.premiumMonthlyProductID { return "monthly" }
-            if product.id == SubscriptionConfig.premiumYearlyProductID { return "yearly" }
-            return "unknown"
-        }()
+        let planType = SubscriptionConfig.planType(for: product.id)
 
         AppAnalytics.shared.log(AppAnalyticsEventName.purchaseStarted, params: [
             "product_id": product.id,
@@ -401,11 +398,8 @@ class UserManager: ObservableObject {
     }
 
     private func publishPremiumState() {
-        #if DEBUG
-        let combined = subscriptionEntitlementActive || debugPremiumOverride
-        #else
-        let combined = subscriptionEntitlementActive
-        #endif
+        let overrideActive = BuildFeatures.allowsInternalPremiumOverride && debugPremiumOverride
+        let combined = subscriptionEntitlementActive || overrideActive
         if isPremium != combined {
             isPremium = combined
         }
@@ -439,11 +433,44 @@ class UserManager: ObservableObject {
         _ = try await ref.putDataAsync(imageData, metadata: metadata)
         let downloadURL = try await ref.downloadURL()
 
+        setProfilePhotoHidden(false, uid: user.uid)
+
         let changeRequest = user.createProfileChangeRequest()
         changeRequest.photoURL = downloadURL
         try await changeRequest.commitChanges()
 
         profileImageURL = downloadURL.absoluteString
+    }
+
+    func removeProfilePhoto() async throws {
+        guard let user = Auth.auth().currentUser else {
+            throw NSError(domain: "UserManager", code: -1, userInfo: [NSLocalizedDescriptionKey: "Not signed in"])
+        }
+
+        let ref = Storage.storage().reference().child("users").child(user.uid).child("profile.jpg")
+        try? await ref.delete()
+
+        // Firebase Auth keeps provider photoURL after `nil` (common with Google Sign-In).
+        // Persist a per-account opt-out so the UI shows the placeholder immediately.
+        setProfilePhotoHidden(true, uid: user.uid)
+        profileImageURL = nil
+    }
+
+    private static func profilePhotoHiddenKey(for uid: String) -> String {
+        profilePhotoHiddenPrefix + uid
+    }
+
+    private func isProfilePhotoHidden(uid: String) -> Bool {
+        UserDefaults.standard.bool(forKey: Self.profilePhotoHiddenKey(for: uid))
+    }
+
+    private func setProfilePhotoHidden(_ hidden: Bool, uid: String) {
+        UserDefaults.standard.set(hidden, forKey: Self.profilePhotoHiddenKey(for: uid))
+    }
+
+    private func resolvedProfileImageURL(for user: FirebaseAuth.User) -> String? {
+        guard !isProfilePhotoHidden(uid: user.uid) else { return nil }
+        return user.photoURL?.absoluteString
     }
 
     func updateDisplayName(_ newName: String) async throws {

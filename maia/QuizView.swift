@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizView: View {
     let word: Word
+    @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var streakManager: StreakManager
     @EnvironmentObject var diaryManager: DiaryManager
     @EnvironmentObject var statsManager: StatsManager
@@ -24,12 +25,35 @@ struct QuizView: View {
     @State private var currentAnswerWasCorrect: Bool? = nil
     @State private var isAutoAdvancingAfterCorrect = false
     @State private var hasLoggedQuizCompletion = false
-    
+    @State private var didPresentQuizInterstitial = false
+    @State private var hasCommittedCompletionSideEffects = false
+    @State private var completionWasFirstQuizOfDay = false
+    @State private var isContinuing = false
+    @State private var isRetryingQuiz = false
+
+    private static let rippleMinDurationNs: UInt64 = 450_000_000
     var body: some View {
         ZStack {
             GlassSceneBackground()
             ScrollView {
             VStack(spacing: 24) {
+                HStack(alignment: .center, spacing: 12) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(word.word)
+                            .font(.title2.weight(.bold))
+                            .foregroundColor(.white)
+                        if let phonetic = word.phonetic {
+                            Text(phonetic)
+                                .font(.subheadline)
+                                .foregroundColor(.white.opacity(0.85))
+                                .italic()
+                        }
+                    }
+                    Spacer()
+                    PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 44)
+                }
+                .padding(.horizontal)
+
                 if !quizManager.quizCompleted {
                     // Quiz in progress
                     VStack(spacing: 20) {
@@ -182,14 +206,19 @@ struct QuizView: View {
         }
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(.hidden, for: .navigationBar)
         .overlay {
             if showStreakCelebration {
                 streakCelebrationOverlay
             }
         }
+        .onChange(of: quizManager.quizCompleted) { _, completed in
+            handleQuizCompletion(completed: completed)
+        }
         .onAppear {
+            if !userManager.isPremium {
+                QuizInterstitialAdPresenter.shared.preload()
+            }
             print("QuizView appeared for word: \(word.word)")
             // Load quiz when view appears
             quizManager.loadAttemptsForToday()
@@ -203,6 +232,9 @@ struct QuizView: View {
             showingAnswerFeedback = false
             currentAnswerWasCorrect = nil
             isAutoAdvancingAfterCorrect = false
+            hasCommittedCompletionSideEffects = false
+            hasLoggedQuizCompletion = false
+            didPresentQuizInterstitial = false
             
             // Start quiz
             let success = quizManager.startQuiz(for: word)
@@ -219,22 +251,61 @@ struct QuizView: View {
                 print("ERROR: Quiz failed to start. Word: \(word.word), Definition: \(word.definition)")
             }
         }
-        .onChange(of: quizManager.quizCompleted) { completed in
-            if completed {
-                quizManager.saveAttemptsForToday()
-                if !hasLoggedQuizCompletion {
-                    AppAnalytics.shared.log(AppAnalyticsEventName.quizCompleted, params: [
-                        "quiz_mode": "daily",
-                        "word_id": word.id.uuidString,
-                        "correct_count": String(quizManager.correctAnswers),
-                        "question_count": String(quizManager.currentQuiz.count)
-                    ])
-                    hasLoggedQuizCompletion = true
-                }
-            }
+    }
+
+    /// Quiz biter bitmez (Continue'a basılmadan) tüm kalıcı yan etkileri yazar; reklamı sonra gösterir.
+    /// Idempotent — `hasCommittedCompletionSideEffects` ile tekrarı engeller.
+    private func handleQuizCompletion(completed: Bool) {
+        guard completed else { return }
+
+        quizManager.saveAttemptsForToday()
+
+        if !hasLoggedQuizCompletion {
+            AppAnalytics.shared.log(AppAnalyticsEventName.quizCompleted, params: [
+                "quiz_mode": "daily",
+                "word_id": word.id.uuidString,
+                "correct_count": String(quizManager.correctAnswers),
+                "question_count": String(quizManager.currentQuiz.count)
+            ])
+            hasLoggedQuizCompletion = true
+        }
+
+        commitCompletionSideEffectsIfNeeded()
+        presentQuizCompletionAdIfNeeded()
+    }
+
+    /// Reklam Continue butonundan ÖNCE gösteriliyor; tamamlama mantığı Continue'a bağlı kalırsa
+    /// kullanıcı reklamdan sonra back ile çıktığında diary/streak/stats hiç yazılmaz.
+    /// Bu yüzden quiz biter bitmez kalıcı yan etkileri burada idempotent olarak yazıyoruz.
+    private func commitCompletionSideEffectsIfNeeded() {
+        guard !hasCommittedCompletionSideEffects else { return }
+        guard quizManager.hasPassed() else { return }
+        hasCommittedCompletionSideEffects = true
+
+        let correct = quizManager.getCorrectCount()
+        let total = quizManager.getTotalQuestionsAsked()
+
+        progressManager.updateProgress(for: word.id, correct: correct, total: total)
+        statsManager.recordQuizCompletion(correct: correct, total: total)
+        quizEventManager.record(wordId: word.id, correct: correct, total: total, completedAt: Date())
+        diaryManager.markWordAsQuizzed(word, for: Date())
+
+        let wasFirst = !streakManager.isDayCompleted(Date())
+        completionWasFirstQuizOfDay = wasFirst
+        if wasFirst {
+            streakManager.markDayCompleted()
         }
     }
-    
+
+    private func presentQuizCompletionAdIfNeeded() {
+        guard !userManager.isPremium else { return }
+
+        let completionCount = DailyQuizAdTracker.recordCompletion()
+        guard completionCount == 1, !didPresentQuizInterstitial else { return }
+        didPresentQuizInterstitial = true
+        QuizInterstitialAdPresenter.shared.presentIfAvailable()
+    }
+
     // MARK: - Computed Properties
     
     private var streakCelebrationOverlay: some View {
@@ -312,61 +383,58 @@ struct QuizView: View {
     }
     
     private var continueButton: some View {
-        Button(action: {
-            // Update spaced repetition progress
-            let correct = quizManager.getCorrectCount()
-            let total = quizManager.getTotalQuestionsAsked()
-            progressManager.updateProgress(for: word.id, correct: correct, total: total)
-            
-            // Record quiz stats
-            statsManager.recordQuizCompletion(correct: correct, total: total)
-            
-            // Kelime bazlı + zaman verisi (ML için), Firestore: quizEvents
-            quizEventManager.record(wordId: word.id, correct: correct, total: total, completedAt: Date())
-            
-            // Mark word as quizzed in diary
-            diaryManager.markWordAsQuizzed(word, for: Date())
-            
-            // Mark streak as completed (only once per day); ilk quizde streak kutlaması göster
-            let wasFirstQuizToday = !streakManager.isDayCompleted(Date())
-            if wasFirstQuizToday {
-                streakManager.markDayCompleted()
-                showStreakCelebration = true
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
-                    showStreakCelebration = false
-                    dismiss()
-                }
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    dismiss()
-                }
-            }
-        }) {
+        RippleLoadingButton(
+            isLoading: isContinuing,
+            cornerRadius: 10,
+            rippleStyle: .onDark,
+            action: handleContinue
+        ) {
             Text("Continue")
                 .font(.headline)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(AppColors.primaryButtonGradient)
-                .cornerRadius(10)
+                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         }
         .padding(.horizontal)
+    }
+
+    private func handleContinue() {
+        guard !isContinuing else { return }
+        isContinuing = true
+
+        commitCompletionSideEffectsIfNeeded()
+
+        if completionWasFirstQuizOfDay {
+            showStreakCelebration = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
+                showStreakCelebration = false
+                dismiss()
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                dismiss()
+            }
+        }
     }
     
     private var retryOrCloseSection: some View {
         Group {
             if canRetry && quizManager.quizAttemptsToday < 3 {
-                Button(action: {
-                    quizManager.resetQuiz()
-                    _ = quizManager.startQuiz(for: word)
-                }) {
+                RippleLoadingButton(
+                    isLoading: isRetryingQuiz,
+                    cornerRadius: 10,
+                    rippleStyle: .onDark,
+                    action: handleRetryQuiz
+                ) {
                     Text("Retry Quiz")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(AppColors.primaryButtonGradient)
-                        .cornerRadius(10)
+                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 }
                 .padding(.horizontal)
             } else {
@@ -374,7 +442,7 @@ struct QuizView: View {
                     .font(.subheadline)
                     .foregroundColor(.white.opacity(0.82))
             }
-            
+
             Button(action: {
                 dismiss()
             }) {
@@ -387,6 +455,26 @@ struct QuizView: View {
                     .cornerRadius(10)
             }
             .padding(.horizontal)
+        }
+    }
+
+    private func handleRetryQuiz() {
+        guard !isRetryingQuiz else { return }
+        isRetryingQuiz = true
+
+        Task {
+            async let minDelay: Void = Task.sleep(nanoseconds: Self.rippleMinDurationNs)
+            await MainActor.run {
+                quizManager.resetQuiz()
+                _ = quizManager.startQuiz(for: word)
+                showingAnswerFeedback = false
+                currentAnswerWasCorrect = nil
+                isAutoAdvancingAfterCorrect = false
+            }
+            _ = try? await minDelay
+            await MainActor.run {
+                isRetryingQuiz = false
+            }
         }
     }
 
@@ -427,16 +515,22 @@ struct QuizView: View {
 
             Text("Correct answer:")
                 .font(.caption.weight(.semibold))
-                .foregroundColor(.white.opacity(0.82))
+                .foregroundColor(AppColors.glassCardMuted)
 
             Text(question.options[question.correctAnswerIndex])
                 .font(.subheadline)
-                .foregroundColor(.white)
+                .foregroundColor(AppColors.glassCardTitle)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)
-        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .background {
+            Group {
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .fill(.thinMaterial)
+            }
+            .glassMaterialIgnoresSystemColorScheme()
+        }
         .overlay {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
                 .strokeBorder(Color.white.opacity(0.25), lineWidth: 0.5)

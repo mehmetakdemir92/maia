@@ -11,12 +11,13 @@ import GoogleMobileAds
 
 struct StreakView: View {
     @EnvironmentObject var streakManager: StreakManager
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var selectedMonth = Date()
     @State private var flameScale: CGFloat = 1.0
     @State private var flameOpacity: Double = 0.4
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 GlassSceneBackground()
                 ScrollView {
@@ -59,6 +60,7 @@ struct StreakView: View {
             streakManager.refreshStreak()
             flameScale = 1.0
             flameOpacity = 0.45
+            guard !reduceMotion else { return }
             withAnimation(.easeInOut(duration: 2.2).repeatForever(autoreverses: true)) {
                 flameScale = 1.08
                 flameOpacity = 0.58
@@ -191,8 +193,8 @@ struct CalendarView: View {
             .padding(.top, 12)
             
             // Hafta başlıkları + gerçek takvim hizası (locale firstWeekday)
-            let columns = Array(repeating: GridItem(.flexible(), spacing: 6), count: 7)
-            LazyVGrid(columns: columns, spacing: 6) {
+            let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 7)
+            LazyVGrid(columns: columns, spacing: 14) {
                 ForEach(calendarGridItems) { item in
                     switch item {
                     case .weekdayHeader(_, let title):
@@ -267,7 +269,13 @@ struct CalendarView: View {
                 }
             }
             .padding(12)
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .background {
+                Group {
+                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                        .fill(.thinMaterial)
+                }
+                .glassMaterialIgnoresSystemColorScheme()
+            }
             .overlay {
                 RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .strokeBorder(Color.white.opacity(0.18), lineWidth: 0.6)
@@ -328,7 +336,8 @@ struct CalendarView: View {
 private struct StreakCalendarEmptyCell: View {
     var body: some View {
         Color.clear
-            .frame(width: 36, height: 36)
+            .frame(maxWidth: .infinity)
+            .frame(height: 48)
     }
 }
 
@@ -364,24 +373,25 @@ struct StreakDayDotView: View {
                             .stroke(isToday ? Color.orange : Color.clear, lineWidth: 2)
                     )
                 Text("\(dayOfMonth)")
-                    .font(.system(size: 13, weight: isToday || isCompleted ? .semibold : .regular))
+                    .font(.system(size: 15, weight: isToday || isCompleted ? .semibold : .regular))
                     .foregroundColor(textColor)
 
                 if showsRecoveryAction {
                     Button(action: onRecoveryTap) {
                         Image(systemName: recoveryInProgress ? "hourglass" : "video.fill")
-                            .font(.system(size: 9, weight: .bold))
+                            .font(.system(size: 10, weight: .bold))
                             .foregroundColor(.white)
                             .padding(4)
                             .background(Color.red.opacity(0.95), in: Circle())
                     }
                     .buttonStyle(.plain)
-                    .offset(x: 12, y: -12)
+                    .offset(x: 14, y: -14)
                     .accessibilityLabel(String(localized: "Recover yesterday streak by watching ad"))
                 }
             }
-            .frame(width: 36, height: 36)
+            .frame(width: 48, height: 48)
         }
+        .frame(maxWidth: .infinity)
     }
     
     private var textColor: Color {

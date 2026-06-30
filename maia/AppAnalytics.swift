@@ -49,6 +49,8 @@ enum AppAnalyticsEventName {
     static let restorePurchaseFailed = "restore_purchase_failed"
     static let adBannerImpression = "ad_banner_impression"
     static let adBannerFailed = "ad_banner_failed"
+    static let adInterstitialShown = "ad_interstitial_shown"
+    static let adRewardedVideoShown = "ad_rewarded_video_shown"
 }
 
 enum AppAnalyticsPlacement {
@@ -57,6 +59,14 @@ enum AppAnalyticsPlacement {
     static let settings = "settings"
     static let wordOfDayGenerateMore = "word_of_day_generate_more"
     static let todayBottomBanner = "today_bottom_banner"
+    static let todayInlineBannerAfterFirst = "today_inline_banner_after_first"
+    static let todayInlineBannerAfterSecond = "today_inline_banner_after_second"
+    static let diaryBottomBanner = "diary_bottom_banner"
+    static let streakBottomBanner = "streak_bottom_banner"
+    static let profileBottomBanner = "profile_bottom_banner"
+    static let quizBottomBanner = "quiz_bottom_banner"
+    static let quizCompleteInterstitial = "quiz_complete_interstitial"
+    static let secondQuizCompleteRewardedVideo = "second_quiz_complete_rewarded_video"
 }
 
 final class AppAnalytics {

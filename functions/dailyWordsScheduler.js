@@ -6,6 +6,7 @@
 const fs = require("fs");
 const path = require("path");
 const admin = require("firebase-admin");
+const { ensureWordPronunciation } = require("./pronunciation");
 const GEMINI_TEXT_MODELS = (
   process.env.GEMINI_TEXT_MODELS ||
   "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-1.5-flash-latest"
@@ -115,16 +116,55 @@ function dedupePoolWords(entries) {
   return out;
 }
 
-function wordsForDate(dateStr, usedSet, entries, userLevel) {
-  const pool = entries.slice();
-  if (pool.length === 0) {
-    return ["learn", "practice", "review"];
-  }
-  const available = pool.filter((e) => !usedSet.has(e.word.toLowerCase()));
-  if (available.length < 3) {
-    return [];
-  }
+function fallbackBandPriority(userLevel) {
+  const level = normalizeLevel(userLevel);
+  if (level >= 8) return ["c2", "c1", "b2", "b1"];
+  if (level === 7) return ["c1", "b2", "b1", "a2"];
+  if (level === 5 || level === 6) return ["b2", "b1", "a2", "c1"];
+  if (level === 3 || level === 4) return ["b1", "a2", "b2", "a1"];
+  if (level === 2) return ["a2", "a1", "b1"];
+  return ["a1", "a2", "b1"];
+}
 
+function pickFromBucket(band, source, selectedWords, salt, rankEntries) {
+  const bucket = source.filter(
+    (e) =>
+      (e.cefrLevel || "").toLowerCase() === band &&
+      !selectedWords.has(e.word.toLowerCase())
+  );
+  return rankEntries(bucket, salt)[0] || null;
+}
+
+function fillRemainingSelections(dateStr, userLevel, selected, selectedWords, availablePool, fullPool, rankEntries) {
+  const priority = fallbackBandPriority(userLevel);
+  while (selected.length < 3) {
+    let pick = null;
+    for (const band of priority) {
+      pick = pickFromBucket(band, availablePool, selectedWords, `fill-${band}`, rankEntries);
+      if (pick) break;
+    }
+    if (!pick) {
+      for (const band of priority) {
+        pick = pickFromBucket(band, fullPool, selectedWords, `fill-wrap-${band}`, rankEntries);
+        if (pick) break;
+      }
+    }
+    if (!pick) {
+      const bucket = availablePool.filter((e) => !selectedWords.has(e.word.toLowerCase()));
+      pick = rankEntries(bucket, "fill-any")[0];
+    }
+    if (!pick) {
+      const bucket = fullPool.filter((e) => !selectedWords.has(e.word.toLowerCase()));
+      pick = rankEntries(bucket, "fill-any-wrap")[0];
+    }
+    if (!pick) break;
+    selected.push(pick);
+    selectedWords.add(pick.word.toLowerCase());
+  }
+}
+
+function selectWordsForDate(dateStr, usedSet, entries, userLevel) {
+  const pool = entries.slice();
   const rankEntries = (candidates, salt) =>
     [...candidates].sort((a, b) => {
       const as = stableWordScore(`${dateStr}|${salt}`, a.word);
@@ -138,29 +178,31 @@ function wordsForDate(dateStr, usedSet, entries, userLevel) {
       return 0;
     });
 
+  const available = pool.filter((e) => !usedSet.has(e.word.toLowerCase()));
   const desiredBands = preferredCEFRBands(userLevel);
   const selected = [];
   const selectedWords = new Set();
-  let remaining = available.slice();
 
   for (const band of desiredBands) {
-    const bucket = remaining.filter((e) => (e.cefrLevel || "").toLowerCase() === band);
-    const pick = rankEntries(bucket, `band-${band}`)[0];
-    if (!pick) continue;
+    const pick = pickEntryForBand(band, userLevel, available, pool, selectedWords, rankEntries);
+    if (!pick) {
+      console.warn(`dailyWords: ${band.toUpperCase()} band has no candidates (level ${userLevel}).`);
+      continue;
+    }
     selected.push(pick);
     selectedWords.add(pick.word.toLowerCase());
-    remaining = remaining.filter((e) => e.word.toLowerCase() !== pick.word.toLowerCase());
   }
 
-  if (selected.length < 3) {
-    const leftovers = remaining.filter((e) => !selectedWords.has(e.word.toLowerCase()));
-    for (const entry of rankEntries(leftovers, "fallback")) {
-      if (selected.length >= 3) break;
-      selected.push(entry);
-      selectedWords.add(entry.word.toLowerCase());
-    }
+  fillRemainingSelections(dateStr, userLevel, selected, selectedWords, available, pool, rankEntries);
+  return selected;
+}
+
+function wordsForDate(dateStr, usedSet, entries, userLevel) {
+  if (entries.length === 0) {
+    return ["learn", "practice", "review"];
   }
 
+  const selected = selectWordsForDate(dateStr, usedSet, entries, userLevel);
   if (selected.length !== 3) return [];
 
   const finalRanked = [...selected].sort((a, b) => {
@@ -200,6 +242,52 @@ async function collectUsedExcludingDateAndLevel(db, excludeDocId, userLevel) {
     }
   }
   return used;
+}
+
+/**
+ * Swift CEFRLevelMapping.substituteBands ile birebir uyumlu (sırasıyla aranır).
+ * NOT: JS switch fall-through duplicate case'leri sessizce yutar; tuple-benzeri eşleme için if/else kullanılır.
+ */
+function substituteBands(band, userLevel) {
+  const level = normalizeLevel(userLevel);
+  if (level >= 8 && level <= 11 && band === "c2") return ["c1", "b2"];
+  if (level >= 8 && level <= 11 && band === "c1") return ["c2", "b2"];
+  if (level >= 7 && level <= 11 && band === "b2") return ["c1", "c2"];
+  if (level >= 5 && level <= 7 && band === "b2") return ["c1", "b1"];
+  if (level >= 5 && level <= 6 && band === "b1") return ["b2", "a2"];
+  if (level >= 3 && level <= 4 && band === "b1") return ["b2", "a2"];
+  if (level >= 2 && level <= 3 && band === "a2") return ["b1", "a1"];
+  if (level >= 1 && level <= 2 && band === "a1") return ["a2"];
+  return [];
+}
+
+/**
+ * Sıra:
+ *  1) hedef bant + unused (availablePool)
+ *  2) hedef bant + sarma (fullPool — kullanılmışlardan tekrar)
+ *  3) substitute bantları + unused
+ *  4) substitute bantları + sarma
+ */
+function pickEntryForBand(band, userLevel, availablePool, fullPool, selectedWords, rankEntries) {
+  let pick = pickFromBucket(band, availablePool, selectedWords, `band-${band}`, rankEntries);
+  if (pick) return pick;
+
+  pick = pickFromBucket(band, fullPool, selectedWords, `wrap-${band}`, rankEntries);
+  if (pick) {
+    console.log(`dailyWords: ${band.toUpperCase()} band exhausted; wrapped within band (level ${userLevel}).`);
+    return pick;
+  }
+
+  const subs = substituteBands(band, userLevel);
+  for (const sub of subs) {
+    pick = pickFromBucket(sub, availablePool, selectedWords, `sub-${sub}`, rankEntries);
+    if (pick) return pick;
+  }
+  for (const sub of subs) {
+    pick = pickFromBucket(sub, fullPool, selectedWords, `sub-wrap-${sub}`, rankEntries);
+    if (pick) return pick;
+  }
+  return null;
 }
 
 function preferredCEFRBands(userLevel) {
@@ -260,8 +348,12 @@ async function enrichWordsGemini(genAI, lemmas, category) {
   const wordsList = lemmas.map((w) => `"${w}"`).join(", ");
   const prompt = `You are an English vocabulary teacher. For each of these words, provide:
 - phonetic (IPA notation)
-- definition (simple English, one short sentence)
-- exampleSentence (natural, daily use, 8-14 words)
+- definition (simple English, one short sentence, 6 to 12 words)
+- exampleSentence (natural, daily use, 8-14 words; MUST include the exact headword or a natural inflected form)
+
+IMPORTANT: The definition MUST NOT contain the headword itself or any of its
+inflected/derived forms (plural, verb tenses, -ing, -ed, -er, -est, -ly, etc.).
+For example, for "abandon" do not write "to abandon" or "abandoning"; rephrase.
 
 Words: ${wordsList}
 
@@ -310,7 +402,28 @@ function wordFirestoreDict(item, meta) {
   if (meta?.partOfSpeech) dict.partOfSpeech = meta.partOfSpeech;
   if (meta?.registerTag) dict.registerTag = meta.registerTag;
   if (meta?.frequencyBand != null) dict.frequencyBand = meta.frequencyBand;
+  if (item.pronunciationAudioURL) dict.pronunciationAudioURL = item.pronunciationAudioURL;
   return dict;
+}
+
+/** Her kelime için Storage MP3 + download URL; hata tek kelimeyi bloklamaz. */
+async function attachPronunciationsToFirestoreWords(words) {
+  await Promise.all(
+    words.map(async (w) => {
+      if (w.pronunciationAudioURL || !w.word) return;
+      try {
+        const { audioURL } = await ensureWordPronunciation(w.word);
+        w.pronunciationAudioURL = audioURL;
+      } catch (err) {
+        console.warn(`dailyWords pronunciation failed (${w.word}):`, err.message || err);
+      }
+    })
+  );
+  return words;
+}
+
+function wordsNeedPronunciation(words) {
+  return Array.isArray(words) && words.some((w) => w?.word && !w.pronunciationAudioURL);
 }
 
 function buildFirestoreWordsFromPayload(payload, entryByLemma) {
@@ -351,7 +464,7 @@ async function runDailyWordsJob(opts) {
       source,
       status: "pool_exhausted",
       poolRemaining: lemmas.length,
-      fallbackUsed: false,
+      fallbackUsed: normalizeLevel(userLevel) >= 8,
     });
     return { skipped: true, reason: "pool_exhausted", date, level: userLevel };
   }
@@ -372,6 +485,17 @@ async function runDailyWordsJob(opts) {
             String(w.exampleSentence).trim()
         );
         if (complete) {
+          if (wordsNeedPronunciation(arr)) {
+            const withAudio = await attachPronunciationsToFirestoreWords(arr.map((w) => ({ ...w })));
+            await ref.set({ words: withAudio }, { merge: true });
+            logJobEvent("daily_words_pronunciation_backfill", {
+              date,
+              level: userLevel,
+              source,
+              status: "ok",
+            });
+            return { ok: true, date, level: userLevel, docId, pronunciationBackfill: true };
+          }
           logJobEvent("daily_words_skipped", {
             date,
             level: userLevel,
@@ -390,6 +514,7 @@ async function runDailyWordsJob(opts) {
   const payload = await enrichWordsGemini(genAI, lemmas, category);
   const entryByLemma = buildEntryByLemma(entries);
   const wordsForFirestore = buildFirestoreWordsFromPayload(payload, entryByLemma);
+  await attachPronunciationsToFirestoreWords(wordsForFirestore);
 
   await ref.set(
     {

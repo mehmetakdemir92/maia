@@ -7,12 +7,15 @@ import SwiftUI
 import GoogleMobileAds
 import UIKit
 
-/// Alt bant banner; yalnızca ücretsiz kullanıcılar için `TodayTabView` içinde gösterilir.
+/// Alt bant banner; ücretsiz kullanıcılar için sekme / quiz altında.
 struct BannerAdView: UIViewRepresentable {
     let adUnitID: String
+    var placement: String = AppAnalyticsPlacement.todayBottomBanner
 
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        let coordinator = Coordinator()
+        coordinator.placement = placement
+        return coordinator
     }
 
     func makeUIView(context: Context) -> GADBannerView {
@@ -36,16 +39,18 @@ struct BannerAdView: UIViewRepresentable {
     }
 
     final class Coordinator: NSObject, GADBannerViewDelegate {
+        var placement: String = AppAnalyticsPlacement.todayBottomBanner
+
         func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
             AppAnalytics.shared.log(AppAnalyticsEventName.adBannerImpression, params: [
-                "placement": AppAnalyticsPlacement.todayBottomBanner
+                "placement": placement
             ])
         }
 
         func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-            print("Banner ad failed: \(error.localizedDescription)")
+            print("Banner ad failed (\(placement)): \(error.localizedDescription)")
             AppAnalytics.shared.log(AppAnalyticsEventName.adBannerFailed, params: [
-                "placement": AppAnalyticsPlacement.todayBottomBanner,
+                "placement": placement,
                 "error": String(describing: (error as NSError).code)
             ])
         }

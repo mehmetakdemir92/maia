@@ -28,7 +28,7 @@ struct ContentView: View {
                     .environmentObject(userManager)
             }
         }
-        .id(languageManager.refreshID)
+        .id("\(userManager.isSignedIn)-\(languageManager.refreshID)")
     }
 }
 
@@ -44,9 +44,6 @@ private struct InitialSetupView: View {
     }
 
     private static let cefrMainLevels: [String] = ["A1", "A2", "B1", "B2", "C1", "C2"]
-    private static let cefrStepLabels: [String] = [
-        "A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"
-    ]
 
     @EnvironmentObject private var userManager: UserManager
     @State private var step: Step = .profile
@@ -185,13 +182,19 @@ private struct InitialSetupView: View {
                 "",
                 text: $name,
                 prompt: Text("Name Surname")
-                    .foregroundColor(.white.opacity(0.75))
+                    .foregroundColor(AppColors.glassCardMuted)
             )
                 .textInputAutocapitalization(.words)
-                .foregroundColor(.white)
-                .tint(.white)
+                .foregroundColor(AppColors.glassCardTitle)
+                .tint(AppColors.primaryButton)
                 .padding(12)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .background {
+                    Group {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.ultraThinMaterial)
+                    }
+                    .glassMaterialIgnoresSystemColorScheme()
+                }
                 .padding(.top, 30)
         }
         .onChange(of: selectedPhotoItem) { _, newItem in
@@ -217,12 +220,12 @@ private struct InitialSetupView: View {
                 .font(.system(size: 30, weight: .bold))
                 .foregroundColor(.white)
 
-            Text("Current level: \(Self.cefrStepLabels[selectedLevelStep - 1])")
+            Text("Current level: \(CEFRLevelMapping.label(for: selectedLevelStep))")
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.white.opacity(0.92))
 
             VStack(spacing: 10) {
-                ForEach(Array(Self.cefrStepLabels.enumerated()), id: \.offset) { index, level in
+                ForEach(Array(CEFRLevelMapping.stepLabels.enumerated()), id: \.offset) { index, level in
                     let stepValue = index + 1
                     Button {
                         selectedLevelStep = stepValue

@@ -11,7 +11,7 @@ struct CollectionView: View {
     @EnvironmentObject var badgeManager: BadgeManager
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 GlassSceneBackground()
                 ScrollView {
@@ -30,7 +30,7 @@ struct CollectionView: View {
             .navigationTitle("Collection")
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.light, for: .navigationBar)
         }
     }
 }

@@ -13,7 +13,7 @@ struct GlassSceneBackground: View {
 
     var body: some View {
         if isAnimated {
-            TimelineView(.periodic(from: .now, by: 1.0 / 30.0)) { timeline in
+            TimelineView(.periodic(from: .now, by: 1.0 / 15.0)) { timeline in
                 let t = timeline.date.timeIntervalSinceReferenceDate
                 let p1 = CGPoint(
                     x: 0.18 + 0.24 * sin(t * 1.02),

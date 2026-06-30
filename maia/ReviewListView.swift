@@ -105,6 +105,8 @@ struct ReviewListView: View {
 
                                         Spacer()
 
+                                        PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 36)
+
                                         Text(nextDueText(for: word))
                                             .font(.caption)
                                             .foregroundColor(.secondary)
@@ -125,7 +127,7 @@ struct ReviewListView: View {
             .navigationTitle("Review")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.light, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Done") { dismiss() }

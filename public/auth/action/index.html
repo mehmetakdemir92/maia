@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify email — Maia</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      max-width: 400px;
+      width: 100%;
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+      text-align: center;
+    }
+    h1 { font-size: 1.25rem; margin: 0 0 8px; }
+    p { margin: 0 0 20px; color: #64748b; font-size: 0.95rem; line-height: 1.5; }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 20px;
+      background: #4f46e5;
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:disabled { opacity: 0.6; cursor: wait; }
+    .status { margin-top: 16px; font-size: 0.875rem; color: #64748b; min-height: 1.25em; }
+    .error { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <div class="card" id="card" role="main">
+    <h1 id="title">Opening Maia…</h1>
+    <p id="subtitle">Confirming your email address.</p>
+    <button type="button" class="btn" id="openApp" hidden>Open Maia</button>
+    <p class="status" id="status" aria-live="polite"></p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+  <script>
+    (function () {
+      var APP_SCHEME = "com.mehmetakdemir.maia";
+      var VERIFIED_PATH = "/auth/verified";
+
+      var firebaseConfig = {
+        apiKey: "AIzaSyCjGE2cqezwHrkuv6R0tTyKDZc-_fDNXHE",
+        authDomain: "vocability-6f0f3.firebaseapp.com",
+        projectId: "vocability-6f0f3"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      var auth = firebase.auth();
+
+      function param(name) {
+        return new URLSearchParams(window.location.search).get(name);
+      }
+
+      function buildAppURL() {
+        var qs = window.location.search;
+        if (!qs && window.location.hash.indexOf("?") >= 0) {
+          qs = window.location.hash.substring(window.location.hash.indexOf("?"));
+        }
+        return APP_SCHEME + "://__/auth/action" + (qs || "");
+      }
+
+      function setStatus(text, isError) {
+        var el = document.getElementById("status");
+        el.textContent = text || "";
+        el.className = "status" + (isError ? " error" : "");
+      }
+
+      function showOpenButton() {
+        var btn = document.getElementById("openApp");
+        btn.hidden = false;
+        btn.onclick = function () {
+          window.location.href = buildAppURL();
+        };
+      }
+
+      function tryOpenApp() {
+        window.location.href = buildAppURL();
+      }
+
+      function goVerified() {
+        var base = window.location.origin + VERIFIED_PATH;
+        var continueUrl = param("continueUrl");
+        if (continueUrl && continueUrl.indexOf("/auth/verified") >= 0) {
+          window.location.replace(continueUrl);
+        } else {
+          window.location.replace(base + "?verified=1");
+        }
+      }
+
+      function handleVerifyEmail(oobCode) {
+        document.getElementById("title").textContent = "Verify email";
+        document.getElementById("subtitle").textContent =
+          "Tap the button below to open Maia and finish verification.";
+
+        tryOpenApp();
+
+        var openedApp = false;
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) openedApp = true;
+        });
+
+        setTimeout(function () {
+          if (openedApp) return;
+
+          auth.applyActionCode(oobCode)
+            .then(function () {
+              setStatus("Email verified. Opening Maia…");
+              tryOpenApp();
+              setTimeout(goVerified, 1200);
+            })
+            .catch(function (err) {
+              var code = err && err.code;
+              if (code === "auth/invalid-action-code" || code === "auth/expired-action-code") {
+                document.getElementById("title").textContent = "Link expired";
+                document.getElementById("subtitle").textContent =
+                  "Request a new verification email from the Maia app.";
+                setStatus("", true);
+              } else {
+                setStatus(err.message || "Something went wrong.", true);
+              }
+              showOpenButton();
+            });
+        }, 900);
+      }
+
+      var mode = param("mode");
+      var oobCode = param("oobCode");
+
+      if (mode === "verifyEmail" && oobCode) {
+        handleVerifyEmail(oobCode);
+        showOpenButton();
+        document.getElementById("openApp").textContent = "Open Maia";
+      } else if (mode === "verifyEmail") {
+        document.getElementById("title").textContent = "Invalid link";
+        document.getElementById("subtitle").textContent = "This verification link is incomplete.";
+        setStatus("Request a new email from Maia.", true);
+      } else {
+        document.getElementById("title").textContent = "Maia";
+        document.getElementById("subtitle").textContent = "Open the app to continue.";
+        showOpenButton();
+      }
+    })();
+  </script>
+</body>
+</html>

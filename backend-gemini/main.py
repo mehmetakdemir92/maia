@@ -111,8 +111,16 @@ def enrich_words(req: EnrichWordsReq, authorization: str | None = Header(default
     words_list = ", ".join(f'"{w}"' for w in req.words[:10])  # max 10
     prompt = f"""You are an English vocabulary teacher. For each of these words, provide:
 - phonetic (IPA notation)
-- definition (simple English, one short sentence)
+- definition (simple English, one short sentence, 6 to 12 words)
 - exampleSentence (natural, daily use, 8-14 words)
+
+CRITICAL RULES:
+1. The exampleSentence MUST contain the exact headword (or a natural inflected form
+   such as plural, -ing, -ed, -s) so the learner clearly sees how the word is used.
+   The headword must be present; never write an example that omits it.
+2. The definition MUST NOT contain the headword itself or any of its
+   inflected/derived forms (plural, verb tenses, -ing, -ed, -er, -est, -ly, etc.).
+   For example, for "abandon" do not write "to abandon" or "abandoning"; rephrase.
 
 Words: {words_list}
 

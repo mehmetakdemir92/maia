@@ -85,3 +85,6 @@ __pycache__/
 
 # Firebase iOS config (use GoogleService-Info.plist.example)
 maia/GoogleService-Info.plist
+
+# Local screenshot exports (canonical copies live in docs/screenshots/)
+screenshotsmaia/
