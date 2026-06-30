@@ -45,3 +45,14 @@ functions/.env
 functions/.env.*
 
 .dataconnect
+
+.idea/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+.cursor/
+
+__pycache__/
+*.pyc
+
+maia/GoogleService-Info.plist
