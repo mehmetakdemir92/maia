@@ -50,6 +50,16 @@ struct MainTabView: View {
         .environmentObject(statsManager)
         .environmentObject(progressManager)
         .environmentObject(quizEventManager)
+        .onAppear {
+            if !userManager.isPremium {
+                QuizInterstitialAdPresenter.shared.preload()
+            }
+        }
+        .onChange(of: userManager.isPremium) { _, isPremium in
+            if !isPremium {
+                QuizInterstitialAdPresenter.shared.preload()
+            }
+        }
     }
 }
 

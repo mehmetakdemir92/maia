@@ -16,9 +16,6 @@ struct SettingsView: View {
     @State private var showingPremiumPaywall = false
     @State private var isRestoringPurchases = false
     @State private var selectedLegalDocument: LegalDocumentType?
-    private static let cefrStepLabels: [String] = [
-        "A1", "A1+", "A2", "A2+", "B1", "B1+", "B2", "B2+", "C1", "C1+", "C2"
-    ]
     
     private var displayName: String {
         userManager.userName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "User" : userManager.userName
@@ -29,7 +26,7 @@ struct SettingsView: View {
     }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 GlassSceneBackground()
                 List {
@@ -161,33 +158,33 @@ struct SettingsView: View {
                     Text("Subscription")
                         .foregroundColor(.white)
                 } footer: {
-                    Text("Premium removes ads and unlocks word focus categories and AI example sentences.")
+                    Text(String(localized: "Premium removes ads, unlocks AI sentence correction, extra examples, and full profile stats (quiz achievement, max streak)."))
                         .foregroundColor(.white.opacity(0.8))
                 }
 
-                #if DEBUG
-                Section {
-                    Toggle(isOn: Binding(
-                        get: { UserDefaults.standard.bool(forKey: "debugPremiumOverride") },
-                        set: { userManager.setDebugPremiumOverride($0) }
-                    )) {
-                        HStack {
-                            Image(systemName: "ladybug.fill")
-                            Text("Debug: force Premium")
+                if BuildFeatures.allowsInternalPremiumOverride {
+                    Section {
+                        Toggle(isOn: Binding(
+                            get: { UserDefaults.standard.bool(forKey: "debugPremiumOverride") },
+                            set: { userManager.setDebugPremiumOverride($0) }
+                        )) {
+                            HStack {
+                                Image(systemName: "ladybug.fill")
+                                Text("Debug: force Premium")
+                            }
                         }
+                    } footer: {
+                        Text("Xcode DEBUG builds only. Mimics App Store subscription.")
+                            .foregroundColor(.white.opacity(0.8))
                     }
-                } footer: {
-                    Text("Only in DEBUG builds. Mimics App Store subscription.")
-                        .foregroundColor(.white.opacity(0.8))
                 }
-                #endif
                 
                 Section {
                     Picker(selection: Binding(
                         get: { userManager.userLevel },
                         set: { userManager.setUserLevel($0) }
                     )) {
-                        ForEach(Array(Self.cefrStepLabels.enumerated()), id: \.offset) { index, level in
+                        ForEach(Array(CEFRLevelMapping.stepLabels.enumerated()), id: \.offset) { index, level in
                             Text(level).tag(index + 1)
                         }
                     } label: {
@@ -202,8 +199,11 @@ struct SettingsView: View {
                     Text("English level")
                         .foregroundColor(.white)
                 } footer: {
-                    Text("Change your CEFR step anytime. This affects your learning difficulty.")
-                        .foregroundColor(.white.opacity(0.8))
+                    Text(String(
+                        format: String(localized: "Today's words target: %@"),
+                        CEFRLevelMapping.preferredBandsSummary(for: userManager.userLevel)
+                    ))
+                    .foregroundColor(.white.opacity(0.8))
                 }
                 
                 Section {
@@ -233,15 +233,14 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarColorScheme(.light, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Done") {
                         dismiss()
                     }
                     .font(.headline.weight(.semibold))
-                    .foregroundStyle(Color.white)
-                    .shadow(color: Color.black.opacity(0.35), radius: 1, x: 0, y: 1)
+                    .foregroundStyle(AppColors.glassCardTitle)
                 }
             }
             .alert("Sign Out", isPresented: $showingSignOutAlert) {
@@ -341,7 +340,7 @@ For questions, please contact support.
         .navigationTitle("User Agreement")
         .navigationBarTitleDisplayMode(.inline)
         .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarColorScheme(.light, for: .navigationBar)
     }
 }
 

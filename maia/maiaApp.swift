@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 import FirebaseCore
 import GoogleSignIn
 import GoogleMobileAds
@@ -28,6 +29,7 @@ struct maiaApp: App {
                 .environmentObject(languageManager)
                 .environment(\.locale, languageManager.effectiveLocale)
                 .onOpenURL { url in
+                    if Auth.auth().canHandle(url) { return }
                     GIDSignIn.sharedInstance.handle(url)
                 }
         }

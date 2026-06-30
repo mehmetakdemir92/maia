@@ -23,8 +23,10 @@ class QuizManager: ObservableObject {
     @Published var quizAttemptsToday: Int = 0
     
     private let maxAttemptsPerDay = 3
-    private let questionsPerQuiz = 5
-    private let requiredCorrectAnswers = 4 // Pass threshold for 5 questions
+    private let questionsPerQuiz = 3
+    /// 3 sorudan 2'sini doğru bilmek geçer not (≈%67). Sorular curated olduğu için
+    /// %100 zorlamak istemiyoruz; 1 fill-in-the-blank yanıltıcı olabilir.
+    private let requiredCorrectAnswers = 2
 
     private struct SeededGenerator {
         private var state: UInt64
@@ -152,13 +154,81 @@ class QuizManager: ObservableObject {
         return (selected, correctIndex)
     }
 
-    private func similarDefinition(for definition: String) -> String {
-        let clean = definition.trimmingCharacters(in: .whitespacesAndNewlines)
-        if clean.lowercased().hasPrefix("to "), clean.count > 3 {
-            let rest = String(clean.dropFirst(3)).trimmingCharacters(in: .whitespacesAndNewlines)
-            return "To \(rest), usually in a clear everyday context."
+    /// Tanım içinde geçen hedef kelimeyi (ve kök türevlerini) `it` ile maskeler;
+    /// kelimenin önünde duran `a/an/the` article'ını da yutar — aksi halde "an it"
+    /// gibi bozuk öbekler kalır. Amaç: doğru şıkkın hedef kelimeyi içermemesi.
+    private func maskTargetInDefinition(_ definition: String, target: String) -> String {
+        let trimmedTarget = target.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard trimmedTarget.count >= 3 else { return definition }
+
+        let stemLength: Int
+        if trimmedTarget.count >= 6 {
+            stemLength = trimmedTarget.count - 2
+        } else if trimmedTarget.count >= 5 {
+            stemLength = trimmedTarget.count - 1
+        } else {
+            stemLength = trimmedTarget.count
         }
-        return "It means: \(clean)"
+        let stem = String(trimmedTarget.prefix(stemLength))
+        let escapedStem = NSRegularExpression.escapedPattern(for: stem)
+        let pattern = "(?:\\b(?:a|an|the|to)\\s+)?\\b\(escapedStem)[A-Za-z\\-']*\\b"
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else {
+            return definition
+        }
+        let mutable = NSMutableString(string: definition)
+        let range = NSRange(location: 0, length: mutable.length)
+        regex.replaceMatches(in: mutable, options: [], range: range, withTemplate: "it")
+        return (mutable as String)
+            .replacingOccurrences(of: "  ", with: " ")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    /// Doğru cevabı, tanımı kırpmadan döner. Yalnızca sondaki noktalama temizlenir
+    /// ve baş harf büyütülür; uzun tanımlar olduğu gibi kalır.
+    /// Yanlış şıkların uzunluğu doğru cevabın kelime sayısına göre ±1 aralığında ayarlanır.
+    private func cleanedDefinitionAnswer(for rawDefinition: String) -> String {
+        var clean = rawDefinition.trimmingCharacters(in: .whitespacesAndNewlines)
+        while let last = clean.last, ".,;:!? ".contains(last) {
+            clean.removeLast()
+        }
+        if clean.isEmpty {
+            return "A common English usage learned in practice."
+        }
+        if let first = clean.first {
+            clean = first.uppercased() + clean.dropFirst()
+        }
+        return clean + "."
+    }
+
+    /// Yanlış cevap adayını doğru cevabın kelime sayısına göre ±1 aralığa ayarlar.
+    /// - Zaten aralıkta ise olduğu gibi (sondaki nokta normalize edilir) döner.
+    /// - Daha kısaysa nötr "filler" ile (target-1) kelimeye uzatır.
+    /// - Daha uzunsa (target+1'i aşıyorsa) atılır — havuzdaki başka bir aday kullanılır.
+    private func definitionWrongCandidate(from raw: String, targetCount: Int) -> String? {
+        var stripped = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        while let last = stripped.last, ".,;:!? ".contains(last) {
+            stripped.removeLast()
+        }
+        let count = stripped.split { $0.isWhitespace || $0.isNewline }.count
+        guard count > 0 else { return nil }
+        if abs(count - targetCount) <= 1 {
+            return stripped + "."
+        }
+        if count > targetCount + 1 {
+            return nil
+        }
+        let needed = (targetCount - 1) - count
+        let fillers: [Int: String] = [
+            1: "commonly",
+            2: "in conversation",
+            3: "in everyday speech",
+            4: "in most everyday situations",
+            5: "across many everyday conversations and situations",
+            6: "during normal conversation in daily life situations",
+            7: "during normal conversation in everyday daily life situations"
+        ]
+        guard let filler = fillers[needed] else { return nil }
+        return stripped + " " + filler + "."
     }
 
     /// Tanım şıkları için kelime sayısı (boşlukla ayrılmış tokenlar).
@@ -175,116 +245,106 @@ class QuizManager: ObservableObject {
             .lowercased()
     }
 
-    /// Yanlış tanım havuzu: farklı cümle başları; uzunluklar çoğunlukla orta (doğru şıkla hizalanabilir).
+    /// Yanlış tanım havuzu: hepsi 6–7 kelime; her satır farklı bir başlangıç sözcüğüyle ve
+    /// "It means:" / "To X, usually..." gibi formatik ipucu olmadan yazıldı.
     private func definitionWrongAnswerPool() -> [String] {
         [
-            "It describes how people behave in everyday conversations.",
-            "To express doubt before you make a final decision about something.",
-            "The usual way teams record progress at work each week.",
-            "This refers to a short label we give to a complex idea.",
-            "People use this when they want to soften critical feedback politely.",
-            "When something repeats often, we say it happens on a regular basis.",
-            "You might hear this in news stories about slow policy changes.",
-            "Many textbooks introduce the idea with a simple diagram first.",
-            "Learning this helps readers follow longer arguments in essays.",
-            "Writers choose this word to sound more precise than common synonyms.",
-            "During meetings, speakers use this to signal polite agreement quickly.",
-            "Instead of guessing, listeners ask for one concrete real example.",
-            "Without context, fluent speakers may still misunderstand the nuance.",
-            "Often the term appears in headlines rather than in full articles.",
-            "Sometimes teachers use this to check informal understanding only.",
-            "One common mistake is to confuse it with a near synonym nearby.",
-            "Readers notice it when the tone shifts from formal to casual speech.",
-            "Speakers rely on it to connect two related ideas in one sentence.",
-            "Courses often pair this concept with practice dialogues and drills.",
-            "Editors remove it when a simpler phrase would communicate the same point.",
-            "Listeners infer it from stress patterns and surrounding vocabulary choices.",
-            "Students remember it more easily when they see it inside a short story.",
-            "Podcasts repeat it slowly so beginners can catch the exact usage.",
-            "Reviewers praise books that explain it without unnecessary jargon.",
-            "Translators struggle when the target language lacks a direct equivalent.",
-            "Native speakers rarely define it because everyone picks it up early.",
-            "Grammar guides list it next to related patterns you should compare.",
-            "Fluent use of it signals that you can handle abstract topics well."
+            "A short note shared between coworkers.",
+            "An informal phrase used among close friends.",
+            "The polite way to greet new neighbors.",
+            "Some general advice given without firm evidence.",
+            "Strong evidence shown during a public debate.",
+            "Detailed notes prepared before an important interview.",
+            "Bright lights placed above busy city streets.",
+            "Quiet practice done before a public speech.",
+            "Heavy traffic seen during long holiday weekends.",
+            "Brief feedback shared after a short meeting.",
+            "Common errors made by beginners during exams.",
+            "Loud announcements made at large train stations.",
+            "Useful summaries added at article endings.",
+            "Polite remarks exchanged between colleagues at work.",
+            "Difficult questions raised during a final review.",
+            "Helpful tips found in popular travel guides.",
+            "Sharp criticism aimed at outdated business practices.",
+            "Simple gestures used to welcome new visitors.",
+            "Routine checks performed by airport security teams.",
+            "Light reading enjoyed during long train trips.",
+            "Old photographs displayed in small village museums.",
+            "Short silence kept before official public speeches.",
+            "Open discussions held among trusted senior colleagues.",
+            "Sudden changes seen in busy financial markets.",
+            "Public messages shared by official government bodies.",
+            "Practical guidance offered to first-time student visitors.",
+            "Friendly remarks added to a technical email.",
+            "Strict deadlines enforced by demanding senior managers.",
+            "Quick reminders sent before important client meetings.",
+            "Careful planning done before a long trip.",
+            "Modest praise offered by quiet team leaders.",
+            "Tense moments shared during a final interview.",
+            "Empty rooms left after the office closed.",
+            "Random questions asked by curious young children.",
+            "Slow gestures used by skilled stage performers."
         ]
     }
 
-    /// Doğru tanım + 3 yanlış: ilk kelimeler farklı, kelime sayıları yakın (gevşetilerek doldurulur).
+    /// Doğru tanım + 3 yanlış.
+    /// - Doğru cevap: `word.definition` tam haliyle (kırpma yok, sadece hedef kelime maskelenir).
+    /// - Yanlış şıklar: kelime sayısı doğru cevabın ±1 aralığında. Havuzdan uygun uzunluk
+    ///   bulunursa olduğu gibi; daha kısaysa nötr filler ile uzatılır; daha uzunsa atılır.
     private func makeDefinitionQuestion(for word: Word, rng: inout SeededGenerator) -> QuizQuestion {
-        let correctDefinition = similarDefinition(for: word.definition)
+        let masked = maskTargetInDefinition(word.definition, target: word.word)
+        let correctDefinition = cleanedDefinitionAnswer(for: masked)
+        let correctCount = definitionWordCount(correctDefinition)
         let correctKey = definitionFirstWordKey(correctDefinition)
-        let targetWC = definitionWordCount(correctDefinition)
 
         var pool = definitionWrongAnswerPool()
         rng.shuffle(&pool)
 
-        func pickWrongs(maxWordDiff: Int) -> [String] {
+        func pickWrongs(allowSameFirstWord: Bool) -> [String] {
             var chosen: [String] = []
             var usedFirst: Set<String> = [correctKey]
-            for c in pool {
+            for raw in pool {
                 guard chosen.count < 3 else { break }
+                guard let c = definitionWrongCandidate(from: raw, targetCount: correctCount) else { continue }
                 if normalized(c) == normalized(correctDefinition) { continue }
                 let fw = definitionFirstWordKey(c)
                 guard !fw.isEmpty else { continue }
-                if usedFirst.contains(fw) { continue }
-                if abs(definitionWordCount(c) - targetWC) > maxWordDiff { continue }
+                if !allowSameFirstWord, usedFirst.contains(fw) { continue }
                 usedFirst.insert(fw)
                 chosen.append(c)
             }
             return chosen
         }
 
-        var band = max(2, min(5, targetWC / 4))
-        var wrongs = pickWrongs(maxWordDiff: band)
-        if wrongs.count < 3 { wrongs = pickWrongs(maxWordDiff: band + 3) }
-        if wrongs.count < 3 { wrongs = pickWrongs(maxWordDiff: band + 8) }
-        if wrongs.count < 3 { wrongs = pickWrongs(maxWordDiff: 999) }
-
-        // Hâlâ eksikse: ilk kelime kuralını gevşet (kelime sayısına yakın kalanlar).
+        var wrongs = pickWrongs(allowSameFirstWord: false)
         if wrongs.count < 3 {
-            var usedFirst: Set<String> = [correctKey]
-            wrongs.forEach { usedFirst.insert(definitionFirstWordKey($0)) }
-            for c in pool where wrongs.count < 3 {
-                if wrongs.contains(where: { normalized($0) == normalized(c) }) { continue }
-                if abs(definitionWordCount(c) - targetWC) > band + 5 { continue }
-                let fw = definitionFirstWordKey(c)
-                if usedFirst.contains(fw) { continue }
-                usedFirst.insert(fw)
-                wrongs.append(c)
-            }
-        }
-        if wrongs.count < 3 {
-            var usedFirst: Set<String> = [correctKey]
-            wrongs.forEach { usedFirst.insert(definitionFirstWordKey($0)) }
-            for c in pool where wrongs.count < 3 {
-                if normalized(c) == normalized(correctDefinition) { continue }
-                if wrongs.contains(where: { normalized($0) == normalized(c) }) { continue }
-                let fw = definitionFirstWordKey(c)
-                if usedFirst.contains(fw) { continue }
-                usedFirst.insert(fw)
-                wrongs.append(c)
-            }
+            // Havuz daralırsa ilk kelime kuralını gevşet; ±1 uzunluk kuralı korunur.
+            wrongs = pickWrongs(allowSameFirstWord: true)
         }
 
-        let wrongsThree = Array(wrongs.prefix(3))
-        var options = [correctDefinition] + wrongsThree
-        var padIndex = 0
-        let pads = [
-            "One everyday use appears in polite requests and short replies.",
-            "Courses often drill this with listen-and-repeat exercises only.",
-            "Readers meet it first in graded texts before newspapers use it."
+        var options = [correctDefinition] + Array(wrongs.prefix(3))
+
+        // ±1 kuralına uyan nötr pad (havuz boşalırsa devreye girer).
+        let neutralBases = [
+            "Used widely across everyday situations between speakers",
+            "Often heard during friendly chats between coworkers",
+            "Met regularly by learners reading short news articles",
+            "Reached for quickly during simple polite daily conversations",
+            "Found in textbooks at the start of beginner chapters"
         ]
+        var padIndex = 0
         var safety = 0
-        while options.count < 4, safety < 20 {
+        while options.count < 4, safety < 30 {
             safety += 1
-            let p = pads[padIndex % pads.count]
+            let raw = neutralBases[padIndex % neutralBases.count]
             padIndex += 1
+            guard let p = definitionWrongCandidate(from: raw, targetCount: correctCount) else { continue }
             if options.contains(where: { normalized($0) == normalized(p) }) { continue }
             if definitionFirstWordKey(p) == correctKey { continue }
             options.append(p)
         }
         while options.count < 4 {
-            options.append("Fluent speakers use it without stopping to define it first.")
+            options.append("Many learners pick this up over time.")
         }
         options = Array(options.prefix(4))
         rng.shuffle(&options)
@@ -495,14 +555,48 @@ class QuizManager: ObservableObject {
         return questions
     }
     
-    func generateQuiz(for word: Word, count: Int = 5, attemptNumber: Int = 0) -> [QuizQuestion] {
+    func generateQuiz(for word: Word, count: Int = 3, attemptNumber: Int = 0) -> [QuizQuestion] {
+        let desiredCount = max(1, count)
+        if let curated = curatedQuestions(for: word, count: desiredCount, attemptNumber: attemptNumber),
+           !curated.isEmpty {
+            return curated
+        }
         let seedInput = "\(word.word.lowercased())|\(quizDayISO())|\(count)|a\(attemptNumber)"
         var rng = SeededGenerator(seed: stableSeed(for: seedInput))
-        let desiredCount = max(1, count)
         var questions: [QuizQuestion] = [makeDefinitionQuestion(for: word, rng: &rng)]
         let blankQuestions = makeBlankQuestions(for: word, count: max(0, desiredCount - 1), rng: &rng)
         questions.append(contentsOf: blankQuestions)
         return Array(questions.prefix(desiredCount))
+    }
+
+    /// WordPack JSON'undan curated quiz soruları (1 definition + 2 blank, ya da
+    /// dosyada yazılı ne varsa). Aynı gün içinde retry'larda şıkları stabil olarak
+    /// karıştırarak ezbere çözmeyi engeller; doğru cevap konumu değişir.
+    private func curatedQuestions(for word: Word, count: Int, attemptNumber: Int) -> [QuizQuestion]? {
+        let date = quizDayISO()
+        guard let presets = DailyWordsService.curatedQuiz(forWord: word.word, date: date),
+              !presets.isEmpty else {
+            return nil
+        }
+        let seedInput = "\(word.word.lowercased())|\(date)|curated|a\(attemptNumber)"
+        var rng = SeededGenerator(seed: stableSeed(for: seedInput))
+        let limited = Array(presets.prefix(count))
+        return limited.map { preset in
+            shuffledOptions(for: preset, rng: &rng)
+        }
+    }
+
+    private func shuffledOptions(for preset: WordPackQuiz, rng: inout SeededGenerator) -> QuizQuestion {
+        var indexed = Array(preset.options.enumerated())
+        rng.shuffle(&indexed)
+        let options = indexed.map { $0.element }
+        let correctIndex = indexed.firstIndex(where: { $0.offset == preset.correctAnswerIndex })
+            ?? max(0, min(preset.correctAnswerIndex, options.count - 1))
+        return QuizQuestion(
+            question: preset.question,
+            options: options,
+            correctAnswerIndex: correctIndex
+        )
     }
     
     func startQuiz(for word: Word) -> Bool {
@@ -510,7 +604,7 @@ class QuizManager: ObservableObject {
         quizAttemptsToday += 1
         saveAttemptsForToday()
 
-        // Generate 5 questions (attemptNumber: aynı gün tekrar denemede farklı boşluk / sıra)
+        // 3 soru üret (attemptNumber: aynı gün tekrar denemede şıklar farklı sıralanır)
         let quiz = generateQuiz(for: word, count: questionsPerQuiz, attemptNumber: quizAttemptsToday)
         print("Generated quiz with \(quiz.count) questions")
         
@@ -602,7 +696,6 @@ class QuizManager: ObservableObject {
     }
     
     func hasPassed() -> Bool {
-        // Pass threshold: 4+ correct out of 5
         return correctAnswers >= requiredCorrectAnswers
     }
     

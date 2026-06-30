@@ -1,81 +1,81 @@
 # Maia — reklam stratejisi (AdMob)
 
-Özet: Şu an **yalnızca Today sekmesinde**, **standart banner**, **ücretsiz kullanıcılar** için (`TodayTabView` + `BannerAdView`). Premium tamamen reklamsız — doğru freemium ayrımı.
+Özet: Ücretsiz kullanıcıda **seyrek ve odaklı** reklam; Premium tamamen reklamsız. Amaç retention + premium dönüşümü korumak, agresif tam ekran yığınını önlemek.
 
 ---
 
-## 1. Mevcut durum (güçlü yanlar)
+## 1. Mevcut model (kod ile uyumlu)
 
-- **Tek yerde banner**: Öğrenme akışı (Today) ile sınırlı; Diary / Profile / Streak’te reklam yok → odak ve App Store algısı için iyi.
-- **Premium = reklamsız**: Dönüşüm argümanı net.
-- **ATT**: Banner görünürken istek (`TrackingPermission`) — yayın öncesi akış düşünülmüş.
+### FREE
 
----
+| Yer | Format | Sıklık |
+|-----|--------|--------|
+| **Today** | Inline banner (1. kelime kartından sonra) | Oturum başına 1 banner |
+| **Quiz** | Yok | — |
+| **Quiz bitişi** | Interstitial | Günde en fazla **1** (ilk tamamlanan quiz) |
+| **Streak recovery** | Rewarded (opt-in) | Kullanıcı “Watch ad” derse |
 
-## 2. Hızlı kazanımlar (düşük risk)
+### PREMIUM
 
-| Öneri | Neden |
-|--------|--------|
-| **Gerçek ad unit ID’leri** | `AdMobConfig` hâlâ test ID; production’da gerçek banner unit + Info.plist `GADApplicationIdentifier` eşleşmeli. |
-| **Adaptive banner** | `GADAdSizeBanner` yerine ekran genişliğine göre adaptive size — daha iyi doluluk ve bazen daha iyi eCPM; alt bantta hâlâ “banner” ailesi. |
-| **Yeniden yükleme / root VC** | Sekme değişince veya `scenePhase` ile banner’ın `rootViewController` ve `load` davranışı; bazen eski VC’ye takılı kalır — delegate’te hata log’u var, analytics eklemek faydalı. |
-| **Mediation (Meta / başka ağ)** | AdMob mediation ile doluluk ↑; özellikle TR / karma coğrafyada gelir ve gösterim sık sık artar. |
+- Tüm reklamlar kapalı
+- Mevcut premium özellikler: reklamsız + AI diary correction + Generate More + stats
 
----
+### Bilinçli olarak yok
 
-## 3. Geliri artıran ama UX’i dikkatle ayarlanan seçenekler
-
-### A) App open ad (uygulama açılışı)
-
-- **Ne zaman**: Cold start / background’dan dönüşte, tam ekran öncesi (Google’ın önerdiği sıklık sınırlarına uyarak).
-- **Kim**: Sadece free; Premium kapalı.
-- **Risk**: Aşırı sıklık kullanıcıyı yorar → günlük/oturum başı cap (ör. günde max 3–5, veya sadece her 2. açılış).
-
-### B) Interstitial (geçiş)
-
-- **Doğal anlar**: Quiz’den **çıkış** (`QuizView` dismiss), veya “bugünkü kelimeler bitti” sonrası **bir kez**.
-- **Kaçınılacak**: Kelime kartı okurken, yazarken, quiz sorusunun ortasında.
-- **Sıklık**: Oturum başı en fazla 1 (veya günde 2–3 üst sınır); eğitim uygulamasında “her ekran geçişinde” yapma.
-
-### C) Rewarded (isteğe bağlı, ileride)
-
-- “Bir AI örnek cümle daha” veya “ekstra quiz turu” gibi **net karşılık** verilirse kullanıcı tolere eder; zorunlu rewarded agresif sayılır.
+- App open ad
+- Tab geçişlerinde interstitial
+- Quiz sırasında alt banner
+- 2. quiz sonrası otomatik rewarded video
+- Diary / Profile / Streak alt banner
 
 ---
 
-## 4. Premium ile denge (para + dönüşüm)
+## 2. Dosya haritası
 
-- **Banner + 0 interstitial**: Premium değer önerisi “sessiz uygulama” olabilir ama gelir sınırlı kalır.
-- **Banner + seyrek interstitial / app open**: Paywall metninde “Reklamsız deneyim” vurgusu güçlenir; fiyatlandırmayı buna göre konumlandır.
-- **A/B**: Ücretsizde reklam yoğunluğu ile premium dönüşüm oranı — AdMob + App Store Connect / StoreKit verisiyle ölç.
+| Dosya | Rol |
+|-------|-----|
+| `TodayTabView.swift` | `InlineBannerAdRow` — yalnızca 1. kart sonrası |
+| `QuizView.swift` | Quiz bitişinde `QuizInterstitialAdPresenter` (1. quiz/gün) |
+| `StreakView.swift` | `StreakRecoveryRewardedService` — opt-in rewarded |
+| `BannerAdView.swift` | Banner UIViewRepresentable + analytics |
+| `QuizInterstitialAdPresenter.swift` | Interstitial preload + gösterim |
+| `DailyQuizAdTracker.swift` | Günlük quiz tamamlama sayacı (interstitial cap) |
+| `AdMobConfig.swift` | Test / production ad unit ID’leri |
+| `AppAnalytics.swift` | Placement event isimleri |
 
----
-
-## 5. Politika ve kalite
-
-- **Google**: Geçiş reklamlarında yanlış yerleştirme (yanlışlıkla tıklama), aşırı sıklık policy ihlali sayılabilir.
-- **Apple**: Aşırı tam ekran reklam App Review’da soru çıkarabilir; eğitim tonu ve sıklık sınırı önemli.
-- **ATT**: Sadece banner’da değil, ileride başka formatta da tutarlı olun (metin App Store Privacy’dekiyle uyumlu).
-
----
-
-## 6. Ölçüm (somut metrikler)
-
-AdMob konsolunda şunları izleyin:
-
-- **eCPM** (ülke / format), **doluluk (impression / request)**  
-- **Kullanıcı başı günlük gösterim** (banner yenileme + ekranda kalma süresi)  
-- **Premium dönüşüm** (reklam ekledikçe düşüyor mu — denge)
+`RewardedVideoAdPresenter.swift` — 2. quiz auto-rewarded kaldırıldı; dosya ileride opt-in rewarded için tutulabilir.
 
 ---
 
-## 7. Öncelik sırası (öneri)
+## 3. Ölçüm (AdMob + analytics)
 
-1. Production ad unit + adaptive banner + mediation hazırlığı  
-2. **App open** veya **Quiz çıkışında tek interstitial** (ikisinden biriyle başla, ikisini aynı anda patlatma)  
-3. Rewarded sadece net “ödül” ile  
-4. Sürekli A/B: reklam sıklığı vs premium geliri (toplam)
+Placement bazlı izle:
+
+- `today_inline_banner_after_first` — banner impression / fail
+- `quiz_complete_interstitial` — interstitial shown
+- Streak recovery rewarded (Streak ekranı)
+
+Karşılaştır: premium dönüşüm oranı, günlük aktif kullanıcı, quiz tamamlama oranı.
 
 ---
 
-*Bu dosya yalnızca strateji rehberidir; uygulama davranışını değiştirmek için kod ve AdMob konsol ayarları ayrıca yapılmalıdır.*
+## 4. Sonraki adımlar (kullanıcı 100+ olunca)
+
+1. Production ad unit doğrulama (`AdMobConfig` + Info.plist `GADApplicationIdentifier`)
+2. Adaptive banner (`GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth`)
+3. Mediation (Meta vb.) — doluluk / eCPM
+4. A/B: Today’de inline vs alt banner (yalnızca biri)
+
+**Yapma (şimdilik):** App open ad, her geçişte interstitial, quiz içi banner, zorunlu rewarded.
+
+---
+
+## 5. Politika
+
+- Interstitial yalnızca doğal duraklama anında (quiz bitti, Continue öncesi)
+- Eğitim akışının ortasında tam ekran reklam yok
+- ATT: banner gösteriminde `TrackingPermission` (mevcut)
+
+---
+
+*Son güncelleme: reklam sadeleştirme — Today 1 inline, quiz banner yok, günde 1 interstitial, streak opt-in rewarded.*

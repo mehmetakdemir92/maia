@@ -65,11 +65,16 @@ struct WordOfTheDayView: View {
                                     }) {
                                         Image(systemName: "speaker.wave.2.fill")
                                             .font(.title2)
-                                            .foregroundColor(.white)
+                                            .foregroundColor(AppColors.glassCardTitle)
                                             .padding(12)
-                                            .background(.thinMaterial, in: Circle())
+                                            .background {
+                                                Group {
+                                                    Circle().fill(.thinMaterial)
+                                                }
+                                                .glassMaterialIgnoresSystemColorScheme()
+                                            }
                                             .overlay {
-                                                Circle().strokeBorder(Color.white.opacity(0.45), lineWidth: 0.5)
+                                                Circle().strokeBorder(AppColors.glassCardTitle.opacity(0.22), lineWidth: 0.5)
                                             }
                                             .shadow(color: .black.opacity(0.2), radius: 4, x: 0, y: 2)
                                     }
@@ -101,18 +106,17 @@ struct WordOfTheDayView: View {
                                         Spacer()
 
                                         // Suggestion butonu (örnek cümle önerisi)
-                                        Button(action: {
-                                            handleGenerateExample(for: word)
-                                        }) {
+                                        RippleLoadingButton(
+                                            isLoading: generatingForWordId == word.id,
+                                            cornerRadius: 8,
+                                            rippleStyle: .onLight,
+                                            action: {
+                                                handleGenerateExample(for: word)
+                                            }
+                                        ) {
                                             HStack(spacing: 6) {
-                                                if generatingForWordId == word.id {
-                                                    ProgressView()
-                                                        .progressViewStyle(CircularProgressViewStyle(tint: AppColors.primaryButton))
-                                                        .scaleEffect(0.8)
-                                                } else {
-                                                    Image(systemName: "wand.and.stars")
-                                                        .font(.caption)
-                                                }
+                                                Image(systemName: "wand.and.stars")
+                                                    .font(.caption)
                                                 Text("Generate More")
                                                     .font(.caption)
                                                     .fontWeight(.medium)
@@ -130,6 +134,7 @@ struct WordOfTheDayView: View {
                                                             .fill(AppColors.glassCardTitle.opacity(0.06))
                                                     }
                                                 }
+                                                .glassMaterialIgnoresSystemColorScheme()
                                             }
                                             .overlay {
                                                 if userManager.isPremium {
@@ -138,7 +143,6 @@ struct WordOfTheDayView: View {
                                                 }
                                             }
                                         }
-                                        .disabled(userManager.isPremium && generatingForWordId == word.id)
                                     }
 
                                     // Show generated example if available, otherwise show original
@@ -182,10 +186,9 @@ struct WordOfTheDayView: View {
         .task {
             await wordManager.loadToday(category: .general, userLevel: userManager.userLevel)
         }
-        .onChange(of: userManager.userLevel) { _, newLevel in
-            Task {
-                await wordManager.loadToday(category: .general, userLevel: newLevel)
-            }
+        .onChange(of: userManager.userLevel) { oldLevel, newLevel in
+            guard oldLevel != newLevel else { return }
+            wordManager.loadWordsOfTheDay(category: .general, userLevel: newLevel, force: true)
         }
     }
     

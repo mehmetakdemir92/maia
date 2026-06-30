@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+extension View {
+    /// `Material` katmanlarının sistem dark modunda koyulaşıp açılmasını engeller; cam hep aynı “light glass” paletinde kalır.
+    func glassMaterialIgnoresSystemColorScheme() -> some View {
+        environment(\.colorScheme, .light)
+    }
+}
+
 struct SubtleStrokeText: ViewModifier {
     var textColor: Color = .white
     var strokeColor: Color = .black.opacity(0.55)
@@ -133,6 +140,7 @@ private struct WordCardGlassBackground: ViewModifier {
 
                         shape.strokeBorder(borderGradient, lineWidth: edgeStrokeWidth)
                     }
+                    .glassMaterialIgnoresSystemColorScheme()
                 }
             }
             .clipShape(shape)

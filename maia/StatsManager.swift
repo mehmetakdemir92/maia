@@ -56,8 +56,9 @@ class StatsManager: ObservableObject {
     }
     private let db = Firestore.firestore()
     private let scoresCollection = "scores"
-    private var profileDisplayStatsListener: ListenerRegistration?
     private var lastObservedAuthUID: String?
+    private var lastWrittenRankStreak: Int?
+    private var lastWrittenRankWordCount: Int?
 
     init() {
         loadStats()
@@ -65,7 +66,7 @@ class StatsManager: ObservableObject {
         setupAuthListener()
         if let uid = Auth.auth().currentUser?.uid {
             loadStreakAndRank(userId: uid)
-            startProfileDisplayStatsListener(userId: uid)
+            fetchProfileDisplayStatsOnce(userId: uid)
         }
     }
 
@@ -91,13 +92,11 @@ class StatsManager: ObservableObject {
                 self.loadStats()
 
                 self.loadStreakAndRank(userId: uid)
-                self.startProfileDisplayStatsListener(userId: uid)
+                self.fetchProfileDisplayStatsOnce(userId: uid)
             } else {
                 self.rankDisplay = "—"
                 self.wordRankDisplay = "—"
                 self.clearProfileDisplayOverrides()
-                self.profileDisplayStatsListener?.remove()
-                self.profileDisplayStatsListener = nil
 
                 self.totalQuizzesTaken = 0
                 self.totalPerfectQuizzes = 0
@@ -134,11 +133,11 @@ class StatsManager: ObservableObject {
         profileExampleSentencesOverride = nil
     }
 
-    private func startProfileDisplayStatsListener(userId: String) {
-        profileDisplayStatsListener?.remove()
+    /// Panel istatistikleri nadiren değişir; canlı listener CPU + Firestore gürültüsü üretir.
+    private func fetchProfileDisplayStatsOnce(userId: String) {
         let ref = db.collection("users").document(userId).collection("appData").document("profileDisplayStats")
-        profileDisplayStatsListener = ref.addSnapshotListener { [weak self] snapshot, error in
-            guard let self = self else { return }
+        ref.getDocument { [weak self] snapshot, error in
+            guard let self else { return }
             if let error = error {
                 let code = (error as NSError).code
                 if code != 7 { print("⚠️ profileDisplayStats: \(error.localizedDescription)") }
@@ -149,12 +148,28 @@ class StatsManager: ObservableObject {
                     self.clearProfileDisplayOverrides()
                     return
                 }
-                self.profileQuizCorrectOverride = Self.optionalInt(from: data["quizCorrectAnswers"])
-                self.profileQuizTotalOverride = Self.optionalInt(from: data["quizQuestionsAnswered"])
-                self.profileDiaryWordsOverride = Self.optionalInt(from: data["diaryWordsCount"])
-                self.profileExampleSentencesOverride = Self.optionalInt(from: data["exampleSentencesCount"])
+                self.applyProfileDisplayOverrides(from: data)
             }
         }
+    }
+
+    private func applyProfileDisplayOverrides(from data: [String: Any]) {
+        let quizCorrect = Self.optionalInt(from: data["quizCorrectAnswers"])
+        let quizTotal = Self.optionalInt(from: data["quizQuestionsAnswered"])
+        let diaryWords = Self.optionalInt(from: data["diaryWordsCount"])
+        let examples = Self.optionalInt(from: data["exampleSentencesCount"])
+
+        guard quizCorrect != profileQuizCorrectOverride
+            || quizTotal != profileQuizTotalOverride
+            || diaryWords != profileDiaryWordsOverride
+            || examples != profileExampleSentencesOverride else {
+            return
+        }
+
+        profileQuizCorrectOverride = quizCorrect
+        profileQuizTotalOverride = quizTotal
+        profileDiaryWordsOverride = diaryWords
+        profileExampleSentencesOverride = examples
     }
 
     private static func optionalInt(from value: Any?) -> Int? {
@@ -183,22 +198,24 @@ class StatsManager: ObservableObject {
     /// Parametreler geriye dönük çağrılar için korunur; rank hesabında sadece `streak` kullanılır.
     func updateScoreFrom(streak: Int, maxStreak: Int, wordCount: Int) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
+        if lastWrittenRankStreak == streak, lastWrittenRankWordCount == wordCount { return }
+        lastWrittenRankStreak = streak
+        lastWrittenRankWordCount = wordCount
+
         let userRankRef = db.collection("users").document(uid).collection("appData").document("rank")
         let scoresRef = db.collection(scoresCollection).document(uid)
         userRankRef.setData([
             "currentStreak": streak,
-            "wordCount": wordCount,
-            "updatedAt": Timestamp(date: Date())
-        ]) { [weak self] error in
+            "wordCount": wordCount
+        ], merge: true) { [weak self] error in
             if let error = error {
                 print("❌ Rank Firestore save error: \(error.localizedDescription)")
                 return
             }
             scoresRef.setData([
                 "currentStreak": streak,
-                "wordCount": wordCount,
-                "updatedAt": Timestamp(date: Date())
-            ]) { [weak self] err in
+                "wordCount": wordCount
+            ], merge: true) { [weak self] err in
                 if let err = err {
                     print("❌ Scores Firestore save error: \(err.localizedDescription)")
                 }

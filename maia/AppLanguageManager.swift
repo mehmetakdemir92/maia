@@ -73,6 +73,9 @@ enum AppLanguageOption: String, CaseIterable, Identifiable {
     case system
     case english
     case turkish
+    case german
+    case spanish
+    case french
 
     var id: String { rawValue }
 
@@ -82,14 +85,22 @@ enum AppLanguageOption: String, CaseIterable, Identifiable {
         case .system: return nil
         case .english: return "en"
         case .turkish: return "tr"
+        case .german: return "de"
+        case .spanish: return "es"
+        case .french: return "fr"
         }
     }
 
+    /// Picker'da kullanıcının kendi dilinde gördüğü ad (endonym).
+    /// Picker UI dilinden bağımsız sabit görünür ki kullanıcı kendi dilini bulabilsin.
     var title: String {
         switch self {
         case .system: return String(localized: "System language")
-        case .english: return String(localized: "English")
-        case .turkish: return String(localized: "Turkish")
+        case .english: return "English"
+        case .turkish: return "Türkçe"
+        case .german: return "Deutsch"
+        case .spanish: return "Español"
+        case .french: return "Français"
         }
     }
 }
@@ -114,6 +125,12 @@ final class AppLanguageManager: ObservableObject {
             return Locale(identifier: "en")
         case .turkish:
             return Locale(identifier: "tr_TR")
+        case .german:
+            return Locale(identifier: "de_DE")
+        case .spanish:
+            return Locale(identifier: "es_ES")
+        case .french:
+            return Locale(identifier: "fr_FR")
         }
     }
 

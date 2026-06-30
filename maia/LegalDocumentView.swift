@@ -10,92 +10,87 @@ enum LegalDocumentType: Hashable, Identifiable {
     case privacy
     case subscription
 
-    var id: String { title }
+    var id: String { englishTitle }
 
-    var title: String {
+    /// Legal screens are always shown in English (App Store / legal consistency).
+    var englishTitle: String {
         switch self {
-        case .terms: return String(localized: "Terms of Use")
-        case .privacy: return String(localized: "Privacy Policy")
-        case .subscription: return String(localized: "Subscription Terms")
+        case .terms: return "Terms of Use"
+        case .privacy: return "Privacy Policy"
+        case .subscription: return "Subscription Terms"
         }
     }
 
     var bodyText: String {
         switch self {
         case .terms:
-            return String(localized: String.LocalizationValue(
-"""
-KULLANIM KOSULLARI
+            return """
+            TERMS OF USE
 
-Maia uygulamasini kullanarak bu kosullari kabul etmis sayilirsiniz.
+            By using the Maia app, you agree to these terms.
 
-1) Hesap ve guvenlik
-- Hesap bilgilerinizin guvenliginden siz sorumlusunuz.
-- Hesabinizin yetkisiz kullanimini fark etmeniz halinde bize bildirmeniz gerekir.
+            1) Account and security
+            - You are responsible for keeping your account credentials secure.
+            - If you notice unauthorized use of your account, you must notify us.
 
-2) Izin verilen kullanim
-- Uygulama yalnizca hukuka uygun ve egitim amacli kullanilabilir.
-- Sisteme yetkisiz erisim, hizmeti bozma girisimi veya tersine muhendislik yasaktir.
+            2) Permitted use
+            - The app may only be used for lawful, educational purposes.
+            - Unauthorized access, attempts to disrupt the service, or reverse engineering are prohibited.
 
-3) Ucretli ozellikler ve abonelik
-- Premium icerikler abonelik kapsaminda sunulabilir.
-- Ucretlendirme, yenileme ve iptal surecleri Apple App Store tarafindan yonetilir.
+            3) Paid features and subscriptions
+            - Premium content may be offered as part of a subscription.
+            - Billing, renewal, and cancellation are handled by the Apple App Store.
 
-4) Degisiklik hakki
-- Uygulama ozellikleri ve bu kosullar zaman zaman guncellenebilir.
-- Onemli degisiklikler uygulama icinden duyurulur.
+            4) Changes
+            - App features and these terms may be updated from time to time.
+            - Material changes will be communicated in the app when possible.
 
-5) Sorumlulugun sinirlandirilmasi
-- Uygulama "oldugu gibi" sunulur.
-- Yasal olarak izin verilen olcude, dolayli zararlar ve hizmet kesintilerinden sorumluluk kabul edilmez.
+            5) Limitation of liability
+            - The app is provided "as is."
+            - To the extent permitted by law, we are not liable for indirect damages or service interruptions.
 
-6) Iletisim
-- Hukuki konular icin: support@yourdomain.com
-"""
-            ))
+            6) Contact
+            - Legal inquiries: \(AppContact.supportEmail)
+            """
         case .privacy:
-            return String(localized: String.LocalizationValue(
-"""
-GIZLILIK POLITIKASI
+            return """
+            PRIVACY POLICY
 
-Bu politika, Maia'nin hangi verileri hangi amaclarla isledigini aciklar.
+            This policy explains what data Maia processes and why.
 
-1) Islenen veri kategorileri
-- Hesap verileri (e-posta, kullanici kimligi)
-- Uygulama kullanim ve teknik verileri (analitik, hata kayitlari)
-- Abonelik ve yetki durum bilgileri
+            1) Data we process
+            - Account data (email, user identifier)
+            - App usage and technical data (analytics, crash logs)
+            - Subscription and entitlement status
 
-2) Isleme amaclari
-- Giris islemlerini ve temel uygulama ozelliklerini saglamak
-- Guvenlik, performans ve urun kalitesini iyilestirmek
-- Premium ozellikleri sunmak
+            2) Purposes
+            - Provide sign-in and core app features
+            - Improve security, performance, and product quality
+            - Deliver Premium features
 
-3) Ucuncu taraf hizmetler
-- Kimlik dogrulama, depolama ve analitik icin Firebase/Google servisleri kullanilabilir.
+            3) Third-party services
+            - Firebase/Google services may be used for authentication, storage, and analytics.
 
-4) Veri saklama
-- Veriler, isleme amaci icin gerekli sure boyunca saklanir.
-- Yasal zorunluluk yoksa silme talepleri dogrultusunda kaldirilir veya anonimlestirilir.
+            4) Retention
+            - Data is kept only as long as needed for the purposes above.
+            - Deletion or anonymization is applied when legally required or upon valid requests.
 
-5) Kullanici haklari
-- Uygulanabilir mevzuata gore erisim, duzeltme ve silme taleplerinde bulunabilirsiniz.
+            5) Your rights
+            - You may request access, correction, or deletion where applicable law allows.
 
-6) Iletisim
-- Gizlilik talepleri icin: privacy@yourdomain.com
-"""
-            ))
+            6) Contact
+            - Privacy requests: \(AppContact.privacyEmail)
+            """
         case .subscription:
-            return String(localized: String.LocalizationValue(
-"""
-ABONELIK KOSULLARI
+            return """
+            SUBSCRIPTION TERMS
 
-- Satin alma onayinda odeme Apple ID hesabiniza yansitilir.
-- Abonelik, mevcut donem bitiminden en az 24 saat once iptal edilmezse otomatik yenilenir.
-- Yenileme ucreti, mevcut donemin bitimine 24 saat kala hesabiniza yansitilabilir.
-- Abonelik yonetimi ve iptal islemleri App Store hesap ayarlarindan yapilir.
-- Sunulmasi halinde ucretsiz deneme suresi, sure sonunda iptal edilmezse ucretli abonelige donusur.
-"""
-            ))
+            - Payment is charged to your Apple ID account at confirmation of purchase.
+            - Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.
+            - Renewal charges may be applied to your account within 24 hours before the current period ends.
+            - Manage or cancel subscriptions in your App Store account settings.
+            - If a free trial is offered, it converts to a paid subscription unless canceled before the trial ends.
+            """
         }
     }
 }
@@ -112,7 +107,7 @@ struct LegalDocumentView: View {
                 .padding(20)
         }
         .background(Color.white.ignoresSafeArea())
-        .navigationTitle(document.title)
+        .navigationTitle(document.englishTitle)
         .navigationBarTitleDisplayMode(.inline)
     }
 }

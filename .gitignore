@@ -56,3 +56,5 @@ __pycache__/
 *.pyc
 
 maia/GoogleService-Info.plist
+
+screenshotsmaia/

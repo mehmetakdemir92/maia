@@ -25,6 +25,7 @@ struct ProfileView: View {
     @State private var isUploadingProfilePhoto = false
     @State private var profilePhotoError: String?
     @State private var showingProfilePhotoError = false
+    @State private var rankUpdateTask: Task<Void, Never>?
 
     private var diaryWordCountComputed: Int {
         diaryManager.entries.reduce(0) { $0 + $1.words.count }
@@ -34,6 +35,21 @@ struct ProfileView: View {
     private var uniqueLearnedWordCountForRank: Int {
         let uniqueIds = Set(diaryManager.entries.flatMap { $0.words.map(\.id) })
         return uniqueIds.count
+    }
+
+    /// Profil/diary değişimlerinde saniyede onlarca Firestore yazımını önler.
+    private func scheduleRankUpdateToFirestore() {
+        guard userManager.isSignedIn else { return }
+        rankUpdateTask?.cancel()
+        rankUpdateTask = Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
+            guard !Task.isCancelled else { return }
+            statsManager.updateScoreFrom(
+                streak: streakManager.currentStreak,
+                maxStreak: streakManager.maxStreak,
+                wordCount: uniqueLearnedWordCountForRank
+            )
+        }
     }
 
     private var diaryWordCount: Int {
@@ -92,7 +108,7 @@ struct ProfileView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 GlassSceneBackground()
                 ScrollView {
@@ -117,6 +133,7 @@ struct ProfileView: View {
                                                 .font(.system(size: 34))
                                                 .foregroundColor(AppColors.primaryButton)
                                         }
+                                        .id(imageURL)
                                         .clipShape(Circle())
                                         .frame(width: 110, height: 110)
                                     } else {
@@ -285,8 +302,7 @@ struct ProfileView: View {
             }
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if userManager.isSignedIn {
@@ -294,7 +310,7 @@ struct ProfileView: View {
                             showingSettings = true
                         }) {
                             Image(systemName: "gearshape.fill")
-                                .foregroundColor(.white.opacity(0.95))
+                                .foregroundColor(AppColors.glassCardTitle.opacity(0.92))
                         }
                     }
                 }
@@ -313,38 +329,40 @@ struct ProfileView: View {
                     .environmentObject(userManager)
             }
             .onAppear {
-                if userManager.isSignedIn {
-                    statsManager.updateScoreFrom(
-                        streak: streakManager.currentStreak,
-                        maxStreak: streakManager.maxStreak,
-                        wordCount: uniqueLearnedWordCountForRank
-                    )
-                }
+                scheduleRankUpdateToFirestore()
             }
             .onChange(of: streakManager.currentStreak) { _, _ in
-                if userManager.isSignedIn {
-                    statsManager.updateScoreFrom(
-                        streak: streakManager.currentStreak,
-                        maxStreak: streakManager.maxStreak,
-                        wordCount: uniqueLearnedWordCountForRank
-                    )
-                }
+                scheduleRankUpdateToFirestore()
             }
-            .onChange(of: diaryManager.entries.count) { _, _ in
-                if userManager.isSignedIn {
-                    statsManager.updateScoreFrom(
-                        streak: streakManager.currentStreak,
-                        maxStreak: streakManager.maxStreak,
-                        wordCount: uniqueLearnedWordCountForRank
-                    )
-                }
+            .onDisappear {
+                rankUpdateTask?.cancel()
             }
             .overlay {
                 if showingPhotoPicker {
                     ProfilePhotoOptionsOverlay(
                         isPresented: $showingPhotoPicker,
                         selectedPhotoItem: $selectedPhotoItem,
-                        isUploading: isUploadingProfilePhoto
+                        hasProfilePhoto: userManager.profileImageURL != nil,
+                        isUploading: isUploadingProfilePhoto,
+                        onRemove: {
+                            Task {
+                                await MainActor.run { isUploadingProfilePhoto = true }
+                                do {
+                                    try await userManager.removeProfilePhoto()
+                                    await MainActor.run {
+                                        isUploadingProfilePhoto = false
+                                        showingPhotoPicker = false
+                                    }
+                                } catch {
+                                    await MainActor.run {
+                                        profilePhotoError = error.localizedDescription
+                                        showingProfilePhotoError = true
+                                        isUploadingProfilePhoto = false
+                                        showingPhotoPicker = false
+                                    }
+                                }
+                            }
+                        }
                     )
                 }
             }
@@ -399,7 +417,7 @@ struct EditDisplayNameView: View {
     @State private var showingError = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section {
                     TextField("Name", text: $name)
@@ -453,7 +471,7 @@ struct SignInView: View {
     @State private var showingError = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section {
                     TextField("Email", text: $email)
@@ -538,7 +556,7 @@ struct SignUpView: View {
     @State private var showingError = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section {
                     TextField("Name", text: $name)
@@ -679,8 +697,10 @@ struct GoogleSignInButton: View {
 struct ProfilePhotoOptionsOverlay: View {
     @Binding var isPresented: Bool
     @Binding var selectedPhotoItem: PhotosPickerItem?
+    var hasProfilePhoto: Bool
     var isUploading: Bool
-    
+    var onRemove: () -> Void
+
     var body: some View {
         ZStack {
             Color.black.opacity(0.4)
@@ -688,7 +708,7 @@ struct ProfilePhotoOptionsOverlay: View {
                 .onTapGesture {
                     if !isUploading { isPresented = false }
                 }
-            
+
             VStack(spacing: 0) {
                 PhotosPicker(
                     selection: $selectedPhotoItem,
@@ -705,10 +725,28 @@ struct ProfilePhotoOptionsOverlay: View {
                     .padding(.vertical, 16)
                 }
                 .disabled(isUploading)
-                
+
+                if hasProfilePhoto {
+                    Divider()
+                        .padding(.horizontal, 16)
+
+                    Button(role: .destructive) {
+                        onRemove()
+                    } label: {
+                        HStack(spacing: 10) {
+                            Image(systemName: "trash")
+                            Text("Remove Photo")
+                        }
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 16)
+                    }
+                    .disabled(isUploading)
+                }
+
                 Divider()
                     .padding(.horizontal, 16)
-                
+
                 Button {
                     isPresented = false
                 } label: {
@@ -724,16 +762,23 @@ struct ProfilePhotoOptionsOverlay: View {
             .cornerRadius(16)
             .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
             .padding(.horizontal, 40)
+            .overlay {
+                if isUploading {
+                    ProgressView()
+                        .tint(AppColors.primaryButton)
+                        .padding()
+                }
+            }
         }
     }
 }
 
-/// SwiftUI `Material` yerine `UIBlurEffect(.systemThickMaterial)` — arka planı belirgin şekilde buğular.
+/// SwiftUI `Material` yerine `UIBlurEffect(.systemThickMaterialLight)` — belirgin buğulama; sistem dark modunda ton kaymaz.
 private struct SystemThickBlurBackground: UIViewRepresentable {
     var cornerRadius: CGFloat
 
     func makeUIView(context: Context) -> UIVisualEffectView {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .systemThickMaterial))
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: .systemThickMaterialLight))
         view.backgroundColor = .clear
         view.layer.cornerRadius = cornerRadius
         view.layer.cornerCurve = .continuous

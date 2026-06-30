@@ -24,6 +24,7 @@ struct DiaryView: View {
     @State private var expandedWordIds: Set<UUID> = []
     @State private var groupedDays: [Date: [Date]] = [:]
     @State private var navigationPath = NavigationPath()
+    @State private var entriesUpdateTask: Task<Void, Never>?
     
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -44,13 +45,14 @@ struct DiaryView: View {
             ZStack {
                 GlassSceneBackground()
                 VStack(spacing: 0) {
-                    if let syncMsg = diaryManager.cloudSyncUserMessage {
+                    if diaryManager.shouldShowCloudSyncBanner,
+                       let syncMsg = diaryManager.cloudSyncUserMessage {
                         HStack(alignment: .top, spacing: 10) {
                             Image(systemName: "exclamationmark.triangle.fill")
                                 .foregroundStyle(.orange)
                             Text(syncMsg)
                                 .font(.footnote)
-                                .foregroundColor(.white.opacity(0.95))
+                                .foregroundColor(AppColors.glassCardBody)
                                 .multilineTextAlignment(.leading)
                                 .fixedSize(horizontal: false, vertical: true)
                             Spacer(minLength: 0)
@@ -59,13 +61,19 @@ struct DiaryView: View {
                             } label: {
                                 Image(systemName: "xmark.circle.fill")
                                     .font(.body)
-                                    .foregroundColor(.white.opacity(0.55))
+                                    .foregroundColor(AppColors.glassCardMuted)
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel(String(localized: "Dismiss"))
                         }
                         .padding(12)
-                        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .background {
+                            Group {
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .fill(.ultraThinMaterial)
+                            }
+                            .glassMaterialIgnoresSystemColorScheme()
+                        }
                         .padding(.horizontal, 16)
                         .padding(.top, 8)
                     }
@@ -105,8 +113,7 @@ struct DiaryView: View {
             }
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
+            .toolbarBackground(.hidden, for: .navigationBar)
             .navigationDestination(for: UUID.self) { wordId in
                 if let word = word(for: wordId) {
                     QuizView(word: word)
@@ -114,11 +121,21 @@ struct DiaryView: View {
             }
         }
         .onAppear {
+            if !diaryManager.hasSyncableDiaryContent {
+                diaryManager.clearCloudSyncUserMessage()
+            }
             updateGroupedDays()
         }
-        .onChange(of: diaryManager.entries) { _ in
-            // DiaryManager'da değişiklik olduğunda groupedDays'i güncelle
-            updateGroupedDays()
+        .onChange(of: diaryManager.entries) { _, _ in
+            entriesUpdateTask?.cancel()
+            entriesUpdateTask = Task { @MainActor in
+                try? await Task.sleep(nanoseconds: 300_000_000)
+                guard !Task.isCancelled else { return }
+                updateGroupedDays()
+            }
+        }
+        .onDisappear {
+            entriesUpdateTask?.cancel()
         }
     }
     
@@ -218,6 +235,31 @@ struct WordRowView: View {
     private var savedNotes: [Note] {
         diaryManager.getNotes(for: word.id, on: date)
     }
+
+    @ViewBuilder
+    private var wordPhoneticAndTypeRow: some View {
+        let phonetic = word.phonetic?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let pos = word.partOfSpeech?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        let hasPhonetic = !(phonetic?.isEmpty ?? true)
+        let hasPOS = !(pos?.isEmpty ?? true)
+
+        if hasPhonetic || hasPOS {
+            HStack(spacing: 6) {
+                if hasPhonetic, let phonetic {
+                    Text(phonetic)
+                        .font(.caption)
+                        .foregroundColor(AppColors.glassCardMuted)
+                        .italic()
+                }
+                if hasPOS, let pos {
+                    Text(pos)
+                        .font(.caption)
+                        .italic()
+                        .foregroundColor(.black.opacity(0.78))
+                }
+            }
+        }
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -249,11 +291,6 @@ struct WordRowView: View {
         .padding(.horizontal, 20)
         .padding(.vertical, 14)
         .wordCardGlassBackground(cornerRadius: 20)
-        .contentShape(Rectangle())
-        .onTapGesture {
-            // Card'a tıklanınca aç/kapa
-            onToggle()
-        }
         .animation(.easeInOut(duration: 0.2), value: isExpanded)
         .listRowInsets(EdgeInsets(top: 3, leading: 16, bottom: 3, trailing: 16))
         .listRowBackground(Color.clear)
@@ -278,7 +315,13 @@ struct WordRowView: View {
                 .font(.system(size: 15, weight: .semibold))
                 .foregroundColor(AppColors.glassCardTitle)
                 .frame(width: 36, height: 36)
-                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .background {
+                    Group {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(.thinMaterial)
+                    }
+                    .glassMaterialIgnoresSystemColorScheme()
+                }
                 .overlay {
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .strokeBorder(AppColors.glassCardTitle.opacity(0.2), lineWidth: 0.5)
@@ -290,31 +333,24 @@ struct WordRowView: View {
                     .font(.body.weight(.semibold))
                     .glassCardWordTitle()
 
-                if let phonetic = word.phonetic {
-                    HStack(spacing: 6) {
-                        Text(phonetic)
-                            .font(.caption)
-                            .foregroundColor(AppColors.glassCardMuted)
-                            .italic()
-                        if let pos = word.partOfSpeech?.trimmingCharacters(in: .whitespacesAndNewlines).lowercased(),
-                           !pos.isEmpty {
-                            Text(pos)
-                                .font(.caption)
-                                .italic()
-                                .foregroundColor(.black.opacity(0.78))
-                        }
-                    }
-                }
+                wordPhoneticAndTypeRow
             }
             
             Spacer()
-            
+
+            PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 40)
+                .padding(.trailing, 4)
+
             Image(systemName: isExpanded ? "chevron.down" : "chevron.right")
                 .font(.caption)
                 .foregroundColor(AppColors.glassCardMuted)
                 .frame(width: 20, height: 20)
         }
         .padding(.vertical, 8)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            onToggle()
+        }
     }
 
     /// Today kartıyla aynı tipografi: üst etiket + okunaklı gövde.
@@ -424,7 +460,13 @@ struct WordRowView: View {
                         .foregroundColor(AppColors.glassCardTitle)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 8)
-                        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        .background {
+                            Group {
+                                RoundedRectangle(cornerRadius: 8, style: .continuous)
+                                    .fill(.thinMaterial)
+                            }
+                            .glassMaterialIgnoresSystemColorScheme()
+                        }
                         .overlay {
                             RoundedRectangle(cornerRadius: 8, style: .continuous)
                                 .strokeBorder(Color.white.opacity(0.22), lineWidth: 0.6)
@@ -529,7 +571,13 @@ struct NoteRowView: View {
                             .foregroundColor(AppColors.glassCardTitle)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 8)
-                            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                            .background {
+                                Group {
+                                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                                        .fill(.thinMaterial)
+                                }
+                                .glassMaterialIgnoresSystemColorScheme()
+                            }
                             .overlay {
                                 RoundedRectangle(cornerRadius: 8, style: .continuous)
                                     .strokeBorder(Color.white.opacity(0.22), lineWidth: 0.6)

@@ -28,6 +28,8 @@ struct Word: Identifiable, Codable, Equatable {
     let definition: String
     let exampleSentence: String
     let phonetic: String?
+    /// Cloud TTS (Firebase Storage) kalıcı telaffuz URL’si; yoksa ilk dinlemede üretilir.
+    let pronunciationAudioURL: String?
     /// 2. örnek cümle (WordOfTheDayManager'da aynı dosyada düzenlenebilir)
     let exampleSentence2: String?
     /// 3. örnek cümle (WordOfTheDayManager'da aynı dosyada düzenlenebilir)
@@ -46,6 +48,7 @@ struct Word: Identifiable, Codable, Equatable {
         definition: String,
         exampleSentence: String,
         phonetic: String? = nil,
+        pronunciationAudioURL: String? = nil,
         exampleSentence2: String? = nil,
         exampleSentence3: String? = nil,
         cefrLevel: String? = nil,
@@ -59,6 +62,7 @@ struct Word: Identifiable, Codable, Equatable {
         self.definition = definition
         self.exampleSentence = exampleSentence
         self.phonetic = phonetic
+        self.pronunciationAudioURL = pronunciationAudioURL
         self.exampleSentence2 = exampleSentence2
         self.exampleSentence3 = exampleSentence3
         self.cefrLevel = cefrLevel
@@ -66,6 +70,42 @@ struct Word: Identifiable, Codable, Equatable {
         self.partOfSpeech = partOfSpeech
         self.registerTag = registerTag
         self.frequencyBand = frequencyBand
+    }
+
+    func withExampleSentence(_ sentence: String) -> Word {
+        Word(
+            id: id,
+            word: word,
+            definition: definition,
+            exampleSentence: sentence,
+            phonetic: phonetic,
+            pronunciationAudioURL: pronunciationAudioURL,
+            exampleSentence2: exampleSentence2,
+            exampleSentence3: exampleSentence3,
+            cefrLevel: cefrLevel,
+            domainTag: domainTag,
+            partOfSpeech: partOfSpeech,
+            registerTag: registerTag,
+            frequencyBand: frequencyBand
+        )
+    }
+
+    func withPronunciationAudioURL(_ url: String?) -> Word {
+        Word(
+            id: id,
+            word: word,
+            definition: definition,
+            exampleSentence: exampleSentence,
+            phonetic: phonetic,
+            pronunciationAudioURL: url,
+            exampleSentence2: exampleSentence2,
+            exampleSentence3: exampleSentence3,
+            cefrLevel: cefrLevel,
+            domainTag: domainTag,
+            partOfSpeech: partOfSpeech,
+            registerTag: registerTag,
+            frequencyBand: frequencyBand
+        )
     }
 }
 

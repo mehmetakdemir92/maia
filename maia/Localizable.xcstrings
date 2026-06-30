@@ -4,11 +4,82 @@
     "" : {
 
     },
+    "%@ / %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ / %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ / %2$@"
+          }
+        }
+      }
+    },
     "%lld" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
     },
     "%lld day streak" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-Tages-Serie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld días de racha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld jours de série"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -18,13 +89,165 @@
       }
     },
     "%lld learned words" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld gelernte Wörter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld palabras aprendidas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld mots appris"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld öğrenilen kelime"
+          }
+        }
+      }
+    },
+    "%lld-day free trial" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-tägige kostenlose Testphase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld días de prueba gratuita"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld jours d'essai gratuit"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld günlük ücretsiz deneme"
+          }
+        }
+      }
+    },
+    "%lld-week free trial" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld-wöchige kostenlose Testphase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld semanas de prueba gratuita"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld semaines d'essai gratuit"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld haftalık ücretsiz deneme"
+          }
+        }
+      }
     },
     "•" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "•"
+          }
+        }
+      }
+    },
+    "≈ %@ / %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≈ %@ / %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≈ %@ / %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≈ %@ / %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "≈ %1$@ / %2$@"
+          }
+        }
+      }
     },
     "🎉 Great Job!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 Gut gemacht!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 ¡Buen trabajo!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🎉 Excellent travail !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -66,6 +289,34 @@
         }
       }
     },
+    "7-day free trial" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7-tägige kostenlose Testphase"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prueba gratuita de 7 días"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 jours d'essai gratuit"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7 gün ücretsiz dene"
+          }
+        }
+      }
+    },
     "15 day streak in a month" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -89,10 +340,54 @@
       }
     },
     "ABONELIK KOSULLARI\n\n- Satin alma onayinda odeme Apple ID hesabiniza yansitilir.\n- Abonelik, mevcut donem bitiminden en az 24 saat once iptal edilmezse otomatik yenilenir.\n- Yenileme ucreti, mevcut donemin bitimine 24 saat kala hesabiniza yansitilabilir.\n- Abonelik yonetimi ve iptal islemleri App Store hesap ayarlarindan yapilir.\n- Sunulmasi halinde ucretsiz deneme suresi, sure sonunda iptal edilmezse ucretli abonelige donusur." : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ABONNEMENTBEDINGUNGEN\n\n- Die Zahlung wird bei Kaufbestätigung Ihrem Apple-ID-Konto belastet.\n- Das Abonnement verlängert sich automatisch, wenn es nicht mindestens 24 Stunden vor Ablauf des aktuellen Zeitraums gekündigt wird.\n- Die Verlängerungsgebühr kann Ihrem Konto innerhalb von 24 Stunden vor Ablauf des aktuellen Zeitraums belastet werden.\n- Die Verwaltung und Kündigung des Abonnements erfolgt über die App Store-Kontoeinstellungen.\n- Falls angeboten, wird die kostenlose Testphase in ein kostenpflichtiges Abonnement umgewandelt, wenn sie nicht vor Ablauf gekündigt wird."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CONDICIONES DE LA SUSCRIPCIÓN\n\n- El pago se cargará a tu cuenta de Apple ID al confirmar la compra.\n- La suscripción se renueva automáticamente a menos que se cancele al menos 24 horas antes del final del período actual.\n- El cargo por renovación se puede aplicar a tu cuenta dentro de las 24 horas previas al final del período actual.\n- La gestión y cancelación de la suscripción se realiza desde la configuración de tu cuenta de App Store.\n- Si se ofrece un período de prueba gratuito, este se convertirá en una suscripción de pago si no se cancela al finalizar el período."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CONDITIONS D'ABONNEMENT\n\n- Le paiement sera débité de votre compte Apple ID lors de la confirmation de l'achat.\n- L'abonnement se renouvelle automatiquement, sauf s'il est annulé au moins 24 heures avant la fin de la période en cours.\n- Le renouvellement sera facturé à votre compte dans les 24 heures précédant la fin de la période en cours.\n- La gestion et l'annulation de l'abonnement peuvent être effectuées dans les réglages de votre compte App Store.\n- Si une période d'essai gratuit est offerte, elle se convertira en abonnement payant si elle n'est pas annulée avant la fin de la période."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ABONELIK KOSULLARI\n\n- Satin alma onayinda odeme Apple ID hesabiniza yansitilir.\n- Abonelik, mevcut donem bitiminden en az 24 saat once iptal edilmezse otomatik yenilenir.\n- Yenileme ucreti, mevcut donemin bitimine 24 saat kala hesabiniza yansitilabilir.\n- Abonelik yonetimi ve iptal islemleri App Store hesap ayarlarindan yapilir.\n- Sunulmasi halinde ucretsiz deneme suresi, sure sonunda iptal edilmezse ucretli abonelige donusur."
+          }
+        }
+      }
     },
     "Ad Error" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werbefehler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de anuncio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur de publicité"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -103,6 +398,24 @@
     },
     "Add a note or example..." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notiz oder Beispiel hinzufügen..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir una nota o ejemplo..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une note ou un exemple..."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -112,7 +425,89 @@
       }
     },
     "Add example sentence" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beispielsatz hinzufügen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir frase de ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une phrase d'exemple"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Örnek cümle ekle"
+          }
+        }
+      }
+    },
+    "Advanced word pool is busy for today. Try Again, or switch to a nearby level in Settings." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der erweiterte Wortschatz ist heute belegt. Versuchen Sie es erneut oder wechseln Sie in den Einstellungen zu einem ähnlichen Level."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El grupo de palabras avanzado está ocupado hoy. Inténtalo de nuevo, o cambia a un nivel cercano en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le pool de mots avancé est occupé aujourd'hui. Réessayez, ou passez à un niveau proche dans les réglages."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün için ileri seviye kelime havuzu meşgul. Tekrar Dene veya Ayarlar'dan yakın bir seviyeye geç."
+          }
+        }
+      }
+    },
+    "AI sentence correction" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KI-Satzkorrektur"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Corrección de frases con IA"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correction de phrases IA"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yapay zekâ ile cümle düzeltme"
+          }
+        }
+      }
     },
     "An error occurred" : {
       "extractionState" : "stale",
@@ -127,6 +522,24 @@
     },
     "App language applies immediately. System follows your device language." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die App-Sprache wird sofort angewendet. Das System folgt der Sprache Ihres Geräts."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El idioma de la app se aplica inmediatamente. El sistema sigue el idioma de tu dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La langue de l'app s'applique immédiatement. Le système suit la langue de votre appareil."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -137,6 +550,24 @@
     },
     "Are you sure you want to sign out?" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Möchten Sie sich wirklich abmelden?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Estás seguro de que quieres cerrar sesión?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voulez-vous vraiment vous déconnecter ?"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -147,6 +578,24 @@
     },
     "Back" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atrás"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retour"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -155,8 +604,139 @@
         }
       }
     },
+    "Best value" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bestes Angebot"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejor oferta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meilleure offre"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En avantajlı"
+          }
+        }
+      }
+    },
+    "Beta: force Premium" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beta: Premium erzwingen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beta: forzar Premium"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bêta : forcer Premium"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beta: Premium'u zorla"
+          }
+        }
+      }
+    },
+    "Billed monthly. Cancel anytime in App Store settings." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monatliche Abrechnung. Jederzeit in den App Store-Einstellungen kündbar."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facturado mensualmente. Cancela en cualquier momento en los ajustes de App Store."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facturé mensuellement. Annulez à tout moment dans les réglages de l'App Store."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aylık faturalandırılır. App Store ayarlarından istediğin zaman iptal edebilirsin."
+          }
+        }
+      }
+    },
+    "Billed yearly. 7-day free trial for new subscribers." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jährliche Abrechnung. 7-tägige kostenlose Testphase für neue Abonnenten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facturado anualmente. Prueba gratuita de 7 días para nuevos suscriptores."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Facturé annuellement. 7 jours d'essai gratuit pour les nouveaux abonnés."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yıllık faturalandırılır. Yeni abonelere 7 gün ücretsiz deneme."
+          }
+        }
+      }
+    },
     "Build your daily English habit" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bauen Sie Ihre tägliche Englisch-Gewohnheit auf"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crea tu hábito diario de inglés"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Développez votre habitude quotidienne d'anglais"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -167,6 +747,24 @@
     },
     "By continuing, you agree to our Terms of Use and Privacy Policy." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit dem Fortfahren stimmen Sie unseren Nutzungsbedingungen und der Datenschutzrichtlinie zu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al continuar, aceptas nuestros Términos de uso y Política de privacidad."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En continuant, vous acceptez nos Conditions d'utilisation et notre Politique de confidentialité."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -177,6 +775,24 @@
     },
     "By using Maia, you agree to the following terms and conditions:\n\n1. You will use the app for educational purposes only.\n2. You are responsible for maintaining the confidentiality of your account.\n3. We reserve the right to modify these terms at any time.\n4. Premium features require a subscription.\n\nFor questions, please contact support." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch die Nutzung von Maia stimmen Sie den folgenden Geschäftsbedingungen zu:\n\n1. Sie werden die App ausschließlich zu Bildungszwecken nutzen.\n2. Sie sind für die Vertraulichkeit Ihres Kontos verantwortlich.\n3. Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern.\n4. Premium-Funktionen erfordern ein Abonnement.\n\nBei Fragen wenden Sie sich bitte an den Support."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al usar Maia, aceptas los siguientes términos y condiciones:\n\n1. Usarás la aplicación solo con fines educativos.\n2. Eres responsable de mantener la confidencialidad de tu cuenta.\n3. Nos reservamos el derecho de modificar estos términos en cualquier momento.\n4. Las funciones Premium requieren una suscripción.\n\nPara preguntas, contacta a soporte."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En utilisant Maia, vous acceptez les conditions générales suivantes :\n\n1. Vous utiliserez l'application à des fins éducatives uniquement.\n2. Vous êtes responsable du maintien de la confidentialité de votre compte.\n3. Nous nous réservons le droit de modifier ces conditions à tout moment.\n4. Les fonctionnalités Premium nécessitent un abonnement.\n\nPour toute question, veuillez contacter le support."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -187,6 +803,24 @@
     },
     "Cancel" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -197,6 +831,24 @@
     },
     "Career" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karriere"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carrera"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carrière"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -206,13 +858,53 @@
       }
     },
     "CEFR Journey" : {
-
-    },
-    "Change your CEFR step anytime. This affects your learning difficulty." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GER-Reise"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu viaje CEFR"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parcours CECRL"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CEFR Yolculuğu"
+          }
+        }
+      }
     },
     "Check Answer" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antwort prüfen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comprobar respuesta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vérifier la réponse"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -234,6 +926,24 @@
     },
     "Choose from Library" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Bibliothek wählen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegir de la biblioteca"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir dans la bibliothèque"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -243,10 +953,53 @@
       }
     },
     "Choose Photo" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto auswählen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elegir foto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir une photo"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraf Seç"
+          }
+        }
+      }
     },
     "Choose the best word to complete:" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie das beste Wort zur Ergänzung:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige la mejor palabra para completar:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez le meilleur mot pour compléter :"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -257,6 +1010,24 @@
     },
     "Close" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -267,6 +1038,24 @@
     },
     "Collection" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sammlung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colección"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collection"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +1088,24 @@
     },
     "Complete quizzes to start building your vocabulary diary!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Absolvieren Sie Quizze, um Ihr Vokabeltagebuch aufzubauen!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Completa cuestionarios para empezar a construir tu diario de vocabulario!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminez les quiz pour commencer à construire votre carnet de vocabulaire !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -309,6 +1116,24 @@
     },
     "Complete the sentence:" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vervollständigen Sie den Satz:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completa la oración:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Complétez la phrase :"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -329,10 +1154,53 @@
       }
     },
     "Complete your profile" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil vervollständigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Completa tu perfil"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compléter votre profil"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilini tamamla"
+          }
+        }
+      }
     },
     "Confirm password" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passwort bestätigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmar contraseña"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmer le mot de passe"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -343,6 +1211,24 @@
     },
     "Continue" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -352,10 +1238,53 @@
       }
     },
     "Continue with Apple" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Apple fortfahren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar con Apple"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer avec Apple"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apple ile Devam Et"
+          }
+        }
+      }
     },
     "Continue with Google" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Google fortfahren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar con Google"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer avec Google"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -366,6 +1295,24 @@
     },
     "Correct" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correcto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correct"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -376,6 +1323,24 @@
     },
     "Correct ✅" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtig ✅"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correcto ✅"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correct ✅"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -386,6 +1351,24 @@
     },
     "Correct answer:" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtige Antwort:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Respuesta correcta:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonne réponse :"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -396,6 +1379,24 @@
     },
     "Correct: %lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtig: %lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correctas: %lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correct : %lld"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -417,6 +1418,24 @@
     },
     "Could not load rewarded ad right now." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belohnungsanzeige konnte im Moment nicht geladen werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo cargar el anuncio recompensado en este momento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de charger l'annonce récompensée pour le moment."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -426,10 +1445,142 @@
       }
     },
     "Couldn’t generate an example right now. Please try again." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es konnte gerade kein Beispiel generiert werden. Bitte versuchen Sie es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo generar un ejemplo en este momento. Inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de générer un exemple pour le moment. Veuillez réessayer."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu anda bir örnek oluşturulamadı. Lütfen tekrar dene."
+          }
+        }
+      }
+    },
+    "Couldn’t load today’s words for this level. Tap Try Again or pick a nearby level in Settings." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die heutigen Wörter für dieses Niveau konnten nicht geladen werden. Tippen Sie auf „Erneut versuchen“ oder wählen Sie ein benachbartes Niveau in den Einstellungen."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron cargar las palabras de hoy para este nivel. Toca Reintentar o elige un nivel cercano en Ajustes."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de charger les mots du jour pour ce niveau. Appuyez sur Réessayer ou choisissez un niveau proche dans les Réglages."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu seviye için bugünün kelimeleri yüklenemedi. Tekrar Dene'ye dokun veya Ayarlar'dan yakın bir seviye seç."
+          }
+        }
+      }
+    },
+    "Couldn't load today's words. Check your connection, then tap Try Again." : {
 
+    },
+    "Couldn’t load words from the server. Pull to refresh or tap Try Again. If it persists, sign out and sign back in." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wörter konnten nicht vom Server geladen werden. Zum Aktualisieren ziehen oder auf „Erneut versuchen“ tippen. Wenn das Problem weiterhin besteht, melden Sie sich ab und wieder an."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron cargar las palabras del servidor. Desliza para actualizar o toca Reintentar. Si el problema persiste, cierra sesión y vuelve a iniciarla."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de charger les mots depuis le serveur. Tirez pour actualiser ou appuyez sur Réessayer. Si le problème persiste, déconnectez-vous et reconnectez-vous."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucudan kelimeler yüklenemedi. Yenilemek için aşağı çek veya Tekrar Dene'ye dokun. Sorun devam ederse, çıkış yapıp tekrar giriş yap."
+          }
+        }
+      }
+    },
+    "Couldn’t save your diary to the cloud. Check that you’re signed in." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Tagebuch konnte nicht in der Cloud gespeichert werden. Prüfen Sie, ob Sie angemeldet sind."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo guardar tu diario en la nube. Comprueba que hayas iniciado sesión."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d'enregistrer votre journal sur le cloud. Vérifiez que vous êtes connecté(e)."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlüğün buluta kaydedilemedi. Giriş yaptığından emin ol."
+          }
+        }
+      }
     },
     "Couldn’t sync your diary with the cloud. Showing entries saved on this device." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ihr Tagebuch konnte nicht mit der Cloud synchronisiert werden. Es werden Einträge angezeigt, die auf diesem Gerät gespeichert sind."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo sincronizar tu diario con la nube. Mostrando entradas guardadas en este dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de synchroniser votre journal avec le cloud. Affichage des entrées enregistrées sur cet appareil."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -440,6 +1591,24 @@
     },
     "Create account" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konto erstellen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crear cuenta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Créer un compte"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -449,10 +1618,53 @@
       }
     },
     "Current level: %@" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuelles Niveau: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel actual: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niveau actuel : %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mevcut seviye: %@"
+          }
+        }
+      }
     },
     "Current Streak" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuelle Serie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Racha actual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Série actuelle"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -463,6 +1675,24 @@
     },
     "Daily streak completed!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tägliche Serie abgeschlossen!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Racha diaria completada!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Série quotidienne terminée !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -482,8 +1712,54 @@
         }
       }
     },
+    "day" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "día"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "jour"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gün"
+          }
+        }
+      }
+    },
     "Day completed!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag abgeschlossen!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Día completado!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journée terminée !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -494,6 +1770,24 @@
     },
     "Day Streak" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tages-Serie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Racha de días"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Série de jours"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -504,6 +1798,24 @@
     },
     "days" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tage"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "días"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "jours"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -524,6 +1836,24 @@
     },
     "Definition" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Definition"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Definición"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Définition"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -534,6 +1864,24 @@
     },
     "Delete" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -544,6 +1892,24 @@
     },
     "Delete Account" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konto löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar cuenta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer le compte"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -554,6 +1920,24 @@
     },
     "Diary" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tagebuch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diario"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -564,6 +1948,24 @@
     },
     "Discard" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwerfen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descartar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -574,6 +1976,24 @@
     },
     "Dismiss" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorer"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -584,6 +2004,24 @@
     },
     "Done" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fertig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terminé"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -593,10 +2031,53 @@
       }
     },
     "Edit Name" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namen bearbeiten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar nombre"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier le nom"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adı Düzenle"
+          }
+        }
+      }
     },
     "Edit note..." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notiz bearbeiten..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar nota..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier la note..."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -607,6 +2088,24 @@
     },
     "Email" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-Mail"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -615,8 +2114,60 @@
         }
       }
     },
-    "English" : {
+    "Email not verified yet. Open the link in your inbox first." : {
+      "extractionState" : "stale",
       "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-posta henüz doğrulanmadı. Önce gelen kutundaki bağlantıyı aç."
+          }
+        }
+      }
+    },
+    "Email verified. Opening Maia…" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-posta doğrulandı. Maia açılıyor…"
+          }
+        }
+      }
+    },
+    "Email verified. Welcome!" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-posta doğrulandı. Hoş geldin!"
+          }
+        }
+      }
+    },
+    "English" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglés"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anglais"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -626,20 +2177,92 @@
       }
     },
     "English level" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englischniveau"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel de inglés"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niveau d'anglais"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İngilizce seviyesi"
+          }
+        }
+      }
     },
-    "Enjoy an ad-free experience, word focus categories, and AI-powered extra example sentences." : {
+    "Enjoy an ad-free experience, AI sentence correction, extra example sentences, and full profile stats." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genießen Sie ein werbefreies Erlebnis, KI-Satzkorrektur, zusätzliche Beispielsätze und vollständige Profilstatistiken."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disfruta de una experiencia sin anuncios, corrección de oraciones con IA, oraciones de ejemplo adicionales y estadísticas completas del perfil."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profitez d'une expérience sans publicité, de la correction de phrases par IA, d'exemples de phrases supplémentaires et de statistiques de profil complètes."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reklamsız deneyim, yapay zekâ ile cümle düzeltme, ek örnek cümleler ve tüm profil istatistikleri."
+          }
+        }
+      }
+    },
+    "Enjoy an ad-free experience, AI-powered sentence correction, and extra example sentences." : {
+      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Reklamsız deneyim, kelime odağı kategorileri ve yapay zekâ destekli ek örnek cümleler."
+            "value" : "Reklamsız deneyim, yapay zekâ destekli cümle düzeltme ve ek örnek cümleler."
           }
         }
       }
     },
     "Error" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fehler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -650,6 +2273,24 @@
     },
     "Example" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beispiel"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exemple"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -660,6 +2301,24 @@
     },
     "Example Sentences" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beispielsätze"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frases de ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phrases d'exemple"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -670,6 +2329,24 @@
     },
     "Fill in the blank:" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lücken füllen:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rellena el espacio en blanco:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Complétez le blanc :"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -679,7 +2356,26 @@
       }
     },
     "Firestore couldn’t connect. Check your internet connection, then tap Try Again." : {
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firestore konnte keine Verbindung herstellen. Überprüfen Sie Ihre Internetverbindung und tippen Sie dann auf „Erneut versuchen“."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firestore no pudo conectar. Comprueba tu conexión a internet y luego pulsa Reintentar."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Firestore n'a pas pu se connecter. Vérifiez votre connexion internet, puis appuyez sur Réessayer."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -699,8 +2395,54 @@
         }
       }
     },
+    "Free trial included" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kostenlose Testphase inklusive"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prueba gratuita incluida"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Essai gratuit inclus"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ücretsiz deneme dahil"
+          }
+        }
+      }
+    },
     "Freeze & Delete Account" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konto einfrieren & löschen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Congelar y eliminar cuenta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geler et supprimer le compte"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -709,11 +2451,82 @@
         }
       }
     },
+    "Full profile stats (quiz achievement & max streak)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vollständige Profilstatistiken (Quiz-Erfolge & maximale Serie)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estadísticas completas del perfil (logros del cuestionario y racha máxima)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiques complètes du profil (réussite aux quiz et meilleure série)"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm profil istatistikleri (quiz başarısı ve en uzun seri)"
+          }
+        }
+      }
+    },
     "G" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "G"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "G"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "G"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "G"
+          }
+        }
+      }
     },
     "General" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allgemein"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Général"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -724,6 +2537,24 @@
     },
     "Generate More" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mehr generieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generar más"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Générer plus"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -734,6 +2565,24 @@
     },
     "Generate more example sentences" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weitere Beispielsätze generieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generar más frases de ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Générer plus de phrases d'exemple"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -744,6 +2593,24 @@
     },
     "Generated" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generiert"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Généré"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -754,6 +2621,24 @@
     },
     "Generating questions..." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fragen werden generiert..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generando preguntas..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Génération des questions..."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -764,6 +2649,24 @@
     },
     "Get Premium" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium erhalten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtener Premium"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obtenir Premium"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -773,7 +2676,33 @@
       }
     },
     "GIZLILIK POLITIKASI\n\nBu politika, Maia'nin hangi verileri hangi amaclarla isledigini aciklar.\n\n1) Islenen veri kategorileri\n- Hesap verileri (e-posta, kullanici kimligi)\n- Uygulama kullanim ve teknik verileri (analitik, hata kayitlari)\n- Abonelik ve yetki durum bilgileri\n\n2) Isleme amaclari\n- Giris islemlerini ve temel uygulama ozelliklerini saglamak\n- Guvenlik, performans ve urun kalitesini iyilestirmek\n- Premium ozellikleri sunmak\n\n3) Ucuncu taraf hizmetler\n- Kimlik dogrulama, depolama ve analitik icin Firebase/Google servisleri kullanilabilir.\n\n4) Veri saklama\n- Veriler, isleme amaci icin gerekli sure boyunca saklanir.\n- Yasal zorunluluk yoksa silme talepleri dogrultusunda kaldirilir veya anonimlestirilir.\n\n5) Kullanici haklari\n- Uygulanabilir mevzuata gore erisim, duzeltme ve silme taleplerinde bulunabilirsiniz.\n\n6) Iletisim\n- Gizlilik talepleri icin: privacy@yourdomain.com" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DATENSCHUTZRICHTLINIE\n\nDiese Richtlinie erklärt, welche Daten Maia zu welchen Zwecken verarbeitet.\n\n1) Kategorien der verarbeiteten Daten\n- Kontodaten (E-Mail, Benutzer-ID)\n- App-Nutzungs- und technische Daten (Analysen, Fehlerprotokolle)\n- Abonnement- und Berechtigungsstatusinformationen\n\n2) Verarbeitungszwecke\n- Bereitstellung von Anmeldevorgängen und grundlegenden App-Funktionen\n- Verbesserung von Sicherheit, Leistung und Produktqualität\n- Bereitstellung von Premium-Funktionen\n\n3) Dienste Dritter\n- Für Authentifizierung, Speicherung und Analysen können Firebase/Google-Dienste verwendet werden.\n\n4) Datenspeicherung\n- Daten werden so lange gespeichert, wie es für den Verarbeitungszweck erforderlich ist.\n- Sofern keine gesetzliche Verpflichtung besteht, werden Daten auf Anfrage gelöscht oder anonymisiert.\n\n5) Nutzerrechte\n- Sie können gemäß den geltenden Vorschriften Zugriffs-, Korrektur- und Löschungsanfragen stellen.\n\n6) Kontakt\n- Für Datenschutzanfragen: privacy@yourdomain.com"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "POLÍTICA DE PRIVACIDAD\n\nEsta política explica qué datos procesa Maia y con qué fines.\n\n1) Categorías de datos procesados\n- Datos de la cuenta (correo electrónico, ID de usuario)\n- Datos técnicos y de uso de la aplicación (análisis, registros de errores)\n- Información de estado de suscripción y autorización\n\n2) Fines del procesamiento\n- Proporcionar funciones básicas de la aplicación y procesos de inicio de sesión\n- Mejorar la seguridad, el rendimiento y la calidad del producto\n- Ofrecer funciones Premium\n\n3) Servicios de terceros\n- Se pueden utilizar servicios de Firebase/Google para autenticación, almacenamiento y análisis.\n\n4) Retención de datos\n- Los datos se conservan durante el tiempo necesario para el fin del procesamiento.\n- Se eliminan o anonimizan según las solicitudes de eliminación, a menos que exista una obligación legal.\n\n5) Derechos del usuario\n- Puede solicitar acceso, rectificación y eliminación de acuerdo con la legislación aplicable.\n\n6) Contacto\n- Para consultas de privacidad: privacy@yourdomain.com"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "POLITIQUE DE CONFIDENTIALITÉ\n\nCette politique explique quelles données Maia traite et à quelles fins.\n\n1) Catégories de données traitées\n- Données de compte (e-mail, identifiant utilisateur)\n- Données d'utilisation de l'application et techniques (analyses, journaux d'erreurs)\n- Informations sur l'abonnement et le statut d'autorisation\n\n2) Finalités du traitement\n- Fournir les opérations de connexion et les fonctionnalités de base de l'application\n- Améliorer la sécurité, les performances et la qualité du produit\n- Offrir les fonctionnalités Premium\n\n3) Services tiers\n- Les services Firebase/Google peuvent être utilisés pour l'authentification, le stockage et l'analyse.\n\n4) Conservation des données\n- Les données sont conservées pendant la durée nécessaire à la finalité du traitement.\n- Sauf obligation légale, elles sont supprimées ou anonymisées suite aux demandes de suppression.\n\n5) Droits de l'utilisateur\n- Vous pouvez demander l'accès, la rectification et la suppression conformément à la législation applicable.\n\n6) Contact\n- Pour les demandes de confidentialité : privacy@yourdomain.com"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GIZLILIK POLITIKASI\n\nBu politika, Maia'nin hangi verileri hangi amaclarla isledigini aciklar.\n\n1) Islenen veri kategorileri\n- Hesap verileri (e-posta, kullanici kimligi)\n- Uygulama kullanim ve teknik verileri (analitik, hata kayitlari)\n- Abonelik ve yetki durum bilgileri\n\n2) Isleme amaclari\n- Giris islemlerini ve temel uygulama ozelliklerini saglamak\n- Guvenlik, performans ve urun kalitesini iyilestirmek\n- Premium ozellikleri sunmak\n\n3) Ucuncu taraf hizmetler\n- Kimlik dogrulama, depolama ve analitik icin Firebase/Google servisleri kullanilabilir.\n\n4) Veri saklama\n- Veriler, isleme amaci icin gerekli sure boyunca saklanir.\n- Yasal zorunluluk yoksa silme talepleri dogrultusunda kaldirilir veya anonimlestirilir.\n\n5) Kullanici haklari\n- Uygulanabilir mevzuata gore erisim, duzeltme ve silme taleplerinde bulunabilirsiniz.\n\n6) Iletisim\n- Gizlilik talepleri icin: privacy@yourdomain.com"
+          }
+        }
+      }
     },
     "Head Of The Ambitious Poets Department" : {
       "extractionState" : "stale",
@@ -786,8 +2715,37 @@
         }
       }
     },
+    "I verified — continue" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğruladım — devam et"
+          }
+        }
+      }
+    },
     "IELTS / TOEFL" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IELTS / TOEFL"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IELTS / TOEFL"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IELTS / TOEFL"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -797,14 +2755,86 @@
       }
     },
     "KULLANIM KOSULLARI\n\nMaia uygulamasini kullanarak bu kosullari kabul etmis sayilirsiniz.\n\n1) Hesap ve guvenlik\n- Hesap bilgilerinizin guvenliginden siz sorumlusunuz.\n- Hesabinizin yetkisiz kullanimini fark etmeniz halinde bize bildirmeniz gerekir.\n\n2) Izin verilen kullanim\n- Uygulama yalnizca hukuka uygun ve egitim amacli kullanilabilir.\n- Sisteme yetkisiz erisim, hizmeti bozma girisimi veya tersine muhendislik yasaktir.\n\n3) Ucretli ozellikler ve abonelik\n- Premium icerikler abonelik kapsaminda sunulabilir.\n- Ucretlendirme, yenileme ve iptal surecleri Apple App Store tarafindan yonetilir.\n\n4) Degisiklik hakki\n- Uygulama ozellikleri ve bu kosullar zaman zaman guncellenebilir.\n- Onemli degisiklikler uygulama icinden duyurulur.\n\n5) Sorumlulugun sinirlandirilmasi\n- Uygulama \"oldugu gibi\" sunulur.\n- Yasal olarak izin verilen olcude, dolayli zararlar ve hizmet kesintilerinden sorumluluk kabul edilmez.\n\n6) Iletisim\n- Hukuki konular icin: support@yourdomain.com" : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NUTZUNGSBEDINGUNGEN\n\nDurch die Nutzung der Maia-App stimmen Sie diesen Bedingungen zu.\n\n1) Konto und Sicherheit\n- Sie sind für die Sicherheit Ihrer Kontoinformationen verantwortlich.\n- Sie müssen uns benachrichtigen, wenn Sie eine unbefugte Nutzung Ihres Kontos bemerken.\n\n2) Zulässige Nutzung\n- Die App darf nur rechtmäßig und zu Bildungszwecken verwendet werden.\n- Unbefugter Zugriff auf das System, Versuche, den Dienst zu stören, oder Reverse Engineering sind untersagt.\n\n3) Kostenpflichtige Funktionen und Abonnements\n- Premium-Inhalte können im Rahmen eines Abonnements angeboten werden.\n- Abrechnungs-, Verlängerungs- und Kündigungsprozesse werden vom Apple App Store verwaltet.\n\n4) Änderungsrecht\n- App-Funktionen und diese Bedingungen können von Zeit zu Zeit aktualisiert werden.\n- Wesentliche Änderungen werden innerhalb der App bekannt gegeben.\n\n5) Haftungsbeschränkung\n- Die App wird „wie besehen“ bereitgestellt.\n- Soweit gesetzlich zulässig, wird keine Haftung für indirekte Schäden und Dienstunterbrechungen übernommen.\n\n6) Kontakt\n- Für rechtliche Angelegenheiten: support@yourdomain.com"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TÉRMINOS DE USO\n\nAl usar la aplicación Maia, acepta estos términos.\n\n1) Cuenta y seguridad\n- Usted es responsable de la seguridad de la información de su cuenta.\n- Debe notificarnos si detecta un uso no autorizado de su cuenta.\n\n2) Uso permitido\n- La aplicación solo puede usarse con fines educativos y de forma legal.\n- Se prohíbe el acceso no autorizado al sistema, los intentos de interrumpir el servicio o la ingeniería inversa.\n\n3) Funciones de pago y suscripción\n- El contenido Premium puede ofrecerse mediante suscripción.\n- Los procesos de facturación, renovación y cancelación son gestionados por Apple App Store.\n\n4) Derecho de modificación\n- Las funciones de la aplicación y estos términos pueden actualizarse ocasionalmente.\n- Los cambios importantes se anunciarán dentro de la aplicación.\n\n5) Limitación de responsabilidad\n- La aplicación se proporciona \"tal cual\".\n- En la medida permitida por la ley, no se acepta responsabilidad por daños indirectos ni interrupciones del servicio.\n\n6) Contacto\n- Para asuntos legales: support@yourdomain.com"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CONDITIONS D'UTILISATION\n\nEn utilisant l'application Maia, vous acceptez ces conditions.\n\n1) Compte et sécurité\n- Vous êtes responsable de la sécurité des informations de votre compte.\n- Vous devez nous informer si vous constatez une utilisation non autorisée de votre compte.\n\n2) Utilisation autorisée\n- L'application ne peut être utilisée qu'à des fins légales et éducatives.\n- L'accès non autorisé au système, la tentative de perturbation du service ou l'ingénierie inverse sont interdits.\n\n3) Fonctionnalités payantes et abonnement\n- Le contenu Premium peut être proposé dans le cadre d'un abonnement.\n- Les processus de facturation, de renouvellement et d'annulation sont gérés par l'Apple App Store.\n\n4) Droit de modification\n- Les fonctionnalités de l'application et ces conditions peuvent être mises à jour de temps à autre.\n- Les modifications importantes sont annoncées via l'application.\n\n5) Limitation de responsabilité\n- L'application est fournie \"telle quelle\".\n- Dans la mesure permise par la loi, aucune responsabilité n'est acceptée pour les dommages indirects et les interruptions de service.\n\n6) Contact\n- Pour les questions juridiques : support@yourdomain.com"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KULLANIM KOSULLARI\n\nMaia uygulamasini kullanarak bu kosullari kabul etmis sayilirsiniz.\n\n1) Hesap ve guvenlik\n- Hesap bilgilerinizin guvenliginden siz sorumlusunuz.\n- Hesabinizin yetkisiz kullanimini fark etmeniz halinde bize bildirmeniz gerekir.\n\n2) Izin verilen kullanim\n- Uygulama yalnizca hukuka uygun ve egitim amacli kullanilabilir.\n- Sisteme yetkisiz erisim, hizmeti bozma girisimi veya tersine muhendislik yasaktir.\n\n3) Ucretli ozellikler ve abonelik\n- Premium icerikler abonelik kapsaminda sunulabilir.\n- Ucretlendirme, yenileme ve iptal surecleri Apple App Store tarafindan yonetilir.\n\n4) Degisiklik hakki\n- Uygulama ozellikleri ve bu kosullar zaman zaman guncellenebilir.\n- Onemli degisiklikler uygulama icinden duyurulur.\n\n5) Sorumlulugun sinirlandirilmasi\n- Uygulama \"oldugu gibi\" sunulur.\n- Yasal olarak izin verilen olcude, dolayli zararlar ve hizmet kesintilerinden sorumluluk kabul edilmez.\n\n6) Iletisim\n- Hukuki konular icin: support@yourdomain.com"
+          }
+        }
+      }
     },
     "Languages" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprachen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idiomas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langues"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diller"
+          }
+        }
+      }
+    },
+    "Launch pricing — limited time." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einführungspreis — zeitlich begrenzt."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Precio de lanzamiento — tiempo limitado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prix de lancement — durée limitée."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lansman fiyatı — sınırlı süre"
           }
         }
       }
@@ -843,10 +2873,53 @@
       }
     },
     "learned" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "gelernt"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "aprendido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "appris"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "öğrenilen"
+          }
+        }
+      }
     },
     "Legal" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechtliches"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legal"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mentions légales"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -857,6 +2930,24 @@
     },
     "Loading quiz..." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz wird geladen..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando cuestionario..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chargement du quiz..."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -867,6 +2958,24 @@
     },
     "Log in" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anmelden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar sesión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se connecter"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -877,6 +2986,24 @@
     },
     "Maia" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maia"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maia"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -898,6 +3025,24 @@
     },
     "Max. Streak" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max. Serie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Racha máx."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meilleure série"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -908,6 +3053,24 @@
     },
     "Maximum attempts reached for today" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maximale Versuche für heute erreicht"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se ha alcanzado el número máximo de intentos para hoy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre maximal de tentatives atteint pour aujourd'hui"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -918,10 +3081,56 @@
     },
     "Missed yesterday? Watch a short ad to save your streak." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestern verpasst? Schau eine kurze Werbung, um deine Serie zu retten."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Te lo perdiste ayer? Mira un anuncio corto para guardar tu racha."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manqué hier ? Regardez une courte pub pour sauver votre série."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dünü mü kaçırdınız? Seriyi kurtarmak için kısa bir reklam izleyin."
+          }
+        }
+      }
+    },
+    "mo" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "M."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mois"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ay"
           }
         }
       }
@@ -939,6 +3148,24 @@
     },
     "My example sentences" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meine Beispielsätze"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mis frases de ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes exemples de phrases"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -949,6 +3176,24 @@
     },
     "Name" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -958,10 +3203,53 @@
       }
     },
     "Name Surname" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name Nachname"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre Apellido"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom Prénom"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad Soyad"
+          }
+        }
+      }
     },
     "Next Question" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächste Frage"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siguiente Pregunta"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Question suivante"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -972,6 +3260,24 @@
     },
     "Next review: %@" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nächste Wiederholung: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Próximo repaso: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prochaine révision : %@"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -982,6 +3288,24 @@
     },
     "No active subscription found for this Apple ID." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kein aktives Abonnement für diese Apple-ID gefunden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontró ninguna suscripción activa para este Apple ID."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun abonnement actif trouvé pour cet identifiant Apple."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -992,6 +3316,24 @@
     },
     "No ads" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werbefrei"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin anuncios"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sans pubs"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1002,6 +3344,24 @@
     },
     "No Diary Entries Yet" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Tagebucheinträge"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no hay entradas en el diario"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore d'entrées de journal"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1012,6 +3372,24 @@
     },
     "Not quite ❌" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nicht ganz ❌"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No del todo ❌"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas tout à fait ❌"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1022,6 +3400,24 @@
     },
     "OK" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceptar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1030,7 +3426,11 @@
         }
       }
     },
+    "Only %1$lld words are curated for %2$@. Need 3." : {
+
+    },
     "Only in DEBUG builds. Mimics App Store subscription." : {
+      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
@@ -1040,8 +3440,37 @@
         }
       }
     },
+    "Open the link in that email, then tap “I verified” below. Check spam if you don’t see it." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postadaki bağlantıyı aç, ardından aşağıdan “Doğruladım — devam et”e bas. Görünmüyorsa spam klasörüne bak."
+          }
+        }
+      }
+    },
     "or" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "oder"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "o"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ou"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1052,6 +3481,24 @@
     },
     "Password" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passwort"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contraseña"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mot de passe"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1062,6 +3509,24 @@
     },
     "Passwords don't match" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passwörter stimmen nicht überein"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las contraseñas no coinciden"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les mots de passe ne correspondent pas"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1071,7 +3536,32 @@
       }
     },
     "Perfect Quizzes" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfekte Quizze"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuestionarios perfectos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz parfaits"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mükemmel Sınavlar"
+          }
+        }
+      }
     },
     "Perfect Week" : {
       "extractionState" : "stale",
@@ -1086,6 +3576,24 @@
     },
     "Pick the most natural word:" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle das natürlichste Wort:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige la palabra más natural:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez le mot le plus naturel :"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1094,8 +3602,93 @@
         }
       }
     },
+    "Plans could not be loaded. Check your connection or try again later." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planlar yüklenemedi. Bağlantınızı kontrol edin veya daha sonra tekrar deneyin."
+          }
+        }
+      }
+    },
+    "Plans could not be loaded. In Xcode: Product → Scheme → Edit Scheme → Run → Options → set StoreKit Configuration to MaiaProducts.storekit, then run from Xcode (not an old simulator install)." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pläne konnten nicht geladen werden. In Xcode: Product → Scheme → Edit Scheme → Run → Options → StoreKit-Konfiguration auf MaiaProducts.storekit setzen, dann aus Xcode ausführen (nicht von einer alten Simulator-Installation)."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron cargar los planes. En Xcode: Producto → Esquema → Editar Esquema → Ejecutar → Opciones → establece la Configuración de StoreKit en MaiaProducts.storekit, luego ejecuta desde Xcode (no desde una instalación antigua del simulador)."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible de charger les forfaits. Dans Xcode : Produit → Schéma → Modifier le schéma → Exécuter → Options → définissez la configuration StoreKit sur MaiaProducts.storekit, puis exécutez depuis Xcode (pas une ancienne installation de simulateur)."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Planlar yüklenemedi. Xcode’da: Product → Scheme → Edit Scheme → Run → Options → StoreKit Configuration = MaiaProducts.storekit seçin ve uygulamayı Xcode’dan çalıştırın (eski simülatör kurulumu değil)."
+          }
+        }
+      }
+    },
+    "Play pronunciation" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aussprache abspielen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir pronunciación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écouter la prononciation"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telaffuzu Oynat"
+          }
+        }
+      }
+    },
     "Practice with learned words" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit gelernten Wörtern üben"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Practicar con palabras aprendidas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'entraîner avec les mots appris"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1106,6 +3699,24 @@
     },
     "Premium" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1114,18 +3725,121 @@
         }
       }
     },
-    "Premium removes ads and unlocks word focus categories and AI example sentences." : {
+    "Premium Monthly" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium monatlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Mensual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Mensuel"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Aylık"
+          }
+        }
+      }
+    },
+    "Premium removes ads and unlocks AI sentence correction and extra example sentences." : {
+      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Premium reklamları kaldırır, kelime odağı kategorilerini ve yapay zekâ destekli ek örnek cümleleri açar."
+            "value" : "Premium reklamları kaldırır; yapay zekâ ile cümle düzeltme ve ek örnek cümleleri açar."
+          }
+        }
+      }
+    },
+    "Premium removes ads, unlocks AI sentence correction, extra examples, and full profile stats (quiz achievement, max streak)." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium entfernt Werbung, schaltet KI-Satzkorrektur, zusätzliche Beispiele und vollständige Profilstatistiken (Quiz-Erfolge, maximale Serie) frei."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium elimina los anuncios, desbloquea la corrección de frases con IA, ejemplos adicionales y estadísticas completas del perfil (logros de cuestionario, racha máxima)."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium supprime les publicités, débloque la correction de phrases par IA, des exemples supplémentaires et des statistiques de profil complètes (réussite des quiz, série maximale)."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium reklamları kaldırır; yapay zekâ cümle düzeltme, ek örnekler ve profil istatistiklerini (quiz başarısı, en uzun seri) açar."
+          }
+        }
+      }
+    },
+    "Premium Yearly" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium jährlich"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Anual"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Annuel"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Yıllık"
           }
         }
       }
     },
     "Privacy Policy" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzerklärung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Política de privacidad"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Politique de confidentialité"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1135,6 +3849,7 @@
       }
     },
     "Products unavailable. Check App Store Connect / StoreKit config." : {
+      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
@@ -1145,10 +3860,53 @@
       }
     },
     "Profile" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfil"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        }
+      }
     },
     "Profile Photo Error" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilfoto-Fehler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de foto de perfil"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur de photo de profil"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1159,6 +3917,24 @@
     },
     "Question %1$lld of %2$lld" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frage %1$lld von %2$lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pregunta %1$lld de %2$lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Question %1$lld sur %2$lld"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1169,6 +3945,24 @@
     },
     "Quiz Achievement" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz-Errungenschaft"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logro de Cuestionario"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Succès de Quiz"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1200,13 +3994,98 @@
       }
     },
     "Recover yesterday streak by watching ad" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestrige Serie durch Werbung ansehen wiederherstellen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recuperar racha de ayer viendo un anuncio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Récupérer la série d'hier en regardant une pub"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reklam izleyerek dünkü seriyi kurtar"
+          }
+        }
+      }
     },
     "Remember Me" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angemeldet bleiben"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recordarme"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se souvenir de moi"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beni Hatırla"
+          }
+        }
+      }
+    },
+    "Remove Photo" : {
+
+    },
+    "Resend email" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postayı yeniden gönder"
+          }
+        }
+      }
+    },
+    "Resets in %@" : {
 
     },
     "Restore purchases" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käufe wiederherstellen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurar compras"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restaurer les achats"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1217,6 +4096,24 @@
     },
     "Retry Quiz" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz wiederholen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reintentar Cuestionario"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayer le Quiz"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1227,6 +4124,24 @@
     },
     "Review" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wiederholung"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repasar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Révision"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1237,6 +4152,24 @@
     },
     "Right now there are no words that need review. Keep it up!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Moment gibt es keine Wörter, die wiederholt werden müssen. Mach weiter so!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora mismo no hay palabras que necesiten repaso. ¡Sigue así!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour l'instant, aucun mot n'a besoin de révision. Continuez comme ça !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1247,6 +4180,24 @@
     },
     "Save" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrer"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1255,11 +4206,82 @@
         }
       }
     },
+    "Save %lld%%" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% sparen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahorra %lld%%"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Économisez %lld%%"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% tasarruf"
+          }
+        }
+      }
+    },
     "Saving..." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird gespeichert..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardando..."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrement en cours..."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydediliyor..."
+          }
+        }
+      }
     },
     "See Results" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ergebnisse anzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver resultados"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir les résultats"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1269,16 +4291,110 @@
       }
     },
     "Server is temporarily busy. Please tap Try Again in a few seconds." : {
-
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Server ist vorübergehend ausgelastet. Bitte tippe in wenigen Sekunden auf „Erneut versuchen“."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El servidor está temporalmente ocupado. Por favor, toca Reintentar en unos segundos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le serveur est temporairement occupé. Veuillez appuyer sur Réessayer dans quelques secondes."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sunucu geçici olarak meşgul. Lütfen birkaç saniye sonra Tekrar Dene'ye dokunun."
+          }
+        }
+      }
     },
     "Set your English level" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Englischniveau festlegen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Establece tu nivel de inglés"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Définissez votre niveau d'anglais"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İngilizce seviyeni ayarla"
+          }
+        }
+      }
     },
     "Set your name." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib deinen Namen ein."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Establece tu nombre."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Définissez votre nom."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adını ayarla."
+          }
+        }
+      }
     },
     "Settings" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paramètres"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1288,7 +4404,32 @@
       }
     },
     "Setup error" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einrichtungsfehler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error de configuración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur de configuration"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurulum hatası"
+          }
+        }
+      }
     },
     "Shakespeare is Calling" : {
       "extractionState" : "stale",
@@ -1303,6 +4444,24 @@
     },
     "Sign In" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anmelden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar sesión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se connecter"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1313,6 +4472,24 @@
     },
     "Sign in error" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anmeldefehler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error al iniciar sesión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erreur de connexion"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1323,6 +4500,24 @@
     },
     "Sign in to view your profile" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melde dich an, um dein Profil anzuzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicia sesión para ver tu perfil"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectez-vous pour voir votre profil"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1333,6 +4528,24 @@
     },
     "Sign in with Apple" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Apple anmelden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar sesión con Apple"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se connecter avec Apple"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1343,6 +4556,24 @@
     },
     "Sign in with Google" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit Google anmelden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar sesión con Google"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se connecter avec Google"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1353,6 +4584,24 @@
     },
     "Sign Out" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abmelden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar sesión"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se déconnecter"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1363,6 +4612,24 @@
     },
     "Sign Up" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrarse"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'inscrire"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1371,17 +4638,138 @@
         }
       }
     },
+    "Start free trial" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kostenlos testen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar prueba gratuita"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commencer l'essai gratuit"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ücretsiz dene"
+          }
+        }
+      }
+    },
     "Start with your first word today." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starte heute mit deinem ersten Wort."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empieza hoy con tu primera palabra."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commencez avec votre premier mot aujourd'hui."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün ilk kelimenle başla."
+          }
+        }
+      }
     },
     "Streak" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serie"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Racha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Série"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seri"
+          }
+        }
+      }
     },
     "Streak Rank" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serienrang"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rango de racha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classement des séries"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seri Sıralaması"
+          }
+        }
+      }
     },
     "Subscribe" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnieren"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscribirse"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'abonner"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1392,6 +4780,24 @@
     },
     "Subscription" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1402,6 +4808,24 @@
     },
     "Subscription renews automatically until cancelled in App Store account settings." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Abonnement verlängert sich automatisch, bis es in den Account-Einstellungen des App Stores gekündigt wird."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La suscripción se renueva automáticamente hasta que se cancele en la configuración de la cuenta de App Store."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L'abonnement se renouvelle automatiquement jusqu'à annulation dans les réglages du compte App Store."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1412,6 +4836,24 @@
     },
     "Subscription Terms" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnementbedingungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de suscripción"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d'abonnement"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1422,6 +4864,24 @@
     },
     "Suggestion" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorschlag"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sugerencia"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestion"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1432,6 +4892,24 @@
     },
     "System language" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systemsprache"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma del sistema"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue du système"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1453,10 +4931,39 @@
     },
     "Take Quiz" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quiz starten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hacer quiz"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faire un quiz"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quize gir"
+          }
+        }
+      }
+    },
+    "Tap the button in the email to open Maia and verify automatically. If you already verified in the browser, tap “I verified” below." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postadaki düğmeye basarak Maia’yı aç ve otomatik doğrula. Tarayıcıda doğruladıysan aşağıdan “Doğruladım — devam et”e bas."
           }
         }
       }
@@ -1474,6 +4981,24 @@
     },
     "Terms of Use" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de uso"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d'utilisation"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1484,6 +5009,24 @@
     },
     "Terms of use (EULA)" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen (EULA)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Términos de uso (EULA)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d'utilisation (CLUF)"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1492,14 +5035,111 @@
         }
       }
     },
+    "TestFlight beta only. Mimics App Store subscription." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur für TestFlight Beta. Simuliert App Store Abonnement."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo beta de TestFlight. Simula la suscripción de App Store."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bêta TestFlight uniquement. Simule l'abonnement App Store."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca TestFlight beta. App Store aboneliğini taklit eder."
+          }
+        }
+      }
+    },
     "The AI service is busy right now. Please wait a few seconds and try again." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der KI-Dienst ist derzeit ausgelastet. Bitte warten Sie einige Sekunden und versuchen Sie es erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El servicio de IA está ocupado en este momento. Por favor, espera unos segundos e inténtalo de nuevo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le service d'IA est occupé pour le moment. Veuillez patienter quelques secondes et réessayer."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yapay zeka servisi şu anda meşgul. Lütfen birkaç saniye bekleyip tekrar deneyin."
+          }
+        }
+      }
     },
     "The AI service is temporarily unavailable. Please try again in a moment." : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der KI-Dienst ist vorübergehend nicht verfügbar. Bitte versuchen Sie es in Kürze erneut."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El servicio de IA no está disponible temporalmente. Por favor, inténtalo de nuevo en un momento."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le service d'IA est temporairement indisponible. Veuillez réessayer dans un instant."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yapay zeka servisi geçici olarak kullanılamıyor. Lütfen bir süre sonra tekrar deneyin."
+          }
+        }
+      }
     },
     "This action cannot be undone. Are you sure you want to delete your account?" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diese Aktion kann nicht rückgängig gemacht werden. Möchten Sie Ihr Konto wirklich löschen?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta acción no se puede deshacer. ¿Estás seguro de que quieres eliminar tu cuenta?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette action est irréversible. Êtes-vous sûr de vouloir supprimer votre compte ?"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1509,10 +5149,56 @@
       }
     },
     "Today" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heute"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aujourd'hui"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün"
+          }
+        }
+      }
+    },
+    "Today's words aren't curated yet. Add maia/WordPacks/%@.json and rebuild." : {
 
     },
     "Today's words couldn't be loaded." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Wörter für heute konnten nicht geladen werden."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudieron cargar las palabras de hoy."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les mots du jour n'ont pas pu être chargés."
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1521,8 +5207,54 @@
         }
       }
     },
+    "Today's words target: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tagesziel Wörter: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objetivo de palabras de hoy: %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objectif de mots du jour : %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünün kelimeleri hedefi: %@"
+          }
+        }
+      }
+    },
     "Travel" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reisen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viajes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voyage"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1531,8 +5263,54 @@
         }
       }
     },
+    "Try again" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut versuchen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intentar de nuevo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayer"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tekrar dene"
+          }
+        }
+      }
+    },
     "Try Again" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut versuchen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Intentar de nuevo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayer"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1542,7 +5320,26 @@
       }
     },
     "Turkish" : {
+      "extractionState" : "stale",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Türkisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turco"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turc"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1553,6 +5350,24 @@
     },
     "Unlocked" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Freigeschaltet"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desbloqueado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Débloqué"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1574,6 +5389,24 @@
     },
     "Use this example" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dieses Beispiel verwenden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar este ejemplo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser cet exemple"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1584,10 +5417,50 @@
     },
     "User Agreement" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acuerdo de usuario"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conditions d'utilisation"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kullanıcı sözleşmesi"
+          }
+        }
+      }
+    },
+    "Verification email sent again." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğrulama e-postası yeniden gönderildi."
+          }
+        }
+      }
+    },
+    "Verify your email" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-postanı doğrula"
           }
         }
       }
@@ -1605,10 +5478,39 @@
     },
     "Watch ad" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Werbung ansehen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver anuncio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regarder une pub"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reklamı izle"
+          }
+        }
+      }
+    },
+    "We sent a confirmation link to:" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu adrese bir doğrulama bağlantısı gönderdik:"
           }
         }
       }
@@ -1626,10 +5528,56 @@
     },
     "What does \"%@\" mean?" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Was bedeutet „%@“?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Qué significa \"%@\"?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Que signifie « %@ » ?"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "“%@” kelimesi ne anlama gelir?"
+          }
+        }
+      }
+    },
+    "wk" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wo."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sem."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sem."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hf"
           }
         }
       }
@@ -1646,6 +5594,7 @@
       }
     },
     "Word focus categories" : {
+      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
@@ -1657,6 +5606,24 @@
     },
     "Word of the Day" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wort des Tages"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabra del día"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mot du jour"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1666,10 +5633,53 @@
       }
     },
     "Word Rank" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wortrang"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clasificación de palabras"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classement des mots"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kelime Sıralaması"
+          }
+        }
+      }
     },
     "Words" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wörter"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palabras"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mots"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1678,8 +5688,54 @@
         }
       }
     },
+    "Xcode DEBUG builds only. Mimics App Store subscription." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur für Xcode DEBUG-Builds. Simuliert App Store-Abonnement."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo para compilaciones DEBUG de Xcode. Simula suscripción de App Store."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versions DEBUG Xcode uniquement. Simule un abonnement App Store."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca Xcode DEBUG derlemeleri. App Store aboneliğini taklit eder."
+          }
+        }
+      }
+    },
     "You got %1$lld out of %2$lld correct" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast %1$lld von %2$lld richtig"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acertaste %1$lld de %2$lld"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous avez obtenu %1$lld bonnes réponses sur %2$lld"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1690,6 +5746,24 @@
     },
     "You learned it!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast es gelernt!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Lo aprendiste!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous l'avez appris !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1700,10 +5774,56 @@
     },
     "You're all caught up!" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du bist auf dem neuesten Stand!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Estás al día!"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous êtes à jour !"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Her şey güncel!"
+          }
+        }
+      }
+    },
+    "yr" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "J."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "año"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "an"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "yıl"
           }
         }
       }

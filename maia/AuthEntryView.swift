@@ -47,7 +47,7 @@ struct AuthEntryView: View {
                     if authMode == .none {
                         VStack(spacing: 12) {
                             Button {
-                                authMode = .signUp
+                                beginEmailForm(.signUp)
                             } label: {
                                 Text("Create account")
                                     .font(.headline)
@@ -59,14 +59,20 @@ struct AuthEntryView: View {
                             }
 
                             Button {
-                                authMode = .signIn
+                                beginEmailForm(.signIn)
                             } label: {
                                 Text("Log in")
                                     .font(.headline)
                                     .foregroundColor(AppColors.glassCardTitle)
                                     .frame(maxWidth: .infinity)
                                     .padding(.vertical, 14)
-                                    .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                    .background {
+                                        Group {
+                                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                                .fill(.thinMaterial)
+                                        }
+                                        .glassMaterialIgnoresSystemColorScheme()
+                                    }
                                     .overlay {
                                         RoundedRectangle(cornerRadius: 12, style: .continuous)
                                             .strokeBorder(Color.white.opacity(0.45), lineWidth: 0.8)
@@ -226,7 +232,15 @@ struct AuthEntryView: View {
                     LegalDocumentView(document: document)
                 }
             }
+            .navigationBarHidden(true)
         }
+    }
+
+    private func beginEmailForm(_ mode: AuthMode) {
+        email = ""
+        password = ""
+        confirmPassword = ""
+        authMode = mode
     }
 
     private var formCard: some View {
@@ -244,21 +258,12 @@ struct AuthEntryView: View {
                 Spacer()
             }
 
-            TextField("Email", text: $email)
-                .textInputAutocapitalization(.never)
-                .keyboardType(.emailAddress)
-                .autocorrectionDisabled()
-                .padding(12)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            emailField
 
-            SecureField("Password", text: $password)
-                .padding(12)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+            passwordField
 
             if authMode == .signUp {
-                SecureField(String(localized: "Confirm password"), text: $confirmPassword)
-                    .padding(12)
-                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                confirmPasswordField
             }
 
             if authMode == .signIn {
@@ -324,6 +329,61 @@ struct AuthEntryView: View {
         }
         .padding(20)
         .wordCardGlassBackground(cornerRadius: 22)
+    }
+
+    @ViewBuilder
+    private var emailField: some View {
+        let field = TextField(String(localized: "Email"), text: $email)
+            .textInputAutocapitalization(.never)
+            .keyboardType(.emailAddress)
+            .autocorrectionDisabled()
+            .foregroundColor(AppColors.glassCardTitle)
+            .tint(AppColors.primaryButton)
+            .padding(12)
+            .background {
+                Group {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.ultraThinMaterial)
+                }
+                .glassMaterialIgnoresSystemColorScheme()
+            }
+
+        if authMode == .signUp {
+            // Yeni hesap: kayıtlı giriş önerisini azaltır (.username eski maili üstte gösterir).
+            field.textContentType(.emailAddress)
+        } else {
+            field.textContentType(.username)
+        }
+    }
+
+    private var passwordField: some View {
+        SecureField("Password", text: $password)
+            .textContentType(authMode == .signUp ? .newPassword : .password)
+            .foregroundColor(AppColors.glassCardTitle)
+            .tint(AppColors.primaryButton)
+            .padding(12)
+            .background {
+                Group {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.ultraThinMaterial)
+                }
+                .glassMaterialIgnoresSystemColorScheme()
+            }
+    }
+
+    private var confirmPasswordField: some View {
+        SecureField(String(localized: "Confirm password"), text: $confirmPassword)
+            .textContentType(.newPassword)
+            .foregroundColor(AppColors.glassCardTitle)
+            .tint(AppColors.primaryButton)
+            .padding(12)
+            .background {
+                Group {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.ultraThinMaterial)
+                }
+                .glassMaterialIgnoresSystemColorScheme()
+            }
     }
 
     private func isUserCancelledSignIn(_ error: Error) -> Bool {

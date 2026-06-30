@@ -4,6 +4,16 @@ Published iOS vocabulary learning app. Daily words, quizzes, diary, streaks, and
 
 **App Store:** [Maia — Learn Vocab Daily](https://apps.apple.com/app/id6763566092)
 
+## Screenshots
+
+| Today | Quiz |
+|:---:|:---:|
+| ![Today screen](docs/screenshots/today.png) | ![Quiz screen](docs/screenshots/quiz.png) |
+
+| Diary | Profile |
+|:---:|:---:|
+| ![Diary screen](docs/screenshots/diary.png) | ![Profile screen](docs/screenshots/profile.png) |
+
 ## Features
 
 - CEFR-level daily vocabulary (offline word packs)
@@ -26,6 +36,7 @@ Published iOS vocabulary learning app. Daily words, quizzes, diary, streaks, and
 
 ```
 maia/              SwiftUI app source
+docs/screenshots/  App Store / portfolio screenshots
 functions/         Firebase Cloud Functions
 public/            Firebase Hosting (privacy, support, auth pages)
 scripts/           Word pack & localization tooling

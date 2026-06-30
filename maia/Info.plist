@@ -12,10 +12,21 @@
 				<string>com.googleusercontent.apps.359781552395-lvrdinvtrsdiountelpcojq8ncqa2lb9</string>
 			</array>
 		</dict>
-		<dict/>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.mehmetakdemir.maia.firebase-auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.mehmetakdemir.maia</string>
+			</array>
+		</dict>
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>$(ADMOB_APPLICATION_IDENTIFIER)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>We use this identifier to deliver more relevant ads to you and to measure ad performance. You can change this anytime in Settings.</string>
 </dict>
