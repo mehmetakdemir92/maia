@@ -52,6 +52,10 @@ maiaTests/         Unit tests
 
 The app builds with test AdMob units in **Debug**; Release uses production ad unit IDs configured in `AdMobConfig.swift`.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ## Author
 
 **Mehmet Akdemir** — Boğaziçi University  
