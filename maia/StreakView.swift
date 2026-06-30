@@ -69,7 +69,7 @@ struct StreakView: View {
     }
 }
 
-/// Tek `LazyVGrid` + `ForEach` içinde benzersiz id; ayrı ForEach’lerde 0…6 id çakışması günleri yanlış eşleştirir.
+/// Use a single LazyVGrid + ForEach with unique ids; separate ForEach(0…6) collides and mis-matches calendar days.
 private enum StreakCalendarGridItem: Identifiable, Hashable {
     case weekdayHeader(column: Int, title: String)
     case leadPadding(index: Int)
@@ -107,26 +107,26 @@ struct CalendarView: View {
         getDaysInMonth(selectedMonth)
     }
 
-    /// Ayın 1. günü (gün başlangıcı normalleştirilmiş).
+    /// First day of the month (start-of-day normalized).
     private var firstDayOfSelectedMonth: Date {
         let components = calendar.dateComponents([.year, .month], from: selectedMonth)
         return calendar.date(from: components) ?? selectedMonth
     }
 
-    /// Seçili ayın 1'i, takvim satırında kaçıncı sütunda (0 = haftanın ilk günü sütunu).
+    /// Column index of the 1st of the selected month (0 = first weekday column).
     private var leadingEmptyDayCount: Int {
         let weekday = calendar.component(.weekday, from: firstDayOfSelectedMonth)
         let firstWeekday = calendar.firstWeekday
         return (weekday - firstWeekday + 7) % 7
     }
 
-    /// Son satırı 7'ye tamamlamak için boş hücre (0–6).
+    /// Trailing blank cells (0–6) to pad the last row to 7 columns.
     private var trailingEmptyDayCount: Int {
         let used = leadingEmptyDayCount + days
         return (7 - (used % 7)) % 7
     }
 
-    /// Sütun sırası: `firstWeekday` ile başlayan 7 günün kısa adları.
+    /// Weekday short names starting from locale firstWeekday.
     private var weekdayColumnHeaders: [String] {
         let symbols = calendar.shortWeekdaySymbols
         guard symbols.count == 7 else { return Array(repeating: "–", count: 7) }
@@ -136,7 +136,7 @@ struct CalendarView: View {
         }
     }
 
-    /// LazyVGrid içinde ayrı ForEach’lerde 0…6 id çakışması ilk 7 günü “yutuyor”; tek liste + stabil id gerekir.
+    /// Duplicate ForEach ids in LazyVGrid swallow the first week; one list with stable ids is required.
     private var calendarGridItems: [StreakCalendarGridItem] {
         var items: [StreakCalendarGridItem] = []
         for col in 0..<7 {
@@ -161,7 +161,6 @@ struct CalendarView: View {
     
     var body: some View {
         VStack(spacing: 16) {
-            // Month selector — kartın üst kenarından boşluk
             HStack {
                 Button(action: {
                     if let newMonth = calendar.date(byAdding: .month, value: -1, to: selectedMonth) {
@@ -192,7 +191,7 @@ struct CalendarView: View {
             .padding(.horizontal)
             .padding(.top, 12)
             
-            // Hafta başlıkları + gerçek takvim hizası (locale firstWeekday)
+            // Week headers aligned to locale firstWeekday
             let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 7)
             LazyVGrid(columns: columns, spacing: 14) {
                 ForEach(calendarGridItems) { item in
@@ -332,7 +331,7 @@ struct CalendarView: View {
     }
 }
 
-/// Takvim hücresi: gerçek tarih + ay içi gün numarası (tamamlanan = dolu, bugün = halka).
+/// Calendar cell: date + day-of-month (filled = completed, ring = today).
 private struct StreakCalendarEmptyCell: View {
     var body: some View {
         Color.clear

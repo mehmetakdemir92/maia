@@ -2,7 +2,7 @@
 //  StatsManager.swift
 //  maia
 //
-//  Quiz istatistikleri + streak rank (#1, #2).
+// Quiz stats + streak rank (#1, #2).
 //
 
 import Foundation
@@ -15,16 +15,16 @@ class StatsManager: ObservableObject {
     @Published var totalPerfectQuizzes: Int = 0
     @Published var totalCorrectAnswers: Int = 0
     @Published var totalQuestionsAnswered: Int = 0
-    /// Kullanıcıya gösterilen sıra: #1, #2, ... (current streak'e göre)
+    /// Display rank by current streak: #1, #2, ...
     @Published var rankDisplay: String = "—"
-    /// Kullanıcıya gösterilen kelime sırası: #1, #2, ... (öğrenilen kelime sayısına göre)
+    /// Display word rank by learned word count.
     @Published var wordRankDisplay: String = "—"
 
-    // MARK: - Profil kartları: Firestore'dan panel ile ayarlanabilir (yerel sayaçların üzerine yazar)
+    // MARK: - Profile cards (Firestore panel overrides local counters)
 
-    /// Doküman: `users/{uid}/appData/profileDisplayStats`
-    /// İsteğe bağlı alanlar: `quizCorrectAnswers`, `quizQuestionsAnswered`, `diaryWordsCount`, `exampleSentencesCount`
-    /// Alan yoksa uygulama UserDefaults / diary toplamını kullanır.
+    /// Document: users/{uid}/appData/profileDisplayStats
+    /// Optional fields: quizCorrectAnswers, quizQuestionsAnswered, diaryWordsCount, exampleSentencesCount
+    /// Falls back to UserDefaults / diary totals when fields are missing.
     @Published private(set) var profileQuizCorrectOverride: Int?
     @Published private(set) var profileQuizTotalOverride: Int?
     @Published private(set) var profileDiaryWordsOverride: Int?
@@ -107,7 +107,7 @@ class StatsManager: ObservableObject {
         }
     }
 
-    /// Quiz doğru / toplam soru — panel override veya cihazdaki sayaçlar.
+    /// Quiz correct / total — panel override or on-device counters.
     var effectiveQuizCorrect: Int { profileQuizCorrectOverride ?? totalCorrectAnswers }
     var effectiveQuizTotal: Int { profileQuizTotalOverride ?? totalQuestionsAnswered }
 
@@ -133,7 +133,7 @@ class StatsManager: ObservableObject {
         profileExampleSentencesOverride = nil
     }
 
-    /// Panel istatistikleri nadiren değişir; canlı listener CPU + Firestore gürültüsü üretir.
+    /// Panel stats rarely change; live listener adds CPU + Firestore noise.
     private func fetchProfileDisplayStatsOnce(userId: String) {
         let ref = db.collection("users").document(userId).collection("appData").document("profileDisplayStats")
         ref.getDocument { [weak self] snapshot, error in
@@ -194,8 +194,8 @@ class StatsManager: ObservableObject {
         totalQuestionsAnswered - totalCorrectAnswers
     }
 
-    /// Rank'i current streak ile günceller.
-    /// Parametreler geriye dönük çağrılar için korunur; rank hesabında sadece `streak` kullanılır.
+    /// Updates rank from current streak.
+    /// Legacy parameters retained; rank uses streak only.
     func updateScoreFrom(streak: Int, maxStreak: Int, wordCount: Int) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         if lastWrittenRankStreak == streak, lastWrittenRankWordCount == wordCount { return }
@@ -225,7 +225,7 @@ class StatsManager: ObservableObject {
         }
     }
 
-    /// Firestore'dan current streak yükler ve sıra (#1, #2) hesaplar.
+    /// Loads current streak from Firestore and computes rank.
     private func loadStreakAndRank(userId: String) {
         let ref = db.collection("users").document(userId).collection("appData").document("rank")
         ref.getDocument { [weak self] snapshot, error in
@@ -250,7 +250,7 @@ class StatsManager: ObservableObject {
         }
     }
 
-    /// scores koleksiyonunda current streak'i benimkinden yüksek kaç kullanıcı var sayar; sıra = count + 1 → #1, #2, ...
+    /// Rank = count of users with higher streak in scores + 1.
     private func updateRankDisplay(myStreak: Int) {
         db.collection(scoresCollection)
             .whereField("currentStreak", isGreaterThan: myStreak)
@@ -269,7 +269,7 @@ class StatsManager: ObservableObject {
             }
     }
 
-    /// scores koleksiyonunda wordCount'u benimkinden yüksek kaç kullanıcı var sayar; sıra = count + 1 → #1, #2, ...
+    /// Word rank = count of users with higher wordCount + 1.
     private func updateWordRankDisplay(myWordCount: Int) {
         db.collection(scoresCollection)
             .whereField("wordCount", isGreaterThan: myWordCount)

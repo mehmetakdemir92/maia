@@ -2,7 +2,7 @@
 //  WordPronunciationService.swift
 //  maia
 //
-//  Bulut TTS (Firebase callable + Storage) → yerel MP3 önbellek → yoksa iOS TTS.
+// Cloud TTS (Firebase callable + Storage) → local MP3 cache → iOS TTS fallback.
 //
 
 import AVFoundation
@@ -27,7 +27,7 @@ final class WordPronunciationService: NSObject, ObservableObject {
         super.init()
     }
 
-    /// Günün kelimeleri yüklendiğinde arka planda MP3 indir (çalmadan).
+    /// Prefetch MP3 in background when daily words load (no playback).
     func prefetch(words: [Word]) {
         Task {
             await withTaskGroup(of: Void.self) { group in
@@ -40,7 +40,7 @@ final class WordPronunciationService: NSObject, ObservableObject {
         }
     }
 
-    /// Callable + önbellek; çalmadan URL döner (enrich / diary senkronu için).
+    /// Callable + cache; returns URL without playing (enrich / diary sync).
     func resolveAudioURL(for word: String, preferredURL: String? = nil) async -> String? {
         let lemma = Self.normalizeLemma(word)
         guard !lemma.isEmpty else { return nil }

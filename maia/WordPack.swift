@@ -2,22 +2,22 @@
 //  WordPack.swift
 //  maia
 //
-//  Aylık WordPack JSON dosyalarını yükler. Günlük kelimeler artık AI yerine
-//  `maia/WordPacks/{yyyy-MM}.json` dosyalarından gelir; tek doğruluk kaynağı.
+// Loads monthly WordPack JSON files. Daily words come from
+// maia/WordPacks/{yyyy-MM}.json instead of AI; single source of truth.
 //
 
 import Foundation
 
 // MARK: - JSON Models
 
-/// Aylık dosya kökü. Dosya adı `2026-06.json` formatında, içeride `month: "2026-06"`.
+/// Monthly file root. Filename `2026-06.json`, contains month: "2026-06".
 struct WordPack: Codable, Equatable {
     let month: String
     let days: [String: WordPackDay]
 }
 
-/// Bir takvim günü için curated kelimeler. Her CEFR bandında 2 kelime önerilir
-/// ama uygulama `preferredBands` ile seçeceğinden eksik bant tolere edilir.
+/// Curated words for a calendar day. Two words per CEFR band are suggested
+/// but missing bands are tolerated because selection uses preferredBands.
 struct WordPackDay: Codable, Equatable {
     let words: [WordPackWord]
 }
@@ -26,7 +26,7 @@ struct WordPackWord: Codable, Equatable {
     let word: String
     let cefrLevel: String
     let definition: String
-    /// Tam 3 örnek cümle. Free user yalnız ilkini görür; Generate More ile diğerleri açılır.
+    /// Three example sentences. Free users see the first; Generate More reveals the rest.
     let examples: [String]
     /// Tam 3 quiz sorusu. Tipik: 1 definition + 2 blank.
     let quiz: [WordPackQuiz]
@@ -37,7 +37,7 @@ struct WordPackWord: Codable, Equatable {
     let frequencyBand: Int?
 }
 
-/// Quiz sorusu. `type` UI tarafında bilgi amaçlı; QuizManager soru/şıkları olduğu gibi gösterir.
+/// Quiz question. type is informational; QuizManager renders question/choices as-is.
 struct WordPackQuiz: Codable, Equatable {
     let type: String
     let question: String
@@ -47,8 +47,8 @@ struct WordPackQuiz: Codable, Equatable {
 
 // MARK: - Store
 
-/// Bundle'dan WordPack JSON'larını okur ve bir günde gösterilecek 3 kelimeyi
-/// `CEFRLevelMapping.preferredBands(for:)` ile seçer.
+/// Reads WordPack JSON from the bundle and selects three words for a day
+/// using CEFRLevelMapping.preferredBands(for:).
 @MainActor
 final class WordPackStore {
     static let shared = WordPackStore()
@@ -60,7 +60,7 @@ final class WordPackStore {
 
     // MARK: Public API
 
-    /// O ay için yüklenmiş paket (yoksa nil). Cache'lidir.
+    /// Cached pack for the month, or nil if missing.
     func pack(forMonth monthKey: String) -> WordPack? {
         if let cached = cache[monthKey] { return cached }
         guard let pack = Self.loadPack(forMonth: monthKey) else {
@@ -75,16 +75,15 @@ final class WordPackStore {
         return pack
     }
 
-    /// Bir takvim günü (yyyy-MM-dd) için tüm curated kelimeler (12 önerilir).
-    /// Boş dönerse o gün için WordPack'te giriş yok demektir.
+    /// All curated words for a day (12 suggested). Returns [] if day is missing.
     func entries(for date: String) -> [WordPackWord] {
         guard let monthKey = Self.monthKey(from: date) else { return [] }
         guard let pack = pack(forMonth: monthKey) else { return [] }
         return pack.days[date]?.words ?? []
     }
 
-    /// Kullanıcı seviyesine göre 3 `Word` döner. Eksik bant olursa
-    /// CEFRLevelMapping.fallbackBandPriority ile tamamlar; hiç kelime yoksa `[]`.
+    /// Returns three Words for the user level. Missing bands are filled via
+    /// CEFRLevelMapping.fallbackBandPriority; returns [] when empty.
     func words(for date: String, userLevel: Int) -> [Word] {
         let all = entries(for: date)
         guard !all.isEmpty else { return [] }
@@ -92,7 +91,7 @@ final class WordPackStore {
         return picked.map { $0.toWord() }
     }
 
-    /// QuizManager bunu kullanır: kelime + tarih → 3 önceden yazılmış quiz sorusu.
+    /// QuizManager: word + date → three pre-written quiz questions.
     func quizQuestions(forWord word: String, date: String) -> [WordPackQuiz]? {
         let entries = entries(for: date)
         guard let entry = entries.first(where: { $0.word.lowercased() == word.lowercased() }) else {
@@ -101,7 +100,7 @@ final class WordPackStore {
         return entry.quiz
     }
 
-    /// Generate More akışı: önceden yazılmış 2./3. örnek cümleyi açar.
+    /// Generate More: reveals pre-written 2nd/3rd example sentences.
     func extraExampleSentences(forWord word: String, date: String) -> [String] {
         let entries = entries(for: date)
         guard let entry = entries.first(where: { $0.word.lowercased() == word.lowercased() }),
@@ -146,7 +145,7 @@ final class WordPackStore {
         }
     }
 
-    /// Tarih + kelime için stabil FNV-1a 64-bit (DailyWordsService ile aynı; deterministik tie-break).
+    /// Stable FNV-1a 64-bit for date + word (same as DailyWordsService).
     private static func stableScore(date: String, word: String) -> UInt64 {
         var hash: UInt64 = 1469598103934665603
         for byte in "\(date)|\(word.lowercased())".utf8 {
@@ -156,8 +155,8 @@ final class WordPackStore {
         return hash
     }
 
-    /// preferredBands'e göre 3 kelime seç. Aynı bantta birden çok aday varsa stabil hash ile sırala.
-    /// Bant doluysa (örn. C1 yok), `fallbackBandPriority`'den ilk uygun banttan tamamlar.
+    /// Select three words by preferredBands; stable hash tie-break within a band.
+    /// Fill from fallbackBandPriority when a band is missing (e.g. no C1).
     static func selectByPreferredBands(
         _ all: [WordPackWord],
         userLevel: Int,
@@ -221,7 +220,7 @@ final class WordPackStore {
     }
 }
 
-// MARK: - Word köprüsü
+// MARK: - Word bridge
 
 extension WordPackWord {
     func toWord() -> Word {

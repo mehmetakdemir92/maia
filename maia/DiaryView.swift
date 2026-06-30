@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-/// Günlük örnek cümle / not girişi; uyarı yok, sadece kırpma.
-/// Not: `axis: .vertical` TextField içerde UITextView kullanır ve `Binding` setter'ını her güncellemede
-/// güvenilir çağırmaz; sınır `onChange` ile uygulanır.
+/// Daily example sentence / note entry; trim only, no warning dialog.
+/// Note: vertical TextField uses UITextView internally and may not call the Binding setter on every update;
+/// enforce the character limit in onChange instead.
 private enum DiaryTextLimits {
     static let maxExampleCharacters = 200
 
@@ -140,7 +140,6 @@ struct DiaryView: View {
     }
     
     private func updateGroupedDays() {
-        // Sadece entry'leri olan günleri kullan - çok daha hızlı
         var grouped: [Date: [Date]] = [:]
         
         for entry in diaryManager.entries {
@@ -153,7 +152,6 @@ struct DiaryView: View {
             grouped[monthKey]?.append(entry.date)
         }
         
-        // Her ay için günleri sırala
         for key in grouped.keys {
             grouped[key]?.sort(by: >)
         }
@@ -231,7 +229,6 @@ struct WordRowView: View {
     @FocusState private var isInputFocused: Bool
     @State private var showInputArea: Bool = false
     
-    // Modelden notları oku
     private var savedNotes: [Note] {
         diaryManager.getNotes(for: word.id, on: date)
     }
@@ -265,7 +262,6 @@ struct WordRowView: View {
         VStack(alignment: .leading, spacing: 0) {
             mainRow
             
-            // Kaydedilmiş notlar ve Input area (sadece expanded olduğunda)
             if isExpanded {
                 Divider()
                     .background(AppColors.glassCardTitle.opacity(0.15))
@@ -275,13 +271,12 @@ struct WordRowView: View {
                     .transition(.opacity.combined(with: .move(edge: .top)))
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        // Definition alanına dokunmak kartı kapatmasın.
+                        // Tapping definition must not collapse the card.
                     }
 
                 savedNotesView
                     .transition(.opacity.combined(with: .move(edge: .top)))
 
-                // Input area: kullanıcı "+" ile açar (Cancel ile kapanır)
                 if showInputArea {
                     inputArea
                         .transition(.opacity.combined(with: .move(edge: .top)))
@@ -297,12 +292,10 @@ struct WordRowView: View {
         .listRowSeparator(.hidden)
         .onChange(of: isExpanded) { oldValue, newValue in
             if newValue {
-                // Expanded olduğunda input'u temizle (yeni not için)
                 inputText = ""
                 isInputFocused = false
                 showInputArea = false
             } else {
-                // Kapanınca focus'u kaldır ve input area'yı gizle
                 isInputFocused = false
                 showInputArea = false
             }
@@ -353,7 +346,7 @@ struct WordRowView: View {
         }
     }
 
-    /// Today kartıyla aynı tipografi: üst etiket + okunaklı gövde.
+    /// Same typography as Today card: label + readable body.
     private var expandedDefinitionSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Definition")
@@ -416,7 +409,6 @@ struct WordRowView: View {
         }
         .contentShape(Rectangle())
         .onTapGesture {
-            // Event'in yukarı yayılmasını engelle
         }
     }
     
@@ -449,7 +441,7 @@ struct WordRowView: View {
                         .background(AppColors.primaryButtonGradient)
                         .cornerRadius(8)
                 }
-                .buttonStyle(.plain) // Gesture conflict'i önlemek için
+                .buttonStyle(.plain) // Prevent gesture conflict
                 
                 Button(action: {
                     discardInput()
@@ -479,7 +471,6 @@ struct WordRowView: View {
         .padding(.bottom, 12)
         .contentShape(Rectangle())
         .onTapGesture {
-            // Event'in yukarı yayılmasını engelle
         }
     }
     
@@ -493,7 +484,6 @@ struct WordRowView: View {
         }
         
         print("💾 Not kaydediliyor: \(trimmedInput.prefix(50))...")
-        // Firestore'a kaydet (DiaryManager içinde hem local hem Firestore'a kaydediyor)
         diaryManager.addNote(trimmedInput, for: word.id, on: date)
         inputText = ""
         isInputFocused = false
@@ -517,7 +507,7 @@ struct WordRowView: View {
 struct NoteRowView: View {
     let note: Note
     let word: Word
-    /// İkinci parametre: "Use this example" ile öneri metni uygulandığında true (Suggestion kalıcı olarak kapanır).
+    /// Second parameter is true when suggestion text was applied via "Use this example" (hides Suggestion permanently).
     let onEdit: (String, Bool) -> Void
     let onDelete: () -> Void
     
@@ -528,10 +518,10 @@ struct NoteRowView: View {
     @FocusState private var isTextFieldFocused: Bool
     @State private var dragOffset: CGFloat = 0
     @State private var isSuggesting = false
-    /// Gemini önerisi; kullanıcı cümlesinin altında, soluk gösterilir (not metnini değiştirmez).
+    /// Gemini suggestion shown faintly below the user's sentence (does not replace the note).
     @State private var aiSuggestionText: String?
     
-    private let buttonWidth: CGFloat = 120 // Kalem + çöp butonlarının toplam genişliği
+    private let buttonWidth: CGFloat = 120
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -589,7 +579,6 @@ struct NoteRowView: View {
             } else {
                 // Display mode with swipe-to-reveal
                 ZStack(alignment: .trailing) {
-                    // Action buttons (background) - sağda, cümle kaydırıldıkça görünür
                     HStack(spacing: 0) {
                         Button(action: {
                             withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
@@ -625,7 +614,6 @@ struct NoteRowView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                     .offset(x: buttonWidth + dragOffset)
                     
-                    // Content (foreground) — buble yok; Today ile aynı bullet + satır aralığı
                     VStack(alignment: .leading, spacing: 4) {
                         HStack(alignment: .top, spacing: 10) {
                             Text("•")
@@ -723,21 +711,20 @@ struct NoteRowView: View {
                         DragGesture()
                             .onChanged { value in
                                 let newOffset = value.translation.width
-                                // Sadece sola kaydırmaya izin ver
+                                // Left swipe only
                                 if newOffset < 0 {
                                     dragOffset = max(newOffset, -buttonWidth)
                                 } else if dragOffset < 0 {
-                                    // Sağa kaydırma sadece swipe açıkken
+                                    // Right swipe only when swipe is open
                                     dragOffset = min(newOffset + dragOffset, 0)
                                 }
                             }
                             .onEnded { value in
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.8)) {
                                     if value.translation.width < -buttonWidth / 2 || dragOffset < -buttonWidth / 2 {
-                                        // Swipe açık kal
+                                        // Keep swipe open
                                         dragOffset = -buttonWidth
                                     } else {
-                                        // Swipe kapan
                                         dragOffset = 0
                                     }
                                 }
@@ -755,7 +742,6 @@ struct NoteRowView: View {
         }
         .onChange(of: isEditing) { oldValue, newValue in
             if newValue {
-                // Edit moduna geçince swipe'ı kapat
                 withAnimation {
                     dragOffset = 0
                 }
@@ -766,7 +752,7 @@ struct NoteRowView: View {
     private func startEdit() {
         editedText = note.text
         isEditing = true
-        // Focus'u biraz gecikmeyle ayarla (SwiftUI animasyon sorunu için)
+        // Delay focus to work around SwiftUI animation issue
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             isTextFieldFocused = true
         }

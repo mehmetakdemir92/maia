@@ -21,7 +21,7 @@ struct TodayTabView: View {
     @State private var navigationPath = NavigationPath()
     @State private var loggedWordIDs: Set<UUID> = []
 
-    /// wordId -> en fazla 2 ek örnek cümle (WordPack JSON'undan; hiç AI yok).
+    /// wordId -> up to 2 extra example sentences from WordPack JSON (no AI).
     @State private var revealedExtraExamples: [UUID: [String]] = [:]
     @State private var generatingWordIds: Set<UUID> = []
     @State private var startingQuizWordId: UUID?
@@ -190,7 +190,7 @@ struct TodayTabView: View {
         )
     }
 
-    /// Kelimeyi currentWords veya diary'den bulur (Review'dan quiz açılırken gerekir).
+    /// Resolves a word from currentWords or diary (e.g. when opening quiz from Review).
     private func word(for wordId: UUID) -> Word? {
         wordManager.currentWords.first { $0.id == wordId }
         ?? diaryManager.entries.flatMap { $0.words }.first { $0.id == wordId }
@@ -214,7 +214,7 @@ struct TodayTabView: View {
         UserDefaults.standard.set(data, forKey: Self.revealedExamplesKey)
     }
 
-    /// Generate More: WordPack JSON'undaki 2./3. cümleleri sırayla açar.
+    /// Generate More: reveals 2nd/3rd sentences from WordPack JSON in order.
     private func handleGenerateExample(for word: Word) {
         guard userManager.isPremium else {
             showingPremiumPaywall = true
@@ -248,7 +248,7 @@ struct TodayTabView: View {
         startingQuizWordId = word.id
 
         Task {
-            // Dalga animasyonu görünsün diye navigasyondan önce bekle
+            // Brief delay so ripple animation is visible before navigation
             try? await Task.sleep(nanoseconds: Self.quizRippleLeadNs)
             await MainActor.run {
                 navigationPath.append(word.id)
@@ -262,8 +262,8 @@ struct TodayTabView: View {
         }
     }
 
-    /// Sırada hangi yedek cümle gösterilecek? Önce Word'ün üzerindeki 2/3, sonra
-    /// store'dan ham WordPack examples (yine deduplike eder).
+    /// Next extra sentence to reveal: Word.exampleSentence2/3 first, then
+    /// raw WordPack examples from the store (deduplicated).
     private func nextExtraExamples(for word: Word, date: String, alreadyShown: [String]) -> [String] {
         let known = ([word.exampleSentence2, word.exampleSentence3].compactMap { $0 })
             + DailyWordsService.extraExamples(forWord: word.word, date: date)
@@ -286,8 +286,8 @@ struct TodayTabView: View {
 
 // MARK: - Daily Reset Countdown
 
-/// Her saniye güncellenen "Resets in Xh Ym" etiketi.
-/// Kelimelerin yenilendiği saat dilimine (Europe/Istanbul gece 12) sayar; sıfıra ulaşınca `onReset`'i çağırır.
+/// "Resets in Xh Ym" label, updated every second.
+/// Counts down to Europe/Istanbul midnight; calls onReset at zero.
 private struct DailyResetCountdownLabel: View {
     let onReset: () -> Void
 
@@ -363,7 +363,7 @@ private struct WordCardView: View {
     let isPremium: Bool
     let isWordQuizzedToday: Bool
 
-    /// Sadece AI ile üretilmiş (en fazla 2) cümleler
+    /// Only AI-generated sentences (up to 2)
     let generatedExamples: [String]
     let isGenerating: Bool
     let isStartingQuiz: Bool
@@ -372,9 +372,9 @@ private struct WordCardView: View {
     let onGenerateMore: () -> Void
 
     private var allSentences: [String] {
-        // Premium kullanıcı için bile 2./3. cümleler otomatik gösterilmez:
-        // yalnızca "Generate More" tuşuyla açtıkları (generatedExamples) eklenir.
-        // word.exampleSentence2/3 yalnızca nextExtraExamples içinde, butona basıldığında kaynak olarak kullanılır.
+        // Extra sentences 2/3 are not shown automatically, even for premium:
+        // only sentences revealed via Generate More (generatedExamples) are added.
+        // word.exampleSentence2/3 are used as sources in nextExtraExamples when the button is tapped.
         return [word.exampleSentence] + generatedExamples
     }
 

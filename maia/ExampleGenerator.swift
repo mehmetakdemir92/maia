@@ -12,15 +12,15 @@ import FirebaseFirestore
 
 final class ExampleGenerator {
 
-    // Cloud Run Gemini backend (Today “generate example” ile aynı)
+    // Same Cloud Run Gemini backend as Today "generate example"
     private let baseURL =
         URL(string: "https://gemini-backend-359781552395.europe-west4.run.app")!
     
     init() {}
 
-    /// Gemini (Cloud Run) ile 1 örnek cümle üretir.
-    /// - `avoidingSentences`: Havuz / önceki AI cümleleri; modele açıkça verilir (yalnızca prompt’ta “farklı ol” demek yetmez).
-    /// - `useAlternateModel`: İkinci “Generate more” için backend’de `GEMINI_ALT_MODEL` (ör. Pro) — Flash ile aynı tekrar eğilimini kırar.
+    /// Generates one example sentence via Gemini (Cloud Run).
+    /// - `avoidingSentences`: pool / prior AI sentences passed explicitly to the model.
+    /// - `useAlternateModel`: GEMINI_ALT_MODEL on second Generate more to reduce repetition.
     func generateExample(
         for word: Word,
         avoidingSentences: [String],
@@ -67,7 +67,7 @@ final class ExampleGenerator {
         return try await postGenerate(prompt: prompt, useAlternateModel: useAlternateModel)
     }
 
-    /// İlk iki kelime tekrarını (ör. "I estimate …" / "I estimate …") modele yasak listesi olarak verir.
+    /// Bans repeated first-two-word openers in model output.
     private static func distinctFirstTwoWordPrefixes(from sentences: [String]) -> [String] {
         var seen = Set<String>()
         var out: [String] = []
@@ -86,7 +86,7 @@ final class ExampleGenerator {
         return out
     }
 
-    /// Diary’deki örnek cümle: ana sayfadaki ile aynı backend (`/generate`), minimal düzeltme + doğal kelime kullanımı.
+    /// Diary example sentence via the same /generate backend with minimal correction.
     func suggestDiarySentenceImprovement(for word: Word, userSentence: String) async throws -> String {
         let trimmed = userSentence.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else {

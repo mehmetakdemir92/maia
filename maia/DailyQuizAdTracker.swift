@@ -5,7 +5,7 @@
 
 import Foundation
 
-/// Günlük tamamlanan quiz sayısı (İstanbul günü). İlk quiz bitişinde tek interstitial için kullanılır.
+/// Daily completed quiz count (Istanbul calendar day). Used for one interstitial on first completion.
 enum DailyQuizAdTracker {
     private static func dayISO() -> String {
         WordOfTheDayManager.calendarDayISO()
@@ -19,7 +19,7 @@ enum DailyQuizAdTracker {
         UserDefaults.standard.integer(forKey: completionsKey)
     }
 
-    /// Quiz bittiğinde çağır; yeni toplamı döner.
+    /// Call when a quiz finishes; returns the new daily total.
     @discardableResult
     static func recordCompletion() -> Int {
         let next = completionsToday() + 1

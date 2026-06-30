@@ -2,7 +2,7 @@
 //  QuizEventManager.swift
 //  maia
 //
-//  Kelime bazlı quiz sonuçları + bitiş saati (ML için). Firestore: users/{uid}/quizEvents
+// Per-word quiz results + finish time (for ML). Firestore: users/{uid}/quizEvents
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import Combine
 import FirebaseFirestore
 import FirebaseAuth
 
-/// Tek quiz denemesi: Kelime X, doğru/yanlış, tarih, saat.
+/// Single quiz attempt: word, correct/total, date, completion time.
 struct QuizEvent: Codable, Identifiable {
     let id: UUID
     let wordId: UUID

@@ -7,7 +7,7 @@ import SwiftUI
 import GoogleMobileAds
 import UIKit
 
-/// Alt bant banner; ücretsiz kullanıcılar için sekme / quiz altında.
+/// Bottom banner for free users (below tabs / quiz).
 struct BannerAdView: UIViewRepresentable {
     let adUnitID: String
     var placement: String = AppAnalyticsPlacement.todayBottomBanner

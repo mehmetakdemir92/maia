@@ -98,7 +98,7 @@ final class AppAnalytics {
         merged["platform"] = "ios"
         merged["app_version"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
 
-        // Firebase Analytics stream (Dashboard / DebugView buradan beslenir).
+        // Firebase Analytics stream (Dashboard / DebugView).
         Analytics.logEvent(name, parameters: merged)
 
         let event = AppAnalyticsEvent(name: name, params: merged)

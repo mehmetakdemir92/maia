@@ -2,12 +2,12 @@
 //  GlassSceneBackground.swift
 //  maia
 //
-//  Referans “liquid glass” kartların arkasında görünen gökyüzü + sıcak ton bulanık sahne.
+// Sky + warm-tone blurred scene behind liquid-glass cards.
 //
 
 import SwiftUI
 
-/// Tam ekran gradient — cam kartların arkasından renk kırılması için (Focus pill referansı).
+/// Full-screen gradient for color bleed behind glass cards.
 struct GlassSceneBackground: View {
     var isAnimated: Bool = false
 

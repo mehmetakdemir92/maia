@@ -7,7 +7,7 @@ import Combine
 import GoogleMobileAds
 import UIKit
 
-/// Ödüllü video (rewarded interstitial → rewarded fallback).
+/// Rewarded video (rewarded interstitial → rewarded fallback).
 @MainActor
 final class RewardedVideoAdPresenter: NSObject, GADFullScreenContentDelegate {
     static let shared = RewardedVideoAdPresenter()

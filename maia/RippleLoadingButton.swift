@@ -8,11 +8,11 @@ import SwiftUI
 enum RippleWaveStyle {
   /// primaryButtonGradient gibi koyu arka planlar
   case onDark
-  /// Açık cam / muted chip arka planlar
+  /// Light glass / muted chip backgrounds
   case onLight
 }
 
-/// Yüklenirken palet renklerinden su dalgası benzeri animasyon gösteren buton.
+/// Button with ripple animation in palette colors while loading.
 struct RippleLoadingButton<Label: View>: View {
   let isLoading: Bool
   let cornerRadius: CGFloat
@@ -46,7 +46,6 @@ struct RippleLoadingButton<Label: View>: View {
 private enum RippleBlue {
   /// Parlak elektrik mavisi
   static let electric = Color(red: 56 / 255, green: 189 / 255, blue: 255 / 255)
-  /// Parlak gökyüzü mavisi
   static let vivid = Color(red: 96 / 255, green: 198 / 255, blue: 255 / 255)
   /// Ana aksiyon mavisi
   static let core = Color(red: 66 / 255, green: 146 / 255, blue: 255 / 255)
@@ -158,7 +157,7 @@ private struct RippleWaveOverlay: View {
       )
     )
 
-    // İkinci ince halka — faz kaymasıyla daha düzensiz görünüm
+    // Second thin ring with phase offset
     if fade > 0.25 {
       let innerPath = wobblyPath(
         center: origin,
@@ -178,7 +177,7 @@ private struct RippleWaveOverlay: View {
     _ = canvasSize
   }
 
-  /// Mükemmel daire yerine hafif dalgalı, düzensiz halka.
+  /// Slightly wavy ring instead of a perfect circle.
   private func wobblyPath(
     center: CGPoint,
     baseRadius: CGFloat,

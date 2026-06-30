@@ -2,7 +2,7 @@
 //  DailyWordUsageStore.swift
 //  maia
 //
-//  Günlük kelimeler seviye bazlı tutulur (C1/C2 havuzu A2 geçmişinden etkilenmesin).
+// Daily words tracked per level so C1/C2 pool is not polluted by A2 history.
 //
 
 import Foundation
@@ -36,7 +36,7 @@ final class DailyWordUsageStore {
         return []
     }
 
-    /// Bu kelimeler artık bu seviyede günlük seçimde kullanılmaz.
+    /// These words are excluded from daily selection at this level.
     func markUsed(words: [String], level userLevel: Int) {
         let level = min(max(userLevel, 1), 11)
         var set = usedLowercased(forLevel: level)
@@ -50,7 +50,7 @@ final class DailyWordUsageStore {
         }
     }
 
-    /// Firestore senkronu: yalnızca ilgili seviye dokümanlarındaki kelimeler.
+    /// Firestore sync: only words in the relevant level documents.
     func mergeUsedFromFirestore(words: [String], level userLevel: Int) {
         let level = min(max(userLevel, 1), 11)
         var set = usedLowercased(forLevel: level)
@@ -79,7 +79,7 @@ final class DailyWordUsageStore {
         }
     }
 
-    /// Eski global liste → tüm seviyelere kopyalanır (bir kerelik).
+    /// One-time migration: copy legacy global list to all levels.
     private func migrateLegacyGlobalIfNeeded() {
         guard let data = UserDefaults.standard.data(forKey: Self.legacyGlobalKey),
               let arr = try? JSONDecoder().decode([String].self, from: data),

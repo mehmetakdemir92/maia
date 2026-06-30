@@ -2,7 +2,7 @@
 //  PhoneticLookup.swift
 //  maia
 //
-//  WordPack'te phonetic yoksa ücretsiz sözlük API + yerel önbellek.
+// Free dictionary API + local cache when WordPack has no phonetic.
 //
 
 import Foundation
