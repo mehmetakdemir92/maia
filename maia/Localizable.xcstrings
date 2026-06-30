@@ -3603,7 +3603,6 @@
       }
     },
     "Plans could not be loaded. Check your connection or try again later." : {
-      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
@@ -3614,6 +3613,7 @@
       }
     },
     "Plans could not be loaded. In Xcode: Product → Scheme → Edit Scheme → Run → Options → set StoreKit Configuration to MaiaProducts.storekit, then run from Xcode (not an old simulator install)." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
