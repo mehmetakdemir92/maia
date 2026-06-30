@@ -253,8 +253,8 @@ struct QuizView: View {
         }
     }
 
-    /// Quiz biter bitmez (Continue'a basılmadan) tüm kalıcı yan etkileri yazar; reklamı sonra gösterir.
-    /// Idempotent — `hasCommittedCompletionSideEffects` ile tekrarı engeller.
+    /// Commits all persistent side effects when the quiz ends (before Continue); ad is shown afterward.
+    /// Idempotent — guarded by hasCommittedCompletionSideEffects.
     private func handleQuizCompletion(completed: Bool) {
         guard completed else { return }
 
@@ -274,9 +274,9 @@ struct QuizView: View {
         presentQuizCompletionAdIfNeeded()
     }
 
-    /// Reklam Continue butonundan ÖNCE gösteriliyor; tamamlama mantığı Continue'a bağlı kalırsa
-    /// kullanıcı reklamdan sonra back ile çıktığında diary/streak/stats hiç yazılmaz.
-    /// Bu yüzden quiz biter bitmez kalıcı yan etkileri burada idempotent olarak yazıyoruz.
+    /// Ad is shown before Continue; if completion depended on Continue,
+    /// backing out after the ad would skip diary/streak/stats writes.
+    /// Side effects are committed here immediately instead.
     private func commitCompletionSideEffectsIfNeeded() {
         guard !hasCommittedCompletionSideEffects else { return }
         guard quizManager.hasPassed() else { return }

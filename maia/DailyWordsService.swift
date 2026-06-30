@@ -2,10 +2,10 @@
 //  DailyWordsService.swift
 //  maia
 //
-//  Günlük kelimeler artık tek kaynaktan: `maia/WordPacks/{yyyy-MM}.json`.
-//  AI (Gemini) ve Firestore yazma yolu kapatıldı. Quiz soruları ve ekstra örnek
-//  cümleler de aynı dosyalarda. Diary'deki correctSentence (tek AI özelliği)
-//  hâlâ Functions üzerinden çalışır; bu servis ona dokunmuyor.
+// Daily words from a single source: maia/WordPacks/{yyyy-MM}.json.
+// AI (Gemini) and Firestore write paths removed. Quiz questions and extra examples
+// live in the same files. Diary correctSentence (the remaining AI feature)
+// still runs via Functions; this service does not touch it.
 //
 
 import Foundation
@@ -13,16 +13,16 @@ import Foundation
 @MainActor
 final class DailyWordsService {
 
-    // MARK: - Manuel override (geliştirici)
-    /// Geliştirme: belirli bir gün için seçimi WordPack'in dışına çıkarmak istersen.
-    /// Yine WordPack'te tanımlı kelimelerden seçim yapar; o günü zorla bu 3 lemmayla doldurur.
-    /// Örn: DailyWordsService.manualWordsByDate["2026-06-15"] = ["happy", "address", "anticipate"]
+    // MARK: - Manual override (developer)
+    /// Dev override: force a specific day's three lemmas from WordPack.
+    /// Still selects words defined in WordPack; forces that day to these three lemmas.
+    /// e.g. DailyWordsService.manualWordsByDate["2026-06-15"] = ["happy", "address", "anticipate"]
     static var manualWordsByDate: [String: [String]] = [:]
 
     // MARK: - Public API
 
-    /// Belirli bir tarih için 3 kelime: WordPack'ten seç.
-    /// Manuel override varsa onu uygular (hâlâ tanım/cümle/quiz WordPack'ten gelir).
+    /// Three words for a date, selected from WordPack.
+    /// Applies manual override when set (definition/sentences/quiz still from WordPack).
     func ensureDailyWords(date: String, category _: String, userLevel: Int) async throws -> [Word] {
         let words = Self.resolveWords(date: date, userLevel: userLevel)
 
@@ -47,9 +47,9 @@ final class DailyWordsService {
         return withAudio
     }
 
-    /// Today ekranı her yüklemede çağırır. WordPack'teki örnek cümleler zaten
-    /// hedef kelimeyi içerecek şekilde elle yazıldığı için no-op; sadece geriye
-    /// dönük uyum için ile imza korunur.
+    /// Called on every Today load. WordPack example sentences already
+    /// include the target word, so this is a no-op; signature kept for
+    /// backward compatibility.
     func repairExampleSentencesIfNeeded(in words: [Word]) async -> [Word] {
         words
     }
@@ -80,19 +80,19 @@ final class DailyWordsService {
         return resolved
     }
 
-    // MARK: - Yardımcılar (eski API yüzeyini koruyan ufak hook'lar)
+    // MARK: - Helpers (legacy API hooks)
 
-    /// QuizManager: aynı tarih/kelime için curated quizleri okur.
+    /// QuizManager: reads curated quizzes for a date/word pair.
     static func curatedQuiz(forWord word: String, date: String) -> [WordPackQuiz]? {
         WordPackStore.shared.quizQuestions(forWord: word, date: date)
     }
 
-    /// TodayTabView: Generate More akışında önceden yazılmış 2./3. cümleleri okur.
+    /// TodayTabView: reads pre-written 2nd/3rd sentences for Generate More.
     static func extraExamples(forWord word: String, date: String) -> [String] {
         WordPackStore.shared.extraExampleSentences(forWord: word, date: date)
     }
 
-    /// Eski WordOfTheDayManager hâlâ çağırıyor; CEFR uyumluluğu için aynı havuz bant kontrolü.
+    /// Legacy WordOfTheDayManager hook; same pool band check for CEFR compatibility.
     static func poolHasBand(_ band: String) -> Bool {
         let lowered = band.lowercased()
         return [
@@ -100,14 +100,14 @@ final class DailyWordsService {
         ].contains(lowered)
     }
 
-    /// WordOfTheDayManager: yerel kilitli kelimeler hâlâ kullanılabilir mi (placeholder yok, örnek hedef kelimeyi içeriyor)?
+    /// WordOfTheDayManager: whether locally locked words are still valid.
     static func isUsableWordSet(_ words: [Word]) -> Bool {
         guard words.count == 3 else { return false }
         return !words.contains(where: hasPlaceholderContent)
             && words.allSatisfy(exampleIncludesHeadword)
     }
 
-    /// WordOfTheDayManager.loadLockedWords çağırır; günlük kelimeler için hash uyumsuzluğu kontrolü.
+    /// WordOfTheDayManager.loadLockedWords hook; hash mismatch check for daily words.
     static func isFirestoreCacheStale(parsed _: [Word], date _: String, userLevel _: Int) -> Bool {
         false
     }
@@ -156,7 +156,7 @@ final class DailyWordsService {
         return updated
     }
 
-    // MARK: - Hata mesajları
+    // MARK: - Error messages
 
     private static func missingPackErrorMessage(for date: String) -> String {
         let monthKey = WordPackStore.monthKey(from: date) ?? date
@@ -174,8 +174,8 @@ final class DailyWordsService {
         )
     }
 
-    // MARK: - Eski compat noktaları (artık no-op)
+    // MARK: - Legacy compat (no-op)
 
-    /// Eski Firestore senkronizasyonu bu yeni mimaride yok; yine de çağrılırsa sorun olmasın.
+    /// Legacy Firestore sync removed in this architecture; safe no-op if still called.
     static func syncUsedWordsFromFirestoreOnce(userLevel _: Int) async {}
 }

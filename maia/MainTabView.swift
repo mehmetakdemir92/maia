@@ -35,7 +35,7 @@ struct MainTabView: View {
                     Label("Streak", systemImage: "flame.fill")
                 }
 
-            // Collection tab geçici olarak gizlendi; CollectionView.swift korunuyor.
+            // Collection tab hidden temporarily; CollectionView.swift retained.
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")

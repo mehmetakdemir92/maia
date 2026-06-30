@@ -31,13 +31,13 @@ struct ProfileView: View {
         diaryManager.entries.reduce(0) { $0 + $1.words.count }
     }
 
-    /// Rank için kullanılacak gerçek öğrenilen kelime sayısı (benzersiz word id).
+    /// Unique learned word count used for rank (by word id).
     private var uniqueLearnedWordCountForRank: Int {
         let uniqueIds = Set(diaryManager.entries.flatMap { $0.words.map(\.id) })
         return uniqueIds.count
     }
 
-    /// Profil/diary değişimlerinde saniyede onlarca Firestore yazımını önler.
+    /// Throttles Firestore writes on rapid profile/diary changes.
     private func scheduleRankUpdateToFirestore() {
         guard userManager.isSignedIn else { return }
         rankUpdateTask?.cancel()
@@ -72,7 +72,7 @@ struct ProfileView: View {
 
     private let cefrOrder: [String] = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
-    /// Diary'de quizlenen benzersiz kelimeleri CEFR seviyesine göre sayar.
+    /// Counts unique quizzed diary words grouped by CEFR level.
     private var learnedWordsByLevel: [String: Int] {
         var latestWordById: [UUID: Word] = [:]
         for entry in diaryManager.entries {
@@ -115,7 +115,6 @@ struct ProfileView: View {
                 if userManager.isSignedIn {
                     // Signed in view
                     VStack(alignment: .leading, spacing: 32) {
-                        // Profile header - ortalanmış foto + isim
                         VStack(spacing: 12) {
                             ZStack(alignment: .bottomTrailing) {
                                 ZStack {
@@ -177,7 +176,7 @@ struct ProfileView: View {
                         .padding(.top, 4)
                         
                         
-                        // Stats: Hero + supporting cards; Free kullanıcıda bazı metrikler kilitli preview.
+                        // Stats: hero + supporting cards; some metrics locked for free users.
                         VStack(alignment: .leading, spacing: 12) {
                             HeroStatCard(
                                 value: "\(streakManager.currentStreak)",
@@ -259,7 +258,6 @@ struct ProfileView: View {
                             .foregroundColor(.secondary)
                         
                         VStack(spacing: 12) {
-                            // Google Sign-In Button - Google'ın resmi buton stili
                             GoogleSignInButton(action: {
                                 Task {
                                     do {
@@ -631,57 +629,47 @@ struct SignUpView: View {
     }
 }
 
-// Google Sign-In Button - Google'ın resmi buton tasarımını taklit eden SwiftUI bileşeni
 struct GoogleSignInButton: View {
     let action: () -> Void
     
     var body: some View {
         Button(action: action) {
             ZStack {
-                // Beyaz arka plan - Google'ın resmi buton stili
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color.white)
                     .frame(width: 56, height: 56)
                     .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 1)
                 
-                // Google logosu - resmi renklerle basitleştirilmiş görünüm
                 ZStack {
-                    // Google'ın renkli logo parçaları (basitleştirilmiş)
-                    // Mavi kısım
                     Circle()
                         .trim(from: 0.75, to: 1.0)
                         .stroke(Color(red: 66/255, green: 133/255, blue: 244/255), lineWidth: 4.5)
                         .rotationEffect(.degrees(-90))
                         .frame(width: 36, height: 36)
                     
-                    // Kırmızı kısım
                     Circle()
                         .trim(from: 0, to: 0.25)
                         .stroke(Color(red: 234/255, green: 67/255, blue: 53/255), lineWidth: 4.5)
                         .rotationEffect(.degrees(-90))
                         .frame(width: 36, height: 36)
                     
-                    // Sarı kısım
                     Circle()
                         .trim(from: 0.25, to: 0.5)
                         .stroke(Color(red: 251/255, green: 188/255, blue: 5/255), lineWidth: 4.5)
                         .rotationEffect(.degrees(-90))
                         .frame(width: 36, height: 36)
                     
-                    // Yeşil kısım
                     Circle()
                         .trim(from: 0.5, to: 0.75)
                         .stroke(Color(red: 52/255, green: 168/255, blue: 83/255), lineWidth: 4.5)
                         .rotationEffect(.degrees(-90))
                         .frame(width: 36, height: 36)
                     
-                    // İç beyaz daire (G harfinin arka planı)
                     Circle()
                         .fill(Color.white)
                         .frame(width: 18, height: 18)
                         .offset(x: 6, y: 0)
                     
-                    // G harfi (mavi)
                     Text("G")
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .foregroundColor(Color(red: 66/255, green: 133/255, blue: 244/255))
@@ -693,7 +681,6 @@ struct GoogleSignInButton: View {
     }
 }
 
-// Ekranın ortasında beyaz kart: Galeriden seç / İptal
 struct ProfilePhotoOptionsOverlay: View {
     @Binding var isPresented: Bool
     @Binding var selectedPhotoItem: PhotosPickerItem?
@@ -773,7 +760,7 @@ struct ProfilePhotoOptionsOverlay: View {
     }
 }
 
-/// SwiftUI `Material` yerine `UIBlurEffect(.systemThickMaterialLight)` — belirgin buğulama; sistem dark modunda ton kaymaz.
+/// Uses UIBlurEffect(.systemThickMaterialLight) instead of SwiftUI Material for stronger blur without dark-mode tone shift.
 private struct SystemThickBlurBackground: UIViewRepresentable {
     var cornerRadius: CGFloat
 
@@ -791,7 +778,6 @@ private struct SystemThickBlurBackground: UIViewRepresentable {
     }
 }
 
-// Hero stat kartı — üstte tek metrik (streak odaklı)
 struct HeroStatCard: View {
     let value: String
     var titleKey: LocalizedStringKey
@@ -841,7 +827,6 @@ struct HeroStatCard: View {
     }
 }
 
-// Supporting stat kartı — küçük metrikler (kilitli görünüm destekli)
 struct CompactStatCard: View {
     let value: String
     var titleKey: LocalizedStringKey
@@ -876,7 +861,6 @@ struct CompactStatCard: View {
     }
 }
 
-// Alt satır rank kartı
 struct MiniRankCard: View {
     let rank: String
     var titleKey: LocalizedStringKey = "Streak Rank"
@@ -906,7 +890,7 @@ struct MiniRankCard: View {
     }
 }
 
-/// CEFR seviyelerine göre öğrenilen kelime dağılımı (motive edici ilerleme görünümü).
+/// Learned-word distribution by CEFR level.
 struct CEFRCoverageCard: View {
     let levels: [String]
     let countsByLevel: [String: Int]

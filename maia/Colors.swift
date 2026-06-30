@@ -10,7 +10,6 @@ enum AppColors {
 
     // MARK: - Core colors
 
-    /// Ana aksiyon rengi.
     static let primaryButton = Color(
         red: 66/255,
         green: 136/255,
@@ -30,7 +29,7 @@ enum AppColors {
         endPoint: .bottomTrailing
     )
 
-    /// Profil stat sayıları için koyu indigo ton.
+    /// Dark indigo for profile stat numbers.
     static let statValueColor = Color(red: 23/255, green: 22/255, blue: 64/255)
 
     static let quizProgressGradient = LinearGradient(
@@ -170,12 +169,12 @@ enum AppColors {
         blue: 139/255
     )
 
-    // MARK: - Liquid glass kart (açık buz üstü okunaklı koyu metin)
+    // MARK: - Liquid glass card (dark text on light frost)
 
-    /// Ana kelime — slate-950 (açık cam + renkli gradient üstünde maksimum kontrast)
+    /// Headword — slate-950 (max contrast on light glass and colored gradient)
     static let glassCardTitle = Color(red: 2/255, green: 6/255, blue: 23/255)
-    /// Tanım / örnek gövdesi — slate-900
+    /// Definition / example body — slate-900
     static let glassCardBody = Color(red: 15/255, green: 23/255, blue: 42/255)
-    /// Etiketler / fonetik — slate-600
+    /// Labels / phonetic — slate-600
     static let glassCardMuted = Color(red: 51/255, green: 65/255, blue: 85/255)
 }

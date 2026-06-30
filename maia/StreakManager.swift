@@ -70,7 +70,7 @@ class StreakManager: ObservableObject {
         saveToFirestoreIfSignedIn()
     }
     
-    /// Bugünü (veya verilen tarihi) streak’ten çıkarır.
+    /// Removes today (or the given date) from the streak.
     func unmarkDayCompleted(_ date: Date) {
         let dateString = getDateString(date)
         completedDates.remove(dateString)
@@ -88,7 +88,7 @@ class StreakManager: ObservableObject {
         return currentStreak
     }
     
-    /// Tamamlanmış günlerden hesaplanan en uzun ardışık streak
+    /// Longest consecutive streak from completed days
     var maxStreak: Int {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -128,8 +128,8 @@ class StreakManager: ObservableObject {
         return true
     }
 
-    /// Current streak bloğunun (en yeni tamamlanmış günden geriye ardışık) hemen öncesindeki günü döndürür.
-    /// Örn: 4-5 tamamlandıysa 3; 3 de tamamlandıktan sonra 2.
+    /// Day immediately before the current streak block.
+    /// e.g. if 4-5 completed, returns 3.
     func recoverableStreakGapDate() -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -164,12 +164,12 @@ class StreakManager: ObservableObject {
         var streak = 0
         var checkDate: Date
         
-        // Bugün tamamlanmışsa bugünden başla, değilse dünden başla
+        // Start from today if completed, otherwise yesterday
         if completedDates.contains(getDateString(today)) {
             checkDate = today
         } else {
-            // Bugün tamamlanmamışsa dünden başla
-            // Yarın açıldığında bugün tamamlanmamışsa sıfırlanacak
+            // Start from yesterday when today is not completed
+            // Resets tomorrow if today remains incomplete
             if let yesterday = calendar.date(byAdding: .day, value: -1, to: today) {
                 checkDate = calendar.startOfDay(for: yesterday)
             } else {
@@ -178,7 +178,7 @@ class StreakManager: ObservableObject {
             }
         }
         
-        // Seçilen tarihten geriye doğru ardışık tamamlanmış günleri say
+        // Count consecutive completed days backward from the anchor date
         while completedDates.contains(getDateString(checkDate)) {
             streak += 1
             guard let previousDay = calendar.date(byAdding: .day, value: -1, to: checkDate) else {

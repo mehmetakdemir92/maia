@@ -1,81 +1,81 @@
-# Maia — reklam stratejisi (AdMob)
+# Maia — Ad strategy (AdMob)
 
-Özet: Ücretsiz kullanıcıda **seyrek ve odaklı** reklam; Premium tamamen reklamsız. Amaç retention + premium dönüşümü korumak, agresif tam ekran yığınını önlemek.
+Summary: **light, focused** ads for free users; Premium is fully ad-free. Goal: protect retention and premium conversion, avoid aggressive full-screen ad stacking.
 
 ---
 
-## 1. Mevcut model (kod ile uyumlu)
+## 1. Current model (matches code)
 
 ### FREE
 
-| Yer | Format | Sıklık |
-|-----|--------|--------|
-| **Today** | Inline banner (1. kelime kartından sonra) | Oturum başına 1 banner |
-| **Quiz** | Yok | — |
-| **Quiz bitişi** | Interstitial | Günde en fazla **1** (ilk tamamlanan quiz) |
-| **Streak recovery** | Rewarded (opt-in) | Kullanıcı “Watch ad” derse |
+| Placement | Format | Frequency |
+|-----------|--------|-----------|
+| **Today** | Inline banner (after 1st word card) | 1 banner per session |
+| **Quiz** | None | — |
+| **Quiz complete** | Interstitial | Max **1** per day (first completed quiz) |
+| **Streak recovery** | Rewarded (opt-in) | When user taps "Watch ad" |
 
 ### PREMIUM
 
-- Tüm reklamlar kapalı
-- Mevcut premium özellikler: reklamsız + AI diary correction + Generate More + stats
+- All ads disabled
+- Premium features: ad-free + AI diary correction + Generate More + stats
 
-### Bilinçli olarak yok
+### Intentionally excluded
 
 - App open ad
-- Tab geçişlerinde interstitial
-- Quiz sırasında alt banner
-- 2. quiz sonrası otomatik rewarded video
-- Diary / Profile / Streak alt banner
+- Interstitial on tab switches
+- Bottom banner during quiz
+- Auto rewarded video after 2nd quiz
+- Bottom banner on Diary / Profile / Streak
 
 ---
 
-## 2. Dosya haritası
+## 2. File map
 
-| Dosya | Rol |
-|-------|-----|
-| `TodayTabView.swift` | `InlineBannerAdRow` — yalnızca 1. kart sonrası |
-| `QuizView.swift` | Quiz bitişinde `QuizInterstitialAdPresenter` (1. quiz/gün) |
+| File | Role |
+|------|------|
+| `TodayTabView.swift` | `InlineBannerAdRow` — only after 1st card |
+| `QuizView.swift` | `QuizInterstitialAdPresenter` on quiz complete (1st quiz/day) |
 | `StreakView.swift` | `StreakRecoveryRewardedService` — opt-in rewarded |
 | `BannerAdView.swift` | Banner UIViewRepresentable + analytics |
-| `QuizInterstitialAdPresenter.swift` | Interstitial preload + gösterim |
-| `DailyQuizAdTracker.swift` | Günlük quiz tamamlama sayacı (interstitial cap) |
-| `AdMobConfig.swift` | Test / production ad unit ID’leri |
-| `AppAnalytics.swift` | Placement event isimleri |
+| `QuizInterstitialAdPresenter.swift` | Interstitial preload + presentation |
+| `DailyQuizAdTracker.swift` | Daily quiz completion counter (interstitial cap) |
+| `AdMobConfig.swift` | Test / production ad unit IDs |
+| `AppAnalytics.swift` | Placement event names |
 
-`RewardedVideoAdPresenter.swift` — 2. quiz auto-rewarded kaldırıldı; dosya ileride opt-in rewarded için tutulabilir.
+`RewardedVideoAdPresenter.swift` — 2nd-quiz auto-rewarded removed; file kept for future opt-in rewarded flows.
 
 ---
 
-## 3. Ölçüm (AdMob + analytics)
+## 3. Measurement (AdMob + analytics)
 
-Placement bazlı izle:
+Track by placement:
 
 - `today_inline_banner_after_first` — banner impression / fail
 - `quiz_complete_interstitial` — interstitial shown
-- Streak recovery rewarded (Streak ekranı)
+- Streak recovery rewarded (Streak screen)
 
-Karşılaştır: premium dönüşüm oranı, günlük aktif kullanıcı, quiz tamamlama oranı.
+Compare: premium conversion rate, DAU, quiz completion rate.
 
 ---
 
-## 4. Sonraki adımlar (kullanıcı 100+ olunca)
+## 4. Next steps (when users reach 100+)
 
-1. Production ad unit doğrulama (`AdMobConfig` + Info.plist `GADApplicationIdentifier`)
+1. Verify production ad units (`AdMobConfig` + Info.plist `GADApplicationIdentifier`)
 2. Adaptive banner (`GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth`)
-3. Mediation (Meta vb.) — doluluk / eCPM
-4. A/B: Today’de inline vs alt banner (yalnızca biri)
+3. Mediation (Meta, etc.) — fill rate / eCPM
+4. A/B: Today inline vs bottom banner (one only)
 
-**Yapma (şimdilik):** App open ad, her geçişte interstitial, quiz içi banner, zorunlu rewarded.
-
----
-
-## 5. Politika
-
-- Interstitial yalnızca doğal duraklama anında (quiz bitti, Continue öncesi)
-- Eğitim akışının ortasında tam ekran reklam yok
-- ATT: banner gösteriminde `TrackingPermission` (mevcut)
+**Avoid for now:** app open ad, interstitial on every navigation, in-quiz banner, forced rewarded.
 
 ---
 
-*Son güncelleme: reklam sadeleştirme — Today 1 inline, quiz banner yok, günde 1 interstitial, streak opt-in rewarded.*
+## 5. Policy
+
+- Interstitial only at natural pause points (quiz finished, before Continue)
+- No full-screen ads mid learning flow
+- ATT: `TrackingPermission` on banner display (existing)
+
+---
+
+*Last updated: ad simplification — Today 1 inline, no quiz banner, 1 interstitial/day, streak opt-in rewarded.*

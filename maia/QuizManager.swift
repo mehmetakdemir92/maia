@@ -24,8 +24,8 @@ class QuizManager: ObservableObject {
     
     private let maxAttemptsPerDay = 3
     private let questionsPerQuiz = 3
-    /// 3 sorudan 2'sini doğru bilmek geçer not (≈%67). Sorular curated olduğu için
-    /// %100 zorlamak istemiyoruz; 1 fill-in-the-blank yanıltıcı olabilir.
+    /// Passing score: 2/3 correct (≈67%). Questions are curated, so
+    /// a 100% bar is too harsh when one fill-in-the-blank may be misleading.
     private let requiredCorrectAnswers = 2
 
     private struct SeededGenerator {
@@ -75,7 +75,7 @@ class QuizManager: ObservableObject {
         return String(format: "%04d-%02d-%02d", y, m, d)
     }
 
-    /// Aynı takvim gününde farklı kelime quizlerinde aynı genel şablon cümlenin tekrarını azaltır.
+    /// Reduces reuse of the same generic template across different word quizzes on one calendar day.
     private func globalBlankSentencesKey(for dayISO: String) -> String {
         "quizGlobalBlankSentences_\(dayISO)"
     }
@@ -97,7 +97,7 @@ class QuizManager: ObservableObject {
         UserDefaults.standard.set(Array(set), forKey: key)
     }
 
-    /// Kelime + gün ile farklı başlangıç; ardından shuffle. Önce bugün hiç kullanılmayan şablonlar.
+    /// Deterministic start from word + day, then shuffle; prefer templates unused today.
     private func orderedNonTargetTemplates(
         targetLemma: String,
         templates: [(sentence: String, answer: String)],
@@ -154,9 +154,9 @@ class QuizManager: ObservableObject {
         return (selected, correctIndex)
     }
 
-    /// Tanım içinde geçen hedef kelimeyi (ve kök türevlerini) `it` ile maskeler;
-    /// kelimenin önünde duran `a/an/the` article'ını da yutar — aksi halde "an it"
-    /// gibi bozuk öbekler kalır. Amaç: doğru şıkkın hedef kelimeyi içermemesi.
+    /// Masks the target word (and stem variants) in the definition with `it`;
+    /// strips leading a/an/the articles — otherwise "an it"
+    /// fragments remain. Ensures the correct choice does not contain the target word.
     private func maskTargetInDefinition(_ definition: String, target: String) -> String {
         let trimmedTarget = target.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmedTarget.count >= 3 else { return definition }
@@ -183,9 +183,9 @@ class QuizManager: ObservableObject {
             .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    /// Doğru cevabı, tanımı kırpmadan döner. Yalnızca sondaki noktalama temizlenir
-    /// ve baş harf büyütülür; uzun tanımlar olduğu gibi kalır.
-    /// Yanlış şıkların uzunluğu doğru cevabın kelime sayısına göre ±1 aralığında ayarlanır.
+    /// Returns the correct answer without trimming the definition; only trailing punctuation is removed
+    /// and the first letter is capitalized.
+    /// Distractor length is adjusted to within ±1 word count of the correct answer.
     private func cleanedDefinitionAnswer(for rawDefinition: String) -> String {
         var clean = rawDefinition.trimmingCharacters(in: .whitespacesAndNewlines)
         while let last = clean.last, ".,;:!? ".contains(last) {
@@ -200,10 +200,10 @@ class QuizManager: ObservableObject {
         return clean + "."
     }
 
-    /// Yanlış cevap adayını doğru cevabın kelime sayısına göre ±1 aralığa ayarlar.
-    /// - Zaten aralıkta ise olduğu gibi (sondaki nokta normalize edilir) döner.
-    /// - Daha kısaysa nötr "filler" ile (target-1) kelimeye uzatır.
-    /// - Daha uzunsa (target+1'i aşıyorsa) atılır — havuzdaki başka bir aday kullanılır.
+    /// Adjusts a distractor candidate to ±1 word count of the correct answer.
+    /// - Returns as-is if already in range (trailing period normalized).
+    /// - Pads shorter candidates with neutral filler to (target-1) words.
+    /// - Discards candidates longer than target+1.
     private func definitionWrongCandidate(from raw: String, targetCount: Int) -> String? {
         var stripped = raw.trimmingCharacters(in: .whitespacesAndNewlines)
         while let last = stripped.last, ".,;:!? ".contains(last) {
@@ -231,12 +231,12 @@ class QuizManager: ObservableObject {
         return stripped + " " + filler + "."
     }
 
-    /// Tanım şıkları için kelime sayısı (boşlukla ayrılmış tokenlar).
+    /// Word count for definition choices (space-separated tokens).
     private func definitionWordCount(_ s: String) -> Int {
         s.split { $0.isWhitespace || $0.isNewline }.filter { !$0.isEmpty }.count
     }
 
-    /// İlk sözcük anahtarı — şıkların aynı harfle başlamasını / aynı ilk kelimeyi paylaşmasını engellemek için.
+    /// First-word key — prevents choices sharing the same leading letter or first word.
     private func definitionFirstWordKey(_ s: String) -> String {
         let t = s.trimmingCharacters(in: .whitespacesAndNewlines)
         guard let first = t.split(whereSeparator: { $0.isWhitespace || $0.isNewline }).first else { return "" }
@@ -245,8 +245,8 @@ class QuizManager: ObservableObject {
             .lowercased()
     }
 
-    /// Yanlış tanım havuzu: hepsi 6–7 kelime; her satır farklı bir başlangıç sözcüğüyle ve
-    /// "It means:" / "To X, usually..." gibi formatik ipucu olmadan yazıldı.
+    /// Distractor pool: 6–7 words each; each line uses a different opening word and
+    /// avoids formulaic cues like "It means:" or "To X, usually...".
     private func definitionWrongAnswerPool() -> [String] {
         [
             "A short note shared between coworkers.",
@@ -287,10 +287,10 @@ class QuizManager: ObservableObject {
         ]
     }
 
-    /// Doğru tanım + 3 yanlış.
-    /// - Doğru cevap: `word.definition` tam haliyle (kırpma yok, sadece hedef kelime maskelenir).
-    /// - Yanlış şıklar: kelime sayısı doğru cevabın ±1 aralığında. Havuzdan uygun uzunluk
-    ///   bulunursa olduğu gibi; daha kısaysa nötr filler ile uzatılır; daha uzunsa atılır.
+    /// Correct definition plus three distractors.
+    /// - Correct answer: full word.definition (target word masked only).
+    /// - Distractors: word count within ±1 of correct. Use pool match when available;
+    ///   pad shorter ones; discard longer ones.
     private func makeDefinitionQuestion(for word: Word, rng: inout SeededGenerator) -> QuizQuestion {
         let masked = maskTargetInDefinition(word.definition, target: word.word)
         let correctDefinition = cleanedDefinitionAnswer(for: masked)
@@ -318,13 +318,13 @@ class QuizManager: ObservableObject {
 
         var wrongs = pickWrongs(allowSameFirstWord: false)
         if wrongs.count < 3 {
-            // Havuz daralırsa ilk kelime kuralını gevşet; ±1 uzunluk kuralı korunur.
+            // Relax first-word rule if pool is narrow; keep ±1 length rule.
             wrongs = pickWrongs(allowSameFirstWord: true)
         }
 
         var options = [correctDefinition] + Array(wrongs.prefix(3))
 
-        // ±1 kuralına uyan nötr pad (havuz boşalırsa devreye girer).
+        // Neutral padding when pool is exhausted.
         let neutralBases = [
             "Used widely across everyday situations between speakers",
             "Often heard during friendly chats between coworkers",
@@ -399,14 +399,14 @@ class QuizManager: ObservableObject {
         return (options, correctIndex)
     }
 
-    /// Kelimenin örnek cümlelerinden (definition tarafından üretilmiş) boşluk doldurma üretir.
+    /// Builds a fill-in-the-blank question from the word's example sentences.
     private func exampleSentences(from word: Word) -> [String] {
         [word.exampleSentence, word.exampleSentence2, word.exampleSentence3]
             .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
     }
 
-    /// İlk eşleşen tokenu (kelime sınırı, büyük/küçük harf duyarsız) `_____` ile değiştirir.
+    /// Replaces the first matching token (word boundary, case-insensitive) with `_____`.
     private func blankFillFromExample(sentence: String, lemma: String, pickOccurrence: Int) -> (sentence: String, answer: String)? {
         let trimmed = sentence.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty, !lemma.isEmpty else { return nil }
@@ -439,7 +439,7 @@ class QuizManager: ObservableObject {
         }
         rng.shuffle(&fromExamples)
 
-        // Doğru cevap hedef kelime olmayan şablonlar
+        // Templates where the correct answer is not the target word
         nonTargetTemplates.append(contentsOf: [
             (sentence: "Please _____ to the latest report before the meeting.", answer: "refer"),
             (sentence: "We need to _____ this issue before tomorrow's deadline.", answer: "address"),
@@ -497,7 +497,7 @@ class QuizManager: ObservableObject {
         var promptIndex = 0
         let orderedNonTargets = orderedNonTargetTemplates(targetLemma: target, templates: nonTargetTemplates, rng: &rng)
 
-        // Önce örnek cümlelerden (hedef kelime doğru cevap); kalanı genel şablonlar.
+        // Prefer example sentences first; fill remainder with generic templates.
         let maxTargetBlanks = min(2, fromExamples.count, count)
         let targetItems = Array(fromExamples.prefix(maxTargetBlanks))
 
@@ -525,7 +525,7 @@ class QuizManager: ObservableObject {
                     correctAnswerIndex: correctIndex
                 )
             )
-            // Sadece genel şablonları işaretle; günlük kelime örnek cümleleri kelimeye özel.
+            // Mark only generic templates used; daily word examples are word-specific.
             if normalized(item.answer) != normalized(target) {
                 registerGlobalBlankSentence(item.sentence)
             }
@@ -539,7 +539,7 @@ class QuizManager: ObservableObject {
             appendQuestion(item)
         }
 
-        // Eksik kalırsa: kalan örnek cümleler + genel şablonlar.
+        // Fill gaps with remaining examples + generic templates.
         if questions.count < count {
             var fallbackPool = Array(fromExamples.dropFirst(maxTargetBlanks)) + orderedNonTargets
             rng.shuffle(&fallbackPool)
@@ -549,7 +549,7 @@ class QuizManager: ObservableObject {
             }
         }
 
-        // Soru sırasını karıştır (deterministic)
+        // Shuffle question order (deterministic)
         rng.shuffle(&questions)
 
         return questions
@@ -569,9 +569,9 @@ class QuizManager: ObservableObject {
         return Array(questions.prefix(desiredCount))
     }
 
-    /// WordPack JSON'undan curated quiz soruları (1 definition + 2 blank, ya da
-    /// dosyada yazılı ne varsa). Aynı gün içinde retry'larda şıkları stabil olarak
-    /// karıştırarak ezbere çözmeyi engeller; doğru cevap konumu değişir.
+    /// Curated quiz questions from WordPack JSON (1 definition + 2 blank, or
+    /// whatever is in the file). On same-day retries, choice order is reshuffled
+    /// to prevent memorizing positions.
     private func curatedQuestions(for word: Word, count: Int, attemptNumber: Int) -> [QuizQuestion]? {
         let date = quizDayISO()
         guard let presets = DailyWordsService.curatedQuiz(forWord: word.word, date: date),
@@ -604,7 +604,7 @@ class QuizManager: ObservableObject {
         quizAttemptsToday += 1
         saveAttemptsForToday()
 
-        // 3 soru üret (attemptNumber: aynı gün tekrar denemede şıklar farklı sıralanır)
+        // Build 3 questions (attemptNumber reshuffles choices on same-day retries)
         let quiz = generateQuiz(for: word, count: questionsPerQuiz, attemptNumber: quizAttemptsToday)
         print("Generated quiz with \(quiz.count) questions")
         

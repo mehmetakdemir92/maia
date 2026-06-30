@@ -2,7 +2,7 @@
 //  ReviewListView.swift
 //  maia
 //
-//  Bugün tekrarlanacak kelimeler: SM-2 due listesi, nextDueAt'a göre (en gecikmiş önce) sıralı.
+// Words due today: SM-2 list sorted by nextDueAt (most overdue first).
 //
 
 import SwiftUI
@@ -15,7 +15,7 @@ struct ReviewListView: View {
     let wordManager: WordOfTheDayManager
     var onSelectWord: (Word) -> Void
 
-    /// Diary + günün kelimelerinden tekilleştirilmiş; sadece tekrar zamanı gelmiş olanlar, nextDueAt'a göre sıralı (en gecikmiş önce).
+    /// Deduplicated from diary + today's words; due items sorted by nextDueAt.
     private var dueWords: [Word] {
         let fromDiary = diaryManager.entries.flatMap { $0.words }
         let all = fromDiary + wordManager.words   // ✅ değişti
@@ -30,7 +30,7 @@ struct ReviewListView: View {
             }
     }
 
-    /// Öğrenilmiş tüm kelimeler (diary + günün kelimeleri, tekilleştirilmiş).
+    /// All learned words (diary + today, deduplicated).
     private var learnedWords: [Word] {
         let fromDiary = diaryManager.entries.flatMap { $0.words }
         let all = fromDiary + wordManager.words   // ✅ değişti

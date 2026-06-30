@@ -2,16 +2,16 @@
 //  SubscriptionConfig.swift
 //  maia
 //
-//  App Store Connect’te aynı Product ID’lerle tek abonelik grubu oluşturulmalı.
-//  Bölgesel fiyat: ASC’de ana ülke fiyat kademesi seçilir; diğer ülkeler Apple tarafından dönüştürülür.
-//  Uygulama `Product.displayPrice` kullanır — sabit para birimi yazmayın.
-//  Yerel test: MaiaProducts.storekit (varsayılan vitrin TUR). Xcode → Debug → StoreKit → Storefront değiştirilebilir.
+// Create one subscription group in App Store Connect with the same product IDs.
+// Regional pricing: set primary tier in ASC; Apple converts other storefronts.
+// App uses Product.displayPrice — do not hard-code currency strings.
+// Local test: MaiaProducts.storekit (default storefront TUR). Change via Xcode → Debug → StoreKit.
 //
 
 import Foundation
 
 enum SubscriptionConfig {
-    /// App Store Connect / MaiaProducts.storekit ile aynı grup kimliği.
+    /// Same group ID as App Store Connect / MaiaProducts.storekit.
     static let subscriptionGroupID = "maia_premium_group"
 
     static let premiumMonthlyProductID = "com.mehmetakdemir.maia.premium.monthly"
@@ -24,7 +24,7 @@ enum SubscriptionConfig {
 
     static var defaultSelectedProductID: String { premiumYearlyProductID }
 
-    // Lansman (Türkiye): aylık ~₺119, yıllık ~₺799 — MaiaProducts.storekit ve ASC ile aynı tutun.
+    // Launch (Turkey): monthly ~₺119, yearly ~₺799 — keep in sync with MaiaProducts.storekit and ASC.
 
     static func isYearly(_ productID: String) -> Bool {
         productID == premiumYearlyProductID
@@ -38,7 +38,7 @@ enum SubscriptionConfig {
         }
     }
 
-    /// Paywall başlıkları — App Store / StoreKit adı değil; uygulama dili (`Localizable`).
+    /// Paywall titles from app locale (Localizable), not StoreKit product names.
     static func planDisplayName(for productID: String) -> String {
         if isYearly(productID) {
             return String(localized: "Premium Yearly")

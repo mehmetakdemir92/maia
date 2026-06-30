@@ -2,7 +2,7 @@
 //  AppLanguageManager.swift
 //  maia
 //
-//  Uygulama dilini sistemden bağımsız seçmek (Ayarlar → Diller).
+// App language override independent of system locale (Settings → Languages).
 //
 
 import Combine
@@ -17,7 +17,7 @@ private func appLanguageOverlayBundle() -> Bundle? {
 }
 
 extension Bundle {
-    /// `localizedString` swizzle: `Bundle.main` için tr.lproj (veya başka .lproj) üzerinden çözüm.
+    /// Swizzles localizedString to resolve via tr.lproj (or other .lproj) on Bundle.main.
     private static let maiaLocalizationSwizzle: Void = {
         let selector = #selector(Bundle.localizedString(forKey:value:table:))
         guard
@@ -42,7 +42,7 @@ extension Bundle {
         return maia_localizedString(forKey: key, value: value, table: tableName)
     }
 
-    /// `nil` = cihaz dil listesi (sistem varsayılanı). Aksi halde `en` / `tr` gibi ISO kodları.
+    /// nil = device language list (system default); otherwise ISO codes like en / tr.
     static func setAppLanguageCode(_ code: String?) {
         maiaEnsureLocalizationSwizzle()
 
@@ -79,7 +79,7 @@ enum AppLanguageOption: String, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    /// Bundle / AppleLanguages için; sistem = nil
+    /// For Bundle / AppleLanguages; system = nil
     var languageCode: String? {
         switch self {
         case .system: return nil
@@ -91,8 +91,8 @@ enum AppLanguageOption: String, CaseIterable, Identifiable {
         }
     }
 
-    /// Picker'da kullanıcının kendi dilinde gördüğü ad (endonym).
-    /// Picker UI dilinden bağımsız sabit görünür ki kullanıcı kendi dilini bulabilsin.
+    /// Endonym shown in the language picker.
+    /// Fixed labels so users can find their language regardless of picker UI locale.
     var title: String {
         switch self {
         case .system: return String(localized: "System language")
@@ -116,7 +116,7 @@ final class AppLanguageManager: ObservableObject {
         return AppLanguageOption(rawValue: raw) ?? .system
     }
 
-    /// Tarih/sayı formatları için (String Catalog’dan ayrı).
+    /// Date/number formatting (separate from String Catalog).
     var effectiveLocale: Locale {
         switch selectedOption {
         case .system:

@@ -2,7 +2,7 @@
 //  TrackingPermission.swift
 //  maia
 //
-//  Kişiselleştirilmiş reklamlar için ATT (bir kez).
+// ATT for personalized ads (requested once).
 //
 
 import AppTrackingTransparency

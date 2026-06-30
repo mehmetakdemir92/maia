@@ -13,14 +13,14 @@ from google.api_core import exceptions as google_exceptions
 
 app = FastAPI()
 
-# Firebase Admin (Cloud Run'da otomatik credentials kullanır)
+# Firebase Admin (uses automatic credentials on Cloud Run)
 if not firebase_admin._apps:
     firebase_admin.initialize_app()
 
 PROJECT_ID = os.environ["GCP_PROJECT_ID"]
 LOCATION = os.environ.get("GCP_LOCATION", "europe-west4")
 MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-# generate: use_alternate_model=True iken kullanılır (Flash’tan farklı ağırlık = daha az “kopya” ikinci cümle)
+# Used when generate use_alternate_model=True (different model weight = less duplicate second sentence)
 ALT_MODEL = os.environ.get("GEMINI_ALT_MODEL", "gemini-2.5-pro")
 
 def _parse_model_list(raw: str | None, fallback: list[str]) -> list[str]:
@@ -87,7 +87,7 @@ def _generate_text_vertex(
 
 class GenerateReq(BaseModel):
     prompt: str
-    # İkinci ek örnek cümle için: farklı model (ör. Pro) — prompt tek başına yeterli olmayınca çeşitlilik için
+    # Second extra example: alternate model (e.g. Pro) for variety when prompt alone is insufficient
     use_alternate_model: bool = False
 
 
@@ -98,7 +98,7 @@ class EnrichWordsReq(BaseModel):
 
 @app.post("/enrich-words")
 def enrich_words(req: EnrichWordsReq, authorization: str | None = Header(default=None)):
-    """Verdiğin kelimeler için AI ile phonetic, definition, exampleSentence üretir."""
+    """Generate phonetic, definition, and exampleSentence for the given words via AI."""
     if not authorization or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Missing token")
 
@@ -156,7 +156,7 @@ def generate(req: GenerateReq, authorization: str | None = Header(default=None))
         raise HTTPException(status_code=401, detail="Invalid token")
 
     models = ALT_MODELS if req.use_alternate_model else PRIMARY_MODELS
-    # İkinci cümle yolu: biraz daha yüksek sıcaklık + farklı model
+    # Second-sentence path: slightly higher temperature + alternate model
     temp = 0.88 if req.use_alternate_model else 0.7
 
     text = _generate_text_vertex(

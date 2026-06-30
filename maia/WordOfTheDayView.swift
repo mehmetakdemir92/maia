@@ -105,7 +105,6 @@ struct WordOfTheDayView: View {
 
                                         Spacer()
 
-                                        // Suggestion butonu (örnek cümle önerisi)
                                         RippleLoadingButton(
                                             isLoading: generatingForWordId == word.id,
                                             cornerRadius: 8,
@@ -203,13 +202,11 @@ struct WordOfTheDayView: View {
     }
     
     private func handleGenerateExample(for word: Word) {
-        // Premium kontrolü
         guard userManager.isPremium else {
             showingPremiumPaywall = true
             return
         }
         
-        // Generate işlemini başlat
         generatingForWordId = word.id
         
         Task {
@@ -226,7 +223,6 @@ struct WordOfTheDayView: View {
             } catch {
                 await MainActor.run {
                     generatingForWordId = nil
-                    // Hata durumunda kullanıcıya bilgi verilebilir
                     print("Error generating example: \(error.localizedDescription)")
                 }
             }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-    /// `Material` katmanlarının sistem dark modunda koyulaşıp açılmasını engeller; cam hep aynı “light glass” paletinde kalır.
+    /// Prevents Material layers from shifting in system dark mode; glass stays on the light palette.
     func glassMaterialIgnoresSystemColorScheme() -> some View {
         environment(\.colorScheme, .light)
     }
@@ -22,7 +22,6 @@ struct SubtleStrokeText: ViewModifier {
     func body(content: Content) -> some View {
         content
             .foregroundColor(textColor)
-            // stroke hissi veren çok hafif gölge
             .shadow(color: strokeColor, radius: radius, x: 0, y: 0)
     }
 }
@@ -36,19 +35,19 @@ extension View {
         modifier(SubtleStrokeText(textColor: textColor, strokeColor: strokeColor, radius: radius))
     }
 
-    /// Referans “Focus” pill: güçlü blur, kenar daha opak / merkez saydam, üst sheen, ince çerçeve, yumuşak gölge.
+    /// Focus pill reference: strong blur, opaque edge / clear center, top sheen, thin border.
     func wordCardGlassBackground(cornerRadius: CGFloat = 22) -> some View {
         modifier(WordCardGlassBackground(cornerRadius: cornerRadius, variant: .standard))
     }
 
-    /// Profil istatistik kartları: daha az gölge, kenar daha okunur, içerik sıkı.
+    /// Profile stat cards: lighter shadow, clearer edge, tighter content.
     func statCardGlassBackground(cornerRadius: CGFloat = 16) -> some View {
         modifier(WordCardGlassBackground(cornerRadius: cornerRadius, variant: .statCompact))
     }
 
-    // MARK: - Cam kart tipografisi (yalnızca metin; arka plan / blur’a dokunulmaz)
+    // MARK: - Glass card typography (text only)
 
-    /// Ana kelime — açık cam üzerinde koyu metin (beyaz halo yok)
+    /// Headword — dark text on light glass
     func glassCardWordTitle() -> some View {
         foregroundColor(AppColors.glassCardTitle)
             .fontDesign(.serif)
@@ -56,7 +55,7 @@ extension View {
             .shadow(color: Color.black.opacity(0.12), radius: 2, x: 0, y: 1)
     }
 
-    /// DEFINITION / EXAMPLE — küçük başlık, üst harf, net ayrım
+    /// DEFINITION / EXAMPLE — small caps label
     func glassCardSectionLabel() -> some View {
         font(.caption.weight(.bold))
             .foregroundColor(AppColors.glassCardMuted)
@@ -70,7 +69,7 @@ extension View {
             .italic()
     }
 
-    /// Tanım / örnek gövdesi — geniş satır aralığı + ince gölge (ince italik bile okunur)
+    /// Definition / example body — generous line spacing
     func glassCardReadableBody() -> some View {
         foregroundColor(AppColors.glassCardBody)
             .lineSpacing(9)
@@ -78,7 +77,7 @@ extension View {
     }
 }
 
-/// iOS liquid glass — `thinMaterial` ile belirgin backdrop blur; radyal kenar buzu + üst yatay parlama.
+/// iOS liquid glass — thinMaterial backdrop blur with radial frost and top sheen.
 private struct WordCardGlassBackground: ViewModifier {
     enum Variant {
         case standard
@@ -110,10 +109,10 @@ private struct WordCardGlassBackground: ViewModifier {
                     let edgeR = hypot(w, h) * 0.52
 
                     ZStack {
-                        // Güçlü buzlanma (referanstaki backdrop blur hissi)
+                        // Strong frost (backdrop blur)
                         shape.fill(.thinMaterial)
 
-                        // Kenar “çerçeve” — orta alan daha saydam kalır
+                        // Edge frame — center stays more transparent
                         shape.fill(
                             RadialGradient(
                                 stops: [
@@ -129,7 +128,7 @@ private struct WordCardGlassBackground: ViewModifier {
                             )
                         )
 
-                        // Üst yatay cam parlaması (sheen)
+                        // Top horizontal glass sheen
                         VStack(spacing: 0) {
                             AppColors.glassTopSheenGradient
                             .frame(height: min(h * 0.22, 40))

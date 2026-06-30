@@ -3,24 +3,24 @@
 //  WordPoolEntry.swift
 //  maia
 //
-//  DailyWordPool.txt satırlarını parse eder. Kişiselleştirilmiş öğrenme için havuz etiketleri.
+// Parses DailyWordPool.txt lines and pool tags for personalized learning.
 //
 
 import Foundation
 
-/// Havuzdaki tek kelime + isteğe bağlı etiketler.
+/// Single pool word plus optional tags.
 struct WordPoolEntry: Equatable, Sendable {
     let word: String
     let cefrLevel: String?
     let domainTag: String?
     let partOfSpeech: String?
-    /// Örn: neutral, formal, informal, spoken, written
+    /// e.g. neutral, formal, informal, spoken, written
     let registerTag: String?
-    /// 1 = en yaygın çekirdek … 5 = nadir (özet bant; isteğe bağlı)
+    /// 1 = most common core … 5 = rare (summary band; optional)
     let frequencyBand: Int?
 
-    /// - Satırda `|` yoksa: tüm satır kelime (eski format).
-    /// - `|` varsa: `kelime|cefr|domain|pos|register|frekans` — eksik sondaki alanlar boş olabilir.
+    /// - No `|`: entire line is the word (legacy format).
+    /// - With `|`: word|cefr|domain|pos|register|frequency — trailing fields may be empty.
     static func parseLine(_ line: String) -> WordPoolEntry? {
         let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty, !trimmed.hasPrefix("#") else { return nil }

@@ -349,7 +349,7 @@ struct AuthEntryView: View {
             }
 
         if authMode == .signUp {
-            // Yeni hesap: kayıtlı giriş önerisini azaltır (.username eski maili üstte gösterir).
+            // New account: reduces saved-login suggestion (.username surfaces old email).
             field.textContentType(.emailAddress)
         } else {
             field.textContentType(.username)

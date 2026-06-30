@@ -6,7 +6,7 @@
 import GoogleMobileAds
 import UIKit
 
-/// Quiz tamamlanınca ücretsiz kullanıcıya tam ekran interstitial (yüklenmişse).
+/// Full-screen interstitial for free users after quiz completion (if loaded).
 @MainActor
 final class QuizInterstitialAdPresenter: NSObject, GADFullScreenContentDelegate {
     static let shared = QuizInterstitialAdPresenter()

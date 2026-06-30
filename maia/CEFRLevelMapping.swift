@@ -2,7 +2,7 @@
 //  CEFRLevelMapping.swift
 //  maia
 //
-//  Tek kaynak: ayarlar adımları (1–11) ↔ günlük kelime CEFR dağılımı.
+// Single source: settings steps (1–11) ↔ daily word CEFR distribution.
 //
 
 import Foundation
@@ -21,7 +21,7 @@ enum CEFRLevelMapping {
         return stepLabels[step - 1]
     }
 
-    /// Örn. B2+ (8) → ["c1", "c1", "b2"]
+    /// e.g. B2+ (8) → ["c1", "c1", "b2"]
     static func preferredBands(for userLevel: Int) -> [String] {
         switch normalizedStep(userLevel) {
         case 1: return ["a1", "a1", "a2"]
@@ -39,7 +39,7 @@ enum CEFRLevelMapping {
         }
     }
 
-    /// Kullanıcıya gösterilecek hedef dağılım: "2× C1, 1× B2"
+    /// User-facing target distribution label, e.g. "2× C1, 1× B2"
     static func preferredBandsSummary(for userLevel: Int) -> String {
         let bands = preferredBands(for: userLevel)
         let counts = Dictionary(grouping: bands, by: { $0.uppercased() })
@@ -48,7 +48,7 @@ enum CEFRLevelMapping {
         return counts.map { "\($0.value)× \($0.key)" }.joined(separator: ", ")
     }
 
-    /// Havuzda hedef bant yoksa bir alt/üst banta düş — B2+ için B1'e inme.
+    /// Fall back to adjacent band if target missing; never drop B2+ to B1.
     static func substituteBands(for band: String, userLevel: Int) -> [String] {
         let level = normalizedStep(userLevel)
         switch (level, band) {
@@ -64,7 +64,7 @@ enum CEFRLevelMapping {
         }
     }
 
-    /// Kalan slotları doldururken öncelik (yüksek seviye: C2/C1/B2).
+    /// Priority when filling remaining slots (higher bands first).
     static func fallbackBandPriority(for userLevel: Int) -> [String] {
         switch normalizedStep(userLevel) {
         case 11, 10, 9, 8: return ["c2", "c1", "b2", "b1"]
@@ -82,8 +82,8 @@ enum CEFRLevelMapping {
         return actual.count == 3 && actual == expected
     }
 
-    /// Tam eşleşme her zaman kabul; aksi halde yalnız hedef bantlar bu cihazın havuzunda yoksa yedek dağılım kabul.
-    /// Bu sayede havuz hedef bantları üretebildiği halde Firestore'da yanlış dağılım kalmışsa yenilenmeye zorlanır.
+    /// Accept exact match always; otherwise accept fallback only when target bands are absent from the device pool.
+    /// Forces refresh if Firestore has stale distribution while the pool can produce targets.
     static func isAcceptableCEFRDistribution(
         _ words: [Word],
         userLevel: Int,

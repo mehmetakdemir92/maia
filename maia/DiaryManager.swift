@@ -16,7 +16,7 @@ struct Note: Identifiable, Codable, Equatable {
     let id: UUID
     let text: String
     let createdAt: Date
-    /// "Use this example" ile öneri uygulandıysa true; Suggestion butonu bir daha gösterilmez.
+    /// true after applying a suggestion via "Use this example"; hides the Suggestion button.
     var suggestionApplyUsed: Bool
     
     init(id: UUID = UUID(), text: String, createdAt: Date = Date(), suggestionApplyUsed: Bool = false) {
@@ -66,22 +66,22 @@ class DiaryManager: ObservableObject {
         didSet { reconcileCloudSyncBanner() }
     }
 
-    /// Firestore dinleyicisi hata verdiğinde kullanıcıya; başarılı senkron veya `clearCloudSyncUserMessage()` ile temizlenir.
+    /// Shown on Firestore listener error; cleared on successful sync or clearCloudSyncUserMessage().
     @Published private(set) var cloudSyncUserMessage: String?
 
-    /// UI: en az bir diary kelimesi veya notu var mı?
+    /// UI: whether the diary has any words or notes.
     var hasSyncableDiaryContent: Bool {
         diaryHasSyncableContent(entries)
     }
 
-    /// UI: uyarı yalnızca gerçekten diary içeriği varken gösterilir.
+    /// UI: cloud warning is shown only when diary has content.
     var shouldShowCloudSyncBanner: Bool {
         hasSyncableDiaryContent && cloudSyncUserMessage != nil
     }
 
     private let db = Firestore.firestore()
     private var lastObservedAuthUID: String?
-    /// Canlı listener yok; yalnızca tek seferlik okuma/yazma.
+    /// No live listener; one-shot read/write only.
     private var isUploadingToCloud = false
     private var isPullingFromFirestore = false
     private var lastUploadedFingerprint: String?
@@ -90,7 +90,7 @@ class DiaryManager: ObservableObject {
     private static let lastUploadedFingerprintPrefix = "diaryLastUploadedFingerprint."
     private static let diarySchemaVersion = 2
 
-    /// Diary gün sınırları uygulama genelinde İstanbul takvimiyle hizalanır (DiaryView ile aynı).
+    /// Diary day boundaries use the Istanbul calendar app-wide (matches DiaryView).
     private var diaryCalendar: Calendar {
         var cal = Calendar(identifier: .gregorian)
         cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
@@ -224,7 +224,7 @@ class DiaryManager: ObservableObject {
         lastObservedAuthUID = Auth.auth().currentUser?.uid
         setupPronunciationObserver()
         setupAuthListener()
-        // Zaten giriş yapılmışsa auth listener atlanır; WordProgress/StreakManager ile aynı şekilde senkron başlat.
+        // If already signed in, skip auth listener and start sync like WordProgress/StreakManager.
         if let userId = Auth.auth().currentUser?.uid {
             loadPersistedSyncState(userId: userId)
             pullFromFirestoreOnce(userId: userId)
@@ -240,7 +240,7 @@ class DiaryManager: ObservableObject {
     }
 
     private func shouldSurfaceCloudSyncError(_ error: Error, localEntries: [DiaryEntry]) -> Bool {
-        // Hiç kelime/not yoksa bulut uyarısı gösterme (yeni kullanıcı = normal).
+        // Do not show cloud warning when diary is empty (normal for new users).
         guard diaryHasSyncableContent(localEntries) else { return false }
 
         let nsError = error as NSError
@@ -277,7 +277,7 @@ class DiaryManager: ObservableObject {
         }
     }
 
-    /// Bulut telaffuz URL’si üretildiğinde diary kelimelerini günceller.
+    /// Updates diary words when a cloud pronunciation URL is generated.
     func applyPronunciationAudioURL(_ url: String, lemma: String) {
         var changed = false
         for entryIndex in entries.indices {
@@ -305,7 +305,6 @@ class DiaryManager: ObservableObject {
     }
 
     private func setupAuthListener() {
-        // Auth state değiştiğinde sync yap
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let self else { return }
             let uid = user?.uid
@@ -342,7 +341,7 @@ class DiaryManager: ObservableObject {
         }
     }
     
-    /// Otomatik toplu yükleme kapalı (döngü önleme). Buluta yazım: quiz / not.
+    /// Auto bulk upload disabled (loop prevention). Cloud writes: quiz / note only.
     func syncDiaryToCloudIfNeeded() { }
 
     private func cloudContentFingerprint(_ entries: [DiaryEntry]) -> String {
@@ -516,7 +515,7 @@ class DiaryManager: ObservableObject {
         }
     }
 
-    // MARK: - Kelime metadata (phonetic / partOfSpeech)
+    // MARK: - Word metadata (phonetic / partOfSpeech)
 
     private func needsMetadataEnrichment(_ word: Word) -> Bool {
         let phoneticMissing = word.phonetic?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty != false
@@ -642,7 +641,7 @@ class DiaryManager: ObservableObject {
                 }
                 return
             }
-            // Tek gün yazımı tüm diary fingerprint'ini işaretleme — batch tamamlanınca yapılır.
+            // Do not mark full diary fingerprint on single-day write — done when batch completes.
             print("✅ Diary synced: users/\(userId)/diaryEntries/\(documentId) (\(normalized.words.count) words)")
         }
     }
@@ -709,7 +708,7 @@ class DiaryManager: ObservableObject {
         if markSuggestionApplied {
             newSuggestionFlag = true
         } else if trimmedText != oldNote.text {
-            // Öneriyi uyguladıktan sonra kullanıcı cümleyi değiştirdiyse Suggestion tekrar açılsın
+            // Re-show Suggestion if user edits the sentence after applying a suggestion
             newSuggestionFlag = false
         } else {
             newSuggestionFlag = oldNote.suggestionApplyUsed
@@ -795,7 +794,7 @@ class DiaryManager: ObservableObject {
     
     // MARK: - Firestore Methods
 
-    /// Canlı listener yok — tek seferlik okuma (saniye başı snapshot döngüsünü önler).
+    /// No live listener — one-shot read (avoids per-second snapshot loops).
     private func pullFromFirestoreOnce(userId: String) {
         guard !isPullingFromFirestore else { return }
 

@@ -23,14 +23,14 @@ class UserManager: ObservableObject {
     @Published var profileImageURL: String? = nil
     @Published var followers: Int = 0
     @Published var following: Int = 0
-    /// StoreKit aboneliği ve (DEBUG / TestFlight) test anahtarı birleşimi.
+    /// StoreKit subscription combined with DEBUG/TestFlight test override.
     @Published var isPremium: Bool = false
     @Published var userLevel: Int = 1 // 1-11 scale (CEFR + intermediate steps)
     @Published var registrationDate: Date = Date()
     @Published var selectedCategory: VocabularyCategory = .general
     @Published var requiresInitialSetup: Bool = false
 
-    /// App Store aktif abonelik (debug override hariç).
+    /// Active App Store subscription (excluding debug override).
     private(set) var subscriptionEntitlementActive: Bool = false
 
     private var authStateHandle: AuthStateDidChangeListenerHandle?
@@ -304,7 +304,7 @@ class UserManager: ObservableObject {
         pendingNewSignUpUID = nil
     }
 
-    /// DEBUG / TestFlight: mağaza aboneliği olmadan premium davranışını test etmek için.
+    /// DEBUG / TestFlight: test premium behavior without a store subscription.
     func setDebugPremiumOverride(_ value: Bool) {
         guard BuildFeatures.allowsInternalPremiumOverride else { return }
         UserDefaults.standard.set(value, forKey: Self.debugPremiumDefaultsKey)
@@ -523,7 +523,7 @@ class UserManager: ObservableObject {
         UserDefaults.standard.set(!rememberMeEnabled, forKey: Self.signOutOnNextLaunchDefaultsKey)
     }
 
-    // MARK: - Firebase ID Token (Cloud Run için)
+    // MARK: - Firebase ID Token (Cloud Run)
 
     func fetchIDToken(forceRefresh: Bool = false) async throws -> String {
         guard let user = Auth.auth().currentUser else {

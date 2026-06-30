@@ -2,7 +2,7 @@
 //  VocabularyCategory.swift
 //  maia
 //
-//  Premium kelime odağı: General (varsayılan), IELTS/TOEFL, Seyahat, Kariyer.
+// Premium word focus: General (default), IELTS/TOEFL, Travel, Career.
 //
 
 import Foundation

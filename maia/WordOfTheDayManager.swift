@@ -10,7 +10,7 @@ final class WordOfTheDayManager: ObservableObject {
     @Published var errorMessage: String?
 
     private let dailyService = DailyWordsService()
-    /// v3: WordPack tabanlı (AI/Firestore yok). Eski kilitli cache geçersiz.
+    /// v3: WordPack-based (no AI/Firestore). Legacy locked cache is invalid.
     private static let localDayWordsPrefix = "dailyWords.locked.v3."
 
     private var lastLoadedDayISO: String?
@@ -68,7 +68,7 @@ final class WordOfTheDayManager: ObservableObject {
         }
     }
 
-    /// Takvim günü değiştiyse (veya liste boşsa) yeniden yükle.
+    /// Reload when the calendar day changes (or list is empty).
     func reloadIfNewCalendarDay(category: VocabularyCategory = .general, userLevel: Int = 1) {
         let today = Self.calendarDayISO()
         let level = Self.normalizedLevel(userLevel)
@@ -84,7 +84,7 @@ final class WordOfTheDayManager: ObservableObject {
         )
     }
 
-    /// Türkiye gün sınırı (tutarlı yenileme).
+    /// Turkey day boundary (consistent refresh).
     static func calendarDayISO(for date: Date = Date()) -> String {
         var cal = Calendar(identifier: .gregorian)
         cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
@@ -108,7 +108,7 @@ final class WordOfTheDayManager: ObservableObject {
 
         if Task.isCancelled { return }
 
-        // Hard lock: aynı gün + aynı seviye; offline başlangıçta ekran hızlıca görünür.
+        // Hard lock: same day + level; fast offline-first display.
         if !force, !levelChanged,
            let locked = loadLockedWords(for: date, userLevel: level), !locked.isEmpty {
             applyLoadedWords(locked, date: date, userLevel: level)
@@ -164,7 +164,7 @@ final class WordOfTheDayManager: ObservableObject {
         }
     }
 
-    /// Hata metnini kullanıcıya sade gösterir.
+    /// Simplified user-facing error text.
     private static func friendlyLoadError(_ error: Error) -> String {
         if let nsError = error as NSError?,
            nsError.domain == "DailyWordsService",

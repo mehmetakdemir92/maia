@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-/// Ücretsiz kullanıcılar için alt banner (premium’da gizlenir).
+/// Bottom banner for free users (hidden for premium).
 struct FreeUserBannerInset: ViewModifier {
     let placement: String
     @EnvironmentObject private var userManager: UserManager
@@ -45,7 +45,7 @@ extension View {
     }
 }
 
-/// Kelime kartları arasına yerleştirilen banner (Today vb.).
+/// Inline banner between word cards (Today, etc.).
 struct InlineBannerAdRow: View {
     let placement: String
 

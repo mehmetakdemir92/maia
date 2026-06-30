@@ -28,14 +28,14 @@ struct Word: Identifiable, Codable, Equatable {
     let definition: String
     let exampleSentence: String
     let phonetic: String?
-    /// Cloud TTS (Firebase Storage) kalıcı telaffuz URL’si; yoksa ilk dinlemede üretilir.
+    /// Persistent cloud TTS URL; generated on first play if missing.
     let pronunciationAudioURL: String?
-    /// 2. örnek cümle (WordOfTheDayManager'da aynı dosyada düzenlenebilir)
+    /// Second example sentence
     let exampleSentence2: String?
-    /// 3. örnek cümle (WordOfTheDayManager'da aynı dosyada düzenlenebilir)
+    /// Third example sentence
     let exampleSentence3: String?
 
-    // MARK: - Havuz etiketleri (DailyWordPool.txt; kişiselleştirilmiş öğrenme için)
+    // MARK: - Pool tags (DailyWordPool.txt)
     let cefrLevel: String?
     let domainTag: String?
     let partOfSpeech: String?
