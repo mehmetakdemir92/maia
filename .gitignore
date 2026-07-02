@@ -60,3 +60,6 @@ maia/GoogleService-Info.plist
 screenshotsmaia/
 
 planning/
+
+*.tmp_*.db
+.tmp_*
