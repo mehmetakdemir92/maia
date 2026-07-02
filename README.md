@@ -4,7 +4,7 @@ Published iOS vocabulary learning app. Daily words, quizzes, diary, streaks, and
 
 **App Store:** [Maia — Learn Vocab Daily](https://apps.apple.com/app/id6763566092)
 
-**Architecture:** [ARCHITECTURE.md](ARCHITECTURE.md)
+**Architecture:** [ARCHITECTURE.md](ARCHITECTURE.md) · **Case study:** [docs/CASE_STUDY.md](docs/CASE_STUDY.md)
 
 ## Screenshots
 
