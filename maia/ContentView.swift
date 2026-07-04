@@ -12,6 +12,7 @@ import UIKit
 struct ContentView: View {
     @EnvironmentObject private var languageManager: AppLanguageManager
     @StateObject private var userManager = UserManager()
+    @StateObject private var updateChecker = AppUpdateChecker()
 
     var body: some View {
         Group {
@@ -29,6 +30,17 @@ struct ContentView: View {
             }
         }
         .id("\(userManager.isSignedIn)-\(languageManager.refreshID)")
+        .task {
+            await updateChecker.checkOnLaunch()
+        }
+        .alert("Update Available", isPresented: $updateChecker.updateAvailable) {
+            Button("Update Now") {
+                AppUpdateChecker.openAppStore()
+            }
+            Button("Later", role: .cancel) {}
+        } message: {
+            Text("A new version of Maia is available with new daily words and improvements.")
+        }
     }
 }
 

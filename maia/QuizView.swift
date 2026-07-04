@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct QuizView: View {
     let word: Word
@@ -17,6 +18,7 @@ struct QuizView: View {
     @EnvironmentObject var quizEventManager: QuizEventManager
     @StateObject private var quizManager = QuizManager()
     @Environment(\.dismiss) var dismiss
+    @Environment(\.requestReview) private var requestReview
     @State private var showingResult = false
     @State private var canRetry = false
     @State private var showStreakCelebration = false
@@ -297,6 +299,16 @@ struct QuizView: View {
         }
     }
 
+    /// After the streak celebration: the user just succeeded, best moment to ask.
+    /// Apple decides whether the sheet actually appears (max 3/year).
+    private func promptForReviewIfAppropriate() {
+        guard AppReviewPrompter.shouldPrompt(currentStreak: streakManager.currentStreak) else { return }
+        AppReviewPrompter.recordPrompt()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            requestReview()
+        }
+    }
+
     private func presentQuizCompletionAdIfNeeded() {
         guard !userManager.isPremium else { return }
 
@@ -411,6 +423,7 @@ struct QuizView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
                 showStreakCelebration = false
                 dismiss()
+                promptForReviewIfAppropriate()
             }
         } else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
