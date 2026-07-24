@@ -549,6 +549,7 @@
       }
     },
     "App language applies immediately. System follows your device language." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1729,6 +1730,17 @@
         }
       }
     },
+    "Daily words are drawn from this category. Default: General." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük kelimeler bu kategoriden seçilir. Varsayılan: Genel."
+          }
+        }
+      }
+    },
     "Daily words, quizzes, and pronunciation use the learning language. App language applies immediately; System follows your device language." : {
       "localizations" : {
         "de" : {
@@ -1753,17 +1765,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Günlük kelimeler, quizler ve telaffuz öğrenim dilini kullanır. Uygulama dili hemen uygulanır; Sistem seçeneği cihaz dilinizi kullanır."
-          }
-        }
-      }
-    },
-    "Daily words are drawn from this category. Default: General." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Günlük kelimeler bu kategoriden seçilir. Varsayılan: Genel."
           }
         }
       }
