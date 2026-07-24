@@ -456,7 +456,8 @@ private struct WordCardView: View {
             PronounceButton(
                 word: word.word,
                 audioURL: word.pronunciationAudioURL,
-                size: pronounceButtonSide
+                size: pronounceButtonSide,
+                languageCode: word.languageCode
             )
         }
     }

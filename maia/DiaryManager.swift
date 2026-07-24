@@ -533,7 +533,7 @@ class DiaryManager: ObservableObject {
 
         let dayKey = diaryDayKey(for: date)
         let packEntry = await MainActor.run {
-            WordPackStore.shared.entries(for: dayKey)
+            WordPackStore.shared.entries(for: dayKey, language: word.learningLanguage)
                 .first { $0.word.lowercased() == word.word.lowercased() }
         }
 
@@ -547,10 +547,10 @@ class DiaryManager: ObservableObject {
         }
 
         if phonetic == nil {
-            phonetic = PhoneticLookup.cachedIPA(for: word.word)
+            phonetic = PhoneticLookup.cachedIPA(for: word.word, language: word.learningLanguage)
         }
         if phonetic == nil {
-            phonetic = await PhoneticLookup.ipa(for: word.word)
+            phonetic = await PhoneticLookup.ipa(for: word.word, language: word.learningLanguage)
         }
 
         if phonetic == word.phonetic && partOfSpeech == word.partOfSpeech {
@@ -570,7 +570,8 @@ class DiaryManager: ObservableObject {
             domainTag: word.domainTag,
             partOfSpeech: partOfSpeech ?? word.partOfSpeech,
             registerTag: word.registerTag,
-            frequencyBand: word.frequencyBand
+            frequencyBand: word.frequencyBand,
+            languageCode: word.languageCode
         )
     }
 
@@ -958,6 +959,7 @@ class DiaryManager: ObservableObject {
         if let pos = word.partOfSpeech { data["partOfSpeech"] = pos }
         if let r = word.registerTag { data["registerTag"] = r }
         if let f = word.frequencyBand { data["frequencyBand"] = f }
+        if let l = word.languageCode { data["languageCode"] = l }
         return data
     }
     
@@ -996,7 +998,8 @@ class DiaryManager: ObservableObject {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
             registerTag: registerTag,
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            languageCode: data["languageCode"] as? String
         )
     }
 }

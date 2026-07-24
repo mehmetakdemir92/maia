@@ -12,7 +12,7 @@ High-level overview of the **Maia** iOS app and its backend. For setup, see [REA
 | **Server** | Firebase Cloud Functions (Node.js), Cloud Run (FastAPI + Gemini) |
 | **AI** | Google Gemini (diary correction, optional example generation) |
 | **Audio** | Cloud TTS → Firebase Storage → local MP3 cache |
-| **Content** | Bundled `WordPacks/{yyyy-MM}.json` (curated daily words + quizzes) |
+| **Content** | Bundled `WordPacks/{yyyy-MM}.json` (English) and `WordPacks/{yyyy-MM}.de.json` (German) — curated daily words + quizzes |
 | **Hosting** | Firebase Hosting (privacy, support, auth redirect pages) |
 
 ## System diagram
@@ -82,10 +82,16 @@ State is held in `ObservableObject` managers injected via `.environmentObject` f
 
 1. Calendar day is computed in **Europe/Istanbul** timezone.
 2. `WordOfTheDayManager` calls `DailyWordsService.ensureDailyWords`.
-3. Words are read from **`maia/WordPacks/{yyyy-MM}.json`** — definitions, examples, and quiz items are pre-authored in JSON.
+3. Words are read from **`maia/WordPacks/{yyyy-MM}.json`** (or `{yyyy-MM}.de.json` when the learning language is German) — definitions, examples, and quiz items are pre-authored in JSON.
 4. `CEFRLevelMapping` picks **3 words** per day from 12 curated candidates based on the user’s level (1–11).
-5. Selected words are **locked in UserDefaults** for the day (offline-first).
-6. `WordPronunciationService` prefetches TTS audio via a Firebase callable; MP3s are cached locally.
+5. Selected words are **locked in UserDefaults** for the day (offline-first), keyed per level and learning language.
+6. `WordPronunciationService` prefetches TTS audio via a Firebase callable (per-language voice); MP3s are cached locally.
+
+### Learning language
+
+- `LearningLanguage` / `LearningLanguageManager` hold the target language (English default, German optional; Settings → “I’m learning”).
+- Word packs, quiz content, TTS voice, and AI prompts (diary correction, example generation) follow the selected language; `Word.languageCode` keeps mixed-language diary entries consistent.
+- German content is authored in `scripts/data/wordpool-de/{a1..c2}.json` and distributed into monthly packs via `node scripts/generate-monthly-pack.js YYYY-MM --lang de`.
 
 > Legacy Firestore `dailyWords` scheduling still exists in `functions/` but the shipped app uses bundled WordPacks.
 

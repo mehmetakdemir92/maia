@@ -24,19 +24,25 @@ enum PhoneticLookup {
         }
     }
 
-    static func cachedIPA(for word: String) -> String? {
-        let key = word.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        guard !key.isEmpty else { return nil }
+    /// English keeps plain keys (legacy cache); other languages are namespaced.
+    private static func cacheKey(for word: String, language: LearningLanguage) -> String? {
+        let lowered = word.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        guard !lowered.isEmpty else { return nil }
+        return language == .english ? lowered : "\(language.code)|\(lowered)"
+    }
+
+    static func cachedIPA(for word: String, language: LearningLanguage = .current) -> String? {
+        guard let key = cacheKey(for: word, language: language) else { return nil }
         return cache[key]
     }
 
-    static func ipa(for word: String) async -> String? {
-        let key = word.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-        guard !key.isEmpty else { return nil }
+    static func ipa(for word: String, language: LearningLanguage = .current) async -> String? {
+        guard let key = cacheKey(for: word, language: language) else { return nil }
         if let cached = cache[key], !cached.isEmpty { return cached }
 
-        guard let encoded = key.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
-              let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(encoded)") else {
+        let lowered = word.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        guard let encoded = lowered.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
+              let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/\(language.code)/\(encoded)") else {
             return nil
         }
 

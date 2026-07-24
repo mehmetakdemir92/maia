@@ -19,6 +19,7 @@ Published iOS vocabulary learning app. Daily words, quizzes, diary, streaks, and
 ## Features
 
 - CEFR-level daily vocabulary (offline word packs)
+- Two learning languages: English and German (Settings → I'm learning)
 - Quiz engine with spaced practice
 - Vocabulary diary with AI sentence correction (Firebase + Gemini)
 - Streak tracking and profile stats

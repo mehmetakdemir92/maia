@@ -42,6 +42,13 @@ struct Word: Identifiable, Codable, Equatable {
     let registerTag: String?
     let frequencyBand: Int?
 
+    /// ISO 639-1 learning-language code ("en", "de"). nil = legacy English data.
+    let languageCode: String?
+
+    var learningLanguage: LearningLanguage {
+        LearningLanguage.fromCode(languageCode)
+    }
+
     init(
         id: UUID = UUID(),
         word: String,
@@ -55,7 +62,8 @@ struct Word: Identifiable, Codable, Equatable {
         domainTag: String? = nil,
         partOfSpeech: String? = nil,
         registerTag: String? = nil,
-        frequencyBand: Int? = nil
+        frequencyBand: Int? = nil,
+        languageCode: String? = nil
     ) {
         self.id = id
         self.word = word
@@ -70,6 +78,7 @@ struct Word: Identifiable, Codable, Equatable {
         self.partOfSpeech = partOfSpeech
         self.registerTag = registerTag
         self.frequencyBand = frequencyBand
+        self.languageCode = languageCode
     }
 
     func withExampleSentence(_ sentence: String) -> Word {
@@ -86,7 +95,8 @@ struct Word: Identifiable, Codable, Equatable {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
             registerTag: registerTag,
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            languageCode: languageCode
         )
     }
 
@@ -104,7 +114,8 @@ struct Word: Identifiable, Codable, Equatable {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
             registerTag: registerTag,
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            languageCode: languageCode
         )
     }
 }

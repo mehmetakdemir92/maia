@@ -1729,6 +1729,34 @@
         }
       }
     },
+    "Daily words, quizzes, and pronunciation use the learning language. App language applies immediately; System follows your device language." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tägliche Wörter, Quizze und Aussprache verwenden die Lernsprache. Die App-Sprache wird sofort angewendet; System folgt der Sprache Ihres Geräts."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las palabras diarias, los quizzes y la pronunciación usan el idioma de aprendizaje. El idioma de la app se aplica inmediatamente; Sistema sigue el idioma de tu dispositivo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les mots quotidiens, les quiz et la prononciation utilisent la langue d'apprentissage. La langue de l'app s'applique immédiatement ; Système suit la langue de votre appareil."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük kelimeler, quizler ve telaffuz öğrenim dilini kullanır. Uygulama dili hemen uygulanır; Sistem seçeneği cihaz dilinizi kullanır."
+          }
+        }
+      }
+    },
     "Daily words are drawn from this category. Default: General." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2750,6 +2778,34 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Doğruladım — devam et"
+          }
+        }
+      }
+    },
+    "I'm learning" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich lerne"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estoy aprendiendo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "J'apprends"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öğrendiğim dil"
           }
         }
       }

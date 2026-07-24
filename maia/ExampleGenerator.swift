@@ -26,6 +26,7 @@ final class ExampleGenerator {
         avoidingSentences: [String],
         useAlternateModel: Bool = false
     ) async throws -> String {
+        let languageName = word.learningLanguage.promptName
         let avoid = avoidingSentences
             .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
             .filter { !$0.isEmpty }
@@ -52,7 +53,7 @@ final class ExampleGenerator {
         }
 
         let prompt = """
-        Create ONE short, natural English sentence using the exact word "\(word.word)".
+        Create ONE short, natural \(languageName) sentence using the exact word "\(word.word)".
 
         Meaning (for context):
         \(word.definition)
@@ -60,6 +61,7 @@ final class ExampleGenerator {
 
         Rules:
         - Output ONLY the sentence (no quotes, no explanation).
+        - The sentence must be written in \(languageName).
         - 8–14 words.
         - The sentence must feel fresh compared to any listed existing examples.
 
@@ -94,8 +96,9 @@ final class ExampleGenerator {
                           userInfo: [NSLocalizedDescriptionKey: "Empty sentence"])
         }
 
+        let languageName = word.learningLanguage.promptName
         let prompt = """
-        The student wrote a sentence using the word "\(word.word)".
+        The student is learning \(languageName) and wrote a \(languageName) sentence using the word "\(word.word)".
 
         Word meaning (context):
         \(word.definition)
@@ -103,9 +106,9 @@ final class ExampleGenerator {
         Student's sentence:
         \(trimmed)
 
-        Improve this sentence with MINIMAL changes only: fix grammar and spelling where needed; choose natural, efficient English where a small wording change clearly helps. Keep the same meaning and intent; do not replace it with a completely different idea or a brand-new sentence from scratch.
+        Improve this sentence with MINIMAL changes only: fix grammar and spelling where needed; choose natural, efficient \(languageName) where a small wording change clearly helps. Keep the same meaning and intent; do not replace it with a completely different idea or a brand-new sentence from scratch.
 
-        Reply with ONLY the improved single sentence. No quotes, no explanation, no markdown.
+        Reply with ONLY the improved single sentence in \(languageName). No quotes, no explanation, no markdown.
         """
 
         return try await postGenerate(prompt: prompt, useAlternateModel: false)

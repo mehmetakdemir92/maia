@@ -52,7 +52,7 @@ struct QuizView: View {
                         }
                     }
                     Spacer()
-                    PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 44)
+                    PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 44, languageCode: word.languageCode)
                 }
                 .padding(.horizontal)
 

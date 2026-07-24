@@ -331,7 +331,7 @@ struct WordRowView: View {
             
             Spacer()
 
-            PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 40)
+            PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 40, languageCode: word.languageCode)
                 .padding(.trailing, 4)
 
             Image(systemName: isExpanded ? "chevron.down" : "chevron.right")

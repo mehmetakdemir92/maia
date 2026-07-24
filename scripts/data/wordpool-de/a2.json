@@ -1,0 +1,482 @@
+[
+  {
+    "word": "Bahnhof",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈbaːnhoːf/",
+    "partOfSpeech": "noun",
+    "domainTag": "travel",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Ein Ort, an dem Züge ankommen und abfahren.",
+    "examples": [
+      "Der Bahnhof liegt direkt im Zentrum der Stadt.",
+      "Wir treffen uns um sieben Uhr am Bahnhof.",
+      "Vom Bahnhof aus sind es nur fünf Minuten zu Fuß."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Bahnhof“?", "options": ["Ein Ort, an dem Züge ankommen und abfahren.", "Ein Gebäude, in dem man Bücher ausleihen kann.", "Ein Geschäft, in dem man Medikamente bekommt.", "Ein Platz, auf dem Kinder Fußball spielen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der _____ liegt direkt im Zentrum der Stadt.", "options": ["Bahnhof", "Kühlschrank", "Teppich", "Spiegel"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir treffen uns um sieben Uhr am _____.", "options": ["Bahnhof", "Löffel", "Himmel", "Kissen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Termin",
+    "cefrLevel": "a2",
+    "phonetic": "/tɛʁˈmiːn/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Eine feste Zeit für ein Treffen, zum Beispiel beim Arzt.",
+    "examples": [
+      "Ich habe morgen einen Termin beim Zahnarzt.",
+      "Können wir den Termin auf Freitag verschieben?",
+      "Sie kam pünktlich zu ihrem Termin bei der Bank."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Termin“?", "options": ["Eine feste Zeit für ein Treffen, zum Beispiel beim Arzt.", "Ein langer Spaziergang durch den Wald.", "Eine Liste mit Lebensmitteln für den Einkauf.", "Ein Fest mit Musik und vielen Gästen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich habe morgen einen _____ beim Zahnarzt.", "options": ["Termin", "Kuchen", "Koffer", "Regenschirm"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Können wir den _____ auf Freitag verschieben?", "options": ["Termin", "Vogel", "Pullover", "Garten"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Rechnung",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈʁɛçnʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Ein Papier, auf dem steht, wie viel man bezahlen muss.",
+    "examples": [
+      "Die Rechnung für das Essen war günstiger als gedacht.",
+      "Können Sie mir bitte die Rechnung bringen?",
+      "Er bezahlt die Rechnung immer sofort online."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Rechnung“?", "options": ["Ein Papier, auf dem steht, wie viel man bezahlen muss.", "Ein Heft, in das Schüler ihre Hausaufgaben schreiben.", "Eine Karte, die den Weg durch die Stadt zeigt.", "Ein Brief, den man an gute Freunde schickt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ für das Essen war günstiger als gedacht.", "options": ["Rechnung", "Wolke", "Treppe", "Gitarre"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Können Sie mir bitte die _____ bringen?", "options": ["Rechnung", "Sonne", "Brücke", "Wiese"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Urlaub",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈuːɐ̯laʊp/",
+    "partOfSpeech": "noun",
+    "domainTag": "travel",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Freie Tage, an denen man nicht arbeitet und oft verreist.",
+    "examples": [
+      "Wir machen dieses Jahr Urlaub am Meer.",
+      "Im Urlaub möchte ich viel lesen und schwimmen.",
+      "Er hat noch zehn Tage Urlaub übrig."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Urlaub“?", "options": ["Freie Tage, an denen man nicht arbeitet und oft verreist.", "Ein kurzes Gespräch mit den Kollegen im Büro.", "Eine Prüfung am Ende des Schuljahres.", "Ein Zimmer, in dem man Werkzeug aufbewahrt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir machen dieses Jahr _____ am Meer.", "options": ["Urlaub", "Lärm", "Staub", "Nebel"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er hat noch zehn Tage _____ übrig.", "options": ["Urlaub", "Salat", "Schnee", "Unterricht"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Wetter",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈvɛtɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Sonne, Regen, Wind und Temperatur an einem Ort.",
+    "examples": [
+      "Das Wetter soll am Wochenende sonnig werden.",
+      "Bei schlechtem Wetter bleiben wir lieber zu Hause.",
+      "Wie ist das Wetter bei euch im Norden?"
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Wetter“?", "options": ["Sonne, Regen, Wind und Temperatur an einem Ort.", "Die Zeit zwischen Frühstück und Mittagessen.", "Eine Nachricht, die man am Telefon hinterlässt.", "Der Preis für eine Fahrt mit dem Bus."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das _____ soll am Wochenende sonnig werden.", "options": ["Wetter", "Sofa", "Gemüse", "Klavier"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wie ist das _____ bei euch im Norden?", "options": ["Wetter", "Frühstück", "Fahrrad", "Geschirr"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Gesundheit",
+    "cefrLevel": "a2",
+    "phonetic": "/ɡəˈzʊnthaɪt/",
+    "partOfSpeech": "noun",
+    "domainTag": "health",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Der Zustand, in dem der Körper fit ist und nichts wehtut.",
+    "examples": [
+      "Viel Schlaf ist gut für die Gesundheit.",
+      "Er achtet wegen seiner Gesundheit auf gesundes Essen.",
+      "Rauchen schadet der Gesundheit sehr."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Gesundheit“?", "options": ["Der Zustand, in dem der Körper fit ist und nichts wehtut.", "Ein Kurs, in dem man eine neue Sprache lernt.", "Das Geld, das man am Ende des Monats bekommt.", "Eine Reise in ein weit entferntes Land."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Viel Schlaf ist gut für die _____.", "options": ["Gesundheit", "Tastatur", "Mauer", "Kreide"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Rauchen schadet der _____ sehr.", "options": ["Gesundheit", "Straßenbahn", "Zeitung", "Schokolade"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Nachbar",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈnaxbaːɐ̯/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Eine Person, die direkt neben einem wohnt.",
+    "examples": [
+      "Unser Nachbar gießt im Urlaub unsere Blumen.",
+      "Der neue Nachbar hat sich gestern vorgestellt.",
+      "Ich habe mit dem netten Nachbarn über den Zaun gesprochen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Nachbar“?", "options": ["Eine Person, die direkt neben einem wohnt.", "Ein Mitarbeiter in einem großen Kaufhaus.", "Ein Kind, das noch in den Kindergarten geht.", "Ein Fahrer, der Pakete zu den Häusern bringt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Unser _____ gießt im Urlaub unsere Blumen.", "options": ["Nachbar", "Drucker", "Spiegel", "Kalender"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der neue _____ hat sich gestern vorgestellt.", "options": ["Nachbar", "Teller", "Schrank", "Bleistift"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Geschenk",
+    "cefrLevel": "a2",
+    "phonetic": "/ɡəˈʃɛŋk/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Etwas, das man einer Person gibt, ohne Geld dafür zu wollen.",
+    "examples": [
+      "Das Geschenk für Oma liegt schon im Schrank.",
+      "Er sucht noch ein passendes Geschenk zum Geburtstag.",
+      "Über dieses Geschenk hat sie sich sehr gefreut."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Geschenk“?", "options": ["Etwas, das man einer Person gibt, ohne Geld dafür zu wollen.", "Etwas, das man in einem Laden nur ansieht.", "Eine Arbeit, die man am Wochenende erledigt.", "Ein Fehler, den man schnell korrigieren muss."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das _____ für Oma liegt schon im Schrank.", "options": ["Geschenk", "Gewitter", "Gebäude", "Getränk"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er sucht noch ein passendes _____ zum Geburtstag.", "options": ["Geschenk", "Gespräch", "Gericht", "Gepäck"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Erfahrung",
+    "cefrLevel": "a2",
+    "phonetic": "/ɛɐ̯ˈfaːʁʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Wissen, das man durch Erlebnisse und Übung bekommt.",
+    "examples": [
+      "Sie hat viel Erfahrung mit kleinen Kindern.",
+      "Diese Reise war eine schöne Erfahrung für uns.",
+      "Für den Job braucht man Erfahrung am Computer."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Erfahrung“?", "options": ["Wissen, das man durch Erlebnisse und Übung bekommt.", "Eine Pause, die man am Nachmittag macht.", "Ein Gerät, mit dem man die Wohnung putzt.", "Eine Zahl, die man schnell vergisst."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie hat viel _____ mit kleinen Kindern.", "options": ["Erfahrung", "Marmelade", "Kleidung", "Musik"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Für den Job braucht man _____ am Computer.", "options": ["Erfahrung", "Butter", "Farbe", "Wolle"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Prüfung",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈpʁyːfʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "education",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Ein Test, bei dem man zeigt, was man gelernt hat.",
+    "examples": [
+      "Die Prüfung am Montag dauert zwei Stunden.",
+      "Er lernt jeden Abend für die Prüfung.",
+      "Sie hat die Prüfung mit einer guten Note bestanden."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Prüfung“?", "options": ["Ein Test, bei dem man zeigt, was man gelernt hat.", "Eine Feier am letzten Tag des Monats.", "Ein Ausflug mit der ganzen Klasse.", "Ein Formular für einen neuen Ausweis."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ am Montag dauert zwei Stunden.", "options": ["Prüfung", "Heizung", "Wohnung", "Kreuzung"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er lernt jeden Abend für die _____.", "options": ["Prüfung", "Sammlung", "Werkstatt", "Mahlzeit"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "bestellen",
+    "cefrLevel": "a2",
+    "phonetic": "/bəˈʃtɛlən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Sagen oder schreiben, dass man etwas kaufen oder haben möchte.",
+    "examples": [
+      "Ich möchte eine Suppe und einen Salat bestellen.",
+      "Wir bestellen die Bücher meistens im Internet.",
+      "Hast du das Taxi schon bestellt?"
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „bestellen“?", "options": ["Sagen oder schreiben, dass man etwas kaufen oder haben möchte.", "Etwas Kaputtes wieder ganz machen.", "Eine Wohnung gründlich sauber machen.", "Ein Lied auf einem Instrument spielen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich möchte eine Suppe und einen Salat _____.", "options": ["bestellen", "vergessen", "waschen", "erklären"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir _____ die Bücher meistens im Internet.", "options": ["bestellen", "gießen", "backen", "wecken"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "erklären",
+    "cefrLevel": "a2",
+    "phonetic": "/ɛɐ̯ˈklɛːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Etwas so beschreiben, dass eine andere Person es versteht.",
+    "examples": [
+      "Kannst du mir diese Aufgabe bitte erklären?",
+      "Die Lehrerin kann Grammatik sehr gut erklären.",
+      "Er wollte mir den Weg zum Museum erklären."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „erklären“?", "options": ["Etwas so beschreiben, dass eine andere Person es versteht.", "Etwas in kleine Stücke schneiden.", "Eine Tür mit dem Schlüssel öffnen.", "Ein Paket zur Post bringen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Kannst du mir diese Aufgabe bitte _____?", "options": ["erklären", "trinken", "anziehen", "verlieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Lehrerin kann Grammatik sehr gut _____.", "options": ["erklären", "kochen", "tragen", "parken"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "vergessen",
+    "cefrLevel": "a2",
+    "phonetic": "/fɛɐ̯ˈɡɛsn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Etwas nicht mehr im Kopf haben; sich nicht mehr erinnern.",
+    "examples": [
+      "Ich habe leider deinen Geburtstag vergessen.",
+      "Vergessen Sie bitte Ihren Regenschirm nicht!",
+      "Er darf den Termin morgen nicht vergessen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „vergessen“?", "options": ["Etwas nicht mehr im Kopf haben; sich nicht mehr erinnern.", "Etwas sehr laut und deutlich sagen.", "Eine Person freundlich begrüßen.", "Ein Bild an die Wand hängen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich habe leider deinen Geburtstag _____.", "options": ["vergessen", "gewaschen", "geöffnet", "bezahlt"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er darf den Termin morgen nicht _____.", "options": ["vergessen", "schwimmen", "putzen", "landen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "besuchen",
+    "cefrLevel": "a2",
+    "phonetic": "/bəˈzuːxn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Zu einer Person oder einem Ort gehen, um dort Zeit zu verbringen.",
+    "examples": [
+      "Wir besuchen am Sonntag meine Großeltern.",
+      "Möchtest du mit mir das neue Museum besuchen?",
+      "Sie will ihre Freundin im Krankenhaus besuchen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „besuchen“?", "options": ["Zu einer Person oder einem Ort gehen, um dort Zeit zu verbringen.", "Etwas Schweres in den Keller tragen.", "Eine lange Liste laut vorlesen.", "Geld auf ein Konto bei der Bank bringen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir _____ am Sonntag meine Großeltern.", "options": ["besuchen", "verkaufen", "schneiden", "wiegen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie will ihre Freundin im Krankenhaus _____.", "options": ["besuchen", "bestellen", "gießen", "rechnen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gewinnen",
+    "cefrLevel": "a2",
+    "phonetic": "/ɡəˈvɪnən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "In einem Spiel oder Wettbewerb besser sein als die anderen.",
+    "examples": [
+      "Unsere Mannschaft will das Spiel am Samstag gewinnen.",
+      "Beim Quiz kann man heute Kinokarten gewinnen.",
+      "Sie hat im Schach gegen ihren Vater gewonnen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gewinnen“?", "options": ["In einem Spiel oder Wettbewerb besser sein als die anderen.", "Ein Zimmer mit neuen Möbeln einrichten.", "Nach einer langen Reise nach Hause kommen.", "Einen Text in eine andere Sprache übersetzen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Unsere Mannschaft will das Spiel am Samstag _____.", "options": ["gewinnen", "vergessen", "kämmen", "buchen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Beim Quiz kann man heute Kinokarten _____.", "options": ["gewinnen", "erklären", "duschen", "wandern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "verkaufen",
+    "cefrLevel": "a2",
+    "phonetic": "/fɛɐ̯ˈkaʊfn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Einer Person etwas geben und dafür Geld bekommen.",
+    "examples": [
+      "Sie möchte ihr altes Fahrrad verkaufen.",
+      "Auf dem Markt verkaufen die Bauern frisches Gemüse.",
+      "Er hat sein Auto an einen Kollegen verkauft."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „verkaufen“?", "options": ["Einer Person etwas geben und dafür Geld bekommen.", "Etwas leihen und später wieder zurückgeben.", "Etwas in einer Schublade verstecken.", "Etwas mit der Post an Freunde schicken."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie möchte ihr altes Fahrrad _____.", "options": ["verkaufen", "besuchen", "anrufen", "abholen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Auf dem Markt _____ die Bauern frisches Gemüse.", "options": ["verkaufen", "gewinnen", "streichen", "üben"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "bezahlen",
+    "cefrLevel": "a2",
+    "phonetic": "/bəˈtsaːlən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Geld für eine Ware oder eine Leistung geben.",
+    "examples": [
+      "Kann ich hier mit Karte bezahlen?",
+      "Wir bezahlen die Miete am Anfang des Monats.",
+      "Er musste für die Reparatur viel bezahlen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „bezahlen“?", "options": ["Geld für eine Ware oder eine Leistung geben.", "Eine Frage im Unterricht beantworten.", "Ein Zimmer für Gäste vorbereiten.", "Nach der Arbeit einkaufen gehen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Kann ich hier mit Karte _____?", "options": ["bezahlen", "erklären", "schlafen", "singen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir _____ die Miete am Anfang des Monats.", "options": ["bezahlen", "besuchen", "hören", "fangen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "müde",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈmyːdə/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "So, dass man schlafen möchte und wenig Energie hat.",
+    "examples": [
+      "Nach der langen Fahrt war ich sehr müde.",
+      "Die Kinder sind abends oft früh müde.",
+      "Er sieht heute müde aus, weil er wenig geschlafen hat."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „müde“?", "options": ["So, dass man schlafen möchte und wenig Energie hat.", "So, dass man sehr großen Hunger hat.", "So, dass man vor Freude laut lacht.", "So, dass man schnell und gern arbeitet."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Nach der langen Fahrt war ich sehr _____.", "options": ["müde", "billig", "eckig", "leer"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Kinder sind abends oft früh _____.", "options": ["müde", "teuer", "rund", "offen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "billig",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈbɪlɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "So, dass etwas wenig Geld kostet; nicht teuer.",
+    "examples": [
+      "Das Hotel war billig und trotzdem sehr sauber.",
+      "Obst ist auf dem Markt oft billig.",
+      "Er sucht ein billig gebrauchtes Auto."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „billig“?", "options": ["So, dass etwas wenig Geld kostet; nicht teuer.", "So, dass etwas sehr gut riecht.", "So, dass etwas schwer zu finden ist.", "So, dass etwas lange dauert."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Hotel war _____ und trotzdem sehr sauber.", "options": ["billig", "müde", "laut", "dunkel"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Obst ist auf dem Markt oft _____.", "options": ["billig", "durstig", "traurig", "nass"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gefährlich",
+    "cefrLevel": "a2",
+    "phonetic": "/ɡəˈfɛːɐ̯lɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "So, dass etwas Schlimmes passieren kann; nicht sicher.",
+    "examples": [
+      "Diese Kreuzung ist für Radfahrer gefährlich.",
+      "Bei Gewitter ist Schwimmen im See gefährlich.",
+      "Das Spiel auf der Straße ist zu gefährlich."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gefährlich“?", "options": ["So, dass etwas Schlimmes passieren kann; nicht sicher.", "So, dass etwas viel Spaß und Freude macht.", "So, dass etwas ganz einfach zu lernen ist.", "So, dass etwas sehr schön aussieht."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Diese Kreuzung ist für Radfahrer _____.", "options": ["gefährlich", "gemütlich", "freundlich", "pünktlich"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Bei Gewitter ist Schwimmen im See _____.", "options": ["gefährlich", "billig", "höflich", "sportlich"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "wichtig",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈvɪçtɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "So, dass etwas eine große Bedeutung hat.",
+    "examples": [
+      "Frühstück ist für mich sehr wichtig.",
+      "Es ist wichtig, jeden Tag ein bisschen zu üben.",
+      "Der Chef hat heute einen wichtig aussehenden Brief bekommen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „wichtig“?", "options": ["So, dass etwas eine große Bedeutung hat.", "So, dass etwas kaum Geld kostet.", "So, dass etwas sehr weit entfernt ist.", "So, dass etwas leicht zu tragen ist."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Frühstück ist für mich sehr _____.", "options": ["wichtig", "gefährlich", "nass", "eckig"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Es ist _____, jeden Tag ein bisschen zu üben.", "options": ["wichtig", "billig", "dunkel", "salzig"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "zufrieden",
+    "cefrLevel": "a2",
+    "phonetic": "/tsuˈfʁiːdn̩/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "So, dass man mit einer Sache glücklich ist und nichts vermisst.",
+    "examples": [
+      "Ich bin mit meiner neuen Wohnung sehr zufrieden.",
+      "Die Lehrerin war mit unserer Arbeit zufrieden.",
+      "Bist du zufrieden mit dem Ergebnis des Tests?"
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „zufrieden“?", "options": ["So, dass man mit einer Sache glücklich ist und nichts vermisst.", "So, dass man große Angst vor etwas hat.", "So, dass man sich über etwas sehr ärgert.", "So, dass man etwas überhaupt nicht versteht."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich bin mit meiner neuen Wohnung sehr _____.", "options": ["zufrieden", "gefährlich", "teuer", "kalt"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Lehrerin war mit unserer Arbeit _____.", "options": ["zufrieden", "müde", "rund", "leer"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "leider",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈlaɪdɐ/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Ein Wort, das zeigt, dass man etwas schade findet.",
+    "examples": [
+      "Ich kann leider nicht zu deiner Party kommen.",
+      "Das Konzert ist leider schon ausverkauft.",
+      "Leider hat es im Urlaub oft geregnet."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „leider“?", "options": ["Ein Wort, das zeigt, dass man etwas schade findet.", "Ein Wort, das zeigt, dass man sich sehr freut.", "Ein Wort, das eine Frage höflicher macht.", "Ein Wort, das einen Ort genauer beschreibt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich kann _____ nicht zu deiner Party kommen.", "options": ["leider", "oben", "links", "draußen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Konzert ist _____ schon ausverkauft.", "options": ["leider", "dort", "hinten", "unten"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gestern",
+    "cefrLevel": "a2",
+    "phonetic": "/ˈɡɛstɐn/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "An dem Tag, der vor dem heutigen Tag war.",
+    "examples": [
+      "Ich habe gestern lange mit meiner Schwester telefoniert.",
+      "Gestern war das Wetter besser als heute.",
+      "Wir sind gestern erst spät nach Hause gekommen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gestern“?", "options": ["An dem Tag, der vor dem heutigen Tag war.", "An dem Tag, der nach dem heutigen Tag kommt.", "In genau einer Woche am gleichen Tag.", "Am frühen Morgen des heutigen Tages."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich habe _____ lange mit meiner Schwester telefoniert.", "options": ["gestern", "dort", "gern", "oben"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: _____ war das Wetter besser als heute.", "options": ["Gestern", "Draußen", "Rechts", "Unten"], "correctAnswerIndex": 0 }
+    ]
+  }
+]

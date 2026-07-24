@@ -1,0 +1,482 @@
+[
+  {
+    "word": "Auseinandersetzung",
+    "cefrLevel": "c1",
+    "phonetic": "/aʊsʔaɪˈnandɐzɛtsʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Ein Streit oder eine intensive Beschäftigung mit einem Thema.",
+    "examples": [
+      "Die Auseinandersetzung zwischen den Parteien wurde immer schärfer.",
+      "Seine kritische Auseinandersetzung mit dem Roman überzeugte die Jury.",
+      "Nach einer kurzen Auseinandersetzung einigten sich die Nachbarn."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Auseinandersetzung“?", "options": ["Ein Streit oder eine intensive Beschäftigung mit einem Thema.", "Eine feierliche Eröffnung eines neuen Gebäudes.", "Die schriftliche Bestätigung einer Buchung.", "Eine Sammlung von Rezepten aus einer Region."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ zwischen den Parteien wurde immer schärfer.", "options": ["Auseinandersetzung", "Aufmerksamkeit", "Ausstattung", "Anerkennung"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Seine kritische _____ mit dem Roman überzeugte die Jury.", "options": ["Auseinandersetzung", "Überraschung", "Beschäftigung", "Bestätigung"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Wahrnehmung",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈvaːɐ̯neːmʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Die Art, wie man etwas mit den Sinnen oder dem Verstand erfasst.",
+    "examples": [
+      "Die Wahrnehmung von Farben ist von Mensch zu Mensch verschieden.",
+      "Stress verändert unsere Wahrnehmung der Zeit erheblich.",
+      "In der öffentlichen Wahrnehmung gilt die Stadt als sicher."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Wahrnehmung“?", "options": ["Die Art, wie man etwas mit den Sinnen oder dem Verstand erfasst.", "Die offizielle Genehmigung für einen Umbau.", "Eine Zahlung an eine wohltätige Organisation.", "Das Ergebnis einer sportlichen Begegnung."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ von Farben ist von Mensch zu Mensch verschieden.", "options": ["Wahrnehmung", "Verabredung", "Verzögerung", "Wanderung"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Stress verändert unsere _____ der Zeit erheblich.", "options": ["Wahrnehmung", "Bewerbung", "Erwartung", "Begegnung"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Erkenntnis",
+    "cefrLevel": "c1",
+    "phonetic": "/ɛɐ̯ˈkɛntnɪs/",
+    "partOfSpeech": "noun",
+    "domainTag": "education",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Ein neues Wissen, das man durch Nachdenken oder Forschung gewinnt.",
+    "examples": [
+      "Die Erkenntnis kam spät, aber sie veränderte alles.",
+      "Neue wissenschaftliche Erkenntnisse stellen die Theorie infrage.",
+      "Er gelangte zu der Erkenntnis, dass Geld allein nicht glücklich macht."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Erkenntnis“?", "options": ["Ein neues Wissen, das man durch Nachdenken oder Forschung gewinnt.", "Eine Urkunde für besondere sportliche Leistungen.", "Die Erlaubnis, ein Fahrzeug zu führen.", "Eine Einladung zu einer Fachkonferenz."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ kam spät, aber sie veränderte alles.", "options": ["Erkenntnis", "Erlaubnis", "Ergebnis", "Erlebnis"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er gelangte zu der _____, dass Geld allein nicht glücklich macht.", "options": ["Erkenntnis", "Kenntnis", "Besorgnis", "Finsternis"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Bereitschaft",
+    "cefrLevel": "c1",
+    "phonetic": "/bəˈʁaɪtʃaft/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Der Wille, etwas Bestimmtes zu tun oder zu akzeptieren.",
+    "examples": [
+      "Ihre Bereitschaft zu Kompromissen machte die Einigung möglich.",
+      "Ohne die Bereitschaft zu lernen bleibt jedes Talent ungenutzt.",
+      "Die Bereitschaft der Bürger zu spenden war beeindruckend."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Bereitschaft“?", "options": ["Der Wille, etwas Bestimmtes zu tun oder zu akzeptieren.", "Eine Gruppe von Fachleuten in einem Gremium.", "Die Ausrüstung für eine längere Bergtour.", "Ein Zeitraum zwischen zwei Sitzungen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ihre _____ zu Kompromissen machte die Einigung möglich.", "options": ["Bereitschaft", "Botschaft", "Belegschaft", "Bekanntschaft"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ der Bürger zu spenden war beeindruckend.", "options": ["Bereitschaft", "Eigenschaft", "Wirtschaft", "Gesellschaft"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Einschränkung",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈaɪnʃʁɛŋkʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Eine Grenze, die etwas kleiner, seltener oder schwächer macht.",
+    "examples": [
+      "Die Einschränkung des Verkehrs entlastete die Innenstadt.",
+      "Ich stimme dem Plan zu, allerdings mit einer Einschränkung.",
+      "Ohne jede Einschränkung empfehlen kann ich dieses Hotel nicht."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Einschränkung“?", "options": ["Eine Grenze, die etwas kleiner, seltener oder schwächer macht.", "Eine großzügige Erweiterung eines Angebots.", "Die feierliche Übergabe eines Preises.", "Ein zusätzlicher Anbau an einem Haus."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ des Verkehrs entlastete die Innenstadt.", "options": ["Einschränkung", "Entschuldigung", "Einrichtung", "Erweiterung"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich stimme dem Plan zu, allerdings mit einer _____.", "options": ["Einschränkung", "Ermäßigung", "Erinnerung", "Empfehlung"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Anspruch",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈanʃpʁʊx/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Ein Recht auf etwas oder eine hohe Erwartung an Qualität.",
+    "examples": [
+      "Der Anspruch auf Urlaub ist gesetzlich geregelt.",
+      "Sie hat einen hohen Anspruch an ihre eigene Arbeit.",
+      "Das Projekt nahm mehr Zeit in Anspruch als geplant."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Anspruch“?", "options": ["Ein Recht auf etwas oder eine hohe Erwartung an Qualität.", "Ein kurzer Vortrag am Ende einer Feier.", "Ein Anruf bei einer Behörde.", "Der erste Satz eines längeren Textes."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der _____ auf Urlaub ist gesetzlich geregelt.", "options": ["Anspruch", "Ausdruck", "Absturz", "Abschnitt"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie hat einen hohen _____ an ihre eigene Arbeit.", "options": ["Anspruch", "Aufwand", "Antrag", "Anblick"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Vorurteil",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈfoːɐ̯ʔʊʁtaɪl/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Eine feste Meinung über jemanden, die nicht auf Erfahrung beruht.",
+    "examples": [
+      "Das Vorurteil gegen ältere Bewerber hält sich hartnäckig.",
+      "Er begegnete jedem Vorurteil mit Geduld und Fakten.",
+      "Viele Menschen sind sich ihrer Vorurteile gar nicht bewusst."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Vorurteil“?", "options": ["Eine feste Meinung über jemanden, die nicht auf Erfahrung beruht.", "Ein Urteil, das ein Gericht nach langer Prüfung fällt.", "Eine Regel für höfliches Verhalten bei Tisch.", "Ein Hinweis auf eine bevorstehende Gefahr."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das _____ gegen ältere Bewerber hält sich hartnäckig.", "options": ["Vorurteil", "Vorwort", "Vorbild", "Vorhaben"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er begegnete jedem _____ mit Geduld und Fakten.", "options": ["Vorurteil", "Urteil", "Verfahren", "Vergnügen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Gerechtigkeit",
+    "cefrLevel": "c1",
+    "phonetic": "/ɡəˈʁɛçtɪçkaɪt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Der Zustand, in dem alle fair und nach gleichen Regeln behandelt werden.",
+    "examples": [
+      "Die Demonstranten forderten mehr soziale Gerechtigkeit.",
+      "Ohne Gerechtigkeit verliert ein Staat das Vertrauen der Bürger.",
+      "Ihr Gefühl für Gerechtigkeit machte sie zur idealen Richterin."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Gerechtigkeit“?", "options": ["Der Zustand, in dem alle fair und nach gleichen Regeln behandelt werden.", "Die Fähigkeit, schwierige Rechenaufgaben zu lösen.", "Eine Steuer auf besonders teure Waren.", "Die Ordnung der Bücher in einer Bibliothek."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Demonstranten forderten mehr soziale _____.", "options": ["Gerechtigkeit", "Geschwindigkeit", "Gemütlichkeit", "Genauigkeit"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ohne _____ verliert ein Staat das Vertrauen der Bürger.", "options": ["Gerechtigkeit", "Möglichkeit", "Persönlichkeit", "Wirklichkeit"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gewährleisten",
+    "cefrLevel": "c1",
+    "phonetic": "/ɡəˈvɛːɐ̯laɪstn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Dafür sorgen, dass etwas sicher vorhanden ist oder funktioniert.",
+    "examples": [
+      "Regelmäßige Kontrollen gewährleisten die Sicherheit der Anlage.",
+      "Der Staat muss die Versorgung mit Trinkwasser gewährleisten.",
+      "Nur so lässt sich ein fairer Ablauf der Wahl gewährleisten."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gewährleisten“?", "options": ["Dafür sorgen, dass etwas sicher vorhanden ist oder funktioniert.", "Eine Leistung nachträglich in Rechnung stellen.", "Einen Antrag ohne Begründung ablehnen.", "Eine Feier großzügig finanzieren."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Regelmäßige Kontrollen _____ die Sicherheit der Anlage.", "options": ["gewährleisten", "hinterfragen", "bewältigen", "unterschätzen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Staat muss die Versorgung mit Trinkwasser _____.", "options": ["gewährleisten", "veranschaulichen", "widerlegen", "erörtern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "hinterfragen",
+    "cefrLevel": "c1",
+    "phonetic": "/hɪntɐˈfʁaːɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Etwas kritisch prüfen, statt es einfach zu glauben.",
+    "examples": [
+      "Guter Journalismus muss offizielle Aussagen hinterfragen.",
+      "Sie begann, die Regeln ihrer Branche zu hinterfragen.",
+      "Kinder hinterfragen vieles, was Erwachsene selbstverständlich finden."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „hinterfragen“?", "options": ["Etwas kritisch prüfen, statt es einfach zu glauben.", "Eine Frage höflich wiederholen.", "Ein Formular vollständig ausfüllen.", "Eine Antwort auswendig lernen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Guter Journalismus muss offizielle Aussagen _____.", "options": ["hinterfragen", "gewährleisten", "anstreben", "bewältigen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Kinder _____ vieles, was Erwachsene selbstverständlich finden.", "options": ["hinterfragen", "unterschätzen", "widerlegen", "veranschaulichen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "veranschaulichen",
+    "cefrLevel": "c1",
+    "phonetic": "/fɛɐ̯ˈʔanʃaʊlɪçn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "education",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Etwas Abstraktes mit Beispielen oder Bildern verständlich machen.",
+    "examples": [
+      "Diagramme veranschaulichen die Entwicklung der Preise.",
+      "Die Lehrerin nutzt Alltagsbeispiele, um Physik zu veranschaulichen.",
+      "Ein kurzes Video soll den Ablauf veranschaulichen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „veranschaulichen“?", "options": ["Etwas Abstraktes mit Beispielen oder Bildern verständlich machen.", "Etwas Wertvolles sicher aufbewahren.", "Eine Veranstaltung kurzfristig absagen.", "Einen Text in kleine Abschnitte teilen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Diagramme _____ die Entwicklung der Preise.", "options": ["veranschaulichen", "gewährleisten", "hinterfragen", "bewältigen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ein kurzes Video soll den Ablauf _____.", "options": ["veranschaulichen", "unterschätzen", "anstreben", "widerlegen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "bewältigen",
+    "cefrLevel": "c1",
+    "phonetic": "/bəˈvɛltɪɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Eine schwierige Aufgabe oder Situation erfolgreich meistern.",
+    "examples": [
+      "Sie musste den Umzug ganz allein bewältigen.",
+      "Die Stadt kann den zunehmenden Verkehr kaum noch bewältigen.",
+      "Sport hilft ihm, den Stress im Beruf zu bewältigen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „bewältigen“?", "options": ["Eine schwierige Aufgabe oder Situation erfolgreich meistern.", "Eine Entscheidung immer weiter hinauszögern.", "Einen Gegenstand achtlos wegwerfen.", "Ein Gespräch abrupt beenden."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie musste den Umzug ganz allein _____.", "options": ["bewältigen", "veranschaulichen", "gewährleisten", "erörtern"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sport hilft ihm, den Stress im Beruf zu _____.", "options": ["bewältigen", "hinterfragen", "widerlegen", "anstreben"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "anstreben",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈanʃtʁeːbn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Sich ein Ziel setzen und darauf hinarbeiten.",
+    "examples": [
+      "Die Regierung will einen ausgeglichenen Haushalt anstreben.",
+      "Viele Absolventen streben eine Karriere in der Forschung an.",
+      "Wir sollten eine Lösung anstreben, die allen nützt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „anstreben“?", "options": ["Sich ein Ziel setzen und darauf hinarbeiten.", "Einen Vorschlag entschieden ablehnen.", "Eine Aufgabe an andere weitergeben.", "Ein Ergebnis zufällig erreichen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Regierung will einen ausgeglichenen Haushalt _____.", "options": ["anstreben", "bewältigen", "hinterfragen", "unterschätzen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir sollten eine Lösung _____, die allen nützt.", "options": ["anstreben", "gewährleisten", "widerlegen", "veranschaulichen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "unterschätzen",
+    "cefrLevel": "c1",
+    "phonetic": "/ʊntɐˈʃɛtsn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Etwas für kleiner oder harmloser halten, als es wirklich ist.",
+    "examples": [
+      "Viele unterschätzen die Wirkung von zu wenig Schlaf.",
+      "Man darf die Konkurrenz in diesem Markt nicht unterschätzen.",
+      "Er hatte den Aufwand für die Renovierung völlig unterschätzt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „unterschätzen“?", "options": ["Etwas für kleiner oder harmloser halten, als es wirklich ist.", "Etwas absichtlich größer darstellen.", "Eine Rechnung doppelt bezahlen.", "Einen Termin versehentlich verpassen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Viele _____ die Wirkung von zu wenig Schlaf.", "options": ["unterschätzen", "gewährleisten", "veranschaulichen", "erörtern"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Man darf die Konkurrenz in diesem Markt nicht _____.", "options": ["unterschätzen", "anstreben", "bewältigen", "hinterfragen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "widerlegen",
+    "cefrLevel": "c1",
+    "phonetic": "/viːdɐˈleːɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "education",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Mit Beweisen zeigen, dass eine Behauptung falsch ist.",
+    "examples": [
+      "Neue Daten widerlegen die alte Theorie eindeutig.",
+      "Sie konnte jeden Einwand mit Fakten widerlegen.",
+      "Das Gerücht ließ sich schnell widerlegen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „widerlegen“?", "options": ["Mit Beweisen zeigen, dass eine Behauptung falsch ist.", "Eine Behauptung wortgleich wiederholen.", "Einen Streit ohne Ergebnis beenden.", "Eine These besonders anschaulich erklären."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Neue Daten _____ die alte Theorie eindeutig.", "options": ["widerlegen", "gewährleisten", "bewältigen", "anstreben"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Gerücht ließ sich schnell _____.", "options": ["widerlegen", "veranschaulichen", "unterschätzen", "hinterfragen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "erörtern",
+    "cefrLevel": "c1",
+    "phonetic": "/ɛɐ̯ˈʔœʁtɐn/",
+    "partOfSpeech": "verb",
+    "domainTag": "education",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Ein Thema ausführlich und von mehreren Seiten besprechen.",
+    "examples": [
+      "Der Ausschuss wird die Vorschläge morgen erörtern.",
+      "Im Aufsatz sollen die Schüler beide Positionen erörtern.",
+      "Wir müssen diese Frage in Ruhe erörtern."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „erörtern“?", "options": ["Ein Thema ausführlich und von mehreren Seiten besprechen.", "Eine Entscheidung ohne Diskussion treffen.", "Einen Ort auf einer Karte markieren.", "Ein Dokument in den Ordner heften."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Ausschuss wird die Vorschläge morgen _____.", "options": ["erörtern", "widerlegen", "gewährleisten", "unterschätzen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir müssen diese Frage in Ruhe _____.", "options": ["erörtern", "anstreben", "bewältigen", "veranschaulichen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "unentbehrlich",
+    "cefrLevel": "c1",
+    "phonetic": "/ʊnʔɛntˈbeːɐ̯lɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "So wichtig, dass man ohne es nicht auskommt.",
+    "examples": [
+      "Ein Wörterbuch ist beim Übersetzen unentbehrlich.",
+      "Sie wurde durch ihre Erfahrung unentbehrlich für das Team.",
+      "Für viele ist das Smartphone im Alltag unentbehrlich geworden."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „unentbehrlich“?", "options": ["So wichtig, dass man ohne es nicht auskommt.", "So selten, dass es kaum jemand kennt.", "So teuer, dass es sich niemand leistet.", "So alt, dass es niemand mehr benutzt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ein Wörterbuch ist beim Übersetzen _____.", "options": ["unentbehrlich", "aufschlussreich", "umstritten", "gravierend"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Für viele ist das Smartphone im Alltag _____ geworden.", "options": ["unentbehrlich", "vielschichtig", "stichhaltig", "befangen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "vielschichtig",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈfiːlʃɪçtɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Aus vielen Ebenen bestehend und daher nicht einfach zu erfassen.",
+    "examples": [
+      "Das Problem ist vielschichtig und hat keine schnelle Lösung.",
+      "Der Roman zeichnet ein vielschichtig angelegtes Porträt der Stadt.",
+      "Ihre Persönlichkeit ist vielschichtiger, als sie zunächst wirkt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „vielschichtig“?", "options": ["Aus vielen Ebenen bestehend und daher nicht einfach zu erfassen.", "Aus einem einzigen Material gefertigt.", "Leicht verständlich und schnell erklärt.", "Ohne Bezug zur heutigen Zeit."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Problem ist _____ und hat keine schnelle Lösung.", "options": ["vielschichtig", "unentbehrlich", "lapidar", "obsolet"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Roman zeichnet ein _____ angelegtes Porträt der Stadt.", "options": ["vielschichtig", "stichhaltig", "gravierend", "rudimentär"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "stichhaltig",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈʃtɪçhaltɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "So überzeugend begründet, dass es einer Prüfung standhält.",
+    "examples": [
+      "Sein Argument war stichhaltig und ließ keine Zweifel offen.",
+      "Ohne stichhaltig belegte Zahlen glaubt uns niemand.",
+      "Die Ausrede klang nicht besonders stichhaltig."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „stichhaltig“?", "options": ["So überzeugend begründet, dass es einer Prüfung standhält.", "So spitz, dass man sich daran verletzen kann.", "So kurz, dass wichtige Punkte fehlen.", "So laut, dass niemand widersprechen mag."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sein Argument war _____ und ließ keine Zweifel offen.", "options": ["stichhaltig", "vielschichtig", "obsolet", "rudimentär"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Ausrede klang nicht besonders _____.", "options": ["stichhaltig", "unentbehrlich", "gravierend", "akribisch"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "aufschlussreich",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈaʊfʃlʊsʁaɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "So, dass es viele neue und nützliche Informationen liefert.",
+    "examples": [
+      "Das Interview mit der Forscherin war sehr aufschlussreich.",
+      "Ein aufschlussreich geschriebener Bericht erklärte die Hintergründe.",
+      "Der Blick hinter die Kulissen war überaus aufschlussreich."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „aufschlussreich“?", "options": ["So, dass es viele neue und nützliche Informationen liefert.", "So, dass es vor allem unterhalten soll.", "So, dass es kaum jemand versteht.", "So, dass es schnell in Vergessenheit gerät."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Interview mit der Forscherin war sehr _____.", "options": ["aufschlussreich", "unentbehrlich", "umstritten", "obsolet"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Blick hinter die Kulissen war überaus _____.", "options": ["aufschlussreich", "stichhaltig", "gravierend", "lapidar"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gravierend",
+    "cefrLevel": "c1",
+    "phonetic": "/ɡʁaˈviːʁənt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "So schwerwiegend, dass es ernste Folgen hat.",
+    "examples": [
+      "Der Bericht deckte gravierend hohe Sicherheitsmängel auf.",
+      "Zwischen den beiden Angeboten besteht ein gravierender Unterschied.",
+      "Die Folgen des Fehlers waren gravierender als erwartet."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gravierend“?", "options": ["So schwerwiegend, dass es ernste Folgen hat.", "So geringfügig, dass es niemand bemerkt.", "So erfreulich, dass alle zufrieden sind.", "So üblich, dass es keine Regel verletzt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Bericht deckte _____ hohe Sicherheitsmängel auf.", "options": ["gravierend", "aufschlussreich", "stichhaltig", "akribisch"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Panne hatte _____ negative Auswirkungen auf den Zeitplan.", "options": ["gravierend", "lapidar", "akribisch", "obsolet"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "umstritten",
+    "cefrLevel": "c1",
+    "phonetic": "/ʊmˈʃtʁɪtn̩/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "So, dass viele Menschen unterschiedlicher Meinung darüber sind.",
+    "examples": [
+      "Der geplante Neubau ist in der Stadt heftig umstritten.",
+      "Die Methode gilt unter Fachleuten als umstritten.",
+      "Seine Thesen waren schon zu Lebzeiten umstritten."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „umstritten“?", "options": ["So, dass viele Menschen unterschiedlicher Meinung darüber sind.", "So, dass alle sofort begeistert zustimmen.", "So, dass es gesetzlich verboten ist.", "So, dass es niemanden interessiert."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der geplante Neubau ist in der Stadt heftig _____.", "options": ["umstritten", "aufschlussreich", "unentbehrlich", "akribisch"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Methode gilt unter Fachleuten als _____.", "options": ["umstritten", "gravierend", "rudimentär", "lapidar"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "keineswegs",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈkaɪnəsˈveːks/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "Ein Wort, das etwas mit Nachdruck verneint; überhaupt nicht.",
+    "examples": [
+      "Das Thema ist keineswegs so langweilig, wie viele denken.",
+      "Er war keineswegs bereit, den Fehler zuzugeben.",
+      "Die Lage ist ernst, aber keineswegs hoffnungslos."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „keineswegs“?", "options": ["Ein Wort, das etwas mit Nachdruck verneint; überhaupt nicht.", "Ein Wort, das volle Zustimmung ausdrückt.", "Ein Wort, das eine Wegbeschreibung einleitet.", "Ein Wort, das eine Vermutung abschwächt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Thema ist _____ so langweilig, wie viele denken.", "options": ["keineswegs", "gleichwohl", "außerdem", "trotzdem"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Lage ist ernst, aber _____ hoffnungslos.", "options": ["keineswegs", "allerdings", "hingegen", "gestern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gleichwohl",
+    "cefrLevel": "c1",
+    "phonetic": "/ɡlaɪçˈvoːl/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Ein gehobenes Wort für „trotzdem“ oder „dennoch“.",
+    "examples": [
+      "Der Plan war riskant; gleichwohl stimmte der Vorstand zu.",
+      "Die Kritik war hart, gleichwohl blieb sie sachlich.",
+      "Er kannte die Gefahren und wagte den Versuch gleichwohl."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gleichwohl“?", "options": ["Ein gehobenes Wort für „trotzdem“ oder „dennoch“.", "Ein Ausdruck für zwei gleich große Mengen.", "Eine höfliche Form der Begrüßung.", "Ein Fachwort für ausgeglichene Konten."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Plan war riskant; _____ stimmte der Vorstand zu.", "options": ["gleichwohl", "keineswegs", "gestern", "draußen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Kritik war hart, _____ blieb sie sachlich.", "options": ["gleichwohl", "hingegen", "außerdem", "unten"], "correctAnswerIndex": 0 }
+    ]
+  }
+]

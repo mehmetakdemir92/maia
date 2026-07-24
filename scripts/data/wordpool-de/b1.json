@@ -1,0 +1,482 @@
+[
+  {
+    "word": "Umwelt",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈʊmvɛlt/",
+    "partOfSpeech": "noun",
+    "domainTag": "nature",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Die Natur und alles, was den Menschen umgibt.",
+    "examples": [
+      "Weniger Plastik zu benutzen schützt die Umwelt.",
+      "Der Verein setzt sich für eine saubere Umwelt ein.",
+      "Alte Batterien sind schlecht für die Umwelt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Umwelt“?", "options": ["Die Natur und alles, was den Menschen umgibt.", "Ein Amt, das neue Ausweise ausstellt.", "Eine Sammlung von alten Fotos und Briefen.", "Ein Kurs, der auf eine Prüfung vorbereitet."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Weniger Plastik zu benutzen schützt die _____.", "options": ["Umwelt", "Werbung", "Steckdose", "Mahlzeit"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Alte Batterien sind schlecht für die _____.", "options": ["Umwelt", "Kreuzung", "Unterschrift", "Feier"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Verhalten",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈhaltn̩/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Die Art, wie eine Person in bestimmten Situationen handelt.",
+    "examples": [
+      "Das Verhalten des Fahrers war sehr rücksichtslos.",
+      "Ihr freundliches Verhalten hat alle beeindruckt.",
+      "Der Trainer war mit dem Verhalten der Spieler unzufrieden."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Verhalten“?", "options": ["Die Art, wie eine Person in bestimmten Situationen handelt.", "Ein Vertrag zwischen zwei großen Firmen.", "Der Plan für eine mehrtägige Wanderung.", "Eine Rechnung, die noch nicht bezahlt wurde."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das _____ des Fahrers war sehr rücksichtslos.", "options": ["Verhalten", "Gemüse", "Gebirge", "Getränk"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ihr freundliches _____ hat alle beeindruckt.", "options": ["Verhalten", "Gepäck", "Besteck", "Gewitter"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Bewerbung",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈvɛʁbʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Ein Schreiben, mit dem man sich um eine Stelle bemüht.",
+    "examples": [
+      "Ihre Bewerbung für das Praktikum war erfolgreich.",
+      "Zu einer Bewerbung gehören Lebenslauf und Anschreiben.",
+      "Er hat die Bewerbung gestern per E-Mail geschickt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Bewerbung“?", "options": ["Ein Schreiben, mit dem man sich um eine Stelle bemüht.", "Eine Feier zum Abschluss der Schulzeit.", "Ein Gespräch mit dem Arzt über die Gesundheit.", "Eine Anzeige für eine freie Mietwohnung."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ihre _____ für das Praktikum war erfolgreich.", "options": ["Bewerbung", "Heizung", "Kleidung", "Landschaft"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er hat die _____ gestern per E-Mail geschickt.", "options": ["Bewerbung", "Mannschaft", "Erkältung", "Kreuzung"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Beziehung",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈtsiːʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Die Verbindung zwischen Menschen, die einander wichtig sind.",
+    "examples": [
+      "Eine gute Beziehung braucht Vertrauen und Zeit.",
+      "Die Beziehung zu seinen Kollegen ist sehr entspannt.",
+      "Nach dem Streit war ihre Beziehung lange schwierig."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Beziehung“?", "options": ["Die Verbindung zwischen Menschen, die einander wichtig sind.", "Ein Dokument für die Anmeldung einer Wohnung.", "Eine Maschine, die in der Fabrik arbeitet.", "Ein Weg, der zwei Dörfer verbindet."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Eine gute _____ braucht Vertrauen und Zeit.", "options": ["Beziehung", "Tankstelle", "Mülltonne", "Tastatur"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ zu seinen Kollegen ist sehr entspannt.", "options": ["Beziehung", "Werkstatt", "Backware", "Haltestelle"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Vorschlag",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈfoːɐ̯ʃlaːk/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Eine Idee, die man anderen zur Entscheidung anbietet.",
+    "examples": [
+      "Dein Vorschlag für den Ausflug gefällt mir sehr.",
+      "Sie machte den Vorschlag, früher anzufangen.",
+      "Der Vorschlag des Kollegen wurde sofort angenommen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Vorschlag“?", "options": ["Eine Idee, die man anderen zur Entscheidung anbietet.", "Ein lautes Geräusch bei einem Gewitter.", "Eine Pause zwischen zwei Unterrichtsstunden.", "Ein Fehler, der in einem Text steht."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Dein _____ für den Ausflug gefällt mir sehr.", "options": ["Vorschlag", "Vorhang", "Verband", "Vertrag"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der _____ des Kollegen wurde sofort angenommen.", "options": ["Vorschlag", "Bahnsteig", "Rucksack", "Bildschirm"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Werbung",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈvɛʁbʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "media",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Bilder oder Texte, die Menschen zum Kaufen bringen sollen.",
+    "examples": [
+      "Im Fernsehen läuft abends sehr viel Werbung.",
+      "Die Werbung für das neue Handy sieht man überall.",
+      "Ohne Werbung würden viele Apps Geld kosten."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Werbung“?", "options": ["Bilder oder Texte, die Menschen zum Kaufen bringen sollen.", "Eine Nachricht von der Bank über das Konto.", "Ein Programm, das Fehler am Computer sucht.", "Eine Sendung mit aktuellen Nachrichten."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Im Fernsehen läuft abends sehr viel _____.", "options": ["Werbung", "Umwelt", "Seife", "Kreide"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ für das neue Handy sieht man überall.", "options": ["Werbung", "Bewerbung", "Heizung", "Nahrung"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Meinung",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈmaɪnʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Das, was eine Person über ein Thema denkt.",
+    "examples": [
+      "Meiner Meinung nach ist der Film sehenswert.",
+      "Jeder darf seine Meinung frei sagen.",
+      "Ihre Meinung zu diesem Plan hat sich geändert."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Meinung“?", "options": ["Das, was eine Person über ein Thema denkt.", "Eine Regel, die in der Schule gilt.", "Das Geld, das eine Arbeit kostet.", "Ein Termin, der verschoben wurde."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Meiner _____ nach ist der Film sehenswert.", "options": ["Meinung", "Zeitung", "Ordnung", "Mischung"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Jeder darf seine _____ frei sagen.", "options": ["Meinung", "Rechnung", "Wohnung", "Sammlung"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Gewohnheit",
+    "cefrLevel": "b1",
+    "phonetic": "/ɡəˈvoːnhaɪt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Etwas, das man regelmäßig und fast automatisch tut.",
+    "examples": [
+      "Früh aufzustehen ist für mich eine feste Gewohnheit.",
+      "Er hat die Gewohnheit, beim Lesen Tee zu trinken.",
+      "Alte Gewohnheiten lassen sich nur schwer ändern."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Gewohnheit“?", "options": ["Etwas, das man regelmäßig und fast automatisch tut.", "Etwas, das man nur einmal im Leben erlebt.", "Ein Geräusch, das man nachts hört.", "Ein Geschenk, das man zum Abschied bekommt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Früh aufzustehen ist für mich eine feste _____.", "options": ["Gewohnheit", "Gesundheit", "Geschwindigkeit", "Gelegenheit"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er hat die _____, beim Lesen Tee zu trinken.", "options": ["Gewohnheit", "Mehrheit", "Sicherheit", "Freiheit"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Erlebnis",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛɐ̯ˈleːpnɪs/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Etwas Besonderes, das man selbst erfahren hat.",
+    "examples": [
+      "Die Bootsfahrt war ein unvergessliches Erlebnis.",
+      "Er erzählte uns von seinem Erlebnis in den Bergen.",
+      "Für die Kinder war der Zoobesuch ein großes Erlebnis."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Erlebnis“?", "options": ["Etwas Besonderes, das man selbst erfahren hat.", "Eine Aufgabe, die man täglich erledigen muss.", "Ein Papier, das eine Ausbildung bestätigt.", "Eine Regel für das Verhalten im Verkehr."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Bootsfahrt war ein unvergessliches _____.", "options": ["Erlebnis", "Ergebnis", "Verzeichnis", "Zeugnis"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Für die Kinder war der Zoobesuch ein großes _____.", "options": ["Erlebnis", "Gedächtnis", "Hindernis", "Verständnis"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Unterschied",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈʊntɐʃiːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Das, was zwei Dinge nicht gleich macht.",
+    "examples": [
+      "Der Unterschied zwischen den beiden Angeboten ist klein.",
+      "Siehst du einen Unterschied zwischen diesen Farben?",
+      "Im Preis gibt es einen deutlichen Unterschied."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Unterschied“?", "options": ["Das, was zwei Dinge nicht gleich macht.", "Das, was man am Ende eines Briefes schreibt.", "Ein Platz, an dem sich zwei Straßen treffen.", "Eine Zahl, die man addieren muss."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der _____ zwischen den beiden Angeboten ist klein.", "options": ["Unterschied", "Untergrund", "Umschlag", "Ursprung"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Siehst du einen _____ zwischen diesen Farben?", "options": ["Unterschied", "Ausflug", "Eindruck", "Anfang"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "entscheiden",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛntˈʃaɪdn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Nach dem Überlegen eine von mehreren Möglichkeiten wählen.",
+    "examples": [
+      "Wir müssen bis Freitag über das Angebot entscheiden.",
+      "Sie kann sich nur schwer zwischen den beiden Jacken entscheiden.",
+      "Das Gericht wird nächste Woche entscheiden."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „entscheiden“?", "options": ["Nach dem Überlegen eine von mehreren Möglichkeiten wählen.", "Einen Gegenstand an seinen Platz zurücklegen.", "Eine Person um einen Gefallen bitten.", "Einen Text laut und deutlich vorlesen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir müssen bis Freitag über das Angebot _____.", "options": ["entscheiden", "verbessern", "verschieben", "begrüßen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Gericht wird nächste Woche _____.", "options": ["entscheiden", "frühstücken", "klingeln", "wandern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "verbessern",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈbɛsɐn/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Etwas besser machen, als es vorher war.",
+    "examples": [
+      "Ich möchte mein Deutsch durch tägliches Üben verbessern.",
+      "Die Firma will den Service für ihre Kunden verbessern.",
+      "Mit neuen Fenstern lässt sich die Wohnung deutlich verbessern."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „verbessern“?", "options": ["Etwas besser machen, als es vorher war.", "Etwas für kurze Zeit ausleihen.", "Etwas in einen Karton packen.", "Etwas an einem sicheren Ort verstecken."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich möchte mein Deutsch durch tägliches Üben _____.", "options": ["verbessern", "vergessen", "verkaufen", "verlassen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Firma will den Service für ihre Kunden _____.", "options": ["verbessern", "entscheiden", "abholen", "einladen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "vermeiden",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈmaɪdn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Dafür sorgen, dass etwas Unangenehmes nicht passiert.",
+    "examples": [
+      "Wir sollten unnötigen Müll im Alltag vermeiden.",
+      "Er versucht, Stress vor Prüfungen zu vermeiden.",
+      "Mit etwas Planung kann man lange Wartezeiten vermeiden."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „vermeiden“?", "options": ["Dafür sorgen, dass etwas Unangenehmes nicht passiert.", "Etwas Verlorenes lange suchen.", "Eine Reise im Voraus buchen.", "Einen Fehler öffentlich zugeben."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir sollten unnötigen Müll im Alltag _____.", "options": ["vermeiden", "verbessern", "bestellen", "gewinnen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er versucht, Stress vor Prüfungen zu _____.", "options": ["vermeiden", "besuchen", "erklären", "verkaufen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "unterstützen",
+    "cefrLevel": "b1",
+    "phonetic": "/ʊntɐˈʃtʏtsn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Einer Person oder Sache helfen, damit sie Erfolg hat.",
+    "examples": [
+      "Meine Eltern unterstützen mich bei der Ausbildung.",
+      "Viele Menschen unterstützen den Verein mit Spenden.",
+      "Er will seine Kollegin bei dem Projekt unterstützen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „unterstützen“?", "options": ["Einer Person oder Sache helfen, damit sie Erfolg hat.", "Eine Entscheidung immer wieder verschieben.", "Etwas Neues im Geschäft umtauschen.", "Eine Wohnung für den Umzug leeren."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Meine Eltern _____ mich bei der Ausbildung.", "options": ["unterstützen", "vermeiden", "verschieben", "vergessen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Viele Menschen _____ den Verein mit Spenden.", "options": ["unterstützen", "verbessern", "bezahlen", "erinnern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "empfehlen",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛmˈpfeːlən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Einer Person raten, etwas Bestimmtes zu wählen oder zu tun.",
+    "examples": [
+      "Kannst du mir ein gutes Restaurant in der Nähe empfehlen?",
+      "Die Ärztin kann dir eine passende Creme empfehlen.",
+      "Ich würde dir dieses Buch wirklich empfehlen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „empfehlen“?", "options": ["Einer Person raten, etwas Bestimmtes zu wählen oder zu tun.", "Einer Person etwas ohne Erlaubnis wegnehmen.", "Eine Nachricht versehentlich löschen.", "Ein Treffen ohne Grund absagen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Kannst du mir ein gutes Restaurant in der Nähe _____?", "options": ["empfehlen", "entscheiden", "verstecken", "abwaschen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich würde dir dieses Buch wirklich _____.", "options": ["empfehlen", "vermeiden", "aufräumen", "anmelden"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "verschieben",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈʃiːbn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Etwas auf einen späteren Zeitpunkt legen.",
+    "examples": [
+      "Wir müssen das Treffen leider auf nächste Woche verschieben.",
+      "Der Flug wurde wegen des Sturms verschoben.",
+      "Sie will den Arzttermin nicht noch einmal verschieben."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „verschieben“?", "options": ["Etwas auf einen späteren Zeitpunkt legen.", "Etwas sofort und ohne Pause erledigen.", "Etwas in zwei gleiche Teile schneiden.", "Etwas mit großer Freude feiern."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wir müssen das Treffen leider auf nächste Woche _____.", "options": ["verschieben", "unterstützen", "empfehlen", "begrüßen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie will den Arzttermin nicht noch einmal _____.", "options": ["verschieben", "verbessern", "kopieren", "mieten"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "überzeugen",
+    "cefrLevel": "b1",
+    "phonetic": "/yːbɐˈtsɔʏɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Eine Person mit guten Argumenten zu einer Ansicht bringen.",
+    "examples": [
+      "Sie konnte den Chef von ihrer Idee überzeugen.",
+      "Seine Argumente überzeugen mich nicht ganz.",
+      "Der Film hat uns mit seiner Geschichte überzeugt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „überzeugen“?", "options": ["Eine Person mit guten Argumenten zu einer Ansicht bringen.", "Eine Person höflich nach dem Weg fragen.", "Eine Sache doppelt so groß machen.", "Ein Problem an eine andere Abteilung geben."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie konnte den Chef von ihrer Idee _____.", "options": ["überzeugen", "verschieben", "verlängern", "abschließen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Seine Argumente _____ mich nicht ganz.", "options": ["überzeugen", "unterstützen", "besuchen", "bezahlen"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "enttäuscht",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛntˈtɔʏʃt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Traurig, weil etwas nicht so war, wie man es erwartet hat.",
+    "examples": [
+      "Ich war enttäuscht, weil das Konzert abgesagt wurde.",
+      "Sie sah nach der Prüfung sehr enttäuscht aus.",
+      "Von dem teuren Restaurant waren wir ziemlich enttäuscht."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „enttäuscht“?", "options": ["Traurig, weil etwas nicht so war, wie man es erwartet hat.", "Froh, weil eine Überraschung gelungen ist.", "Nervös, weil bald eine Reise beginnt.", "Stolz, weil man ein Ziel erreicht hat."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich war _____, weil das Konzert abgesagt wurde.", "options": ["enttäuscht", "zufrieden", "pünktlich", "gesund"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie sah nach der Prüfung sehr _____ aus.", "options": ["enttäuscht", "gefährlich", "billig", "rund"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "verantwortlich",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈʔantvɔʁtlɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "So, dass man für eine Aufgabe oder Folge einstehen muss.",
+    "examples": [
+      "Frau Weber ist für die neuen Auszubildenden verantwortlich.",
+      "Wer ist in diesem Projekt für die Termine verantwortlich?",
+      "Als Kapitän fühlt er sich für das Team verantwortlich."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „verantwortlich“?", "options": ["So, dass man für eine Aufgabe oder Folge einstehen muss.", "So, dass man an einem Kurs nur zusieht.", "So, dass man eine Arbeit sehr langsam macht.", "So, dass man bei einer Feier zu Gast ist."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Frau Weber ist für die neuen Auszubildenden _____.", "options": ["verantwortlich", "enttäuscht", "billig", "müde"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Als Kapitän fühlt er sich für das Team _____.", "options": ["verantwortlich", "gefährlich", "salzig", "leise"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "zuverlässig",
+    "cefrLevel": "b1",
+    "phonetic": "/tsuːfɛɐ̯ˈlɛsɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "So, dass man sich auf eine Person oder Sache verlassen kann.",
+    "examples": [
+      "Unsere neue Kollegin ist sehr zuverlässig.",
+      "Der Bus ist hier leider nicht immer zuverlässig.",
+      "Ich brauche ein zuverlässig funktionierendes Auto."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „zuverlässig“?", "options": ["So, dass man sich auf eine Person oder Sache verlassen kann.", "So, dass etwas oft kaputt geht.", "So, dass jemand gern lange schläft.", "So, dass etwas besonders teuer ist."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Unsere neue Kollegin ist sehr _____.", "options": ["zuverlässig", "enttäuscht", "nass", "hungrig"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Bus ist hier leider nicht immer _____.", "options": ["zuverlässig", "verantwortlich", "traurig", "dunkel"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "ähnlich",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈɛːnlɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Fast gleich, aber nicht genau dasselbe.",
+    "examples": [
+      "Die beiden Schwestern sehen sich sehr ähnlich.",
+      "Mein Problem ist ähnlich wie deins.",
+      "Wir haben einen ähnlich vollen Terminkalender."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „ähnlich“?", "options": ["Fast gleich, aber nicht genau dasselbe.", "Vollkommen anders in jeder Hinsicht.", "Größer und schwerer als üblich.", "Neu und noch nie gesehen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die beiden Schwestern sehen sich sehr _____.", "options": ["ähnlich", "zuverlässig", "gefährlich", "billig"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Mein Problem ist _____ wie deins.", "options": ["ähnlich", "müde", "leise", "sauber"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "außerdem",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈaʊsɐdeːm/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Ein Wort, mit dem man eine weitere Information hinzufügt.",
+    "examples": [
+      "Das Hotel ist günstig und liegt außerdem sehr zentral.",
+      "Ich habe keine Zeit, außerdem bin ich müde.",
+      "Sie spricht Englisch und außerdem etwas Spanisch."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „außerdem“?", "options": ["Ein Wort, mit dem man eine weitere Information hinzufügt.", "Ein Wort, mit dem man einen Gegensatz ausdrückt.", "Ein Wort, das einen Ort beschreibt.", "Ein Wort, das eine Uhrzeit angibt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Hotel ist günstig und liegt _____ sehr zentral.", "options": ["außerdem", "trotzdem", "gestern", "draußen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ich habe keine Zeit, _____ bin ich müde.", "options": ["außerdem", "leider", "oben", "links"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "trotzdem",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈtʁɔtsdeːm/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Ein Wort, das zeigt, dass etwas gegen eine Erwartung passiert.",
+    "examples": [
+      "Es hat geregnet, trotzdem sind wir wandern gegangen.",
+      "Der Test war schwer, trotzdem hat sie bestanden.",
+      "Er war erkältet und ist trotzdem zur Arbeit gegangen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „trotzdem“?", "options": ["Ein Wort, das zeigt, dass etwas gegen eine Erwartung passiert.", "Ein Wort, das einen Grund nennt.", "Ein Wort, das eine Reihenfolge beschreibt.", "Ein Wort, das einen Wunsch ausdrückt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Es hat geregnet, _____ sind wir wandern gegangen.", "options": ["trotzdem", "außerdem", "gestern", "unten"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Test war schwer, _____ hat sie bestanden.", "options": ["trotzdem", "leider", "draußen", "hinten"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Kenntnis",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈkɛntnɪs/",
+    "partOfSpeech": "noun",
+    "domainTag": "education",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "Das Wissen, das man über ein bestimmtes Gebiet hat.",
+    "examples": [
+      "Gute Kenntnis der Regeln hilft bei diesem Spiel.",
+      "Für die Stelle sind Kenntnisse in Englisch nötig.",
+      "Er hat seine Kenntnisse im Kurs erweitert."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Kenntnis“?", "options": ["Das Wissen, das man über ein bestimmtes Gebiet hat.", "Die Erlaubnis, ein Gebäude zu betreten.", "Eine Einladung zu einer offiziellen Feier.", "Die Quittung für einen bezahlten Einkauf."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Gute _____ der Regeln hilft bei diesem Spiel.", "options": ["Kenntnis", "Krankheit", "Mahlzeit", "Nachricht"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Chef nahm den Bericht ohne Kommentar zur _____.", "options": ["Kenntnis", "Werkstatt", "Rechnung", "Mahlzeit"], "correctAnswerIndex": 0 }
+    ]
+  }
+]

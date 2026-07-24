@@ -11,6 +11,15 @@
  *   node scripts/generate-monthly-pack.js 2026-06 --force      # var olanı sil ve yeniden yaz
  *   node scripts/generate-monthly-pack.js 2026-06 --merge      # mevcut definition/examples/quiz alanlarını koru
  *
+ * Almanca (öğrenim dili):
+ *   node scripts/generate-monthly-pack.js 2026-07 --lang de [--force]
+ *
+ *   Almanca havuz scripts/data/wordpool-de/{a1..c2}.json dosyalarındadır ve
+ *   içerik (definition/examples/quiz) elle hazırlanmış TAM içeriktir; Gemini
+ *   doldurması gerekmez. Çıktı: maia/WordPacks/{YYYY-MM}.de.json
+ *   Havuz banttaki gün sayısından küçükse kelimeler ay içinde (eşit aralıklarla)
+ *   tekrar eder; havuza kelime ekleyip yeniden üreterek tekrarı azaltabilirsin.
+ *
  * Üretilen JSON şeması (definition/examples/quiz alanlarını sen elle doldurursun):
  *   {
  *     "month": "YYYY-MM",
@@ -60,18 +69,35 @@ const WORDS_PER_BAND_PER_DAY = 2;
 function parseArgs(argv) {
   const args = argv.slice(2);
   if (args.length === 0) {
-    fail("usage: node scripts/generate-monthly-pack.js YYYY-MM [--force | --merge]");
+    fail("usage: node scripts/generate-monthly-pack.js YYYY-MM [--force | --merge] [--lang de]");
   }
   const monthKey = args[0];
   if (!/^\d{4}-\d{2}$/.test(monthKey)) {
     fail(`invalid month "${monthKey}". Expected YYYY-MM (e.g. 2026-06).`);
   }
-  const flags = new Set(args.slice(1));
+  const rest = args.slice(1);
+  let lang = "en";
+  const flags = new Set();
+  for (let i = 0; i < rest.length; i++) {
+    if (rest[i] === "--lang") {
+      lang = rest[i + 1];
+      i += 1;
+      continue;
+    }
+    flags.add(rest[i]);
+  }
+  if (!["en", "de"].includes(lang)) {
+    fail(`unsupported --lang "${lang}". Supported: en, de.`);
+  }
   if (flags.has("--force") && flags.has("--merge")) {
     fail("--force ve --merge birlikte kullanılamaz.");
   }
+  if (lang !== "en" && flags.has("--merge")) {
+    fail("--merge yalnızca İngilizce (skeleton) akışında desteklenir.");
+  }
   return {
     monthKey,
+    lang,
     force: flags.has("--force"),
     merge: flags.has("--merge"),
   };
@@ -275,6 +301,152 @@ function buildSkeleton(monthKey) {
   return { month: monthKey, days };
 }
 
+// ----------------------- German (full-content pool) -----------------------
+
+const DE_POOL_DIR = path.join(REPO_ROOT, "scripts", "data", "wordpool-de");
+
+function loadGermanPool() {
+  const byBand = new Map();
+  const seen = new Set();
+  for (const band of BANDS) {
+    const filePath = path.join(DE_POOL_DIR, `${band}.json`);
+    if (!fs.existsSync(filePath)) {
+      fail(`Almanca havuz dosyası eksik: ${path.relative(REPO_ROOT, filePath)}`);
+    }
+    let entries;
+    try {
+      entries = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    } catch (err) {
+      fail(`${band}.json parse edilemedi: ${err.message}`);
+    }
+    if (!Array.isArray(entries) || entries.length === 0) {
+      fail(`${band}.json boş ya da dizi değil.`);
+    }
+    for (const entry of entries) {
+      validateGermanEntry(entry, band);
+      const key = entry.word.toLowerCase();
+      if (seen.has(key)) {
+        fail(`Almanca havuzda tekrar eden kelime: "${entry.word}" (${band}).`);
+      }
+      seen.add(key);
+    }
+    byBand.set(band, entries);
+  }
+  return byBand;
+}
+
+/** Baş kelime örnek cümlede geçiyor mu (Almanca çekim ekleri toleranslı). */
+function exampleContainsHeadword(example, word) {
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`(^|[^\\p{L}])${escaped}[\\p{L}]{0,4}([^\\p{L}]|$)`, "iu");
+  return re.test(example);
+}
+
+function validateGermanEntry(entry, band) {
+  const where = `${band}.json → "${entry && entry.word}"`;
+  if (!entry || typeof entry.word !== "string" || !entry.word.trim()) {
+    fail(`${band}.json içinde word alanı eksik bir kayıt var.`);
+  }
+  if ((entry.cefrLevel || "").toLowerCase() !== band) {
+    fail(`${where}: cefrLevel "${entry.cefrLevel}" dosya bandı (${band}) ile uyuşmuyor.`);
+  }
+  if (typeof entry.definition !== "string" || entry.definition.trim().length < 8) {
+    fail(`${where}: definition eksik ya da çok kısa.`);
+  }
+  if (entry.definition.toLowerCase().includes(entry.word.toLowerCase())) {
+    console.warn(`⚠️  ${where}: definition kelimenin kendisini içeriyor.`);
+  }
+  if (!Array.isArray(entry.examples) || entry.examples.length !== 3) {
+    fail(`${where}: examples tam 3 cümle olmalı.`);
+  }
+  if (!exampleContainsHeadword(entry.examples[0], entry.word)) {
+    fail(`${where}: 1. örnek cümle baş kelimeyi içermiyor.`);
+  }
+  if (!Array.isArray(entry.quiz) || entry.quiz.length !== 3) {
+    fail(`${where}: quiz tam 3 soru olmalı.`);
+  }
+  entry.quiz.forEach((q, i) => {
+    if (!q || typeof q.question !== "string" || !Array.isArray(q.options) || q.options.length !== 4) {
+      fail(`${where}: quiz[${i}] şekli bozuk (question + 4 options gerekli).`);
+    }
+    if (!Number.isInteger(q.correctAnswerIndex) || q.correctAnswerIndex < 0 || q.correctAnswerIndex > 3) {
+      fail(`${where}: quiz[${i}].correctAnswerIndex 0-3 aralığında olmalı.`);
+    }
+    const normalized = q.options.map((o) => String(o).trim().toLowerCase());
+    if (new Set(normalized).size !== 4) {
+      fail(`${where}: quiz[${i}] şıkları tekrar ediyor.`);
+    }
+    const correct = q.options[q.correctAnswerIndex];
+    if (q.type === "definition" && correct.trim() !== entry.definition.trim()) {
+      fail(`${where}: quiz[${i}] (definition) doğru şık definition ile birebir aynı olmalı.`);
+    }
+    if (q.type === "blank") {
+      if (!q.question.includes("_____")) {
+        fail(`${where}: quiz[${i}] (blank) soruda _____ yok.`);
+      }
+      if (correct.trim().toLowerCase() !== entry.word.trim().toLowerCase()) {
+        fail(`${where}: quiz[${i}] (blank) doğru şık baş kelime olmalı.`);
+      }
+    }
+  });
+}
+
+function buildGermanPackWord(entry) {
+  return {
+    word: entry.word,
+    cefrLevel: entry.cefrLevel.toLowerCase(),
+    phonetic: entry.phonetic || null,
+    partOfSpeech: entry.partOfSpeech || null,
+    domainTag: entry.domainTag || "general",
+    registerTag: entry.registerTag || "neutral",
+    frequencyBand: Number.isFinite(entry.frequencyBand) ? entry.frequencyBand : null,
+    definition: entry.definition,
+    examples: entry.examples,
+    quiz: entry.quiz,
+  };
+}
+
+/**
+ * Ay için Almanca pack üretir. Her gün her banttan 2 kelime (toplam 12).
+ * Bant havuzu ay bazında deterministik sıralanır; havuz kısaysa kelimeler
+ * mümkün olan en geniş aralıkla tekrar eder (N kelime → N/2 günde bir).
+ */
+function buildGermanPack(monthKey) {
+  const byBand = loadGermanPool();
+  const totalDays = daysInMonth(monthKey);
+
+  const rankedByBand = new Map();
+  for (const band of BANDS) {
+    const ranked = rankByDate(byBand.get(band), `de|month-${monthKey}|band-${band}`);
+    if (ranked.length < WORDS_PER_BAND_PER_DAY + 1) {
+      fail(`${band} bandında en az ${WORDS_PER_BAND_PER_DAY + 1} kelime gerekli.`);
+    }
+    if (ranked.length < totalDays) {
+      console.warn(
+        `⚠️  ${band.toUpperCase()}: havuzda ${ranked.length} kelime var; ay içinde ` +
+          `kelimeler ~${Math.ceil(ranked.length / WORDS_PER_BAND_PER_DAY)} günde bir tekrar eder.`
+      );
+    }
+    rankedByBand.set(band, ranked);
+  }
+
+  const days = {};
+  for (let day = 1; day <= totalDays; day++) {
+    const dayISO = isoDate(monthKey, day);
+    const words = [];
+    for (const band of BANDS) {
+      const ranked = rankedByBand.get(band);
+      const n = ranked.length;
+      const start = ((day - 1) * WORDS_PER_BAND_PER_DAY) % n;
+      for (let k = 0; k < WORDS_PER_BAND_PER_DAY; k++) {
+        words.push(buildGermanPackWord(ranked[(start + k) % n]));
+      }
+    }
+    days[dayISO] = { words };
+  }
+  return { month: monthKey, days };
+}
+
 // ----------------------- merge -----------------------
 
 function mergeWithExisting(existing, fresh) {
@@ -315,12 +487,13 @@ function mergeDay(existingDay, freshDay) {
 // ----------------------- main -----------------------
 
 function main() {
-  const { monthKey, force, merge } = parseArgs(process.argv);
+  const { monthKey, lang, force, merge } = parseArgs(process.argv);
 
   if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR, { recursive: true });
   }
-  const outPath = path.join(OUT_DIR, `${monthKey}.json`);
+  const fileName = lang === "en" ? `${monthKey}.json` : `${monthKey}.${lang}.json`;
+  const outPath = path.join(OUT_DIR, fileName);
   const exists = fs.existsSync(outPath);
 
   if (exists && !force && !merge) {
@@ -330,7 +503,7 @@ function main() {
     );
   }
 
-  const fresh = buildSkeleton(monthKey);
+  const fresh = lang === "de" ? buildGermanPack(monthKey) : buildSkeleton(monthKey);
 
   let final = fresh;
   if (exists && merge) {

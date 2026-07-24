@@ -9,6 +9,8 @@ struct PronounceButton: View {
     let word: String
     var audioURL: String?
     var size: CGFloat = 50
+    /// Learning language of the word; nil falls back to the current selection.
+    var languageCode: String?
 
     @ObservedObject private var pronunciation = WordPronunciationService.shared
 
@@ -23,7 +25,11 @@ struct PronounceButton: View {
     var body: some View {
         Button {
             Task {
-                await pronunciation.speak(word: word, preferredURL: audioURL)
+                await pronunciation.speak(
+                    word: word,
+                    preferredURL: audioURL,
+                    language: languageCode.map(LearningLanguage.fromCode) ?? .current
+                )
             }
         } label: {
             Group {

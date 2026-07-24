@@ -55,9 +55,14 @@ async function generateTextWithModelFallback(genAI, prompt) {
   throw lastError || new Error("No Gemini model succeeded.");
 }
 
+/** İstemcinin öğrenim dili → prompt'ta kullanılan dil adı. */
+function promptLanguageName(language) {
+  return language === "de" ? "German" : "English";
+}
+
 /**
  * Kelime için yeni bir örnek cümle üretir (Generate more).
- * Callable: { word, definition, exampleSentence }
+ * Callable: { word, definition, exampleSentence, language? }
  */
 exports.generateExample = functions.runWith(runtimeOpts).https.onCall(async (data, context) => {
   if (!context.auth) {
@@ -67,11 +72,12 @@ exports.generateExample = functions.runWith(runtimeOpts).https.onCall(async (dat
   if (!word || !definition) {
     throw new functions.https.HttpsError("invalid-argument", "word and definition required.");
   }
+  const languageName = promptLanguageName(data?.language);
 
   try {
     const genAI = getGemini();
 
-    const prompt = `You are an English vocabulary teacher. Generate ONE new, natural example sentence that uses the word "${word}" correctly. The word means: ${definition}.${exampleSentence ? ` Existing example (do not copy): ${exampleSentence}` : ""} Reply with ONLY the single sentence, no quotes, no explanation.`;
+    const prompt = `You are a ${languageName} vocabulary teacher. Generate ONE new, natural ${languageName} example sentence that uses the word "${word}" correctly. The word means: ${definition}.${exampleSentence ? ` Existing example (do not copy): ${exampleSentence}` : ""} Reply with ONLY the single sentence, no quotes, no explanation.`;
 
     const { result, modelName } = await generateTextWithModelFallback(genAI, prompt);
     const response = result.response;
@@ -90,7 +96,7 @@ exports.generateExample = functions.runWith(runtimeOpts).https.onCall(async (dat
 
 /**
  * Kullanıcının yazdığı cümleyi düzeltir (grammar/spelling). Kelime bağlamında.
- * Callable: { word, definition, userSentence }
+ * Callable: { word, definition, userSentence, language? }
  */
 exports.correctSentence = functions.runWith(runtimeOpts).https.onCall(async (data, context) => {
   if (!context.auth) {
@@ -100,11 +106,12 @@ exports.correctSentence = functions.runWith(runtimeOpts).https.onCall(async (dat
   if (!word || !userSentence) {
     throw new functions.https.HttpsError("invalid-argument", "word and userSentence required.");
   }
+  const languageName = promptLanguageName(data?.language);
 
   try {
     const genAI = getGemini();
 
-    const prompt = `You are an English teacher. The student wrote a sentence using the word "${word}"${definition ? ` (meaning: ${definition})` : ""}. Improve grammar, spelling, and natural word choice with MINIMAL edits: keep the student's wording and structure whenever possible; do not rewrite from scratch. One sentence only. Reply with ONLY the corrected sentence, no quotes, no explanation. Student's sentence: ${userSentence}`;
+    const prompt = `You are a ${languageName} teacher. The student wrote a ${languageName} sentence using the word "${word}"${definition ? ` (meaning: ${definition})` : ""}. Improve grammar, spelling, and natural word choice with MINIMAL edits: keep the student's wording and structure whenever possible; do not rewrite from scratch. One sentence only. Reply with ONLY the corrected sentence in ${languageName}, no quotes, no explanation. Student's sentence: ${userSentence}`;
 
     const { result, modelName } = await generateTextWithModelFallback(genAI, prompt);
     const response = result.response;
@@ -207,7 +214,7 @@ exports.scheduledDailyWords = functions
  */
 /**
  * Kelime telaffuzu: Storage'da MP3 yoksa Cloud TTS ile üretir, kalıcı download URL döner.
- * Callable: { word: string }
+ * Callable: { word: string, language?: "en" | "de" }
  */
 exports.ensureWordPronunciation = functions
   .runWith({ timeoutSeconds: 60, memory: "256MB" })
@@ -219,8 +226,9 @@ exports.ensureWordPronunciation = functions
     if (!word || word.length > 64) {
       throw new functions.https.HttpsError("invalid-argument", "word is required (max 64 chars).");
     }
+    const language = data?.language === "de" ? "de" : "en";
     try {
-      return await ensureWordPronunciation(word);
+      return await ensureWordPronunciation(word, language);
     } catch (err) {
       console.error("ensureWordPronunciation error:", err.message || err);
       throw new functions.https.HttpsError("internal", err.message || "Pronunciation failed");

@@ -54,55 +54,68 @@ final class WordPackStore {
     static let shared = WordPackStore()
 
     private var cache: [String: WordPack] = [:]
-    private var missingMonthsLogged = Set<String>()
+    private var missingPacksLogged = Set<String>()
 
     private init() {}
 
     // MARK: Public API
 
     /// Cached pack for the month, or nil if missing.
-    func pack(forMonth monthKey: String) -> WordPack? {
-        if let cached = cache[monthKey] { return cached }
-        guard let pack = Self.loadPack(forMonth: monthKey) else {
-            if !missingMonthsLogged.contains(monthKey) {
-                missingMonthsLogged.insert(monthKey)
-                print("⚠️ WordPack: \(monthKey).json bundle'da bulunamadı. " +
-                      "`maia/WordPacks/\(monthKey).json` ekleyin (Xcode otomatik dahil eder).")
+    func pack(forMonth monthKey: String, language: LearningLanguage = .current) -> WordPack? {
+        let resource = language.packResourceName(forMonth: monthKey)
+        if let cached = cache[resource] { return cached }
+        guard let pack = Self.loadPack(forMonth: monthKey, language: language) else {
+            if !missingPacksLogged.contains(resource) {
+                missingPacksLogged.insert(resource)
+                print("⚠️ WordPack: \(resource).json bundle'da bulunamadı. " +
+                      "`maia/WordPacks/\(resource).json` ekleyin (Xcode otomatik dahil eder).")
             }
             return nil
         }
-        cache[monthKey] = pack
+        cache[resource] = pack
         return pack
     }
 
     /// All curated words for a day (12 suggested). Returns [] if day is missing.
-    func entries(for date: String) -> [WordPackWord] {
+    func entries(for date: String, language: LearningLanguage = .current) -> [WordPackWord] {
         guard let monthKey = Self.monthKey(from: date) else { return [] }
-        guard let pack = pack(forMonth: monthKey) else { return [] }
+        guard let pack = pack(forMonth: monthKey, language: language) else { return [] }
         return pack.days[date]?.words ?? []
     }
 
     /// Returns three Words for the user level. Missing bands are filled via
     /// CEFRLevelMapping.fallbackBandPriority; returns [] when empty.
-    func words(for date: String, userLevel: Int) -> [Word] {
-        let all = entries(for: date)
+    func words(for date: String, userLevel: Int, language: LearningLanguage = .current) -> [Word] {
+        let all = entries(for: date, language: language)
         guard !all.isEmpty else { return [] }
         let picked = Self.selectByPreferredBands(all, userLevel: userLevel, date: date)
-        return picked.map { $0.toWord() }
+        return picked.map { $0.toWord(language: language) }
     }
 
     /// QuizManager: word + date → three pre-written quiz questions.
-    func quizQuestions(forWord word: String, date: String) -> [WordPackQuiz]? {
-        let entries = entries(for: date)
-        guard let entry = entries.first(where: { $0.word.lowercased() == word.lowercased() }) else {
+    /// If the word isn't in that day's entries (e.g. a review of an older word),
+    /// the rest of the month is scanned so curated questions are still preferred.
+    func quizQuestions(forWord word: String, date: String, language: LearningLanguage = .current) -> [WordPackQuiz]? {
+        let lowered = word.lowercased()
+        let entries = entries(for: date, language: language)
+        if let entry = entries.first(where: { $0.word.lowercased() == lowered }) {
+            return entry.quiz
+        }
+        guard let monthKey = Self.monthKey(from: date),
+              let pack = pack(forMonth: monthKey, language: language) else {
             return nil
         }
-        return entry.quiz
+        for day in pack.days.keys.sorted() {
+            if let entry = pack.days[day]?.words.first(where: { $0.word.lowercased() == lowered }) {
+                return entry.quiz
+            }
+        }
+        return nil
     }
 
     /// Generate More: reveals pre-written 2nd/3rd example sentences.
-    func extraExampleSentences(forWord word: String, date: String) -> [String] {
-        let entries = entries(for: date)
+    func extraExampleSentences(forWord word: String, date: String, language: LearningLanguage = .current) -> [String] {
+        let entries = entries(for: date, language: language)
         guard let entry = entries.first(where: { $0.word.lowercased() == word.lowercased() }),
               entry.examples.count > 1 else {
             return []
@@ -118,10 +131,11 @@ final class WordPackStore {
         return "\(parts[0])-\(parts[1])"
     }
 
-    private static func loadPack(forMonth monthKey: String) -> WordPack? {
+    private static func loadPack(forMonth monthKey: String, language: LearningLanguage) -> WordPack? {
+        let resource = language.packResourceName(forMonth: monthKey)
         let candidates: [URL?] = [
-            Bundle.main.url(forResource: monthKey, withExtension: "json", subdirectory: "WordPacks"),
-            Bundle.main.url(forResource: monthKey, withExtension: "json")
+            Bundle.main.url(forResource: resource, withExtension: "json", subdirectory: "WordPacks"),
+            Bundle.main.url(forResource: resource, withExtension: "json")
         ]
         for case let url? in candidates {
             if let pack = decode(at: url, monthKey: monthKey) {
@@ -223,14 +237,17 @@ final class WordPackStore {
 // MARK: - Word bridge
 
 extension WordPackWord {
-    func toWord() -> Word {
+    func toWord(language: LearningLanguage = .current) -> Word {
         let cleanedExamples = examples.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
         let primary = cleanedExamples.first ?? ""
         let second = cleanedExamples.indices.contains(1) ? cleanedExamples[1] : nil
         let third = cleanedExamples.indices.contains(2) ? cleanedExamples[2] : nil
 
         return Word(
-            id: UUID.stable(from: word.lowercased()),
+            // Language in the id keeps en/de words with the same spelling distinct.
+            id: UUID.stable(from: language == .english
+                ? word.lowercased()
+                : "\(language.code)|\(word.lowercased())"),
             word: word,
             definition: definition,
             exampleSentence: primary,
@@ -242,7 +259,8 @@ extension WordPackWord {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech?.lowercased(),
             registerTag: registerTag?.lowercased(),
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            languageCode: language.code
         )
     }
 }

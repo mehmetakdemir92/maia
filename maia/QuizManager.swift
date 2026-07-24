@@ -574,8 +574,11 @@ class QuizManager: ObservableObject {
     /// to prevent memorizing positions.
     private func curatedQuestions(for word: Word, count: Int, attemptNumber: Int) -> [QuizQuestion]? {
         let date = quizDayISO()
-        guard let presets = DailyWordsService.curatedQuiz(forWord: word.word, date: date),
-              !presets.isEmpty else {
+        guard let presets = DailyWordsService.curatedQuiz(
+            forWord: word.word,
+            date: date,
+            language: word.learningLanguage
+        ), !presets.isEmpty else {
             return nil
         }
         let seedInput = "\(word.word.lowercased())|\(date)|curated|a\(attemptNumber)"

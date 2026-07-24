@@ -105,7 +105,7 @@ struct ReviewListView: View {
 
                                         Spacer()
 
-                                        PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 36)
+                                        PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 36, languageCode: word.languageCode)
 
                                         Text(nextDueText(for: word))
                                             .font(.caption)

@@ -21,16 +21,17 @@ final class DailyWordsService {
 
     // MARK: - Public API
 
-    /// Three words for a date, selected from WordPack.
+    /// Three words for a date, selected from WordPack (current learning language).
     /// Applies manual override when set (definition/sentences/quiz still from WordPack).
     func ensureDailyWords(date: String, category _: String, userLevel: Int) async throws -> [Word] {
-        let words = Self.resolveWords(date: date, userLevel: userLevel)
+        let language = LearningLanguage.current
+        let words = Self.resolveWords(date: date, userLevel: userLevel, language: language)
 
         guard !words.isEmpty else {
             throw NSError(
                 domain: "DailyWordsService",
                 code: -10,
-                userInfo: [NSLocalizedDescriptionKey: Self.missingPackErrorMessage(for: date)]
+                userInfo: [NSLocalizedDescriptionKey: Self.missingPackErrorMessage(for: date, language: language)]
             )
         }
         guard words.count == 3 else {
@@ -41,7 +42,7 @@ final class DailyWordsService {
             )
         }
 
-        DailyWordUsageStore.shared.markUsed(words: words.map(\.word), level: userLevel)
+        DailyWordUsageStore.shared.markUsed(words: words.map(\.word), level: userLevel, language: language)
 
         let withAudio = await Self.attachPronunciations(to: words)
         return withAudio
@@ -56,16 +57,16 @@ final class DailyWordsService {
 
     // MARK: - Word selection
 
-    private static func resolveWords(date: String, userLevel: Int) -> [Word] {
+    private static func resolveWords(date: String, userLevel: Int, language: LearningLanguage) -> [Word] {
         if let manual = manualWordsByDate[date], manual.count == 3,
-           let resolved = wordsForManualOverride(date: date, userLevel: userLevel, lemmas: manual) {
+           let resolved = wordsForManualOverride(date: date, userLevel: userLevel, lemmas: manual, language: language) {
             return resolved
         }
-        return WordPackStore.shared.words(for: date, userLevel: userLevel)
+        return WordPackStore.shared.words(for: date, userLevel: userLevel, language: language)
     }
 
-    private static func wordsForManualOverride(date: String, userLevel: Int, lemmas: [String]) -> [Word]? {
-        let entries = WordPackStore.shared.entries(for: date)
+    private static func wordsForManualOverride(date: String, userLevel: Int, lemmas: [String], language: LearningLanguage) -> [Word]? {
+        let entries = WordPackStore.shared.entries(for: date, language: language)
         guard !entries.isEmpty else { return nil }
         let lookup = Dictionary(uniqueKeysWithValues: entries.map { ($0.word.lowercased(), $0) })
         var resolved: [Word] = []
@@ -74,7 +75,7 @@ final class DailyWordsService {
                 print("⚠️ DailyWordsService.manualWordsByDate[\(date)]: '\(lemma)' WordPack'te yok.")
                 return nil
             }
-            resolved.append(entry.toWord())
+            resolved.append(entry.toWord(language: language))
         }
         _ = userLevel
         return resolved
@@ -83,13 +84,13 @@ final class DailyWordsService {
     // MARK: - Helpers (legacy API hooks)
 
     /// QuizManager: reads curated quizzes for a date/word pair.
-    static func curatedQuiz(forWord word: String, date: String) -> [WordPackQuiz]? {
-        WordPackStore.shared.quizQuestions(forWord: word, date: date)
+    static func curatedQuiz(forWord word: String, date: String, language: LearningLanguage = .current) -> [WordPackQuiz]? {
+        WordPackStore.shared.quizQuestions(forWord: word, date: date, language: language)
     }
 
     /// TodayTabView: reads pre-written 2nd/3rd sentences for Generate More.
-    static func extraExamples(forWord word: String, date: String) -> [String] {
-        WordPackStore.shared.extraExampleSentences(forWord: word, date: date)
+    static func extraExamples(forWord word: String, date: String, language: LearningLanguage = .current) -> [String] {
+        WordPackStore.shared.extraExampleSentences(forWord: word, date: date, language: language)
     }
 
     /// Legacy WordOfTheDayManager hook; same pool band check for CEFR compatibility.
@@ -122,7 +123,7 @@ final class DailyWordsService {
         let options: NSString.CompareOptions = [.regularExpression, .caseInsensitive]
         if example.range(of: "\\b\(escaped)\\b", options: options) != nil { return true }
 
-        let suffixes = ["s", "es", "ed", "ing", "er", "est", "ly", "d"]
+        let suffixes = word.learningLanguage.headwordSuffixes
         for suffix in suffixes {
             if example.range(of: "\\b\(escaped)\(suffix)\\b", options: options) != nil { return true }
         }
@@ -143,7 +144,10 @@ final class DailyWordsService {
         await withTaskGroup(of: (Int, String?).self) { group in
             for (index, item) in words.enumerated() where item.pronunciationAudioURL == nil {
                 group.addTask {
-                    let url = await WordPronunciationService.shared.resolveAudioURL(for: item.word)
+                    let url = await WordPronunciationService.shared.resolveAudioURL(
+                        for: item.word,
+                        language: item.learningLanguage
+                    )
                     return (index, url)
                 }
             }
@@ -158,11 +162,11 @@ final class DailyWordsService {
 
     // MARK: - Error messages
 
-    private static func missingPackErrorMessage(for date: String) -> String {
+    private static func missingPackErrorMessage(for date: String, language: LearningLanguage) -> String {
         let monthKey = WordPackStore.monthKey(from: date) ?? date
         return String(
             format: String(localized: "Today's words aren't curated yet. Add maia/WordPacks/%@.json and rebuild."),
-            monthKey
+            language.packResourceName(forMonth: monthKey)
         )
     }
 

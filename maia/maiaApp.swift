@@ -14,6 +14,7 @@ import GoogleMobileAds
 @main
 struct maiaApp: App {
     @StateObject private var languageManager = AppLanguageManager()
+    @StateObject private var learningLanguageManager = LearningLanguageManager()
 
     init() {
         Bundle.maiaEnsureLocalizationSwizzle()
@@ -27,6 +28,7 @@ struct maiaApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(languageManager)
+                .environmentObject(learningLanguageManager)
                 .environment(\.locale, languageManager.effectiveLocale)
                 .onOpenURL { url in
                     if Auth.auth().canHandle(url) { return }

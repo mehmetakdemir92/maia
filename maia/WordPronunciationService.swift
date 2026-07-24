@@ -33,7 +33,11 @@ final class WordPronunciationService: NSObject, ObservableObject {
             await withTaskGroup(of: Void.self) { group in
                 for item in words {
                     group.addTask {
-                        await self.prefetch(word: item.word, preferredURL: item.pronunciationAudioURL)
+                        await self.prefetch(
+                            word: item.word,
+                            preferredURL: item.pronunciationAudioURL,
+                            language: item.learningLanguage
+                        )
                     }
                 }
             }
@@ -41,66 +45,66 @@ final class WordPronunciationService: NSObject, ObservableObject {
     }
 
     /// Callable + cache; returns URL without playing (enrich / diary sync).
-    func resolveAudioURL(for word: String, preferredURL: String? = nil) async -> String? {
+    func resolveAudioURL(for word: String, preferredURL: String? = nil, language: LearningLanguage = .current) async -> String? {
         let lemma = Self.normalizeLemma(word)
         guard !lemma.isEmpty else { return nil }
         if let preferredURL, !preferredURL.isEmpty { return preferredURL }
-        if let cached = cachedURL(for: lemma) { return cached }
-        if FileManager.default.fileExists(atPath: localFileURL(for: lemma).path),
-           let cached = cachedURL(for: lemma) {
+        if let cached = cachedURL(for: lemma, language: language) { return cached }
+        if FileManager.default.fileExists(atPath: localFileURL(for: lemma, language: language).path),
+           let cached = cachedURL(for: lemma, language: language) {
             return cached
         }
-        guard let fetched = await fetchCloudAudioURL(word: word) else { return nil }
-        publishResolvedURL(fetched, lemma: lemma)
+        guard let fetched = await fetchCloudAudioURL(word: word, language: language) else { return nil }
+        publishResolvedURL(fetched, lemma: lemma, language: language)
         if let url = URL(string: fetched) {
-            _ = await playRemoteOrCached(url: url, lemma: lemma, playAudio: false)
+            _ = await playRemoteOrCached(url: url, lemma: lemma, language: language, playAudio: false)
         }
         return fetched
     }
 
-    func prefetch(word: String, preferredURL: String? = nil) async {
+    func prefetch(word: String, preferredURL: String? = nil, language: LearningLanguage = .current) async {
         let lemma = Self.normalizeLemma(word)
         guard !lemma.isEmpty else { return }
-        if FileManager.default.fileExists(atPath: localFileURL(for: lemma).path) { return }
+        if FileManager.default.fileExists(atPath: localFileURL(for: lemma, language: language).path) { return }
 
-        if let urlString = preferredURL ?? cachedURL(for: lemma),
+        if let urlString = preferredURL ?? cachedURL(for: lemma, language: language),
            let url = URL(string: urlString) {
-            _ = await playRemoteOrCached(url: url, lemma: lemma, playAudio: false)
+            _ = await playRemoteOrCached(url: url, lemma: lemma, language: language, playAudio: false)
             return
         }
 
-        if let fetched = await fetchCloudAudioURL(word: word) {
-            publishResolvedURL(fetched, lemma: lemma)
+        if let fetched = await fetchCloudAudioURL(word: word, language: language) {
+            publishResolvedURL(fetched, lemma: lemma, language: language)
             if let url = URL(string: fetched) {
-                _ = await playRemoteOrCached(url: url, lemma: lemma, playAudio: false)
+                _ = await playRemoteOrCached(url: url, lemma: lemma, language: language, playAudio: false)
             }
         }
     }
 
-    func speak(word: String, preferredURL: String? = nil) async {
+    func speak(word: String, preferredURL: String? = nil, language: LearningLanguage = .current) async {
         let lemma = Self.normalizeLemma(word)
         guard !lemma.isEmpty else { return }
 
         stop()
 
-        if let urlString = preferredURL ?? cachedURL(for: lemma),
+        if let urlString = preferredURL ?? cachedURL(for: lemma, language: language),
            let url = URL(string: urlString),
-           await playRemoteOrCached(url: url, lemma: lemma, playAudio: true) {
+           await playRemoteOrCached(url: url, lemma: lemma, language: language, playAudio: true) {
             return
         }
 
         loadingLemma = lemma
         defer { if loadingLemma == lemma { loadingLemma = nil } }
 
-        if let fetched = await fetchCloudAudioURL(word: word) {
-            publishResolvedURL(fetched, lemma: lemma)
+        if let fetched = await fetchCloudAudioURL(word: word, language: language) {
+            publishResolvedURL(fetched, lemma: lemma, language: language)
             if let url = URL(string: fetched),
-               await playRemoteOrCached(url: url, lemma: lemma, playAudio: true) {
+               await playRemoteOrCached(url: url, lemma: lemma, language: language, playAudio: true) {
                 return
             }
         }
 
-        speakWithTTS(word)
+        speakWithTTS(word, language: language)
         loadingLemma = nil
     }
 
@@ -115,9 +119,10 @@ final class WordPronunciationService: NSObject, ObservableObject {
 
     // MARK: - Cloud
 
-    private func fetchCloudAudioURL(word: String) async -> String? {
+    private func fetchCloudAudioURL(word: String, language: LearningLanguage) async -> String? {
         do {
-            let result = try await functions.httpsCallable("ensureWordPronunciation").call(["word": word])
+            let result = try await functions.httpsCallable("ensureWordPronunciation")
+                .call(["word": word, "language": language.code])
             guard let data = result.data as? [String: Any],
                   let url = data["audioURL"] as? String,
                   !url.isEmpty else {
@@ -132,8 +137,8 @@ final class WordPronunciationService: NSObject, ObservableObject {
 
     // MARK: - Playback
 
-    private func playRemoteOrCached(url: URL, lemma: String, playAudio: Bool) async -> Bool {
-        let local = localFileURL(for: lemma)
+    private func playRemoteOrCached(url: URL, lemma: String, language: LearningLanguage, playAudio: Bool) async -> Bool {
+        let local = localFileURL(for: lemma, language: language)
         if !FileManager.default.fileExists(atPath: local.path) {
             do {
                 let (data, _) = try await URLSession.shared.data(from: url)
@@ -170,8 +175,8 @@ final class WordPronunciationService: NSObject, ObservableObject {
         }
     }
 
-    private func publishResolvedURL(_ url: String, lemma: String) {
-        cacheURL(url, for: lemma)
+    private func publishResolvedURL(_ url: String, lemma: String, language: LearningLanguage) {
+        cacheURL(url, for: lemma, language: language)
         NotificationCenter.default.post(
             name: .pronunciationAudioURLResolved,
             object: nil,
@@ -179,9 +184,9 @@ final class WordPronunciationService: NSObject, ObservableObject {
         )
     }
 
-    private func speakWithTTS(_ word: String) {
+    private func speakWithTTS(_ word: String, language: LearningLanguage) {
         let utterance = AVSpeechUtterance(string: word)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.voice = AVSpeechSynthesisVoice(language: language.speechVoiceCode)
         utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.92
         speakingLemma = Self.normalizeLemma(word)
         speechSynthesizer.speak(utterance)
@@ -189,18 +194,28 @@ final class WordPronunciationService: NSObject, ObservableObject {
 
     // MARK: - Cache
 
-    private func cachedURL(for lemma: String) -> String? {
-        UserDefaults.standard.string(forKey: urlCachePrefix + lemma)
+    /// English keeps the legacy key/path so existing caches remain valid.
+    private func urlCacheKey(for lemma: String, language: LearningLanguage) -> String {
+        language == .english
+            ? urlCachePrefix + lemma
+            : urlCachePrefix + language.code + "." + lemma
     }
 
-    private func cacheURL(_ url: String, for lemma: String) {
-        UserDefaults.standard.set(url, forKey: urlCachePrefix + lemma)
+    private func cachedURL(for lemma: String, language: LearningLanguage) -> String? {
+        UserDefaults.standard.string(forKey: urlCacheKey(for: lemma, language: language))
     }
 
-    private func localFileURL(for lemma: String) -> URL {
+    private func cacheURL(_ url: String, for lemma: String, language: LearningLanguage) {
+        UserDefaults.standard.set(url, forKey: urlCacheKey(for: lemma, language: language))
+    }
+
+    private func localFileURL(for lemma: String, language: LearningLanguage) -> URL {
         let base = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        return base.appendingPathComponent("pronunciations", isDirectory: true)
-            .appendingPathComponent("\(lemma).mp3", isDirectory: false)
+        var dir = base.appendingPathComponent("pronunciations", isDirectory: true)
+        if language != .english {
+            dir = dir.appendingPathComponent(language.code, isDirectory: true)
+        }
+        return dir.appendingPathComponent("\(lemma).mp3", isDirectory: false)
     }
 
     static func normalizeLemma(_ word: String) -> String {

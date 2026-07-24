@@ -1,0 +1,482 @@
+[
+  {
+    "word": "Diskrepanz",
+    "cefrLevel": "c2",
+    "phonetic": "/dɪskʁeˈpants/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Ein deutlicher Widerspruch zwischen zwei Dingen, die zusammenpassen sollten.",
+    "examples": [
+      "Die Diskrepanz zwischen Anspruch und Wirklichkeit ist offensichtlich.",
+      "Zwischen den beiden Gutachten besteht eine erhebliche Diskrepanz.",
+      "Die Studie belegt eine wachsende Diskrepanz zwischen Löhnen und Mieten."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Diskrepanz“?", "options": ["Ein deutlicher Widerspruch zwischen zwei Dingen, die zusammenpassen sollten.", "Eine höfliche Umschreibung für eine Absage.", "Ein Fachbegriff für eine gelungene Übersetzung.", "Eine seltene Form der öffentlichen Belobigung."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ zwischen Anspruch und Wirklichkeit ist offensichtlich.", "options": ["Diskrepanz", "Dominanz", "Distanz", "Diagnose"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Zwischen den beiden Gutachten besteht eine erhebliche _____.", "options": ["Diskrepanz", "Ambivalenz", "Zäsur", "Quintessenz"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Ambivalenz",
+    "cefrLevel": "c2",
+    "phonetic": "/ambivaˈlɛnts/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Das gleichzeitige Bestehen widersprüchlicher Gefühle oder Bewertungen.",
+    "examples": [
+      "Seine Ambivalenz gegenüber der neuen Technik ist verständlich.",
+      "Der Roman lebt von der Ambivalenz seiner Hauptfigur.",
+      "Sie sprach offen über ihre Ambivalenz zwischen Karriere und Familie."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Ambivalenz“?", "options": ["Das gleichzeitige Bestehen widersprüchlicher Gefühle oder Bewertungen.", "Die feierliche Eröffnung einer Ausstellung.", "Eine besonders schnelle Auffassungsgabe.", "Ein Mangel an sprachlichem Ausdruck."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Seine _____ gegenüber der neuen Technik ist verständlich.", "options": ["Ambivalenz", "Arroganz", "Akzeptanz", "Assistenz"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Roman lebt von der _____ seiner Hauptfigur.", "options": ["Ambivalenz", "Diskrepanz", "Tragweite", "Befangenheit"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Tragweite",
+    "cefrLevel": "c2",
+    "phonetic": "/ˈtʁaːkvaɪtə/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Das gesamte Ausmaß der Folgen einer Entscheidung oder eines Ereignisses.",
+    "examples": [
+      "Die Tragweite dieser Entscheidung wurde erst Jahre später sichtbar.",
+      "Ihm war die Tragweite seiner Worte offenbar nicht bewusst.",
+      "Ein Urteil von solcher Tragweite verlangt sorgfältige Begründung."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Tragweite“?", "options": ["Das gesamte Ausmaß der Folgen einer Entscheidung oder eines Ereignisses.", "Die maximale Belastbarkeit einer Brücke.", "Die Dauer einer gerichtlichen Verhandlung.", "Der Umfang eines literarischen Werkes."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ dieser Entscheidung wurde erst Jahre später sichtbar.", "options": ["Tragweite", "Reichweite", "Laufzeit", "Feinheit"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ihm war die _____ seiner Worte offenbar nicht bewusst.", "options": ["Tragweite", "Quintessenz", "Ambivalenz", "Zäsur"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Inbegriff",
+    "cefrLevel": "c2",
+    "phonetic": "/ˈɪnbəɡʁɪf/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Das vollkommenste Beispiel für eine Eigenschaft oder Idee.",
+    "examples": [
+      "Für viele ist Venedig der Inbegriff romantischer Städte.",
+      "Der maßgeschneiderte Anzug galt als Inbegriff der Eleganz.",
+      "Dieses Gericht ist der Inbegriff italienischer Küche."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Inbegriff“?", "options": ["Das vollkommenste Beispiel für eine Eigenschaft oder Idee.", "Der einleitende Absatz eines Vertrages.", "Eine kurze Zusammenfassung eines Vortrags.", "Ein Verzeichnis aller Begriffe eines Buches."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Für viele ist Venedig der _____ romantischer Städte.", "options": ["Inbegriff", "Eingriff", "Angriff", "Ausdruck"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Dieses Gericht ist der _____ italienischer Küche.", "options": ["Inbegriff", "Inhalt", "Umriss", "Anfang"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Befangenheit",
+    "cefrLevel": "c2",
+    "phonetic": "/bəˈfaŋənhaɪt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Das Fehlen von Neutralität wegen persönlicher Interessen oder Nähe.",
+    "examples": [
+      "Wegen möglicher Befangenheit gab der Richter den Fall ab.",
+      "Der Gutachter wies den Vorwurf der Befangenheit zurück.",
+      "Ihre frühere Tätigkeit für die Firma begründet den Verdacht der Befangenheit."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Befangenheit“?", "options": ["Das Fehlen von Neutralität wegen persönlicher Interessen oder Nähe.", "Die Angst, vor großem Publikum zu sprechen.", "Eine besonders gründliche Art der Aktenführung.", "Das Recht, eine Aussage zu verweigern."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Wegen möglicher _____ gab der Richter den Fall ab.", "options": ["Befangenheit", "Gelassenheit", "Verlegenheit", "Abwesenheit"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Gutachter wies den Vorwurf der _____ zurück.", "options": ["Befangenheit", "Tragweite", "Diskrepanz", "Ambivalenz"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Ermessen",
+    "cefrLevel": "c2",
+    "phonetic": "/ɛɐ̯ˈmɛsn̩/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Der Spielraum, nach eigener Einschätzung zu entscheiden.",
+    "examples": [
+      "Die Höhe des Trinkgelds liegt im Ermessen der Gäste.",
+      "Die Behörde entschied nach eigenem Ermessen über den Antrag.",
+      "Nach menschlichem Ermessen war der Unfall nicht vermeidbar."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Ermessen“?", "options": ["Der Spielraum, nach eigener Einschätzung zu entscheiden.", "Ein amtliches Verfahren zur Landvermessung.", "Die Pflicht, Anweisungen genau zu befolgen.", "Eine Methode zur Prüfung von Bauplänen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Höhe des Trinkgelds liegt im _____ der Gäste.", "options": ["Ermessen", "Erlebnis", "Ergebnis", "Erstaunen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Behörde entschied nach eigenem _____ über den Antrag.", "options": ["Ermessen", "Ermitteln", "Erwarten", "Erinnern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Zäsur",
+    "cefrLevel": "c2",
+    "phonetic": "/tsɛˈzuːɐ̯/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Ein tiefer Einschnitt, der eine Entwicklung deutlich in zwei Phasen teilt.",
+    "examples": [
+      "Der Mauerfall markiert eine Zäsur in der deutschen Geschichte.",
+      "Der Trainerwechsel bedeutete eine klare Zäsur für den Verein.",
+      "Ihr Umzug ins Ausland war eine bewusste Zäsur in ihrem Leben."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Zäsur“?", "options": ["Ein tiefer Einschnitt, der eine Entwicklung deutlich in zwei Phasen teilt.", "Eine kurze Pause zwischen zwei Unterrichtsstunden.", "Ein Werkzeug zum Schneiden von Papier.", "Eine Anmerkung am Rand eines Manuskripts."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Mauerfall markiert eine _____ in der deutschen Geschichte.", "options": ["Zäsur", "Zensur", "Zutat", "Zunahme"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Trainerwechsel bedeutete eine klare _____ für den Verein.", "options": ["Zäsur", "Quintessenz", "Diskrepanz", "Befangenheit"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "Quintessenz",
+    "cefrLevel": "c2",
+    "phonetic": "/kvɪntʔɛˈsɛnts/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Der wesentliche Kern, der aus einer längeren Überlegung übrig bleibt.",
+    "examples": [
+      "Die Quintessenz des Vortrags passte in einen einzigen Satz.",
+      "Als Quintessenz der Studie bleibt: Vorbeugen ist günstiger als Heilen.",
+      "Er fasste die Quintessenz der Debatte nüchtern zusammen."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „Quintessenz“?", "options": ["Der wesentliche Kern, der aus einer längeren Überlegung übrig bleibt.", "Ein seltenes Gewürz aus Südostasien.", "Die fünfte Auflage eines Fachbuchs.", "Ein feierlicher Abschluss einer Rede."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die _____ des Vortrags passte in einen einzigen Satz.", "options": ["Quintessenz", "Konsequenz", "Frequenz", "Präsenz"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er fasste die _____ der Debatte nüchtern zusammen.", "options": ["Quintessenz", "Zäsur", "Ambivalenz", "Tragweite"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "untermauern",
+    "cefrLevel": "c2",
+    "phonetic": "/ʊntɐˈmaʊɐn/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Eine Behauptung mit zusätzlichen Belegen stützen.",
+    "examples": [
+      "Sie konnte ihre These mit aktuellen Zahlen untermauern.",
+      "Der Anwalt will die Aussage durch Gutachten untermauern.",
+      "Neue Funde untermauern die Theorie der Forscher."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „untermauern“?", "options": ["Eine Behauptung mit zusätzlichen Belegen stützen.", "Ein Gebäude von Grund auf sanieren.", "Eine Diskussion absichtlich verlängern.", "Einen Text um die Hälfte kürzen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie konnte ihre These mit aktuellen Zahlen _____.", "options": ["untermauern", "relativieren", "monieren", "revidieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Neue Funde _____ die Theorie der Forscher.", "options": ["untermauern", "suggerieren", "präzisieren", "antizipieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "relativieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ʁelatiˈviːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Eine Aussage abschwächen, indem man sie in einen größeren Zusammenhang stellt.",
+    "examples": [
+      "Später versuchte er, seine scharfe Kritik zu relativieren.",
+      "Die neuen Daten relativieren den vermeintlichen Erfolg.",
+      "Man muss diese Zahlen im historischen Vergleich relativieren."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „relativieren“?", "options": ["Eine Aussage abschwächen, indem man sie in einen größeren Zusammenhang stellt.", "Eine Behauptung mit Nachdruck wiederholen.", "Ein Dokument in mehrere Sprachen übersetzen.", "Eine Regel ohne Ausnahme durchsetzen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Später versuchte er, seine scharfe Kritik zu _____.", "options": ["relativieren", "untermauern", "monieren", "konterkarieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die neuen Daten _____ den vermeintlichen Erfolg.", "options": ["relativieren", "präzisieren", "revidieren", "suggerieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "antizipieren",
+    "cefrLevel": "c2",
+    "phonetic": "/antitsiˈpiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Etwas gedanklich vorwegnehmen, bevor es tatsächlich eintritt.",
+    "examples": [
+      "Gute Schachspieler antizipieren die Züge des Gegners.",
+      "Das Unternehmen konnte den Trend frühzeitig antizipieren.",
+      "Eine kluge Planung muss mögliche Engpässe antizipieren."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „antizipieren“?", "options": ["Etwas gedanklich vorwegnehmen, bevor es tatsächlich eintritt.", "Etwas nachträglich schriftlich bestätigen.", "Eine Entscheidung an ein Gremium delegieren.", "Ein Ereignis ausführlich dokumentieren."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Gute Schachspieler _____ die Züge des Gegners.", "options": ["antizipieren", "untermauern", "monieren", "revidieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Unternehmen konnte den Trend frühzeitig _____.", "options": ["antizipieren", "relativieren", "konterkarieren", "präzisieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "konterkarieren",
+    "cefrLevel": "c2",
+    "phonetic": "/kɔntɐkaˈʁiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Einer Absicht gezielt entgegenwirken und sie dadurch untergraben.",
+    "examples": [
+      "Die neuen Subventionen konterkarieren die eigenen Klimaziele.",
+      "Sein spöttischer Ton konterkarierte die ernste Botschaft.",
+      "Solche Ausnahmen konterkarieren den Zweck der Regel."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „konterkarieren“?", "options": ["Einer Absicht gezielt entgegenwirken und sie dadurch untergraben.", "Eine Entscheidung feierlich verkünden.", "Einen Plan Schritt für Schritt umsetzen.", "Eine Rechnung sorgfältig kontrollieren."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die neuen Subventionen _____ die eigenen Klimaziele.", "options": ["konterkarieren", "untermauern", "antizipieren", "präzisieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Solche Ausnahmen _____ den Zweck der Regel.", "options": ["konterkarieren", "relativieren", "revidieren", "suggerieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "präzisieren",
+    "cefrLevel": "c2",
+    "phonetic": "/pʁɛtsiˈziːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Eine Aussage genauer und eindeutiger formulieren.",
+    "examples": [
+      "Könnten Sie Ihre Forderung bitte präzisieren?",
+      "Der Minister musste seine Aussage später präzisieren.",
+      "Wir präzisieren die Anforderungen im nächsten Kapitel."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „präzisieren“?", "options": ["Eine Aussage genauer und eindeutiger formulieren.", "Eine Nachricht möglichst schnell verbreiten.", "Ein Messgerät regelmäßig reinigen.", "Eine Vermutung stillschweigend übernehmen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Könnten Sie Ihre Forderung bitte _____?", "options": ["präzisieren", "monieren", "konterkarieren", "untermauern"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Minister musste seine Aussage später _____.", "options": ["präzisieren", "antizipieren", "suggerieren", "relativieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "suggerieren",
+    "cefrLevel": "c2",
+    "phonetic": "/zʊɡeˈʁiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "media",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Einen Eindruck erwecken, ohne ihn direkt auszusprechen.",
+    "examples": [
+      "Die Werbung will suggerieren, dass Glück käuflich sei.",
+      "Die Schlagzeile suggeriert einen Skandal, den es nie gab.",
+      "Solche Statistiken suggerieren eine Genauigkeit, die trügt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „suggerieren“?", "options": ["Einen Eindruck erwecken, ohne ihn direkt auszusprechen.", "Eine Behauptung mit Quellen belegen.", "Einen Vorschlag offiziell einreichen.", "Eine Entscheidung gerichtlich anfechten."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Werbung will _____, dass Glück käuflich sei.", "options": ["suggerieren", "präzisieren", "monieren", "revidieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Solche Statistiken _____ eine Genauigkeit, die trügt.", "options": ["suggerieren", "untermauern", "antizipieren", "konterkarieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "revidieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ʁeviˈdiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Eine frühere Meinung oder Entscheidung nach Prüfung ändern.",
+    "examples": [
+      "Nach dem Gespräch musste ich mein Urteil revidieren.",
+      "Die Prognose wurde nach unten revidiert.",
+      "Er war bereit, seinen Standpunkt zu revidieren."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „revidieren“?", "options": ["Eine frühere Meinung oder Entscheidung nach Prüfung ändern.", "Eine Meinung besonders laut vertreten.", "Ein Buch zum zweiten Mal lesen.", "Eine Maschine gründlich reparieren."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Nach dem Gespräch musste ich mein Urteil _____.", "options": ["revidieren", "suggerieren", "untermauern", "monieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Er war bereit, seinen Standpunkt zu _____.", "options": ["revidieren", "antizipieren", "konterkarieren", "präzisieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "monieren",
+    "cefrLevel": "c2",
+    "phonetic": "/moˈniːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Einen Mangel förmlich beanstanden und Abhilfe verlangen.",
+    "examples": [
+      "Die Mieter monieren seit Monaten die defekte Heizung.",
+      "Der Prüfer monierte mehrere Fehler im Jahresbericht.",
+      "Zu Recht monieren Kritiker die unklare Finanzierung."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „monieren“?", "options": ["Einen Mangel förmlich beanstanden und Abhilfe verlangen.", "Eine Leistung öffentlich loben.", "Einen Betrag auf ein Konto überweisen.", "Ein Gerät auf Werkseinstellungen zurücksetzen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Zu Recht _____ Kritiker die unklare Finanzierung.", "options": ["monieren", "suggerieren", "antizipieren", "revidieren"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Mieter _____ seit Monaten die defekte Heizung.", "options": ["monieren", "präzisieren", "untermauern", "relativieren"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "unabdingbar",
+    "cefrLevel": "c2",
+    "phonetic": "/ʊnʔapˈdɪŋbaːɐ̯/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Absolut notwendig und durch nichts zu ersetzen.",
+    "examples": [
+      "Gegenseitiges Vertrauen ist für diese Arbeit unabdingbar.",
+      "Ein Helm ist auf der Baustelle unabdingbar.",
+      "Für das Visum sind vollständige Unterlagen unabdingbar."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „unabdingbar“?", "options": ["Absolut notwendig und durch nichts zu ersetzen.", "Grundsätzlich verhandelbar und flexibel.", "Nur unter bestimmten Bedingungen erlaubt.", "Angenehm, aber letztlich verzichtbar."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Gegenseitiges Vertrauen ist für diese Arbeit _____.", "options": ["unabdingbar", "obsolet", "lapidar", "rudimentär"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Ein Helm ist auf der Baustelle _____.", "options": ["unabdingbar", "eklatant", "akribisch", "ambivalent"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "obsolet",
+    "cefrLevel": "c2",
+    "phonetic": "/ɔpzoˈleːt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Veraltet und deshalb nicht mehr gebraucht oder gültig.",
+    "examples": [
+      "Durch die neue Software wurde das alte Verfahren obsolet.",
+      "Viele Regeln aus dieser Zeit sind heute obsolet.",
+      "Das Faxgerät gilt in den meisten Büros als obsolet."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „obsolet“?", "options": ["Veraltet und deshalb nicht mehr gebraucht oder gültig.", "Besonders modern und weit verbreitet.", "Rechtlich zwingend vorgeschrieben.", "Auf den ersten Blick verwirrend."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Durch die neue Software wurde das alte Verfahren _____.", "options": ["obsolet", "unabdingbar", "stichhaltig", "akribisch"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Das Faxgerät gilt in den meisten Büros als _____.", "options": ["obsolet", "eklatant", "lapidar", "gravierend"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "akribisch",
+    "cefrLevel": "c2",
+    "phonetic": "/aˈkʁiːbɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Mit äußerster Sorgfalt und Genauigkeit bis ins kleinste Detail.",
+    "examples": [
+      "Sie bereitete den Fall akribisch vor.",
+      "Der Historiker wertete die Quellen akribisch aus.",
+      "Seine akribisch geführten Notizen halfen bei der Aufklärung."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „akribisch“?", "options": ["Mit äußerster Sorgfalt und Genauigkeit bis ins kleinste Detail.", "Schnell und ohne Blick für Einzelheiten.", "Mit spürbarer Abneigung gegen die Aufgabe.", "Auf gut Glück und ohne festen Plan."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie bereitete den Fall _____ vor.", "options": ["akribisch", "obsolet", "lapidar", "eklatant"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Historiker wertete die Quellen _____ aus.", "options": ["akribisch", "unabdingbar", "rudimentär", "ambivalent"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "lapidar",
+    "cefrLevel": "c2",
+    "phonetic": "/lapiˈdaːɐ̯/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Kurz und knapp, ohne weitere Erklärung oder Gefühl.",
+    "examples": [
+      "Seine Antwort fiel lapidar aus: „Mal sehen.“",
+      "Die Absage kam in einem lapidar formulierten Zweizeiler.",
+      "Sie kommentierte den Rekord lapidar mit einem Schulterzucken."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „lapidar“?", "options": ["Kurz und knapp, ohne weitere Erklärung oder Gefühl.", "Ausführlich und mit vielen Beispielen.", "Feierlich und mit großem Pathos.", "Unklar und voller Widersprüche."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Absage kam in einem _____ formulierten Zweizeiler.", "options": ["lapidar", "akribisch", "eklatant", "obsolet"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Sie kommentierte den Rekord _____ mit einem Schulterzucken.", "options": ["lapidar", "unabdingbar", "stichhaltig", "rudimentär"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "eklatant",
+    "cefrLevel": "c2",
+    "phonetic": "/eklaˈtant/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "So offensichtlich und schwerwiegend, dass es sofort auffällt.",
+    "examples": [
+      "Der Bericht offenbart einen eklatant hohen Personalmangel.",
+      "Das war ein eklatanter Verstoß gegen die Regeln.",
+      "Die Unterschiede zwischen den Filialen sind eklatant."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „eklatant“?", "options": ["So offensichtlich und schwerwiegend, dass es sofort auffällt.", "So geringfügig, dass es zu vernachlässigen ist.", "So charmant, dass niemand widersprechen kann.", "So kompliziert, dass Fachwissen nötig ist."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Bericht offenbart einen _____ hohen Personalmangel.", "options": ["eklatant", "lapidar", "akribisch", "obsolet"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Die Unterschiede zwischen den Filialen sind _____.", "options": ["eklatant", "unabdingbar", "rudimentär", "ambivalent"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "rudimentär",
+    "cefrLevel": "c2",
+    "phonetic": "/ʁudimɛnˈtɛːɐ̯/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Nur in Ansätzen vorhanden und weit von Vollständigkeit entfernt.",
+    "examples": [
+      "Meine Kenntnisse des Japanischen sind rudimentär.",
+      "Das Dorf verfügt nur über eine rudimentär ausgebaute Infrastruktur.",
+      "Der Prototyp funktioniert bislang nur rudimentär."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „rudimentär“?", "options": ["Nur in Ansätzen vorhanden und weit von Vollständigkeit entfernt.", "Vollständig ausgereift und perfektioniert.", "Übertrieben aufwendig gestaltet.", "Streng geheim und gut geschützt."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Meine Kenntnisse des Japanischen sind _____.", "options": ["rudimentär", "eklatant", "stichhaltig", "unabdingbar"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Prototyp funktioniert bislang nur _____.", "options": ["rudimentär", "akribisch", "lapidar", "obsolet"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "gemeinhin",
+    "cefrLevel": "c2",
+    "phonetic": "/ɡəˈmaɪnhɪn/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "So, wie es allgemein üblich ist oder meist angenommen wird.",
+    "examples": [
+      "Der Herbst gilt gemeinhin als beste Zeit für diese Wanderung.",
+      "Was gemeinhin als sicher gilt, kann sich schnell ändern.",
+      "Solche Fehler werden gemeinhin unterschätzt."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „gemeinhin“?", "options": ["So, wie es allgemein üblich ist oder meist angenommen wird.", "Nur in seltenen Ausnahmefällen.", "Ausschließlich in der Fachliteratur.", "Ganz im Gegensatz zur Mehrheit."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Herbst gilt _____ als beste Zeit für diese Wanderung.", "options": ["gemeinhin", "vollends", "keineswegs", "gleichwohl"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Solche Fehler werden _____ unterschätzt.", "options": ["gemeinhin", "hingegen", "außerdem", "gestern"], "correctAnswerIndex": 0 }
+    ]
+  },
+  {
+    "word": "vollends",
+    "cefrLevel": "c2",
+    "phonetic": "/ˈfɔlɛnts/",
+    "partOfSpeech": "adverb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 5,
+    "definition": "Ganz und gar; bis zum letzten Rest.",
+    "examples": [
+      "Nach der zweiten Niederlage war das Vertrauen vollends zerstört.",
+      "Der Regen machte die Straße vollends unpassierbar.",
+      "Spätestens mit diesem Auftritt überzeugte sie vollends."
+    ],
+    "quiz": [
+      { "type": "definition", "question": "Was bedeutet „vollends“?", "options": ["Ganz und gar; bis zum letzten Rest.", "Nur zu einem kleinen Teil.", "Zu einem unbestimmten Zeitpunkt.", "Auf halbem Weg zum Ziel."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Nach der zweiten Niederlage war das Vertrauen _____ zerstört.", "options": ["vollends", "gemeinhin", "keineswegs", "gestern"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Ergänze den Satz: Der Regen machte die Straße _____ unpassierbar.", "options": ["vollends", "gleichwohl", "hingegen", "draußen"], "correctAnswerIndex": 0 }
+    ]
+  }
+]

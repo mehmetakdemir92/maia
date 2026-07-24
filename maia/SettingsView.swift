@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var languageManager: AppLanguageManager
+    @EnvironmentObject var learningLanguageManager: LearningLanguageManager
     @Environment(\.dismiss) var dismiss
     @State private var showingSignOutAlert = false
     @State private var showingDeleteAlert = false
@@ -55,6 +56,21 @@ struct SettingsView: View {
                 
                 Section {
                     Picker(selection: Binding(
+                        get: { learningLanguageManager.selected },
+                        set: { learningLanguageManager.setSelected($0) }
+                    )) {
+                        ForEach(LearningLanguage.allCases) { option in
+                            Text(option.title).tag(option)
+                        }
+                    } label: {
+                        HStack {
+                            Image(systemName: "book.fill")
+                            Text("I'm learning")
+                                .foregroundColor(.white)
+                        }
+                    }
+
+                    Picker(selection: Binding(
                         get: { languageManager.selectedOption },
                         set: { languageManager.setSelected($0) }
                     )) {
@@ -72,7 +88,7 @@ struct SettingsView: View {
                     Text("Languages")
                         .foregroundColor(.white)
                 } footer: {
-                    Text("App language applies immediately. System follows your device language.")
+                    Text("Daily words, quizzes, and pronunciation use the learning language. App language applies immediately; System follows your device language.")
                         .foregroundColor(.white.opacity(0.8))
                 }
 
@@ -348,4 +364,5 @@ For questions, please contact support.
     SettingsView()
         .environmentObject(UserManager())
         .environmentObject(AppLanguageManager())
+        .environmentObject(LearningLanguageManager())
 }
