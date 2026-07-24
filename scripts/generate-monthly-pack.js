@@ -361,6 +361,16 @@ function validateGermanEntry(entry, band) {
   if (!Array.isArray(entry.examples) || entry.examples.length !== 3) {
     fail(`${where}: examples tam 3 cümle olmalı.`);
   }
+  if (Array.isArray(entry.exampleTranslations)) {
+    if (entry.exampleTranslations.length !== entry.examples.length) {
+      fail(`${where}: exampleTranslations examples ile aynı uzunlukta olmalı.`);
+    }
+    entry.exampleTranslations.forEach((t, i) => {
+      if (typeof t !== "string" || !t.trim()) {
+        fail(`${where}: exampleTranslations[${i}] boş olamaz.`);
+      }
+    });
+  }
   if (!exampleContainsHeadword(entry.examples[0], entry.word)) {
     fail(`${where}: 1. örnek cümle baş kelimeyi içermiyor.`);
   }
@@ -394,7 +404,7 @@ function validateGermanEntry(entry, band) {
 }
 
 function buildGermanPackWord(entry) {
-  return {
+  const word = {
     word: entry.word,
     cefrLevel: entry.cefrLevel.toLowerCase(),
     phonetic: entry.phonetic || null,
@@ -406,6 +416,10 @@ function buildGermanPackWord(entry) {
     examples: entry.examples,
     quiz: entry.quiz,
   };
+  if (Array.isArray(entry.exampleTranslations) && entry.exampleTranslations.length) {
+    word.exampleTranslations = entry.exampleTranslations;
+  }
+  return word;
 }
 
 /**
@@ -480,6 +494,9 @@ function mergeDay(existingDay, freshDay) {
       examples: Array.isArray(prev.examples) && prev.examples.length
         ? prev.examples
         : freshWord.examples,
+      exampleTranslations: Array.isArray(prev.exampleTranslations) && prev.exampleTranslations.length
+        ? prev.exampleTranslations
+        : freshWord.exampleTranslations,
       quiz: Array.isArray(prev.quiz) && prev.quiz.length ? prev.quiz : freshWord.quiz,
     };
   });

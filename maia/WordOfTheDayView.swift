@@ -146,21 +146,10 @@ struct WordOfTheDayView: View {
 
                                     // Show generated example if available, otherwise show original
                                     let displayExample = generatedExamples[word.id] ?? word.exampleSentence
-                                    HStack(alignment: .top, spacing: 10) {
-                                        Text("•")
-                                            .font(.body.weight(.bold))
-                                            .foregroundColor(AppColors.glassCardBody)
-                                            .frame(width: 14, alignment: .leading)
-                                            .padding(.top, 1)
-
-                                        Text(displayExample)
-                                            .font(.body.weight(.medium))
-                                            .italic()
-                                            .foregroundColor(AppColors.glassCardBody)
-                                            .lineSpacing(3)
-                                            .shadow(color: Color.black.opacity(0.08), radius: 1, x: 0, y: 1)
-                                            .fixedSize(horizontal: false, vertical: true)
-                                    }
+                                    ExampleSentenceRow(
+                                        sentence: displayExample,
+                                        englishGloss: word.englishGloss(forExample: displayExample)
+                                    )
                                     .animation(.easeInOut(duration: 0.3), value: displayExample)
                                 }
                             }

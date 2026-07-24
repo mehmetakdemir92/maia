@@ -47,6 +47,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The conflict between the parties became increasingly heated.",
+      "His critical analysis of the novel convinced the jury.",
+      "After a short argument, the neighbors came to an agreement."
     ]
   },
   {
@@ -97,6 +102,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The perception of colors varies from person to person.",
+      "Stress significantly changes our perception of time.",
+      "In the public perception, the city is considered safe."
     ]
   },
   {
@@ -147,6 +157,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The realization came late, but it changed everything.",
+      "New scientific findings question the theory.",
+      "He came to the realization that money alone does not bring happiness."
     ]
   },
   {
@@ -197,6 +212,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "Their willingness to compromise made the agreement possible.",
+      "Without the willingness to learn, every talent remains unused.",
+      "The willingness of citizens to donate was impressive."
     ]
   },
   {
@@ -247,6 +267,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "Restricting traffic relieved pressure on the city center.",
+      "I agree with the plan, but with one caveat.",
+      "I cannot recommend this hotel without any reservations."
     ]
   },
   {
@@ -297,6 +322,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The right to vacation is regulated by law.",
+      "She has high standards for her own work.",
+      "The project took more time than planned."
     ]
   },
   {
@@ -347,6 +377,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The prejudice against older applicants persists.",
+      "He confronted every prejudice with patience and facts.",
+      "Many people are not even aware of their prejudices."
     ]
   },
   {
@@ -397,6 +432,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The demonstrators demanded more social justice.",
+      "Without justice, a state loses the trust of its citizens.",
+      "Her sense of justice made her the ideal judge."
     ]
   },
   {
@@ -447,6 +487,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "Regular checks ensure the safety of the system.",
+      "The state must guarantee the supply of drinking water.",
+      "This is the only way to ensure a fair election."
     ]
   },
   {
@@ -497,6 +542,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "Good journalism must question official statements.",
+      "She began to question the rules of her industry.",
+      "Children question many things that adults take for granted."
     ]
   },
   {
@@ -547,6 +597,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "Diagrams illustrate the development of prices.",
+      "The teacher uses everyday examples to illustrate physics.",
+      "A short video should illustrate the process."
     ]
   },
   {
@@ -597,6 +652,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "She had to manage the move all by herself.",
+      "The city can hardly cope with the increasing traffic.",
+      "Sport helps him to cope with the stress at work."
     ]
   },
   {
@@ -647,6 +707,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The government wants to strive for a balanced budget.",
+      "Many graduates pursue a career in research.",
+      "We should strive for a solution that benefits everyone."
     ]
   },
   {
@@ -697,6 +762,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "Many people underestimate the effect of too little sleep.",
+      "One should not underestimate the competition in this market.",
+      "He had completely underestimated the effort involved in the renovation."
     ]
   },
   {
@@ -747,6 +817,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "New data clearly refutes the old theory.",
+      "She could refute any objection with facts.",
+      "The rumor was quickly refuted."
     ]
   },
   {
@@ -797,6 +872,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The committee will discuss the proposals tomorrow.",
+      "In the essay, students should discuss both positions.",
+      "We must discuss this question calmly."
     ]
   },
   {
@@ -847,6 +927,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "A dictionary is essential when translating.",
+      "Her experience made her indispensable to the team.",
+      "For many, the smartphone has become indispensable in everyday life."
     ]
   },
   {
@@ -897,6 +982,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The problem is complex and has no quick solution.",
+      "The novel paints a multi-layered portrait of the city.",
+      "Her personality is more complex than she initially appears."
     ]
   },
   {
@@ -947,6 +1037,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "His argument was sound and left no room for doubt.",
+      "Without hard evidence, no one will believe us.",
+      "The excuse didn't sound particularly valid."
     ]
   },
   {
@@ -997,6 +1092,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The interview with the researcher was very informative.",
+      "An insightfully written report explained the background.",
+      "The look behind the scenes was extremely revealing."
     ]
   },
   {
@@ -1047,6 +1147,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The report revealed serious security deficiencies.",
+      "There is a serious difference between the two offers.",
+      "The consequences of the error were more serious than expected."
     ]
   },
   {
@@ -1097,6 +1202,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The planned new building is highly controversial in the city.",
+      "The method is considered controversial among experts.",
+      "His theses were controversial even during his lifetime."
     ]
   },
   {
@@ -1147,6 +1257,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The topic is by no means as boring as many people think.",
+      "He was by no means ready to admit the mistake.",
+      "The situation is serious, but by no means hopeless."
     ]
   },
   {
@@ -1197,6 +1312,11 @@
         ],
         "correctAnswerIndex": 0
       }
+    ],
+    "exampleTranslations": [
+      "The plan was risky; Nevertheless, the board agreed.",
+      "The criticism was harsh, but remained factual.",
+      "He knew the dangers and still dared to try."
     ]
   }
 ]

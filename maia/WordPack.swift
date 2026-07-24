@@ -28,6 +28,8 @@ struct WordPackWord: Codable, Equatable {
     let definition: String
     /// Three example sentences. Free users see the first; Generate More reveals the rest.
     let examples: [String]
+    /// English glosses aligned 1:1 with `examples` (German packs). Absent for English.
+    let exampleTranslations: [String]?
     /// Tam 3 quiz sorusu. Tipik: 1 definition + 2 blank.
     let quiz: [WordPackQuiz]
     let phonetic: String?
@@ -35,6 +37,32 @@ struct WordPackWord: Codable, Equatable {
     let domainTag: String?
     let registerTag: String?
     let frequencyBand: Int?
+
+    init(
+        word: String,
+        cefrLevel: String,
+        definition: String,
+        examples: [String],
+        quiz: [WordPackQuiz],
+        phonetic: String? = nil,
+        partOfSpeech: String? = nil,
+        domainTag: String? = nil,
+        registerTag: String? = nil,
+        frequencyBand: Int? = nil,
+        exampleTranslations: [String]? = nil
+    ) {
+        self.word = word
+        self.cefrLevel = cefrLevel
+        self.definition = definition
+        self.examples = examples
+        self.exampleTranslations = exampleTranslations
+        self.quiz = quiz
+        self.phonetic = phonetic
+        self.partOfSpeech = partOfSpeech
+        self.domainTag = domainTag
+        self.registerTag = registerTag
+        self.frequencyBand = frequencyBand
+    }
 }
 
 /// Quiz question. type is informational; QuizManager renders question/choices as-is.
@@ -243,6 +271,15 @@ extension WordPackWord {
         let second = cleanedExamples.indices.contains(1) ? cleanedExamples[1] : nil
         let third = cleanedExamples.indices.contains(2) ? cleanedExamples[2] : nil
 
+        let cleanedGlosses = (exampleTranslations ?? []).map {
+            $0.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        func gloss(at index: Int) -> String? {
+            guard cleanedGlosses.indices.contains(index) else { return nil }
+            let value = cleanedGlosses[index]
+            return value.isEmpty ? nil : value
+        }
+
         return Word(
             // Language in the id keeps en/de words with the same spelling distinct.
             id: UUID.stable(from: language == .english
@@ -255,6 +292,9 @@ extension WordPackWord {
             pronunciationAudioURL: nil,
             exampleSentence2: second,
             exampleSentence3: third,
+            exampleTranslation: gloss(at: 0),
+            exampleTranslation2: gloss(at: 1),
+            exampleTranslation3: gloss(at: 2),
             cefrLevel: cefrLevel.lowercased(),
             domainTag: domainTag,
             partOfSpeech: partOfSpeech?.lowercased(),

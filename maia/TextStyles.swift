@@ -75,6 +75,46 @@ extension View {
             .lineSpacing(9)
             .shadow(color: Color.black.opacity(0.08), radius: 1, x: 0, y: 1)
     }
+
+    /// English gloss under a non-English example sentence
+    func glassCardExampleGloss() -> some View {
+        font(.subheadline)
+            .foregroundColor(AppColors.glassCardMuted.opacity(0.72))
+            .lineSpacing(2)
+    }
+}
+
+/// Example sentence with optional faded English meaning underneath (German learning).
+struct ExampleSentenceRow: View {
+    let sentence: String
+    let englishGloss: String?
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Text("•")
+                .font(.body.weight(.bold))
+                .foregroundColor(AppColors.glassCardBody)
+                .frame(width: 14, alignment: .leading)
+                .padding(.top, 1)
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(sentence)
+                    .font(.body.weight(.medium))
+                    .italic()
+                    .foregroundColor(AppColors.glassCardBody)
+                    .lineSpacing(3)
+                    .shadow(color: Color.black.opacity(0.08), radius: 1, x: 0, y: 1)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                if let englishGloss {
+                    Text(englishGloss)
+                        .glassCardExampleGloss()
+                        .fixedSize(horizontal: false, vertical: true)
+                        .accessibilityLabel("English: \(englishGloss)")
+                }
+            }
+        }
+    }
 }
 
 /// iOS liquid glass — thinMaterial backdrop blur with radial frost and top sheen.

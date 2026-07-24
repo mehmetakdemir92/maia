@@ -75,6 +75,51 @@ final class WordPackStoreTests: XCTestCase {
         XCTAssertTrue(CEFRLevelMapping.matchesPreferredBands(words, userLevel: 8))
     }
 
+    func testToWord_mapsExampleTranslationsForGermanPacks() {
+        let entry = WordPackWord(
+            word: "Freund",
+            cefrLevel: "a1",
+            definition: "A person you know well and like.",
+            examples: [
+                "Mein bester Freund wohnt in Berlin.",
+                "Ich treffe heute einen alten Freund.",
+                "Ein Freund hilft dir immer.",
+            ],
+            quiz: [
+                WordPackQuiz(
+                    type: "definition",
+                    question: "What does \"Freund\" mean?",
+                    options: ["A", "B", "C", "D"],
+                    correctAnswerIndex: 0
+                ),
+            ],
+            exampleTranslations: [
+                "My best friend lives in Berlin.",
+                "I'm meeting an old friend today.",
+                "A friend always helps you.",
+            ]
+        )
+
+        let word = entry.toWord(language: .german)
+
+        XCTAssertEqual(word.languageCode, "de")
+        XCTAssertEqual(
+            word.englishGloss(forExample: "Mein bester Freund wohnt in Berlin."),
+            "My best friend lives in Berlin."
+        )
+        XCTAssertEqual(
+            word.englishGloss(forExample: "Ich treffe heute einen alten Freund."),
+            "I'm meeting an old friend today."
+        )
+        XCTAssertNil(word.englishGloss(forExample: "Unknown sentence."))
+    }
+
+    func testToWord_englishPacksHaveNoExampleGloss() {
+        let entry = makeEntry(word: "friend", cefr: "a1")
+        let word = entry.toWord(language: .english)
+        XCTAssertNil(word.englishGloss(forExample: word.exampleSentence))
+    }
+
     func testWordPackJSON_decodesAndSelectsThreeWords() throws {
         let data = Data(minimalWordPackJSON.utf8)
         let pack = try JSONDecoder().decode(WordPack.self, from: data)

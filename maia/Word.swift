@@ -34,6 +34,10 @@ struct Word: Identifiable, Codable, Equatable {
     let exampleSentence2: String?
     /// Third example sentence
     let exampleSentence3: String?
+    /// English gloss for `exampleSentence` (German learning packs).
+    let exampleTranslation: String?
+    let exampleTranslation2: String?
+    let exampleTranslation3: String?
 
     // MARK: - Pool tags (DailyWordPool.txt)
     let cefrLevel: String?
@@ -58,6 +62,9 @@ struct Word: Identifiable, Codable, Equatable {
         pronunciationAudioURL: String? = nil,
         exampleSentence2: String? = nil,
         exampleSentence3: String? = nil,
+        exampleTranslation: String? = nil,
+        exampleTranslation2: String? = nil,
+        exampleTranslation3: String? = nil,
         cefrLevel: String? = nil,
         domainTag: String? = nil,
         partOfSpeech: String? = nil,
@@ -73,12 +80,39 @@ struct Word: Identifiable, Codable, Equatable {
         self.pronunciationAudioURL = pronunciationAudioURL
         self.exampleSentence2 = exampleSentence2
         self.exampleSentence3 = exampleSentence3
+        self.exampleTranslation = exampleTranslation
+        self.exampleTranslation2 = exampleTranslation2
+        self.exampleTranslation3 = exampleTranslation3
         self.cefrLevel = cefrLevel
         self.domainTag = domainTag
         self.partOfSpeech = partOfSpeech
         self.registerTag = registerTag
         self.frequencyBand = frequencyBand
         self.languageCode = languageCode
+    }
+
+    /// English meaning shown under a non-English example sentence, when available.
+    func englishGloss(forExample sentence: String) -> String? {
+        guard learningLanguage != .english else { return nil }
+        let key = sentence.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !key.isEmpty else { return nil }
+
+        let pairs: [(String?, String?)] = [
+            (exampleSentence, exampleTranslation),
+            (exampleSentence2, exampleTranslation2),
+            (exampleSentence3, exampleTranslation3),
+        ]
+        for (example, translation) in pairs {
+            guard
+                let example,
+                let translation,
+                example.trimmingCharacters(in: .whitespacesAndNewlines)
+                    .caseInsensitiveCompare(key) == .orderedSame
+            else { continue }
+            let gloss = translation.trimmingCharacters(in: .whitespacesAndNewlines)
+            return gloss.isEmpty ? nil : gloss
+        }
+        return nil
     }
 
     func withExampleSentence(_ sentence: String) -> Word {
@@ -91,6 +125,9 @@ struct Word: Identifiable, Codable, Equatable {
             pronunciationAudioURL: pronunciationAudioURL,
             exampleSentence2: exampleSentence2,
             exampleSentence3: exampleSentence3,
+            exampleTranslation: nil,
+            exampleTranslation2: exampleTranslation2,
+            exampleTranslation3: exampleTranslation3,
             cefrLevel: cefrLevel,
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
@@ -110,6 +147,9 @@ struct Word: Identifiable, Codable, Equatable {
             pronunciationAudioURL: url,
             exampleSentence2: exampleSentence2,
             exampleSentence3: exampleSentence3,
+            exampleTranslation: exampleTranslation,
+            exampleTranslation2: exampleTranslation2,
+            exampleTranslation3: exampleTranslation3,
             cefrLevel: cefrLevel,
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
@@ -119,4 +159,3 @@ struct Word: Identifiable, Codable, Equatable {
         )
     }
 }
-

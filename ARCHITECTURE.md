@@ -91,7 +91,7 @@ State is held in `ObservableObject` managers injected via `.environmentObject` f
 
 - `LearningLanguage` / `LearningLanguageManager` hold the target language (English default, German optional; Settings → “I’m learning”).
 - Word packs, quiz content, TTS voice, and AI prompts (diary correction, example generation) follow the selected language; `Word.languageCode` keeps mixed-language diary entries consistent.
-- German content is authored in `scripts/data/wordpool-de/{a1..c2}.json` and distributed into monthly packs via `node scripts/generate-monthly-pack.js YYYY-MM --lang de`. Convention: words and example sentences are German (matched to the word’s CEFR level); definitions and quiz questions are English (blank options stay German).
+- German content is authored in `scripts/data/wordpool-de/{a1..c2}.json` and distributed into monthly packs via `node scripts/generate-monthly-pack.js YYYY-MM --lang de`. Convention: words and example sentences are German (matched to the word’s CEFR level); definitions and quiz questions are English (blank options stay German). Each German example has a parallel English gloss in `exampleTranslations` (shown muted under the sentence in Today / Word of the Day).
 
 > Legacy Firestore `dailyWords` scheduling still exists in `functions/` but the shipped app uses bundled WordPacks.
 
