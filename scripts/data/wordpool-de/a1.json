@@ -7,16 +7,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Ein Gebäude, in dem Menschen wohnen und leben.",
+    "definition": "A building where people live.",
     "examples": [
-      "Unser Haus hat einen kleinen Garten hinter der Küche.",
-      "Das Haus meiner Großeltern steht direkt am See.",
-      "Sie wollen nächstes Jahr ein neues Haus kaufen."
+      "Unser Haus hat einen kleinen Garten.",
+      "Das Haus ist alt, aber schön.",
+      "Sie kaufen ein neues Haus."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Haus“?", "options": ["Ein Gebäude, in dem Menschen wohnen und leben.", "Ein Fahrzeug, mit dem man schnell reisen kann.", "Ein Geschäft, in dem man frisches Obst kauft.", "Ein Möbelstück, auf dem man bequem sitzt."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Unser _____ hat einen kleinen Garten hinter der Küche.", "options": ["Haus", "Auto", "Tisch", "Apfel"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Das _____ meiner Großeltern steht direkt am See.", "options": ["Haus", "Brot", "Fenster", "Hemd"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Haus\" mean?", "options": ["A building where people live.", "A vehicle used for long trips.", "A shop that sells fresh fruit.", "A piece of furniture for sitting."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Unser _____ hat einen kleinen Garten.", "options": ["Haus", "Auto", "Tisch", "Apfel"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Das _____ ist alt, aber schön.", "options": ["Haus", "Brot", "Hemd", "Glas"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -27,16 +27,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Eine klare Flüssigkeit, die alle Menschen zum Leben brauchen.",
+    "definition": "A clear liquid that people drink to live.",
     "examples": [
-      "Ich trinke jeden Morgen ein großes Glas Wasser.",
-      "Das Wasser im See ist heute sehr kalt.",
-      "Kannst du bitte Wasser für den Tee kochen?"
+      "Ich trinke jeden Morgen ein Glas Wasser.",
+      "Das Wasser im See ist kalt.",
+      "Möchtest du Wasser oder Saft?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Wasser“?", "options": ["Eine klare Flüssigkeit, die alle Menschen zum Leben brauchen.", "Ein süßes Gebäck, das man am Nachmittag isst.", "Ein warmes Kleidungsstück für den kalten Winter.", "Ein kleines Tier, das gern im Garten lebt."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich trinke jeden Morgen ein großes Glas _____.", "options": ["Wasser", "Papier", "Salz", "Licht"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Das _____ im See ist heute sehr kalt.", "options": ["Wasser", "Brot", "Sofa", "Buch"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Wasser\" mean?", "options": ["A clear liquid that people drink to live.", "A sweet cake eaten in the afternoon.", "A warm piece of winter clothing.", "A small animal that lives in gardens."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich trinke jeden Morgen ein Glas _____.", "options": ["Wasser", "Papier", "Salz", "Licht"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Das _____ im See ist kalt.", "options": ["Wasser", "Brot", "Sofa", "Buch"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -47,16 +47,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Ein Lebensmittel aus Mehl, das man beim Bäcker kauft.",
+    "definition": "A basic food made from flour and baked in an oven.",
     "examples": [
-      "Zum Frühstück esse ich gern frisches Brot mit Butter.",
-      "Der Bäcker verkauft das Brot schon ab sechs Uhr.",
-      "Wir brauchen noch Brot für das Abendessen."
+      "Ich esse gern frisches Brot mit Butter.",
+      "Das Brot vom Bäcker ist noch warm.",
+      "Wir brauchen Brot für das Abendessen."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Brot“?", "options": ["Ein Lebensmittel aus Mehl, das man beim Bäcker kauft.", "Ein Getränk aus Früchten, das Kinder gern trinken.", "Ein Werkzeug, mit dem man Bilder aufhängt.", "Ein Spiel, das man draußen im Park spielt."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Zum Frühstück esse ich gern frisches _____ mit Butter.", "options": ["Brot", "Glas", "Holz", "Gras"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir brauchen noch _____ für das Abendessen.", "options": ["Brot", "Regen", "Sand", "Lärm"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Brot\" mean?", "options": ["A basic food made from flour and baked in an oven.", "A drink made from fresh fruit and cold water.", "A tool used for hanging pictures on walls.", "A game played outside in the park with friends."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich esse gern frisches _____ mit Butter.", "options": ["Brot", "Glas", "Holz", "Gras"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir brauchen _____ für das Abendessen.", "options": ["Brot", "Regen", "Sand", "Lärm"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -67,16 +67,16 @@
     "domainTag": "education",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Ein Ort, an dem Kinder lernen und Unterricht haben.",
+    "definition": "A place where children go to learn.",
     "examples": [
-      "Die Schule beginnt bei uns um acht Uhr.",
+      "Die Schule beginnt um acht Uhr.",
       "Meine Tochter geht gern in die Schule.",
-      "Nach der Schule spielen die Kinder im Park."
+      "Die Schule ist neben dem Park."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Schule“?", "options": ["Ein Ort, an dem Kinder lernen und Unterricht haben.", "Ein Laden, in dem man Schuhe und Taschen kauft.", "Ein Raum, in dem man Autos repariert.", "Ein Fest, das man im Sommer feiert."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Die _____ beginnt bei uns um acht Uhr.", "options": ["Schule", "Suppe", "Blume", "Katze"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Meine Tochter geht gern in die _____.", "options": ["Schule", "Lampe", "Tasse", "Wolke"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Schule\" mean?", "options": ["A place where children go to learn.", "A shop that sells shoes and bags.", "A room where cars are repaired.", "A party celebrated in the summer."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Die _____ beginnt um acht Uhr.", "options": ["Schule", "Suppe", "Blume", "Katze"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Meine Tochter geht gern in die _____.", "options": ["Schule", "Lampe", "Tasse", "Wolke"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -87,16 +87,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Eine Person, die man sehr gut kennt und mag.",
+    "definition": "A person you know well and like very much.",
     "examples": [
-      "Mein bester Freund wohnt in der gleichen Straße.",
-      "Ich treffe heute Abend einen alten Freund.",
-      "Ein guter Freund hilft dir, wenn du Probleme hast."
+      "Mein bester Freund wohnt in Berlin.",
+      "Ich treffe heute einen alten Freund.",
+      "Ein Freund hilft dir immer."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Freund“?", "options": ["Eine Person, die man sehr gut kennt und mag.", "Eine Maschine, die im Büro Papiere druckt.", "Ein Zimmer, in dem man Gäste empfängt.", "Ein Tag, an dem alle Geschäfte geschlossen sind."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Mein bester _____ wohnt in der gleichen Straße.", "options": ["Freund", "Stuhl", "Kuchen", "Mantel"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich treffe heute Abend einen alten _____.", "options": ["Freund", "Teller", "Baum", "Schlüssel"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Freund\" mean?", "options": ["A person you know well and like very much.", "A machine that prints papers in offices.", "A room where guests are welcomed warmly.", "A day when all the shops are closed."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Mein bester _____ wohnt in Berlin.", "options": ["Freund", "Stuhl", "Kuchen", "Mantel"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich treffe heute einen alten _____.", "options": ["Freund", "Teller", "Baum", "Schlüssel"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -107,16 +107,16 @@
     "domainTag": "work",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Eine Tätigkeit, mit der man Geld verdient.",
+    "definition": "The activity you do to earn money.",
     "examples": [
-      "Meine Arbeit beginnt jeden Tag um neun Uhr.",
+      "Meine Arbeit beginnt um neun Uhr.",
       "Er fährt mit dem Fahrrad zur Arbeit.",
-      "Nach der Arbeit kocht sie gern für die Familie."
+      "Die Arbeit macht ihr Spaß."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Arbeit“?", "options": ["Eine Tätigkeit, mit der man Geld verdient.", "Eine Pflanze, die im Frühling blüht.", "Ein Ort, an dem man schwimmen kann.", "Ein Buch, das man Kindern vorliest."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Meine _____ beginnt jeden Tag um neun Uhr.", "options": ["Arbeit", "Banane", "Jacke", "Straße"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Er fährt mit dem Fahrrad zur _____.", "options": ["Arbeit", "Milch", "Sonne", "Zeitung"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Arbeit\" mean?", "options": ["The activity you do to earn money.", "A plant that blooms in the spring.", "A place where you can swim outside.", "A book that you read to small children."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Meine _____ beginnt um neun Uhr.", "options": ["Arbeit", "Banane", "Jacke", "Straße"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Er fährt mit dem Fahrrad zur _____.", "options": ["Arbeit", "Milch", "Sonne", "Zeitung"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -127,16 +127,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Ein großer Ort mit vielen Häusern, Straßen und Geschäften.",
+    "definition": "A large place with many houses, streets, and shops.",
     "examples": [
-      "Die Stadt ist am Samstag immer sehr voll.",
-      "Wir fahren morgen in die Stadt zum Einkaufen.",
-      "In welcher Stadt wohnt deine Schwester?"
+      "Die Stadt ist am Samstag sehr voll.",
+      "Wir fahren morgen in die Stadt.",
+      "In welcher Stadt wohnst du?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Stadt“?", "options": ["Ein großer Ort mit vielen Häusern, Straßen und Geschäften.", "Ein kleines Gerät, mit dem man Fotos macht.", "Eine warme Mahlzeit, die man mittags isst.", "Ein Kleidungsstück, das man im Sommer trägt."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Die _____ ist am Samstag immer sehr voll.", "options": ["Stadt", "Gabel", "Wand", "Seife"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir fahren morgen in die _____ zum Einkaufen.", "options": ["Stadt", "Decke", "Tasche", "Suppe"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Stadt\" mean?", "options": ["A large place with many houses, streets, and shops.", "A small device used for taking photos.", "A warm meal that people eat at noon.", "A piece of light clothing for the summer."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Die _____ ist am Samstag sehr voll.", "options": ["Stadt", "Gabel", "Wand", "Seife"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir fahren morgen in die _____.", "options": ["Stadt", "Decke", "Tasche", "Suppe"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -147,16 +147,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Die Zeit von morgens bis abends, wenn es hell ist.",
+    "definition": "The time from morning to evening, when it is light.",
     "examples": [
-      "Heute ist ein schöner Tag für einen Spaziergang.",
-      "Der Tag beginnt für mich mit einem Kaffee.",
-      "Welcher Tag ist heute, Montag oder Dienstag?"
+      "Heute ist ein schöner Tag.",
+      "Der Tag beginnt mit einem Kaffee.",
+      "Welcher Tag ist heute?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Tag“?", "options": ["Die Zeit von morgens bis abends, wenn es hell ist.", "Ein Raum, in dem man Kleidung aufbewahrt.", "Ein Getränk, das man heiß trinkt.", "Eine Person, die im Krankenhaus arbeitet."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Heute ist ein schöner _____ für einen Spaziergang.", "options": ["Tag", "Topf", "Zug", "Ball"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Der _____ beginnt für mich mit einem Kaffee.", "options": ["Tag", "Fisch", "Berg", "Stift"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Tag\" mean?", "options": ["The time from morning to evening, when it is light.", "A room where clothes are kept and stored.", "A drink that people usually drink hot.", "A person who works in a big hospital."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Heute ist ein schöner _____.", "options": ["Tag", "Topf", "Zug", "Ball"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Der _____ beginnt mit einem Kaffee.", "options": ["Tag", "Fisch", "Berg", "Stift"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -167,16 +167,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Eltern, Kinder und andere Verwandte zusammen.",
+    "definition": "Parents, children, and other relatives together.",
     "examples": [
-      "Meine Familie isst sonntags immer zusammen.",
-      "Die ganze Familie fährt im August ans Meer.",
-      "Er zeigt mir Fotos von seiner Familie."
+      "Meine Familie isst sonntags zusammen.",
+      "Die Familie fährt im August ans Meer.",
+      "Er zeigt Fotos von seiner Familie."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Familie“?", "options": ["Eltern, Kinder und andere Verwandte zusammen.", "Ein großes Gebäude mit vielen Büros.", "Eine Straße mit vielen kleinen Läden.", "Ein Heft, in das man Wörter schreibt."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Meine _____ isst sonntags immer zusammen.", "options": ["Familie", "Brille", "Küche", "Blume"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Die ganze _____ fährt im August ans Meer.", "options": ["Familie", "Lampe", "Torte", "Jacke"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Familie\" mean?", "options": ["Parents, children, and other relatives together.", "A large building with many busy offices.", "A street with many small nice shops.", "A notebook for writing new words."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Meine _____ isst sonntags zusammen.", "options": ["Familie", "Brille", "Küche", "Blume"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Die _____ fährt im August ans Meer.", "options": ["Familie", "Lampe", "Torte", "Jacke"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -187,16 +187,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Das, was man mit einer Uhr misst; Stunden und Minuten.",
+    "definition": "What clocks measure; hours and minutes.",
     "examples": [
-      "Ich habe heute leider keine Zeit für Sport.",
-      "Hast du am Wochenende Zeit für einen Kaffee?",
-      "Die Zeit vergeht im Urlaub immer zu schnell."
+      "Ich habe heute keine Zeit.",
+      "Hast du morgen Zeit?",
+      "Die Zeit vergeht im Urlaub schnell."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „Zeit“?", "options": ["Das, was man mit einer Uhr misst; Stunden und Minuten.", "Ein Stück Stoff, das am Fenster hängt.", "Ein Platz, an dem Busse halten.", "Eine Frucht, die im Herbst reif wird."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich habe heute leider keine _____ für Sport.", "options": ["Zeit", "Butter", "Treppe", "Wurst"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Hast du am Wochenende _____ für einen Kaffee?", "options": ["Zeit", "Salz", "Schnee", "Papier"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"Zeit\" mean?", "options": ["What clocks measure; hours and minutes.", "A piece of cloth hanging at windows.", "A place where the buses stop.", "A fruit that ripens in the autumn."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich habe heute keine _____.", "options": ["Zeit", "Butter", "Treppe", "Wurst"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Hast du morgen _____?", "options": ["Zeit", "Salz", "Schnee", "Papier"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -207,16 +207,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Nahrung in den Mund nehmen und schlucken.",
+    "definition": "To put food in your mouth and swallow it.",
     "examples": [
-      "Wir essen heute Abend Pizza mit Salat.",
-      "Die Kinder essen mittags in der Schule.",
-      "Möchtest du etwas essen oder nur trinken?"
+      "Wir essen heute Abend Pizza.",
+      "Die Kinder essen in der Schule.",
+      "Möchtest du etwas essen?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „essen“?", "options": ["Nahrung in den Mund nehmen und schlucken.", "Mit den Füßen schnell durch den Park laufen.", "Wasser über die Blumen im Garten gießen.", "Mit einem Stift Wörter auf Papier schreiben."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir _____ heute Abend Pizza mit Salat.", "options": ["essen", "lesen", "waschen", "öffnen"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Möchtest du etwas _____ oder nur trinken?", "options": ["essen", "singen", "malen", "tragen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"essen\" mean?", "options": ["To put food in your mouth and swallow it.", "To run quickly through the big park.", "To water the flowers in the garden.", "To write words on paper with a pen."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir _____ heute Abend Pizza.", "options": ["essen", "lesen", "waschen", "öffnen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Möchtest du etwas _____?", "options": ["essen", "singen", "malen", "tragen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -227,16 +227,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Eine Flüssigkeit wie Wasser oder Saft zu sich nehmen.",
+    "definition": "To take a liquid such as water into your body.",
     "examples": [
-      "Ich möchte gern einen Tee trinken.",
-      "Wir trinken zum Essen nur Wasser.",
-      "Was möchten Sie trinken, Kaffee oder Saft?"
+      "Ich möchte einen Tee trinken.",
+      "Wir trinken zum Essen Wasser.",
+      "Was möchten Sie trinken?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „trinken“?", "options": ["Eine Flüssigkeit wie Wasser oder Saft zu sich nehmen.", "Ein Buch langsam von Anfang bis Ende lesen.", "Kleidung in den Schrank legen und ordnen.", "Mit Freunden ein lustiges Spiel spielen."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich möchte gern einen Tee _____.", "options": ["trinken", "schneiden", "fahren", "hören"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir _____ zum Essen nur Wasser.", "options": ["trinken", "bauen", "fragen", "zählen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"trinken\" mean?", "options": ["To take a liquid such as water into your body.", "To read a book from the start to the end.", "To put clean clothes into the wardrobe.", "To play a funny game with good friends."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich möchte einen Tee _____.", "options": ["trinken", "schneiden", "fahren", "hören"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir _____ zum Essen Wasser.", "options": ["trinken", "bauen", "fragen", "zählen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -247,16 +247,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Sich zu Fuß von einem Ort zu einem anderen bewegen.",
+    "definition": "To move from one place to another on foot.",
     "examples": [
-      "Wir gehen jeden Sonntag im Wald spazieren.",
-      "Ich muss jetzt leider nach Hause gehen.",
+      "Wir gehen am Sonntag spazieren.",
+      "Ich muss jetzt nach Hause gehen.",
       "Die Kinder gehen zu Fuß zur Schule."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „gehen“?", "options": ["Sich zu Fuß von einem Ort zu einem anderen bewegen.", "Mit einem Messer Gemüse klein schneiden.", "Ein Lied laut und fröhlich singen.", "Geld für ein neues Auto sparen."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir _____ jeden Sonntag im Wald spazieren.", "options": ["gehen", "kochen", "kaufen", "schlafen"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich muss jetzt leider nach Hause _____.", "options": ["gehen", "regnen", "putzen", "lachen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"gehen\" mean?", "options": ["To move from one place to another on foot.", "To cut vegetables with a small knife.", "To sing a song loudly and happily.", "To save money for a new red car."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir _____ am Sonntag spazieren.", "options": ["gehen", "kochen", "kaufen", "schlafen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich muss jetzt nach Hause _____.", "options": ["gehen", "regnen", "putzen", "lachen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -267,16 +267,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Etwas in einem Geschäft gegen Geld bekommen.",
+    "definition": "To get something in a shop by paying money.",
     "examples": [
-      "Ich möchte heute frisches Obst kaufen.",
-      "Wir kaufen das Gemüse immer auf dem Markt.",
-      "Er will seiner Mutter Blumen kaufen."
+      "Ich möchte heute Obst kaufen.",
+      "Wir kaufen Gemüse auf dem Markt.",
+      "Er will Blumen für seine Mutter kaufen."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „kaufen“?", "options": ["Etwas in einem Geschäft gegen Geld bekommen.", "Einen langen Brief an die Familie schreiben.", "Im Sommer im kalten See schwimmen.", "Am Abend früh ins Bett gehen."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich möchte heute frisches Obst _____.", "options": ["kaufen", "hören", "fliegen", "vergessen"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir _____ das Gemüse immer auf dem Markt.", "options": ["kaufen", "tanzen", "schreiben", "duschen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"kaufen\" mean?", "options": ["To get something in a shop by paying money.", "To write a long letter to your family.", "To swim in a cold lake in the summer.", "To go to bed early in the evening."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich möchte heute Obst _____.", "options": ["kaufen", "hören", "fliegen", "vergessen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir _____ Gemüse auf dem Markt.", "options": ["kaufen", "tanzen", "schreiben", "duschen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -287,16 +287,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Etwas mit den Augen wahrnehmen.",
+    "definition": "To notice something with your eyes.",
     "examples": [
-      "Von hier kann man die Berge gut sehen.",
-      "Wir sehen am Abend gern einen Film.",
-      "Ich kann ohne Brille die Tafel nicht sehen."
+      "Von hier kann man die Berge sehen.",
+      "Wir sehen am Abend einen Film.",
+      "Ich kann die Tafel nicht sehen."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „sehen“?", "options": ["Etwas mit den Augen wahrnehmen.", "Etwas mit den Händen hochheben.", "Etwas mit dem Löffel umrühren.", "Etwas mit der Schere schneiden."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Von hier kann man die Berge gut _____.", "options": ["sehen", "kochen", "gießen", "packen"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir _____ am Abend gern einen Film.", "options": ["sehen", "backen", "wecken", "putzen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"sehen\" mean?", "options": ["To notice something with your eyes.", "To lift something with your hands.", "To stir something with a spoon.", "To cut something with sharp scissors."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Von hier kann man die Berge _____.", "options": ["sehen", "kochen", "gießen", "packen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir _____ am Abend einen Film.", "options": ["sehen", "backen", "wecken", "putzen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -307,16 +307,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Eine Sache tun oder herstellen.",
+    "definition": "To do or create something.",
     "examples": [
       "Was möchtest du am Wochenende machen?",
-      "Die Kinder machen gerade ihre Hausaufgaben.",
-      "Ich will heute Abend einen Salat machen."
+      "Die Kinder machen ihre Hausaufgaben.",
+      "Ich mache heute einen Salat."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „machen“?", "options": ["Eine Sache tun oder herstellen.", "Einen Ort schnell verlassen.", "Eine Person laut rufen.", "Ein Fenster weit öffnen."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Was möchtest du am Wochenende _____?", "options": ["machen", "schmecken", "warten", "kosten"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Die Kinder _____ gerade ihre Hausaufgaben.", "options": ["machen", "trinken", "schließen", "fliegen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"machen\" mean?", "options": ["To do or create something.", "To leave a place very quickly.", "To call a person very loudly.", "To open a window very wide."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Was möchtest du am Wochenende _____?", "options": ["machen", "schmecken", "warten", "kosten"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Die Kinder _____ ihre Hausaufgaben.", "options": ["machen", "trinken", "schließen", "fliegen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -327,16 +327,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "An einem Ort sein Zuhause haben.",
+    "definition": "To have your home in a place.",
     "examples": [
       "Wir wohnen seit zwei Jahren in Berlin.",
       "Meine Eltern wohnen auf dem Land.",
-      "Wo möchtest du später gern wohnen?"
+      "Wo möchtest du wohnen?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „wohnen“?", "options": ["An einem Ort sein Zuhause haben.", "Mit dem Zug in den Urlaub fahren.", "Ein Geschenk schön einpacken.", "Am Morgen lange im Bett bleiben."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir _____ seit zwei Jahren in Berlin.", "options": ["wohnen", "essen", "rechnen", "singen"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Meine Eltern _____ auf dem Land.", "options": ["wohnen", "klingeln", "zeichnen", "schwimmen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"wohnen\" mean?", "options": ["To have your home in a place.", "To travel on holiday by train.", "To wrap a present very nicely.", "To stay in bed long in the morning."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir _____ seit zwei Jahren in Berlin.", "options": ["wohnen", "essen", "rechnen", "singen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Meine Eltern _____ auf dem Land.", "options": ["wohnen", "klingeln", "zeichnen", "schwimmen"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -347,16 +347,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Von mehr als normaler Höhe oder Menge; nicht klein.",
+    "definition": "Bigger than normal in size; not small.",
     "examples": [
-      "Der Bahnhof in dieser Stadt ist sehr groß.",
-      "Sie wünscht sich einen groß gewachsenen Hund.",
-      "Das Zimmer ist groß und hat zwei Fenster."
+      "Der Bahnhof ist sehr groß.",
+      "Das Zimmer ist groß und hell.",
+      "Ihr Hund ist groß und freundlich."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „groß“?", "options": ["Von mehr als normaler Höhe oder Menge; nicht klein.", "Sehr leise und kaum zu hören.", "Ganz neu und noch nie benutzt.", "Sehr süß und gut im Geschmack."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Der Bahnhof in dieser Stadt ist sehr _____.", "options": ["groß", "leise", "salzig", "müde"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Das Zimmer ist _____ und hat zwei Fenster.", "options": ["groß", "hungrig", "traurig", "langsam"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"groß\" mean?", "options": ["Bigger than normal in size; not small.", "Very quiet and quite hard to hear.", "Completely new and never used before.", "Very sweet and good in the taste."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Der Bahnhof ist sehr _____.", "options": ["groß", "leise", "salzig", "müde"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Das Zimmer ist _____ und hell.", "options": ["groß", "hungrig", "traurig", "langsam"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -367,16 +367,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Von geringer Größe; nicht groß.",
+    "definition": "Little in size; not big.",
     "examples": [
-      "Unsere Wohnung ist klein, aber sehr gemütlich.",
-      "Der klein geschnittene Apfel liegt auf dem Teller.",
-      "Sie trägt eine klein aussehende Tasche am Arm."
+      "Unsere Wohnung ist klein, aber gemütlich.",
+      "Das Auto ist klein und schnell.",
+      "Der Hund ist noch klein."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „klein“?", "options": ["Von geringer Größe; nicht groß.", "Sehr teuer und schwer zu bezahlen.", "Voll mit vielen bunten Farben.", "Sehr alt und aus Holz gebaut."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Unsere Wohnung ist _____, aber sehr gemütlich.", "options": ["klein", "durstig", "wolkig", "krank"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Der _____ geschnittene Apfel liegt auf dem Teller.", "options": ["klein", "laut", "spät", "nass"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"klein\" mean?", "options": ["Little in size; not big.", "Very expensive and hard to pay.", "Full of many bright colors.", "Very old and made of wood."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Unsere Wohnung ist _____, aber gemütlich.", "options": ["klein", "durstig", "wolkig", "krank"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Das Auto ist _____ und schnell.", "options": ["klein", "laut", "spät", "nass"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -387,16 +387,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "So, wie man es sich wünscht; von hoher Qualität.",
+    "definition": "Of high quality; the way you want it to be.",
     "examples": [
-      "Das Essen in diesem Restaurant ist wirklich gut.",
-      "Sie spricht schon sehr gut Deutsch.",
-      "Ich habe heute Nacht gut geschlafen."
+      "Das Essen hier ist sehr gut.",
+      "Sie spricht gut Deutsch.",
+      "Ich habe gut geschlafen."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „gut“?", "options": ["So, wie man es sich wünscht; von hoher Qualität.", "Kaputt und nicht mehr zu benutzen.", "Weit weg und schwer zu erreichen.", "Kalt und unangenehm im Winter."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Das Essen in diesem Restaurant ist wirklich _____.", "options": ["gut", "eckig", "leer", "offen"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Sie spricht schon sehr _____ Deutsch.", "options": ["gut", "rund", "tief", "breit"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"gut\" mean?", "options": ["Of high quality; the way you want it to be.", "Broken and not usable any more.", "Far away and very hard to reach.", "Cold and unpleasant in the winter."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Das Essen hier ist sehr _____.", "options": ["gut", "eckig", "leer", "offen"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Sie spricht _____ Deutsch.", "options": ["gut", "rund", "tief", "breit"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -407,16 +407,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Erst seit kurzer Zeit vorhanden; noch nicht alt.",
+    "definition": "Existing only for a short time; not old.",
     "examples": [
-      "Mein Handy ist neu und funktioniert sehr schnell.",
-      "Wir haben eine neu eröffnete Bäckerei entdeckt.",
-      "Ist deine Jacke neu oder hattest du sie schon?"
+      "Mein Handy ist neu und schnell.",
+      "Ist deine Jacke neu?",
+      "Sie haben eine neue Wohnung."
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „neu“?", "options": ["Erst seit kurzer Zeit vorhanden; noch nicht alt.", "Sehr schwer und kaum zu tragen.", "Ohne Geschmack und ohne Farbe.", "Immer pünktlich und nie zu spät."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Mein Handy ist _____ und funktioniert sehr schnell.", "options": ["neu", "sauer", "dunkel", "schwer"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ist deine Jacke _____ oder hattest du sie schon?", "options": ["neu", "warm", "grün", "weich"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"neu\" mean?", "options": ["Existing only for a short time; not old.", "Very heavy and quite hard to carry.", "Without any taste and without color.", "Always on time and never too late."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Mein Handy ist _____ und schnell.", "options": ["neu", "sauer", "dunkel", "schwer"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ist deine Jacke _____?", "options": ["neu", "warm", "grün", "weich"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -427,16 +427,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "Seit vielen Jahren vorhanden; nicht neu oder jung.",
+    "definition": "Having existed for many years; not new or young.",
     "examples": [
-      "Das Rathaus ist über dreihundert Jahre alt.",
-      "Mein Auto ist alt, aber es fährt noch gut.",
-      "Wie alt ist dein kleiner Bruder?"
+      "Das Rathaus ist sehr alt.",
+      "Mein Auto ist alt, aber gut.",
+      "Wie alt ist dein Bruder?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „alt“?", "options": ["Seit vielen Jahren vorhanden; nicht neu oder jung.", "Ganz frisch aus dem Ofen gekommen.", "Sehr schnell und sportlich unterwegs.", "Hell und freundlich eingerichtet."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Das Rathaus ist über dreihundert Jahre _____.", "options": ["alt", "früh", "blau", "still"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Mein Auto ist _____, aber es fährt noch gut.", "options": ["alt", "lecker", "hungrig", "fertig"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"alt\" mean?", "options": ["Having existed for many years; not new or young.", "Fresh from the oven just a moment ago.", "Very fast and sporty on the road.", "Bright and friendly on the inside."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Das Rathaus ist sehr _____.", "options": ["alt", "früh", "blau", "still"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Mein Auto ist _____, aber gut.", "options": ["alt", "lecker", "hungrig", "fertig"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -447,16 +447,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "An diesem Tag, an dem wir gerade sind.",
+    "definition": "On this day, the day that is now.",
     "examples": [
       "Ich habe heute keinen Unterricht.",
-      "Heute scheint die Sonne den ganzen Tag.",
-      "Wollen wir heute zusammen kochen?"
+      "Heute scheint die Sonne.",
+      "Wollen wir heute kochen?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „heute“?", "options": ["An diesem Tag, an dem wir gerade sind.", "An einem Tag in der letzten Woche.", "Jedes Jahr im kalten Dezember.", "Nur am Vormittag vor dem Essen."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Ich habe _____ keinen Unterricht.", "options": ["heute", "dort", "gern", "oben"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wollen wir _____ zusammen kochen?", "options": ["heute", "hier", "links", "unten"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"heute\" mean?", "options": ["On this day, the day that is now.", "On a day in the last week.", "Every year in the cold December.", "Only in the morning before the lunch."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Ich habe _____ keinen Unterricht.", "options": ["heute", "dort", "gern", "oben"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wollen wir _____ kochen?", "options": ["heute", "hier", "links", "unten"], "correctAnswerIndex": 0 }
     ]
   },
   {
@@ -467,16 +467,16 @@
     "domainTag": "general",
     "registerTag": "neutral",
     "frequencyBand": 1,
-    "definition": "An dem Tag, der nach dem heutigen Tag kommt.",
+    "definition": "On the day after today.",
     "examples": [
-      "Wir fahren morgen früh zum Flughafen.",
-      "Morgen habe ich einen Termin beim Zahnarzt.",
-      "Kannst du morgen bitte Brot mitbringen?"
+      "Wir fahren morgen zum Flughafen.",
+      "Morgen habe ich einen Termin.",
+      "Kannst du morgen Brot mitbringen?"
     ],
     "quiz": [
-      { "type": "definition", "question": "Was bedeutet „morgen“?", "options": ["An dem Tag, der nach dem heutigen Tag kommt.", "An dem Tag, der vor dem heutigen Tag war.", "In der Mitte der aktuellen Nacht.", "Am letzten Tag des ganzen Jahres."], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Wir fahren _____ früh zum Flughafen.", "options": ["morgen", "dort", "leider", "gern"], "correctAnswerIndex": 0 },
-      { "type": "blank", "question": "Ergänze den Satz: Kannst du _____ bitte Brot mitbringen?", "options": ["morgen", "oben", "hinten", "draußen"], "correctAnswerIndex": 0 }
+      { "type": "definition", "question": "What does \"morgen\" mean?", "options": ["On the day after today.", "On the day before today.", "In the middle of the night.", "On the last day of the year."], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Wir fahren _____ zum Flughafen.", "options": ["morgen", "dort", "leider", "gern"], "correctAnswerIndex": 0 },
+      { "type": "blank", "question": "Fill in the blank: Kannst du _____ Brot mitbringen?", "options": ["morgen", "oben", "hinten", "draußen"], "correctAnswerIndex": 0 }
     ]
   }
 ]

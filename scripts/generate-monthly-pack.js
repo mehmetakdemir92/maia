@@ -15,8 +15,10 @@
  *   node scripts/generate-monthly-pack.js 2026-07 --lang de [--force]
  *
  *   Almanca havuz scripts/data/wordpool-de/{a1..c2}.json dosyalarındadır ve
- *   içerik (definition/examples/quiz) elle hazırlanmış TAM içeriktir; Gemini
- *   doldurması gerekmez. Çıktı: maia/WordPacks/{YYYY-MM}.de.json
+ *   içerik elle hazırlanmış TAM içeriktir; Gemini doldurması gerekmez.
+ *   Kural: kelime + örnek cümleler ALMANCA (kelimenin CEFR seviyesine uygun),
+ *   definition + quiz soruları İNGİLİZCE (blank şıkları Almanca kelimeler).
+ *   Çıktı: maia/WordPacks/{YYYY-MM}.de.json
  *   Havuz banttaki gün sayısından küçükse kelimeler ay içinde (eşit aralıklarla)
  *   tekrar eder; havuza kelime ekleyip yeniden üreterek tekrarı azaltabilirsin.
  *
