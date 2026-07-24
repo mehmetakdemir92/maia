@@ -238,8 +238,8 @@ struct QuizView: View {
             hasLoggedQuizCompletion = false
             didPresentQuizInterstitial = false
             
-            // Start quiz
-            let success = quizManager.startQuiz(for: word)
+            // Start quiz — always reload from bundled WordPack JSON
+            let success = startQuizFromBundle(for: word)
             print("Quiz start result: \(success), Quiz count: \(quizManager.currentQuiz.count)")
             if success {
                 AppAnalytics.shared.log(AppAnalyticsEventName.quizStarted, params: [
@@ -471,6 +471,14 @@ struct QuizView: View {
         }
     }
 
+    /// Loads quiz from bundled WordPack JSON (never cached packQuizzes).
+    private func startQuizFromBundle(for word: Word) -> Bool {
+        WordPackStore.shared.clearCache()
+        let day = word.packDayISO ?? WordOfTheDayManager.calendarDayISO()
+        let hydrated = word.withHydratedQuizzes(dayISO: day)
+        return quizManager.startQuiz(for: hydrated)
+    }
+
     private func handleRetryQuiz() {
         guard !isRetryingQuiz else { return }
         isRetryingQuiz = true
@@ -479,7 +487,7 @@ struct QuizView: View {
             async let minDelay: Void = Task.sleep(nanoseconds: Self.rippleMinDurationNs)
             await MainActor.run {
                 quizManager.resetQuiz()
-                _ = quizManager.startQuiz(for: word)
+                _ = startQuizFromBundle(for: word)
                 showingAnswerFeedback = false
                 currentAnswerWasCorrect = nil
                 isAutoAdvancingAfterCorrect = false

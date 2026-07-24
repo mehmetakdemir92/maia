@@ -12,6 +12,7 @@ import AuthenticationServices
 import CryptoKit
 import FirebaseAuth
 import FirebaseCore
+import FirebaseFirestore
 import FirebaseStorage
 import GoogleSignIn
 import UIKit
@@ -41,6 +42,12 @@ class UserManager: ObservableObject {
     private static let rememberMeDefaultsKey = "rememberMeEnabled"
     private static let signOutOnNextLaunchDefaultsKey = "signOutOnNextLaunch"
     private static let profilePhotoHiddenPrefix = "profilePhotoHidden."
+    private static let legacyUserLevelDefaultsKey = "userLevel"
+    private static let legacyCategoryDefaultsKey = "vocabularyCategory"
+    private static let profileSettingsDoc = "profileSettings"
+
+    private let db = Firestore.firestore()
+    private var lastObservedAuthUID: String?
     private var currentAppleSignInNonce: String?
     private var pendingNewSignUpUID: String?
     @Published var rememberMeEnabled: Bool
@@ -118,8 +125,10 @@ class UserManager: ObservableObject {
             userName = user.displayName ?? userEmail.components(separatedBy: "@").first ?? "User"
             profileImageURL = resolvedProfileImageURL(for: user)
             registrationDate = user.metadata.creationDate ?? Date()
+            loadProfileSettings(for: user.uid)
             applyInitialSetupState(for: user.uid)
-            saveUserData()
+            syncProfileSettingsFromFirestore(userId: user.uid)
+            lastObservedAuthUID = user.uid
         } else {
             isSignedIn = false
             userName = ""
@@ -127,16 +136,12 @@ class UserManager: ObservableObject {
             profileImageURL = nil
             requiresInitialSetup = false
             pendingNewSignUpUID = nil
+            lastObservedAuthUID = nil
 
-            // Reset persisted profile prefs so the next account doesn't inherit the previous user's progression prefs.
+            // Signed-out UI defaults only — per-account values stay in UserDefaults + Firestore.
             userLevel = 1
             registrationDate = Date()
             selectedCategory = .general
-            UserDefaults.standard.removeObject(forKey: "userLevel")
-            UserDefaults.standard.removeObject(forKey: "registrationDate")
-            UserDefaults.standard.removeObject(forKey: "vocabularyCategory")
-
-            saveUserData()
         }
     }
 
@@ -179,7 +184,7 @@ class UserManager: ObservableObject {
         applyInitialSetupState(for: result.user.uid)
 
         registrationDate = Date()
-        saveUserData()
+        persistProfileSettings()
         AppAnalytics.shared.log(AppAnalyticsEventName.signUpCompleted, params: ["method": "email"])
     }
 
@@ -283,12 +288,12 @@ class UserManager: ObservableObject {
 
     func setSelectedCategory(_ category: VocabularyCategory) {
         selectedCategory = category
-        saveUserData()
+        persistProfileSettings()
     }
 
     func setUserLevel(_ level: Int) {
         userLevel = min(max(level, 1), 11)
-        saveUserData()
+        persistProfileSettings()
     }
 
     func completeInitialSetup(name: String, profileImageData: Data?, level: Int) async throws {
@@ -497,25 +502,130 @@ class UserManager: ObservableObject {
     }
 
     private func loadUserData() {
-        userLevel = UserDefaults.standard.integer(forKey: "userLevel")
-        if userLevel == 0 { userLevel = 1 }
+        if let uid = Auth.auth().currentUser?.uid {
+            loadProfileSettings(for: uid)
+        } else {
+            userLevel = 1
+            selectedCategory = .general
+        }
 
         if let savedDate = UserDefaults.standard.object(forKey: "registrationDate") as? Date {
             registrationDate = savedDate
         }
 
-        if let raw = UserDefaults.standard.string(forKey: "vocabularyCategory"),
-           let cat = VocabularyCategory(rawValue: raw) {
-            selectedCategory = cat
-        }
-
         publishPremiumState()
     }
 
+    // MARK: - Profile settings (level + category) — UserDefaults cache + Firestore
+
+    private static func userLevelKey(for uid: String) -> String {
+        "userLevel.\(uid)"
+    }
+
+    private static func categoryKey(for uid: String) -> String {
+        "vocabularyCategory.\(uid)"
+    }
+
+    private func profileSettingsRef(userId: String) -> DocumentReference {
+        db.collection("users").document(userId).collection("appData").document(Self.profileSettingsDoc)
+    }
+
+    private func loadProfileSettings(for uid: String) {
+        let defaults = UserDefaults.standard
+        let levelKey = Self.userLevelKey(for: uid)
+        var level = defaults.integer(forKey: levelKey)
+        if level == 0 {
+            level = defaults.integer(forKey: Self.legacyUserLevelDefaultsKey)
+            if level > 0 {
+                defaults.set(level, forKey: levelKey)
+                defaults.removeObject(forKey: Self.legacyUserLevelDefaultsKey)
+            }
+        }
+        userLevel = level == 0 ? 1 : min(max(level, 1), 11)
+
+        let categoryKey = Self.categoryKey(for: uid)
+        if let raw = defaults.string(forKey: categoryKey),
+           let cat = VocabularyCategory(rawValue: raw) {
+            selectedCategory = cat
+        } else if let legacyRaw = defaults.string(forKey: Self.legacyCategoryDefaultsKey),
+                  let cat = VocabularyCategory(rawValue: legacyRaw) {
+            selectedCategory = cat
+            defaults.set(legacyRaw, forKey: categoryKey)
+            defaults.removeObject(forKey: Self.legacyCategoryDefaultsKey)
+        }
+    }
+
+    private func saveProfileSettingsLocally(for uid: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(userLevel, forKey: Self.userLevelKey(for: uid))
+        defaults.set(selectedCategory.rawValue, forKey: Self.categoryKey(for: uid))
+        defaults.set(registrationDate, forKey: "registrationDate")
+    }
+
+    private func persistProfileSettings() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        saveProfileSettingsLocally(for: uid)
+        saveProfileSettingsToFirestore(userId: uid)
+    }
+
+    private func saveProfileSettingsToFirestore(userId: String) {
+        profileSettingsRef(userId: userId).setData([
+            "userLevel": userLevel,
+            "vocabularyCategory": selectedCategory.rawValue,
+            "updatedAt": FieldValue.serverTimestamp(),
+        ], merge: true) { error in
+            if let error = error, (error as NSError).code != 7 {
+                print("❌ profileSettings Firestore save error: \(error.localizedDescription)")
+            }
+        }
+    }
+
+    private func syncProfileSettingsFromFirestore(userId: String) {
+        profileSettingsRef(userId: userId).getDocument { [weak self] snapshot, error in
+            guard let self else { return }
+            if let error = error {
+                if (error as NSError).code != 7 {
+                    print("❌ profileSettings Firestore load error: \(error.localizedDescription)")
+                }
+                return
+            }
+
+            DispatchQueue.main.async {
+                guard Auth.auth().currentUser?.uid == userId else { return }
+
+                if snapshot?.exists == true, let data = snapshot?.data() {
+                    self.applyProfileSettings(from: data, userId: userId)
+                } else {
+                    // Existing install: push locally cached level to cloud once.
+                    self.saveProfileSettingsToFirestore(userId: userId)
+                }
+            }
+        }
+    }
+
+    private func applyProfileSettings(from data: [String: Any], userId: String) {
+        if let level = Self.intFromFirestore(data["userLevel"]), (1...11).contains(level) {
+            userLevel = level
+        }
+        if let raw = data["vocabularyCategory"] as? String,
+           let category = VocabularyCategory(rawValue: raw) {
+            selectedCategory = category
+        }
+        saveProfileSettingsLocally(for: userId)
+    }
+
+    private static func intFromFirestore(_ value: Any?) -> Int? {
+        guard let value else { return nil }
+        if let i = value as? Int { return i }
+        if let i64 = value as? Int64 { return Int(i64) }
+        if let n = value as? NSNumber { return n.intValue }
+        return nil
+    }
+
     private func saveUserData() {
-        UserDefaults.standard.set(userLevel, forKey: "userLevel")
-        UserDefaults.standard.set(registrationDate, forKey: "registrationDate")
-        UserDefaults.standard.set(selectedCategory.rawValue, forKey: "vocabularyCategory")
+        if let uid = Auth.auth().currentUser?.uid {
+            saveProfileSettingsLocally(for: uid)
+        }
     }
 
     private func persistSessionPreferenceForNextLaunch() {

@@ -54,16 +54,22 @@ final class WordPackStore {
     static let shared = WordPackStore()
 
     private var cache: [String: WordPack] = [:]
+    private var cacheSourceModDates: [String: Date] = [:]
     private var missingMonthsLogged = Set<String>()
 
     private init() {}
 
+    /// Drops in-memory packs (e.g. after a dev rebuild with updated JSON).
+    func clearCache() {
+        cache.removeAll()
+        cacheSourceModDates.removeAll()
+    }
+
     // MARK: Public API
 
-    /// Cached pack for the month, or nil if missing.
+    /// Cached pack for the month, or nil if missing. Reloads when the bundle JSON changes.
     func pack(forMonth monthKey: String) -> WordPack? {
-        if let cached = cache[monthKey] { return cached }
-        guard let pack = Self.loadPack(forMonth: monthKey) else {
+        guard let url = Self.packResourceURL(forMonth: monthKey) else {
             if !missingMonthsLogged.contains(monthKey) {
                 missingMonthsLogged.insert(monthKey)
                 print("⚠️ WordPack: \(monthKey).json bundle'da bulunamadı. " +
@@ -71,7 +77,15 @@ final class WordPackStore {
             }
             return nil
         }
+
+        let mod = Self.resourceModificationDate(url) ?? .distantPast
+        if let cached = cache[monthKey], cacheSourceModDates[monthKey] == mod {
+            return cached
+        }
+
+        guard let pack = Self.decode(at: url, monthKey: monthKey) else { return nil }
         cache[monthKey] = pack
+        cacheSourceModDates[monthKey] = mod
         return pack
     }
 
@@ -88,16 +102,26 @@ final class WordPackStore {
         let all = entries(for: date)
         guard !all.isEmpty else { return [] }
         let picked = Self.selectByPreferredBands(all, userLevel: userLevel, date: date)
-        return picked.map { $0.toWord() }
+        return picked.map { $0.toWord(packDayISO: date) }
     }
 
     /// QuizManager: word + date → three pre-written quiz questions.
     func quizQuestions(forWord word: String, date: String) -> [WordPackQuiz]? {
-        let entries = entries(for: date)
-        guard let entry = entries.first(where: { $0.word.lowercased() == word.lowercased() }) else {
+        let lemma = word.lowercased()
+        if let entry = entries(for: date).first(where: { $0.word.lowercased() == lemma }) {
+            return entry.quiz
+        }
+        guard let monthKey = Self.monthKey(from: date),
+              let pack = pack(forMonth: monthKey) else {
             return nil
         }
-        return entry.quiz
+        for dayKey in pack.days.keys.sorted() {
+            guard let entry = pack.days[dayKey]?.words.first(where: { $0.word.lowercased() == lemma }) else {
+                continue
+            }
+            return entry.quiz
+        }
+        return nil
     }
 
     /// Generate More: reveals pre-written 2nd/3rd example sentences.
@@ -118,17 +142,29 @@ final class WordPackStore {
         return "\(parts[0])-\(parts[1])"
     }
 
-    private static func loadPack(forMonth monthKey: String) -> WordPack? {
-        let candidates: [URL?] = [
-            Bundle.main.url(forResource: monthKey, withExtension: "json", subdirectory: "WordPacks"),
-            Bundle.main.url(forResource: monthKey, withExtension: "json")
-        ]
-        for case let url? in candidates {
-            if let pack = decode(at: url, monthKey: monthKey) {
-                return pack
-            }
+    /// Bundle + WordPack revision stamp. Busts daily word cache when the app or pack JSON changes.
+    static func contentStamp(forMonth monthKey: String) -> String? {
+        guard let url = packResourceURL(forMonth: monthKey),
+              let mod = resourceModificationDate(url) else {
+            return nil
         }
-        return nil
+        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0"
+        let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "0"
+        return "\(version).\(build)|\(monthKey)|\(Int(mod.timeIntervalSince1970))"
+    }
+
+    private static func packResourceURL(forMonth monthKey: String) -> URL? {
+        Bundle.main.url(forResource: monthKey, withExtension: "json", subdirectory: "WordPacks")
+            ?? Bundle.main.url(forResource: monthKey, withExtension: "json")
+    }
+
+    private static func resourceModificationDate(_ url: URL) -> Date? {
+        try? url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate
+    }
+
+    private static func loadPack(forMonth monthKey: String) -> WordPack? {
+        guard let url = packResourceURL(forMonth: monthKey) else { return nil }
+        return decode(at: url, monthKey: monthKey)
     }
 
     private static func decode(at url: URL, monthKey: String) -> WordPack? {
@@ -223,7 +259,7 @@ final class WordPackStore {
 // MARK: - Word bridge
 
 extension WordPackWord {
-    func toWord() -> Word {
+    func toWord(packDayISO: String) -> Word {
         let cleanedExamples = examples.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
         let primary = cleanedExamples.first ?? ""
         let second = cleanedExamples.indices.contains(1) ? cleanedExamples[1] : nil
@@ -242,7 +278,9 @@ extension WordPackWord {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech?.lowercased(),
             registerTag: registerTag?.lowercased(),
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            packQuizzes: quiz,
+            packDayISO: packDayISO
         )
     }
 }

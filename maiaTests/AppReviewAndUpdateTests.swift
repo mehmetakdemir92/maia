@@ -67,4 +67,9 @@ final class AppReviewAndUpdateTests: XCTestCase {
         XCTAssertTrue(AppUpdateChecker.isVersion("1.2", newerThan: "1.1.9"))
         XCTAssertFalse(AppUpdateChecker.isVersion("1.1", newerThan: "1.1.0"))
     }
+
+    func testAppStoreURL_usesItmsAppsScheme() {
+        XCTAssertEqual(AppUpdateChecker.appStoreURL.scheme, "itms-apps")
+        XCTAssertTrue(AppUpdateChecker.appStoreURL.absoluteString.contains("id6763566092"))
+    }
 }

@@ -10,8 +10,8 @@ final class WordOfTheDayManager: ObservableObject {
     @Published var errorMessage: String?
 
     private let dailyService = DailyWordsService()
-    /// v3: WordPack-based (no AI/Firestore). Legacy locked cache is invalid.
-    private static let localDayWordsPrefix = "dailyWords.locked.v3."
+    private static let contentStampPrefix = "dailyWords.contentStamp."
+    private static let localDayWordsPrefix = "dailyWords.locked.v6."
 
     private var lastLoadedDayISO: String?
     private var lastLoadedUserLevel: Int?
@@ -43,13 +43,24 @@ final class WordOfTheDayManager: ObservableObject {
         let key = Self.localDayWordsKey(for: dayISO, userLevel: userLevel)
         guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
         guard let decoded = try? JSONDecoder().decode([Word].self, from: data) else { return nil }
+
+        if let monthKey = WordPackStore.monthKey(from: dayISO),
+           let stamp = WordPackStore.contentStamp(forMonth: monthKey) {
+            let stampKey = Self.contentStampPrefix + dayISO
+            if UserDefaults.standard.string(forKey: stampKey) != stamp {
+                UserDefaults.standard.removeObject(forKey: key)
+                UserDefaults.standard.removeObject(forKey: stampKey)
+                return nil
+            }
+        }
+
         if DailyWordsService.isUsableWordSet(decoded),
            CEFRLevelMapping.isAcceptableCEFRDistribution(
                decoded,
                userLevel: userLevel,
                poolHasBand: DailyWordsService.poolHasBand
            ) {
-            return decoded
+            return decoded.map { $0.withHydratedQuizzes(dayISO: dayISO) }
         }
         UserDefaults.standard.removeObject(forKey: key)
         return nil
@@ -59,6 +70,25 @@ final class WordOfTheDayManager: ObservableObject {
         let key = Self.localDayWordsKey(for: dayISO, userLevel: userLevel)
         guard let data = try? JSONEncoder().encode(words) else { return }
         UserDefaults.standard.set(data, forKey: key)
+        if let monthKey = WordPackStore.monthKey(from: dayISO),
+           let stamp = WordPackStore.contentStamp(forMonth: monthKey) {
+            UserDefaults.standard.set(stamp, forKey: Self.contentStampPrefix + dayISO)
+        }
+    }
+
+    /// Removes stale daily-word caches from older app versions (quiz JSON lived inside cache).
+    static func purgeLegacyWordCaches() {
+        let prefixes = [
+            "dailyWords.locked.v3.",
+            "dailyWords.locked.v4.",
+            "dailyWords.locked.v5.",
+            "dailyWords.contentStamp.",
+        ]
+        for key in UserDefaults.standard.dictionaryRepresentation().keys {
+            if prefixes.contains(where: { key.hasPrefix($0) }) {
+                UserDefaults.standard.removeObject(forKey: key)
+            }
+        }
     }
 
     func loadWordsOfTheDay(category: VocabularyCategory = .general, userLevel: Int = 1, force: Bool = false) {
@@ -138,9 +168,10 @@ final class WordOfTheDayManager: ObservableObject {
     }
 
     private func applyLoadedWords(_ loaded: [Word], date: String, userLevel: Int) {
-        currentWords = loaded
-        words = loaded
-        saveLockedWords(loaded, for: date, userLevel: userLevel)
+        let hydrated = loaded.map { $0.withHydratedQuizzes(dayISO: date) }
+        currentWords = hydrated
+        words = hydrated
+        saveLockedWords(hydrated, for: date, userLevel: userLevel)
         lastLoadedDayISO = date
         lastLoadedUserLevel = userLevel
         isLoading = false

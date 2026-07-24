@@ -20,6 +20,10 @@ struct maiaApp: App {
         FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         AppLanguageManager.applyStoredPreference()
+        Task { @MainActor in
+            WordPackStore.shared.clearCache()
+            WordOfTheDayManager.purgeLegacyWordCaches()
+        }
         AppAnalytics.shared.log(AppAnalyticsEventName.appOpen)
     }
 

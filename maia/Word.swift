@@ -41,6 +41,10 @@ struct Word: Identifiable, Codable, Equatable {
     let partOfSpeech: String?
     let registerTag: String?
     let frequencyBand: Int?
+    /// Pre-written quiz from WordPack JSON; attached when the word is loaded.
+    let packQuizzes: [WordPackQuiz]?
+    /// Calendar day (yyyy-MM-dd) this word was loaded from in WordPack.
+    let packDayISO: String?
 
     init(
         id: UUID = UUID(),
@@ -55,7 +59,9 @@ struct Word: Identifiable, Codable, Equatable {
         domainTag: String? = nil,
         partOfSpeech: String? = nil,
         registerTag: String? = nil,
-        frequencyBand: Int? = nil
+        frequencyBand: Int? = nil,
+        packQuizzes: [WordPackQuiz]? = nil,
+        packDayISO: String? = nil
     ) {
         self.id = id
         self.word = word
@@ -70,6 +76,76 @@ struct Word: Identifiable, Codable, Equatable {
         self.partOfSpeech = partOfSpeech
         self.registerTag = registerTag
         self.frequencyBand = frequencyBand
+        self.packQuizzes = packQuizzes
+        self.packDayISO = packDayISO
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case id, word, definition, exampleSentence, phonetic, pronunciationAudioURL
+        case exampleSentence2, exampleSentence3
+        case cefrLevel, domainTag, partOfSpeech, registerTag, frequencyBand
+        case packDayISO
+        // packQuizzes intentionally omitted — always loaded fresh from WordPack JSON in the bundle.
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        id = try c.decode(UUID.self, forKey: .id)
+        word = try c.decode(String.self, forKey: .word)
+        definition = try c.decode(String.self, forKey: .definition)
+        exampleSentence = try c.decode(String.self, forKey: .exampleSentence)
+        phonetic = try c.decodeIfPresent(String.self, forKey: .phonetic)
+        pronunciationAudioURL = try c.decodeIfPresent(String.self, forKey: .pronunciationAudioURL)
+        exampleSentence2 = try c.decodeIfPresent(String.self, forKey: .exampleSentence2)
+        exampleSentence3 = try c.decodeIfPresent(String.self, forKey: .exampleSentence3)
+        cefrLevel = try c.decodeIfPresent(String.self, forKey: .cefrLevel)
+        domainTag = try c.decodeIfPresent(String.self, forKey: .domainTag)
+        partOfSpeech = try c.decodeIfPresent(String.self, forKey: .partOfSpeech)
+        registerTag = try c.decodeIfPresent(String.self, forKey: .registerTag)
+        frequencyBand = try c.decodeIfPresent(Int.self, forKey: .frequencyBand)
+        packDayISO = try c.decodeIfPresent(String.self, forKey: .packDayISO)
+        packQuizzes = nil
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(id, forKey: .id)
+        try c.encode(word, forKey: .word)
+        try c.encode(definition, forKey: .definition)
+        try c.encode(exampleSentence, forKey: .exampleSentence)
+        try c.encodeIfPresent(phonetic, forKey: .phonetic)
+        try c.encodeIfPresent(pronunciationAudioURL, forKey: .pronunciationAudioURL)
+        try c.encodeIfPresent(exampleSentence2, forKey: .exampleSentence2)
+        try c.encodeIfPresent(exampleSentence3, forKey: .exampleSentence3)
+        try c.encodeIfPresent(cefrLevel, forKey: .cefrLevel)
+        try c.encodeIfPresent(domainTag, forKey: .domainTag)
+        try c.encodeIfPresent(partOfSpeech, forKey: .partOfSpeech)
+        try c.encodeIfPresent(registerTag, forKey: .registerTag)
+        try c.encodeIfPresent(frequencyBand, forKey: .frequencyBand)
+        try c.encodeIfPresent(packDayISO, forKey: .packDayISO)
+    }
+
+    /// Attaches the latest quiz questions from the bundled WordPack (never from UserDefaults cache).
+    @MainActor
+    func withHydratedQuizzes(dayISO: String) -> Word {
+        let quizzes = WordPackStore.shared.quizQuestions(forWord: word, date: dayISO)
+        return Word(
+            id: id,
+            word: word,
+            definition: definition,
+            exampleSentence: exampleSentence,
+            phonetic: phonetic,
+            pronunciationAudioURL: pronunciationAudioURL,
+            exampleSentence2: exampleSentence2,
+            exampleSentence3: exampleSentence3,
+            cefrLevel: cefrLevel,
+            domainTag: domainTag,
+            partOfSpeech: partOfSpeech,
+            registerTag: registerTag,
+            frequencyBand: frequencyBand,
+            packQuizzes: quizzes,
+            packDayISO: dayISO
+        )
     }
 
     func withExampleSentence(_ sentence: String) -> Word {
@@ -86,7 +162,9 @@ struct Word: Identifiable, Codable, Equatable {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
             registerTag: registerTag,
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            packQuizzes: packQuizzes,
+            packDayISO: packDayISO
         )
     }
 
@@ -104,7 +182,9 @@ struct Word: Identifiable, Codable, Equatable {
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,
             registerTag: registerTag,
-            frequencyBand: frequencyBand
+            frequencyBand: frequencyBand,
+            packQuizzes: packQuizzes,
+            packDayISO: packDayISO
         )
     }
 }

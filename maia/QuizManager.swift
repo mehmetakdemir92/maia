@@ -14,6 +14,7 @@ struct QuizQuestion {
     let correctAnswerIndex: Int
 }
 
+@MainActor
 class QuizManager: ObservableObject {
     @Published var currentQuiz: [QuizQuestion] = []
     @Published var currentQuestionIndex: Int = 0
@@ -559,8 +560,18 @@ class QuizManager: ObservableObject {
         let desiredCount = max(1, count)
         if let curated = curatedQuestions(for: word, count: desiredCount, attemptNumber: attemptNumber),
            !curated.isEmpty {
+            print("📋 Quiz bundle [\(word.word)]: \(curated.map(\.question).joined(separator: " | ").prefix(120))…")
             return curated
         }
+
+        // Daily WordPack words must not silently fall back to generic example-based quizzes
+        // (those look identical to the old curated JSON and hide bundle-update bugs).
+        if word.packDayISO != nil {
+            print("❌ Quiz bundle MISSING for pack word \(word.word) day=\(word.packDayISO ?? "?")")
+            return []
+        }
+
+        print("⚠️ Quiz dynamic fallback for \(word.word)")
         let seedInput = "\(word.word.lowercased())|\(quizDayISO())|\(count)|a\(attemptNumber)"
         var rng = SeededGenerator(seed: stableSeed(for: seedInput))
         var questions: [QuizQuestion] = [makeDefinitionQuestion(for: word, rng: &rng)]
@@ -573,7 +584,8 @@ class QuizManager: ObservableObject {
     /// whatever is in the file). On same-day retries, choice order is reshuffled
     /// to prevent memorizing positions.
     private func curatedQuestions(for word: Word, count: Int, attemptNumber: Int) -> [QuizQuestion]? {
-        let date = quizDayISO()
+        // Always read from bundled WordPack — never trust packQuizzes cached in UserDefaults.
+        let date = word.packDayISO ?? quizDayISO()
         guard let presets = DailyWordsService.curatedQuiz(forWord: word.word, date: date),
               !presets.isEmpty else {
             return nil

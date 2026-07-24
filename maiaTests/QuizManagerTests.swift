@@ -7,6 +7,7 @@ import XCTest
 @testable import maia
 
 /// Quiz pass/fail and retry rules (3 questions, 2 correct to pass, max 3 attempts/day).
+@MainActor
 final class QuizManagerTests: XCTestCase {
 
     private var manager: QuizManager!
@@ -53,5 +54,22 @@ final class QuizManagerTests: XCTestCase {
         manager.correctAnswers = 0
         manager.quizAttemptsToday = 3
         XCTAssertFalse(manager.canRetry())
+    }
+
+    func testGenerateQuiz_loadsFromBundledWordPack() {
+        WordPackStore.shared.clearCache()
+        let word = Word(
+            word: "language",
+            definition: "A system of words and sounds that people use to communicate.",
+            exampleSentence: "English is a very common global language for many people.",
+            packDayISO: "2026-07-08"
+        )
+
+        let quiz = manager.generateQuiz(for: word, count: 3, attemptNumber: 0)
+        XCTAssertEqual(quiz.count, 3)
+        XCTAssertTrue(
+            quiz.contains(where: { $0.question.contains("English is a very common global") }),
+            "Expected bundled July quiz blank; got: \(quiz.map(\.question))"
+        )
     }
 }

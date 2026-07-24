@@ -74,7 +74,7 @@ final class DailyWordsService {
                 print("⚠️ DailyWordsService.manualWordsByDate[\(date)]: '\(lemma)' WordPack'te yok.")
                 return nil
             }
-            resolved.append(entry.toWord())
+            resolved.append(entry.toWord(packDayISO: date))
         }
         _ = userLevel
         return resolved

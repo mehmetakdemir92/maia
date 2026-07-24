@@ -570,7 +570,9 @@ class DiaryManager: ObservableObject {
             domainTag: word.domainTag,
             partOfSpeech: partOfSpeech ?? word.partOfSpeech,
             registerTag: word.registerTag,
-            frequencyBand: word.frequencyBand
+            frequencyBand: word.frequencyBand,
+            packQuizzes: word.packQuizzes ?? packEntry?.quiz,
+            packDayISO: word.packDayISO ?? dayKey
         )
     }
 

@@ -14,23 +14,38 @@ import UIKit
 final class AppUpdateChecker: ObservableObject {
     @Published var updateAvailable = false
 
-    static let appStoreURL = URL(string: "https://apps.apple.com/app/id6763566092")!
+    /// Opens the native App Store app. `https://apps.apple.com/...` often lands in Safari.
+    static let appStoreURL = URL(string: "itms-apps://itunes.apple.com/app/id6763566092")!
+    private static let appStoreWebFallbackURL = URL(string: "https://apps.apple.com/app/id6763566092")!
     private static let lookupURL = URL(string: "https://itunes.apple.com/lookup?bundleId=com.mehmetakdemir.maia&country=tr")!
     private static let lastPromptDayKey = "appUpdate.lastPromptDay"
 
     func checkOnLaunch() async {
+        #if DEBUG
+        // Quiz/word content ships in the app bundle — App Store update won't apply local JSON edits.
+        return
+        #endif
         guard Self.canPromptToday() else { return }
         guard let storeVersion = await Self.fetchStoreVersion() else { return }
 
         let installed = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0"
         if Self.isVersion(storeVersion, newerThan: installed) {
-            Self.recordPrompt()
             updateAvailable = true
         }
     }
 
+    /// Call when the user dismisses the update alert (Later or Update Now).
+    static func recordPromptDismissed(now: Date = Date()) {
+        UserDefaults.standard.set(dayString(for: now), forKey: lastPromptDayKey)
+    }
+
     static func openAppStore() {
-        UIApplication.shared.open(appStoreURL)
+        UIApplication.shared.open(appStoreURL, options: [:]) { opened in
+            guard !opened else { return }
+            Task { @MainActor in
+                UIApplication.shared.open(appStoreWebFallbackURL)
+            }
+        }
     }
 
     /// Numeric per-component comparison ("1.1.10" > "1.1.9", "1.2" > "1.1.9").
@@ -60,10 +75,6 @@ final class AppUpdateChecker: ObservableObject {
 
     private static func canPromptToday(now: Date = Date()) -> Bool {
         UserDefaults.standard.string(forKey: lastPromptDayKey) != dayString(for: now)
-    }
-
-    private static func recordPrompt(now: Date = Date()) {
-        UserDefaults.standard.set(dayString(for: now), forKey: lastPromptDayKey)
     }
 
     private static func dayString(for date: Date) -> String {

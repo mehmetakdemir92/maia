@@ -35,9 +35,12 @@ struct ContentView: View {
         }
         .alert("Update Available", isPresented: $updateChecker.updateAvailable) {
             Button("Update Now") {
+                AppUpdateChecker.recordPromptDismissed()
                 AppUpdateChecker.openAppStore()
             }
-            Button("Later", role: .cancel) {}
+            Button("Later", role: .cancel) {
+                AppUpdateChecker.recordPromptDismissed()
+            }
         } message: {
             Text("A new version of Maia is available with new daily words and improvements.")
         }

@@ -69,7 +69,7 @@ final class WordPackStoreTests: XCTestCase {
     func testSelectByPreferredBands_resultMatchesCEFRMappingRules() {
         let pool = miniDayPool()
         let picked = WordPackStore.selectByPreferredBands(pool, userLevel: 8, date: testDate)
-        let words = picked.map { $0.toWord() }
+        let words = picked.map { $0.toWord(packDayISO: testDate) }
 
         XCTAssertEqual(words.count, 3)
         XCTAssertTrue(CEFRLevelMapping.matchesPreferredBands(words, userLevel: 8))

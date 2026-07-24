@@ -632,6 +632,9 @@
         }
       }
     },
+    "Base URL" : {
+
+    },
     "Best value" : {
       "localizations" : {
         "de" : {
@@ -1036,6 +1039,9 @@
         }
       }
     },
+    "Clear" : {
+
+    },
     "Close" : {
       "localizations" : {
         "de" : {
@@ -1063,6 +1069,9 @@
           }
         }
       }
+    },
+    "Coach stream" : {
+
     },
     "Collection" : {
       "localizations" : {
@@ -1851,6 +1860,9 @@
           }
         }
       }
+    },
+    "Debug: Coach stream" : {
+
     },
     "Debug: force Premium" : {
       "localizations" : {
@@ -4108,6 +4120,9 @@
     "Remove Photo" : {
 
     },
+    "Request" : {
+
+    },
     "Resend email" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -4345,6 +4360,9 @@
           }
         }
       }
+    },
+    "Sentence" : {
+
     },
     "Server is temporarily busy. Please tap Try Again in a few seconds." : {
       "extractionState" : "stale",
@@ -4694,6 +4712,9 @@
         }
       }
     },
+    "Simulator → 127.0.0.1. Device → your Mac LAN IP. Run backend-coach with npm run dev." : {
+
+    },
     "Start free trial" : {
       "localizations" : {
         "de" : {
@@ -4805,6 +4826,15 @@
           }
         }
       }
+    },
+    "Stream" : {
+
+    },
+    "Stream coach reply" : {
+
+    },
+    "Streaming…" : {
+
     },
     "Subscribe" : {
       "localizations" : {
@@ -5012,6 +5042,9 @@
           }
         }
       }
+    },
+    "Tap Stream — tokens should appear gradually." : {
+
     },
     "Tap the button in the email to open Maia and verify automatically. If you already verified in the browser, tap “I verified” below." : {
       "extractionState" : "stale",
@@ -5694,6 +5727,9 @@
         }
       }
     },
+    "Word (optional)" : {
+
+    },
     "Word focus" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -5801,6 +5837,7 @@
       }
     },
     "Xcode DEBUG builds only. Mimics App Store subscription." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5827,6 +5864,9 @@
           }
         }
       }
+    },
+    "Xcode DEBUG builds only. Premium override + Day-1 coach SSE demo (backend-coach on :8787)." : {
+
     },
     "You got %1$lld out of %2$lld correct" : {
       "localizations" : {

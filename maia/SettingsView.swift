@@ -173,8 +173,17 @@ struct SettingsView: View {
                                 Text("Debug: force Premium")
                             }
                         }
+
+                        NavigationLink {
+                            CoachDemoView()
+                        } label: {
+                            HStack {
+                                Image(systemName: "waveform")
+                                Text("Debug: Coach stream")
+                            }
+                        }
                     } footer: {
-                        Text("Xcode DEBUG builds only. Mimics App Store subscription.")
+                        Text("Xcode DEBUG builds only. Premium override + Day-1 coach SSE demo (backend-coach on :8787).")
                             .foregroundColor(.white.opacity(0.8))
                     }
                 }
