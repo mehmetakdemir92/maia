@@ -46,6 +46,9 @@ struct WordOfTheDayView: View {
                                     VStack(alignment: .leading, spacing: 4) {
                                         Text(word.word)
                                             .font(.system(size: 36, weight: .bold))
+                                            .lineLimit(1)
+                                            .minimumScaleFactor(0.5)
+                                            .allowsTightening(true)
                                             .foregroundColor(.white)
                                             .shadow(color: .black.opacity(0.35), radius: 3, x: 0, y: 1)
 

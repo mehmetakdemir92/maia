@@ -43,6 +43,9 @@ struct QuizView: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(word.word)
                             .font(.title2.weight(.bold))
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.6)
+                            .allowsTightening(true)
                             .foregroundColor(.white)
                         if let phonetic = word.phonetic {
                             Text(phonetic)

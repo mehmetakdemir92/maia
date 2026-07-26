@@ -410,6 +410,9 @@ private struct WordCardView: View {
             VStack(alignment: .leading, spacing: 6) {
                 Text(word.word)
                     .font(.system(size: 36, weight: .bold))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .allowsTightening(true)
                     .glassCardWordTitle()
 
                 if word.phonetic != nil
