@@ -10,7 +10,6 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var languageManager: AppLanguageManager
-    @EnvironmentObject var learningLanguageManager: LearningLanguageManager
     @Environment(\.dismiss) var dismiss
     @State private var showingSignOutAlert = false
     @State private var showingDeleteAlert = false
@@ -56,21 +55,6 @@ struct SettingsView: View {
                 
                 Section {
                     Picker(selection: Binding(
-                        get: { learningLanguageManager.selected },
-                        set: { learningLanguageManager.setSelected($0) }
-                    )) {
-                        ForEach(LearningLanguage.allCases) { option in
-                            Text(option.title).tag(option)
-                        }
-                    } label: {
-                        HStack {
-                            Image(systemName: "book.fill")
-                            Text("I'm learning")
-                                .foregroundColor(.white)
-                        }
-                    }
-
-                    Picker(selection: Binding(
                         get: { languageManager.selectedOption },
                         set: { languageManager.setSelected($0) }
                     )) {
@@ -88,7 +72,7 @@ struct SettingsView: View {
                     Text("Languages")
                         .foregroundColor(.white)
                 } footer: {
-                    Text("Daily words, quizzes, and pronunciation use the learning language. App language applies immediately; System follows your device language.")
+                    Text("App language applies immediately; System follows your device language. Learning language and level are on the Today tab.")
                         .foregroundColor(.white.opacity(0.8))
                 }
 
@@ -193,33 +177,6 @@ struct SettingsView: View {
                         Text("Xcode DEBUG builds only. Mimics App Store subscription.")
                             .foregroundColor(.white.opacity(0.8))
                     }
-                }
-                
-                Section {
-                    Picker(selection: Binding(
-                        get: { userManager.userLevel },
-                        set: { userManager.setUserLevel($0) }
-                    )) {
-                        ForEach(Array(CEFRLevelMapping.stepLabels.enumerated()), id: \.offset) { index, level in
-                            Text(level).tag(index + 1)
-                        }
-                    } label: {
-                        HStack {
-                            Image(systemName: "chart.bar.fill")
-                            Text("English level")
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                } header: {
-                    Text("English level")
-                        .foregroundColor(.white)
-                } footer: {
-                    Text(String(
-                        format: String(localized: "Today's words target: %@"),
-                        CEFRLevelMapping.preferredBandsSummary(for: userManager.userLevel)
-                    ))
-                    .foregroundColor(.white.opacity(0.8))
                 }
                 
                 Section {
@@ -364,5 +321,4 @@ For questions, please contact support.
     SettingsView()
         .environmentObject(UserManager())
         .environmentObject(AppLanguageManager())
-        .environmentObject(LearningLanguageManager())
 }
