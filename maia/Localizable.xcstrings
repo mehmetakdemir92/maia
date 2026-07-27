@@ -3044,6 +3044,9 @@
         }
       }
     },
+    "Level %@" : {
+
+    },
     "Loading quiz..." : {
       "localizations" : {
         "de" : {

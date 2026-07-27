@@ -15,6 +15,7 @@ struct TodayTabView: View {
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var diaryManager: DiaryManager
     @EnvironmentObject var progressManager: WordProgressManager
+    @EnvironmentObject var learningLanguageManager: LearningLanguageManager
 
     @State private var showingSettings = false
     @State private var showingPremiumPaywall = false
@@ -90,8 +91,7 @@ struct TodayTabView: View {
             }
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(.hidden, for: .navigationBar)
-            .toolbar { toolbar }
+            .toolbar(.hidden, for: .navigationBar)
             .sheet(isPresented: $showingSettings) {
                 SettingsView()
             }
@@ -136,6 +136,11 @@ struct TodayTabView: View {
                 loggedWordIDs.removeAll()
                 reloadWords(force: true)
             }
+            .onChange(of: learningLanguageManager.selected) { oldLanguage, newLanguage in
+                guard oldLanguage != newLanguage else { return }
+                loggedWordIDs.removeAll()
+                reloadWords(force: true)
+            }
             .onChange(of: showingSettings) { _, isShowing in
                 if !isShowing {
                     reloadWords(force: true)
@@ -147,31 +152,110 @@ struct TodayTabView: View {
     // MARK: - UI Pieces
 
     private var header: some View {
-        HStack(alignment: .center) {
-            VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 10) {
+                learningLanguageFlags
+                levelPickerPill
+
+                Spacer(minLength: 8)
+
+                Button {
+                    showingSettings = true
+                } label: {
+                    Image(systemName: "gearshape.fill")
+                        .font(.body.weight(.semibold))
+                        .foregroundColor(AppColors.glassCardTitle.opacity(0.92))
+                        .frame(width: 36, height: 36)
+                        .background {
+                            Circle()
+                                .fill(.ultraThinMaterial)
+                                .overlay {
+                                    Circle()
+                                        .strokeBorder(Color.white.opacity(0.28), lineWidth: 0.5)
+                                }
+                                .glassMaterialIgnoresSystemColorScheme()
+                        }
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(String(localized: "Settings"))
+            }
+
+            HStack(alignment: .center) {
                 Text(Date(), style: .date)
                     .font(.subheadline)
                     .foregroundColor(.white.opacity(0.92))
                     .shadow(color: .black.opacity(0.35), radius: 2, x: 0, y: 1)
-            }
 
-            Spacer()
+                Spacer()
 
-            DailyResetCountdownLabel {
-                reloadIfCalendarDayChanged()
+                DailyResetCountdownLabel {
+                    reloadIfCalendarDayChanged()
+                }
             }
         }
     }
 
-    private var toolbar: some ToolbarContent {
-        ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-                showingSettings = true
-            } label: {
-                Image(systemName: "gearshape.fill")
-                    .foregroundColor(AppColors.glassCardTitle.opacity(0.92))
+    /// UK / Germany flags — selected is vivid, the other is faded.
+    private var learningLanguageFlags: some View {
+        HStack(spacing: 8) {
+            ForEach(LearningLanguage.allCases) { language in
+                let isSelected = learningLanguageManager.selected == language
+                Button {
+                    learningLanguageManager.setSelected(language)
+                } label: {
+                    LearningLanguageFlagIcon(language: language, isSelected: isSelected)
+                        .frame(width: 30, height: 20)
+                        .opacity(isSelected ? 1.0 : 0.38)
+                        .saturation(isSelected ? 1.0 : 0.35)
+                        .scaleEffect(isSelected ? 1.0 : 0.94)
+                        .padding(.vertical, 6)
+                        .padding(.horizontal, 2)
+                        .contentShape(Rectangle())
+                        .accessibilityLabel(language.title)
+                        .accessibilityAddTraits(isSelected ? .isSelected : [])
+                }
+                .buttonStyle(.plain)
+                .animation(.easeInOut(duration: 0.18), value: isSelected)
             }
         }
+    }
+
+    /// Compact CEFR step menu (A1 … C2), same row as the flags.
+    private var levelPickerPill: some View {
+        Menu {
+            ForEach(1...CEFRLevelMapping.stepLabels.count, id: \.self) { step in
+                Button {
+                    userManager.setUserLevel(step)
+                } label: {
+                    if userManager.userLevel == step {
+                        Label(CEFRLevelMapping.label(for: step), systemImage: "checkmark")
+                    } else {
+                        Text(CEFRLevelMapping.label(for: step))
+                    }
+                }
+            }
+        } label: {
+            HStack(spacing: 4) {
+                Text(CEFRLevelMapping.label(for: userManager.userLevel))
+                    .font(.caption.weight(.bold))
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 9, weight: .bold))
+            }
+            .foregroundColor(.white.opacity(0.95))
+            .padding(.horizontal, 10)
+            .padding(.vertical, 6)
+            .background {
+                Capsule(style: .continuous)
+                    .fill(.ultraThinMaterial)
+                    .overlay {
+                        Capsule(style: .continuous)
+                            .strokeBorder(Color.white.opacity(0.28), lineWidth: 0.5)
+                    }
+                    .glassMaterialIgnoresSystemColorScheme()
+            }
+            .shadow(color: .black.opacity(0.18), radius: 4, x: 0, y: 1)
+        }
+        .accessibilityLabel("Level \(CEFRLevelMapping.label(for: userManager.userLevel))")
     }
 
     // MARK: - Data / Actions

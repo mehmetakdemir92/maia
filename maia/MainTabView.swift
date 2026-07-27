@@ -67,6 +67,7 @@ struct MainTabView: View {
     MainTabView()
         .environmentObject(UserManager())
         .environmentObject(AppLanguageManager())
+        .environmentObject(LearningLanguageManager())
         .environmentObject(StreakManager())
         .environmentObject(BadgeManager())
         .environmentObject(DiaryManager())
