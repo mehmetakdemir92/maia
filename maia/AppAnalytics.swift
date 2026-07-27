@@ -3,7 +3,8 @@
 //  maia
 //
 //  Lightweight analytics pipeline:
-//  - Stores events locally for debugging/history
+//  - Firebase Analytics (→ BigQuery export)
+//  - Local ring buffer for debugging
 //  - Mirrors events to Firestore when user is signed in
 //
 
@@ -69,6 +70,15 @@ enum AppAnalyticsPlacement {
     static let secondQuizCompleteRewardedVideo = "second_quiz_complete_rewarded_video"
 }
 
+enum AppAnalyticsParam {
+    static let learningLanguage = "learning_language"
+    static let cefrLevel = "cefr_level"
+    static let userCefrLevel = "user_cefr_level"
+    static let isPremium = "is_premium"
+    static let platform = "platform"
+    static let appVersion = "app_version"
+}
+
 final class AppAnalytics {
     static let shared = AppAnalytics()
 
@@ -79,12 +89,17 @@ final class AppAnalytics {
     private var cachedEvents: [AppAnalyticsEvent] = []
     private var authListener: AuthStateDidChangeListenerHandle?
 
+    /// Last known premium flag (StoreKit lives in UserManager; synced via `syncUserProperties`).
+    private var cachedIsPremium = false
+
     private init() {
         loadLocal()
         authListener = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let self, let user else { return }
             self.flushRecentEventsToFirestore(userId: user.uid)
         }
+        // Seed user properties from local prefs on launch.
+        syncUserProperties()
     }
 
     deinit {
@@ -93,12 +108,38 @@ final class AppAnalytics {
         }
     }
 
-    func log(_ name: String, params: [String: String] = [:]) {
-        var merged = params
-        merged["platform"] = "ios"
-        merged["app_version"] = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
+    // MARK: - User properties / shared dimensions
 
-        // Firebase Analytics stream (Dashboard / DebugView).
+    /// Updates Firebase Analytics user properties and the in-memory premium cache.
+    /// Pass only the fields that changed; omitted fields are read from local prefs / cache.
+    func syncUserProperties(
+        learningLanguage: LearningLanguage? = nil,
+        userLevel: Int? = nil,
+        isPremium: Bool? = nil
+    ) {
+        let language = learningLanguage ?? LearningLanguage.current
+        let level = userLevel ?? Self.storedUserLevel()
+        if let isPremium {
+            cachedIsPremium = isPremium
+        }
+
+        let cefr = CEFRLevelMapping.label(for: level)
+        Analytics.setUserProperty(language.code, forName: AppAnalyticsParam.learningLanguage)
+        Analytics.setUserProperty(cefr, forName: AppAnalyticsParam.userCefrLevel)
+        Analytics.setUserProperty(cefr, forName: AppAnalyticsParam.cefrLevel)
+        Analytics.setUserProperty(cachedIsPremium ? "true" : "false", forName: AppAnalyticsParam.isPremium)
+    }
+
+    func log(_ name: String, params: [String: String] = [:]) {
+        var merged = defaultDimensions()
+        for (key, value) in params {
+            merged[key] = value
+        }
+        merged[AppAnalyticsParam.platform] = "ios"
+        merged[AppAnalyticsParam.appVersion] =
+            Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unknown"
+
+        // Firebase Analytics stream (Dashboard / DebugView / BigQuery).
         Analytics.logEvent(name, parameters: merged)
 
         let event = AppAnalyticsEvent(name: name, params: merged)
@@ -111,6 +152,23 @@ final class AppAnalytics {
         if let userId = Auth.auth().currentUser?.uid {
             saveToFirestore(event: event, userId: userId)
         }
+    }
+
+    /// Dimensions attached to every event. Caller params override these keys.
+    private func defaultDimensions() -> [String: String] {
+        let userCefr = CEFRLevelMapping.label(for: Self.storedUserLevel())
+        return [
+            AppAnalyticsParam.learningLanguage: LearningLanguage.current.code,
+            AppAnalyticsParam.userCefrLevel: userCefr,
+            // Default cefr_level = user setting; word/quiz events may override with word band.
+            AppAnalyticsParam.cefrLevel: userCefr,
+            AppAnalyticsParam.isPremium: cachedIsPremium ? "true" : "false"
+        ]
+    }
+
+    private static func storedUserLevel() -> Int {
+        let raw = UserDefaults.standard.integer(forKey: "userLevel")
+        return raw == 0 ? 1 : raw
     }
 
     private func flushRecentEventsToFirestore(userId: String) {

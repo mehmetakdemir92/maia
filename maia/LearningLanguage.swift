@@ -107,6 +107,7 @@ final class LearningLanguageManager: ObservableObject {
         guard language != selected else { return }
         UserDefaults.standard.set(language.rawValue, forKey: LearningLanguage.storageKey)
         selected = language
+        AppAnalytics.shared.syncUserProperties(learningLanguage: language)
         NotificationCenter.default.post(name: .learningLanguageChanged, object: nil)
     }
 }

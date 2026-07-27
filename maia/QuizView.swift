@@ -245,11 +245,16 @@ struct QuizView: View {
             let success = quizManager.startQuiz(for: word)
             print("Quiz start result: \(success), Quiz count: \(quizManager.currentQuiz.count)")
             if success {
-                AppAnalytics.shared.log(AppAnalyticsEventName.quizStarted, params: [
+                var params: [String: String] = [
                     "quiz_mode": "daily",
                     "word_id": word.id.uuidString,
-                    "question_count": String(quizManager.currentQuiz.count)
-                ])
+                    "question_count": String(quizManager.currentQuiz.count),
+                    AppAnalyticsParam.learningLanguage: word.learningLanguage.code
+                ]
+                if let cefr = word.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
+                    params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
+                }
+                AppAnalytics.shared.log(AppAnalyticsEventName.quizStarted, params: params)
             }
             
             if !success || quizManager.currentQuiz.isEmpty {
@@ -266,12 +271,17 @@ struct QuizView: View {
         quizManager.saveAttemptsForToday()
 
         if !hasLoggedQuizCompletion {
-            AppAnalytics.shared.log(AppAnalyticsEventName.quizCompleted, params: [
+            var params: [String: String] = [
                 "quiz_mode": "daily",
                 "word_id": word.id.uuidString,
                 "correct_count": String(quizManager.correctAnswers),
-                "question_count": String(quizManager.currentQuiz.count)
-            ])
+                "question_count": String(quizManager.currentQuiz.count),
+                AppAnalyticsParam.learningLanguage: word.learningLanguage.code
+            ]
+            if let cefr = word.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
+                params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
+            }
+            AppAnalytics.shared.log(AppAnalyticsEventName.quizCompleted, params: params)
             hasLoggedQuizCompletion = true
         }
 

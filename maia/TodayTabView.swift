@@ -111,10 +111,11 @@ struct TodayTabView: View {
             .onChange(of: wordManager.currentWords) { _, words in
                 for word in words where !loggedWordIDs.contains(word.id) {
                     var params: [String: String] = [
-                        "word_id": word.id.uuidString
+                        "word_id": word.id.uuidString,
+                        AppAnalyticsParam.learningLanguage: word.learningLanguage.code
                     ]
                     if let cefr = word.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
-                        params["cefr_level"] = cefr.uppercased()
+                        params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
                     }
                     AppAnalytics.shared.log(AppAnalyticsEventName.dailyWordViewed, params: params)
                     loggedWordIDs.insert(word.id)

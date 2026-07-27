@@ -289,6 +289,7 @@ class UserManager: ObservableObject {
     func setUserLevel(_ level: Int) {
         userLevel = min(max(level, 1), 11)
         saveUserData()
+        AppAnalytics.shared.syncUserProperties(userLevel: userLevel)
     }
 
     func completeInitialSetup(name: String, profileImageData: Data?, level: Int) async throws {
@@ -403,6 +404,7 @@ class UserManager: ObservableObject {
         if isPremium != combined {
             isPremium = combined
         }
+        AppAnalytics.shared.syncUserProperties(isPremium: combined)
     }
 
     private static func onboardingCompletedKey(for uid: String) -> String {
@@ -510,6 +512,7 @@ class UserManager: ObservableObject {
         }
 
         publishPremiumState()
+        AppAnalytics.shared.syncUserProperties(userLevel: userLevel, isPremium: isPremium)
     }
 
     private func saveUserData() {
