@@ -154,12 +154,6 @@ struct ExampleSentenceRow: View {
             result = result + Text(match)
                 .fontWeight(.bold)
                 .foregroundStyle(AppColors.exampleHeadwordGradient)
-                .background {
-                    RoundedRectangle(cornerRadius: 4, style: .continuous)
-                        .fill(AppColors.exampleHeadwordWash)
-                        .padding(.horizontal, -2)
-                        .padding(.vertical, -1)
-                }
             cursor = range.upperBound
         }
         if cursor < sentence.endIndex {

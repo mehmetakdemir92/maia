@@ -181,14 +181,11 @@ enum AppColors {
     /// Target lemma inside example sentences — soft white → gold sheen.
     static let exampleHeadwordGradient = LinearGradient(
         colors: [
-            Color(red: 255/255, green: 248/255, blue: 225/255),
-            Color(red: 245/255, green: 196/255, blue: 72/255),
-            Color(red: 212/255, green: 160/255, blue: 23/255)
+            Color(red: 255/255, green: 236/255, blue: 179/255),
+            Color(red: 245/255, green: 180/255, blue: 32/255),
+            Color(red: 196/255, green: 130/255, blue: 8/255)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
-
-    /// Soft gold wash behind the highlighted lemma (readable on light glass).
-    static let exampleHeadwordWash = Color(red: 250/255, green: 204/255, blue: 21/255).opacity(0.28)
 }
