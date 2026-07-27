@@ -178,12 +178,12 @@ enum AppColors {
     /// Labels / phonetic — slate-600
     static let glassCardMuted = Color(red: 51/255, green: 65/255, blue: 85/255)
 
-    /// Target lemma inside example sentences — soft white → gold sheen.
+    /// Target lemma inside example sentences — light orange → soft red.
     static let exampleHeadwordGradient = LinearGradient(
         colors: [
-            Color(red: 255/255, green: 236/255, blue: 179/255),
-            Color(red: 245/255, green: 180/255, blue: 32/255),
-            Color(red: 196/255, green: 130/255, blue: 8/255)
+            Color(red: 255/255, green: 180/255, blue: 120/255),
+            Color(red: 245/255, green: 120/255, blue: 70/255),
+            Color(red: 220/255, green: 70/255, blue: 55/255)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
