@@ -177,4 +177,18 @@ enum AppColors {
     static let glassCardBody = Color(red: 15/255, green: 23/255, blue: 42/255)
     /// Labels / phonetic — slate-600
     static let glassCardMuted = Color(red: 51/255, green: 65/255, blue: 85/255)
+
+    /// Target lemma inside example sentences — soft white → gold sheen.
+    static let exampleHeadwordGradient = LinearGradient(
+        colors: [
+            Color(red: 255/255, green: 248/255, blue: 225/255),
+            Color(red: 245/255, green: 196/255, blue: 72/255),
+            Color(red: 212/255, green: 160/255, blue: 23/255)
+        ],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+
+    /// Soft gold wash behind the highlighted lemma (readable on light glass).
+    static let exampleHeadwordWash = Color(red: 250/255, green: 204/255, blue: 21/255).opacity(0.28)
 }

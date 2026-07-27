@@ -492,7 +492,9 @@ private struct WordCardView: View {
                 ForEach(Array(allSentences.enumerated()), id: \.offset) { _, sentence in
                     ExampleSentenceRow(
                         sentence: sentence,
-                        englishGloss: word.englishGloss(forExample: sentence)
+                        englishGloss: word.englishGloss(forExample: sentence),
+                        highlightWord: word.word,
+                        learningLanguage: word.learningLanguage
                     )
                 }
             }

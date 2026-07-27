@@ -88,6 +88,9 @@ extension View {
 struct ExampleSentenceRow: View {
     let sentence: String
     let englishGloss: String?
+    /// Headword to paint gold inside the sentence; nil keeps plain body styling.
+    var highlightWord: String? = nil
+    var learningLanguage: LearningLanguage = .english
 
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
@@ -98,13 +101,13 @@ struct ExampleSentenceRow: View {
                 .padding(.top, 1)
 
             VStack(alignment: .leading, spacing: 3) {
-                Text(sentence)
+                highlightedSentence
                     .font(.body.weight(.medium))
                     .italic()
-                    .foregroundColor(AppColors.glassCardBody)
                     .lineSpacing(3)
                     .shadow(color: Color.black.opacity(0.08), radius: 1, x: 0, y: 1)
                     .fixedSize(horizontal: false, vertical: true)
+                    .accessibilityLabel(sentence)
 
                 if let englishGloss {
                     Text(englishGloss)
@@ -113,6 +116,81 @@ struct ExampleSentenceRow: View {
                         .accessibilityLabel("English: \(englishGloss)")
                 }
             }
+        }
+    }
+
+    @ViewBuilder
+    private var highlightedSentence: some View {
+        if let highlightWord, !highlightWord.isEmpty,
+           let attributed = Self.highlightedText(
+            sentence: sentence,
+            headword: highlightWord,
+            language: learningLanguage
+           ) {
+            attributed
+        } else {
+            Text(sentence)
+                .foregroundColor(AppColors.glassCardBody)
+        }
+    }
+
+    /// Builds `Text` with the headword (and common inflections) in a white→gold gradient.
+    private static func highlightedText(
+        sentence: String,
+        headword: String,
+        language: LearningLanguage
+    ) -> Text? {
+        let ranges = matchRanges(in: sentence, headword: headword, language: language)
+        guard !ranges.isEmpty else { return nil }
+
+        var result = Text("")
+        var cursor = sentence.startIndex
+        for range in ranges {
+            if cursor < range.lowerBound {
+                result = result + Text(String(sentence[cursor..<range.lowerBound]))
+                    .foregroundColor(AppColors.glassCardBody)
+            }
+            let match = String(sentence[range])
+            result = result + Text(match)
+                .fontWeight(.bold)
+                .foregroundStyle(AppColors.exampleHeadwordGradient)
+                .background {
+                    RoundedRectangle(cornerRadius: 4, style: .continuous)
+                        .fill(AppColors.exampleHeadwordWash)
+                        .padding(.horizontal, -2)
+                        .padding(.vertical, -1)
+                }
+            cursor = range.upperBound
+        }
+        if cursor < sentence.endIndex {
+            result = result + Text(String(sentence[cursor...]))
+                .foregroundColor(AppColors.glassCardBody)
+        }
+        return result
+    }
+
+    /// Case-insensitive lemma matches, including language-specific inflection suffixes.
+    private static func matchRanges(
+        in sentence: String,
+        headword: String,
+        language: LearningLanguage
+    ) -> [Range<String.Index>] {
+        let lemma = headword.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !lemma.isEmpty else { return [] }
+
+        let escaped = NSRegularExpression.escapedPattern(for: lemma)
+        let suffixAlternation = language.headwordSuffixes
+            .map { NSRegularExpression.escapedPattern(for: $0) }
+            .joined(separator: "|")
+        let suffixGroup = suffixAlternation.isEmpty ? "" : "(?:\(suffixAlternation))?"
+        let pattern = "\\b\(escaped)\(suffixGroup)\\b"
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else {
+            return []
+        }
+
+        let nsRange = NSRange(sentence.startIndex..<sentence.endIndex, in: sentence)
+        return regex.matches(in: sentence, options: [], range: nsRange).compactMap { match in
+            Range(match.range, in: sentence)
         }
     }
 }

@@ -151,7 +151,9 @@ struct WordOfTheDayView: View {
                                     let displayExample = generatedExamples[word.id] ?? word.exampleSentence
                                     ExampleSentenceRow(
                                         sentence: displayExample,
-                                        englishGloss: word.englishGloss(forExample: displayExample)
+                                        englishGloss: word.englishGloss(forExample: displayExample),
+                                        highlightWord: word.word,
+                                        learningLanguage: word.learningLanguage
                                     )
                                     .animation(.easeInOut(duration: 0.3), value: displayExample)
                                 }
