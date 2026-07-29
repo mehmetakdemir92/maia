@@ -12,6 +12,7 @@ struct WordOfTheDayView: View {
     @StateObject private var wordManager = WordOfTheDayManager()
     @Environment(\.scenePhase) private var scenePhase
     @EnvironmentObject var userManager: UserManager
+    @EnvironmentObject private var languageManager: AppLanguageManager
     @State private var speechSynthesizer = AVSpeechSynthesizer()
     @State private var generatedExamples: [UUID: String] = [:] // wordId -> generated example
     @State private var generatingForWordId: UUID? = nil
@@ -151,11 +152,15 @@ struct WordOfTheDayView: View {
                                     let displayExample = generatedExamples[word.id] ?? word.exampleSentence
                                     ExampleSentenceRow(
                                         sentence: displayExample,
-                                        englishGloss: word.englishGloss(forExample: displayExample),
+                                        gloss: word.gloss(
+                                            forExample: displayExample,
+                                            preferredLanguageCode: languageManager.preferredExampleGlossCode
+                                        ),
                                         highlightWord: word.word,
                                         learningLanguage: word.learningLanguage
                                     )
                                     .animation(.easeInOut(duration: 0.3), value: displayExample)
+                                    .id(languageManager.refreshID)
                                 }
                             }
                             .padding(24)

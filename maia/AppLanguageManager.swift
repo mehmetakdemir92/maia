@@ -105,15 +105,40 @@ enum AppLanguageOption: String, CaseIterable, Identifiable {
     }
 }
 
+enum ExampleGlossPreference: String, CaseIterable, Identifiable {
+    case automatic
+    case turkish
+    case english
+    case off
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .automatic: return String(localized: "Automatic")
+        case .turkish: return "Türkçe"
+        case .english: return "English"
+        case .off: return String(localized: "Off")
+        }
+    }
+}
+
 @MainActor
 final class AppLanguageManager: ObservableObject {
     private let storageKey = "appLanguagePreference"
+    private let glossPreferenceKey = "exampleGlossPreference"
 
     @Published private(set) var refreshID = UUID()
 
     var selectedOption: AppLanguageOption {
         let raw = UserDefaults.standard.string(forKey: storageKey) ?? AppLanguageOption.system.rawValue
         return AppLanguageOption(rawValue: raw) ?? .system
+    }
+
+    var exampleGlossPreference: ExampleGlossPreference {
+        let raw = UserDefaults.standard.string(forKey: glossPreferenceKey)
+            ?? ExampleGlossPreference.automatic.rawValue
+        return ExampleGlossPreference(rawValue: raw) ?? .automatic
     }
 
     /// Date/number formatting (separate from String Catalog).
@@ -134,9 +159,38 @@ final class AppLanguageManager: ObservableObject {
         }
     }
 
+    /// Preferred language for example-sentence glosses.
+    /// Returns `tr`, `en`, or `nil` when glosses are turned off.
+    var preferredExampleGlossCode: String? {
+        switch exampleGlossPreference {
+        case .off:
+            return nil
+        case .turkish:
+            return "tr"
+        case .english:
+            return "en"
+        case .automatic:
+            if let code = selectedOption.languageCode {
+                if code == "tr" { return "tr" }
+                if code == "en" { return "en" }
+                // de/es/fr UI: English glosses when available (DE packs).
+                return "en"
+            }
+            let preferred = Locale.preferredLanguages
+                .map { String($0.prefix(2)).lowercased() }
+            if preferred.contains("tr") { return "tr" }
+            return "en"
+        }
+    }
+
     func setSelected(_ option: AppLanguageOption) {
         UserDefaults.standard.set(option.rawValue, forKey: storageKey)
         Self.applyStoredPreference()
+        refreshID = UUID()
+    }
+
+    func setExampleGlossPreference(_ preference: ExampleGlossPreference) {
+        UserDefaults.standard.set(preference.rawValue, forKey: glossPreferenceKey)
         refreshID = UUID()
     }
 

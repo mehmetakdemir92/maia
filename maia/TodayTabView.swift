@@ -444,6 +444,8 @@ private struct DailyResetCountdownLabel: View {
 private struct WordCardView: View {
     private let pronounceButtonSide: CGFloat = 50
 
+    @EnvironmentObject private var languageManager: AppLanguageManager
+
     let word: Word
     let isPremium: Bool
     let isWordQuizzedToday: Bool
@@ -577,13 +579,17 @@ private struct WordCardView: View {
                 ForEach(Array(allSentences.enumerated()), id: \.offset) { _, sentence in
                     ExampleSentenceRow(
                         sentence: sentence,
-                        englishGloss: word.englishGloss(forExample: sentence),
+                        gloss: word.gloss(
+                            forExample: sentence,
+                            preferredLanguageCode: languageManager.preferredExampleGlossCode
+                        ),
                         highlightWord: word.word,
                         learningLanguage: word.learningLanguage
                     )
                 }
             }
             .animation(.easeInOut(duration: 0.3), value: allSentences.count)
+            .id(languageManager.refreshID)
         }
     }
 

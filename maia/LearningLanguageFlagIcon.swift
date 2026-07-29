@@ -17,7 +17,7 @@ struct LearningLanguageFlagIcon: View {
         Group {
             switch language {
             case .english:
-                UKFlagView()
+                USFlagView()
             case .german:
                 GermanFlagView()
             }
@@ -52,53 +52,33 @@ private struct GermanFlagView: View {
     }
 }
 
-// MARK: - United Kingdom (simplified Union Jack)
+// MARK: - United States (simplified Stars and Stripes)
 
-private struct UKFlagView: View {
-    private let navy = Color(red: 0.0, green: 0.14, blue: 0.44)
-    private let red = Color(red: 0.78, green: 0.06, blue: 0.18)
+private struct USFlagView: View {
+    private let red = Color(red: 0.70, green: 0.13, blue: 0.20)
+    private let blue = Color(red: 0.06, green: 0.20, blue: 0.45)
 
     var body: some View {
         GeometryReader { geo in
             let w = geo.size.width
             let h = geo.size.height
+            let stripeHeight = h / 13
 
             ZStack {
-                navy
-
-                // White saltire
-                Path { path in
-                    path.move(to: .zero)
-                    path.addLine(to: CGPoint(x: w, y: h))
-                    path.move(to: CGPoint(x: 0, y: h))
-                    path.addLine(to: CGPoint(x: w, y: 0))
+                // 13 horizontal stripes.
+                VStack(spacing: 0) {
+                    ForEach(0..<13, id: \.self) { idx in
+                        Rectangle()
+                            .fill(idx.isMultiple(of: 2) ? red : .white)
+                            .frame(height: stripeHeight)
+                    }
                 }
-                .stroke(Color.white, style: StrokeStyle(lineWidth: h * 0.24, lineCap: .butt))
 
-                // Red saltire (simplified centered)
-                Path { path in
-                    path.move(to: .zero)
-                    path.addLine(to: CGPoint(x: w, y: h))
-                    path.move(to: CGPoint(x: 0, y: h))
-                    path.addLine(to: CGPoint(x: w, y: 0))
-                }
-                .stroke(red, style: StrokeStyle(lineWidth: h * 0.09, lineCap: .butt))
-
-                // White cross
+                // Blue canton.
                 Rectangle()
-                    .fill(Color.white)
-                    .frame(width: w * 0.30, height: h)
-                Rectangle()
-                    .fill(Color.white)
-                    .frame(width: w, height: h * 0.30)
-
-                // Red cross
-                Rectangle()
-                    .fill(red)
-                    .frame(width: w * 0.16, height: h)
-                Rectangle()
-                    .fill(red)
-                    .frame(width: w, height: h * 0.16)
+                    .fill(blue)
+                    .frame(width: w * 0.45, height: stripeHeight * 7)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
             .frame(width: w, height: h)
         }

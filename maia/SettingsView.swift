@@ -68,11 +68,26 @@ struct SettingsView: View {
                                 .foregroundColor(.white)
                         }
                     }
+
+                    Picker(selection: Binding(
+                        get: { languageManager.exampleGlossPreference },
+                        set: { languageManager.setExampleGlossPreference($0) }
+                    )) {
+                        ForEach(ExampleGlossPreference.allCases) { option in
+                            Text(option.title).tag(option)
+                        }
+                    } label: {
+                        HStack {
+                            Image(systemName: "text.bubble")
+                            Text(String(localized: "Example translations"))
+                                .foregroundColor(.white)
+                        }
+                    }
                 } header: {
                     Text("Languages")
                         .foregroundColor(.white)
                 } footer: {
-                    Text("App language applies immediately; System follows your device language. Learning language and level are on the Today tab.")
+                    Text(String(localized: "App language applies immediately; System follows your device language. Example translations appear under EN/DE sentences (Turkish recommended for Turkish app language). Learning language and level are on the Today tab."))
                         .foregroundColor(.white.opacity(0.8))
                 }
 

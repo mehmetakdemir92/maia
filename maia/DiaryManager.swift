@@ -569,6 +569,9 @@ class DiaryManager: ObservableObject {
             exampleTranslation: word.exampleTranslation,
             exampleTranslation2: word.exampleTranslation2,
             exampleTranslation3: word.exampleTranslation3,
+            exampleTranslationTr: word.exampleTranslationTr,
+            exampleTranslationTr2: word.exampleTranslationTr2,
+            exampleTranslationTr3: word.exampleTranslationTr3,
             cefrLevel: word.cefrLevel,
             domainTag: word.domainTag,
             partOfSpeech: partOfSpeech ?? word.partOfSpeech,
@@ -960,6 +963,9 @@ class DiaryManager: ObservableObject {
         if let t1 = word.exampleTranslation { data["exampleTranslation"] = t1 }
         if let t2 = word.exampleTranslation2 { data["exampleTranslation2"] = t2 }
         if let t3 = word.exampleTranslation3 { data["exampleTranslation3"] = t3 }
+        if let t1 = word.exampleTranslationTr { data["exampleTranslationTr"] = t1 }
+        if let t2 = word.exampleTranslationTr2 { data["exampleTranslationTr2"] = t2 }
+        if let t3 = word.exampleTranslationTr3 { data["exampleTranslationTr3"] = t3 }
         if let c = word.cefrLevel { data["cefrLevel"] = c }
         if let d = word.domainTag { data["domainTag"] = d }
         if let pos = word.partOfSpeech { data["partOfSpeech"] = pos }
@@ -984,6 +990,9 @@ class DiaryManager: ObservableObject {
         let exampleTranslation = data["exampleTranslation"] as? String
         let exampleTranslation2 = data["exampleTranslation2"] as? String
         let exampleTranslation3 = data["exampleTranslation3"] as? String
+        let exampleTranslationTr = data["exampleTranslationTr"] as? String
+        let exampleTranslationTr2 = data["exampleTranslationTr2"] as? String
+        let exampleTranslationTr3 = data["exampleTranslationTr3"] as? String
         let cefrLevel = data["cefrLevel"] as? String
         let domainTag = data["domainTag"] as? String
         let partOfSpeech = data["partOfSpeech"] as? String
@@ -1006,6 +1015,9 @@ class DiaryManager: ObservableObject {
             exampleTranslation: exampleTranslation,
             exampleTranslation2: exampleTranslation2,
             exampleTranslation3: exampleTranslation3,
+            exampleTranslationTr: exampleTranslationTr,
+            exampleTranslationTr2: exampleTranslationTr2,
+            exampleTranslationTr3: exampleTranslationTr3,
             cefrLevel: cefrLevel,
             domainTag: domainTag,
             partOfSpeech: partOfSpeech,

@@ -1318,5 +1318,2095 @@
       "Knowledge of English is required for the position.",
       "He expanded his knowledge in the course."
     ]
+  },
+  {
+    "word": "Entscheidung",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛntˈʃaɪ̯dʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The act of choosing or making up your mind after thinking about options.",
+    "examples": [
+      "Das war eine schwierige Entscheidung für mich.",
+      "Wir müssen eine wichtige Entscheidung treffen.",
+      "Die Entscheidung des Richters war überraschend."
+    ],
+    "exampleTranslations": [
+      "That was a difficult decision for me.",
+      "We have to make an important decision.",
+      "The judge's decision was surprising."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Entscheidung\" mean?",
+        "options": [
+          "The act of choosing or making up your mind after thinking about options.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das war eine schwierige _____ für mich.",
+        "options": [
+          "Entscheidung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir müssen eine wichtige _____ treffen.",
+        "options": [
+          "Entscheidung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Erfahrungsaustausch",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛɐ̯ˈfaːʁʊŋsˌʔaʊ̯staʊ̯ʃ/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "It is a meeting where people share their knowledge and experiences with each other.",
+    "examples": [
+      "Wir hatten einen sehr nützlichen Erfahrungsaustausch über unsere Projekte.",
+      "Der regelmäßige Erfahrungsaustausch hilft uns, voneinander zu lernen und besser zu werden.",
+      "Beim letzten Erfahrungsaustausch haben wir viele neue Ideen gesammelt."
+    ],
+    "exampleTranslations": [
+      "We had a very useful exchange of experiences about our projects.",
+      "The regular exchange of experiences helps us to learn from each other and to get better.",
+      "At the last exchange of experiences, we collected many new ideas."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Erfahrungsaustausch\" mean?",
+        "options": [
+          "It is a meeting where people share their knowledge and experiences with each other.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir hatten einen sehr nützlichen _____ über unsere Projekte.",
+        "options": [
+          "Erfahrungsaustausch",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der regelmäßige _____ hilft uns, voneinander zu lernen und besser zu werden.",
+        "options": [
+          "Erfahrungsaustausch",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Verantwortung",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈfɛɐ̯ˌʔantvɔʁtʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The state of being accountable or to blame for something, or having duties.",
+    "examples": [
+      "Jeder hat die Verantwortung für seine eigenen Entscheidungen.",
+      "Sie trägt eine große Verantwortung als Teamleiterin.",
+      "Wir müssen unsere Verantwortung gegenüber der Umwelt ernst nehmen."
+    ],
+    "exampleTranslations": [
+      "Everyone has responsibility for their own decisions.",
+      "She bears great responsibility as a team leader.",
+      "We must take our responsibility towards the environment seriously."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Verantwortung\" mean?",
+        "options": [
+          "The state of being accountable or to blame for something, or having duties.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Jeder hat die _____ für seine eigenen Entscheidungen.",
+        "options": [
+          "Verantwortung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie trägt eine große _____ als Teamleiterin.",
+        "options": [
+          "Verantwortung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Möglichkeit",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈmøːklɪçkaɪ̯t/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "A situation or condition that allows something to happen or be done.",
+    "examples": [
+      "Es gibt eine gute Möglichkeit, das Problem zu lösen.",
+      "Wir haben noch die Möglichkeit, den Zug umzubuchen.",
+      "Diese Entscheidung eröffnet uns viele neue Möglichkeiten."
+    ],
+    "exampleTranslations": [
+      "There is a good opportunity to solve the problem.",
+      "We still have the option to rebook the train.",
+      "This decision opens up many new possibilities for us."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Möglichkeit\" mean?",
+        "options": [
+          "A situation or condition that allows something to happen or be done.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es gibt eine gute _____, das Problem zu lösen.",
+        "options": [
+          "Möglichkeit",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir haben noch die _____, den Zug umzubuchen.",
+        "options": [
+          "Möglichkeit",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Vorteil",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈfɔʁtaɪ̯l/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "A positive aspect or situation that gives someone an advantage over others.",
+    "examples": [
+      "Der größte Vorteil dieser Methode ist ihre Einfachheit.",
+      "Es ist ein großer Vorteil, wenn man mehrere Sprachen spricht.",
+      "Diese neue Technologie bietet viele Vorteile für unser Unternehmen."
+    ],
+    "exampleTranslations": [
+      "The biggest advantage of this method is its simplicity.",
+      "It is a great advantage if you speak several languages.",
+      "This new technology offers many advantages for our company."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Vorteil\" mean?",
+        "options": [
+          "A positive aspect or situation that gives someone an advantage over others.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der größte _____ dieser Methode ist ihre Einfachheit.",
+        "options": [
+          "Vorteil",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist ein großer _____, wenn man mehrere Sprachen spricht.",
+        "options": [
+          "Vorteil",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Nachteil",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈnaxtaɪl/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "A feature that makes something less useful or desirable, often causing problems.",
+    "examples": [
+      "Der größte Nachteil dieser Wohnung ist, dass sie keinen Balkon hat.",
+      "Jede Medaille hat zwei Seiten, es gibt immer Vor- und Nachteile.",
+      "Ein weiterer Nachteil ist der lange Arbeitsweg jeden Tag."
+    ],
+    "exampleTranslations": [
+      "The biggest disadvantage of this apartment is that it has no balcony.",
+      "Every coin has two sides; there are always advantages and disadvantages.",
+      "Another drawback is the long commute every day."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Nachteil\" mean?",
+        "options": [
+          "A feature that makes something less useful or desirable, often causing problems.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der größte _____ dieser Wohnung ist, dass sie keinen Balkon hat.",
+        "options": [
+          "Nachteil",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Jede Medaille hat zwei Seiten, es gibt immer Vor- und _____e.",
+        "options": [
+          "Nachteil",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Entwicklung",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛntˈvɪklʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "The process of growing, changing, or becoming more advanced over time.",
+    "examples": [
+      "Die wirtschaftliche Entwicklung des Landes ist in den letzten Jahren sehr positiv gewesen.",
+      "Wir müssen die Entwicklung neuer Technologien fördern, um wettbewerbsfähig zu bleiben.",
+      "Die persönliche Entwicklung ist ein wichtiger Aspekt im Leben jedes Menschen."
+    ],
+    "exampleTranslations": [
+      "The economic development of the country has been very positive in recent years.",
+      "We must promote the development of new technologies to remain competitive.",
+      "Personal development is an important aspect in everyone's life."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Entwicklung\" mean?",
+        "options": [
+          "The process of growing, changing, or becoming more advanced over time.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die wirtschaftliche _____ des Landes ist in den letzten Jahren sehr positiv gewesen.",
+        "options": [
+          "Entwicklung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir müssen die _____ neuer Technologien fördern, um wettbewerbsfähig zu bleiben.",
+        "options": [
+          "Entwicklung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Gesellschaft",
+    "cefrLevel": "b1",
+    "phonetic": "/ɡəˈzɛlʃaft/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "A group of people, an organization, or the entire community of humans.",
+    "examples": [
+      "Die moderne Gesellschaft steht vor vielen Herausforderungen.",
+      "Er genießt die Gesellschaft seiner Freunde sehr.",
+      "Nach der Arbeit gehen wir oft in eine gemütliche Gesellschaft."
+    ],
+    "exampleTranslations": [
+      "Modern society faces many challenges.",
+      "He really enjoys the company of his friends.",
+      "After work, we often go to a cozy gathering."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Gesellschaft\" mean?",
+        "options": [
+          "A group of people, an organization, or the entire community of humans.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die moderne _____ steht vor vielen Herausforderungen.",
+        "options": [
+          "Gesellschaft",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Er genießt die _____ seiner Freunde sehr.",
+        "options": [
+          "Gesellschaft",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Bildung",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈbɪldʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The process of learning and developing knowledge, skills, and character.",
+    "examples": [
+      "Gute Bildung ist wichtig für die Zukunft der Kinder.",
+      "Sie hat ihre Bildung an einer Universität abgeschlossen.",
+      "Der Staat investiert viel in die Bildung seiner Bürger."
+    ],
+    "exampleTranslations": [
+      "Good education is important for the future of children.",
+      "She completed her education at a university.",
+      "The state invests a lot in the education of its citizens."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Bildung\" mean?",
+        "options": [
+          "The process of learning and developing knowledge, skills, and character.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Gute _____ ist wichtig für die Zukunft der Kinder.",
+        "options": [
+          "Bildung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie hat ihre _____ an einer Universität abgeschlossen.",
+        "options": [
+          "Bildung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Erholung",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛɐ̯ˈhoːlʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "A period of rest and relaxation after effort or strain.",
+    "examples": [
+      "Nach der anstrengenden Wanderung brauchten wir dringend Erholung.",
+      "Die Erholung am Meer war genau das, was sie brauchte.",
+      "Erholung ist wichtig für die körperliche und geistige Gesundheit."
+    ],
+    "exampleTranslations": [
+      "After the strenuous hike, we urgently needed rest.",
+      "The recovery by the sea was exactly what she needed.",
+      "Rest is important for physical and mental health."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Erholung\" mean?",
+        "options": [
+          "A period of rest and relaxation after effort or strain.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Nach der anstrengenden Wanderung brauchten wir dringend _____.",
+        "options": [
+          "Erholung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ am Meer war genau das, was sie brauchte.",
+        "options": [
+          "Erholung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "praktisch",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈpraktɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Useful or convenient for a particular purpose; easy to use or do.",
+    "examples": [
+      "Das ist sehr praktisch, wenn man viel reist.",
+      "Diese neue App ist wirklich praktisch für die Organisation meiner Termine.",
+      "Ein kleiner Rucksack ist oft praktischer als eine große Tasche."
+    ],
+    "exampleTranslations": [
+      "That is very practical when you travel a lot.",
+      "This new app is really practical for organizing my appointments.",
+      "A small backpack is often more practical than a big bag."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"praktisch\" mean?",
+        "options": [
+          "Useful or convenient for a particular purpose; easy to use or do.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das ist sehr _____, wenn man viel reist.",
+        "options": [
+          "praktisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Diese neue App ist wirklich _____ für die Organisation meiner Termine.",
+        "options": [
+          "praktisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "kompliziert",
+    "cefrLevel": "b1",
+    "phonetic": "/kɔmpliˈtsiːɐ̯t/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Something is difficult to understand, deal with, or explain because of many parts.",
+    "examples": [
+      "Die Bedienungsanleitung ist sehr kompliziert, ich verstehe sie nicht.",
+      "Manchmal sind die Regeln dieses Spiels wirklich kompliziert.",
+      "Das Problem war komplizierter, als wir zuerst dachten."
+    ],
+    "exampleTranslations": [
+      "The instruction manual is very complicated; I don't understand it.",
+      "Sometimes the rules of this game are really complicated.",
+      "The problem was more complicated than we first thought."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"kompliziert\" mean?",
+        "options": [
+          "Something is difficult to understand, deal with, or explain because of many parts.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Bedienungsanleitung ist sehr _____, ich verstehe sie nicht.",
+        "options": [
+          "kompliziert",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manchmal sind die Regeln dieses Spiels wirklich _____.",
+        "options": [
+          "kompliziert",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "geeignet",
+    "cefrLevel": "b1",
+    "phonetic": "/ɡəˈʔaɪ̯ɡnət/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "This describes something that is suitable or appropriate for a particular purpose.",
+    "examples": [
+      "Dieses Werkzeug ist nicht geeignet für diese Reparatur.",
+      "Wir suchen einen geeigneten Kandidaten für die Stelle.",
+      "Die Wohnung ist für eine Familie mit Kindern gut geeignet."
+    ],
+    "exampleTranslations": [
+      "This tool is not suitable for this repair.",
+      "We are looking for a suitable candidate for the position.",
+      "The apartment is well suited for a family with children."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"geeignet\" mean?",
+        "options": [
+          "This describes something that is suitable or appropriate for a particular purpose.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Dieses Werkzeug ist nicht _____ für diese Reparatur.",
+        "options": [
+          "geeignet",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir suchen einen _____en Kandidaten für die Stelle.",
+        "options": [
+          "geeignet",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "zustimmen",
+    "cefrLevel": "b1",
+    "phonetic": "/tsuˈʃtɪmən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To agree with someone or something, often by giving your approval.",
+    "examples": [
+      "Ich kann dir in diesem Punkt nur zustimmen.",
+      "Man muss dieser Entscheidung zustimmen.",
+      "Der Chef hat dem Vorschlag zugestimmt."
+    ],
+    "exampleTranslations": [
+      "I can only agree with you on this point.",
+      "One must agree to this decision.",
+      "The boss agreed to the proposal."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"zustimmen\" mean?",
+        "options": [
+          "To agree with someone or something, often by giving your approval.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich kann dir in diesem Punkt nur _____.",
+        "options": [
+          "zustimmen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man muss dieser Entscheidung _____.",
+        "options": [
+          "zustimmen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "vergleichen",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈɡlaɪ̯çn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To examine two or more things to find similarities or differences.",
+    "examples": [
+      "Man kann die Preise der Produkte online vergleichen.",
+      "Bevor du kaufst, solltest du die verschiedenen Modelle vergleichen.",
+      "Wir haben die Ergebnisse der Umfrage verglichen und interessante Unterschiede gefunden."
+    ],
+    "exampleTranslations": [
+      "You can compare the prices of products online.",
+      "Before you buy, you should compare the different models.",
+      "We compared the survey results and found interesting differences."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"vergleichen\" mean?",
+        "options": [
+          "To examine two or more things to find similarities or differences.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man kann die Preise der Produkte online _____.",
+        "options": [
+          "vergleichen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Bevor du kaufst, solltest du die verschiedenen Modelle _____.",
+        "options": [
+          "vergleichen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "beschreiben",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈʃʁaɪ̯bn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To give details about something or someone using words.",
+    "examples": [
+      "Können Sie bitte genau beschreiben, was passiert ist?",
+      "Er beschreibt seine Reise als das größte Abenteuer seines Lebens.",
+      "Es ist schwer, dieses Gefühl mit Worten zu beschreiben."
+    ],
+    "exampleTranslations": [
+      "Can you please describe exactly what happened?",
+      "He describes his trip as the greatest adventure of his life.",
+      "It's hard to describe this feeling with words."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"beschreiben\" mean?",
+        "options": [
+          "To give details about something or someone using words.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Können Sie bitte genau _____, was passiert ist?",
+        "options": [
+          "beschreiben",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "beschreiben",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "zusammenfassen",
+    "cefrLevel": "b1",
+    "phonetic": "/ˌt͡suˈzamənˌfasn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To summarize means to present the main points of something concisely.",
+    "examples": [
+      "Könnten Sie bitte die wichtigsten Punkte des Berichts kurz zusammenfassen?",
+      "Der Lehrer bat die Schüler, den Text in eigenen Worten zusammenzufassen.",
+      "Ich werde die Ergebnisse der Diskussion am Ende zusammenfassen."
+    ],
+    "exampleTranslations": [
+      "Could you please summarize the main points of the report briefly?",
+      "The teacher asked the students to summarize the text in their own words.",
+      "I will summarize the results of the discussion at the end."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"zusammenfassen\" mean?",
+        "options": [
+          "To summarize means to present the main points of something concisely.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Könnten Sie bitte die wichtigsten Punkte des Berichts kurz _____?",
+        "options": [
+          "zusammenfassen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "zusammenfassen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "informieren",
+    "cefrLevel": "b1",
+    "phonetic": "/ɪnfɔrˈmiːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To give someone facts or details about a particular subject or situation.",
+    "examples": [
+      "Wir müssen uns vor der Reise gut über das Ziel informieren.",
+      "Kannst du mich bitte über die neuesten Entwicklungen informieren?",
+      "Die Lehrerin informierte die Eltern über den Fortschritt ihrer Kinder."
+    ],
+    "exampleTranslations": [
+      "We must inform ourselves well about the destination before the trip.",
+      "Can you please inform me about the latest developments?",
+      "The teacher informed the parents about their children's progress."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"informieren\" mean?",
+        "options": [
+          "To give someone facts or details about a particular subject or situation.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir müssen uns vor der Reise gut über das Ziel _____.",
+        "options": [
+          "informieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Kannst du mich bitte über die neuesten Entwicklungen _____?",
+        "options": [
+          "informieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Ausbildung",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈaʊ̯sˌbɪldʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "The process of learning skills and knowledge for a specific job or profession.",
+    "examples": [
+      "Meine Ausbildung zur Krankenschwester dauerte drei Jahre.",
+      "Nach der Schule begann er eine technische Ausbildung.",
+      "Sie hat eine sehr gute Ausbildung genossen und ist nun Expertin."
+    ],
+    "exampleTranslations": [
+      "My training to become a nurse lasted three years.",
+      "After school, he started a technical apprenticeship.",
+      "She received a very good education and is now an expert."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Ausbildung\" mean?",
+        "options": [
+          "The process of learning skills and knowledge for a specific job or profession.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Meine _____ zur Krankenschwester dauerte drei Jahre.",
+        "options": [
+          "Ausbildung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Nach der Schule begann er eine technische _____.",
+        "options": [
+          "Ausbildung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Beruf",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈruːf/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The type of work you do to earn money; your profession or job.",
+    "examples": [
+      "Mein Beruf ist sehr interessant und ich lerne jeden Tag etwas Neues.",
+      "Sie hat ihren Beruf mit großer Leidenschaft ausgeübt.",
+      "Viele junge Leute suchen nach einem Beruf, der sie erfüllt."
+    ],
+    "exampleTranslations": [
+      "My job is very interesting, and I learn something new every day.",
+      "She pursued her profession with great passion.",
+      "Many young people are looking for a job that fulfills them."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Beruf\" mean?",
+        "options": [
+          "The type of work you do to earn money; your profession or job.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mein _____ ist sehr interessant und ich lerne jeden Tag etwas Neues.",
+        "options": [
+          "Beruf",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie hat ihren _____ mit großer Leidenschaft ausgeübt.",
+        "options": [
+          "Beruf",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Gehalt",
+    "cefrLevel": "b1",
+    "phonetic": "/ɡəˈhalt/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The money you receive regularly from an employer for your work.",
+    "examples": [
+      "Sein Gehalt ist nicht sehr hoch, aber er liebt seine Arbeit.",
+      "Viele Menschen sind mit ihrem monatlichen Gehalt unzufrieden.",
+      "Sie verhandelte erfolgreich über ein höheres Gehalt."
+    ],
+    "exampleTranslations": [
+      "His salary is not very high, but he loves his job.",
+      "Many people are dissatisfied with their monthly salary.",
+      "She successfully negotiated a higher salary."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Gehalt\" mean?",
+        "options": [
+          "The money you receive regularly from an employer for your work.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sein _____ ist nicht sehr hoch, aber er liebt seine Arbeit.",
+        "options": [
+          "Gehalt",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Viele Menschen sind mit ihrem monatlichen _____ unzufrieden.",
+        "options": [
+          "Gehalt",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Bewerbungsgespräch",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈvɛʁbʊŋsˌɡəʃpʁɛːç/",
+    "partOfSpeech": "noun",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "A formal meeting where a job applicant is evaluated for a potential position.",
+    "examples": [
+      "Ich habe nächste Woche ein wichtiges Bewerbungsgespräch für meinen Traumjob.",
+      "Sie bereitet sich intensiv auf ihr erstes Bewerbungsgespräch vor.",
+      "Das Bewerbungsgespräch dauerte fast eine Stunde und war sehr anspruchsvoll."
+    ],
+    "exampleTranslations": [
+      "I have an important job interview next week for my dream job.",
+      "She is preparing intensively for her first job interview.",
+      "The job interview lasted almost an hour and was very demanding."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Bewerbungsgespräch\" mean?",
+        "options": [
+          "A formal meeting where a job applicant is evaluated for a potential position.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe nächste Woche ein wichtiges _____ für meinen Traumjob.",
+        "options": [
+          "Bewerbungsgespräch",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie bereitet sich intensiv auf ihr erstes _____ vor.",
+        "options": [
+          "Bewerbungsgespräch",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Nachbarschaft",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈnaxbaːɐʃaft/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The area where you live, including the people and houses nearby.",
+    "examples": [
+      "Ich mag die ruhige Nachbarschaft, in der wir wohnen.",
+      "Die Kinder spielen oft in unserer Nachbarschaft.",
+      "Eine gute Nachbarschaft ist wichtig für das Zusammenleben."
+    ],
+    "exampleTranslations": [
+      "I like the quiet neighborhood where we live.",
+      "The children often play in our neighborhood.",
+      "A good neighborhood is important for living together."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Nachbarschaft\" mean?",
+        "options": [
+          "The area where you live, including the people and houses nearby.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich mag die ruhige _____, in der wir wohnen.",
+        "options": [
+          "Nachbarschaft",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Kinder spielen oft in unserer _____.",
+        "options": [
+          "Nachbarschaft",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Verkehr",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈkeːɐ̯/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The movement of vehicles, people, or goods from one place to another.",
+    "examples": [
+      "Der Verkehr in der Stadt ist morgens immer sehr dicht.",
+      "Wegen des starken Verkehrs gab es heute viele Staus auf der Autobahn.",
+      "Pass auf, wenn du die Straße überquerst, der Verkehr ist schnell hier."
+    ],
+    "exampleTranslations": [
+      "The traffic in the city is always very dense in the morning.",
+      "Because of the heavy traffic, there were many traffic jams on the highway today.",
+      "Be careful when you cross the street, the traffic is fast here."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Verkehr\" mean?",
+        "options": [
+          "The movement of vehicles, people, or goods from one place to another.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ in der Stadt ist morgens immer sehr dicht.",
+        "options": [
+          "Verkehr",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wegen des starken _____s gab es heute viele Staus auf der Autobahn.",
+        "options": [
+          "Verkehr",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Öffentlichkeit",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈœfn̩tlɪçkaɪ̯t/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The general public or the state of being publicly known or accessible.",
+    "examples": [
+      "Die Medien spielen eine wichtige Rolle bei der Information der Öffentlichkeit.",
+      "Sie suchte die Öffentlichkeit, um ihre Geschichte zu erzählen.",
+      "Das Thema wurde in der Öffentlichkeit viel diskutiert."
+    ],
+    "exampleTranslations": [
+      "The media plays an important role in informing the public.",
+      "She sought publicity to tell her story.",
+      "The topic was widely discussed in public."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Öffentlichkeit\" mean?",
+        "options": [
+          "The general public or the state of being publicly known or accessible.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Medien spielen eine wichtige Rolle bei der Information der _____.",
+        "options": [
+          "Öffentlichkeit",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie suchte die _____, um ihre Geschichte zu erzählen.",
+        "options": [
+          "Öffentlichkeit",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Medien",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈmeːdi̯ən/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Means of mass communication, such as television, radio, and newspapers.",
+    "examples": [
+      "Die modernen Medien spielen eine große Rolle in unserem Alltag.",
+      "Viele junge Leute informieren sich lieber über soziale Medien als über traditionelle Zeitungen.",
+      "Die Berichterstattung in den Medien kann die öffentliche Meinung stark beeinflussen."
+    ],
+    "exampleTranslations": [
+      "Modern media play a big role in our daily lives.",
+      "Many young people prefer to get information via social media rather than traditional newspapers.",
+      "Reporting in the media can strongly influence public opinion."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Medien\" mean?",
+        "options": [
+          "Means of mass communication, such as television, radio, and newspapers.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die modernen _____ spielen eine große Rolle in unserem Alltag.",
+        "options": [
+          "Medien",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Viele junge Leute informieren sich lieber über soziale _____ als über traditionelle Zeitungen.",
+        "options": [
+          "Medien",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Ernährung",
+    "cefrLevel": "b1",
+    "phonetic": "/ɛɐ̯ˈnɛːʁʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The process of providing or obtaining the food necessary for health and growth.",
+    "examples": [
+      "Eine gesunde Ernährung ist wichtig für unseren Körper.",
+      "Sie achtet sehr auf ihre Ernährung, um fit zu bleiben.",
+      "Die richtige Ernährung kann vielen Krankheiten vorbeugen."
+    ],
+    "exampleTranslations": [
+      "A healthy diet is important for our body.",
+      "She pays close attention to her diet to stay fit.",
+      "The right nutrition can prevent many diseases."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Ernährung\" mean?",
+        "options": [
+          "The process of providing or obtaining the food necessary for health and growth.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Eine gesunde _____ ist wichtig für unseren Körper.",
+        "options": [
+          "Ernährung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie achtet sehr auf ihre _____, um fit zu bleiben.",
+        "options": [
+          "Ernährung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Bewegung",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈveːɡʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The act of moving or changing position, often for exercise or a cause.",
+    "examples": [
+      "Regelmäßige Bewegung ist wichtig für unsere Gesundheit.",
+      "Nach dem langen Sitzen brauche ich etwas Bewegung.",
+      "Die soziale Bewegung kämpft für mehr Gerechtigkeit."
+    ],
+    "exampleTranslations": [
+      "Regular exercise is important for our health.",
+      "After sitting for a long time, I need some movement.",
+      "The social movement is fighting for more justice."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Bewegung\" mean?",
+        "options": [
+          "The act of moving or changing position, often for exercise or a cause.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Regelmäßige _____ ist wichtig für unsere Gesundheit.",
+        "options": [
+          "Bewegung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Nach dem langen Sitzen brauche ich etwas _____.",
+        "options": [
+          "Bewegung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Stress",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈʃtʁɛs/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "A feeling of worry or tension caused by difficult situations in life.",
+    "examples": [
+      "Ich habe viel Stress bei der Arbeit.",
+      "Dieser Job verursacht mir zu viel Stress.",
+      "Es ist wichtig, Wege zu finden, um Stress abzubauen."
+    ],
+    "exampleTranslations": [
+      "I have a lot of stress at work.",
+      "This job causes me too much stress.",
+      "It is important to find ways to reduce stress."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Stress\" mean?",
+        "options": [
+          "A feeling of worry or tension caused by difficult situations in life.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe viel _____ bei der Arbeit.",
+        "options": [
+          "Stress",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Dieser Job verursacht mir zu viel _____.",
+        "options": [
+          "Stress",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "flexibel",
+    "cefrLevel": "b1",
+    "phonetic": "/flɛkˈsiːbl̩/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Able to change easily and adapt to different situations or demands.",
+    "examples": [
+      "Ich bin sehr flexibel, was meine Arbeitszeiten angeht.",
+      "Es ist wichtig, flexibel auf neue Herausforderungen zu reagieren.",
+      "Unsere neue Software ist sehr flexibel und anpassbar."
+    ],
+    "exampleTranslations": [
+      "I am very flexible when it comes to my working hours.",
+      "It is important to react flexibly to new challenges.",
+      "Our new software is very flexible and adaptable."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"flexibel\" mean?",
+        "options": [
+          "Able to change easily and adapt to different situations or demands.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich bin sehr _____, was meine Arbeitszeiten angeht.",
+        "options": [
+          "flexibel",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist wichtig, _____ auf neue Herausforderungen zu reagieren.",
+        "options": [
+          "flexibel",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "abhängig",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈapˌhɛŋɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "depending on something or someone; needing support or control from another.",
+    "examples": [
+      "Ob wir morgen fahren, ist vom Wetter abhängig.",
+      "Viele junge Erwachsene sind finanziell noch von ihren Eltern abhängig.",
+      "Er ist von der Meinung anderer Menschen sehr abhängig."
+    ],
+    "exampleTranslations": [
+      "Whether we go tomorrow depends on the weather.",
+      "Many young adults are still financially dependent on their parents.",
+      "He is very dependent on the opinions of other people."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"abhängig\" mean?",
+        "options": [
+          "depending on something or someone; needing support or control from another.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ob wir morgen fahren, ist vom Wetter _____.",
+        "options": [
+          "abhängig",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Viele junge Erwachsene sind finanziell noch von ihren Eltern _____.",
+        "options": [
+          "abhängig",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "selbstständig",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈzɛlpstˌʃtɛndɪç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Working for yourself or able to do things without help from others.",
+    "examples": [
+      "Sie hat sich nach dem Studium selbstständig gemacht und arbeitet jetzt als Designerin.",
+      "Es ist wichtig, dass Kinder lernen, selbstständiger zu werden.",
+      "Viele Menschen träumen davon, selbstständig zu sein und ihre eigenen Ideen zu verwirklichen."
+    ],
+    "exampleTranslations": [
+      "She became self-employed after her studies and now works as a designer.",
+      "It is important for children to learn to become more independent.",
+      "Many people dream of being self-employed and realizing their own ideas."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"selbstständig\" mean?",
+        "options": [
+          "Working for yourself or able to do things without help from others.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie hat sich nach dem Studium _____ gemacht und arbeitet jetzt als Designerin.",
+        "options": [
+          "selbstständig",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist wichtig, dass Kinder lernen, _____er zu werden.",
+        "options": [
+          "selbstständig",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "überzeugt",
+    "cefrLevel": "b1",
+    "phonetic": "/yːbɐˈtsɔʏkt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Having a strong belief or firm opinion about something or someone.",
+    "examples": [
+      "Ich bin überzeugt, dass wir die richtige Entscheidung getroffen haben.",
+      "Sie war von seiner Ehrlichkeit überzeugt.",
+      "Bist du wirklich davon überzeugt, dass das die beste Lösung ist?"
+    ],
+    "exampleTranslations": [
+      "I am convinced that we have made the right decision.",
+      "She was convinced of his honesty.",
+      "Are you really convinced that this is the best solution?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"überzeugt\" mean?",
+        "options": [
+          "Having a strong belief or firm opinion about something or someone.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich bin _____, dass wir die richtige Entscheidung getroffen haben.",
+        "options": [
+          "überzeugt",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie war von seiner Ehrlichkeit _____.",
+        "options": [
+          "überzeugt",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "besorgt",
+    "cefrLevel": "b1",
+    "phonetic": "/bəˈzɔʁkt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Feeling worried or anxious about something that might happen or has happened.",
+    "examples": [
+      "Ich bin besorgt wegen der Prüfung morgen.",
+      "Sie war sehr besorgt, als ihr Kind nicht nach Hause kam.",
+      "Mach dir keine Sorgen, es gibt keinen Grund, besorgt zu sein."
+    ],
+    "exampleTranslations": [
+      "I am worried about tomorrow's exam.",
+      "She was very worried when her child didn't come home.",
+      "Don't worry, there's no reason to be worried."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"besorgt\" mean?",
+        "options": [
+          "Feeling worried or anxious about something that might happen or has happened.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich bin _____ wegen der Prüfung morgen.",
+        "options": [
+          "besorgt",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie war sehr _____, als ihr Kind nicht nach Hause kam.",
+        "options": [
+          "besorgt",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "beantragen",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈbəˌʔantʁaːɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To formally ask for something, like a document, permit, or official status.",
+    "examples": [
+      "Sie müssen den neuen Pass persönlich beantragen.",
+      "Wann kann ich das Visum beantragen?",
+      "Er hat erfolgreich einen Kredit bei der Bank beantragt."
+    ],
+    "exampleTranslations": [
+      "You must apply for the new passport in person.",
+      "When can I apply for the visa?",
+      "He successfully applied for a loan at the bank."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"beantragen\" mean?",
+        "options": [
+          "To formally ask for something, like a document, permit, or official status.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie müssen den neuen Pass persönlich _____.",
+        "options": [
+          "beantragen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wann kann ich das Visum _____?",
+        "options": [
+          "beantragen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "vereinbaren",
+    "cefrLevel": "b1",
+    "phonetic": "/fɛɐ̯ˈʔaɪ̯nbaːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To arrange or agree upon a time, place, or condition for something.",
+    "examples": [
+      "Wir müssen einen Termin für das Treffen vereinbaren.",
+      "Können wir einen neuen Zeitpunkt für die Besprechung vereinbaren?",
+      "Sie haben vereinbart, sich nächste Woche zu treffen."
+    ],
+    "exampleTranslations": [
+      "We need to arrange a date for the meeting.",
+      "Can we agree on a new time for the discussion?",
+      "They agreed to meet next week."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"vereinbaren\" mean?",
+        "options": [
+          "To arrange or agree upon a time, place, or condition for something.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir müssen einen Termin für das Treffen _____.",
+        "options": [
+          "vereinbaren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Können wir einen neuen Zeitpunkt für die Besprechung _____?",
+        "options": [
+          "vereinbaren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "vorschlagen",
+    "cefrLevel": "b1",
+    "phonetic": "/fɔʁˈʃlaːɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To present an idea or a plan for consideration to others.",
+    "examples": [
+      "Ich möchte vorschlagen, dass wir uns nächste Woche treffen.",
+      "Was würdest du für unser Projekt vorschlagen?",
+      "Er hat einen interessanten Plan für das Wochenende vorgeschlagen."
+    ],
+    "exampleTranslations": [
+      "I would like to suggest that we meet next week.",
+      "What would you suggest for our project?",
+      "He suggested an interesting plan for the weekend."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"vorschlagen\" mean?",
+        "options": [
+          "To present an idea or a plan for consideration to others.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich möchte _____, dass wir uns nächste Woche treffen.",
+        "options": [
+          "vorschlagen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Was würdest du für unser Projekt _____?",
+        "options": [
+          "vorschlagen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "ablehnen",
+    "cefrLevel": "b1",
+    "phonetic": "/ˈapˌleːnən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To refuse to accept something or someone, or to say no to a request.",
+    "examples": [
+      "Ich musste das Angebot leider ablehnen, weil es nicht zu meinen Plänen passte.",
+      "Sie lehnte seinen Vorschlag höflich ab, da sie bereits andere Pläne hatte.",
+      "Warum hast du die Einladung zur Party abgelehnt? Es wäre sicher lustig geworden."
+    ],
+    "exampleTranslations": [
+      "I unfortunately had to reject the offer because it didn't fit my plans.",
+      "She politely declined his suggestion, as she already had other plans.",
+      "Why did you reject the invitation to the party? It would surely have been fun."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"ablehnen\" mean?",
+        "options": [
+          "To refuse to accept something or someone, or to say no to a request.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich musste das Angebot leider _____, weil es nicht zu meinen Plänen passte.",
+        "options": [
+          "ablehnen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "ablehnen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
   }
 ]

@@ -419,6 +419,9 @@ function buildGermanPackWord(entry) {
   if (Array.isArray(entry.exampleTranslations) && entry.exampleTranslations.length) {
     word.exampleTranslations = entry.exampleTranslations;
   }
+  if (Array.isArray(entry.exampleTranslationsTr) && entry.exampleTranslationsTr.length) {
+    word.exampleTranslationsTr = entry.exampleTranslationsTr;
+  }
   return word;
 }
 

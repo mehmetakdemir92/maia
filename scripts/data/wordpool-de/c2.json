@@ -1318,5 +1318,2095 @@
       "The rain made the road completely impassable.",
       "With this performance at the latest she was completely convincing."
     ]
+  },
+  {
+    "word": "Idiosynkrasie",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌiːdi̯osʏnkraˈziː/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "A peculiar individual habit or a strong, often irrational, aversion to something specific.",
+    "examples": [
+      "Seine Idiosynkrasie, immer nur mit einem bestimmten Stift zu schreiben, war im Büro bekannt.",
+      "Manche Menschen entwickeln eine Idiosynkrasie gegenüber bestimmten Gerüchen oder Geschmäckern, die für andere harmlos sind.",
+      "Trotz ihrer sonst so toleranten Art offenbarte sie eine unerklärliche Idiosynkrasie gegenüber lauten Kaugummi-Kaugeräuschen."
+    ],
+    "exampleTranslations": [
+      "His idiosyncrasy of always writing only with a specific pen was well-known in the office.",
+      "Some people develop an idiosyncrasy towards certain smells or tastes that are harmless to others.",
+      "Despite her otherwise tolerant nature, she revealed an inexplicable idiosyncrasy towards loud chewing gum noises."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Idiosynkrasie\" mean?",
+        "options": [
+          "A peculiar individual habit or a strong, often irrational, aversion to something specific.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine _____, immer nur mit einem bestimmten Stift zu schreiben, war im Büro bekannt.",
+        "options": [
+          "Idiosynkrasie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Menschen entwickeln eine _____ gegenüber bestimmten Gerüchen oder Geschmäckern, die für andere harmlos sind.",
+        "options": [
+          "Idiosynkrasie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Heuristik",
+    "cefrLevel": "c2",
+    "phonetic": "/hɔɪ̯ˈrɪstɪk/",
+    "partOfSpeech": "noun",
+    "domainTag": "science",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "A practical approach or method for solving problems, often through trial and error.",
+    "examples": [
+      "Die Entwicklung einer effektiven Heuristik ist entscheidend, um komplexe Probleme in der künstlichen Intelligenz zu lösen.",
+      "Manchmal führt eine einfache Heuristik schneller zum Ziel als ein umfassender, aber zeitaufwendiger Algorithmus.",
+      "Die Anwendung dieser Heuristik half uns, trotz unvollständiger Daten eine plausible Lösung zu finden."
+    ],
+    "exampleTranslations": [
+      "Developing an effective heuristic is crucial for solving complex problems in artificial intelligence.",
+      "Sometimes a simple heuristic leads to the goal faster than a comprehensive but time-consuming algorithm.",
+      "Applying this heuristic helped us find a plausible solution despite incomplete data."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Heuristik\" mean?",
+        "options": [
+          "A practical approach or method for solving problems, often through trial and error.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Entwicklung einer effektiven _____ ist entscheidend, um komplexe Probleme in der künstlichen Intelligenz zu lösen.",
+        "options": [
+          "Heuristik",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manchmal führt eine einfache _____ schneller zum Ziel als ein umfassender, aber zeitaufwendiger Algorithmus.",
+        "options": [
+          "Heuristik",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Epistemologie",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌɛpɪstemoˌloˈɡiː/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The branch of philosophy concerned with the nature, origin, and limits of human knowledge.",
+    "examples": [
+      "Die Vorlesung führte tief in die Grundlagen der Epistemologie ein und beleuchtete verschiedene Theorien des Wissenserwerbs.",
+      "In der modernen Philosophie spielt die Epistemologie eine zentrale Rolle bei der Untersuchung wissenschaftlicher Erkenntnis.",
+      "Die Frage nach der Objektivität von Wissen ist ein Kernproblem der Epistemologie."
+    ],
+    "exampleTranslations": [
+      "The lecture delved deep into the foundations of epistemology and illuminated various theories of knowledge acquisition.",
+      "In modern philosophy, epistemology plays a central role in the investigation of scientific knowledge.",
+      "The question of the objectivity of knowledge is a core problem of epistemology."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Epistemologie\" mean?",
+        "options": [
+          "The branch of philosophy concerned with the nature, origin, and limits of human knowledge.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Vorlesung führte tief in die Grundlagen der _____ ein und beleuchtete verschiedene Theorien des Wissenserwerbs.",
+        "options": [
+          "Epistemologie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In der modernen Philosophie spielt die _____ eine zentrale Rolle bei der Untersuchung wissenschaftlicher Erkenntnis.",
+        "options": [
+          "Epistemologie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Ontologie",
+    "cefrLevel": "c2",
+    "phonetic": "/ɔntoˈloɡiː/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The philosophical study of being, existence, and the fundamental nature of reality.",
+    "examples": [
+      "Die Entwicklung einer kohärenten Ontologie ist entscheidend für das Verständnis komplexer philosophischer Systeme.",
+      "In der Metaphysik befasst sich die Ontologie mit grundlegenden Fragen nach der Beschaffenheit der Wirklichkeit.",
+      "Viele moderne Theorien der künstlichen Intelligenz versuchen, eine präzise Ontologie der Welt zu modellieren."
+    ],
+    "exampleTranslations": [
+      "The development of a coherent ontology is crucial for understanding complex philosophical systems.",
+      "In metaphysics, ontology deals with fundamental questions about the nature of reality.",
+      "Many modern theories of artificial intelligence attempt to model a precise ontology of the world."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Ontologie\" mean?",
+        "options": [
+          "The philosophical study of being, existence, and the fundamental nature of reality.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Entwicklung einer kohärenten _____ ist entscheidend für das Verständnis komplexer philosophischer Systeme.",
+        "options": [
+          "Ontologie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In der Metaphysik befasst sich die _____ mit grundlegenden Fragen nach der Beschaffenheit der Wirklichkeit.",
+        "options": [
+          "Ontologie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Teleologie",
+    "cefrLevel": "c2",
+    "phonetic": "/teleoloˈɡiː/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The philosophical explanation of phenomena by their purpose or ultimate goal.",
+    "examples": [
+      "Die Teleologie spielt eine zentrale Rolle in der Metaphysik und Ethik, indem sie nach dem Sinn und Zweck der Dinge fragt.",
+      "Kritiker der modernen Wissenschaft bemängeln oft das Fehlen einer teleologischen Perspektive, die über bloße Kausalität hinausgeht.",
+      "In der Biologie wurde die Teleologie lange Zeit als unwissenschaftlich abgelehnt, erlebt aber in Diskussionen über Evolution und Funktion eine Renaissance."
+    ],
+    "exampleTranslations": [
+      "Teleology plays a central role in metaphysics and ethics by asking about the meaning and purpose of things.",
+      "Critics of modern science often lament the absence of a teleological perspective that goes beyond mere causality.",
+      "In biology, teleology was long rejected as unscientific but is experiencing a renaissance in discussions about evolution and function."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Teleologie\" mean?",
+        "options": [
+          "The philosophical explanation of phenomena by their purpose or ultimate goal.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ spielt eine zentrale Rolle in der Metaphysik und Ethik, indem sie nach dem Sinn und Zweck der Dinge fragt.",
+        "options": [
+          "Teleologie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "Teleologie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Hermeneutik",
+    "cefrLevel": "c2",
+    "phonetic": "/hɛʁməˈnɔɪ̯tɪk/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The theory and methodology of interpretation, especially concerning texts, art, or human actions.",
+    "examples": [
+      "Die philosophische Hermeneutik befasst sich mit den Grundlagen des Verstehens und der Auslegung von Sinnzusammenhängen.",
+      "In der Kunstgeschichte spielt die Hermeneutik eine entscheidende Rolle bei der Entschlüsselung symbolischer Bedeutungen von Werken.",
+      "Die juristische Hermeneutik ist unerlässlich, um Gesetzestexte im Kontext ihrer Entstehung und Anwendung zu interpretieren."
+    ],
+    "exampleTranslations": [
+      "Philosophical hermeneutics deals with the foundations of understanding and interpreting semantic contexts.",
+      "In art history, hermeneutics plays a crucial role in deciphering the symbolic meanings of works.",
+      "Legal hermeneutics is essential for interpreting legal texts in the context of their origin and application."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Hermeneutik\" mean?",
+        "options": [
+          "The theory and methodology of interpretation, especially concerning texts, art, or human actions.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die philosophische _____ befasst sich mit den Grundlagen des Verstehens und der Auslegung von Sinnzusammenhängen.",
+        "options": [
+          "Hermeneutik",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In der Kunstgeschichte spielt die _____ eine entscheidende Rolle bei der Entschlüsselung symbolischer Bedeutungen von Werken.",
+        "options": [
+          "Hermeneutik",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Dialektik",
+    "cefrLevel": "c2",
+    "phonetic": "/di̯alɛkˈtɪk/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "A philosophical method of argument involving contradiction and resolution to find truth.",
+    "examples": [
+      "Hegels Philosophie ist untrennbar mit dem Konzept der Dialektik verbunden, das die Entwicklung des Geistes durch Widersprüche beschreibt.",
+      "Die marxistische Dialektik analysiert gesellschaftliche Veränderungen als Ergebnis antagonistischer Kräfte.",
+      "In der modernen Wissenschaftstheorie spielt die Dialektik eine Rolle bei der Beschreibung von Fortschritt durch kritische Auseinandersetzung."
+    ],
+    "exampleTranslations": [
+      "Hegel's philosophy is inextricably linked with the concept of dialectics, which describes the development of spirit through contradictions.",
+      "Marxist dialectics analyzes societal changes as a result of antagonistic forces.",
+      "In modern philosophy of science, dialectics plays a role in describing progress through critical engagement."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Dialektik\" mean?",
+        "options": [
+          "A philosophical method of argument involving contradiction and resolution to find truth.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Hegels Philosophie ist untrennbar mit dem Konzept der _____ verbunden, das die Entwicklung des Geistes durch Widersprüche beschreibt.",
+        "options": [
+          "Dialektik",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die marxistische _____ analysiert gesellschaftliche Veränderungen als Ergebnis antagonistischer Kräfte.",
+        "options": [
+          "Dialektik",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Aporie",
+    "cefrLevel": "c2",
+    "phonetic": "/apoˈriː/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "A state of irresolvable doubt or a logical contradiction in an argument.",
+    "examples": [
+      "Die philosophische Diskussion geriet in eine tiefe Aporie, als keine der Parteien einen Ausweg aus dem Dilemma finden konnte.",
+      "Diese unlösbare Aporie verdeutlicht die Grenzen menschlicher Erkenntnis und logischer Schlussfolgerung.",
+      "Das Problem der Willensfreiheit führt oft zu einer Aporie, die Denker seit Jahrhunderten beschäftigt."
+    ],
+    "exampleTranslations": [
+      "The philosophical discussion fell into a deep aporia when neither party could find a way out of the dilemma.",
+      "This irresolvable aporia illustrates the limits of human knowledge and logical inference.",
+      "The problem of free will often leads to an aporia that has occupied thinkers for centuries."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Aporie\" mean?",
+        "options": [
+          "A state of irresolvable doubt or a logical contradiction in an argument.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die philosophische Diskussion geriet in eine tiefe _____, als keine der Parteien einen Ausweg aus dem Dilemma finden konnte.",
+        "options": [
+          "Aporie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Diese unlösbare _____ verdeutlicht die Grenzen menschlicher Erkenntnis und logischer Schlussfolgerung.",
+        "options": [
+          "Aporie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Antinomie",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌantinoˈmiː/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "A contradiction between two equally valid principles, leading to a logical impasse.",
+    "examples": [
+      "Die philosophische Diskussion drehte sich um die unlösbare Antinomie zwischen Freiheit und Determinismus.",
+      "Kants Analyse der reinen Vernunft identifizierte mehrere Antinomien, die das menschliche Denken an seine Grenzen führen.",
+      "Das Dilemma der modernen Gesellschaft ist oft eine Antinomie zwischen individueller Entfaltung und kollektiver Verantwortung."
+    ],
+    "exampleTranslations": [
+      "The philosophical discussion revolved around the insoluble antinomy between freedom and determinism.",
+      "Kant's analysis of pure reason identified several antinomies that push human thought to its limits.",
+      "The dilemma of modern society is often an antinomy between individual development and collective responsibility."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Antinomie\" mean?",
+        "options": [
+          "A contradiction between two equally valid principles, leading to a logical impasse.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die philosophische Diskussion drehte sich um die unlösbare _____ zwischen Freiheit und Determinismus.",
+        "options": [
+          "Antinomie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Kants Analyse der reinen Vernunft identifizierte mehrere _____n, die das menschliche Denken an seine Grenzen führen.",
+        "options": [
+          "Antinomie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Kontingenz",
+    "cefrLevel": "c2",
+    "phonetic": "/kɔntɪnˈɡɛnts/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The possibility of something happening or being true, but not necessarily so.",
+    "examples": [
+      "Die philosophische Auseinandersetzung mit der Kontingenz des menschlichen Daseins ist ein zentrales Thema der Existenzphilosophie.",
+      "In der modernen Physik spielt die Kontingenz von Ereignissen eine entscheidende Rolle bei der Beschreibung quantenmechanischer Phänomene.",
+      "Das Bewusstsein der eigenen Kontingenz kann zu einer tiefen Reflexion über den Sinn des Lebens führen."
+    ],
+    "exampleTranslations": [
+      "The philosophical engagement with the contingency of human existence is a central theme of existential philosophy.",
+      "In modern physics, the contingency of events plays a crucial role in describing quantum mechanical phenomena.",
+      "The awareness of one's own contingency can lead to deep reflection on the meaning of life."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Kontingenz\" mean?",
+        "options": [
+          "The possibility of something happening or being true, but not necessarily so.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die philosophische Auseinandersetzung mit der _____ des menschlichen Daseins ist ein zentrales Thema der Existenzphilosophie.",
+        "options": [
+          "Kontingenz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In der modernen Physik spielt die _____ von Ereignissen eine entscheidende Rolle bei der Beschreibung quantenmechanischer Phänomene.",
+        "options": [
+          "Kontingenz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Immanenz",
+    "cefrLevel": "c2",
+    "phonetic": "/ɪmaˈnɛnts/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The quality of being inherent or existing within something, rather than transcending it.",
+    "examples": [
+      "Die philosophische Diskussion über die Immanenz Gottes in der Welt ist ein zentrales Thema der Theologiegeschichte.",
+      "Manche Denker betonen die Immanenz von Werten in menschlichen Handlungen, anstatt sie als transzendent zu betrachten.",
+      "Die Immanenz des Geistes in der Materie ist eine grundlegende Annahme vieler monistischer Weltanschauungen."
+    ],
+    "exampleTranslations": [
+      "The philosophical discussion about the immanence of God in the world is a central theme in the history of theology.",
+      "Some thinkers emphasize the immanence of values in human actions, rather than considering them transcendent.",
+      "The immanence of spirit in matter is a fundamental assumption of many monistic worldviews."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Immanenz\" mean?",
+        "options": [
+          "The quality of being inherent or existing within something, rather than transcending it.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die philosophische Diskussion über die _____ Gottes in der Welt ist ein zentrales Thema der Theologiegeschichte.",
+        "options": [
+          "Immanenz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Denker betonen die _____ von Werten in menschlichen Handlungen, anstatt sie als transzendent zu betrachten.",
+        "options": [
+          "Immanenz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Transzendenz",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌtʁans.t͡sɛnˈdɛnt͡s/",
+    "partOfSpeech": "noun",
+    "domainTag": "philosophy",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "The state of existing beyond ordinary human experience or the material world.",
+    "examples": [
+      "Die Suche nach Sinn und Transzendenz ist ein tief verwurzeltes menschliches Bedürfnis.",
+      "Viele philosophische Systeme versuchen, die Beziehung zwischen Immanenz und Transzendenz zu klären.",
+      "In der Mystik wird oft eine direkte Erfahrung der Transzendenz angestrebt."
+    ],
+    "exampleTranslations": [
+      "The search for meaning and transcendence is a deeply rooted human need.",
+      "Many philosophical systems attempt to clarify the relationship between immanence and transcendence.",
+      "In mysticism, a direct experience of transcendence is often sought."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Transzendenz\" mean?",
+        "options": [
+          "The state of existing beyond ordinary human experience or the material world.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Suche nach Sinn und _____ ist ein tief verwurzeltes menschliches Bedürfnis.",
+        "options": [
+          "Transzendenz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Viele philosophische Systeme versuchen, die Beziehung zwischen Immanenz und _____ zu klären.",
+        "options": [
+          "Transzendenz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Singularität",
+    "cefrLevel": "c2",
+    "phonetic": "/zɪŋgulaʁiˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "science",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "A point where a physical quantity becomes infinite, often in cosmology or mathematics.",
+    "examples": [
+      "Die Theorie des Urknalls postuliert eine anfängliche Singularität, aus der das Universum entstand.",
+      "Schwarze Löcher sind bekannt dafür, in ihrem Zentrum eine Raumzeit-Singularität zu beherbergen.",
+      "Philosophisch betrachtet, könnte die technologische Singularität einen Wendepunkt in der menschlichen Evolution markieren."
+    ],
+    "exampleTranslations": [
+      "The Big Bang theory postulates an initial singularity from which the universe originated.",
+      "Black holes are known to harbor a spacetime singularity at their center.",
+      "Philosophically speaking, the technological singularity could mark a turning point in human evolution."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Singularität\" mean?",
+        "options": [
+          "A point where a physical quantity becomes infinite, often in cosmology or mathematics.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Theorie des Urknalls postuliert eine anfängliche _____, aus der das Universum entstand.",
+        "options": [
+          "Singularität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Schwarze Löcher sind bekannt dafür, in ihrem Zentrum eine Raumzeit-_____ zu beherbergen.",
+        "options": [
+          "Singularität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Totalität",
+    "cefrLevel": "c2",
+    "phonetic": "/to.ta.liˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The state or quality of being complete and all-encompassing, without exceptions.",
+    "examples": [
+      "Die philosophische Diskussion drehte sich oft um die Frage nach der Totalität des Seins.",
+      "Manche Denker streben nach einer umfassenden Welterklärung, die die Totalität aller Phänomene erfasst.",
+      "Die Totalität menschlicher Erfahrungen ist so komplex, dass sie sich kaum in einfache Kategorien pressen lässt."
+    ],
+    "exampleTranslations": [
+      "The philosophical discussion often revolved around the question of the totality of being.",
+      "Some thinkers strive for a comprehensive explanation of the world that encompasses the totality of all phenomena.",
+      "The totality of human experiences is so complex that it can hardly be forced into simple categories."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Totalität\" mean?",
+        "options": [
+          "The state or quality of being complete and all-encompassing, without exceptions.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die philosophische Diskussion drehte sich oft um die Frage nach der _____ des Seins.",
+        "options": [
+          "Totalität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Denker streben nach einer umfassenden Welterklärung, die die _____ aller Phänomene erfasst.",
+        "options": [
+          "Totalität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Partikularität",
+    "cefrLevel": "c2",
+    "phonetic": "/paʁtikulaʁiˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "The quality of being unique or distinct from others, a specific characteristic.",
+    "examples": [
+      "Die Partikularität dieser Region liegt in ihrer einzigartigen Kultur und Landschaft.",
+      "Jede Epoche hat ihre eigene Partikularität, die sie von anderen unterscheidet.",
+      "Es ist wichtig, die Partikularitäten jedes Einzelfalls zu berücksichtigen, um eine gerechte Lösung zu finden."
+    ],
+    "exampleTranslations": [
+      "The particularity of this region lies in its unique culture and landscape.",
+      "Every epoch has its own particularity that distinguishes it from others.",
+      "It is important to consider the particularities of each individual case to find a just solution."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Partikularität\" mean?",
+        "options": [
+          "The quality of being unique or distinct from others, a specific characteristic.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ dieser Region liegt in ihrer einzigartigen Kultur und Landschaft.",
+        "options": [
+          "Partikularität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Jede Epoche hat ihre eigene _____, die sie von anderen unterscheidet.",
+        "options": [
+          "Partikularität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Hegemonie",
+    "cefrLevel": "c2",
+    "phonetic": "/heɡemoˈniː/",
+    "partOfSpeech": "noun",
+    "domainTag": "political",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "The political, economic, or cultural dominance of one state or group over others.",
+    "examples": [
+      "Die USA strebten nach dem Zweiten Weltkrieg eine globale Hegemonie an, die sich in verschiedenen Bereichen manifestierte.",
+      "Der Kampf um die kulturelle Hegemonie ist oft subtiler als militärische Konflikte, aber nicht weniger entscheidend.",
+      "Viele Länder sehen in der wirtschaftlichen Vormachtstellung Chinas eine neue Form der Hegemonie entstehen."
+    ],
+    "exampleTranslations": [
+      "After World War II, the USA sought global hegemony, which manifested in various areas.",
+      "The struggle for cultural hegemony is often more subtle than military conflicts, but no less decisive.",
+      "Many countries see a new form of hegemony emerging in China's economic dominance."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Hegemonie\" mean?",
+        "options": [
+          "The political, economic, or cultural dominance of one state or group over others.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die USA strebten nach dem Zweiten Weltkrieg eine globale _____ an, die sich in verschiedenen Bereichen manifestierte.",
+        "options": [
+          "Hegemonie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der Kampf um die kulturelle _____ ist oft subtiler als militärische Konflikte, aber nicht weniger entscheidend.",
+        "options": [
+          "Hegemonie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Souverän",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌzuːvəˈrɛːn/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A person who exercises supreme, independent authority over a territory or people.",
+    "examples": [
+      "Der alte König war ein weiser Souverän, der sein Volk gerecht führte.",
+      "Als Souverän eines unabhängigen Staates trägt man immense Verantwortung.",
+      "Sie agierte stets als Souverän ihrer eigenen Entscheidungen, unbeeinflusst von äußeren Meinungen."
+    ],
+    "exampleTranslations": [
+      "The old king was a wise sovereign who led his people justly.",
+      "As the sovereign of an independent state, one bears immense responsibility.",
+      "She always acted as the sovereign of her own decisions, uninfluenced by external opinions."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Souverän\" mean?",
+        "options": [
+          "A person who exercises supreme, independent authority over a territory or people.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der alte König war ein weiser _____, der sein Volk gerecht führte.",
+        "options": [
+          "Souverän",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Als _____ eines unabhängigen Staates trägt man immense Verantwortung.",
+        "options": [
+          "Souverän",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Dispositiv",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌdɪspoziˈtiːf/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "A complex arrangement of elements, practices, and discourses shaping power relations and social reality.",
+    "examples": [
+      "Das Foucaultsche Dispositiv beschreibt die Verflechtung von Macht, Wissen und Subjektivität in einer Gesellschaft.",
+      "Die Analyse des digitalen Dispositivs offenbart, wie Algorithmen unsere Wahrnehmung der Welt strukturieren.",
+      "Jedes soziale Dispositiv erzeugt spezifische Formen der Kontrolle und der Selbstregulierung seiner Akteure."
+    ],
+    "exampleTranslations": [
+      "Foucault's apparatus describes the intertwining of power, knowledge, and subjectivity in a society.",
+      "The analysis of the digital apparatus reveals how algorithms structure our perception of the world.",
+      "Every social apparatus generates specific forms of control and self-regulation for its actors."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Dispositiv\" mean?",
+        "options": [
+          "A complex arrangement of elements, practices, and discourses shaping power relations and social reality.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das Foucaultsche _____ beschreibt die Verflechtung von Macht, Wissen und Subjektivität in einer Gesellschaft.",
+        "options": [
+          "Dispositiv",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Analyse des digitalen _____s offenbart, wie Algorithmen unsere Wahrnehmung der Welt strukturieren.",
+        "options": [
+          "Dispositiv",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Interdependenz",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌɪntɐdɛpɛnˈdɛnts/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "A state where two or more entities are mutually reliant on each other.",
+    "examples": [
+      "Die globale Wirtschaft ist durch eine komplexe Interdependenz der nationalen Märkte gekennzeichnet.",
+      "In modernen Gesellschaften nimmt die Interdependenz zwischen verschiedenen Sektoren stetig zu.",
+      "Die Interdependenz zwischen den beiden Ländern ist entscheidend für die regionale Stabilität."
+    ],
+    "exampleTranslations": [
+      "The global economy is characterized by a complex interdependence of national markets.",
+      "In modern societies, the interdependence between various sectors is constantly increasing.",
+      "The interdependence between the two countries is crucial for regional stability."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Interdependenz\" mean?",
+        "options": [
+          "A state where two or more entities are mutually reliant on each other.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die globale Wirtschaft ist durch eine komplexe _____ der nationalen Märkte gekennzeichnet.",
+        "options": [
+          "Interdependenz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In modernen Gesellschaften nimmt die _____ zwischen verschiedenen Sektoren stetig zu.",
+        "options": [
+          "Interdependenz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Asymmetrie",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌazy.meˈtriː/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The lack of equality or equivalence between parts or aspects of something.",
+    "examples": [
+      "Die Asymmetrie in der globalen Verteilung von Ressourcen führt oft zu Spannungen und Ungleichheiten zwischen Nationen.",
+      "Eine deutliche Asymmetrie zwischen den Verhandlungspartnern kann faire Ergebnisse erheblich behindern.",
+      "Manche Künstler nutzen bewusst die Asymmetrie in ihren Kompositionen, um Dynamik und Spannung zu erzeugen."
+    ],
+    "exampleTranslations": [
+      "The asymmetry in the global distribution of resources often leads to tensions and inequalities between nations.",
+      "A significant asymmetry between the negotiating parties can considerably hinder fair outcomes.",
+      "Some artists deliberately use asymmetry in their compositions to create dynamism and tension."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Asymmetrie\" mean?",
+        "options": [
+          "The lack of equality or equivalence between parts or aspects of something.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ in der globalen Verteilung von Ressourcen führt oft zu Spannungen und Ungleichheiten zwischen Nationen.",
+        "options": [
+          "Asymmetrie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Eine deutliche _____ zwischen den Verhandlungspartnern kann faire Ergebnisse erheblich behindern.",
+        "options": [
+          "Asymmetrie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "peremptorisch",
+    "cefrLevel": "c2",
+    "phonetic": "/pɛrɛmˈtoːrɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 1,
+    "definition": "Expressing an absolute command or refusal, leaving no room for debate or denial.",
+    "examples": [
+      "Seine Entscheidung war derart peremptorisch, dass kein Widerspruch mehr möglich war.",
+      "Die peremptorische Art, wie er die Verhandlungen führte, überraschte alle Beteiligten.",
+      "Der Richter beendete die Diskussion peremptorisch und verkündete das Urteil."
+    ],
+    "exampleTranslations": [
+      "His decision was so peremptory that no further contradiction was possible.",
+      "The peremptory manner in which he conducted the negotiations surprised all participants.",
+      "The judge peremptorily ended the discussion and announced the verdict."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"peremptorisch\" mean?",
+        "options": [
+          "Expressing an absolute command or refusal, leaving no room for debate or denial.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine Entscheidung war derart _____, dass kein Widerspruch mehr möglich war.",
+        "options": [
+          "peremptorisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____e Art, wie er die Verhandlungen führte, überraschte alle Beteiligten.",
+        "options": [
+          "peremptorisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "sophistisch",
+    "cefrLevel": "c2",
+    "phonetic": "/zoˈfɪstɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Characterized by clever but often fallacious reasoning, designed to deceive or mislead.",
+    "examples": [
+      "Seine Argumentation war so geschickt, dass sie auf den ersten Blick überzeugend wirkte, doch bei genauerer Betrachtung entpuppte sie sich als sophistisch.",
+      "Man muss vorsichtig sein, nicht in die Falle einer sophistischen Rhetorik zu tappen, die Fakten verdreht und Emotionen manipuliert.",
+      "Die Debatte wurde durch eine Reihe von sophistischen Einwänden erschwert, die darauf abzielten, die eigentliche Diskussion zu untergraben."
+    ],
+    "exampleTranslations": [
+      "His argumentation was so clever that it seemed convincing at first glance, but upon closer inspection, it turned out to be sophistical.",
+      "One must be careful not to fall into the trap of sophistical rhetoric that distorts facts and manipulates emotions.",
+      "The debate was complicated by a series of sophistical objections aimed at undermining the actual discussion."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"sophistisch\" mean?",
+        "options": [
+          "Characterized by clever but often fallacious reasoning, designed to deceive or mislead.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine Argumentation war so geschickt, dass sie auf den ersten Blick überzeugend wirkte, doch bei genauerer Betrachtung entpuppte sie sich als _____.",
+        "options": [
+          "sophistisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man muss vorsichtig sein, nicht in die Falle einer _____en Rhetorik zu tappen, die Fakten verdreht und Emotionen manipuliert.",
+        "options": [
+          "sophistisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "spekulativ",
+    "cefrLevel": "c2",
+    "phonetic": "/ʃpekuˈlaːtiːf/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Based on conjecture or theory rather than firm evidence, often involving risk.",
+    "examples": [
+      "Die Debatte über die Zukunft der Künstlichen Intelligenz ist oft sehr spekulativ und entbehrt konkreter Beweise.",
+      "Investitionen in Start-ups können äußerst spekulativ sein, bieten aber auch die Chance auf hohe Renditen.",
+      "Seine Theorie, dass Außerirdische die Pyramiden gebaut haben, bleibt eine rein spekulative Behauptung."
+    ],
+    "exampleTranslations": [
+      "The debate about the future of artificial intelligence is often very speculative and lacks concrete evidence.",
+      "Investments in startups can be extremely speculative, but also offer the chance for high returns.",
+      "His theory that aliens built the pyramids remains a purely speculative assertion."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"spekulativ\" mean?",
+        "options": [
+          "Based on conjecture or theory rather than firm evidence, often involving risk.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Debatte über die Zukunft der Künstlichen Intelligenz ist oft sehr _____ und entbehrt konkreter Beweise.",
+        "options": [
+          "spekulativ",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Investitionen in Start-ups können äußerst _____ sein, bieten aber auch die Chance auf hohe Renditen.",
+        "options": [
+          "spekulativ",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "tautologisch",
+    "cefrLevel": "c2",
+    "phonetic": "/taʊ̯toˈloːɡɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "Expressing the same idea twice using different words, often redundantly or unnecessarily.",
+    "examples": [
+      "Die Aussage, dass ein Kreis rund ist, ist streng genommen tautologisch, da die Rundheit bereits im Begriff des Kreises enthalten ist.",
+      "Manche Phrasen im juristischen Sprachgebrauch wirken für Laien oft tautologisch, obwohl sie präzise Bedeutungsnuancen hervorheben sollen.",
+      "Sein Argument war so offensichtlich tautologisch, dass es die Zuhörer eher verwirrte als überzeugte."
+    ],
+    "exampleTranslations": [
+      "The statement that a circle is round is, strictly speaking, tautological, as roundness is already contained in the concept of a circle.",
+      "Some phrases in legal language often seem tautological to laypersons, although they are intended to emphasize precise nuances of meaning.",
+      "His argument was so obviously tautological that it confused rather than convinced the audience."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"tautologisch\" mean?",
+        "options": [
+          "Expressing the same idea twice using different words, often redundantly or unnecessarily.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Aussage, dass ein Kreis rund ist, ist streng genommen _____, da die Rundheit bereits im Begriff des Kreises enthalten ist.",
+        "options": [
+          "tautologisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Phrasen im juristischen Sprachgebrauch wirken für Laien oft _____, obwohl sie präzise Bedeutungsnuancen hervorheben sollen.",
+        "options": [
+          "tautologisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "axiomatisch",
+    "cefrLevel": "c2",
+    "phonetic": "/ak͡sioˈmaːtɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "Based on self-evident truths or fundamental principles that are accepted without proof.",
+    "examples": [
+      "Die Behauptung, dass alle Menschen gleich geboren sind, wird in vielen philosophischen Systemen als axiomatisch betrachtet.",
+      "Ein axiomatisch aufgebautes System zeichnet sich durch seine logische Stringenz und Widerspruchsfreiheit aus.",
+      "Die Konsequenzen, die sich aus diesen axiomatischen Annahmen ergeben, sind weitreichend und prägen das gesamte Modell."
+    ],
+    "exampleTranslations": [
+      "The assertion that all people are born equal is considered axiomatic in many philosophical systems.",
+      "An axiomatically structured system is characterized by its logical stringency and consistency.",
+      "The consequences arising from these axiomatic assumptions are far-reaching and shape the entire model."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"axiomatisch\" mean?",
+        "options": [
+          "Based on self-evident truths or fundamental principles that are accepted without proof.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Behauptung, dass alle Menschen gleich geboren sind, wird in vielen philosophischen Systemen als _____ betrachtet.",
+        "options": [
+          "axiomatisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ein _____ aufgebautes System zeichnet sich durch seine logische Stringenz und Widerspruchsfreiheit aus.",
+        "options": [
+          "axiomatisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "paradigmatisch",
+    "cefrLevel": "c2",
+    "phonetic": "/paʁaˌdɪɡˈmaːtɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "Serving as an excellent and typical example or model for something.",
+    "examples": [
+      "Sein Fall gilt als paradigmatisch für die Schwierigkeiten, mit denen junge Künstler in der heutigen Gesellschaft konfrontiert sind.",
+      "Die Entwicklung der künstlichen Intelligenz ist paradigmatisch für den rasanten technologischen Wandel unserer Zeit.",
+      "Diese Studie liefert eine paradigmatische Analyse der Wechselwirkungen zwischen Ökonomie und Ökologie."
+    ],
+    "exampleTranslations": [
+      "His case is considered paradigmatic for the difficulties young artists face in today's society.",
+      "The development of artificial intelligence is paradigmatic for the rapid technological change of our time.",
+      "This study provides a paradigmatic analysis of the interactions between economy and ecology."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"paradigmatisch\" mean?",
+        "options": [
+          "Serving as an excellent and typical example or model for something.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sein Fall gilt als _____ für die Schwierigkeiten, mit denen junge Künstler in der heutigen Gesellschaft konfrontiert sind.",
+        "options": [
+          "paradigmatisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Entwicklung der künstlichen Intelligenz ist _____ für den rasanten technologischen Wandel unserer Zeit.",
+        "options": [
+          "paradigmatisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "idiomatisch",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌidi̯oˈmaːtɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Using expressions that are natural and typical for a native speaker.",
+    "examples": [
+      "Sein Vortrag war sprachlich brillant und enthielt viele idiomatische Wendungen, die das Publikum begeisterten.",
+      "Um wirklich fließend zu klingen, muss man lernen, sich idiomatisch auszudrücken.",
+      "Die Übersetzung verlor an Authentizität, da sie die idiomatischen Nuancen des Originals nicht einfing."
+    ],
+    "exampleTranslations": [
+      "His presentation was linguistically brilliant and contained many idiomatic phrases that thrilled the audience.",
+      "To sound truly fluent, one must learn to express oneself idiomatically.",
+      "The translation lost authenticity because it failed to capture the idiomatic nuances of the original."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"idiomatisch\" mean?",
+        "options": [
+          "Using expressions that are natural and typical for a native speaker.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sein Vortrag war sprachlich brillant und enthielt viele _____e Wendungen, die das Publikum begeisterten.",
+        "options": [
+          "idiomatisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um wirklich fließend zu klingen, muss man lernen, sich _____ auszudrücken.",
+        "options": [
+          "idiomatisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "elliptisch",
+    "cefrLevel": "c2",
+    "phonetic": "/ɛˈlɪptɪʃ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "science",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Describing something that has the shape of an ellipse or an oval.",
+    "examples": [
+      "Die Umlaufbahn des Planeten ist nicht kreisförmig, sondern **elliptisch**.",
+      "Die Form der Galaxie kann man als **elliptisch** bezeichnen.",
+      "Auch wenn das Objekt aus der Ferne rund erscheint, ist es bei genauerer Betrachtung eher **elliptisch**."
+    ],
+    "exampleTranslations": [
+      "The planet's orbit is not circular, but elliptical.",
+      "One can describe the shape of the galaxy as elliptical.",
+      "Even if the object appears round from a distance, it is rather elliptical upon closer inspection."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"elliptisch\" mean?",
+        "options": [
+          "Describing something that has the shape of an ellipse or an oval.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Umlaufbahn des Planeten ist nicht kreisförmig, sondern **_____**.",
+        "options": [
+          "elliptisch",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Form der Galaxie kann man als **_____** bezeichnen.",
+        "options": [
+          "elliptisch",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "ambig",
+    "cefrLevel": "c2",
+    "phonetic": "/ˈamˌbiːk/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "Having more than one possible meaning, making it difficult to understand clearly.",
+    "examples": [
+      "Die Formulierung im Vertrag ist absichtlich ambig gehalten, um Interpretationsspielraum zu lassen.",
+      "Seine Reaktion auf die Frage war so ambig, dass niemand wusste, ob er zustimmte oder ablehnte.",
+      "Philosophische Texte können oft sehr ambig sein und erfordern eine sorgfältige Analyse."
+    ],
+    "exampleTranslations": [
+      "The wording in the contract is intentionally kept ambiguous to allow for room for interpretation.",
+      "His reaction to the question was so ambiguous that no one knew if he agreed or disagreed.",
+      "Philosophical texts can often be very ambiguous and require careful analysis."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"ambig\" mean?",
+        "options": [
+          "Having more than one possible meaning, making it difficult to understand clearly.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Formulierung im Vertrag ist absichtlich _____ gehalten, um Interpretationsspielraum zu lassen.",
+        "options": [
+          "ambig",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine Reaktion auf die Frage war so _____, dass niemand wusste, ob er zustimmte oder ablehnte.",
+        "options": [
+          "ambig",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "dekonstruieren",
+    "cefrLevel": "c2",
+    "phonetic": "/dekonstʁuˈiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To critically examine a text or concept by breaking it down to reveal its components.",
+    "examples": [
+      "Es ist entscheidend, die vorherrschenden Diskurse zu dekonstruieren, um ihre Machtstrukturen zu erkennen.",
+      "Die Philosophin versuchte, die traditionellen Geschlechterrollen in ihren Schriften zu dekonstruieren.",
+      "Nur durch das Dekonstruieren alter Denkmuster können wir innovative Lösungen finden."
+    ],
+    "exampleTranslations": [
+      "It is crucial to deconstruct the prevailing discourses to recognize their power structures.",
+      "The philosopher attempted to deconstruct traditional gender roles in her writings.",
+      "Only by deconstructing old thought patterns can we find innovative solutions."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"dekonstruieren\" mean?",
+        "options": [
+          "To critically examine a text or concept by breaking it down to reveal its components.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist entscheidend, die vorherrschenden Diskurse zu _____, um ihre Machtstrukturen zu erkennen.",
+        "options": [
+          "dekonstruieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Philosophin versuchte, die traditionellen Geschlechterrollen in ihren Schriften zu _____.",
+        "options": [
+          "dekonstruieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "rekonfigurieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌrekonfiɡuˈriːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "technology",
+    "registerTag": "neutral",
+    "frequencyBand": 2,
+    "definition": "To rearrange or restructure components of a system to achieve a new setup or functionality.",
+    "examples": [
+      "Um die Effizienz des Netzwerks zu steigern, mussten wir die Serverarchitektur grundlegend rekonfigurieren.",
+      "Nach dem Software-Update ist es oft notwendig, die Benutzereinstellungen neu zu rekonfigurieren, um Kompatibilität zu gewährleisten.",
+      "Die Fähigkeit, sich an veränderte Marktbedingungen anzupassen und interne Prozesse schnell zu rekonfigurieren, ist entscheidend für den Unternehmenserfolg."
+    ],
+    "exampleTranslations": [
+      "To increase network efficiency, we had to fundamentally reconfigure the server architecture.",
+      "After the software update, it is often necessary to reconfigure user settings to ensure compatibility.",
+      "The ability to adapt to changing market conditions and quickly reconfigure internal processes is crucial for business success."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"rekonfigurieren\" mean?",
+        "options": [
+          "To rearrange or restructure components of a system to achieve a new setup or functionality.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um die Effizienz des Netzwerks zu steigern, mussten wir die Serverarchitektur grundlegend _____.",
+        "options": [
+          "rekonfigurieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Nach dem Software-Update ist es oft notwendig, die Benutzereinstellungen neu zu _____, um Kompatibilität zu gewährleisten.",
+        "options": [
+          "rekonfigurieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "subvertieren",
+    "cefrLevel": "c2",
+    "phonetic": "/zʊbvɛrˈtiːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "To challenge the authority or stability of a system, institution, or established belief.",
+    "examples": [
+      "Manche Aktivisten versuchen, das bestehende System zu subvertieren.",
+      "Seine radikalen Ideen wurden als Versuch angesehen, die gesellschaftliche Ordnung zu subvertieren.",
+      "Die Opposition warf der Regierung vor, demokratische Prinzipien zu subvertieren."
+    ],
+    "exampleTranslations": [
+      "Some activists try to subvert the existing system.",
+      "His radical ideas were seen as an attempt to subvert the social order.",
+      "The opposition accused the government of subverting democratic principles."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"subvertieren\" mean?",
+        "options": [
+          "To challenge the authority or stability of a system, institution, or established belief.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Aktivisten versuchen, das bestehende System zu _____.",
+        "options": [
+          "subvertieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine radikalen Ideen wurden als Versuch angesehen, die gesellschaftliche Ordnung zu _____.",
+        "options": [
+          "subvertieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "affirmieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ˌafɪrˈmiːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 4,
+    "definition": "To strongly assert the truth or validity of something, often in a positive way.",
+    "examples": [
+      "Die Gesellschaft muss ihre Grundwerte immer wieder neu affirmieren, um ihren Zusammenhalt zu gewährleisten.",
+      "Er affirmierte seine Überzeugung, dass Kunst eine transformative Kraft besitzt, trotz aller Kritik.",
+      "Die Fähigkeit, die eigene Existenz und die damit verbundenen Herausforderungen zu affirmieren, ist ein Zeichen innerer Stärke."
+    ],
+    "exampleTranslations": [
+      "Society must continually re-affirm its fundamental values to ensure its cohesion.",
+      "He affirmed his conviction that art possesses a transformative power, despite all criticism.",
+      "The ability to affirm one's own existence and the challenges associated with it is a sign of inner strength."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"affirmieren\" mean?",
+        "options": [
+          "To strongly assert the truth or validity of something, often in a positive way.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Gesellschaft muss ihre Grundwerte immer wieder neu _____, um ihren Zusammenhalt zu gewährleisten.",
+        "options": [
+          "affirmieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "affirmieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "negieren",
+    "cefrLevel": "c2",
+    "phonetic": "/neˈɡiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "To deny the existence, truth, or validity of something, often formally or emphatically.",
+    "examples": [
+      "Man kann die Auswirkungen des Klimawandels nicht länger negieren.",
+      "Er negierte vehement jegliche Beteiligung an dem Vorfall.",
+      "Die Partei negiert systematisch alle Vorwürfe der Opposition."
+    ],
+    "exampleTranslations": [
+      "One can no longer deny the impacts of climate change.",
+      "He vehemently denied any involvement in the incident.",
+      "The party systematically denies all accusations from the opposition."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"negieren\" mean?",
+        "options": [
+          "To deny the existence, truth, or validity of something, often formally or emphatically.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man kann die Auswirkungen des Klimawandels nicht länger _____.",
+        "options": [
+          "negieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "negieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "postulieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ˈpɔs.tuˌliː.ʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "To assert or assume something as true, necessary, or a fundamental principle.",
+    "examples": [
+      "Die Theorie muss eine Reihe von Axiomen postulieren, um ihre Gültigkeit zu gewährleisten.",
+      "Es wird postuliert, dass dunkle Materie einen Großteil der Masse des Universums ausmacht.",
+      "Der Philosoph wagte es, eine völlig neue Ethik zu postulieren, die auf Empathie basierte."
+    ],
+    "exampleTranslations": [
+      "The theory must postulate a series of axioms to ensure its validity.",
+      "It is postulated that dark matter accounts for a large part of the universe's mass.",
+      "The philosopher dared to postulate a completely new ethic based on empathy."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"postulieren\" mean?",
+        "options": [
+          "To assert or assume something as true, necessary, or a fundamental principle.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Theorie muss eine Reihe von Axiomen _____, um ihre Gültigkeit zu gewährleisten.",
+        "options": [
+          "postulieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "postulieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "deduzieren",
+    "cefrLevel": "c2",
+    "phonetic": "/de.duˈtsiː.ʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "To logically infer a specific conclusion from general principles or known facts.",
+    "examples": [
+      "Aus den vorliegenden Daten lässt sich eine eindeutige Tendenz deduzieren.",
+      "Um die Ursache des Problems zu finden, mussten die Ingenieure die Fehlerquelle aus komplexen Systemzusammenhängen deduzieren.",
+      "Der Philosoph versuchte, die Existenz Gottes aus reiner Vernunft zu deduzieren."
+    ],
+    "exampleTranslations": [
+      "From the available data, a clear trend can be deduced.",
+      "To find the root cause of the problem, the engineers had to deduce the source of error from complex system interdependencies.",
+      "The philosopher attempted to deduce the existence of God from pure reason."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"deduzieren\" mean?",
+        "options": [
+          "To logically infer a specific conclusion from general principles or known facts.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Aus den vorliegenden Daten lässt sich eine eindeutige Tendenz _____.",
+        "options": [
+          "deduzieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um die Ursache des Problems zu finden, mussten die Ingenieure die Fehlerquelle aus komplexen Systemzusammenhängen _____.",
+        "options": [
+          "deduzieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "induzieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ɪnduˈtsiːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "To cause something to happen or begin, especially a process, reaction, or state.",
+    "examples": [
+      "Die Forschung versucht, eine Immunantwort zu induzieren, die den Körper vor der Krankheit schützt.",
+      "Manche Medikamente können unerwünschte Nebenwirkungen induzieren, die sorgfältig abgewogen werden müssen.",
+      "Der plötzliche Druckabfall könnte eine Kettenreaktion induziert haben, die zum Systemausfall führte."
+    ],
+    "exampleTranslations": [
+      "Research aims to induce an immune response that protects the body from the disease.",
+      "Some medications can induce undesirable side effects that must be carefully weighed.",
+      "The sudden pressure drop might have induced a chain reaction that led to system failure."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"induzieren\" mean?",
+        "options": [
+          "To cause something to happen or begin, especially a process, reaction, or state.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Forschung versucht, eine Immunantwort zu _____, die den Körper vor der Krankheit schützt.",
+        "options": [
+          "induzieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Medikamente können unerwünschte Nebenwirkungen _____, die sorgfältig abgewogen werden müssen.",
+        "options": [
+          "induzieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "extrapolieren",
+    "cefrLevel": "c2",
+    "phonetic": "/ɛkstrapoˈliːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To estimate or infer something unknown by extending known information or trends.",
+    "examples": [
+      "Man kann aus den vorliegenden Daten zukünftige Entwicklungen nur bedingt extrapolieren.",
+      "Die Wissenschaftler versuchten, die Auswirkungen des Klimawandels auf lange Sicht zu extrapolieren.",
+      "Es ist riskant, aus einem Einzelfall allgemeingültige Schlüsse zu extrapolieren."
+    ],
+    "exampleTranslations": [
+      "One can only partially extrapolate future developments from the available data.",
+      "The scientists attempted to extrapolate the long-term effects of climate change.",
+      "It is risky to extrapolate general conclusions from a single case."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"extrapolieren\" mean?",
+        "options": [
+          "To estimate or infer something unknown by extending known information or trends.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man kann aus den vorliegenden Daten zukünftige Entwicklungen nur bedingt _____.",
+        "options": [
+          "extrapolieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Wissenschaftler versuchten, die Auswirkungen des Klimawandels auf lange Sicht zu _____.",
+        "options": [
+          "extrapolieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
   }
 ]

@@ -56,6 +56,11 @@
             "My best friend lives in Berlin.",
             "I'm meeting an old friend today.",
             "A friend always helps you."
+          ],
+          "exampleTranslationsTr": [
+            "En iyi arkadaşım Berlin'de oturuyor.",
+            "Bugün eski bir arkadaşla buluşuyorum.",
+            "Bir arkadaş sana her zaman yardım eder."
           ]
         },
         {
@@ -111,6 +116,11 @@
             "I don't have class today.",
             "The sun is shining today.",
             "Do we want to cook today?"
+          ],
+          "exampleTranslationsTr": [
+            "Bugün dersim yok.",
+            "Bugün güneş parlıyor.",
+            "Bugün yemek yapalım mı?"
           ]
         },
         {
@@ -166,6 +176,11 @@
             "Our team wants to win the game on Saturday.",
             "You can win movie tickets today by taking the quiz.",
             "She won against her father in chess."
+          ],
+          "exampleTranslationsTr": [
+            "Takımımız Cumartesi günü maçı kazanmak istiyor.",
+            "Bugün quizde sinema biletleri kazanabilirsiniz.",
+            "O, satrançta babasına karşı kazandı."
           ]
         },
         {
@@ -221,6 +236,11 @@
             "Unfortunately I can't come to your party.",
             "Unfortunately the concert is already sold out.",
             "Unfortunately, it rained a lot during the vacation."
+          ],
+          "exampleTranslationsTr": [
+            "Maalesef partine gelemem.",
+            "Maalesef konser zaten tükendi.",
+            "Maalesef tatilde çok yağmur yağdı."
           ]
         },
         {
@@ -276,6 +296,11 @@
             "A good relationship takes trust and time.",
             "The relationship with his colleagues is very relaxed.",
             "After the argument, their relationship was difficult for a long time."
+          ],
+          "exampleTranslationsTr": [
+            "İyi bir ilişki güven ve zaman gerektirir.",
+            "İş arkadaşlarıyla ilişkisi çok rahat.",
+            "Kavgadan sonra ilişkileri uzun süre zordu."
           ]
         },
         {
@@ -331,6 +356,11 @@
             "The hotel is cheap and also very centrally located.",
             "I don't have time and I'm tired.",
             "She speaks English and also some Spanish."
+          ],
+          "exampleTranslationsTr": [
+            "Otel ucuz ve ayrıca çok merkezi.",
+            "Zamanım yok, ayrıca yorgunum.",
+            "İngilizce konuşuyor ve ayrıca biraz da İspanyolca."
           ]
         },
         {
@@ -386,6 +416,11 @@
             "The new position is a big challenge for her.",
             "The marathon was the biggest challenge of his life.",
             "We see the move as an opportunity, not a challenge."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni iş onun için büyük bir meydan okuma.",
+            "Maraton, hayatının en büyük meydan okumasıydı.",
+            "Taşınmayı fırsat olarak görüyoruz, meydan okuma olarak değil."
           ]
         },
         {
@@ -441,6 +476,11 @@
             "Negotiating the new contract took hours.",
             "Both sides went into the negotiation well prepared.",
             "After tough negotiations, a price was agreed upon."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni sözleşme görüşmeleri saatler sürdü.",
+            "Her iki taraf görüşmeye iyi hazırlanmış olarak girdi.",
+            "Çetin görüşmelerin ardından bir fiyat üzerinde anlaşıldı."
           ]
         },
         {
@@ -496,6 +536,11 @@
             "Diagrams illustrate the development of prices.",
             "The teacher uses everyday examples to illustrate physics.",
             "A short video should illustrate the process."
+          ],
+          "exampleTranslationsTr": [
+            "Diyagramlar fiyatların gelişimini gösterir.",
+            "Öğretmen, fiziği somutlaştırmak için günlük hayattan örnekler kullanır.",
+            "Kısa bir video, süreci gösterecek."
           ]
         },
         {
@@ -551,6 +596,11 @@
             "Their willingness to compromise made the agreement possible.",
             "Without the willingness to learn, every talent remains unused.",
             "The willingness of citizens to donate was impressive."
+          ],
+          "exampleTranslationsTr": [
+            "Onların uzlaşmaya istekliliği, anlaşmayı mümkün kıldı.",
+            "Öğrenme istekliliği olmadan her yetenek kullanılmadan kalır.",
+            "Vatandaşların bağış yapmaya gönüllülüğü etkileyiciydi."
           ]
         },
         {
@@ -606,6 +656,11 @@
             "The report reveals a strikingly high staff shortage.",
             "This was a blatant violation of the rules.",
             "The differences between the branches are striking."
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, fahiş bir personel eksikliğini ortaya koyuyor.",
+            "Bu, kurallara karşı bariz bir ihlaldi.",
+            "Şubeler arasındaki farklar çok belirgin."
           ]
         },
         {
@@ -661,6 +716,11 @@
             "For many, Venice is the epitome of romantic cities.",
             "The tailored suit was considered the epitome of elegance.",
             "This dish is the epitome of Italian cuisine."
+          ],
+          "exampleTranslationsTr": [
+            "Birçokları için Venedik, romantik şehirlerin mükemmel örneğidir.",
+            "Özel dikim takım elbise, zarafetin simgesi olarak kabul edilirdi.",
+            "Bu yemek, İtalyan mutfağının özüdür."
           ]
         }
       ]
@@ -720,6 +780,11 @@
             "We're having pizza tonight.",
             "The children eat at school.",
             "Would you like something to eat?"
+          ],
+          "exampleTranslationsTr": [
+            "Bu akşam pizza yiyoruz.",
+            "Çocuklar okulda yemek yiyor.",
+            "Bir şeyler yemek ister misin?"
           ]
         },
         {
@@ -775,6 +840,11 @@
             "My cell phone is new and fast.",
             "Is your jacket new?",
             "You have a new apartment."
+          ],
+          "exampleTranslationsTr": [
+            "Telefonum yeni ve hızlı.",
+            "Ceketin yeni mi?",
+            "Yeni bir daireniz var."
           ]
         },
         {
@@ -830,6 +900,11 @@
             "Our neighbor waters our flowers on vacation.",
             "The new neighbor introduced himself yesterday.",
             "I talked to the nice neighbor about the fence."
+          ],
+          "exampleTranslationsTr": [
+            "Komşumuz tatilde çiçeklerimizi sular.",
+            "Yeni komşu dün kendini tanıttı.",
+            "Nazik komşuyla çit hakkında konuştum."
           ]
         },
         {
@@ -885,6 +960,11 @@
             "Unfortunately, I forgot your birthday.",
             "Please don't forget your umbrella!",
             "He must not forget the appointment tomorrow."
+          ],
+          "exampleTranslationsTr": [
+            "Maalesef doğum gününü unuttum.",
+            "Lütfen şemsiyenizi unutmayın!",
+            "Yarın randevuyu unutmamalı."
           ]
         },
         {
@@ -940,6 +1020,11 @@
             "Your application for the internship was successful.",
             "An application includes a CV and a cover letter.",
             "He emailed the application yesterday."
+          ],
+          "exampleTranslationsTr": [
+            "Staj için başvurunuz başarılı oldu.",
+            "Bir başvuruda özgeçmiş ve ön yazı bulunur.",
+            "Başvuruyu dün e-posta ile gönderdi."
           ]
         },
         {
@@ -995,6 +1080,11 @@
             "I was disappointed because the concert was canceled.",
             "She looked very disappointed after the exam.",
             "We were quite disappointed with the expensive restaurant."
+          ],
+          "exampleTranslationsTr": [
+            "Konser iptal edildiği için hayal kırıklığına uğradım.",
+            "Sınavdan sonra çok hayal kırıklığına uğramış görünüyordu.",
+            "Pahalı restorandan oldukça hayal kırıklığına uğradık."
           ]
         },
         {
@@ -1050,6 +1140,11 @@
             "The course is demanding but very educational.",
             "She enjoys reading sophisticated novels.",
             "The customers of this store are quite demanding."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kurs zorlu ama çok öğretici.",
+            "O, nitelikli yazılmış romanları okumayı sever.",
+            "Bu mağazanın müşterileri oldukça talepkar."
           ]
         },
         {
@@ -1105,6 +1200,11 @@
             "The measure against noise is showing initial success.",
             "The city is planning another measure for safe cycle paths.",
             "Every measure must be carefully examined beforehand."
+          ],
+          "exampleTranslationsTr": [
+            "Gürültüye karşı alınan önlem ilk başarılarını gösteriyor.",
+            "Şehir, güvenli bisiklet yolları için başka bir önlem planlıyor.",
+            "Her önlem önceden titizlikle incelenmelidir."
           ]
         },
         {
@@ -1160,6 +1260,11 @@
             "The perception of colors varies from person to person.",
             "Stress significantly changes our perception of time.",
             "In the public perception, the city is considered safe."
+          ],
+          "exampleTranslationsTr": [
+            "Renk algısı insandan insana değişir.",
+            "Stres, zaman algımızı önemli ölçüde değiştirir.",
+            "Kamuoyunun algısında şehir güvenli kabul edilir."
           ]
         },
         {
@@ -1215,6 +1320,11 @@
             "The committee will discuss the proposals tomorrow.",
             "In the essay, students should discuss both positions.",
             "We must discuss this question calmly."
+          ],
+          "exampleTranslationsTr": [
+            "Komite yarın önerileri görüşecek.",
+            "Öğrenciler denemede her iki görüşü tartışmalılar.",
+            "Bu konuyu sakin bir şekilde ele almalıyız."
           ]
         },
         {
@@ -1270,6 +1380,11 @@
             "After the second defeat, the trust was completely destroyed.",
             "The rain made the road completely impassable.",
             "With this performance at the latest she was completely convincing."
+          ],
+          "exampleTranslationsTr": [
+            "İkinci yenilgiden sonra güven tamamen yıkılmıştı.",
+            "Yağmur yolu hiç geçilmez hale getirdi.",
+            "En geç bu performansla tamamen ikna etti."
           ]
         },
         {
@@ -1325,6 +1440,11 @@
             "She was able to support her thesis with current figures.",
             "The lawyer wants to support the statement with expert reports.",
             "New findings support the researchers' theory."
+          ],
+          "exampleTranslationsTr": [
+            "Tezini güncel verilerle destekleyebildi.",
+            "Avukat, ifadeyi bilirkişi raporlarıyla doğrulamak istiyor.",
+            "Yeni bulgular, araştırmacıların teorisini destekliyor."
           ]
         }
       ]
@@ -1384,6 +1504,11 @@
             "The train station is very big.",
             "The room is large and bright.",
             "Your dog is big and friendly."
+          ],
+          "exampleTranslationsTr": [
+            "Tren istasyonu çok büyük.",
+            "Oda büyük ve aydınlık.",
+            "Köpeğiniz büyük ve arkadaş canlısı."
           ]
         },
         {
@@ -1439,6 +1564,11 @@
             "We have been living in Berlin for two years.",
             "My parents live in the country.",
             "Where would you like to live?"
+          ],
+          "exampleTranslationsTr": [
+            "Berlin'de iki yıldır oturuyoruz.",
+            "Annemler köyde oturuyorlar.",
+            "Nerede oturmak istersin?"
           ]
         },
         {
@@ -1494,6 +1624,11 @@
             "Breakfast is very important for me.",
             "It's important to practice a little every day.",
             "Tomorrow's appointment is very important for him."
+          ],
+          "exampleTranslationsTr": [
+            "Kahvaltı benim için çok önemli.",
+            "Her gün biraz pratik yapmak önemlidir.",
+            "Yarınki randevu onun için çok önemli."
           ]
         },
         {
@@ -1549,6 +1684,11 @@
             "The exam on Monday lasts two hours.",
             "He studies for the exam every evening.",
             "She passed the exam with a good grade."
+          ],
+          "exampleTranslationsTr": [
+            "Pazartesi günkü sınav iki saat sürer.",
+            "O, her akşam sınava çalışıyor.",
+            "O, sınavı iyi bir notla geçti."
           ]
         },
         {
@@ -1604,6 +1744,11 @@
             "The boat trip was an unforgettable experience.",
             "He told us about his experience in the mountains.",
             "The visit to the zoo was a great experience for the children."
+          ],
+          "exampleTranslationsTr": [
+            "Tekne gezisi unutulmaz bir deneyimdi.",
+            "Bize dağlardaki deneyimini anlattı.",
+            "Çocuklar için hayvanat bahçesi ziyareti büyük bir deneyimdi."
           ]
         },
         {
@@ -1659,6 +1804,11 @@
             "I really like your suggestion for the trip.",
             "She suggested starting earlier.",
             "The colleague's suggestion was immediately accepted."
+          ],
+          "exampleTranslationsTr": [
+            "Gezi önerin çok hoşuma gitti.",
+            "Daha erken başlamayı önerdi.",
+            "Meslektaşın önerisi hemen kabul edildi."
           ]
         },
         {
@@ -1714,6 +1864,11 @@
             "Without specialist knowledge it is difficult for me to judge the quality.",
             "The jury will judge each entry individually.",
             "You shouldn't judge people based on first impressions."
+          ],
+          "exampleTranslationsTr": [
+            "Uzmanlık bilgim olmadan kaliteyi değerlendirmem zor.",
+            "Jüri her bir katkıyı tek tek değerlendirecek.",
+            "İnsanları ilk izlenime göre yargılamamak gerekir."
           ]
         },
         {
@@ -1769,6 +1924,11 @@
             "Please also take public holidays into account when planning.",
             "The coach must take into account the fitness of each player.",
             "We will take your wishes into account as much as possible."
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen planlama yaparken bayramları da göz önünde bulundurun.",
+            "Antrenör her oyuncunun kondisyonunu göz önünde bulundurmalı.",
+            "İsteklerinizi mümkün olduğunca dikkate alacağız."
           ]
         },
         {
@@ -1824,6 +1984,11 @@
             "A dictionary is essential when translating.",
             "Her experience made her indispensable to the team.",
             "For many, the smartphone has become indispensable in everyday life."
+          ],
+          "exampleTranslationsTr": [
+            "Çeviri yaparken bir sözlük vazgeçilmezdir.",
+            "Tecrübesiyle ekip için vazgeçilmez hale geldi.",
+            "Çoğu kişi için akıllı telefon günlük hayatta vazgeçilmez hale geldi."
           ]
         },
         {
@@ -1879,6 +2044,11 @@
             "The right to vacation is regulated by law.",
             "She has high standards for her own work.",
             "The project took more time than planned."
+          ],
+          "exampleTranslationsTr": [
+            "Tatil hakkı yasal olarak düzenlenmiştir.",
+            "Kendi işine karşı yüksek beklentileri var.",
+            "Proje, planlanandan daha fazla zaman aldı."
           ]
         },
         {
@@ -1934,6 +2104,11 @@
             "Autumn is generally considered the best time for this hike.",
             "What is generally considered safe can change quickly.",
             "Such errors are generally underestimated."
+          ],
+          "exampleTranslationsTr": [
+            "Sonbahar, bu yürüyüş için yaygın olarak en iyi zaman kabul edilir.",
+            "Yaygın olarak güvenli kabul edilen şey, hızla değişebilir.",
+            "Bu tür hatalar yaygın olarak hafife alınır."
           ]
         },
         {
@@ -1989,6 +2164,11 @@
             "The new subsidies counteract our own climate goals.",
             "His mocking tone counteracted the serious message.",
             "Such exceptions defeat the purpose of the rule."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni sübvansiyonlar kendi iklim hedeflerimizi baltalıyor.",
+            "Onun alaycı tonu, ciddi mesajı gölgeledi.",
+            "Bu tür istisnalar kuralın amacına ters düşer."
           ]
         }
       ]
@@ -2048,6 +2228,11 @@
             "School starts at eight o'clock.",
             "My daughter likes going to school.",
             "The school is next to the park."
+          ],
+          "exampleTranslationsTr": [
+            "Okul saat sekizde başlar.",
+            "Kızım okula gitmeyi sever.",
+            "Okul parkın yanında."
           ]
         },
         {
@@ -2103,6 +2288,11 @@
             "My work starts at nine o'clock.",
             "He rides his bike to work.",
             "She enjoys the work."
+          ],
+          "exampleTranslationsTr": [
+            "İşim saat dokuzda başlar.",
+            "İşe bisikletle gider.",
+            "İş ona keyif veriyor."
           ]
         },
         {
@@ -2158,6 +2348,11 @@
             "We're going on holiday by the sea this year.",
             "On vacation I want to read and swim a lot.",
             "He still has ten days of vacation left."
+          ],
+          "exampleTranslationsTr": [
+            "Bu yıl deniz kenarında tatil yapacağız.",
+            "Tatilde çok okumak ve yüzmek istiyorum.",
+            "Onun hala on gün tatili kaldı."
           ]
         },
         {
@@ -2213,6 +2408,11 @@
             "I had a long phone call with my sister yesterday.",
             "Yesterday the weather was better than today.",
             "We didn't get home until late yesterday."
+          ],
+          "exampleTranslationsTr": [
+            "Dün kız kardeşimle uzun uzun telefonlaştım.",
+            "Dün hava bugünden daha iyiydi.",
+            "Dün eve ancak geç geldik."
           ]
         },
         {
@@ -2268,6 +2468,11 @@
             "In my opinion the film is worth seeing.",
             "Everyone is allowed to express their opinion freely.",
             "Your opinion on this plan has changed."
+          ],
+          "exampleTranslationsTr": [
+            "Bence film izlenmeye değer.",
+            "Herkes fikrini özgürce söyleyebilir.",
+            "Bu plan hakkındaki fikriniz değişti."
           ]
         },
         {
@@ -2323,6 +2528,11 @@
             "My parents support me with my training.",
             "Many people support the association with donations.",
             "He wants to support his colleague in the project."
+          ],
+          "exampleTranslationsTr": [
+            "Annem babam eğitimimde bana destek oluyorlar.",
+            "Birçok insan derneğe bağışlarla destek oluyor.",
+            "İş arkadaşına projede destek olmak istiyor."
           ]
         },
         {
@@ -2378,6 +2588,11 @@
             "Sustainability plays an important role in our purchases.",
             "The company promotes sustainability and fair wages.",
             "Without sustainability, valuable resources are lost."
+          ],
+          "exampleTranslationsTr": [
+            "Sürdürülebilirlik, alışverişlerimizde önemli bir rol oynar.",
+            "Şirket, sürdürülebilirlik ve adil ücretlerle reklam yapıyor.",
+            "Sürdürülebilirlik olmadan değerli kaynaklar kaybolur."
           ]
         },
         {
@@ -2433,6 +2648,11 @@
             "The north was rainy, while the south was sunny.",
             "She likes classical music, while her brother listens to rock.",
             "The old model was loud, but the new one was very quiet."
+          ],
+          "exampleTranslationsTr": [
+            "Kuzey yağmurluydu, güney ise güneşliydi.",
+            "Klasik müzik sever, erkek kardeşi ise rock dinler.",
+            "Eski model gürültülüydü, yenisi ise çok sessizdi."
           ]
         },
         {
@@ -2488,6 +2708,11 @@
             "The plan was risky; Nevertheless, the board agreed.",
             "The criticism was harsh, but remained factual.",
             "He knew the dangers and still dared to try."
+          ],
+          "exampleTranslationsTr": [
+            "Plan riskliydi; buna rağmen yönetim kurulu onayladı.",
+            "Eleştiri sertti, yine de nesnel kaldı.",
+            "Tehlikeleri biliyordu ve yine de denemeye cesaret etti."
           ]
         },
         {
@@ -2543,6 +2768,11 @@
             "His argument was sound and left no room for doubt.",
             "Without hard evidence, no one will believe us.",
             "The excuse didn't sound particularly valid."
+          ],
+          "exampleTranslationsTr": [
+            "Argümanı sağlamdı ve hiçbir şüpheye yer bırakmadı.",
+            "Dayanağı sağlam veriler olmadan kimse bize inanmaz.",
+            "Bahane pek geçerli gelmedi."
           ]
         },
         {
@@ -2598,6 +2828,11 @@
             "The amount of the tip is at the discretion of the guests.",
             "The authority decided on the application at its own discretion.",
             "According to human judgment, the accident could not have been avoided."
+          ],
+          "exampleTranslationsTr": [
+            "Bahşiş miktarı misafirlerin takdirine bağlıdır.",
+            "Kurum, başvuru hakkında kendi takdirine göre karar verdi.",
+            "İnsan takdirine göre kaza önlenemezdi."
           ]
         },
         {
@@ -2653,6 +2888,11 @@
             "The consequences of this decision only became apparent years later.",
             "He was apparently unaware of the significance of his words.",
             "A judgment of such magnitude requires careful justification."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kararın önemi ancak yıllar sonra anlaşıldı.",
+            "Belli ki sözlerinin öneminin farkında değildi.",
+            "Bu denli önemli bir karar, titiz bir gerekçe gerektirir."
           ]
         }
       ]
@@ -2712,6 +2952,11 @@
             "The city is very crowded on Saturday.",
             "We're going into town tomorrow.",
             "Which city do you live in?"
+          ],
+          "exampleTranslationsTr": [
+            "Şehir Cumartesi çok kalabalık.",
+            "Yarın şehre gidiyoruz.",
+            "Hangi şehirde oturuyorsun?"
           ]
         },
         {
@@ -2767,6 +3012,11 @@
             "The food here is very good.",
             "She speaks German well.",
             "I slept well."
+          ],
+          "exampleTranslationsTr": [
+            "Buradaki yemek çok iyi.",
+            "O iyi Almanca konuşuyor.",
+            "İyi uyudum."
           ]
         },
         {
@@ -2822,6 +3072,11 @@
             "We are visiting my grandparents on Sunday.",
             "Would you like to visit the new museum with me?",
             "She wants to visit her friend in the hospital."
+          ],
+          "exampleTranslationsTr": [
+            "Pazar günü büyükannem ve büyükbabamı ziyaret ediyoruz.",
+            "Benimle yeni müzeyi ziyaret etmek ister misin?",
+            "Hastanede arkadaşını ziyaret etmek istiyor."
           ]
         },
         {
@@ -2877,6 +3132,11 @@
             "I would like to order a soup and a salad.",
             "We usually order books online.",
             "Have you already ordered the taxi?"
+          ],
+          "exampleTranslationsTr": [
+            "Bir çorba ve bir salata sipariş etmek istiyorum.",
+            "Kitapları genellikle internetten sipariş ederiz.",
+            "Taksiyi çoktan sipariş ettin mi?"
           ]
         },
         {
@@ -2932,6 +3192,11 @@
             "The driver's behavior was very reckless.",
             "Her friendly behavior impressed everyone.",
             "The coach was unhappy with the players' behavior."
+          ],
+          "exampleTranslationsTr": [
+            "Sürücünün davranışı çok düşüncesizceydi.",
+            "Onun dostça davranışı herkesi etkiledi.",
+            "Antrenör, oyuncuların davranışlarından memnun değildi."
           ]
         },
         {
@@ -2987,6 +3252,11 @@
             "She was able to convince the boss of her idea.",
             "His arguments don't entirely convince me.",
             "The film convinced us with its story."
+          ],
+          "exampleTranslationsTr": [
+            "Patronu fikrine ikna edebildi.",
+            "Onun argümanları beni tam olarak ikna etmiyor.",
+            "Film bizi hikayesiyle ikna etti."
           ]
         },
         {
@@ -3042,6 +3312,11 @@
             "Experienced drivers can better assess dangers.",
             "It is difficult to correctly assess the situation from the outside.",
             "How would you assess the chances of the project?"
+          ],
+          "exampleTranslationsTr": [
+            "Deneyimli sürücüler tehlikeleri daha iyi değerlendirebilirler.",
+            "Dışarıdan durumu doğru değerlendirmek zordur.",
+            "Projenin şansını nasıl değerlendirirsiniz?"
           ]
         },
         {
@@ -3097,6 +3372,11 @@
             "Can you explain your opinion in more detail?",
             "The company must justify the termination in writing.",
             "He was able to justify his decision convincingly."
+          ],
+          "exampleTranslationsTr": [
+            "Görüşünü daha ayrıntılı açıklayabilir misin?",
+            "Şirket, fesih kararını yazılı olarak gerekçelendirmeli.",
+            "Kararını ikna edici bir şekilde açıklayabildi."
           ]
         },
         {
@@ -3152,6 +3432,11 @@
             "The demonstrators demanded more social justice.",
             "Without justice, a state loses the trust of its citizens.",
             "Her sense of justice made her the ideal judge."
+          ],
+          "exampleTranslationsTr": [
+            "Göstericiler daha fazla sosyal adalet talep ettiler.",
+            "Adalet olmadan bir devlet vatandaşların güvenini kaybeder.",
+            "Adalet duygusu onu ideal bir hakim haline getirdi."
           ]
         },
         {
@@ -3207,6 +3492,11 @@
             "Regular checks ensure the safety of the system.",
             "The state must guarantee the supply of drinking water.",
             "This is the only way to ensure a fair election."
+          ],
+          "exampleTranslationsTr": [
+            "Düzenli kontroller tesisin güvenliğini sağlar.",
+            "Devlet, içme suyu teminini sağlamak zorundadır.",
+            "Ancak bu şekilde seçimin adil bir şekilde yapılması sağlanabilir."
           ]
         },
         {
@@ -3262,6 +3552,11 @@
             "After the interview I had to revise my judgment.",
             "The forecast was revised downwards.",
             "He was ready to revise his position."
+          ],
+          "exampleTranslationsTr": [
+            "Görüşmeden sonra kararımı değiştirmek zorunda kaldım.",
+            "Tahmin aşağı yönlü revize edildi.",
+            "Görüşünü değiştirmeye hazırdı."
           ]
         },
         {
@@ -3317,6 +3612,11 @@
             "Mutual trust is essential for this work.",
             "A helmet is essential on the construction site.",
             "Complete documents are essential for the visa."
+          ],
+          "exampleTranslationsTr": [
+            "Bu iş için karşılıklı güven vazgeçilmezdir.",
+            "Şantiyede baret zorunludur.",
+            "Vize için eksiksiz belgeler elzemdir."
           ]
         }
       ]
@@ -3376,6 +3676,11 @@
             "I drink a glass of water every morning.",
             "The water in the lake is cold.",
             "Do you want water or juice?"
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah bir bardak su içerim.",
+            "Göldeki su soğuk.",
+            "Su mu istersin, yoksa meyve suyu mu?"
           ]
         },
         {
@@ -3431,6 +3736,11 @@
             "I like to eat fresh bread with butter.",
             "The bread from the bakery is still warm.",
             "We need bread for dinner."
+          ],
+          "exampleTranslationsTr": [
+            "Tereyağlı taze ekmek yemeyi severim.",
+            "Fırından ekmek hala sıcak.",
+            "Akşam yemeği için ekmek lazım."
           ]
         },
         {
@@ -3486,6 +3796,11 @@
             "Can I pay by card here?",
             "We pay the rent at the beginning of the month.",
             "He had to pay a lot for the repairs."
+          ],
+          "exampleTranslationsTr": [
+            "Burada kartla ödeyebilir miyim?",
+            "Ayın başında kirayı öderiz.",
+            "Tamir için çok ödemek zorunda kaldı."
           ]
         },
         {
@@ -3541,6 +3856,11 @@
             "This intersection is dangerous for cyclists.",
             "Swimming in the lake is dangerous during thunderstorms.",
             "Playing on the street is too dangerous."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kavşak bisikletliler için tehlikelidir.",
+            "Gök gürültülü havalarda gölde yüzmek tehlikelidir.",
+            "Sokakta oynamak çok tehlikelidir."
           ]
         },
         {
@@ -3596,6 +3916,11 @@
             "It was raining, but we still went hiking.",
             "The test was difficult, but she still passed.",
             "He had a cold and still went to work."
+          ],
+          "exampleTranslationsTr": [
+            "Yağmur yağıyordu, yine de yürüyüşe gittik.",
+            "Sınav zordu, yine de geçti.",
+            "Üşütmüştü, yine de işe gitti."
           ]
         },
         {
@@ -3651,6 +3976,11 @@
             "A good knowledge of the rules helps with this game.",
             "Knowledge of English is required for the position.",
             "He expanded his knowledge in the course."
+          ],
+          "exampleTranslationsTr": [
+            "Kuralları iyi bilmek bu oyunda yardımcı olur.",
+            "Bu pozisyon için İngilizce bilgisi gereklidir.",
+            "Kursta bilgilerini genişletti."
           ]
         },
         {
@@ -3706,6 +4036,11 @@
             "The union wants to negotiate higher wages.",
             "You can negotiate any price at the bazaar.",
             "Both companies have been negotiating the contract for weeks."
+          ],
+          "exampleTranslationsTr": [
+            "Sendika daha yüksek ücretler hakkında müzakere etmek istiyor.",
+            "Pazarda her fiyat için pazarlık yapabilirsin.",
+            "Her iki şirket de haftalardır sözleşme hakkında müzakere ediyor."
           ]
         },
         {
@@ -3761,6 +4096,11 @@
             "The connection between sleep and concentration is proven.",
             "Without the context, the quote is misunderstood.",
             "The police are investigating a possible connection between the cases."
+          ],
+          "exampleTranslationsTr": [
+            "Uyku ile konsantrasyon arasındaki bağlantı kanıtlanmıştır.",
+            "Bağlam olmadan alıntı yanlış anlaşılır.",
+            "Polis, vakalar arasındaki olası bir bağlantıyı araştırıyor."
           ]
         },
         {
@@ -3816,6 +4156,11 @@
             "The prejudice against older applicants persists.",
             "He confronted every prejudice with patience and facts.",
             "Many people are not even aware of their prejudices."
+          ],
+          "exampleTranslationsTr": [
+            "Yaşlı adaylara karşı önyargı süregeliyor.",
+            "Her önyargıyla sabır ve gerçeklerle yüzleşti.",
+            "Birçok insan önyargılarının farkında bile değil."
           ]
         },
         {
@@ -3871,6 +4216,11 @@
             "The conflict between the parties became increasingly heated.",
             "His critical analysis of the novel convinced the jury.",
             "After a short argument, the neighbors came to an agreement."
+          ],
+          "exampleTranslationsTr": [
+            "Partiler arasındaki çatışma giderek kızıştı.",
+            "Romanla ilgili eleştirel incelemesi jüriyi ikna etti.",
+            "Kısa bir tartışmanın ardından komşular anlaştı."
           ]
         },
         {
@@ -3926,6 +4276,11 @@
             "Advertising wants to suggest that happiness can be bought.",
             "The headline suggests a scandal that never happened.",
             "Such statistics suggest an accuracy that is deceptive."
+          ],
+          "exampleTranslationsTr": [
+            "Reklam, mutluluğun satın alınabilir olduğunu ima etmek istiyor.",
+            "Manşet, hiç yaşanmamış bir skandalı ima ediyor.",
+            "Bu tür istatistikler, yanıltıcı bir kesinliği ima ediyor."
           ]
         },
         {
@@ -3981,6 +4336,11 @@
             "She prepared the case meticulously.",
             "The historian meticulously evaluated the sources.",
             "His meticulous notes helped clarify the matter."
+          ],
+          "exampleTranslationsTr": [
+            "Davayı titizlikle hazırladı.",
+            "Tarihçi kaynakları titizlikle değerlendirdi.",
+            "Titizlikle tuttuğu notlar olayın aydınlatılmasına yardımcı oldu."
           ]
         }
       ]
@@ -4040,6 +4400,11 @@
             "What would you like to do on the weekend?",
             "The children do their homework.",
             "I'm making a salad today."
+          ],
+          "exampleTranslationsTr": [
+            "Hafta sonu ne yapmak istersin?",
+            "Çocuklar ödevlerini yapıyorlar.",
+            "Bugün salata yapıyorum."
           ]
         },
         {
@@ -4095,6 +4460,11 @@
             "The town hall is very old.",
             "My car is old but good.",
             "How old is your brother?"
+          ],
+          "exampleTranslationsTr": [
+            "Belediye binası çok eski.",
+            "Arabam eski ama iyi.",
+            "Abin kaç yaşında?"
           ]
         },
         {
@@ -4150,6 +4520,11 @@
             "The hotel was cheap and still very clean.",
             "Fruit is often cheap on the market.",
             "The bus ticket is cheap."
+          ],
+          "exampleTranslationsTr": [
+            "Otel ucuz olmasına rağmen çok temizdi.",
+            "Pazarda meyve genellikle ucuzdur.",
+            "Otobüs bileti ucuzdur."
           ]
         },
         {
@@ -4205,6 +4580,11 @@
             "The train station is right in the center of the city.",
             "We'll meet at the train station at seven o'clock.",
             "It's only a five minute walk from the train station."
+          ],
+          "exampleTranslationsTr": [
+            "İstasyon şehrin tam merkezinde bulunuyor.",
+            "Saat yedide istasyonda buluşuruz.",
+            "İstasyondan yürüyerek sadece beş dakika."
           ]
         },
         {
@@ -4260,6 +4640,11 @@
             "Getting up early is a permanent habit for me.",
             "He has the habit of drinking tea while reading.",
             "Old habits are difficult to change."
+          ],
+          "exampleTranslationsTr": [
+            "Erken kalkmak benim için yerleşmiş bir alışkanlıktır.",
+            "Okurken çay içme alışkanlığı var.",
+            "Eski alışkanlıkları değiştirmek zordur."
           ]
         },
         {
@@ -4315,6 +4700,11 @@
             "Ms. Weber is responsible for the new trainees.",
             "Who is responsible for the deadlines in this project?",
             "As captain, he feels responsible for the team."
+          ],
+          "exampleTranslationsTr": [
+            "Bayan Weber yeni stajyerlerden sorumlu.",
+            "Bu projede tarihlerden kim sorumlu?",
+            "Kaptan olarak takımdan kendini sorumlu hissediyor."
           ]
         },
         {
@@ -4370,6 +4760,11 @@
             "The library has an extensively sorted collection.",
             "The report is extensive and very detailed.",
             "The renovation was more extensive than initially planned."
+          ],
+          "exampleTranslationsTr": [
+            "Kütüphanenin kapsamlı bir şekilde düzenlenmiş bir koleksiyonu bulunmaktadır.",
+            "Rapor kapsamlı ve çok detaylıdır.",
+            "Tadilat, başlangıçta planlanandan daha kapsamlıydı."
           ]
         },
         {
@@ -4425,6 +4820,11 @@
             "Elegant clothing is definitely appropriate for such a celebration.",
             "The price seems reasonable to me for this service.",
             "She responded to the criticism calmly and appropriately."
+          ],
+          "exampleTranslationsTr": [
+            "Böyle bir kutlama için şık giyim gayet uygundur.",
+            "Bu hizmet için fiyat bana makul geliyor.",
+            "Eleştiriye sakin ve yerinde tepki verdi."
           ]
         },
         {
@@ -4480,6 +4880,11 @@
             "The government wants to strive for a balanced budget.",
             "Many graduates pursue a career in research.",
             "We should strive for a solution that benefits everyone."
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet dengeli bir bütçe hedefliyor.",
+            "Birçok mezun araştırma alanında bir kariyer hedefliyor.",
+            "Herkese fayda sağlayan bir çözüm hedeflemeliyiz."
           ]
         },
         {
@@ -4535,6 +4940,11 @@
             "Restricting traffic relieved pressure on the city center.",
             "I agree with the plan, but with one caveat.",
             "I cannot recommend this hotel without any reservations."
+          ],
+          "exampleTranslationsTr": [
+            "Trafiğin kısıtlanması şehir merkezini rahatlattı.",
+            "Plana katılıyorum, ancak bir çekincem var.",
+            "Bu oteli hiçbir çekince olmadan tavsiye edemem."
           ]
         },
         {
@@ -4590,6 +5000,11 @@
             "His answer was succinct: “We’ll see.”",
             "The rejection came in a succinctly worded two-liner.",
             "She commented succinctly on the record with a shrug."
+          ],
+          "exampleTranslationsTr": [
+            "Cevabı kısa ve öz oldu: \"Bakalım.\"",
+            "Ret cevabı, kısa ve öz bir şekilde kaleme alınmış iki satırlık bir yazıyla geldi.",
+            "Rekoru omuz silkerek kısa ve öz bir yorumla geçiştirdi."
           ]
         },
         {
@@ -4645,6 +5060,11 @@
             "The tenants have been complaining about the defective heating for months.",
             "The auditor criticized several errors in the annual report.",
             "Critics rightly complain about the unclear financing."
+          ],
+          "exampleTranslationsTr": [
+            "Kiracılar aylardır bozuk kaloriferden şikayet ediyorlar.",
+            "Denetçi yıllık raporda birkaç hatayı eleştirdi.",
+            "Eleştirmenler haklı olarak belirsiz finansmanı eleştiriyorlar."
           ]
         }
       ]
@@ -4704,6 +5124,11 @@
             "Our apartment is small but cozy.",
             "The car is small and fast.",
             "The dog is still small."
+          ],
+          "exampleTranslationsTr": [
+            "Dairemiz küçük ama rahat.",
+            "Araba küçük ve hızlı.",
+            "Köpek henüz küçük."
           ]
         },
         {
@@ -4759,6 +5184,11 @@
             "I don't have time today.",
             "Do you have time tomorrow?",
             "Time passes quickly on vacation."
+          ],
+          "exampleTranslationsTr": [
+            "Bugün vaktim yok.",
+            "Yarın vaktin var mı?",
+            "Tatilde zaman hızlı geçer."
           ]
         },
         {
@@ -4814,6 +5244,11 @@
             "She has a lot of experience with small children.",
             "This trip was a beautiful experience for us.",
             "The job requires computer experience."
+          ],
+          "exampleTranslationsTr": [
+            "Küçük çocuklarla çok tecrübesi var.",
+            "Bu seyahat bizim için güzel bir deneyimdi.",
+            "Bu iş için bilgisayar tecrübesi gerekiyor."
           ]
         },
         {
@@ -4869,6 +5304,11 @@
             "The weather is expected to be sunny this weekend.",
             "When the weather is bad, we prefer to stay at home.",
             "How is the weather in your north?"
+          ],
+          "exampleTranslationsTr": [
+            "Hava hafta sonu güneşli olacak.",
+            "Kötü havada evde kalmayı tercih ederiz.",
+            "Sizin orada kuzeyde hava nasıl?"
           ]
         },
         {
@@ -4924,6 +5364,11 @@
             "There are a lot of advertisements on TV in the evenings.",
             "You can see the advertisements for the new cell phone everywhere.",
             "Without advertising, many apps would cost money."
+          ],
+          "exampleTranslationsTr": [
+            "Televizyonda akşamları çok fazla reklam var.",
+            "Yeni telefonun reklamını her yerde görüyorsunuz.",
+            "Reklam olmasaydı, birçok uygulama ücretli olurdu."
           ]
         },
         {
@@ -4979,6 +5424,11 @@
             "The difference between the two offers is small.",
             "Do you see a difference between these colors?",
             "There is a clear difference in price."
+          ],
+          "exampleTranslationsTr": [
+            "İki teklif arasındaki fark küçük.",
+            "Bu renkler arasında bir fark görüyor musun?",
+            "Fiyatta belirgin bir fark var."
           ]
         },
         {
@@ -5034,6 +5484,11 @@
             "The price plays a much bigger role than expected.",
             "There wasn't a much better offer anywhere.",
             "The renovation has significantly improved the apartment."
+          ],
+          "exampleTranslationsTr": [
+            "Fiyat, düşünülenden çok daha büyük bir rol oynuyor.",
+            "Çok daha iyi bir teklif hiçbir yerde yoktu.",
+            "Tadilat daireyi önemli ölçüde iyileştirdi."
           ]
         },
         {
@@ -5089,6 +5544,11 @@
             "We want to implement the idea this year.",
             "The school was able to successfully implement the new concept.",
             "You really have to implement good intentions."
+          ],
+          "exampleTranslationsTr": [
+            "Bu fikri daha bu yıl içinde hayata geçirmek istiyoruz.",
+            "Okul, yeni konsepti başarıyla uygulayabildi.",
+            "İyi kararları gerçekten de hayata geçirmek gerekir."
           ]
         },
         {
@@ -5144,6 +5604,11 @@
             "The topic is by no means as boring as many people think.",
             "He was by no means ready to admit the mistake.",
             "The situation is serious, but by no means hopeless."
+          ],
+          "exampleTranslationsTr": [
+            "Konu, birçok kişinin düşündüğü kadar hiç de sıkıcı değil.",
+            "Hatayı kabul etmeye hiç de hazır değildi.",
+            "Durum ciddi, ama hiç de umutsuz değil."
           ]
         },
         {
@@ -5199,6 +5664,11 @@
             "The interview with the researcher was very informative.",
             "An insightfully written report explained the background.",
             "The look behind the scenes was extremely revealing."
+          ],
+          "exampleTranslationsTr": [
+            "Araştırmacıyla yapılan röportaj çok aydınlatıcıydı.",
+            "Aydınlatıcı bir şekilde yazılmış bir rapor, arka planı açıkladı.",
+            "Kulislere bir bakış son derece açıklayıcıydı."
           ]
         },
         {
@@ -5254,6 +5724,11 @@
             "The discrepancy between expectations and reality is obvious.",
             "There is a significant discrepancy between the two reports.",
             "The study shows a growing discrepancy between wages and rents."
+          ],
+          "exampleTranslationsTr": [
+            "Beklenti ile gerçeklik arasındaki uyuşmazlık açıkça ortadadır.",
+            "İki rapor arasında önemli bir uyuşmazlık bulunmaktadır.",
+            "Araştırma, ücretler ve kiralar arasındaki makasın giderek açıldığını gösteriyor."
           ]
         },
         {
@@ -5309,6 +5784,11 @@
             "Good chess players anticipate their opponent's moves.",
             "The company was able to anticipate the trend early on.",
             "Smart planning must anticipate possible bottlenecks."
+          ],
+          "exampleTranslationsTr": [
+            "İyi satranç oyuncuları rakibin hamlelerini öngörür.",
+            "Şirket trendi erken öngörebildi.",
+            "Akıllı bir planlama olası darboğazları öngörmelidir."
           ]
         }
       ]
@@ -5368,6 +5848,11 @@
             "Our house has a small garden.",
             "The house is old but beautiful.",
             "You buy a new house."
+          ],
+          "exampleTranslationsTr": [
+            "Evimizin küçük bir bahçesi var.",
+            "Ev eski ama güzel.",
+            "Siz yeni bir ev alıyorsunuz."
           ]
         },
         {
@@ -5423,6 +5908,11 @@
             "I want to buy fruit today.",
             "We buy vegetables at the market.",
             "He wants to buy flowers for his mother."
+          ],
+          "exampleTranslationsTr": [
+            "Bugün meyve almak istiyorum.",
+            "Pazardan sebze alıyoruz.",
+            "Annesi için çiçek almak istiyor."
           ]
         },
         {
@@ -5478,6 +5968,11 @@
             "Can you please explain this task to me?",
             "The teacher can explain grammar very well.",
             "He wanted to tell me the way to the museum."
+          ],
+          "exampleTranslationsTr": [
+            "Bu görevi bana lütfen açıklar mısın?",
+            "Öğretmen grameri çok iyi açıklayabilir.",
+            "Müzenin yolunu bana tarif etmek istedi."
           ]
         },
         {
@@ -5533,6 +6028,11 @@
             "The bill for the meal wasn't expensive.",
             "Can you please bring me the bill?",
             "He always pays the bill immediately online."
+          ],
+          "exampleTranslationsTr": [
+            "Yemeğin hesabı pahalı değildi.",
+            "Lütfen hesabı bana getirebilir misiniz?",
+            "O, faturayı her zaman hemen online öder."
           ]
         },
         {
@@ -5588,6 +6088,11 @@
             "We should avoid unnecessary waste in everyday life.",
             "He tries to avoid stress before exams.",
             "With a little planning you can avoid long waiting times."
+          ],
+          "exampleTranslationsTr": [
+            "Günlük hayatta gereksiz atıktan kaçınmalıyız.",
+            "Sınavlardan önce stresten kaçınmaya çalışıyor.",
+            "Biraz planlamayla uzun bekleme süreleri önlenebilir."
           ]
         },
         {
@@ -5643,6 +6148,11 @@
             "Unfortunately we have to postpone the meeting until next week.",
             "The flight was postponed due to the storm.",
             "She doesn't want to postpone the doctor's appointment again."
+          ],
+          "exampleTranslationsTr": [
+            "Toplantıyı maalesef gelecek haftaya ertelememiz gerekiyor.",
+            "Uçuş fırtına yüzünden ertelendi.",
+            "Doktor randevusunu bir daha ertelemek istemiyor."
           ]
         },
         {
@@ -5698,6 +6208,11 @@
             "Competition between providers lowers prices.",
             "She won the competition for young musicians.",
             "The company must survive in international competition."
+          ],
+          "exampleTranslationsTr": [
+            "Sağlayıcılar arasındaki rekabet fiyatları düşürür.",
+            "Genç müzisyenler yarışmasını kazandı.",
+            "Şirket uluslararası rekabette ayakta kalmak zorunda."
           ]
         },
         {
@@ -5753,6 +6268,11 @@
             "We try to purchase as sustainably as possible.",
             "The hotel relies on sustainably generated electricity.",
             "The experience changed him forever."
+          ],
+          "exampleTranslationsTr": [
+            "Alışverişlerimizi mümkün olduğunca sürdürülebilir yapmaya çalışıyoruz.",
+            "Otel sürdürülebilir üretilen elektriği tercih ediyor.",
+            "Deneyim onu kalıcı olarak değiştirdi."
           ]
         },
         {
@@ -5808,6 +6328,11 @@
             "The planned new building is highly controversial in the city.",
             "The method is considered controversial among experts.",
             "His theses were controversial even during his lifetime."
+          ],
+          "exampleTranslationsTr": [
+            "Planlanan yeni bina şehirde şiddetle tartışılıyor.",
+            "Bu yöntem uzmanlar arasında tartışmalı sayılıyor.",
+            "Tezleri daha hayattayken bile tartışmalıydı."
           ]
         },
         {
@@ -5863,6 +6388,11 @@
             "The report revealed serious security deficiencies.",
             "There is a serious difference between the two offers.",
             "The consequences of the error were more serious than expected."
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, vahim güvenlik eksikliklerini açığa çıkardı.",
+            "İki teklif arasında ciddi bir fark bulunmaktadır.",
+            "Hatanın sonuçları beklenenden daha vahimdi."
           ]
         },
         {
@@ -5918,6 +6448,11 @@
             "The essence of the lecture fit into a single sentence.",
             "The bottom line of the study remains: prevention is cheaper than cure.",
             "He summarized the essence of the debate soberly."
+          ],
+          "exampleTranslationsTr": [
+            "Vortragın özü tek bir cümleye sığdı.",
+            "Çalışmanın özü şudur: Önlemek tedavi etmekten daha ucuzdur.",
+            "Tartışmanın özünü tarafsızca özetledi."
           ]
         },
         {
@@ -5973,6 +6508,11 @@
             "He later tried to put his harsh criticism into perspective.",
             "The new data puts the supposed success into perspective.",
             "You have to put these numbers into perspective in a historical comparison."
+          ],
+          "exampleTranslationsTr": [
+            "Daha sonra sert eleştirisini yumuşatmaya çalıştı.",
+            "Yeni veriler, sözde başarıya gölge düşürdü.",
+            "Bu sayıları tarihsel bağlamda değerlendirmek gerekir."
           ]
         }
       ]
@@ -6032,6 +6572,11 @@
             "We're going for a walk on Sunday.",
             "I have to go home now.",
             "The children walk to school."
+          ],
+          "exampleTranslationsTr": [
+            "Pazar günü yürüyüşe çıkacağız.",
+            "Şimdi eve gitmem gerekiyor.",
+            "Çocuklar okula yürüyerek gidiyorlar."
           ]
         },
         {
@@ -6087,6 +6632,11 @@
             "From here you can see the mountains.",
             "We'll see a film in the evening.",
             "I can't see the board."
+          ],
+          "exampleTranslationsTr": [
+            "Buradan dağları görebilirsin.",
+            "Akşam bir film izleyeceğiz.",
+            "Tahtayı göremiyorum."
           ]
         },
         {
@@ -6142,6 +6692,11 @@
             "Getting plenty of sleep is good for your health.",
             "He pays attention to healthy food for his health.",
             "Smoking is very damaging to your health."
+          ],
+          "exampleTranslationsTr": [
+            "Bol uyku sağlığa iyi gelir.",
+            "Sağlığı için sağlıklı yemeğe dikkat eder.",
+            "Sigara içmek sağlığa çok zarar verir."
           ]
         },
         {
@@ -6197,6 +6752,11 @@
             "I am very satisfied with my new apartment.",
             "The teacher was satisfied with our work.",
             "Are you satisfied with the result of the test?"
+          ],
+          "exampleTranslationsTr": [
+            "Yeni dairemden çok memnunum.",
+            "Öğretmen çalışmamızdan memnundu.",
+            "Testin sonucundan memnun musun?"
           ]
         },
         {
@@ -6252,6 +6812,11 @@
             "Our new colleague is very reliable.",
             "Unfortunately, the bus is not always reliable here.",
             "I need a car that works reliably."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni iş arkadaşımız çok güvenilir.",
+            "Maalesef, burada otobüs her zaman güvenilir değil.",
+            "Güvenilir çalışan bir arabaya ihtiyacım var."
           ]
         },
         {
@@ -6307,6 +6872,11 @@
             "We have to decide on the offer by Friday.",
             "She finds it difficult to decide between the two jackets.",
             "The court will decide next week."
+          ],
+          "exampleTranslationsTr": [
+            "Cuma'ya kadar teklife karar vermemiz gerekiyor.",
+            "İki ceket arasında karar vermekte zorlanıyor.",
+            "Mahkeme haftaya karar verecek."
           ]
         },
         {
@@ -6362,6 +6932,11 @@
             "The last goal was crucial for the victory.",
             "Good time management is crucial in the exam.",
             "The crucial clue came from a witness."
+          ],
+          "exampleTranslationsTr": [
+            "Son gol galibiyet için belirleyiciydi.",
+            "Sınavda iyi zaman yönetimi belirleyicidir.",
+            "Belirleyici ipucu bir tanıktan geldi."
           ]
         },
         {
@@ -6417,6 +6992,11 @@
             "The restaurant is good, but also quite expensive.",
             "I'd be happy to come with you, but only after work.",
             "The plan sounds exciting, but we don't have the money."
+          ],
+          "exampleTranslationsTr": [
+            "Restoran iyi, ancak aynı zamanda oldukça pahalı.",
+            "Seve seve gelirim, yalnız işten sonra.",
+            "Plan kulağa heyecanlı geliyor, ancak paramız yok."
           ]
         },
         {
@@ -6472,6 +7052,11 @@
             "Good journalism must question official statements.",
             "She began to question the rules of her industry.",
             "Children question many things that adults take for granted."
+          ],
+          "exampleTranslationsTr": [
+            "İyi gazetecilik resmi açıklamaları sorgulamalıdır.",
+            "O, sektörünün kurallarını sorgulamaya başladı.",
+            "Çocuklar, yetişkinlerin kanıksadığı birçok şeyi sorgular."
           ]
         },
         {
@@ -6527,6 +7112,11 @@
             "The realization came late, but it changed everything.",
             "New scientific findings question the theory.",
             "He came to the realization that money alone does not bring happiness."
+          ],
+          "exampleTranslationsTr": [
+            "Bu farkındalık geç geldi, ama her şeyi değiştirdi.",
+            "Yeni bilimsel bulgular teoriyi sorguluyor.",
+            "Paranın tek başına mutluluk getirmediği farkındalığına vardı."
           ]
         },
         {
@@ -6582,6 +7172,11 @@
             "My knowledge of Japanese is rudimentary.",
             "The village only has a rudimentary infrastructure.",
             "The prototype so far only works rudimentarily."
+          ],
+          "exampleTranslationsTr": [
+            "Japonca bilgim oldukça sınırlı.",
+            "Köyün altyapısı sadece çok temel düzeyde.",
+            "Prototip şu ana kadar sadece temel düzeyde çalışıyor."
           ]
         },
         {
@@ -6637,6 +7232,11 @@
             "Could you please clarify your request?",
             "The minister later had to clarify his statement.",
             "We will specify the requirements in the next chapter."
+          ],
+          "exampleTranslationsTr": [
+            "Talebinizi lütfen netleştirebilir misiniz?",
+            "Bakan, açıklamasını daha sonra netleştirmek zorunda kaldı.",
+            "Gereksinimleri bir sonraki bölümde belirleyeceğiz."
           ]
         }
       ]
@@ -6696,6 +7296,11 @@
             "We're going to the airport tomorrow.",
             "I have an appointment tomorrow.",
             "Can you bring bread tomorrow?"
+          ],
+          "exampleTranslationsTr": [
+            "Yarın havaalanına gidiyoruz.",
+            "Yarın bir randevum var.",
+            "Yarın ekmek getirebilir misin?"
           ]
         },
         {
@@ -6751,6 +7356,11 @@
             "I would like to drink some tea.",
             "We drink water with meals.",
             "What would you like to drink?"
+          ],
+          "exampleTranslationsTr": [
+            "Bir çay içmek istiyorum.",
+            "Yemekte su içeriz.",
+            "Ne içmek istersiniz?"
           ]
         },
         {
@@ -6806,6 +7416,11 @@
             "The gift for grandma is already in the closet.",
             "He is still looking for a suitable birthday present.",
             "She was very happy about this gift."
+          ],
+          "exampleTranslationsTr": [
+            "Nineme hediye zaten dolapta.",
+            "Doğum gününe hala uygun bir hediye arıyor.",
+            "Bu hediyeye çok sevindi."
           ]
         },
         {
@@ -6861,6 +7476,11 @@
             "She wants to sell her old bike.",
             "Farmers sell fresh vegetables at the market.",
             "He sold his car to a colleague."
+          ],
+          "exampleTranslationsTr": [
+            "Eski bisikletini satmak istiyor.",
+            "Pazarda çiftçiler taze sebze satıyor.",
+            "Arabasını bir meslektaşına sattı."
           ]
         },
         {
@@ -6916,6 +7536,11 @@
             "Can you recommend a good restaurant nearby?",
             "The doctor can recommend a suitable cream for you.",
             "I would really recommend this book to you."
+          ],
+          "exampleTranslationsTr": [
+            "Yakınlarda bana iyi bir restoran tavsiye edebilir misin?",
+            "Doktor sana uygun bir krem tavsiye edebilir.",
+            "Sana bu kitabı gerçekten tavsiye ederim."
           ]
         },
         {
@@ -6971,6 +7596,11 @@
             "Using less plastic protects the environment.",
             "The association is committed to a clean environment.",
             "Old batteries are bad for the environment."
+          ],
+          "exampleTranslationsTr": [
+            "Daha az plastik kullanmak çevreyi korur.",
+            "Dernek temiz bir çevre için çalışıyor.",
+            "Eski piller çevreye zararlıdır."
           ]
         },
         {
@@ -7026,6 +7656,11 @@
             "I can understand your decision well.",
             "His anger is easy to understand after that day.",
             "Without the details, no one can understand the error."
+          ],
+          "exampleTranslationsTr": [
+            "Senin kararını gayet iyi anlayabiliyorum.",
+            "O günden sonraki öfkesi kolayca anlaşılabilir.",
+            "Ayrıntılar olmadan kimse hatayı anlayamaz."
           ]
         },
         {
@@ -7081,6 +7716,11 @@
             "Advertising can greatly influence our decisions.",
             "The climate influences the harvest in this region.",
             "He is hardly influenced by criticism."
+          ],
+          "exampleTranslationsTr": [
+            "Reklamlar kararlarımızı büyük ölçüde etkileyebilir.",
+            "İklim, bu bölgedeki hasadı etkiler.",
+            "O, eleştiriden neredeyse hiç etkilenmez."
           ]
         },
         {
@@ -7136,6 +7776,11 @@
             "Many people underestimate the effect of too little sleep.",
             "One should not underestimate the competition in this market.",
             "He had completely underestimated the effort involved in the renovation."
+          ],
+          "exampleTranslationsTr": [
+            "Birçok kişi yetersiz uykunun etkisini hafife alıyor.",
+            "Bu pazardaki rekabeti hafife almamak gerekir.",
+            "Tadilat için gereken çabayı tamamen hafife almıştı."
           ]
         },
         {
@@ -7191,6 +7836,11 @@
             "New data clearly refutes the old theory.",
             "She could refute any objection with facts.",
             "The rumor was quickly refuted."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni veriler eski teoriyi açıkça çürütüyor.",
+            "O, her itirazı gerçeklerle çürütebildi.",
+            "Söylenti hızla çürütüldü."
           ]
         },
         {
@@ -7246,6 +7896,11 @@
             "The fall of the Berlin Wall marked a turning point in German history.",
             "The change of coach meant a clear turning point for the club.",
             "Her move abroad was a conscious turning point in her life."
+          ],
+          "exampleTranslationsTr": [
+            "Berlin Duvarı'nın yıkılışı, Alman tarihinde bir dönüm noktası oldu.",
+            "Teknik direktör değişikliği, kulüp için net bir dönüm noktası oldu.",
+            "Yurt dışına taşınması, hayatında bilinçli bir dönüm noktasıydı."
           ]
         },
         {
@@ -7301,6 +7956,11 @@
             "The judge dismissed the case because of possible bias.",
             "The expert rejected the accusation of bias.",
             "Your previous work for the company gives rise to suspicion of bias."
+          ],
+          "exampleTranslationsTr": [
+            "Yargıç, olası taraflılık nedeniyle davadan çekildi.",
+            "Bilirkişi, taraflılık suçlamasını reddetti.",
+            "Şirketteki daha önceki görevi, taraflılık şüphesini doğuruyor."
           ]
         }
       ]
@@ -7360,6 +8020,11 @@
             "My family eats together on Sundays.",
             "The family goes to the sea in August.",
             "He shows photos of his family."
+          ],
+          "exampleTranslationsTr": [
+            "Ailem pazar günleri birlikte yer.",
+            "Aile Ağustos'ta denize gider.",
+            "O, ailesinin fotoğraflarını gösteriyor."
           ]
         },
         {
@@ -7415,6 +8080,11 @@
             "Today is a beautiful day.",
             "The day starts with a coffee.",
             "What day is today?"
+          ],
+          "exampleTranslationsTr": [
+            "Bugün güzel bir gün.",
+            "Gün bir kahveyle başlar.",
+            "Bugün hangi gün?"
           ]
         },
         {
@@ -7470,6 +8140,11 @@
             "After the long journey I was very tired.",
             "The children are often tired early in the evening.",
             "He looks tired today because he didn't sleep much."
+          ],
+          "exampleTranslationsTr": [
+            "Uzun yolculuktan sonra çok yorgundum.",
+            "Çocuklar akşamları genellikle erken yorulur.",
+            "Bugün yorgun görünüyor çünkü az uyumuş."
           ]
         },
         {
@@ -7525,6 +8200,11 @@
             "I have an appointment at the dentist tomorrow.",
             "Can we move the appointment to Friday?",
             "She arrived on time for her appointment at the bank."
+          ],
+          "exampleTranslationsTr": [
+            "Yarın dişçide randevum var.",
+            "Randevuyu Cuma'ya erteleyebilir miyiz?",
+            "Bankaya randevusuna zamanında geldi."
           ]
         },
         {
@@ -7580,6 +8260,11 @@
             "I would like to improve my German through daily practice.",
             "The company wants to improve the service for its customers.",
             "The apartment can be significantly improved with new windows."
+          ],
+          "exampleTranslationsTr": [
+            "Günlük pratik yaparak Almancamı geliştirmek istiyorum.",
+            "Şirket, müşterileri için hizmeti iyileştirmek istiyor.",
+            "Yeni pencerelerle daire önemli ölçüde iyileştirilebilir."
           ]
         },
         {
@@ -7635,6 +8320,11 @@
             "The two sisters look very similar.",
             "My problem is similar to yours.",
             "We have a similarly busy schedule."
+          ],
+          "exampleTranslationsTr": [
+            "İki kız kardeş birbirine çok benziyorlar.",
+            "Benim sorunum seninkine benzer.",
+            "Bizim de benzer şekilde dolu bir programımız var."
           ]
         },
         {
@@ -7690,6 +8380,11 @@
             "The weather has a big influence on my mood.",
             "Social media has a strong influence on young people.",
             "Her influence in the company has grown in recent years."
+          ],
+          "exampleTranslationsTr": [
+            "Hava, ruh halim üzerinde büyük bir etkiye sahip.",
+            "Sosyal medya, gençler üzerinde güçlü bir etkiye sahip.",
+            "Şirketteki etkisi son yıllarda büyüdü."
           ]
         },
         {
@@ -7745,6 +8440,11 @@
             "Good language skills are a prerequisite for this job.",
             "Trust is the most important prerequisite for cooperation.",
             "He meets every requirement for the scholarship."
+          ],
+          "exampleTranslationsTr": [
+            "Bu iş için iyi dil bilgisi bir ön koşuldur.",
+            "Güven, işbirliği için en önemli ön koşuldur.",
+            "Burs için her şartı karşılıyor."
           ]
         },
         {
@@ -7800,6 +8500,11 @@
             "The problem is complex and has no quick solution.",
             "The novel paints a multi-layered portrait of the city.",
             "Her personality is more complex than she initially appears."
+          ],
+          "exampleTranslationsTr": [
+            "Sorun karmaşık ve hızlı bir çözümü yok.",
+            "Roman, şehrin çok katmanlı bir portresini çiziyor.",
+            "Kişiliği, ilk başta göründüğünden daha karmaşık."
           ]
         },
         {
@@ -7855,6 +8560,11 @@
             "She had to manage the move all by herself.",
             "The city can hardly cope with the increasing traffic.",
             "Sport helps him to cope with the stress at work."
+          ],
+          "exampleTranslationsTr": [
+            "Taşınmayı tek başına halletmek zorunda kaldı.",
+            "Şehir, artan trafiği artık neredeyse hiç kaldıramıyor.",
+            "Spor, iş stresinin üstesinden gelmesine yardımcı oluyor."
           ]
         },
         {
@@ -7910,6 +8620,11 @@
             "The new software made the old process obsolete.",
             "Many rules from that time are now obsolete.",
             "The fax machine is considered obsolete in most offices."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni yazılım, eski yöntemi geçersiz kıldı.",
+            "Bu döneme ait birçok kural bugün geçerliliğini yitirmiştir.",
+            "Faks cihazı, çoğu ofiste eskimiş kabul ediliyor."
           ]
         },
         {
@@ -7965,6 +8680,11 @@
             "His ambivalence towards the new technology is understandable.",
             "The novel thrives on the ambivalence of its main character.",
             "She spoke openly about her ambivalence between career and family."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni teknolojiye yönelik ikilemi anlaşılır.",
+            "Roman, ana karakterinin ikileminden beslenir.",
+            "Kariyer ve aile arasındaki ikilemini açıkça dile getirdi."
           ]
         }
       ]
@@ -8024,6 +8744,11 @@
             "My best friend lives in Berlin.",
             "I'm meeting an old friend today.",
             "A friend always helps you."
+          ],
+          "exampleTranslationsTr": [
+            "En iyi arkadaşım Berlin'de oturuyor.",
+            "Bugün eski bir arkadaşla buluşuyorum.",
+            "Bir arkadaş sana her zaman yardım eder."
           ]
         },
         {
@@ -8079,6 +8804,11 @@
             "I don't have class today.",
             "The sun is shining today.",
             "Do we want to cook today?"
+          ],
+          "exampleTranslationsTr": [
+            "Bugün dersim yok.",
+            "Bugün güneş parlıyor.",
+            "Bugün yemek yapalım mı?"
           ]
         },
         {
@@ -8134,6 +8864,11 @@
             "Our team wants to win the game on Saturday.",
             "You can win movie tickets today by taking the quiz.",
             "She won against her father in chess."
+          ],
+          "exampleTranslationsTr": [
+            "Takımımız Cumartesi günü maçı kazanmak istiyor.",
+            "Bugün quizde sinema biletleri kazanabilirsiniz.",
+            "O, satrançta babasına karşı kazandı."
           ]
         },
         {
@@ -8189,6 +8924,11 @@
             "Unfortunately I can't come to your party.",
             "Unfortunately the concert is already sold out.",
             "Unfortunately, it rained a lot during the vacation."
+          ],
+          "exampleTranslationsTr": [
+            "Maalesef partine gelemem.",
+            "Maalesef konser zaten tükendi.",
+            "Maalesef tatilde çok yağmur yağdı."
           ]
         },
         {
@@ -8244,6 +8984,11 @@
             "A good relationship takes trust and time.",
             "The relationship with his colleagues is very relaxed.",
             "After the argument, their relationship was difficult for a long time."
+          ],
+          "exampleTranslationsTr": [
+            "İyi bir ilişki güven ve zaman gerektirir.",
+            "İş arkadaşlarıyla ilişkisi çok rahat.",
+            "Kavgadan sonra ilişkileri uzun süre zordu."
           ]
         },
         {
@@ -8299,6 +9044,11 @@
             "The hotel is cheap and also very centrally located.",
             "I don't have time and I'm tired.",
             "She speaks English and also some Spanish."
+          ],
+          "exampleTranslationsTr": [
+            "Otel ucuz ve ayrıca çok merkezi.",
+            "Zamanım yok, ayrıca yorgunum.",
+            "İngilizce konuşuyor ve ayrıca biraz da İspanyolca."
           ]
         },
         {
@@ -8354,6 +9104,11 @@
             "The new position is a big challenge for her.",
             "The marathon was the biggest challenge of his life.",
             "We see the move as an opportunity, not a challenge."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni iş onun için büyük bir meydan okuma.",
+            "Maraton, hayatının en büyük meydan okumasıydı.",
+            "Taşınmayı fırsat olarak görüyoruz, meydan okuma olarak değil."
           ]
         },
         {
@@ -8409,6 +9164,11 @@
             "Negotiating the new contract took hours.",
             "Both sides went into the negotiation well prepared.",
             "After tough negotiations, a price was agreed upon."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni sözleşme görüşmeleri saatler sürdü.",
+            "Her iki taraf görüşmeye iyi hazırlanmış olarak girdi.",
+            "Çetin görüşmelerin ardından bir fiyat üzerinde anlaşıldı."
           ]
         },
         {
@@ -8464,6 +9224,11 @@
             "Diagrams illustrate the development of prices.",
             "The teacher uses everyday examples to illustrate physics.",
             "A short video should illustrate the process."
+          ],
+          "exampleTranslationsTr": [
+            "Diyagramlar fiyatların gelişimini gösterir.",
+            "Öğretmen, fiziği somutlaştırmak için günlük hayattan örnekler kullanır.",
+            "Kısa bir video, süreci gösterecek."
           ]
         },
         {
@@ -8519,6 +9284,11 @@
             "Their willingness to compromise made the agreement possible.",
             "Without the willingness to learn, every talent remains unused.",
             "The willingness of citizens to donate was impressive."
+          ],
+          "exampleTranslationsTr": [
+            "Onların uzlaşmaya istekliliği, anlaşmayı mümkün kıldı.",
+            "Öğrenme istekliliği olmadan her yetenek kullanılmadan kalır.",
+            "Vatandaşların bağış yapmaya gönüllülüğü etkileyiciydi."
           ]
         },
         {
@@ -8574,6 +9344,11 @@
             "The report reveals a strikingly high staff shortage.",
             "This was a blatant violation of the rules.",
             "The differences between the branches are striking."
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, fahiş bir personel eksikliğini ortaya koyuyor.",
+            "Bu, kurallara karşı bariz bir ihlaldi.",
+            "Şubeler arasındaki farklar çok belirgin."
           ]
         },
         {
@@ -8629,6 +9404,11 @@
             "For many, Venice is the epitome of romantic cities.",
             "The tailored suit was considered the epitome of elegance.",
             "This dish is the epitome of Italian cuisine."
+          ],
+          "exampleTranslationsTr": [
+            "Birçokları için Venedik, romantik şehirlerin mükemmel örneğidir.",
+            "Özel dikim takım elbise, zarafetin simgesi olarak kabul edilirdi.",
+            "Bu yemek, İtalyan mutfağının özüdür."
           ]
         }
       ]
@@ -8688,6 +9468,11 @@
             "We're having pizza tonight.",
             "The children eat at school.",
             "Would you like something to eat?"
+          ],
+          "exampleTranslationsTr": [
+            "Bu akşam pizza yiyoruz.",
+            "Çocuklar okulda yemek yiyor.",
+            "Bir şeyler yemek ister misin?"
           ]
         },
         {
@@ -8743,6 +9528,11 @@
             "My cell phone is new and fast.",
             "Is your jacket new?",
             "You have a new apartment."
+          ],
+          "exampleTranslationsTr": [
+            "Telefonum yeni ve hızlı.",
+            "Ceketin yeni mi?",
+            "Yeni bir daireniz var."
           ]
         },
         {
@@ -8798,6 +9588,11 @@
             "Our neighbor waters our flowers on vacation.",
             "The new neighbor introduced himself yesterday.",
             "I talked to the nice neighbor about the fence."
+          ],
+          "exampleTranslationsTr": [
+            "Komşumuz tatilde çiçeklerimizi sular.",
+            "Yeni komşu dün kendini tanıttı.",
+            "Nazik komşuyla çit hakkında konuştum."
           ]
         },
         {
@@ -8853,6 +9648,11 @@
             "Unfortunately, I forgot your birthday.",
             "Please don't forget your umbrella!",
             "He must not forget the appointment tomorrow."
+          ],
+          "exampleTranslationsTr": [
+            "Maalesef doğum gününü unuttum.",
+            "Lütfen şemsiyenizi unutmayın!",
+            "Yarın randevuyu unutmamalı."
           ]
         },
         {
@@ -8908,6 +9708,11 @@
             "Your application for the internship was successful.",
             "An application includes a CV and a cover letter.",
             "He emailed the application yesterday."
+          ],
+          "exampleTranslationsTr": [
+            "Staj için başvurunuz başarılı oldu.",
+            "Bir başvuruda özgeçmiş ve ön yazı bulunur.",
+            "Başvuruyu dün e-posta ile gönderdi."
           ]
         },
         {
@@ -8963,6 +9768,11 @@
             "I was disappointed because the concert was canceled.",
             "She looked very disappointed after the exam.",
             "We were quite disappointed with the expensive restaurant."
+          ],
+          "exampleTranslationsTr": [
+            "Konser iptal edildiği için hayal kırıklığına uğradım.",
+            "Sınavdan sonra çok hayal kırıklığına uğramış görünüyordu.",
+            "Pahalı restorandan oldukça hayal kırıklığına uğradık."
           ]
         },
         {
@@ -9018,6 +9828,11 @@
             "The course is demanding but very educational.",
             "She enjoys reading sophisticated novels.",
             "The customers of this store are quite demanding."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kurs zorlu ama çok öğretici.",
+            "O, nitelikli yazılmış romanları okumayı sever.",
+            "Bu mağazanın müşterileri oldukça talepkar."
           ]
         },
         {
@@ -9073,6 +9888,11 @@
             "The measure against noise is showing initial success.",
             "The city is planning another measure for safe cycle paths.",
             "Every measure must be carefully examined beforehand."
+          ],
+          "exampleTranslationsTr": [
+            "Gürültüye karşı alınan önlem ilk başarılarını gösteriyor.",
+            "Şehir, güvenli bisiklet yolları için başka bir önlem planlıyor.",
+            "Her önlem önceden titizlikle incelenmelidir."
           ]
         },
         {
@@ -9128,6 +9948,11 @@
             "The perception of colors varies from person to person.",
             "Stress significantly changes our perception of time.",
             "In the public perception, the city is considered safe."
+          ],
+          "exampleTranslationsTr": [
+            "Renk algısı insandan insana değişir.",
+            "Stres, zaman algımızı önemli ölçüde değiştirir.",
+            "Kamuoyunun algısında şehir güvenli kabul edilir."
           ]
         },
         {
@@ -9183,6 +10008,11 @@
             "The committee will discuss the proposals tomorrow.",
             "In the essay, students should discuss both positions.",
             "We must discuss this question calmly."
+          ],
+          "exampleTranslationsTr": [
+            "Komite yarın önerileri görüşecek.",
+            "Öğrenciler denemede her iki görüşü tartışmalılar.",
+            "Bu konuyu sakin bir şekilde ele almalıyız."
           ]
         },
         {
@@ -9238,6 +10068,11 @@
             "After the second defeat, the trust was completely destroyed.",
             "The rain made the road completely impassable.",
             "With this performance at the latest she was completely convincing."
+          ],
+          "exampleTranslationsTr": [
+            "İkinci yenilgiden sonra güven tamamen yıkılmıştı.",
+            "Yağmur yolu hiç geçilmez hale getirdi.",
+            "En geç bu performansla tamamen ikna etti."
           ]
         },
         {
@@ -9293,6 +10128,11 @@
             "She was able to support her thesis with current figures.",
             "The lawyer wants to support the statement with expert reports.",
             "New findings support the researchers' theory."
+          ],
+          "exampleTranslationsTr": [
+            "Tezini güncel verilerle destekleyebildi.",
+            "Avukat, ifadeyi bilirkişi raporlarıyla doğrulamak istiyor.",
+            "Yeni bulgular, araştırmacıların teorisini destekliyor."
           ]
         }
       ]
@@ -9352,6 +10192,11 @@
             "The train station is very big.",
             "The room is large and bright.",
             "Your dog is big and friendly."
+          ],
+          "exampleTranslationsTr": [
+            "Tren istasyonu çok büyük.",
+            "Oda büyük ve aydınlık.",
+            "Köpeğiniz büyük ve arkadaş canlısı."
           ]
         },
         {
@@ -9407,6 +10252,11 @@
             "We have been living in Berlin for two years.",
             "My parents live in the country.",
             "Where would you like to live?"
+          ],
+          "exampleTranslationsTr": [
+            "Berlin'de iki yıldır oturuyoruz.",
+            "Annemler köyde oturuyorlar.",
+            "Nerede oturmak istersin?"
           ]
         },
         {
@@ -9462,6 +10312,11 @@
             "Breakfast is very important for me.",
             "It's important to practice a little every day.",
             "Tomorrow's appointment is very important for him."
+          ],
+          "exampleTranslationsTr": [
+            "Kahvaltı benim için çok önemli.",
+            "Her gün biraz pratik yapmak önemlidir.",
+            "Yarınki randevu onun için çok önemli."
           ]
         },
         {
@@ -9517,6 +10372,11 @@
             "The exam on Monday lasts two hours.",
             "He studies for the exam every evening.",
             "She passed the exam with a good grade."
+          ],
+          "exampleTranslationsTr": [
+            "Pazartesi günkü sınav iki saat sürer.",
+            "O, her akşam sınava çalışıyor.",
+            "O, sınavı iyi bir notla geçti."
           ]
         },
         {
@@ -9572,6 +10432,11 @@
             "The boat trip was an unforgettable experience.",
             "He told us about his experience in the mountains.",
             "The visit to the zoo was a great experience for the children."
+          ],
+          "exampleTranslationsTr": [
+            "Tekne gezisi unutulmaz bir deneyimdi.",
+            "Bize dağlardaki deneyimini anlattı.",
+            "Çocuklar için hayvanat bahçesi ziyareti büyük bir deneyimdi."
           ]
         },
         {
@@ -9627,6 +10492,11 @@
             "I really like your suggestion for the trip.",
             "She suggested starting earlier.",
             "The colleague's suggestion was immediately accepted."
+          ],
+          "exampleTranslationsTr": [
+            "Gezi önerin çok hoşuma gitti.",
+            "Daha erken başlamayı önerdi.",
+            "Meslektaşın önerisi hemen kabul edildi."
           ]
         },
         {
@@ -9682,6 +10552,11 @@
             "Without specialist knowledge it is difficult for me to judge the quality.",
             "The jury will judge each entry individually.",
             "You shouldn't judge people based on first impressions."
+          ],
+          "exampleTranslationsTr": [
+            "Uzmanlık bilgim olmadan kaliteyi değerlendirmem zor.",
+            "Jüri her bir katkıyı tek tek değerlendirecek.",
+            "İnsanları ilk izlenime göre yargılamamak gerekir."
           ]
         },
         {
@@ -9737,6 +10612,11 @@
             "Please also take public holidays into account when planning.",
             "The coach must take into account the fitness of each player.",
             "We will take your wishes into account as much as possible."
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen planlama yaparken bayramları da göz önünde bulundurun.",
+            "Antrenör her oyuncunun kondisyonunu göz önünde bulundurmalı.",
+            "İsteklerinizi mümkün olduğunca dikkate alacağız."
           ]
         },
         {
@@ -9792,6 +10672,11 @@
             "A dictionary is essential when translating.",
             "Her experience made her indispensable to the team.",
             "For many, the smartphone has become indispensable in everyday life."
+          ],
+          "exampleTranslationsTr": [
+            "Çeviri yaparken bir sözlük vazgeçilmezdir.",
+            "Tecrübesiyle ekip için vazgeçilmez hale geldi.",
+            "Çoğu kişi için akıllı telefon günlük hayatta vazgeçilmez hale geldi."
           ]
         },
         {
@@ -9847,6 +10732,11 @@
             "The right to vacation is regulated by law.",
             "She has high standards for her own work.",
             "The project took more time than planned."
+          ],
+          "exampleTranslationsTr": [
+            "Tatil hakkı yasal olarak düzenlenmiştir.",
+            "Kendi işine karşı yüksek beklentileri var.",
+            "Proje, planlanandan daha fazla zaman aldı."
           ]
         },
         {
@@ -9902,6 +10792,11 @@
             "Autumn is generally considered the best time for this hike.",
             "What is generally considered safe can change quickly.",
             "Such errors are generally underestimated."
+          ],
+          "exampleTranslationsTr": [
+            "Sonbahar, bu yürüyüş için yaygın olarak en iyi zaman kabul edilir.",
+            "Yaygın olarak güvenli kabul edilen şey, hızla değişebilir.",
+            "Bu tür hatalar yaygın olarak hafife alınır."
           ]
         },
         {
@@ -9957,6 +10852,11 @@
             "The new subsidies counteract our own climate goals.",
             "His mocking tone counteracted the serious message.",
             "Such exceptions defeat the purpose of the rule."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni sübvansiyonlar kendi iklim hedeflerimizi baltalıyor.",
+            "Onun alaycı tonu, ciddi mesajı gölgeledi.",
+            "Bu tür istisnalar kuralın amacına ters düşer."
           ]
         }
       ]
@@ -10016,6 +10916,11 @@
             "School starts at eight o'clock.",
             "My daughter likes going to school.",
             "The school is next to the park."
+          ],
+          "exampleTranslationsTr": [
+            "Okul saat sekizde başlar.",
+            "Kızım okula gitmeyi sever.",
+            "Okul parkın yanında."
           ]
         },
         {
@@ -10071,6 +10976,11 @@
             "My work starts at nine o'clock.",
             "He rides his bike to work.",
             "She enjoys the work."
+          ],
+          "exampleTranslationsTr": [
+            "İşim saat dokuzda başlar.",
+            "İşe bisikletle gider.",
+            "İş ona keyif veriyor."
           ]
         },
         {
@@ -10126,6 +11036,11 @@
             "We're going on holiday by the sea this year.",
             "On vacation I want to read and swim a lot.",
             "He still has ten days of vacation left."
+          ],
+          "exampleTranslationsTr": [
+            "Bu yıl deniz kenarında tatil yapacağız.",
+            "Tatilde çok okumak ve yüzmek istiyorum.",
+            "Onun hala on gün tatili kaldı."
           ]
         },
         {
@@ -10181,6 +11096,11 @@
             "I had a long phone call with my sister yesterday.",
             "Yesterday the weather was better than today.",
             "We didn't get home until late yesterday."
+          ],
+          "exampleTranslationsTr": [
+            "Dün kız kardeşimle uzun uzun telefonlaştım.",
+            "Dün hava bugünden daha iyiydi.",
+            "Dün eve ancak geç geldik."
           ]
         },
         {
@@ -10236,6 +11156,11 @@
             "In my opinion the film is worth seeing.",
             "Everyone is allowed to express their opinion freely.",
             "Your opinion on this plan has changed."
+          ],
+          "exampleTranslationsTr": [
+            "Bence film izlenmeye değer.",
+            "Herkes fikrini özgürce söyleyebilir.",
+            "Bu plan hakkındaki fikriniz değişti."
           ]
         },
         {
@@ -10291,6 +11216,11 @@
             "My parents support me with my training.",
             "Many people support the association with donations.",
             "He wants to support his colleague in the project."
+          ],
+          "exampleTranslationsTr": [
+            "Annem babam eğitimimde bana destek oluyorlar.",
+            "Birçok insan derneğe bağışlarla destek oluyor.",
+            "İş arkadaşına projede destek olmak istiyor."
           ]
         },
         {
@@ -10346,6 +11276,11 @@
             "Sustainability plays an important role in our purchases.",
             "The company promotes sustainability and fair wages.",
             "Without sustainability, valuable resources are lost."
+          ],
+          "exampleTranslationsTr": [
+            "Sürdürülebilirlik, alışverişlerimizde önemli bir rol oynar.",
+            "Şirket, sürdürülebilirlik ve adil ücretlerle reklam yapıyor.",
+            "Sürdürülebilirlik olmadan değerli kaynaklar kaybolur."
           ]
         },
         {
@@ -10401,6 +11336,11 @@
             "The north was rainy, while the south was sunny.",
             "She likes classical music, while her brother listens to rock.",
             "The old model was loud, but the new one was very quiet."
+          ],
+          "exampleTranslationsTr": [
+            "Kuzey yağmurluydu, güney ise güneşliydi.",
+            "Klasik müzik sever, erkek kardeşi ise rock dinler.",
+            "Eski model gürültülüydü, yenisi ise çok sessizdi."
           ]
         },
         {
@@ -10456,6 +11396,11 @@
             "The plan was risky; Nevertheless, the board agreed.",
             "The criticism was harsh, but remained factual.",
             "He knew the dangers and still dared to try."
+          ],
+          "exampleTranslationsTr": [
+            "Plan riskliydi; buna rağmen yönetim kurulu onayladı.",
+            "Eleştiri sertti, yine de nesnel kaldı.",
+            "Tehlikeleri biliyordu ve yine de denemeye cesaret etti."
           ]
         },
         {
@@ -10511,6 +11456,11 @@
             "His argument was sound and left no room for doubt.",
             "Without hard evidence, no one will believe us.",
             "The excuse didn't sound particularly valid."
+          ],
+          "exampleTranslationsTr": [
+            "Argümanı sağlamdı ve hiçbir şüpheye yer bırakmadı.",
+            "Dayanağı sağlam veriler olmadan kimse bize inanmaz.",
+            "Bahane pek geçerli gelmedi."
           ]
         },
         {
@@ -10566,6 +11516,11 @@
             "The amount of the tip is at the discretion of the guests.",
             "The authority decided on the application at its own discretion.",
             "According to human judgment, the accident could not have been avoided."
+          ],
+          "exampleTranslationsTr": [
+            "Bahşiş miktarı misafirlerin takdirine bağlıdır.",
+            "Kurum, başvuru hakkında kendi takdirine göre karar verdi.",
+            "İnsan takdirine göre kaza önlenemezdi."
           ]
         },
         {
@@ -10621,6 +11576,11 @@
             "The consequences of this decision only became apparent years later.",
             "He was apparently unaware of the significance of his words.",
             "A judgment of such magnitude requires careful justification."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kararın önemi ancak yıllar sonra anlaşıldı.",
+            "Belli ki sözlerinin öneminin farkında değildi.",
+            "Bu denli önemli bir karar, titiz bir gerekçe gerektirir."
           ]
         }
       ]
@@ -10680,6 +11640,11 @@
             "The city is very crowded on Saturday.",
             "We're going into town tomorrow.",
             "Which city do you live in?"
+          ],
+          "exampleTranslationsTr": [
+            "Şehir Cumartesi çok kalabalık.",
+            "Yarın şehre gidiyoruz.",
+            "Hangi şehirde oturuyorsun?"
           ]
         },
         {
@@ -10735,6 +11700,11 @@
             "The food here is very good.",
             "She speaks German well.",
             "I slept well."
+          ],
+          "exampleTranslationsTr": [
+            "Buradaki yemek çok iyi.",
+            "O iyi Almanca konuşuyor.",
+            "İyi uyudum."
           ]
         },
         {
@@ -10790,6 +11760,11 @@
             "We are visiting my grandparents on Sunday.",
             "Would you like to visit the new museum with me?",
             "She wants to visit her friend in the hospital."
+          ],
+          "exampleTranslationsTr": [
+            "Pazar günü büyükannem ve büyükbabamı ziyaret ediyoruz.",
+            "Benimle yeni müzeyi ziyaret etmek ister misin?",
+            "Hastanede arkadaşını ziyaret etmek istiyor."
           ]
         },
         {
@@ -10845,6 +11820,11 @@
             "I would like to order a soup and a salad.",
             "We usually order books online.",
             "Have you already ordered the taxi?"
+          ],
+          "exampleTranslationsTr": [
+            "Bir çorba ve bir salata sipariş etmek istiyorum.",
+            "Kitapları genellikle internetten sipariş ederiz.",
+            "Taksiyi çoktan sipariş ettin mi?"
           ]
         },
         {
@@ -10900,6 +11880,11 @@
             "The driver's behavior was very reckless.",
             "Her friendly behavior impressed everyone.",
             "The coach was unhappy with the players' behavior."
+          ],
+          "exampleTranslationsTr": [
+            "Sürücünün davranışı çok düşüncesizceydi.",
+            "Onun dostça davranışı herkesi etkiledi.",
+            "Antrenör, oyuncuların davranışlarından memnun değildi."
           ]
         },
         {
@@ -10955,6 +11940,11 @@
             "She was able to convince the boss of her idea.",
             "His arguments don't entirely convince me.",
             "The film convinced us with its story."
+          ],
+          "exampleTranslationsTr": [
+            "Patronu fikrine ikna edebildi.",
+            "Onun argümanları beni tam olarak ikna etmiyor.",
+            "Film bizi hikayesiyle ikna etti."
           ]
         },
         {
@@ -11010,6 +12000,11 @@
             "Experienced drivers can better assess dangers.",
             "It is difficult to correctly assess the situation from the outside.",
             "How would you assess the chances of the project?"
+          ],
+          "exampleTranslationsTr": [
+            "Deneyimli sürücüler tehlikeleri daha iyi değerlendirebilirler.",
+            "Dışarıdan durumu doğru değerlendirmek zordur.",
+            "Projenin şansını nasıl değerlendirirsiniz?"
           ]
         },
         {
@@ -11065,6 +12060,11 @@
             "Can you explain your opinion in more detail?",
             "The company must justify the termination in writing.",
             "He was able to justify his decision convincingly."
+          ],
+          "exampleTranslationsTr": [
+            "Görüşünü daha ayrıntılı açıklayabilir misin?",
+            "Şirket, fesih kararını yazılı olarak gerekçelendirmeli.",
+            "Kararını ikna edici bir şekilde açıklayabildi."
           ]
         },
         {
@@ -11120,6 +12120,11 @@
             "The demonstrators demanded more social justice.",
             "Without justice, a state loses the trust of its citizens.",
             "Her sense of justice made her the ideal judge."
+          ],
+          "exampleTranslationsTr": [
+            "Göstericiler daha fazla sosyal adalet talep ettiler.",
+            "Adalet olmadan bir devlet vatandaşların güvenini kaybeder.",
+            "Adalet duygusu onu ideal bir hakim haline getirdi."
           ]
         },
         {
@@ -11175,6 +12180,11 @@
             "Regular checks ensure the safety of the system.",
             "The state must guarantee the supply of drinking water.",
             "This is the only way to ensure a fair election."
+          ],
+          "exampleTranslationsTr": [
+            "Düzenli kontroller tesisin güvenliğini sağlar.",
+            "Devlet, içme suyu teminini sağlamak zorundadır.",
+            "Ancak bu şekilde seçimin adil bir şekilde yapılması sağlanabilir."
           ]
         },
         {
@@ -11230,6 +12240,11 @@
             "After the interview I had to revise my judgment.",
             "The forecast was revised downwards.",
             "He was ready to revise his position."
+          ],
+          "exampleTranslationsTr": [
+            "Görüşmeden sonra kararımı değiştirmek zorunda kaldım.",
+            "Tahmin aşağı yönlü revize edildi.",
+            "Görüşünü değiştirmeye hazırdı."
           ]
         },
         {
@@ -11285,6 +12300,11 @@
             "Mutual trust is essential for this work.",
             "A helmet is essential on the construction site.",
             "Complete documents are essential for the visa."
+          ],
+          "exampleTranslationsTr": [
+            "Bu iş için karşılıklı güven vazgeçilmezdir.",
+            "Şantiyede baret zorunludur.",
+            "Vize için eksiksiz belgeler elzemdir."
           ]
         }
       ]
@@ -11344,6 +12364,11 @@
             "I drink a glass of water every morning.",
             "The water in the lake is cold.",
             "Do you want water or juice?"
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah bir bardak su içerim.",
+            "Göldeki su soğuk.",
+            "Su mu istersin, yoksa meyve suyu mu?"
           ]
         },
         {
@@ -11399,6 +12424,11 @@
             "I like to eat fresh bread with butter.",
             "The bread from the bakery is still warm.",
             "We need bread for dinner."
+          ],
+          "exampleTranslationsTr": [
+            "Tereyağlı taze ekmek yemeyi severim.",
+            "Fırından ekmek hala sıcak.",
+            "Akşam yemeği için ekmek lazım."
           ]
         },
         {
@@ -11454,6 +12484,11 @@
             "Can I pay by card here?",
             "We pay the rent at the beginning of the month.",
             "He had to pay a lot for the repairs."
+          ],
+          "exampleTranslationsTr": [
+            "Burada kartla ödeyebilir miyim?",
+            "Ayın başında kirayı öderiz.",
+            "Tamir için çok ödemek zorunda kaldı."
           ]
         },
         {
@@ -11509,6 +12544,11 @@
             "This intersection is dangerous for cyclists.",
             "Swimming in the lake is dangerous during thunderstorms.",
             "Playing on the street is too dangerous."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kavşak bisikletliler için tehlikelidir.",
+            "Gök gürültülü havalarda gölde yüzmek tehlikelidir.",
+            "Sokakta oynamak çok tehlikelidir."
           ]
         },
         {
@@ -11564,6 +12604,11 @@
             "It was raining, but we still went hiking.",
             "The test was difficult, but she still passed.",
             "He had a cold and still went to work."
+          ],
+          "exampleTranslationsTr": [
+            "Yağmur yağıyordu, yine de yürüyüşe gittik.",
+            "Sınav zordu, yine de geçti.",
+            "Üşütmüştü, yine de işe gitti."
           ]
         },
         {
@@ -11619,6 +12664,11 @@
             "A good knowledge of the rules helps with this game.",
             "Knowledge of English is required for the position.",
             "He expanded his knowledge in the course."
+          ],
+          "exampleTranslationsTr": [
+            "Kuralları iyi bilmek bu oyunda yardımcı olur.",
+            "Bu pozisyon için İngilizce bilgisi gereklidir.",
+            "Kursta bilgilerini genişletti."
           ]
         },
         {
@@ -11674,6 +12724,11 @@
             "The union wants to negotiate higher wages.",
             "You can negotiate any price at the bazaar.",
             "Both companies have been negotiating the contract for weeks."
+          ],
+          "exampleTranslationsTr": [
+            "Sendika daha yüksek ücretler hakkında müzakere etmek istiyor.",
+            "Pazarda her fiyat için pazarlık yapabilirsin.",
+            "Her iki şirket de haftalardır sözleşme hakkında müzakere ediyor."
           ]
         },
         {
@@ -11729,6 +12784,11 @@
             "The connection between sleep and concentration is proven.",
             "Without the context, the quote is misunderstood.",
             "The police are investigating a possible connection between the cases."
+          ],
+          "exampleTranslationsTr": [
+            "Uyku ile konsantrasyon arasındaki bağlantı kanıtlanmıştır.",
+            "Bağlam olmadan alıntı yanlış anlaşılır.",
+            "Polis, vakalar arasındaki olası bir bağlantıyı araştırıyor."
           ]
         },
         {
@@ -11784,6 +12844,11 @@
             "The prejudice against older applicants persists.",
             "He confronted every prejudice with patience and facts.",
             "Many people are not even aware of their prejudices."
+          ],
+          "exampleTranslationsTr": [
+            "Yaşlı adaylara karşı önyargı süregeliyor.",
+            "Her önyargıyla sabır ve gerçeklerle yüzleşti.",
+            "Birçok insan önyargılarının farkında bile değil."
           ]
         },
         {
@@ -11839,6 +12904,11 @@
             "The conflict between the parties became increasingly heated.",
             "His critical analysis of the novel convinced the jury.",
             "After a short argument, the neighbors came to an agreement."
+          ],
+          "exampleTranslationsTr": [
+            "Partiler arasındaki çatışma giderek kızıştı.",
+            "Romanla ilgili eleştirel incelemesi jüriyi ikna etti.",
+            "Kısa bir tartışmanın ardından komşular anlaştı."
           ]
         },
         {
@@ -11894,6 +12964,11 @@
             "Advertising wants to suggest that happiness can be bought.",
             "The headline suggests a scandal that never happened.",
             "Such statistics suggest an accuracy that is deceptive."
+          ],
+          "exampleTranslationsTr": [
+            "Reklam, mutluluğun satın alınabilir olduğunu ima etmek istiyor.",
+            "Manşet, hiç yaşanmamış bir skandalı ima ediyor.",
+            "Bu tür istatistikler, yanıltıcı bir kesinliği ima ediyor."
           ]
         },
         {
@@ -11949,6 +13024,11 @@
             "She prepared the case meticulously.",
             "The historian meticulously evaluated the sources.",
             "His meticulous notes helped clarify the matter."
+          ],
+          "exampleTranslationsTr": [
+            "Davayı titizlikle hazırladı.",
+            "Tarihçi kaynakları titizlikle değerlendirdi.",
+            "Titizlikle tuttuğu notlar olayın aydınlatılmasına yardımcı oldu."
           ]
         }
       ]
@@ -12008,6 +13088,11 @@
             "What would you like to do on the weekend?",
             "The children do their homework.",
             "I'm making a salad today."
+          ],
+          "exampleTranslationsTr": [
+            "Hafta sonu ne yapmak istersin?",
+            "Çocuklar ödevlerini yapıyorlar.",
+            "Bugün salata yapıyorum."
           ]
         },
         {
@@ -12063,6 +13148,11 @@
             "The town hall is very old.",
             "My car is old but good.",
             "How old is your brother?"
+          ],
+          "exampleTranslationsTr": [
+            "Belediye binası çok eski.",
+            "Arabam eski ama iyi.",
+            "Abin kaç yaşında?"
           ]
         },
         {
@@ -12118,6 +13208,11 @@
             "The hotel was cheap and still very clean.",
             "Fruit is often cheap on the market.",
             "The bus ticket is cheap."
+          ],
+          "exampleTranslationsTr": [
+            "Otel ucuz olmasına rağmen çok temizdi.",
+            "Pazarda meyve genellikle ucuzdur.",
+            "Otobüs bileti ucuzdur."
           ]
         },
         {
@@ -12173,6 +13268,11 @@
             "The train station is right in the center of the city.",
             "We'll meet at the train station at seven o'clock.",
             "It's only a five minute walk from the train station."
+          ],
+          "exampleTranslationsTr": [
+            "İstasyon şehrin tam merkezinde bulunuyor.",
+            "Saat yedide istasyonda buluşuruz.",
+            "İstasyondan yürüyerek sadece beş dakika."
           ]
         },
         {
@@ -12228,6 +13328,11 @@
             "Getting up early is a permanent habit for me.",
             "He has the habit of drinking tea while reading.",
             "Old habits are difficult to change."
+          ],
+          "exampleTranslationsTr": [
+            "Erken kalkmak benim için yerleşmiş bir alışkanlıktır.",
+            "Okurken çay içme alışkanlığı var.",
+            "Eski alışkanlıkları değiştirmek zordur."
           ]
         },
         {
@@ -12283,6 +13388,11 @@
             "Ms. Weber is responsible for the new trainees.",
             "Who is responsible for the deadlines in this project?",
             "As captain, he feels responsible for the team."
+          ],
+          "exampleTranslationsTr": [
+            "Bayan Weber yeni stajyerlerden sorumlu.",
+            "Bu projede tarihlerden kim sorumlu?",
+            "Kaptan olarak takımdan kendini sorumlu hissediyor."
           ]
         },
         {
@@ -12338,6 +13448,11 @@
             "The library has an extensively sorted collection.",
             "The report is extensive and very detailed.",
             "The renovation was more extensive than initially planned."
+          ],
+          "exampleTranslationsTr": [
+            "Kütüphanenin kapsamlı bir şekilde düzenlenmiş bir koleksiyonu bulunmaktadır.",
+            "Rapor kapsamlı ve çok detaylıdır.",
+            "Tadilat, başlangıçta planlanandan daha kapsamlıydı."
           ]
         },
         {
@@ -12393,6 +13508,11 @@
             "Elegant clothing is definitely appropriate for such a celebration.",
             "The price seems reasonable to me for this service.",
             "She responded to the criticism calmly and appropriately."
+          ],
+          "exampleTranslationsTr": [
+            "Böyle bir kutlama için şık giyim gayet uygundur.",
+            "Bu hizmet için fiyat bana makul geliyor.",
+            "Eleştiriye sakin ve yerinde tepki verdi."
           ]
         },
         {
@@ -12448,6 +13568,11 @@
             "The government wants to strive for a balanced budget.",
             "Many graduates pursue a career in research.",
             "We should strive for a solution that benefits everyone."
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet dengeli bir bütçe hedefliyor.",
+            "Birçok mezun araştırma alanında bir kariyer hedefliyor.",
+            "Herkese fayda sağlayan bir çözüm hedeflemeliyiz."
           ]
         },
         {
@@ -12503,6 +13628,11 @@
             "Restricting traffic relieved pressure on the city center.",
             "I agree with the plan, but with one caveat.",
             "I cannot recommend this hotel without any reservations."
+          ],
+          "exampleTranslationsTr": [
+            "Trafiğin kısıtlanması şehir merkezini rahatlattı.",
+            "Plana katılıyorum, ancak bir çekincem var.",
+            "Bu oteli hiçbir çekince olmadan tavsiye edemem."
           ]
         },
         {
@@ -12558,6 +13688,11 @@
             "His answer was succinct: “We’ll see.”",
             "The rejection came in a succinctly worded two-liner.",
             "She commented succinctly on the record with a shrug."
+          ],
+          "exampleTranslationsTr": [
+            "Cevabı kısa ve öz oldu: \"Bakalım.\"",
+            "Ret cevabı, kısa ve öz bir şekilde kaleme alınmış iki satırlık bir yazıyla geldi.",
+            "Rekoru omuz silkerek kısa ve öz bir yorumla geçiştirdi."
           ]
         },
         {
@@ -12613,6 +13748,11 @@
             "The tenants have been complaining about the defective heating for months.",
             "The auditor criticized several errors in the annual report.",
             "Critics rightly complain about the unclear financing."
+          ],
+          "exampleTranslationsTr": [
+            "Kiracılar aylardır bozuk kaloriferden şikayet ediyorlar.",
+            "Denetçi yıllık raporda birkaç hatayı eleştirdi.",
+            "Eleştirmenler haklı olarak belirsiz finansmanı eleştiriyorlar."
           ]
         }
       ]
@@ -12672,6 +13812,11 @@
             "Our apartment is small but cozy.",
             "The car is small and fast.",
             "The dog is still small."
+          ],
+          "exampleTranslationsTr": [
+            "Dairemiz küçük ama rahat.",
+            "Araba küçük ve hızlı.",
+            "Köpek henüz küçük."
           ]
         },
         {
@@ -12727,6 +13872,11 @@
             "I don't have time today.",
             "Do you have time tomorrow?",
             "Time passes quickly on vacation."
+          ],
+          "exampleTranslationsTr": [
+            "Bugün vaktim yok.",
+            "Yarın vaktin var mı?",
+            "Tatilde zaman hızlı geçer."
           ]
         },
         {
@@ -12782,6 +13932,11 @@
             "She has a lot of experience with small children.",
             "This trip was a beautiful experience for us.",
             "The job requires computer experience."
+          ],
+          "exampleTranslationsTr": [
+            "Küçük çocuklarla çok tecrübesi var.",
+            "Bu seyahat bizim için güzel bir deneyimdi.",
+            "Bu iş için bilgisayar tecrübesi gerekiyor."
           ]
         },
         {
@@ -12837,6 +13992,11 @@
             "The weather is expected to be sunny this weekend.",
             "When the weather is bad, we prefer to stay at home.",
             "How is the weather in your north?"
+          ],
+          "exampleTranslationsTr": [
+            "Hava hafta sonu güneşli olacak.",
+            "Kötü havada evde kalmayı tercih ederiz.",
+            "Sizin orada kuzeyde hava nasıl?"
           ]
         },
         {
@@ -12892,6 +14052,11 @@
             "There are a lot of advertisements on TV in the evenings.",
             "You can see the advertisements for the new cell phone everywhere.",
             "Without advertising, many apps would cost money."
+          ],
+          "exampleTranslationsTr": [
+            "Televizyonda akşamları çok fazla reklam var.",
+            "Yeni telefonun reklamını her yerde görüyorsunuz.",
+            "Reklam olmasaydı, birçok uygulama ücretli olurdu."
           ]
         },
         {
@@ -12947,6 +14112,11 @@
             "The difference between the two offers is small.",
             "Do you see a difference between these colors?",
             "There is a clear difference in price."
+          ],
+          "exampleTranslationsTr": [
+            "İki teklif arasındaki fark küçük.",
+            "Bu renkler arasında bir fark görüyor musun?",
+            "Fiyatta belirgin bir fark var."
           ]
         },
         {
@@ -13002,6 +14172,11 @@
             "The price plays a much bigger role than expected.",
             "There wasn't a much better offer anywhere.",
             "The renovation has significantly improved the apartment."
+          ],
+          "exampleTranslationsTr": [
+            "Fiyat, düşünülenden çok daha büyük bir rol oynuyor.",
+            "Çok daha iyi bir teklif hiçbir yerde yoktu.",
+            "Tadilat daireyi önemli ölçüde iyileştirdi."
           ]
         },
         {
@@ -13057,6 +14232,11 @@
             "We want to implement the idea this year.",
             "The school was able to successfully implement the new concept.",
             "You really have to implement good intentions."
+          ],
+          "exampleTranslationsTr": [
+            "Bu fikri daha bu yıl içinde hayata geçirmek istiyoruz.",
+            "Okul, yeni konsepti başarıyla uygulayabildi.",
+            "İyi kararları gerçekten de hayata geçirmek gerekir."
           ]
         },
         {
@@ -13112,6 +14292,11 @@
             "The topic is by no means as boring as many people think.",
             "He was by no means ready to admit the mistake.",
             "The situation is serious, but by no means hopeless."
+          ],
+          "exampleTranslationsTr": [
+            "Konu, birçok kişinin düşündüğü kadar hiç de sıkıcı değil.",
+            "Hatayı kabul etmeye hiç de hazır değildi.",
+            "Durum ciddi, ama hiç de umutsuz değil."
           ]
         },
         {
@@ -13167,6 +14352,11 @@
             "The interview with the researcher was very informative.",
             "An insightfully written report explained the background.",
             "The look behind the scenes was extremely revealing."
+          ],
+          "exampleTranslationsTr": [
+            "Araştırmacıyla yapılan röportaj çok aydınlatıcıydı.",
+            "Aydınlatıcı bir şekilde yazılmış bir rapor, arka planı açıkladı.",
+            "Kulislere bir bakış son derece açıklayıcıydı."
           ]
         },
         {
@@ -13222,6 +14412,11 @@
             "The discrepancy between expectations and reality is obvious.",
             "There is a significant discrepancy between the two reports.",
             "The study shows a growing discrepancy between wages and rents."
+          ],
+          "exampleTranslationsTr": [
+            "Beklenti ile gerçeklik arasındaki uyuşmazlık açıkça ortadadır.",
+            "İki rapor arasında önemli bir uyuşmazlık bulunmaktadır.",
+            "Araştırma, ücretler ve kiralar arasındaki makasın giderek açıldığını gösteriyor."
           ]
         },
         {
@@ -13277,6 +14472,11 @@
             "Good chess players anticipate their opponent's moves.",
             "The company was able to anticipate the trend early on.",
             "Smart planning must anticipate possible bottlenecks."
+          ],
+          "exampleTranslationsTr": [
+            "İyi satranç oyuncuları rakibin hamlelerini öngörür.",
+            "Şirket trendi erken öngörebildi.",
+            "Akıllı bir planlama olası darboğazları öngörmelidir."
           ]
         }
       ]
@@ -13336,6 +14536,11 @@
             "Our house has a small garden.",
             "The house is old but beautiful.",
             "You buy a new house."
+          ],
+          "exampleTranslationsTr": [
+            "Evimizin küçük bir bahçesi var.",
+            "Ev eski ama güzel.",
+            "Siz yeni bir ev alıyorsunuz."
           ]
         },
         {
@@ -13391,6 +14596,11 @@
             "I want to buy fruit today.",
             "We buy vegetables at the market.",
             "He wants to buy flowers for his mother."
+          ],
+          "exampleTranslationsTr": [
+            "Bugün meyve almak istiyorum.",
+            "Pazardan sebze alıyoruz.",
+            "Annesi için çiçek almak istiyor."
           ]
         },
         {
@@ -13446,6 +14656,11 @@
             "Can you please explain this task to me?",
             "The teacher can explain grammar very well.",
             "He wanted to tell me the way to the museum."
+          ],
+          "exampleTranslationsTr": [
+            "Bu görevi bana lütfen açıklar mısın?",
+            "Öğretmen grameri çok iyi açıklayabilir.",
+            "Müzenin yolunu bana tarif etmek istedi."
           ]
         },
         {
@@ -13501,6 +14716,11 @@
             "The bill for the meal wasn't expensive.",
             "Can you please bring me the bill?",
             "He always pays the bill immediately online."
+          ],
+          "exampleTranslationsTr": [
+            "Yemeğin hesabı pahalı değildi.",
+            "Lütfen hesabı bana getirebilir misiniz?",
+            "O, faturayı her zaman hemen online öder."
           ]
         },
         {
@@ -13556,6 +14776,11 @@
             "We should avoid unnecessary waste in everyday life.",
             "He tries to avoid stress before exams.",
             "With a little planning you can avoid long waiting times."
+          ],
+          "exampleTranslationsTr": [
+            "Günlük hayatta gereksiz atıktan kaçınmalıyız.",
+            "Sınavlardan önce stresten kaçınmaya çalışıyor.",
+            "Biraz planlamayla uzun bekleme süreleri önlenebilir."
           ]
         },
         {
@@ -13611,6 +14836,11 @@
             "Unfortunately we have to postpone the meeting until next week.",
             "The flight was postponed due to the storm.",
             "She doesn't want to postpone the doctor's appointment again."
+          ],
+          "exampleTranslationsTr": [
+            "Toplantıyı maalesef gelecek haftaya ertelememiz gerekiyor.",
+            "Uçuş fırtına yüzünden ertelendi.",
+            "Doktor randevusunu bir daha ertelemek istemiyor."
           ]
         },
         {
@@ -13666,6 +14896,11 @@
             "Competition between providers lowers prices.",
             "She won the competition for young musicians.",
             "The company must survive in international competition."
+          ],
+          "exampleTranslationsTr": [
+            "Sağlayıcılar arasındaki rekabet fiyatları düşürür.",
+            "Genç müzisyenler yarışmasını kazandı.",
+            "Şirket uluslararası rekabette ayakta kalmak zorunda."
           ]
         },
         {
@@ -13721,6 +14956,11 @@
             "We try to purchase as sustainably as possible.",
             "The hotel relies on sustainably generated electricity.",
             "The experience changed him forever."
+          ],
+          "exampleTranslationsTr": [
+            "Alışverişlerimizi mümkün olduğunca sürdürülebilir yapmaya çalışıyoruz.",
+            "Otel sürdürülebilir üretilen elektriği tercih ediyor.",
+            "Deneyim onu kalıcı olarak değiştirdi."
           ]
         },
         {
@@ -13776,6 +15016,11 @@
             "The planned new building is highly controversial in the city.",
             "The method is considered controversial among experts.",
             "His theses were controversial even during his lifetime."
+          ],
+          "exampleTranslationsTr": [
+            "Planlanan yeni bina şehirde şiddetle tartışılıyor.",
+            "Bu yöntem uzmanlar arasında tartışmalı sayılıyor.",
+            "Tezleri daha hayattayken bile tartışmalıydı."
           ]
         },
         {
@@ -13831,6 +15076,11 @@
             "The report revealed serious security deficiencies.",
             "There is a serious difference between the two offers.",
             "The consequences of the error were more serious than expected."
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, vahim güvenlik eksikliklerini açığa çıkardı.",
+            "İki teklif arasında ciddi bir fark bulunmaktadır.",
+            "Hatanın sonuçları beklenenden daha vahimdi."
           ]
         },
         {
@@ -13886,6 +15136,11 @@
             "The essence of the lecture fit into a single sentence.",
             "The bottom line of the study remains: prevention is cheaper than cure.",
             "He summarized the essence of the debate soberly."
+          ],
+          "exampleTranslationsTr": [
+            "Vortragın özü tek bir cümleye sığdı.",
+            "Çalışmanın özü şudur: Önlemek tedavi etmekten daha ucuzdur.",
+            "Tartışmanın özünü tarafsızca özetledi."
           ]
         },
         {
@@ -13941,6 +15196,11 @@
             "He later tried to put his harsh criticism into perspective.",
             "The new data puts the supposed success into perspective.",
             "You have to put these numbers into perspective in a historical comparison."
+          ],
+          "exampleTranslationsTr": [
+            "Daha sonra sert eleştirisini yumuşatmaya çalıştı.",
+            "Yeni veriler, sözde başarıya gölge düşürdü.",
+            "Bu sayıları tarihsel bağlamda değerlendirmek gerekir."
           ]
         }
       ]
@@ -14000,6 +15260,11 @@
             "We're going for a walk on Sunday.",
             "I have to go home now.",
             "The children walk to school."
+          ],
+          "exampleTranslationsTr": [
+            "Pazar günü yürüyüşe çıkacağız.",
+            "Şimdi eve gitmem gerekiyor.",
+            "Çocuklar okula yürüyerek gidiyorlar."
           ]
         },
         {
@@ -14055,6 +15320,11 @@
             "From here you can see the mountains.",
             "We'll see a film in the evening.",
             "I can't see the board."
+          ],
+          "exampleTranslationsTr": [
+            "Buradan dağları görebilirsin.",
+            "Akşam bir film izleyeceğiz.",
+            "Tahtayı göremiyorum."
           ]
         },
         {
@@ -14110,6 +15380,11 @@
             "Getting plenty of sleep is good for your health.",
             "He pays attention to healthy food for his health.",
             "Smoking is very damaging to your health."
+          ],
+          "exampleTranslationsTr": [
+            "Bol uyku sağlığa iyi gelir.",
+            "Sağlığı için sağlıklı yemeğe dikkat eder.",
+            "Sigara içmek sağlığa çok zarar verir."
           ]
         },
         {
@@ -14165,6 +15440,11 @@
             "I am very satisfied with my new apartment.",
             "The teacher was satisfied with our work.",
             "Are you satisfied with the result of the test?"
+          ],
+          "exampleTranslationsTr": [
+            "Yeni dairemden çok memnunum.",
+            "Öğretmen çalışmamızdan memnundu.",
+            "Testin sonucundan memnun musun?"
           ]
         },
         {
@@ -14220,6 +15500,11 @@
             "Our new colleague is very reliable.",
             "Unfortunately, the bus is not always reliable here.",
             "I need a car that works reliably."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni iş arkadaşımız çok güvenilir.",
+            "Maalesef, burada otobüs her zaman güvenilir değil.",
+            "Güvenilir çalışan bir arabaya ihtiyacım var."
           ]
         },
         {
@@ -14275,6 +15560,11 @@
             "We have to decide on the offer by Friday.",
             "She finds it difficult to decide between the two jackets.",
             "The court will decide next week."
+          ],
+          "exampleTranslationsTr": [
+            "Cuma'ya kadar teklife karar vermemiz gerekiyor.",
+            "İki ceket arasında karar vermekte zorlanıyor.",
+            "Mahkeme haftaya karar verecek."
           ]
         },
         {
@@ -14330,6 +15620,11 @@
             "The last goal was crucial for the victory.",
             "Good time management is crucial in the exam.",
             "The crucial clue came from a witness."
+          ],
+          "exampleTranslationsTr": [
+            "Son gol galibiyet için belirleyiciydi.",
+            "Sınavda iyi zaman yönetimi belirleyicidir.",
+            "Belirleyici ipucu bir tanıktan geldi."
           ]
         },
         {
@@ -14385,6 +15680,11 @@
             "The restaurant is good, but also quite expensive.",
             "I'd be happy to come with you, but only after work.",
             "The plan sounds exciting, but we don't have the money."
+          ],
+          "exampleTranslationsTr": [
+            "Restoran iyi, ancak aynı zamanda oldukça pahalı.",
+            "Seve seve gelirim, yalnız işten sonra.",
+            "Plan kulağa heyecanlı geliyor, ancak paramız yok."
           ]
         },
         {
@@ -14440,6 +15740,11 @@
             "Good journalism must question official statements.",
             "She began to question the rules of her industry.",
             "Children question many things that adults take for granted."
+          ],
+          "exampleTranslationsTr": [
+            "İyi gazetecilik resmi açıklamaları sorgulamalıdır.",
+            "O, sektörünün kurallarını sorgulamaya başladı.",
+            "Çocuklar, yetişkinlerin kanıksadığı birçok şeyi sorgular."
           ]
         },
         {
@@ -14495,6 +15800,11 @@
             "The realization came late, but it changed everything.",
             "New scientific findings question the theory.",
             "He came to the realization that money alone does not bring happiness."
+          ],
+          "exampleTranslationsTr": [
+            "Bu farkındalık geç geldi, ama her şeyi değiştirdi.",
+            "Yeni bilimsel bulgular teoriyi sorguluyor.",
+            "Paranın tek başına mutluluk getirmediği farkındalığına vardı."
           ]
         },
         {
@@ -14550,6 +15860,11 @@
             "My knowledge of Japanese is rudimentary.",
             "The village only has a rudimentary infrastructure.",
             "The prototype so far only works rudimentarily."
+          ],
+          "exampleTranslationsTr": [
+            "Japonca bilgim oldukça sınırlı.",
+            "Köyün altyapısı sadece çok temel düzeyde.",
+            "Prototip şu ana kadar sadece temel düzeyde çalışıyor."
           ]
         },
         {
@@ -14605,6 +15920,11 @@
             "Could you please clarify your request?",
             "The minister later had to clarify his statement.",
             "We will specify the requirements in the next chapter."
+          ],
+          "exampleTranslationsTr": [
+            "Talebinizi lütfen netleştirebilir misiniz?",
+            "Bakan, açıklamasını daha sonra netleştirmek zorunda kaldı.",
+            "Gereksinimleri bir sonraki bölümde belirleyeceğiz."
           ]
         }
       ]
@@ -14664,6 +15984,11 @@
             "We're going to the airport tomorrow.",
             "I have an appointment tomorrow.",
             "Can you bring bread tomorrow?"
+          ],
+          "exampleTranslationsTr": [
+            "Yarın havaalanına gidiyoruz.",
+            "Yarın bir randevum var.",
+            "Yarın ekmek getirebilir misin?"
           ]
         },
         {
@@ -14719,6 +16044,11 @@
             "I would like to drink some tea.",
             "We drink water with meals.",
             "What would you like to drink?"
+          ],
+          "exampleTranslationsTr": [
+            "Bir çay içmek istiyorum.",
+            "Yemekte su içeriz.",
+            "Ne içmek istersiniz?"
           ]
         },
         {
@@ -14774,6 +16104,11 @@
             "The gift for grandma is already in the closet.",
             "He is still looking for a suitable birthday present.",
             "She was very happy about this gift."
+          ],
+          "exampleTranslationsTr": [
+            "Nineme hediye zaten dolapta.",
+            "Doğum gününe hala uygun bir hediye arıyor.",
+            "Bu hediyeye çok sevindi."
           ]
         },
         {
@@ -14829,6 +16164,11 @@
             "She wants to sell her old bike.",
             "Farmers sell fresh vegetables at the market.",
             "He sold his car to a colleague."
+          ],
+          "exampleTranslationsTr": [
+            "Eski bisikletini satmak istiyor.",
+            "Pazarda çiftçiler taze sebze satıyor.",
+            "Arabasını bir meslektaşına sattı."
           ]
         },
         {
@@ -14884,6 +16224,11 @@
             "Can you recommend a good restaurant nearby?",
             "The doctor can recommend a suitable cream for you.",
             "I would really recommend this book to you."
+          ],
+          "exampleTranslationsTr": [
+            "Yakınlarda bana iyi bir restoran tavsiye edebilir misin?",
+            "Doktor sana uygun bir krem tavsiye edebilir.",
+            "Sana bu kitabı gerçekten tavsiye ederim."
           ]
         },
         {
@@ -14939,6 +16284,11 @@
             "Using less plastic protects the environment.",
             "The association is committed to a clean environment.",
             "Old batteries are bad for the environment."
+          ],
+          "exampleTranslationsTr": [
+            "Daha az plastik kullanmak çevreyi korur.",
+            "Dernek temiz bir çevre için çalışıyor.",
+            "Eski piller çevreye zararlıdır."
           ]
         },
         {
@@ -14994,6 +16344,11 @@
             "I can understand your decision well.",
             "His anger is easy to understand after that day.",
             "Without the details, no one can understand the error."
+          ],
+          "exampleTranslationsTr": [
+            "Senin kararını gayet iyi anlayabiliyorum.",
+            "O günden sonraki öfkesi kolayca anlaşılabilir.",
+            "Ayrıntılar olmadan kimse hatayı anlayamaz."
           ]
         },
         {
@@ -15049,6 +16404,11 @@
             "Advertising can greatly influence our decisions.",
             "The climate influences the harvest in this region.",
             "He is hardly influenced by criticism."
+          ],
+          "exampleTranslationsTr": [
+            "Reklamlar kararlarımızı büyük ölçüde etkileyebilir.",
+            "İklim, bu bölgedeki hasadı etkiler.",
+            "O, eleştiriden neredeyse hiç etkilenmez."
           ]
         },
         {
@@ -15104,6 +16464,11 @@
             "Many people underestimate the effect of too little sleep.",
             "One should not underestimate the competition in this market.",
             "He had completely underestimated the effort involved in the renovation."
+          ],
+          "exampleTranslationsTr": [
+            "Birçok kişi yetersiz uykunun etkisini hafife alıyor.",
+            "Bu pazardaki rekabeti hafife almamak gerekir.",
+            "Tadilat için gereken çabayı tamamen hafife almıştı."
           ]
         },
         {
@@ -15159,6 +16524,11 @@
             "New data clearly refutes the old theory.",
             "She could refute any objection with facts.",
             "The rumor was quickly refuted."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni veriler eski teoriyi açıkça çürütüyor.",
+            "O, her itirazı gerçeklerle çürütebildi.",
+            "Söylenti hızla çürütüldü."
           ]
         },
         {
@@ -15214,6 +16584,11 @@
             "The fall of the Berlin Wall marked a turning point in German history.",
             "The change of coach meant a clear turning point for the club.",
             "Her move abroad was a conscious turning point in her life."
+          ],
+          "exampleTranslationsTr": [
+            "Berlin Duvarı'nın yıkılışı, Alman tarihinde bir dönüm noktası oldu.",
+            "Teknik direktör değişikliği, kulüp için net bir dönüm noktası oldu.",
+            "Yurt dışına taşınması, hayatında bilinçli bir dönüm noktasıydı."
           ]
         },
         {
@@ -15269,6 +16644,11 @@
             "The judge dismissed the case because of possible bias.",
             "The expert rejected the accusation of bias.",
             "Your previous work for the company gives rise to suspicion of bias."
+          ],
+          "exampleTranslationsTr": [
+            "Yargıç, olası taraflılık nedeniyle davadan çekildi.",
+            "Bilirkişi, taraflılık suçlamasını reddetti.",
+            "Şirketteki daha önceki görevi, taraflılık şüphesini doğuruyor."
           ]
         }
       ]
@@ -15328,6 +16708,11 @@
             "My family eats together on Sundays.",
             "The family goes to the sea in August.",
             "He shows photos of his family."
+          ],
+          "exampleTranslationsTr": [
+            "Ailem pazar günleri birlikte yer.",
+            "Aile Ağustos'ta denize gider.",
+            "O, ailesinin fotoğraflarını gösteriyor."
           ]
         },
         {
@@ -15383,6 +16768,11 @@
             "Today is a beautiful day.",
             "The day starts with a coffee.",
             "What day is today?"
+          ],
+          "exampleTranslationsTr": [
+            "Bugün güzel bir gün.",
+            "Gün bir kahveyle başlar.",
+            "Bugün hangi gün?"
           ]
         },
         {
@@ -15438,6 +16828,11 @@
             "After the long journey I was very tired.",
             "The children are often tired early in the evening.",
             "He looks tired today because he didn't sleep much."
+          ],
+          "exampleTranslationsTr": [
+            "Uzun yolculuktan sonra çok yorgundum.",
+            "Çocuklar akşamları genellikle erken yorulur.",
+            "Bugün yorgun görünüyor çünkü az uyumuş."
           ]
         },
         {
@@ -15493,6 +16888,11 @@
             "I have an appointment at the dentist tomorrow.",
             "Can we move the appointment to Friday?",
             "She arrived on time for her appointment at the bank."
+          ],
+          "exampleTranslationsTr": [
+            "Yarın dişçide randevum var.",
+            "Randevuyu Cuma'ya erteleyebilir miyiz?",
+            "Bankaya randevusuna zamanında geldi."
           ]
         },
         {
@@ -15548,6 +16948,11 @@
             "I would like to improve my German through daily practice.",
             "The company wants to improve the service for its customers.",
             "The apartment can be significantly improved with new windows."
+          ],
+          "exampleTranslationsTr": [
+            "Günlük pratik yaparak Almancamı geliştirmek istiyorum.",
+            "Şirket, müşterileri için hizmeti iyileştirmek istiyor.",
+            "Yeni pencerelerle daire önemli ölçüde iyileştirilebilir."
           ]
         },
         {
@@ -15603,6 +17008,11 @@
             "The two sisters look very similar.",
             "My problem is similar to yours.",
             "We have a similarly busy schedule."
+          ],
+          "exampleTranslationsTr": [
+            "İki kız kardeş birbirine çok benziyorlar.",
+            "Benim sorunum seninkine benzer.",
+            "Bizim de benzer şekilde dolu bir programımız var."
           ]
         },
         {
@@ -15658,6 +17068,11 @@
             "The weather has a big influence on my mood.",
             "Social media has a strong influence on young people.",
             "Her influence in the company has grown in recent years."
+          ],
+          "exampleTranslationsTr": [
+            "Hava, ruh halim üzerinde büyük bir etkiye sahip.",
+            "Sosyal medya, gençler üzerinde güçlü bir etkiye sahip.",
+            "Şirketteki etkisi son yıllarda büyüdü."
           ]
         },
         {
@@ -15713,6 +17128,11 @@
             "Good language skills are a prerequisite for this job.",
             "Trust is the most important prerequisite for cooperation.",
             "He meets every requirement for the scholarship."
+          ],
+          "exampleTranslationsTr": [
+            "Bu iş için iyi dil bilgisi bir ön koşuldur.",
+            "Güven, işbirliği için en önemli ön koşuldur.",
+            "Burs için her şartı karşılıyor."
           ]
         },
         {
@@ -15768,6 +17188,11 @@
             "The problem is complex and has no quick solution.",
             "The novel paints a multi-layered portrait of the city.",
             "Her personality is more complex than she initially appears."
+          ],
+          "exampleTranslationsTr": [
+            "Sorun karmaşık ve hızlı bir çözümü yok.",
+            "Roman, şehrin çok katmanlı bir portresini çiziyor.",
+            "Kişiliği, ilk başta göründüğünden daha karmaşık."
           ]
         },
         {
@@ -15823,6 +17248,11 @@
             "She had to manage the move all by herself.",
             "The city can hardly cope with the increasing traffic.",
             "Sport helps him to cope with the stress at work."
+          ],
+          "exampleTranslationsTr": [
+            "Taşınmayı tek başına halletmek zorunda kaldı.",
+            "Şehir, artan trafiği artık neredeyse hiç kaldıramıyor.",
+            "Spor, iş stresinin üstesinden gelmesine yardımcı oluyor."
           ]
         },
         {
@@ -15878,6 +17308,11 @@
             "The new software made the old process obsolete.",
             "Many rules from that time are now obsolete.",
             "The fax machine is considered obsolete in most offices."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni yazılım, eski yöntemi geçersiz kıldı.",
+            "Bu döneme ait birçok kural bugün geçerliliğini yitirmiştir.",
+            "Faks cihazı, çoğu ofiste eskimiş kabul ediliyor."
           ]
         },
         {
@@ -15933,6 +17368,11 @@
             "His ambivalence towards the new technology is understandable.",
             "The novel thrives on the ambivalence of its main character.",
             "She spoke openly about her ambivalence between career and family."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni teknolojiye yönelik ikilemi anlaşılır.",
+            "Roman, ana karakterinin ikileminden beslenir.",
+            "Kariyer ve aile arasındaki ikilemini açıkça dile getirdi."
           ]
         }
       ]
@@ -15992,6 +17432,11 @@
             "My best friend lives in Berlin.",
             "I'm meeting an old friend today.",
             "A friend always helps you."
+          ],
+          "exampleTranslationsTr": [
+            "En iyi arkadaşım Berlin'de oturuyor.",
+            "Bugün eski bir arkadaşla buluşuyorum.",
+            "Bir arkadaş sana her zaman yardım eder."
           ]
         },
         {
@@ -16047,6 +17492,11 @@
             "I don't have class today.",
             "The sun is shining today.",
             "Do we want to cook today?"
+          ],
+          "exampleTranslationsTr": [
+            "Bugün dersim yok.",
+            "Bugün güneş parlıyor.",
+            "Bugün yemek yapalım mı?"
           ]
         },
         {
@@ -16102,6 +17552,11 @@
             "Our team wants to win the game on Saturday.",
             "You can win movie tickets today by taking the quiz.",
             "She won against her father in chess."
+          ],
+          "exampleTranslationsTr": [
+            "Takımımız Cumartesi günü maçı kazanmak istiyor.",
+            "Bugün quizde sinema biletleri kazanabilirsiniz.",
+            "O, satrançta babasına karşı kazandı."
           ]
         },
         {
@@ -16157,6 +17612,11 @@
             "Unfortunately I can't come to your party.",
             "Unfortunately the concert is already sold out.",
             "Unfortunately, it rained a lot during the vacation."
+          ],
+          "exampleTranslationsTr": [
+            "Maalesef partine gelemem.",
+            "Maalesef konser zaten tükendi.",
+            "Maalesef tatilde çok yağmur yağdı."
           ]
         },
         {
@@ -16212,6 +17672,11 @@
             "A good relationship takes trust and time.",
             "The relationship with his colleagues is very relaxed.",
             "After the argument, their relationship was difficult for a long time."
+          ],
+          "exampleTranslationsTr": [
+            "İyi bir ilişki güven ve zaman gerektirir.",
+            "İş arkadaşlarıyla ilişkisi çok rahat.",
+            "Kavgadan sonra ilişkileri uzun süre zordu."
           ]
         },
         {
@@ -16267,6 +17732,11 @@
             "The hotel is cheap and also very centrally located.",
             "I don't have time and I'm tired.",
             "She speaks English and also some Spanish."
+          ],
+          "exampleTranslationsTr": [
+            "Otel ucuz ve ayrıca çok merkezi.",
+            "Zamanım yok, ayrıca yorgunum.",
+            "İngilizce konuşuyor ve ayrıca biraz da İspanyolca."
           ]
         },
         {
@@ -16322,6 +17792,11 @@
             "The new position is a big challenge for her.",
             "The marathon was the biggest challenge of his life.",
             "We see the move as an opportunity, not a challenge."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni iş onun için büyük bir meydan okuma.",
+            "Maraton, hayatının en büyük meydan okumasıydı.",
+            "Taşınmayı fırsat olarak görüyoruz, meydan okuma olarak değil."
           ]
         },
         {
@@ -16377,6 +17852,11 @@
             "Negotiating the new contract took hours.",
             "Both sides went into the negotiation well prepared.",
             "After tough negotiations, a price was agreed upon."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni sözleşme görüşmeleri saatler sürdü.",
+            "Her iki taraf görüşmeye iyi hazırlanmış olarak girdi.",
+            "Çetin görüşmelerin ardından bir fiyat üzerinde anlaşıldı."
           ]
         },
         {
@@ -16432,6 +17912,11 @@
             "Diagrams illustrate the development of prices.",
             "The teacher uses everyday examples to illustrate physics.",
             "A short video should illustrate the process."
+          ],
+          "exampleTranslationsTr": [
+            "Diyagramlar fiyatların gelişimini gösterir.",
+            "Öğretmen, fiziği somutlaştırmak için günlük hayattan örnekler kullanır.",
+            "Kısa bir video, süreci gösterecek."
           ]
         },
         {
@@ -16487,6 +17972,11 @@
             "Their willingness to compromise made the agreement possible.",
             "Without the willingness to learn, every talent remains unused.",
             "The willingness of citizens to donate was impressive."
+          ],
+          "exampleTranslationsTr": [
+            "Onların uzlaşmaya istekliliği, anlaşmayı mümkün kıldı.",
+            "Öğrenme istekliliği olmadan her yetenek kullanılmadan kalır.",
+            "Vatandaşların bağış yapmaya gönüllülüğü etkileyiciydi."
           ]
         },
         {
@@ -16542,6 +18032,11 @@
             "The report reveals a strikingly high staff shortage.",
             "This was a blatant violation of the rules.",
             "The differences between the branches are striking."
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, fahiş bir personel eksikliğini ortaya koyuyor.",
+            "Bu, kurallara karşı bariz bir ihlaldi.",
+            "Şubeler arasındaki farklar çok belirgin."
           ]
         },
         {
@@ -16597,6 +18092,11 @@
             "For many, Venice is the epitome of romantic cities.",
             "The tailored suit was considered the epitome of elegance.",
             "This dish is the epitome of Italian cuisine."
+          ],
+          "exampleTranslationsTr": [
+            "Birçokları için Venedik, romantik şehirlerin mükemmel örneğidir.",
+            "Özel dikim takım elbise, zarafetin simgesi olarak kabul edilirdi.",
+            "Bu yemek, İtalyan mutfağının özüdür."
           ]
         }
       ]
@@ -16656,6 +18156,11 @@
             "We're having pizza tonight.",
             "The children eat at school.",
             "Would you like something to eat?"
+          ],
+          "exampleTranslationsTr": [
+            "Bu akşam pizza yiyoruz.",
+            "Çocuklar okulda yemek yiyor.",
+            "Bir şeyler yemek ister misin?"
           ]
         },
         {
@@ -16711,6 +18216,11 @@
             "My cell phone is new and fast.",
             "Is your jacket new?",
             "You have a new apartment."
+          ],
+          "exampleTranslationsTr": [
+            "Telefonum yeni ve hızlı.",
+            "Ceketin yeni mi?",
+            "Yeni bir daireniz var."
           ]
         },
         {
@@ -16766,6 +18276,11 @@
             "Our neighbor waters our flowers on vacation.",
             "The new neighbor introduced himself yesterday.",
             "I talked to the nice neighbor about the fence."
+          ],
+          "exampleTranslationsTr": [
+            "Komşumuz tatilde çiçeklerimizi sular.",
+            "Yeni komşu dün kendini tanıttı.",
+            "Nazik komşuyla çit hakkında konuştum."
           ]
         },
         {
@@ -16821,6 +18336,11 @@
             "Unfortunately, I forgot your birthday.",
             "Please don't forget your umbrella!",
             "He must not forget the appointment tomorrow."
+          ],
+          "exampleTranslationsTr": [
+            "Maalesef doğum gününü unuttum.",
+            "Lütfen şemsiyenizi unutmayın!",
+            "Yarın randevuyu unutmamalı."
           ]
         },
         {
@@ -16876,6 +18396,11 @@
             "Your application for the internship was successful.",
             "An application includes a CV and a cover letter.",
             "He emailed the application yesterday."
+          ],
+          "exampleTranslationsTr": [
+            "Staj için başvurunuz başarılı oldu.",
+            "Bir başvuruda özgeçmiş ve ön yazı bulunur.",
+            "Başvuruyu dün e-posta ile gönderdi."
           ]
         },
         {
@@ -16931,6 +18456,11 @@
             "I was disappointed because the concert was canceled.",
             "She looked very disappointed after the exam.",
             "We were quite disappointed with the expensive restaurant."
+          ],
+          "exampleTranslationsTr": [
+            "Konser iptal edildiği için hayal kırıklığına uğradım.",
+            "Sınavdan sonra çok hayal kırıklığına uğramış görünüyordu.",
+            "Pahalı restorandan oldukça hayal kırıklığına uğradık."
           ]
         },
         {
@@ -16986,6 +18516,11 @@
             "The course is demanding but very educational.",
             "She enjoys reading sophisticated novels.",
             "The customers of this store are quite demanding."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kurs zorlu ama çok öğretici.",
+            "O, nitelikli yazılmış romanları okumayı sever.",
+            "Bu mağazanın müşterileri oldukça talepkar."
           ]
         },
         {
@@ -17041,6 +18576,11 @@
             "The measure against noise is showing initial success.",
             "The city is planning another measure for safe cycle paths.",
             "Every measure must be carefully examined beforehand."
+          ],
+          "exampleTranslationsTr": [
+            "Gürültüye karşı alınan önlem ilk başarılarını gösteriyor.",
+            "Şehir, güvenli bisiklet yolları için başka bir önlem planlıyor.",
+            "Her önlem önceden titizlikle incelenmelidir."
           ]
         },
         {
@@ -17096,6 +18636,11 @@
             "The perception of colors varies from person to person.",
             "Stress significantly changes our perception of time.",
             "In the public perception, the city is considered safe."
+          ],
+          "exampleTranslationsTr": [
+            "Renk algısı insandan insana değişir.",
+            "Stres, zaman algımızı önemli ölçüde değiştirir.",
+            "Kamuoyunun algısında şehir güvenli kabul edilir."
           ]
         },
         {
@@ -17151,6 +18696,11 @@
             "The committee will discuss the proposals tomorrow.",
             "In the essay, students should discuss both positions.",
             "We must discuss this question calmly."
+          ],
+          "exampleTranslationsTr": [
+            "Komite yarın önerileri görüşecek.",
+            "Öğrenciler denemede her iki görüşü tartışmalılar.",
+            "Bu konuyu sakin bir şekilde ele almalıyız."
           ]
         },
         {
@@ -17206,6 +18756,11 @@
             "After the second defeat, the trust was completely destroyed.",
             "The rain made the road completely impassable.",
             "With this performance at the latest she was completely convincing."
+          ],
+          "exampleTranslationsTr": [
+            "İkinci yenilgiden sonra güven tamamen yıkılmıştı.",
+            "Yağmur yolu hiç geçilmez hale getirdi.",
+            "En geç bu performansla tamamen ikna etti."
           ]
         },
         {
@@ -17261,6 +18816,11 @@
             "She was able to support her thesis with current figures.",
             "The lawyer wants to support the statement with expert reports.",
             "New findings support the researchers' theory."
+          ],
+          "exampleTranslationsTr": [
+            "Tezini güncel verilerle destekleyebildi.",
+            "Avukat, ifadeyi bilirkişi raporlarıyla doğrulamak istiyor.",
+            "Yeni bulgular, araştırmacıların teorisini destekliyor."
           ]
         }
       ]
@@ -17320,6 +18880,11 @@
             "The train station is very big.",
             "The room is large and bright.",
             "Your dog is big and friendly."
+          ],
+          "exampleTranslationsTr": [
+            "Tren istasyonu çok büyük.",
+            "Oda büyük ve aydınlık.",
+            "Köpeğiniz büyük ve arkadaş canlısı."
           ]
         },
         {
@@ -17375,6 +18940,11 @@
             "We have been living in Berlin for two years.",
             "My parents live in the country.",
             "Where would you like to live?"
+          ],
+          "exampleTranslationsTr": [
+            "Berlin'de iki yıldır oturuyoruz.",
+            "Annemler köyde oturuyorlar.",
+            "Nerede oturmak istersin?"
           ]
         },
         {
@@ -17430,6 +19000,11 @@
             "Breakfast is very important for me.",
             "It's important to practice a little every day.",
             "Tomorrow's appointment is very important for him."
+          ],
+          "exampleTranslationsTr": [
+            "Kahvaltı benim için çok önemli.",
+            "Her gün biraz pratik yapmak önemlidir.",
+            "Yarınki randevu onun için çok önemli."
           ]
         },
         {
@@ -17485,6 +19060,11 @@
             "The exam on Monday lasts two hours.",
             "He studies for the exam every evening.",
             "She passed the exam with a good grade."
+          ],
+          "exampleTranslationsTr": [
+            "Pazartesi günkü sınav iki saat sürer.",
+            "O, her akşam sınava çalışıyor.",
+            "O, sınavı iyi bir notla geçti."
           ]
         },
         {
@@ -17540,6 +19120,11 @@
             "The boat trip was an unforgettable experience.",
             "He told us about his experience in the mountains.",
             "The visit to the zoo was a great experience for the children."
+          ],
+          "exampleTranslationsTr": [
+            "Tekne gezisi unutulmaz bir deneyimdi.",
+            "Bize dağlardaki deneyimini anlattı.",
+            "Çocuklar için hayvanat bahçesi ziyareti büyük bir deneyimdi."
           ]
         },
         {
@@ -17595,6 +19180,11 @@
             "I really like your suggestion for the trip.",
             "She suggested starting earlier.",
             "The colleague's suggestion was immediately accepted."
+          ],
+          "exampleTranslationsTr": [
+            "Gezi önerin çok hoşuma gitti.",
+            "Daha erken başlamayı önerdi.",
+            "Meslektaşın önerisi hemen kabul edildi."
           ]
         },
         {
@@ -17650,6 +19240,11 @@
             "Without specialist knowledge it is difficult for me to judge the quality.",
             "The jury will judge each entry individually.",
             "You shouldn't judge people based on first impressions."
+          ],
+          "exampleTranslationsTr": [
+            "Uzmanlık bilgim olmadan kaliteyi değerlendirmem zor.",
+            "Jüri her bir katkıyı tek tek değerlendirecek.",
+            "İnsanları ilk izlenime göre yargılamamak gerekir."
           ]
         },
         {
@@ -17705,6 +19300,11 @@
             "Please also take public holidays into account when planning.",
             "The coach must take into account the fitness of each player.",
             "We will take your wishes into account as much as possible."
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen planlama yaparken bayramları da göz önünde bulundurun.",
+            "Antrenör her oyuncunun kondisyonunu göz önünde bulundurmalı.",
+            "İsteklerinizi mümkün olduğunca dikkate alacağız."
           ]
         },
         {
@@ -17760,6 +19360,11 @@
             "A dictionary is essential when translating.",
             "Her experience made her indispensable to the team.",
             "For many, the smartphone has become indispensable in everyday life."
+          ],
+          "exampleTranslationsTr": [
+            "Çeviri yaparken bir sözlük vazgeçilmezdir.",
+            "Tecrübesiyle ekip için vazgeçilmez hale geldi.",
+            "Çoğu kişi için akıllı telefon günlük hayatta vazgeçilmez hale geldi."
           ]
         },
         {
@@ -17815,6 +19420,11 @@
             "The right to vacation is regulated by law.",
             "She has high standards for her own work.",
             "The project took more time than planned."
+          ],
+          "exampleTranslationsTr": [
+            "Tatil hakkı yasal olarak düzenlenmiştir.",
+            "Kendi işine karşı yüksek beklentileri var.",
+            "Proje, planlanandan daha fazla zaman aldı."
           ]
         },
         {
@@ -17870,6 +19480,11 @@
             "Autumn is generally considered the best time for this hike.",
             "What is generally considered safe can change quickly.",
             "Such errors are generally underestimated."
+          ],
+          "exampleTranslationsTr": [
+            "Sonbahar, bu yürüyüş için yaygın olarak en iyi zaman kabul edilir.",
+            "Yaygın olarak güvenli kabul edilen şey, hızla değişebilir.",
+            "Bu tür hatalar yaygın olarak hafife alınır."
           ]
         },
         {
@@ -17925,6 +19540,11 @@
             "The new subsidies counteract our own climate goals.",
             "His mocking tone counteracted the serious message.",
             "Such exceptions defeat the purpose of the rule."
+          ],
+          "exampleTranslationsTr": [
+            "Yeni sübvansiyonlar kendi iklim hedeflerimizi baltalıyor.",
+            "Onun alaycı tonu, ciddi mesajı gölgeledi.",
+            "Bu tür istisnalar kuralın amacına ters düşer."
           ]
         }
       ]
@@ -17984,6 +19604,11 @@
             "School starts at eight o'clock.",
             "My daughter likes going to school.",
             "The school is next to the park."
+          ],
+          "exampleTranslationsTr": [
+            "Okul saat sekizde başlar.",
+            "Kızım okula gitmeyi sever.",
+            "Okul parkın yanında."
           ]
         },
         {
@@ -18039,6 +19664,11 @@
             "My work starts at nine o'clock.",
             "He rides his bike to work.",
             "She enjoys the work."
+          ],
+          "exampleTranslationsTr": [
+            "İşim saat dokuzda başlar.",
+            "İşe bisikletle gider.",
+            "İş ona keyif veriyor."
           ]
         },
         {
@@ -18094,6 +19724,11 @@
             "We're going on holiday by the sea this year.",
             "On vacation I want to read and swim a lot.",
             "He still has ten days of vacation left."
+          ],
+          "exampleTranslationsTr": [
+            "Bu yıl deniz kenarında tatil yapacağız.",
+            "Tatilde çok okumak ve yüzmek istiyorum.",
+            "Onun hala on gün tatili kaldı."
           ]
         },
         {
@@ -18149,6 +19784,11 @@
             "I had a long phone call with my sister yesterday.",
             "Yesterday the weather was better than today.",
             "We didn't get home until late yesterday."
+          ],
+          "exampleTranslationsTr": [
+            "Dün kız kardeşimle uzun uzun telefonlaştım.",
+            "Dün hava bugünden daha iyiydi.",
+            "Dün eve ancak geç geldik."
           ]
         },
         {
@@ -18204,6 +19844,11 @@
             "In my opinion the film is worth seeing.",
             "Everyone is allowed to express their opinion freely.",
             "Your opinion on this plan has changed."
+          ],
+          "exampleTranslationsTr": [
+            "Bence film izlenmeye değer.",
+            "Herkes fikrini özgürce söyleyebilir.",
+            "Bu plan hakkındaki fikriniz değişti."
           ]
         },
         {
@@ -18259,6 +19904,11 @@
             "My parents support me with my training.",
             "Many people support the association with donations.",
             "He wants to support his colleague in the project."
+          ],
+          "exampleTranslationsTr": [
+            "Annem babam eğitimimde bana destek oluyorlar.",
+            "Birçok insan derneğe bağışlarla destek oluyor.",
+            "İş arkadaşına projede destek olmak istiyor."
           ]
         },
         {
@@ -18314,6 +19964,11 @@
             "Sustainability plays an important role in our purchases.",
             "The company promotes sustainability and fair wages.",
             "Without sustainability, valuable resources are lost."
+          ],
+          "exampleTranslationsTr": [
+            "Sürdürülebilirlik, alışverişlerimizde önemli bir rol oynar.",
+            "Şirket, sürdürülebilirlik ve adil ücretlerle reklam yapıyor.",
+            "Sürdürülebilirlik olmadan değerli kaynaklar kaybolur."
           ]
         },
         {
@@ -18369,6 +20024,11 @@
             "The north was rainy, while the south was sunny.",
             "She likes classical music, while her brother listens to rock.",
             "The old model was loud, but the new one was very quiet."
+          ],
+          "exampleTranslationsTr": [
+            "Kuzey yağmurluydu, güney ise güneşliydi.",
+            "Klasik müzik sever, erkek kardeşi ise rock dinler.",
+            "Eski model gürültülüydü, yenisi ise çok sessizdi."
           ]
         },
         {
@@ -18424,6 +20084,11 @@
             "The plan was risky; Nevertheless, the board agreed.",
             "The criticism was harsh, but remained factual.",
             "He knew the dangers and still dared to try."
+          ],
+          "exampleTranslationsTr": [
+            "Plan riskliydi; buna rağmen yönetim kurulu onayladı.",
+            "Eleştiri sertti, yine de nesnel kaldı.",
+            "Tehlikeleri biliyordu ve yine de denemeye cesaret etti."
           ]
         },
         {
@@ -18479,6 +20144,11 @@
             "His argument was sound and left no room for doubt.",
             "Without hard evidence, no one will believe us.",
             "The excuse didn't sound particularly valid."
+          ],
+          "exampleTranslationsTr": [
+            "Argümanı sağlamdı ve hiçbir şüpheye yer bırakmadı.",
+            "Dayanağı sağlam veriler olmadan kimse bize inanmaz.",
+            "Bahane pek geçerli gelmedi."
           ]
         },
         {
@@ -18534,6 +20204,11 @@
             "The amount of the tip is at the discretion of the guests.",
             "The authority decided on the application at its own discretion.",
             "According to human judgment, the accident could not have been avoided."
+          ],
+          "exampleTranslationsTr": [
+            "Bahşiş miktarı misafirlerin takdirine bağlıdır.",
+            "Kurum, başvuru hakkında kendi takdirine göre karar verdi.",
+            "İnsan takdirine göre kaza önlenemezdi."
           ]
         },
         {
@@ -18589,6 +20264,11 @@
             "The consequences of this decision only became apparent years later.",
             "He was apparently unaware of the significance of his words.",
             "A judgment of such magnitude requires careful justification."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kararın önemi ancak yıllar sonra anlaşıldı.",
+            "Belli ki sözlerinin öneminin farkında değildi.",
+            "Bu denli önemli bir karar, titiz bir gerekçe gerektirir."
           ]
         }
       ]
@@ -18648,6 +20328,11 @@
             "The city is very crowded on Saturday.",
             "We're going into town tomorrow.",
             "Which city do you live in?"
+          ],
+          "exampleTranslationsTr": [
+            "Şehir Cumartesi çok kalabalık.",
+            "Yarın şehre gidiyoruz.",
+            "Hangi şehirde oturuyorsun?"
           ]
         },
         {
@@ -18703,6 +20388,11 @@
             "The food here is very good.",
             "She speaks German well.",
             "I slept well."
+          ],
+          "exampleTranslationsTr": [
+            "Buradaki yemek çok iyi.",
+            "O iyi Almanca konuşuyor.",
+            "İyi uyudum."
           ]
         },
         {
@@ -18758,6 +20448,11 @@
             "We are visiting my grandparents on Sunday.",
             "Would you like to visit the new museum with me?",
             "She wants to visit her friend in the hospital."
+          ],
+          "exampleTranslationsTr": [
+            "Pazar günü büyükannem ve büyükbabamı ziyaret ediyoruz.",
+            "Benimle yeni müzeyi ziyaret etmek ister misin?",
+            "Hastanede arkadaşını ziyaret etmek istiyor."
           ]
         },
         {
@@ -18813,6 +20508,11 @@
             "I would like to order a soup and a salad.",
             "We usually order books online.",
             "Have you already ordered the taxi?"
+          ],
+          "exampleTranslationsTr": [
+            "Bir çorba ve bir salata sipariş etmek istiyorum.",
+            "Kitapları genellikle internetten sipariş ederiz.",
+            "Taksiyi çoktan sipariş ettin mi?"
           ]
         },
         {
@@ -18868,6 +20568,11 @@
             "The driver's behavior was very reckless.",
             "Her friendly behavior impressed everyone.",
             "The coach was unhappy with the players' behavior."
+          ],
+          "exampleTranslationsTr": [
+            "Sürücünün davranışı çok düşüncesizceydi.",
+            "Onun dostça davranışı herkesi etkiledi.",
+            "Antrenör, oyuncuların davranışlarından memnun değildi."
           ]
         },
         {
@@ -18923,6 +20628,11 @@
             "She was able to convince the boss of her idea.",
             "His arguments don't entirely convince me.",
             "The film convinced us with its story."
+          ],
+          "exampleTranslationsTr": [
+            "Patronu fikrine ikna edebildi.",
+            "Onun argümanları beni tam olarak ikna etmiyor.",
+            "Film bizi hikayesiyle ikna etti."
           ]
         },
         {
@@ -18978,6 +20688,11 @@
             "Experienced drivers can better assess dangers.",
             "It is difficult to correctly assess the situation from the outside.",
             "How would you assess the chances of the project?"
+          ],
+          "exampleTranslationsTr": [
+            "Deneyimli sürücüler tehlikeleri daha iyi değerlendirebilirler.",
+            "Dışarıdan durumu doğru değerlendirmek zordur.",
+            "Projenin şansını nasıl değerlendirirsiniz?"
           ]
         },
         {
@@ -19033,6 +20748,11 @@
             "Can you explain your opinion in more detail?",
             "The company must justify the termination in writing.",
             "He was able to justify his decision convincingly."
+          ],
+          "exampleTranslationsTr": [
+            "Görüşünü daha ayrıntılı açıklayabilir misin?",
+            "Şirket, fesih kararını yazılı olarak gerekçelendirmeli.",
+            "Kararını ikna edici bir şekilde açıklayabildi."
           ]
         },
         {
@@ -19088,6 +20808,11 @@
             "The demonstrators demanded more social justice.",
             "Without justice, a state loses the trust of its citizens.",
             "Her sense of justice made her the ideal judge."
+          ],
+          "exampleTranslationsTr": [
+            "Göstericiler daha fazla sosyal adalet talep ettiler.",
+            "Adalet olmadan bir devlet vatandaşların güvenini kaybeder.",
+            "Adalet duygusu onu ideal bir hakim haline getirdi."
           ]
         },
         {
@@ -19143,6 +20868,11 @@
             "Regular checks ensure the safety of the system.",
             "The state must guarantee the supply of drinking water.",
             "This is the only way to ensure a fair election."
+          ],
+          "exampleTranslationsTr": [
+            "Düzenli kontroller tesisin güvenliğini sağlar.",
+            "Devlet, içme suyu teminini sağlamak zorundadır.",
+            "Ancak bu şekilde seçimin adil bir şekilde yapılması sağlanabilir."
           ]
         },
         {
@@ -19198,6 +20928,11 @@
             "After the interview I had to revise my judgment.",
             "The forecast was revised downwards.",
             "He was ready to revise his position."
+          ],
+          "exampleTranslationsTr": [
+            "Görüşmeden sonra kararımı değiştirmek zorunda kaldım.",
+            "Tahmin aşağı yönlü revize edildi.",
+            "Görüşünü değiştirmeye hazırdı."
           ]
         },
         {
@@ -19253,6 +20988,11 @@
             "Mutual trust is essential for this work.",
             "A helmet is essential on the construction site.",
             "Complete documents are essential for the visa."
+          ],
+          "exampleTranslationsTr": [
+            "Bu iş için karşılıklı güven vazgeçilmezdir.",
+            "Şantiyede baret zorunludur.",
+            "Vize için eksiksiz belgeler elzemdir."
           ]
         }
       ]
@@ -19312,6 +21052,11 @@
             "I drink a glass of water every morning.",
             "The water in the lake is cold.",
             "Do you want water or juice?"
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah bir bardak su içerim.",
+            "Göldeki su soğuk.",
+            "Su mu istersin, yoksa meyve suyu mu?"
           ]
         },
         {
@@ -19367,6 +21112,11 @@
             "I like to eat fresh bread with butter.",
             "The bread from the bakery is still warm.",
             "We need bread for dinner."
+          ],
+          "exampleTranslationsTr": [
+            "Tereyağlı taze ekmek yemeyi severim.",
+            "Fırından ekmek hala sıcak.",
+            "Akşam yemeği için ekmek lazım."
           ]
         },
         {
@@ -19422,6 +21172,11 @@
             "Can I pay by card here?",
             "We pay the rent at the beginning of the month.",
             "He had to pay a lot for the repairs."
+          ],
+          "exampleTranslationsTr": [
+            "Burada kartla ödeyebilir miyim?",
+            "Ayın başında kirayı öderiz.",
+            "Tamir için çok ödemek zorunda kaldı."
           ]
         },
         {
@@ -19477,6 +21232,11 @@
             "This intersection is dangerous for cyclists.",
             "Swimming in the lake is dangerous during thunderstorms.",
             "Playing on the street is too dangerous."
+          ],
+          "exampleTranslationsTr": [
+            "Bu kavşak bisikletliler için tehlikelidir.",
+            "Gök gürültülü havalarda gölde yüzmek tehlikelidir.",
+            "Sokakta oynamak çok tehlikelidir."
           ]
         },
         {
@@ -19532,6 +21292,11 @@
             "It was raining, but we still went hiking.",
             "The test was difficult, but she still passed.",
             "He had a cold and still went to work."
+          ],
+          "exampleTranslationsTr": [
+            "Yağmur yağıyordu, yine de yürüyüşe gittik.",
+            "Sınav zordu, yine de geçti.",
+            "Üşütmüştü, yine de işe gitti."
           ]
         },
         {
@@ -19587,6 +21352,11 @@
             "A good knowledge of the rules helps with this game.",
             "Knowledge of English is required for the position.",
             "He expanded his knowledge in the course."
+          ],
+          "exampleTranslationsTr": [
+            "Kuralları iyi bilmek bu oyunda yardımcı olur.",
+            "Bu pozisyon için İngilizce bilgisi gereklidir.",
+            "Kursta bilgilerini genişletti."
           ]
         },
         {
@@ -19642,6 +21412,11 @@
             "The union wants to negotiate higher wages.",
             "You can negotiate any price at the bazaar.",
             "Both companies have been negotiating the contract for weeks."
+          ],
+          "exampleTranslationsTr": [
+            "Sendika daha yüksek ücretler hakkında müzakere etmek istiyor.",
+            "Pazarda her fiyat için pazarlık yapabilirsin.",
+            "Her iki şirket de haftalardır sözleşme hakkında müzakere ediyor."
           ]
         },
         {
@@ -19697,6 +21472,11 @@
             "The connection between sleep and concentration is proven.",
             "Without the context, the quote is misunderstood.",
             "The police are investigating a possible connection between the cases."
+          ],
+          "exampleTranslationsTr": [
+            "Uyku ile konsantrasyon arasındaki bağlantı kanıtlanmıştır.",
+            "Bağlam olmadan alıntı yanlış anlaşılır.",
+            "Polis, vakalar arasındaki olası bir bağlantıyı araştırıyor."
           ]
         },
         {
@@ -19752,6 +21532,11 @@
             "The prejudice against older applicants persists.",
             "He confronted every prejudice with patience and facts.",
             "Many people are not even aware of their prejudices."
+          ],
+          "exampleTranslationsTr": [
+            "Yaşlı adaylara karşı önyargı süregeliyor.",
+            "Her önyargıyla sabır ve gerçeklerle yüzleşti.",
+            "Birçok insan önyargılarının farkında bile değil."
           ]
         },
         {
@@ -19807,6 +21592,11 @@
             "The conflict between the parties became increasingly heated.",
             "His critical analysis of the novel convinced the jury.",
             "After a short argument, the neighbors came to an agreement."
+          ],
+          "exampleTranslationsTr": [
+            "Partiler arasındaki çatışma giderek kızıştı.",
+            "Romanla ilgili eleştirel incelemesi jüriyi ikna etti.",
+            "Kısa bir tartışmanın ardından komşular anlaştı."
           ]
         },
         {
@@ -19862,6 +21652,11 @@
             "Advertising wants to suggest that happiness can be bought.",
             "The headline suggests a scandal that never happened.",
             "Such statistics suggest an accuracy that is deceptive."
+          ],
+          "exampleTranslationsTr": [
+            "Reklam, mutluluğun satın alınabilir olduğunu ima etmek istiyor.",
+            "Manşet, hiç yaşanmamış bir skandalı ima ediyor.",
+            "Bu tür istatistikler, yanıltıcı bir kesinliği ima ediyor."
           ]
         },
         {
@@ -19917,6 +21712,11 @@
             "She prepared the case meticulously.",
             "The historian meticulously evaluated the sources.",
             "His meticulous notes helped clarify the matter."
+          ],
+          "exampleTranslationsTr": [
+            "Davayı titizlikle hazırladı.",
+            "Tarihçi kaynakları titizlikle değerlendirdi.",
+            "Titizlikle tuttuğu notlar olayın aydınlatılmasına yardımcı oldu."
           ]
         }
       ]
@@ -19976,6 +21776,11 @@
             "What would you like to do on the weekend?",
             "The children do their homework.",
             "I'm making a salad today."
+          ],
+          "exampleTranslationsTr": [
+            "Hafta sonu ne yapmak istersin?",
+            "Çocuklar ödevlerini yapıyorlar.",
+            "Bugün salata yapıyorum."
           ]
         },
         {
@@ -20031,6 +21836,11 @@
             "The town hall is very old.",
             "My car is old but good.",
             "How old is your brother?"
+          ],
+          "exampleTranslationsTr": [
+            "Belediye binası çok eski.",
+            "Arabam eski ama iyi.",
+            "Abin kaç yaşında?"
           ]
         },
         {
@@ -20086,6 +21896,11 @@
             "The hotel was cheap and still very clean.",
             "Fruit is often cheap on the market.",
             "The bus ticket is cheap."
+          ],
+          "exampleTranslationsTr": [
+            "Otel ucuz olmasına rağmen çok temizdi.",
+            "Pazarda meyve genellikle ucuzdur.",
+            "Otobüs bileti ucuzdur."
           ]
         },
         {
@@ -20141,6 +21956,11 @@
             "The train station is right in the center of the city.",
             "We'll meet at the train station at seven o'clock.",
             "It's only a five minute walk from the train station."
+          ],
+          "exampleTranslationsTr": [
+            "İstasyon şehrin tam merkezinde bulunuyor.",
+            "Saat yedide istasyonda buluşuruz.",
+            "İstasyondan yürüyerek sadece beş dakika."
           ]
         },
         {
@@ -20196,6 +22016,11 @@
             "Getting up early is a permanent habit for me.",
             "He has the habit of drinking tea while reading.",
             "Old habits are difficult to change."
+          ],
+          "exampleTranslationsTr": [
+            "Erken kalkmak benim için yerleşmiş bir alışkanlıktır.",
+            "Okurken çay içme alışkanlığı var.",
+            "Eski alışkanlıkları değiştirmek zordur."
           ]
         },
         {
@@ -20251,6 +22076,11 @@
             "Ms. Weber is responsible for the new trainees.",
             "Who is responsible for the deadlines in this project?",
             "As captain, he feels responsible for the team."
+          ],
+          "exampleTranslationsTr": [
+            "Bayan Weber yeni stajyerlerden sorumlu.",
+            "Bu projede tarihlerden kim sorumlu?",
+            "Kaptan olarak takımdan kendini sorumlu hissediyor."
           ]
         },
         {
@@ -20306,6 +22136,11 @@
             "The library has an extensively sorted collection.",
             "The report is extensive and very detailed.",
             "The renovation was more extensive than initially planned."
+          ],
+          "exampleTranslationsTr": [
+            "Kütüphanenin kapsamlı bir şekilde düzenlenmiş bir koleksiyonu bulunmaktadır.",
+            "Rapor kapsamlı ve çok detaylıdır.",
+            "Tadilat, başlangıçta planlanandan daha kapsamlıydı."
           ]
         },
         {
@@ -20361,6 +22196,11 @@
             "Elegant clothing is definitely appropriate for such a celebration.",
             "The price seems reasonable to me for this service.",
             "She responded to the criticism calmly and appropriately."
+          ],
+          "exampleTranslationsTr": [
+            "Böyle bir kutlama için şık giyim gayet uygundur.",
+            "Bu hizmet için fiyat bana makul geliyor.",
+            "Eleştiriye sakin ve yerinde tepki verdi."
           ]
         },
         {
@@ -20416,6 +22256,11 @@
             "The government wants to strive for a balanced budget.",
             "Many graduates pursue a career in research.",
             "We should strive for a solution that benefits everyone."
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet dengeli bir bütçe hedefliyor.",
+            "Birçok mezun araştırma alanında bir kariyer hedefliyor.",
+            "Herkese fayda sağlayan bir çözüm hedeflemeliyiz."
           ]
         },
         {
@@ -20471,6 +22316,11 @@
             "Restricting traffic relieved pressure on the city center.",
             "I agree with the plan, but with one caveat.",
             "I cannot recommend this hotel without any reservations."
+          ],
+          "exampleTranslationsTr": [
+            "Trafiğin kısıtlanması şehir merkezini rahatlattı.",
+            "Plana katılıyorum, ancak bir çekincem var.",
+            "Bu oteli hiçbir çekince olmadan tavsiye edemem."
           ]
         },
         {
@@ -20526,6 +22376,11 @@
             "His answer was succinct: “We’ll see.”",
             "The rejection came in a succinctly worded two-liner.",
             "She commented succinctly on the record with a shrug."
+          ],
+          "exampleTranslationsTr": [
+            "Cevabı kısa ve öz oldu: \"Bakalım.\"",
+            "Ret cevabı, kısa ve öz bir şekilde kaleme alınmış iki satırlık bir yazıyla geldi.",
+            "Rekoru omuz silkerek kısa ve öz bir yorumla geçiştirdi."
           ]
         },
         {
@@ -20581,6 +22436,11 @@
             "The tenants have been complaining about the defective heating for months.",
             "The auditor criticized several errors in the annual report.",
             "Critics rightly complain about the unclear financing."
+          ],
+          "exampleTranslationsTr": [
+            "Kiracılar aylardır bozuk kaloriferden şikayet ediyorlar.",
+            "Denetçi yıllık raporda birkaç hatayı eleştirdi.",
+            "Eleştirmenler haklı olarak belirsiz finansmanı eleştiriyorlar."
           ]
         }
       ]

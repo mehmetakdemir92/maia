@@ -84,13 +84,38 @@ extension View {
     }
 }
 
-/// Example sentence with optional faded English meaning underneath (German learning).
+/// Example sentence with optional faded translation underneath.
 struct ExampleSentenceRow: View {
     let sentence: String
-    let englishGloss: String?
+    let gloss: String?
     /// Headword to paint gold inside the sentence; nil keeps plain body styling.
     var highlightWord: String? = nil
     var learningLanguage: LearningLanguage = .english
+
+    /// Backward-compatible alias used by older call sites.
+    init(
+        sentence: String,
+        englishGloss: String?,
+        highlightWord: String? = nil,
+        learningLanguage: LearningLanguage = .english
+    ) {
+        self.sentence = sentence
+        self.gloss = englishGloss
+        self.highlightWord = highlightWord
+        self.learningLanguage = learningLanguage
+    }
+
+    init(
+        sentence: String,
+        gloss: String?,
+        highlightWord: String? = nil,
+        learningLanguage: LearningLanguage = .english
+    ) {
+        self.sentence = sentence
+        self.gloss = gloss
+        self.highlightWord = highlightWord
+        self.learningLanguage = learningLanguage
+    }
 
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
@@ -109,11 +134,11 @@ struct ExampleSentenceRow: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityLabel(sentence)
 
-                if let englishGloss {
-                    Text(englishGloss)
+                if let gloss {
+                    Text(gloss)
                         .glassCardExampleGloss()
                         .fixedSize(horizontal: false, vertical: true)
-                        .accessibilityLabel("English: \(englishGloss)")
+                        .accessibilityLabel(gloss)
                 }
             }
         }

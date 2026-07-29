@@ -1318,5 +1318,2095 @@
       "I have an appointment tomorrow.",
       "Can you bring bread tomorrow?"
     ]
+  },
+  {
+    "word": "Buch",
+    "cefrLevel": "a1",
+    "phonetic": "/buːx/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A collection of written or printed pages bound together inside a cover.",
+    "examples": [
+      "Ich lese ein Buch.",
+      "Das ist mein Buch.",
+      "Hast du ein gutes Buch?"
+    ],
+    "exampleTranslations": [
+      "I am reading a book.",
+      "That is my book.",
+      "Do you have a good book?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Buch\" mean?",
+        "options": [
+          "A collection of written or printed pages bound together inside a cover.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich lese ein _____.",
+        "options": [
+          "Buch",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das ist mein _____.",
+        "options": [
+          "Buch",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Tisch",
+    "cefrLevel": "a1",
+    "phonetic": "/tɪʃ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "A flat-topped piece of furniture with legs, used for eating or working.",
+    "examples": [
+      "Der Tisch ist groß und braun.",
+      "Ich stelle die Blumen auf den Tisch.",
+      "Wir sitzen am Tisch und trinken Kaffee."
+    ],
+    "exampleTranslations": [
+      "The table is big and brown.",
+      "I put the flowers on the table.",
+      "We sit at the table and drink coffee."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Tisch\" mean?",
+        "options": [
+          "A flat-topped piece of furniture with legs, used for eating or working.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ ist groß und braun.",
+        "options": [
+          "Tisch",
+          "Fenster",
+          "Garten",
+          "Brief"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich stelle die Blumen auf den _____.",
+        "options": [
+          "Tisch",
+          "Garten",
+          "Brief",
+          "Fenster"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Stuhl",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈʃtuːl/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A piece of furniture for one person to sit on.",
+    "examples": [
+      "Der Stuhl ist neu.",
+      "Ich sitze auf dem Stuhl.",
+      "Wo ist mein Stuhl?"
+    ],
+    "exampleTranslations": [
+      "The chair is new.",
+      "I am sitting on the chair.",
+      "Where is my chair?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Stuhl\" mean?",
+        "options": [
+          "A piece of furniture for one person to sit on.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ ist neu.",
+        "options": [
+          "Stuhl",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich sitze auf dem _____.",
+        "options": [
+          "Stuhl",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Fenster",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈfɛnstɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A transparent opening in a wall, often with glass, for light and air.",
+    "examples": [
+      "Das Fenster ist offen.",
+      "Ich mache das Fenster zu.",
+      "Kannst du bitte das Fenster öffnen?"
+    ],
+    "exampleTranslations": [
+      "The window is open.",
+      "I am closing the window.",
+      "Can you please open the window?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Fenster\" mean?",
+        "options": [
+          "A transparent opening in a wall, often with glass, for light and air.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das _____ ist offen.",
+        "options": [
+          "Fenster",
+          "Tisch",
+          "Garten",
+          "Brief"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich mache das _____ zu.",
+        "options": [
+          "Fenster",
+          "Garten",
+          "Brief",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Tür",
+    "cefrLevel": "a1",
+    "phonetic": "/tyːɐ̯/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A movable barrier that allows entry to or exit from a room or building.",
+    "examples": [
+      "Die Tür ist offen.",
+      "Mach bitte die Tür zu!",
+      "Wo ist die Tür zum Bad?"
+    ],
+    "exampleTranslations": [
+      "The door is open.",
+      "Please close the door!",
+      "Where is the door to the bathroom?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Tür\" mean?",
+        "options": [
+          "A movable barrier that allows entry to or exit from a room or building.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ ist offen.",
+        "options": [
+          "Tür",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mach bitte die _____ zu!",
+        "options": [
+          "Tür",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Auto",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈaʊ̯to/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "A common motorized vehicle with four wheels used for personal transportation.",
+    "examples": [
+      "Ich habe ein neues Auto.",
+      "Das Auto ist rot.",
+      "Fährst du mit dem Auto zur Arbeit?"
+    ],
+    "exampleTranslations": [
+      "I have a new car.",
+      "The car is red.",
+      "Do you drive to work by car?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Auto\" mean?",
+        "options": [
+          "A common motorized vehicle with four wheels used for personal transportation.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe ein neues _____.",
+        "options": [
+          "Auto",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das _____ ist rot.",
+        "options": [
+          "Auto",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Bus",
+    "cefrLevel": "a1",
+    "phonetic": "/bʊs/",
+    "partOfSpeech": "noun",
+    "domainTag": "travel",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "A large motor vehicle designed to carry many passengers along a fixed route.",
+    "examples": [
+      "Der Bus fährt zum Bahnhof.",
+      "Ich nehme den Bus zur Arbeit.",
+      "Wann kommt der nächste Bus?"
+    ],
+    "exampleTranslations": [
+      "The bus drives to the train station.",
+      "I take the bus to work.",
+      "When does the next bus come?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Bus\" mean?",
+        "options": [
+          "A large motor vehicle designed to carry many passengers along a fixed route.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ fährt zum Bahnhof.",
+        "options": [
+          "Bus",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich nehme den _____ zur Arbeit.",
+        "options": [
+          "Bus",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Zug",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈtsuːk/",
+    "partOfSpeech": "noun",
+    "domainTag": "travel",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "A large vehicle with many wagons that travels on rails.",
+    "examples": [
+      "Der Zug fährt zum Bahnhof.",
+      "Ich nehme den nächsten Zug.",
+      "Wann kommt der Zug an?"
+    ],
+    "exampleTranslations": [
+      "The train goes to the station.",
+      "I take the next train.",
+      "When does the train arrive?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Zug\" mean?",
+        "options": [
+          "A large vehicle with many wagons that travels on rails.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ fährt zum Bahnhof.",
+        "options": [
+          "Zug",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich nehme den nächsten _____.",
+        "options": [
+          "Zug",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Lehrer",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈleːrɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "education",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A male person who teaches children or students in a school.",
+    "examples": [
+      "Herr Schmidt ist mein Lehrer.",
+      "Der Lehrer erklärt die Aufgabe.",
+      "Ich frage den Lehrer."
+    ],
+    "exampleTranslations": [
+      "Mr. Schmidt is my teacher.",
+      "The teacher explains the task.",
+      "I ask the teacher."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Lehrer\" mean?",
+        "options": [
+          "A male person who teaches children or students in a school.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Herr Schmidt ist mein _____.",
+        "options": [
+          "Lehrer",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ erklärt die Aufgabe.",
+        "options": [
+          "Lehrer",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Kind",
+    "cefrLevel": "a1",
+    "phonetic": "/kɪnt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A young human being who is not yet an adult.",
+    "examples": [
+      "Das ist mein Kind.",
+      "Ich habe zwei Kinder.",
+      "Das kleine Kind spielt im Garten."
+    ],
+    "exampleTranslations": [
+      "That is my child.",
+      "I have two children.",
+      "The little child plays in the garden."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Kind\" mean?",
+        "options": [
+          "A young human being who is not yet an adult.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das ist mein _____.",
+        "options": [
+          "Kind",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe zwei _____er.",
+        "options": [
+          "Kind",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Mutter",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈmʊtɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "The female parent of a child or an animal.",
+    "examples": [
+      "Meine Mutter ist sehr nett.",
+      "Sie ist die Mutter von zwei Kindern.",
+      "Ich liebe meine Mutter sehr."
+    ],
+    "exampleTranslations": [
+      "My mother is very nice.",
+      "She is the mother of two children.",
+      "I love my mother very much."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Mutter\" mean?",
+        "options": [
+          "The female parent of a child or an animal.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Meine _____ ist sehr nett.",
+        "options": [
+          "Mutter",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie ist die _____ von zwei Kindern.",
+        "options": [
+          "Mutter",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Vater",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈfaːtɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "A man who is the male parent of a child.",
+    "examples": [
+      "Mein Vater ist sehr nett.",
+      "Wo ist dein Vater?",
+      "Ich liebe meinen Vater."
+    ],
+    "exampleTranslations": [
+      "My father is very nice.",
+      "Where is your father?",
+      "I love my father."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Vater\" mean?",
+        "options": [
+          "A man who is the male parent of a child.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mein _____ ist sehr nett.",
+        "options": [
+          "Vater",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wo ist dein _____?",
+        "options": [
+          "Vater",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Bruder",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈbruːdɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "family",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A male sibling, sharing the same parents as another person.",
+    "examples": [
+      "Ich habe einen Bruder.",
+      "Mein Bruder ist sehr nett.",
+      "Hast du Geschwister? Ja, ich habe zwei Brüder."
+    ],
+    "exampleTranslations": [
+      "I have a brother.",
+      "My brother is very nice.",
+      "Do you have siblings? Yes, I have two brothers."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Bruder\" mean?",
+        "options": [
+          "A male sibling, sharing the same parents as another person.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe einen _____.",
+        "options": [
+          "Bruder",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mein _____ ist sehr nett.",
+        "options": [
+          "Bruder",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Schwester",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈʃvɛstɐ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "A female sibling, a girl or woman who shares the same parents.",
+    "examples": [
+      "Ich habe eine Schwester.",
+      "Meine Schwester heißt Anna.",
+      "Das ist meine große Schwester."
+    ],
+    "exampleTranslations": [
+      "I have a sister.",
+      "My sister's name is Anna.",
+      "That is my big sister."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Schwester\" mean?",
+        "options": [
+          "A female sibling, a girl or woman who shares the same parents.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe eine _____.",
+        "options": [
+          "Schwester",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Meine _____ heißt Anna.",
+        "options": [
+          "Schwester",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Hund",
+    "cefrLevel": "a1",
+    "phonetic": "/hʊnt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A common domesticated carnivorous mammal often kept as a pet or for work.",
+    "examples": [
+      "Das ist mein Hund.",
+      "Der Hund schläft viel.",
+      "Ich mag Hunde sehr."
+    ],
+    "exampleTranslations": [
+      "That is my dog.",
+      "The dog sleeps a lot.",
+      "I like dogs very much."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Hund\" mean?",
+        "options": [
+          "A common domesticated carnivorous mammal often kept as a pet or for work.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das ist mein _____.",
+        "options": [
+          "Hund",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ schläft viel.",
+        "options": [
+          "Hund",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Katze",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈkatsə/",
+    "partOfSpeech": "noun",
+    "domainTag": "nature",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "A small domesticated carnivorous mammal kept as a pet in many homes.",
+    "examples": [
+      "Ich habe eine Katze.",
+      "Die Katze schläft viel.",
+      "Meine Katze mag Fisch."
+    ],
+    "exampleTranslations": [
+      "I have a cat.",
+      "The cat sleeps a lot.",
+      "My cat likes fish."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Katze\" mean?",
+        "options": [
+          "A small domesticated carnivorous mammal kept as a pet in many homes.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe eine _____.",
+        "options": [
+          "Katze",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ schläft viel.",
+        "options": [
+          "Katze",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Land",
+    "cefrLevel": "a1",
+    "phonetic": "/lant/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A country is a nation with its own government and territory.",
+    "examples": [
+      "Ich komme aus einem schönen Land.",
+      "Das Land ist grün und hat viele Bäume.",
+      "Wir fahren aufs Land am Wochenende."
+    ],
+    "exampleTranslations": [
+      "I come from a beautiful country.",
+      "The land is green and has many trees.",
+      "We are going to the countryside on the weekend."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Land\" mean?",
+        "options": [
+          "A country is a nation with its own government and territory.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich komme aus einem schönen _____.",
+        "options": [
+          "Land",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das _____ ist grün und hat viele Bäume.",
+        "options": [
+          "Land",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Geld",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈɡɛlt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "Coins and banknotes used for buying things and paying for services.",
+    "examples": [
+      "Ich habe nicht viel Geld dabei.",
+      "Brauchst du Geld für den Bus?",
+      "Das ist zu teuer, ich habe nicht genug Geld."
+    ],
+    "exampleTranslations": [
+      "I don't have much money with me.",
+      "Do you need money for the bus?",
+      "That is too expensive, I don't have enough money."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Geld\" mean?",
+        "options": [
+          "Coins and banknotes used for buying things and paying for services.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich habe nicht viel _____ dabei.",
+        "options": [
+          "Geld",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Brauchst du _____ für den Bus?",
+        "options": [
+          "Geld",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Uhr",
+    "cefrLevel": "a1",
+    "phonetic": "/uːɐ̯/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A device that shows the time, like a clock on a wall or a watch.",
+    "examples": [
+      "Die Uhr an der Wand ist sehr schön.",
+      "Wie viel Uhr ist es jetzt?",
+      "Ich habe eine neue Armbanduhr gekauft."
+    ],
+    "exampleTranslations": [
+      "The clock on the wall is very beautiful.",
+      "What time is it now?",
+      "I bought a new wristwatch."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Uhr\" mean?",
+        "options": [
+          "A device that shows the time, like a clock on a wall or a watch.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ an der Wand ist sehr schön.",
+        "options": [
+          "Uhr",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wie viel _____ ist es jetzt?",
+        "options": [
+          "Uhr",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Nacht",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈnaxt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "The period of darkness between sunset and sunrise when people usually sleep.",
+    "examples": [
+      "Gute Nacht!",
+      "In der Nacht ist es dunkel.",
+      "Ich arbeite oft in der Nacht."
+    ],
+    "exampleTranslations": [
+      "Good night!",
+      "It is dark at night.",
+      "I often work at night."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Nacht\" mean?",
+        "options": [
+          "The period of darkness between sunset and sunrise when people usually sleep.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Gute _____!",
+        "options": [
+          "Nacht",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In der _____ ist es dunkel.",
+        "options": [
+          "Nacht",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Woche",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈvɔxə/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A period of seven days, typically from Monday to Sunday, used for planning.",
+    "examples": [
+      "Ich arbeite fünf Tage die Woche.",
+      "Nächste Woche fahre ich in den Urlaub.",
+      "Wie viele Tage hat eine Woche?"
+    ],
+    "exampleTranslations": [
+      "I work five days a week.",
+      "Next week I'm going on vacation.",
+      "How many days does a week have?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Woche\" mean?",
+        "options": [
+          "A period of seven days, typically from Monday to Sunday, used for planning.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich arbeite fünf Tage die _____.",
+        "options": [
+          "Woche",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Nächste _____ fahre ich in den Urlaub.",
+        "options": [
+          "Woche",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Jahr",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈjaːɐ̯/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "A period of twelve months, often used to measure time and age.",
+    "examples": [
+      "Ein Jahr hat zwölf Monate.",
+      "Ich bin letztes Jahr nach Deutschland gereist.",
+      "Nächstes Jahr möchte ich Spanisch lernen."
+    ],
+    "exampleTranslations": [
+      "A year has twelve months.",
+      "I traveled to Germany last year.",
+      "Next year I want to learn Spanish."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Jahr\" mean?",
+        "options": [
+          "A period of twelve months, often used to measure time and age.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ein _____ hat zwölf Monate.",
+        "options": [
+          "Jahr",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich bin letztes _____ nach Deutschland gereist.",
+        "options": [
+          "Jahr",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Abend",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈaːbn̩t/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "The part of the day after the afternoon and before the night.",
+    "examples": [
+      "Am Abend essen wir zu Hause.",
+      "Der Abend beginnt nach der Arbeit.",
+      "Ich lese oft ein Buch am Abend."
+    ],
+    "exampleTranslations": [
+      "In the evening we eat at home.",
+      "The evening begins after work.",
+      "I often read a book in the evening."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Abend\" mean?",
+        "options": [
+          "The part of the day after the afternoon and before the night.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Am _____ essen wir zu Hause.",
+        "options": [
+          "Abend",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der _____ beginnt nach der Arbeit.",
+        "options": [
+          "Abend",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "jung",
+    "cefrLevel": "a1",
+    "phonetic": "/jʊŋ/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Describing someone or something that has not lived or existed for a long time.",
+    "examples": [
+      "Mein Hund ist noch sehr jung.",
+      "Er ist jung und hat viel Energie.",
+      "Die Kinder sind noch zu jung für diesen Film."
+    ],
+    "exampleTranslations": [
+      "My dog is still very young.",
+      "He is young and has a lot of energy.",
+      "The children are still too young for this film."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"jung\" mean?",
+        "options": [
+          "Describing someone or something that has not lived or existed for a long time.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mein Hund ist noch sehr _____.",
+        "options": [
+          "jung",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Er ist _____ und hat viel Energie.",
+        "options": [
+          "jung",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "schlecht",
+    "cefrLevel": "a1",
+    "phonetic": "/ʃlɛçt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "This describes something as not good, poor quality, or morally wrong.",
+    "examples": [
+      "Das Wetter ist heute schlecht.",
+      "Mir geht es schlecht.",
+      "Das ist keine schlechte Idee."
+    ],
+    "exampleTranslations": [
+      "The weather is bad today.",
+      "I am not feeling well.",
+      "That is not a bad idea."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"schlecht\" mean?",
+        "options": [
+          "This describes something as not good, poor quality, or morally wrong.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das Wetter ist heute _____.",
+        "options": [
+          "schlecht",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mir geht es _____.",
+        "options": [
+          "schlecht",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "kalt",
+    "cefrLevel": "a1",
+    "phonetic": "/kalt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "Having a low temperature, especially when compared to the human body.",
+    "examples": [
+      "Es ist heute sehr kalt.",
+      "Mir ist kalt.",
+      "Das Wasser ist zu kalt zum Schwimmen."
+    ],
+    "exampleTranslations": [
+      "It is very cold today.",
+      "I am cold.",
+      "The water is too cold for swimming."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"kalt\" mean?",
+        "options": [
+          "Having a low temperature, especially when compared to the human body.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist heute sehr _____.",
+        "options": [
+          "kalt",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mir ist _____.",
+        "options": [
+          "kalt",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "warm",
+    "cefrLevel": "a1",
+    "phonetic": "/vaʁm/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "having a temperature between cool and hot, often pleasant and comfortable.",
+    "examples": [
+      "Mir ist warm.",
+      "Das Wetter ist heute sehr warm.",
+      "Zieh dir eine warme Jacke an!"
+    ],
+    "exampleTranslations": [
+      "I feel warm.",
+      "The weather is very warm today.",
+      "Put on a warm jacket!"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"warm\" mean?",
+        "options": [
+          "having a temperature between cool and hot, often pleasant and comfortable.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Mir ist _____.",
+        "options": [
+          "warm",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Das Wetter ist heute sehr _____.",
+        "options": [
+          "warm",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "kommen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈkɔmən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To move towards a place or person, or to arrive at a destination.",
+    "examples": [
+      "Ich möchte nach Hause kommen.",
+      "Du kannst mich morgen besuchen kommen.",
+      "Wann kommt der Bus?"
+    ],
+    "exampleTranslations": [
+      "I want to come home.",
+      "You can come visit me tomorrow.",
+      "When does the bus come?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"kommen\" mean?",
+        "options": [
+          "To move towards a place or person, or to arrive at a destination.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich möchte nach Hause _____.",
+        "options": [
+          "kommen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Du kannst mich morgen besuchen _____.",
+        "options": [
+          "kommen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "sprechen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈʃprɛçən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "To communicate thoughts and ideas using spoken language with another person.",
+    "examples": [
+      "Ich kann gut Deutsch sprechen.",
+      "Sprichst du Englisch?",
+      "Wir sprechen über das Wetter."
+    ],
+    "exampleTranslations": [
+      "I can speak German well.",
+      "Do you speak English?",
+      "We are talking about the weather."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"sprechen\" mean?",
+        "options": [
+          "To communicate thoughts and ideas using spoken language with another person.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich kann gut Deutsch _____.",
+        "options": [
+          "sprechen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "sprechen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "hören",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈhøːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To perceive sounds with your ears, like music or voices.",
+    "examples": [
+      "Ich kann die Musik sehr gut hören.",
+      "Hörst du mich?",
+      "Wir hören gern Radio am Morgen."
+    ],
+    "exampleTranslations": [
+      "I can hear the music very well.",
+      "Do you hear me?",
+      "We like to listen to the radio in the morning."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"hören\" mean?",
+        "options": [
+          "To perceive sounds with your ears, like music or voices.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich kann die Musik sehr gut _____.",
+        "options": [
+          "hören",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "hören",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "lesen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈleːzn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To look at written words and understand their meaning.",
+    "examples": [
+      "Ich kann ein Buch lesen.",
+      "Liest du gern Geschichten?",
+      "Wir lesen die Zeitung jeden Morgen."
+    ],
+    "exampleTranslations": [
+      "I can read a book.",
+      "Do you like to read stories?",
+      "We read the newspaper every morning."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"lesen\" mean?",
+        "options": [
+          "To look at written words and understand their meaning.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich kann ein Buch _____.",
+        "options": [
+          "lesen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "lesen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "schreiben",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈʃʁaɪ̯bn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To form letters or words on a surface using a pen or pencil.",
+    "examples": [
+      "Ich möchte einen Brief schreiben.",
+      "Er schreibt eine E-Mail an seine Freundin.",
+      "Wir schreiben heute einen Test in Deutsch."
+    ],
+    "exampleTranslations": [
+      "I want to write a letter.",
+      "He is writing an email to his girlfriend.",
+      "We are writing a test in German today."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"schreiben\" mean?",
+        "options": [
+          "To form letters or words on a surface using a pen or pencil.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich möchte einen Brief _____.",
+        "options": [
+          "schreiben",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "schreiben",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "schlafen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈʃlaːfn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "To rest your body and mind, usually in a bed at night.",
+    "examples": [
+      "Ich möchte jetzt schlafen gehen.",
+      "Ich kann heute nicht gut schlafen.",
+      "Möchtest du jetzt schlafen?"
+    ],
+    "exampleTranslations": [
+      "I want to go to sleep now.",
+      "I can't sleep well today.",
+      "Do you want to sleep now?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"schlafen\" mean?",
+        "options": [
+          "To rest your body and mind, usually in a bed at night.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich möchte jetzt _____ gehen.",
+        "options": [
+          "schlafen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich kann heute nicht gut _____.",
+        "options": [
+          "schlafen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "öffnen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈœfnən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To change something from a closed state to an open state, like a door.",
+    "examples": [
+      "Kannst du bitte das Fenster öffnen?",
+      "Ich öffne die Tür für dich.",
+      "Der Laden öffnet um neun Uhr."
+    ],
+    "exampleTranslations": [
+      "Can you please open the window?",
+      "I am opening the door for you.",
+      "The shop opens at nine o'clock."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"öffnen\" mean?",
+        "options": [
+          "To change something from a closed state to an open state, like a door.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Kannst du bitte das Fenster _____?",
+        "options": [
+          "öffnen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "öffnen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "schließen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈʃliːsn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To make something no longer open, like a door or a window.",
+    "examples": [
+      "Bitte schließen Sie die Tür.",
+      "Wir müssen die Fenster schließen.",
+      "Der Laden schließt um 18 Uhr."
+    ],
+    "exampleTranslations": [
+      "Please close the door.",
+      "We must close the windows.",
+      "The shop closes at 6 PM."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"schließen\" mean?",
+        "options": [
+          "To make something no longer open, like a door or a window.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Bitte _____ Sie die Tür.",
+        "options": [
+          "schließen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir müssen die Fenster _____.",
+        "options": [
+          "schließen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "finden",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈfɪndən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 5,
+    "definition": "To locate something or someone, either by searching or by chance discovery.",
+    "examples": [
+      "Ich muss mein Handy finden.",
+      "Wir finden den Weg nicht.",
+      "Was findest du am besten?"
+    ],
+    "exampleTranslations": [
+      "I need to find my phone.",
+      "We cannot find the way.",
+      "What do you find best?"
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"finden\" mean?",
+        "options": [
+          "To locate something or someone, either by searching or by chance discovery.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich muss mein Handy _____.",
+        "options": [
+          "finden",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir _____ den Weg nicht.",
+        "options": [
+          "finden",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "suchen",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈzuːxn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To try to find something or someone that is lost or hidden.",
+    "examples": [
+      "Ich muss meine Schlüssel suchen.",
+      "Wo suchst du dein Handy?",
+      "Wir suchen ein gutes Restaurant."
+    ],
+    "exampleTranslations": [
+      "I need to look for my keys.",
+      "Where are you looking for your phone?",
+      "We are looking for a good restaurant."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"suchen\" mean?",
+        "options": [
+          "To try to find something or someone that is lost or hidden.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich muss meine Schlüssel _____.",
+        "options": [
+          "suchen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "suchen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "warten",
+    "cefrLevel": "a1",
+    "phonetic": "/ˈvaʁtn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 1,
+    "definition": "To stay in one place until something happens or someone arrives.",
+    "examples": [
+      "Ich muss auf den Bus warten.",
+      "Wartest du hier auf mich?",
+      "Wir warten schon lange."
+    ],
+    "exampleTranslations": [
+      "I have to wait for the bus.",
+      "Are you waiting here for me?",
+      "We have been waiting for a long time."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"warten\" mean?",
+        "options": [
+          "To stay in one place until something happens or someone arrives.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ich muss auf den Bus _____.",
+        "options": [
+          "warten",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "warten",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
   }
 ]

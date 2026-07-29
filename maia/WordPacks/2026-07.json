@@ -51,6 +51,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çıkarken lütfen arkanızdan kapıyı kapatın.",
+            "Kedi, içeri alınmak için kapıyı tırmaladı.",
+            "Geçen hafta sonu ön kapıyı parlak kırmızıya boyadık."
           ]
         },
         {
@@ -101,6 +106,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni restoran hakkında internette olumlu bir yorum okudum.",
+            "Filme dair eleştirisi gazetede yayımlandı.",
+            "Kamerayı almadan önce tüm müşteri yorumlarına baktı."
           ]
         },
         {
@@ -151,6 +161,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Doğru bağlam olmadan şaka anlamsızdı.",
+            "Tarihi bağlamı anlamak için bölümü tekrar okudu.",
+            "Kelimeleri bağlamından kopararak alıntılamak, anlamlarını tamamen değiştirebilir."
           ]
         },
         {
@@ -201,6 +216,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tarihler konusunda yanıldığını kabul etmek zorunda kaldı.",
+            "Sonunda vazoyu kırdığını itiraf etti.",
+            "Öğretmen, sınavın beklenenden daha zor olduğunu kabul etti."
           ]
         },
         {
@@ -251,6 +271,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yaşlı anne babasına bakmak zamanla ağır bir yük haline geldi.",
+            "Sağlık sorunlarının ailesine yük olmasını istemiyordu.",
+            "Yeni vergi, küçük işletmelerin üzerine haksız bir yük bindirdi."
           ]
         },
         {
@@ -301,6 +326,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Film, aşırı şiddet sahneleri içeriyor ve çocuklar için uygun değil.",
+            "Polis düzeni sağladıktan sonra protesto herhangi bir şiddet olayı olmadan sona erdi.",
+            "Evde sürekli şiddet uyguladığı için ilişkiden ayrıldı."
           ]
         },
         {
@@ -351,6 +381,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bütün gün bu kadar hızlı bir tempoyu sürdürmek zordur.",
+            "Köprü, her saat ağır kamyonları taşıyabilecek kadar güçlüydü.",
+            "Sağlıklı beslenme, sabah boyunca enerjini korumana yardımcı olur."
           ]
         },
         {
@@ -401,6 +436,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Öğretmen, şirketin büyümesini göstermek için bir grafik kullandı.",
+            "Bu grafikler, iklimin 1950'den beri nasıl değiştiğini gösteriyor.",
+            "İşten vereceğim kısa bir örnekle ne demek istediğimi açıklayayım."
           ]
         },
         {
@@ -451,6 +491,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "5x teriminde, x'in katsayısı beştir.",
+            "İki yüzey arasındaki sürtünme katsayısı alışılmadık derecede düşüktü.",
+            "Mühendisler, tasarımı onaylamadan önce güvenlik katsayısını hesapladı."
           ]
         },
         {
@@ -501,6 +546,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yardım etmeyi kabul etti, sesinde biraz tereddüt olmasına rağmen.",
+            "Sınav faydalıydı, küçük öğrenciler için biraz uzun olsa da.",
+            "Eve sağ salim döndü, planlanandan birkaç saat geç olmasına rağmen."
           ]
         },
         {
@@ -551,6 +601,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tüm vatandaşların yasa önünde eşit muameleyi hak ettiği aksiyomatik bir gerçektir.",
+            "Onların takımında, harekete geçmeden önce dikkatli planlama neredeyse aksiyomatikti.",
+            "Dürüstlüğü, asla taviz vermediği aksiyomatik bir değer olarak görüyordu."
           ]
         },
         {
@@ -601,6 +656,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Takım, ana hipotezlerini test etmek için bir deney tasarladı.",
+            "Yeni bileşikle ilgili hipotezi doğru çıktı.",
+            "Bilim insanları, herhangi bir veri toplamadan önce genellikle cesur bir hipotez öne sürerler."
           ]
         }
       ]
@@ -655,6 +715,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Köşedeki küçük dükkan her sabah taze ekmek satar.",
+            "Şehir merkezine yakın küçük bir dükkanda çalışıyor.",
+            "Eve giderken süt almak için dükkanda durduk."
           ]
         },
         {
@@ -705,6 +770,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "En iyi arkadaşım evimden sadece iki sokak ötede yaşıyor.",
+            "Okuldaki daha ilk gününde yeni bir arkadaş edindi.",
+            "Ödevime yardım istemek için arkadaşımı aradım."
           ]
         },
         {
@@ -755,6 +825,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "O, uluslararası oyunlarda ülkesini temsil etmek için seçildi.",
+            "Bu çizim, şirketin ana değerlerini açıkça temsil etmesi amaçlanmıştır.",
+            "İki avukat, yaklaşan mahkeme davası sırasında aileyi temsil edecek."
           ]
         },
         {
@@ -805,6 +880,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çok yoğun bir restoranda her müşteriyi memnun etmek zordur.",
+            "Kısa cevabı meraklı çocuğu hiç tatmin etmedi.",
+            "Parkta bir yürüyüş onun günlük hava ihtiyacını karşılayabilir."
           ]
         },
         {
@@ -855,6 +935,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen randevunuzu bugün bu e-postayı yanıtlayarak onaylayın.",
+            "Otel, önümüzdeki Cuma için rezervasyonumuzu onaylamak için aradı.",
+            "Son testler, yeni ilacın beklendiği gibi çalıştığını doğruluyor."
           ]
         },
         {
@@ -905,6 +990,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu iş için en az üç yıllık deneyime ihtiyacınız var.",
+            "Mağaza kartla ödeme kabul ediyor, ancak en az beş poundluk alışveriş şartıyla.",
+            "Günlük ekran sürenizi her zaman makul bir minimumda tutmaya çalışın."
           ]
         },
         {
@@ -955,6 +1045,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hayvanlar, insanların net bir şekilde duyamadığı sesleri algılayabilir.",
+            "Birçok müşteri, daha yüksek fiyatları daha iyi kalitenin bir işareti olarak algılar.",
+            "Onun ruh halindeki değişimi algılaması bir an sürdü."
           ]
         },
         {
@@ -1005,6 +1100,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mahalle, son on yıldır büyük ölçüde değişti.",
+            "On yılı aşkın bir süredir aynı şirkette çalışıyor.",
+            "Bu şarkı, yüzyılın ilk on yılında son derece popülerdi."
           ]
         },
         {
@@ -1055,6 +1155,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her bir katılımcıdan ürünü beş puanlık bir ölçekte derecelendirmesi istendi.",
+            "Anketteki neredeyse her katılımcı önerilen yeni politikayı destekledi.",
+            "Araştırmacı, her bir katılımcının görüşme sırasında ne söylediğini dikkatlice kaydetti."
           ]
         },
         {
@@ -1105,6 +1210,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Doktorlar plazmayı bağışlanan kanın geri kalanından hızla ayırdı.",
+            "Hastaneler, ciddi yanık yaralanmaları olan hastaları tedavi etmek için sık sık plazma depolar.",
+            "Laboratuvar, plazmanın farklı türdeki yeni ilaçlarla nasıl tepki verdiğini inceledi."
           ]
         },
         {
@@ -1155,6 +1265,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni güvenlik kuralları gelecek ayın biri itibarıyla yürürlüğe girecek.",
+            "Kazadan sonra iki motordan sadece biri hala çalışır durumdaydı.",
+            "Anlaşma, taraflardan biri iptal etmeye karar verene kadar geçerliliğini koruyacak."
           ]
         },
         {
@@ -1205,6 +1320,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İki tanık, sürücünün olaylarla ilgili anlatımını doğrulamak için öne çıktı.",
+            "Son çalışmalar, düzenli egzersiz ile daha iyi uyku arasındaki bağlantıyı doğrulamaktadır.",
+            "Dedektifin, şüphelinin tuhaf hikayesini doğrulamak için daha fazla kanıta ihtiyacı vardı."
           ]
         }
       ]
@@ -1259,6 +1379,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah dişlerimi fırçalamak, sağlıklı bir yaşam için iyi bir alışkanlıktır.",
+            "Gergin olduğunda tırnaklarını yeme gibi kötü bir alışkanlığı var.",
+            "Küçük kız kardeşimin duşta yüksek sesle şarkı söyleme alışkanlığı var."
           ]
         },
         {
@@ -1309,6 +1434,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Arkadaşımı aramam lazım, cep telefonum nerede?",
+            "Hızlı bir mesaj göndermek için telefonunu kullanabilir miyim?",
+            "Yeni telefonumun çok büyük bir ekranı ve iyi bir kamerası var."
           ]
         },
         {
@@ -1359,6 +1489,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Gösteri bittikten sonra, az sayıdaki seyirci yüksek sesle alkışladı.",
+            "Konsere kalabalık bir seyirci olmak için birçok kişi geldi.",
+            "Yeni kitabı hakkında tüm seyirciye konuştu."
           ]
         },
         {
@@ -1409,6 +1544,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çocuklar genellikle yiyecek ve giyecek konusunda ebeveynlerine bağlıdır.",
+            "Piknik yapılabilir ama hava durumuna bağlı olacak.",
+            "Sınavdaki başarım ne kadar çalıştığıma bağlı olacak."
           ]
         },
         {
@@ -1459,6 +1599,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yeni restoranı tavsiye edebilirim; yemekleri harika.",
+            "Doktor, daha sağlıklı bir yaşam tarzı için daha fazla egzersiz yapmasını tavsiye etti.",
+            "Şehirde gezilecek güzel yerler tavsiye eder misiniz?"
           ]
         },
         {
@@ -1509,6 +1654,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dün gece bu kadar geç dışarıda kalmaya niyetim yoktu.",
+            "Gelecek yıl diploması için yurt dışında okumaya niyetli.",
+            "Başlangıçta toplantının kısa sürmesi niyetindeydiler, ama saatler sürdü."
           ]
         },
         {
@@ -1559,6 +1709,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Projenin bütçesiyle ilgili endişeleri tamamen meşru görüldü.",
+            "Şirketin tazminat talebi meşru bir talep olarak değerlendirildi.",
+            "Kararın neden bu kadar hızlı alındığını sormak meşru bir sorudur."
           ]
         },
         {
@@ -1609,6 +1764,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kariyerinin zirvesindeydi ve büyük başarılar elde ediyordu.",
+            "Birçok insan yirmili yaşlarının hayatlarının en parlak dönemi olduğuna inanır.",
+            "Şirket, 90'lı yıllardaki ekonomik patlama sırasında zirvesine ulaştı."
           ]
         },
         {
@@ -1659,6 +1819,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Öğleden sonra boyunca yağmur aralıklıydı, bu da açık hava planlarını zorlaştırdı.",
+            "Aralıklı baş ağrıları yaşıyordu, bu da üretkenliğini öngörülemez hale getiriyordu.",
+            "Birkaç denemeye rağmen, internet bağlantısı aralıklı ve güvenilmez kaldı."
           ]
         },
         {
@@ -1709,6 +1874,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Müze sergisi, ondokuzuncu yüzyıl sanatını tüm ayrıntılarıyla ele alıyor.",
+            "Doğum günü bu yıl 19 Ağustos'a denk geliyor, yoğun bir gün.",
+            "Ondokuzuncu kata çıktıklarında, sonunda doğru ofisi buldular."
           ]
         },
         {
@@ -1759,6 +1929,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni politikalar, iklim değişikliğinin kıyı bölgeleri üzerindeki olumsuz etkilerini hafifletmeyi amaçlıyor.",
+            "Dikkatli planlama, büyük ölçekli projelerle ilişkili riskleri azaltmaya yardımcı olabilir.",
+            "Terapötik müdahaleler genellikle semptomları hafifletmeyi ve hasta konforunu artırmayı amaçlar."
           ]
         },
         {
@@ -1809,6 +1984,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Vasiyetnamede, tüm mal varlığının merhumun çocukları arasında dağıtılacağı belirtilmişti.",
+            "Polis, kapsamlı bir soruşturmanın ardından vefat eden kişinin kimliğini doğruladı.",
+            "Merhum eski başkanın anısını onurlandırmak için bir anma töreni düzenlendi."
           ]
         }
       ]
@@ -1863,6 +2043,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "O, İngilizce sınıfımda yeni bir öğrenci.",
+            "Birçok öğrenci kitap okumayı ve oyun oynamayı sever.",
+            "Öğretmen, her öğrencinin yeni kelimeler öğrenmesine yardımcı olur."
           ]
         },
         {
@@ -1913,6 +2098,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sanırım bugünkü uzun yolculuğundan sonra açsın.",
+            "Cevabı bildiğini sanma; lütfen ona doğrudan sor.",
+            "İçeride ışıklar kapalı olduğu için dükkanın kapalı olduğunu varsayıyoruz."
           ]
         },
         {
@@ -1963,6 +2153,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "O profesyonel bir dansçı; dans ederek para kazanıyor.",
+            "Müşterilerle konuşurken her zaman kibar ve profesyonel ol.",
+            "İşte daha profesyonel görünmek için takım elbise giyiyor."
           ]
         },
         {
@@ -2013,6 +2208,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen güneşe çıkmadan önce güneş kremini sürün.",
+            "Bu hafta yeni işe internetten başvurabilirsiniz.",
+            "Her sabah makyajını özenle yapmayı sever."
           ]
         },
         {
@@ -2063,6 +2263,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çiçeklerin parlak renkleri, sık sık arıları bahçeye çeker.",
+            "İyi bir sunum, işimize birçok yeni müşteri çekebilir.",
+            "Mıknatıslar, belirli metalleri çekerek kolayca birbirine yapışmalarını sağlar."
           ]
         },
         {
@@ -2113,6 +2318,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İş olanaklarını geliştirmek için yeni beceriler edinmek istiyor.",
+            "Şirketimiz gelecek yıl daha küçük bir işletmeyi satın almayı planlıyor.",
+            "Yeni bir ev için yeterli para biriktirmesi yıllarını aldı."
           ]
         },
         {
@@ -2163,6 +2373,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yoğun trafiği beklemiyorduk, bu yüzden toplantıya geç kaldık.",
+            "Şirket, rekabetçi kalmak ve büyümek için pazar değişikliklerini öngörmeli.",
+            "Zorlu bir müzakere bekliyor ama her türlü zorluğa karşı iyi hazırlanmış."
           ]
         },
         {
@@ -2213,6 +2428,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu karmaşık talimatları bir uzmanın yardımı olmadan yorumlamak zor.",
+            "Yeni hükümetin iklim değişikliği konusundaki politikasını nasıl yorumluyorsunuz?",
+            "Onun sessizliğinin gerçekte ne anlama geldiğini merak ederek yorumlamaya çalıştı."
           ]
         },
         {
@@ -2263,6 +2483,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hastalığın erken teşhisi, tedavi sonuçlarını önemli ölçüde iyileştirir.",
+            "Güvenlik sistemi, herhangi bir yetkisiz girişin tespitine karşı oldukça hassastır.",
+            "Bilim insanları, sudaki kirliliğin tespiti için yeni yöntemler üzerinde çalışıyorlar."
           ]
         },
         {
@@ -2313,6 +2538,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kitap, ekonomik teoriler ve tarihi olayların etkileyici bir sentezini sunuyor.",
+            "Araştırması, nitel ve nicel verilerin dikkat çekici bir sentezini gerçekleştirdi.",
+            "Yeni bir kimyasal bileşik oluşturmak genellikle karmaşık bir moleküler sentez süreci gerektirir."
           ]
         },
         {
@@ -2363,6 +2593,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kuruluş, kritik sağlık bilgilerini kırsal topluluklara geniş çapta yaymayı hedefliyor.",
+            "Araştırmacılar, bulgularını akademik dergiler ve konferanslar aracılığıyla yaymak için çalışıyorlar.",
+            "Sosyal medya platformları, hem doğru hem de yanlış haberleri küresel olarak hızla yayabilir."
           ]
         },
         {
@@ -2413,6 +2648,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Savcı, sanığın kilit delillerle oynadığını iddia etti.",
+            "Siyasetçinin kampanyası sırasında yasa dışı ödemeler kabul ettiği iddia edildi.",
+            "Tanıklar yaygın dolandırıcılık iddia etti, ancak hemen kesin bir kanıt bulunamadı."
           ]
         }
       ]
@@ -2467,6 +2707,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ev anahtarım çantamda, kapıyı açabilirim.",
+            "Araba anahtarı nerede? Şimdi araba sürmem gerekiyor.",
+            "Lütfen bana ofis kapısının anahtarını ver."
           ]
         },
         {
@@ -2517,6 +2762,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Londra, ziyaret edilecek birçok ünlü yeri olan büyük bir şehirdir.",
+            "Küçük bir şehirde yaşıyorum ama iyi dükkanları ve parkları var.",
+            "Şehirde mi yaşamayı seversin yoksa sakin kırsal bölgede mi?"
           ]
         },
         {
@@ -2567,6 +2817,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Fil devasa bir hayvandı, bir arabadan çok daha büyüktü.",
+            "Doğum günü partisinde kocaman bir dilim pasta yedi.",
+            "Konserde çok büyük bir insan kalabalığı vardı."
           ]
         },
         {
@@ -2617,6 +2872,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Toplantımız için bana belirli bir zaman verebilir misiniz, lütfen?",
+            "Tren tarifesi hakkında belirli bilgilere ihtiyacım var.",
+            "Çok net bir hedefi var: Bu yıl Fransızca öğrenmek."
           ]
         },
         {
@@ -2667,6 +2927,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kutup ışıkları, gece gökyüzünde görülebilen güzel bir doğal olgudur.",
+            "O yeni şarkının ani popülerliği garip bir kültürel olgudur.",
+            "Artan küresel sıcaklıklar, herkesi etkileyen ciddi bir çevresel olgudur."
           ]
         },
         {
@@ -2717,6 +2982,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Müdür, personel izne çıkmadan önce tüm tatil isteklerini onaylamak zorunda.",
+            "Annemler yeni dövmemi onaylamayacaklar, eminim.",
+            "Komite, gelecek yıl için yeni bütçeyi onaylıyor mu?"
           ]
         },
         {
@@ -2767,6 +3037,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun adanmışlığı ve sıkı çalışması nedeniyle ona büyük saygı duyuyor.",
+            "Onları bir dahaki görüşünde ailene benden çok selam söyle lütfen.",
+            "Yeni politika, halktan ve paydaşlardan karışık tepkiler aldı."
           ]
         },
         {
@@ -2817,6 +3092,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen çevrimiçi sipariş verirken tercih ettiğiniz teslimat tarihini belirtin.",
+            "Sözleşme, ilgili her bir tarafın kesin sorumluluklarını belirtmelidir.",
+            "Vize başvurusu için hangi belgelerin gerekli olduğunu belirtebilir misiniz?"
           ]
         },
         {
@@ -2867,6 +3147,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni politikanın başarılı bir şekilde uygulanması, genel operasyonel verimliliği önemli ölçüde artırdı.",
+            "Proje yöneticileri, karmaşık teknik değişikliklerin uygulanmasını denetlemekten sorumludur.",
+            "Etkili uygulama stratejileri, uzun vadeli kurumsal hedeflere ulaşmak için çok önemlidir."
           ]
         },
         {
@@ -2917,6 +3202,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Süt ürünleri, güçlü kemikler ve dişler için gerekli olan mükemmel bir kalsiyum kaynağıdır.",
+            "Doktorlar, büyüyen çocukların yeterli kalsiyum almasını sağlamak için sık sık kalsiyum takviyeleri tavsiye ederler.",
+            "Birçok bitkisel süt, süt ürünlerinin besin değerini yakalamak için kalsiyumla zenginleştirilmiştir."
           ]
         },
         {
@@ -2967,6 +3257,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sunulan kanıtlar o kadar zayıftı ki jüri davayı hızla reddetti.",
+            "Yaygın protestoların ardından iktidardaki konumları giderek sallantılı hale geldi.",
+            "Ailesiyle zayıf bir bağ sürdürdü, onlarla nadiren iletişime geçiyordu."
           ]
         },
         {
@@ -3017,6 +3312,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Antik gözlemevi, eşsiz manzaralar sunan en yüksek zirvenin tepesine stratejik olarak konumlanmıştır.",
+            "Uzak konumuna rağmen, araştırma tesisi büyük bir ulaşım merkezinin yakınında elverişli bir şekilde konumlanmıştır.",
+            "Mevcut finansal varlıkları ağırlıklı olarak yüksek getirili, uzun vadeli yatırım portföylerinde yer almaktadır."
           ]
         }
       ]
@@ -3071,6 +3371,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her akşam salonda rahat bir sandalyede otururum.",
+            "Lütfen oturun, yanımda boş bir sandalye var.",
+            "Küçük köpeğim, en sevdiğim çalışma sandalyemin altında uyumayı sever."
           ]
         },
         {
@@ -3121,6 +3426,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen odadan çıkarken kapıyı kapatın.",
+            "Şimdi kitabını kapatabilir misin? Öğle yemeği vakti.",
+            "Dükkan bugün saat beşte kapanacak."
           ]
         },
         {
@@ -3171,6 +3481,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Anne babasının kararları üzerinde büyük etkisi var.",
+            "Günümüzde sosyal medyanın gençler üzerinde güçlü bir etkisi var.",
+            "Hava durumunun ruh halimiz üzerinde etkisi olabilir."
           ]
         },
         {
@@ -3221,6 +3536,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Önemli toplantıya geç kaldığım için özür dilemeliyim.",
+            "Kız kardeşinden oyuncağını kırdığı için özür dileyecek.",
+            "Gürültü yaptığınız için lütfen öğretmeninizden özür dileyin."
           ]
         },
         {
@@ -3271,6 +3591,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket bu yıl beklenenden çok daha fazla, ciddi bir kâr elde etti.",
+            "Dinlenmiş ve sağlıklı hissetmek için hatırı sayılır miktarda uykuya ihtiyacın var.",
+            "Geçen ay süpermarkette fiyatlarda ciddi bir artış oldu."
           ]
         },
         {
@@ -3321,6 +3646,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yaz turist sayısında önemli bir artış yaşandı.",
+            "Şirket, son çeyrekte satışlarda hafif bir artış bildirdi.",
+            "Önümüzdeki birkaç gün içinde sıcaklıklarda kademeli bir artış bekliyoruz."
           ]
         },
         {
@@ -3371,6 +3701,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Düzenli egzersiz, genel sağlığınızı ve refahınızı önemli ölçüde geliştirebilir.",
+            "Taze otlar eklemek, bu basit makarna yemeğinin lezzetini zenginleştirecektir.",
+            "Yeni yazılım özellikleri, genellikle kullanıcı deneyimini ve verimliliği geliştirir."
           ]
         },
         {
@@ -3421,6 +3756,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Nihai bir karar vermeden önce riskleri dikkatlice değerlendirmemiz gerekiyor.",
+            "Öğretmenler, etkili öğrenmeyi sağlamak için öğrenci gelişimini düzenli olarak değerlendirirler.",
+            "Yeni bir yazılım seçmeden önce tüm seçenekleri değerlendirmek önemlidir."
           ]
         },
         {
@@ -3471,6 +3811,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mimar, bir dinginlik hissi yaratmak için binanın güçlü yatay hatlarını vurguladı.",
+            "Tuvalin üzerine mükemmel bir yatay çizgi çizerek alanı basitçe böldü.",
+            "Denge için mühendis, köprüyü sağlam yatay ve dikey elemanlarla tasarladı."
           ]
         },
         {
@@ -3521,6 +3866,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şehirlerdeki yüksek nüfus yoğunluğu trafik sıkışıklığına neden olur.",
+            "Bilim insanları, yeni alaşımın dayanıklılığını test etmek için yoğunluğunu ölçtüler.",
+            "Ormanın ağaç yoğunluğu, sık bitki örtüsünün arasından yürümeyi zorlaştırdı."
           ]
         },
         {
@@ -3571,6 +3921,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ziyaretinin görünürdeki nedeni arkadaşlarını görmekti, ama aslında bilgi arıyordu.",
+            "Şirketin görünürdeki amacı pazar genişlemesiydi, oysa gerçek hedefleri varlıkları elden çıkarmaktı.",
+            "Görünürdeki sebep teknik bir aksaklık olsa da, birçok kişi sabotajdan şüpheleniyordu."
           ]
         },
         {
@@ -3621,6 +3976,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun gerçekten nev-i şahsına münhasır tarzı, onu her kalabalıkta anında tanınır kılıyordu.",
+            "Sanatçının resim tekniği oldukça kendine özgüydü; alışılmadık renkleri ve dokuları harmanlıyordu.",
+            "Karmaşık görevlere odaklanırken hafifçe mırıldanmak gibi kendine özgü bir alışkanlığı vardı."
           ]
         }
       ]
@@ -3675,6 +4035,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Okul, favori sporlar hakkında kısa bir anket yaptı.",
+            "Yeni park hakkında kısa bir anket doldurduk.",
+            "Öğretmenim bizden sağlıklı yiyecekler hakkında bir anket yapmamızı istedi."
           ]
         },
         {
@@ -3725,6 +4090,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ailem bahçeli büyük bir evde yaşıyor.",
+            "Geniş bir aileniz mi var, yoksa küçük mü?",
+            "Mutlu bir aile olarak sık sık birlikte akşam yemeği yeriz."
           ]
         },
         {
@@ -3775,6 +4145,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şarkıcı, bu akşam konserde yeni şarkısını seslendirecek.",
+            "Çocuklara birçok sihir numarası yapabilir.",
+            "Doktorun hızlıca küçük bir ameliyat yapması gerekiyor."
           ]
         },
         {
@@ -3825,6 +4200,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Eski masanın sağlam durabilmesi için güçlü bir desteğe ihtiyacı var.",
+            "Birçok insan yeni parka destek verdi.",
+            "Zor bir zamanda arkadaşına çok fazla duygusal destek verdi."
           ]
         },
         {
@@ -3875,6 +4255,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Projenin kapsamı oldukça geniş, bu nedenle birçok görev dahil.",
+            "Ekibimizin performansında hala çok fazla geliştirme alanı var.",
+            "Zamanında bitirmek için araştırmamızın kapsamını sınırlamamız gerekiyor."
           ]
         },
         {
@@ -3925,6 +4310,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Cumhurbaşkanı gelecek hafta eğitimle ilgili yeni politikaları açıklayacak.",
+            "Gösterinin sonunda yarışmanın kazananını duyurmayı planlıyorlar.",
+            "Uçuş gecikmesini henüz anons ettiler mi?"
           ]
         },
         {
@@ -3975,6 +4365,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun sessizliği, yeni teklife katılmadığını ima eder gibiydi.",
+            "Dün işimi düzgün yapmadığımı mı ima etmeye çalışıyorsun?",
+            "Rapor bunu doğrudan belirtmiyor ama bir değişim ihtiyacını ima ediyor."
           ]
         },
         {
@@ -4025,6 +4420,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Takımın, yeni proje için en iyi stratejiyi görüşmesi gerekiyor.",
+            "Üniversite, gelecek ay seçkin mezunlarına fahri dereceler tevcih edecek.",
+            "Karar vermeden önce, komite üyeleri birkaç dakikalığına özel olarak görüşmeye karar verdiler."
           ]
         },
         {
@@ -4075,6 +4475,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tartışma tamamen anlamsaldı, kelimelerin tam yorumlanmasına odaklanıyordu.",
+            "Bir metnin anlamsal inceliklerini anlamak, doğru çeviri için çok önemlidir.",
+            "Programcılar, kod mantıklarında anlamsal hata olmadığından emin olmalıdır."
           ]
         },
         {
@@ -4125,6 +4530,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket geçen ay ana operasyonlarını şehir merkezindeki yeni işyerine taşıdı.",
+            "İzinsiz girişi önlemek için tesisin her yerine güvenlik kameraları kuruludur.",
+            "Ziyaretçiler, güvenlik nedenleriyle fabrika sahasına girmeden önce resepsiyonda kayıt yaptırmalıdır."
           ]
         },
         {
@@ -4175,6 +4585,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sanatçı, canlı modern sanatı klasik heykellerle yan yana getirmeyi tercih etti.",
+            "Eleştirmenler, filmin sert gerçekçiliğini fantastik anlarıyla sık sık yan yana getirir.",
+            "Denemelerinde tarihi anlatıları çağdaş sosyal yorumlarla yan yana getirmeyi sever."
           ]
         },
         {
@@ -4225,6 +4640,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Cerrah, hastanın ön çapraz bağını herhangi bir hasar olup olmadığını dikkatlice inceledi.",
+            "İnsan anatomisinde kalp, göğüs boşluğunun ön kısmında yer alır.",
+            "Deniz biyologları, balığın itme için hayati olan belirgin bir ön yüzgeç sergilediğini gözlemledi."
           ]
         }
       ]
@@ -4279,6 +4699,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İngilizce, birçok insan için çok yaygın bir dünya dilidir.",
+            "Evde ailenle hangi dili konuşuyorsun?",
+            "Yeni bir dil öğrenmek eğlenceli ve çok ilginç olabilir."
           ]
         },
         {
@@ -4329,6 +4754,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Susayınca su içmeyi severim.",
+            "O her sabah işten önce kahve içer.",
+            "Dışarıda oynadıktan sonra biraz meyve suyu içebilir miyiz?"
           ]
         },
         {
@@ -4379,6 +4809,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Takım beş oyuncudan oluşur: üç erkek ve iki kız.",
+            "Sağlıklı bir kahvaltı meyve, tahıl ve sütten oluşmalı.",
+            "Günlük rutinim çoğunlukla iş, yemek yemek ve uyumaktan oluşur."
           ]
         },
         {
@@ -4429,6 +4864,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Benim asıl ilgim arkadaşlarımla futbol oynamak.",
+            "Eski kitaplara ve tarihe büyük bir ilgisi var.",
+            "İş dışında özel ilgi alanların var mı?"
           ]
         },
         {
@@ -4479,6 +4919,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun araştırması, zor sorun hakkında bize yeni bir anlayış kazandırdı.",
+            "Kitap, farklı kültürlere dair büyüleyici bir anlayış sunuyor.",
+            "Onunla konuşmak, onun gerçek duyguları hakkında değerli bilgiler sağladı."
           ]
         },
         {
@@ -4529,6 +4974,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Rüzgar türbinleri, birçok ev için temiz elektrik üretmeye yardımcı olur.",
+            "Yeni pazarlama kampanyası, ürünlerimize daha fazla ilgi oluşturmayı hedefliyor.",
+            "İyi bir sunum, birçok ilginç soru ortaya çıkarabilir."
           ]
         },
         {
@@ -4579,6 +5029,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Toplantının ana odak noktası yeni proje bütçesini tartışmaktı.",
+            "Sanatsal odağı manzaralardan daha soyut portrelere kaydı.",
+            "Gürültüye rağmen, zor görevine net bir şekilde odaklanmayı sürdürdü."
           ]
         },
         {
@@ -4629,6 +5084,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Artan sorumluluktan çekindiği için terfiyi kabul etmekte isteksizdi.",
+            "Hükümet, daha katı çevre düzenlemelerini yürürlüğe koymakta isteksiz görünüyordu.",
+            "Soğuğa rağmen kalın kışlık paltosunu giymeye gönülsüzdü."
           ]
         },
         {
@@ -4679,6 +5139,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tanığın tutarlı ifadesi, jüri nezdindeki inandırıcılığını önemli ölçüde artırdı.",
+            "Geçmişteki eylemleri, ne yazık ki ekip içindeki liderlik güvenilirliğini zedeledi.",
+            "Gazetecilik güvenilirliğini korumak için, kaynaklar her zaman titizlikle doğrulanmalı ve belirtilmelidir."
           ]
         },
         {
@@ -4729,6 +5194,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun bütçe krizini çözme yaklaşımı çok pragmatik ve etkiliydi.",
+            "Pragmatik bir lider, idealist vizyonlar yerine ulaşılabilir hedeflere öncelik verir.",
+            "İklim değişikliğiyle acilen mücadele etmek için pragmatik bir plana ihtiyacımız var."
           ]
         },
         {
@@ -4779,6 +5249,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Profesörden, karmaşık teoriyi öğrenciler için daha detaylı bir şekilde açıklaması istendi.",
+            "Bu oldukça tartışmalı kararın arkasındaki gerekçenizi lütfen açıklayabilir misiniz?",
+            "Yeni araştırma bulguları, gizemli olayın nedenlerini aydınlatmaya yardımcı olabilir."
           ]
         },
         {
@@ -4829,6 +5304,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Paranın mutluluk satın aldığına dair yaygın inanış, geniş çapta kabul görmüş bir yanılgıdır.",
+            "Argümanı mantıksal bir safsata üzerine kuruluydu, bu da onu çürütmeyi kolaylaştırıyordu.",
+            "Birçok ekonomi teorisi, sonsuz büyüme yanılgısına dayanır."
           ]
         }
       ]
@@ -4883,6 +5363,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ellerim sabunla yıkandıktan sonra temiz.",
+            "Lütfen odanı her gün temiz ve düzenli tut.",
+            "Beyaz gömlek çok temiz ve yeni görünüyor."
           ]
         },
         {
@@ -4933,6 +5418,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Matematik sorusunun doğru cevabı nedir?",
+            "Basit soruma hızlı bir cevap verdi.",
+            "Yakında cevaplı bir mektup almayı umuyorum."
           ]
         },
         {
@@ -4983,6 +5473,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bisikletinden düştü ve bacağını incitebilir.",
+            "Bıçakla dikkatli ol lütfen, kendine zarar verme.",
+            "Şiddetli rüzgar bahçedeki küçük ağaçlara zarar verebilir."
           ]
         },
         {
@@ -5033,6 +5528,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ziyaretimin başlıca nedeni ailemi görmektir.",
+            "Bu iki araba arasındaki başlıca fark nedir?",
+            "Bu yılki okul oyununda başrolü var."
           ]
         },
         {
@@ -5083,6 +5583,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şiddetli rüzgarlar eski binada büyük hasara yol açtı.",
+            "Sigara içmek zamanla akciğerlerinize ciddi hasar verebilir.",
+            "Neyse ki, yangın mutfakta sadece hafif hasara neden oldu."
           ]
         },
         {
@@ -5133,6 +5638,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Normal öğretmen hastaydı, bu yüzden yerine başka biri geldi.",
+            "Akşam yemeği için normal inek sütü yerine soya sütü kullandık.",
+            "Şekerin yoksa, birçok tarifte bal iyi bir alternatif olabilir."
           ]
         },
         {
@@ -5183,6 +5693,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Okul, öğrencilere gelecekteki kariyerleri için temel beceriler kazandırmayı amaçlar.",
+            "Dağcılar, keşif gezisinden önce kendilerini özel ekipmanlarla dikkatlice donatırlar.",
+            "Yeni bilgisayarlar ofisi donatarak verimliliği ve üretkenliği büyük ölçüde artıracak."
           ]
         },
         {
@@ -5233,6 +5748,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "E-postası o kadar belirsizdi ki, mutlu mu üzgün mü olduğunu anlayamadım.",
+            "Politikacının konuşması, gelecekteki politika değişiklikleri hakkında birkaç muğlak ifade içeriyordu.",
+            "Muğlak ifadeler nedeniyle sözleşmenin bir avukat tarafından incelenmesi gerekiyordu."
           ]
         },
         {
@@ -5283,6 +5803,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet, çevre korumayı düzenlemek için yeni bir kararname yayımladı.",
+            "Kralın eski fermanı tüm krallıkta hala yürürlükteydi.",
+            "Bir mahkeme, bir boşanma anlaşmasını kesinleştirmek için bir karar verebilir."
           ]
         },
         {
@@ -5333,6 +5858,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Uzak köy, yoğun kar nedeniyle haftalarca tamamen izole edilmişti.",
+            "Bulaşıcı hastalığı olan birçok hasta, daha fazla yayılmayı önlemek için tecrit edilir.",
+            "Belirli bileşik, laboratuvarda karmaşık karışımdan başarıyla ayrıştırıldı."
           ]
         },
         {
@@ -5383,6 +5913,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sanat uzmanı, nadir tablonun özgünlüğünü ve değerini değerlendirmek üzere işe alındı.",
+            "Yöneticiler, yapıcı geri bildirim sunmak amacıyla çalışanlarının performansını düzenli olarak değerlendirir.",
+            "Teklif vermeden önce, alıcının mülkün yapısal durumunu değerlendirmesi gerekir."
           ]
         },
         {
@@ -5433,6 +5968,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Matbaanın icadı, Aydınlanma Çağı'nın önemli bir öncüsüydü.",
+            "Yapay zeka ile yapılan ilk deneyler, günümüzün karmaşık sinir ağlarının sadece öncüleriydi.",
+            "Bu küçük sarsıntılar, çok daha büyük bir sismik olayın habercisi olabilir."
           ]
         }
       ]
@@ -5487,6 +6027,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah küçük bir plastik şişeden su içerim.",
+            "Lütfen boş süt şişesini buzdolabına koyar mısın?",
+            "Bebek özel küçük bir şişeden meyve suyu içer."
           ]
         },
         {
@@ -5537,6 +6082,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Londra uçağına yetişmek için havalimanına gittik.",
+            "Ben gelince ailem beni havalimanında karşılayacak.",
+            "Havalimanında birçok dükkan ve restoran var."
           ]
         },
         {
@@ -5587,6 +6137,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen yeni saç kesimimi eleştirmeyin; onu gerçekten çok beğendim.",
+            "Başkalarının fikirlerini her zaman eleştirmek iyi değil.",
+            "Hata yaptığımda öğretmenim beni sık sık eleştirir."
           ]
         },
         {
@@ -5637,6 +6192,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Gelecek haftanın hava durumunu tahmin etmek zor.",
+            "Yarınki maçı kimin kazanacağını tahmin edebilir misin?",
+            "Uzmanlar, şehirde fiyatların yakında artacağını tahmin ediyorlar."
           ]
         },
         {
@@ -5687,6 +6247,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hayır kurumunun yeni projelerini desteklemek için büyük bir fona ihtiyacı var.",
+            "Gelecek yılki Japonya gezimiz için küçük bir fon başlattık.",
+            "Şirketin çalışan eğitimi ve gelişimi için özel bir fonu var."
           ]
         },
         {
@@ -5737,6 +6302,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Toplantı sırasındaki mükemmel davranışı herkesi etkiledi.",
+            "Okulun gezilerdeki öğrenci davranışları hakkında katı kuralları var.",
+            "Başarılı bir kariyer için iyi mesleki tutum şarttır."
           ]
         },
         {
@@ -5787,6 +6357,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Temiz suya erişim, insan sağlığı ve gelişimi için hayati öneme sahiptir.",
+            "Gezegenimizin doğal kaynaklarını gelecek nesiller için korumamız hayati önem taşımaktadır.",
+            "Bir ekip ortamında çalışırken etkili iletişim hayati öneme sahiptir."
           ]
         },
         {
@@ -5837,6 +6412,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Takım, şampiyonluk maçında zorlu bir rakiple karşılaştı.",
+            "Yerleşik siyasi sisteme zorlu bir meydan okuma sundu.",
+            "Yeni bir dil öğrenmek, birçok kişi için göz korkutucu bir görev olabilir."
           ]
         },
         {
@@ -5887,6 +6467,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İki maçın toplam skoru şampiyonanın kazananını belirledi.",
+            "Eğilimleri belirlemek için tüm müşteri anketlerinden gelen toplam verileri analiz ettik.",
+            "Çeyrekteki toplam kârları, güçlü satışlar sayesinde ilk tahminleri aştı."
           ]
         },
         {
@@ -5937,6 +6522,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Önemli bir detayın kazara gözden kaçırılması, toplantı sırasında kafa karışıklığına neden oldu.",
+            "Raporundaki eksiklikten dolayı özür diledi ve bunu düzelteceğine söz verdi.",
+            "Gerçekleri sürekli eksik bırakması, anlattıklarına güvenmeyi zorlaştırdı."
           ]
         },
         {
@@ -5987,6 +6577,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun iş zekası, şirketin hızlı büyümesinde ve piyasa başarısında açıkça görülüyordu.",
+            "Karmaşık müzakereleri kolaylıkla yöneterek olağanüstü bir siyasi zeka sergiledi.",
+            "Güçlü bir finansal kavrayış geliştirmek, etkili kişisel ve kurumsal yönetim için hayati öneme sahiptir."
           ]
         },
         {
@@ -6037,6 +6632,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bütçe kısıtlamaları, bir şirketin hızla yenilik yapma ve genişleme yeteneğini sık sık kısıtlar.",
+            "Komitenin koyduğu katı kurallar, bireysel üyelerin özerkliğini kısıtlayacaktır.",
+            "Teknolojik gelişmeler, geleneksel yöntemleri bazen sınırlayarak onları eskimiş hale getirebilir."
           ]
         }
       ]
@@ -6091,6 +6691,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her Cuma akşamı akşam yemeğinde pizza yemeyi severim.",
+            "Yarın sabah benimle kahvaltı yapmak ister misin?",
+            "Kedim balık ve küçük tavuk parçaları yemeyi sever."
           ]
         },
         {
@@ -6141,6 +6746,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ailemle küçük mavi bir evde yaşıyorum.",
+            "Arkadaşımın evinin büyük bir bahçesi ve birçok çiçeği var.",
+            "Yarın caddedeki yeni eve gideceğiz."
           ]
         },
         {
@@ -6191,6 +6801,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dün gece tüm ödevlerini bitirebildin mi?",
+            "Aynı anda hem çalışıp hem de ders çalışmayı nasıl başardığını bilmiyorum.",
+            "Bu ağır çantaları tek başına taşıyabilir misin?"
           ]
         },
         {
@@ -6241,6 +6856,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yıl şehirdeki suç oranı daha düşük.",
+            "Bu yarı zamanlı işin saatlik ücreti nedir?",
+            "Otel, büyük aileler için özel bir fiyat sunuyor."
           ]
         },
         {
@@ -6291,6 +6911,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet, çevreyi daha iyi korumak için yasayı değiştirmeye karar verdi.",
+            "Lütfen raporunu müdüre göndermeden önce düzelt.",
+            "Yeni toplantıyı sığdırmak için programı değiştirmemiz gerekiyor."
           ]
         },
         {
@@ -6341,6 +6966,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Toplantı gündemindeki ilk madde yeni pazarlama stratejisiydi.",
+            "Yaklaşan ekip tartışmamız için bir gündem belirlememiz gerekiyor.",
+            "Konferanstan önce her katılımcı, günün gündeminin bir kopyasını aldı."
           ]
         },
         {
@@ -6391,6 +7021,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Acil servisler olay yerine çok çabuk geldi.",
+            "Acil e-postaya verdiği hızlı yanıt, çabuk karar vermemizi sağladı.",
+            "Sunulan tüm hizmetler için zamanında ödeme bekliyoruz."
           ]
         },
         {
@@ -6441,6 +7076,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, piyasa eğilimlerine kapsamlı bir genel bakış sundu.",
+            "Öğrencilerin sınav için konu hakkında kapsamlı bir anlayışa sahip olmaları gerekiyor.",
+            "Yeni sağlık planımız birçok hizmet için kapsamlı teminat sunuyor."
           ]
         },
         {
@@ -6491,6 +7131,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çalışanlar, şirket performansı ve bireysel katkılara göre takdire bağlı bir ikramiye alırlar.",
+            "Lüks eşyalara yapılan harcamalar genellikle temel ihtiyaç değil, isteğe bağlı harcanabilir gelir olarak kabul edilir.",
+            "Komitenin, finansman tekliflerini onaylama veya reddetme konusunda takdir yetkisi vardır."
           ]
         },
         {
@@ -6541,6 +7186,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Başarısızlık korkusu, genç sanatçılarda yaratıcılığı sık sık engelleyebilir.",
+            "Bazı kimyasallar, zararlı bakterilerin büyümesini etkili bir şekilde engelleyebilir.",
+            "Katı kurallar, bazen öğrencilerin doğal merakını ve keşfetme isteğini engelleyebilir."
           ]
         },
         {
@@ -6591,6 +7241,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Küçük protesto grupları güçlü bir harekete dönüşmek için birleşmeye başladı.",
+            "Zamanla, birbirinden bağımsız fikirler genellikle tutarlı bir teoriye dönüşür.",
+            "Muhalefetin siyasi olarak başarılı olabilmesi için çeşitli grupların bir araya gelmesi şarttır."
           ]
         },
         {
@@ -6641,6 +7296,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dedektif, ipuçları bulmak için olay yerindeki her detayı titizlikle incelemeye başladı.",
+            "İmzalamadan önce, karmaşık yasal belgeyi hata olup olmadığını görmek için titizlikle inceledi.",
+            "Uzmanlar, antik eserin orijinalliğini ve kökenini titizlikle incelemek üzere çağrıldı."
           ]
         }
       ]
@@ -6695,6 +7355,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İyi sınav notu, sıkı çalışmanın bir sonucuydu.",
+            "Futbol maçının sonucu ne?",
+            "Toplantıdan olumlu bir sonuç umuyoruz."
           ]
         },
         {
@@ -6745,6 +7410,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sana katılıyorum; film çok iyiydi.",
+            "Kardeşimle ben akşam yemeği için ne yiyeceğimiz konusunda her zaman anlaşıyoruz.",
+            "Bu gece partiye gitmeyi kabul etmedi."
           ]
         },
         {
@@ -6795,6 +7465,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yıl İngilizceyi iyi öğrenme hedefine ulaşmak istiyor.",
+            "Okul derslerinde iyi sonuçlar elde etmek için sıkı çalışma gerekir.",
+            "Her gün elinden gelenin en iyisini yaparsan her şeyi başarabilirsin."
           ]
         },
         {
@@ -6845,6 +7520,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ailesinin büyük bir serveti var, bu yüzden büyük bir evde yaşıyorlar.",
+            "Birçok insan, piyangoyu kazanmak gibi ani servetin hayalini kurar.",
+            "Servetini başkalarıyla paylaşmak olumlu bir fark yaratabilir."
           ]
         },
         {
@@ -6895,6 +7575,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yolda bir hız sınırı var, bu yüzden dikkatli sürün.",
+            "Öğrencilerin testi tamamlamak için bir saatlik süre sınırı var.",
+            "Kredi kartımın iki bin avroluk bir harcama limiti var."
           ]
         },
         {
@@ -6945,6 +7630,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Duvar kağıdında güller ve yapraklarla güzel bir çiçek deseni vardı.",
+            "Sabah toplantılarına geç kalmalarda bir düzen fark ettik.",
+            "Bilim insanları, gelecekteki iklim değişikliklerini tahmin etmek için hava durumu örüntülerini inceler."
           ]
         },
         {
@@ -6995,6 +7685,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dinleyiciler için son noktanızı açıklayabilir misiniz lütfen?",
+            "Öğretmen, sınavdaki cevabımı açıklamamı istedi.",
+            "İşe başlamadan önce projenin hedeflerini netleştirmemiz gerekiyor."
           ]
         },
         {
@@ -7045,6 +7740,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kitabın ana teması özgürlük ve adalet mücadelesidir.",
+            "Çevre koruma, modern siyasi tartışmalarda tekrar eden bir temadır.",
+            "Partisi için parlak süslemelerle tropik ada teması seçti."
           ]
         },
         {
@@ -7095,6 +7795,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Müze, entomoloji koleksiyonu için nadir bir böcek örneği edindi.",
+            "Bilim insanları, jeolojik kökenini belirlemek için kaya örneğini dikkatlice analiz etti.",
+            "Antik çanak çömleğin bu özel örneği, kültür hakkında çok şey ortaya koyuyor."
           ]
         },
         {
@@ -7145,6 +7850,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mimar, cephesinde çarpıcı bir dikey bahçe bulunan bir bina tasarladı.",
+            "Dağcılar, sarp dikey kayalığa etkileyici bir çeviklik ve cesaretle tırmandı.",
+            "Düzgün bir görünüm sağlamak için perdeleri tam dikey olarak hizaladık."
           ]
         },
         {
@@ -7195,6 +7905,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni laboratuvarın eşiğini geçerken, büyük bir heyecan dalgası hissetti.",
+            "Şirket kritik bir kâr eşiğine ulaştı ve bu durum önemli yatırımları tetikledi.",
+            "Toplum şu anda büyük teknolojik gelişmelerin eşiğinde."
           ]
         },
         {
@@ -7245,6 +7960,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Uykusuzluk, mevcut stresinizi ve yorgunluğunuzu yalnızca daha da artıracaktır.",
+            "Onun duyarsız yorumları, zaten gergin olan toplantıdaki tansiyonu daha da artırdı.",
+            "Artan akaryakıt fiyatları, birçok hanenin karşılaştığı ekonomik zorlukları daha da kötüleştirebilir."
           ]
         }
       ]
@@ -7299,6 +8019,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ağabeyim her akşam ödevlerimde bana yardım eder.",
+            "Ailende erkek kardeşin ya da kız kardeşin var mı?",
+            "Parkta küçük erkek kardeşiyle futbol oynar."
           ]
         },
         {
@@ -7349,6 +8074,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah kahvaltıda kırmızı bir elma yemeyi severim.",
+            "Bugün beslenme çantasına küçük yeşil bir elma koydu.",
+            "En sevdiğim meyve suyu birçok taze elmadan yapılır."
           ]
         },
         {
@@ -7399,6 +8129,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yerel halkın çoğu yeni yol projesine şiddetle karşı çıkacak.",
+            "O, erkek kardeşinin yeni fikirlerine sık sık karşı çıkar çünkü onlar genellikle saçmadır.",
+            "Küçük takım, çok daha güçlü bir rakibe karşı koymak zorunda."
           ]
         },
         {
@@ -7449,6 +8184,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Otobüs tarifem her sabah saat 8'de kalktığını gösteriyor.",
+            "Gelecek hafta iş programın ne, lütfen?",
+            "Öğretmen tüm öğrenciler için yeni bir ders programı hazırladı."
           ]
         },
         {
@@ -7499,6 +8239,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mükemmel makarna yapmak için yeni bir mutfak tekniği öğrendi.",
+            "Yıllarca süren özverili pratikten sonra resim tekniği gelişti.",
+            "Antrenör onlara topu atmak için özel bir teknik öğretti."
           ]
         },
         {
@@ -7549,6 +8294,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bütün hafta sıkı çalıştıktan sonra, uzun bir dinlenmeyi ve bir mola vermeyi gerçekten hak ediyor.",
+            "Takım o kadar iyi oynadı ki, sonunda maçı kazanmayı gerçekten hak ettiler.",
+            "Bazen, bunları hiç hak etmeyen iyi insanların başına kötü şeyler gelir."
           ]
         },
         {
@@ -7599,6 +8349,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen ekranda verilen listeden tercih ettiğiniz dili seçiniz.",
+            "Komite, gelecek haftanın sonuna kadar yeni bir ekip lideri seçecek.",
+            "Sunumu için yüzlerce arasından en iyi fotoğrafları seçmek zorunda kaldı."
           ]
         },
         {
@@ -7649,6 +8404,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, mali kayıtlarını halka açıklamaya yasal olarak mecburdu.",
+            "Gizli bilginin kaynağını polise açıklamayı reddetti.",
+            "Gazeteciler, isimsiz kaynaklarını açıklamamaları için sık sık baskıyla karşılaşırlar."
           ]
         },
         {
@@ -7699,6 +8459,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Profesör, fikrini açıklamak için çok sayıda tarihi metni kaynak gösterdi.",
+            "Eleştirmenler, filmin yavaş temposunu sık sık ana zayıflığı olarak gösterdiler.",
+            "Denemesinde, son bilimsel yayınlardan kanıt gösterdi."
           ]
         },
         {
@@ -7749,6 +8514,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Araştırmacılar, düzenli egzersiz ile gelişmiş zihinsel sağlık arasında güçlü bir korelasyon buldu.",
+            "Yüksek talep ile artan ürün fiyatları arasında genellikle doğrudan bir korelasyon vardır.",
+            "Bu görünüşte alakasız olaylar arasında herhangi bir korelasyon olup olmadığını araştırmamız gerekiyor."
           ]
         },
         {
@@ -7799,6 +8569,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bilim insanları, karmaşık iklim değişikliklerini doğru bir şekilde simüle etmek için sık sık bilgisayar modelleri kullanırlar.",
+            "Mühendisler, inşaat başlamadan önce yeni köprü tasarımları üzerindeki gerilimi simüle etmek için çalışırlar.",
+            "Eğitim tatbikatı sırasında askerler, bir rehine kurtarma operasyonunu canlandırmak zorunda kaldılar."
           ]
         },
         {
@@ -7849,6 +8624,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yaşlıya duyduğu derin saygıdan dolayı, tartışma boyunca sessiz kaldı.",
+            "Komite, başkanın engin tecrübesine itibar etti.",
+            "Topluluğun geleneksel örf ve adetlerine hürmeten başını eğdi."
           ]
         }
       ]
@@ -7903,6 +8683,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Seyahatimde fotoğraf çekmek için yeni bir dijital kamera aldım.",
+            "Lütfen fotoğraf çekerken kamerayı sabit tut.",
+            "Telefonumda hızlı çekimler için iyi bir kamera var."
           ]
         },
         {
@@ -7953,6 +8738,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bugün dükkandan yeni bir kitap almak istiyorum.",
+            "Lütfen mağazadan süt ve ekmek alır mısın?",
+            "O genellikle kıyafetlerini internetten alır, çok kolay."
           ]
         },
         {
@@ -8003,6 +8793,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Arkadaşım yarın beni istasyona bırakmayı teklif edecek.",
+            "Mağaza, sadık müşterilerine sık sık özel indirimler sunar.",
+            "Evlerini ziyaret ettiğimde bana bir fincan kahve ikram ettiler."
           ]
         },
         {
@@ -8053,6 +8848,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Herkese çok kibarca konuşur.",
+            "İşini hızlı ve profesyonelce bitirdi.",
+            "Lütfen anne babanla saygılıca konuş."
           ]
         },
         {
@@ -8103,6 +8903,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şaşırtıcı bir haber duyduğunda genellikle nasıl tepki verirsin?",
+            "Patronunun eleştirisine pek iyi tepki vermedi.",
+            "Seyirciler, şarkıcının güçlü performansına büyük tepki verdi."
           ]
         },
         {
@@ -8153,6 +8958,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Üzerine bir kat daha kıyafet giy; bugün dışarısı soğuk.",
+            "Pastanın üç lezzetli pandispanya ve krema katı vardı.",
+            "Boş odadaki eski mobilyaları ince bir toz tabakası kaplamıştı."
           ]
         },
         {
@@ -8203,6 +9013,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Gazete, belediye başkanı hakkında yolsuzlukla ilgili ciddi bir iddia yayımladı.",
+            "Polis, eski çalışanın yaptığı dolandırıcılık iddialarını soruşturuyor.",
+            "Delil olmadan, suçlama sadece bir iddia olarak kaldı ve düşürüldü."
           ]
         },
         {
@@ -8253,6 +9068,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bugünkü toplantıya neden geç kaldığınızın belirli bir nedeni var mı?",
+            "Antik Roma tarihi ve kültürüne özel bir ilgisi var.",
+            "Her sabah içtiği kahve türü konusunda çok seçicidir."
           ]
         },
         {
@@ -8303,6 +9123,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Elektrikçi, işleme başlamadan önce güvenliği sağlamak için devrenin voltajını dikkatlice kontrol etti.",
+            "Yüksek gerilim hatları, elektriği uzun mesafelere verimli ve güçlü bir şekilde taşır.",
+            "Voltajda ani bir düşüş, hassas ekipmanın hemen arızalanmasına neden oldu."
           ]
         },
         {
@@ -8353,6 +9178,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şehrin ulaşım sistemi, yollar ve demiryollarından oluşan karmaşık bir matris oluşturur.",
+            "Bilim insanları, doku büyümesini ve onarımını anlamak için hücresel matrisi inceler.",
+            "Yeni bir ürün geliştirmek, düzenlemeler ve pazar taleplerinin oluşturduğu bir matris içinde yol almayı gerektirir."
           ]
         },
         {
@@ -8403,6 +9233,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Daha sıkı düzenlemeler getirmek, inovasyonu ve ekonomik büyümeyi engelleyerek ters tepebilir.",
+            "Çocuklara bağırmak ters tepti, zaten gürültülü olan davranışlarını sadece daha da tırmandırdı.",
+            "Hükümetin yeni politikası, belirtilen çevresel hedeflerine ulaşmada başarısız olduğu için ters teptiği düşünüldü."
           ]
         },
         {
@@ -8453,6 +9288,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "CEO, birleşme söylentilerini şüpheye mahal vermeyecek kesin bir dille yalanladı.",
+            "Onun uzlaşmayı kesin bir dille reddetmesi, her iki taraf için de daha fazla müzakereyi imkansız hale getirdi.",
+            "Bilim insanı, yeni teorik modeli kesin olarak destekleyen tartışmasız kanıtlar sundu."
           ]
         }
       ]
@@ -8507,6 +9347,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yarınki parti planını konuşalım.",
+            "Okuldan sonra ödevlerini konuşmaları gerekiyor.",
+            "Toplantıda fikirlerini görüşebiliriz."
           ]
         },
         {
@@ -8557,6 +9402,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni evini bana tarif edebilir misin, lütfen?",
+            "Bugün sınıfta en sevdiği hayvanı tarif edecek.",
+            "Lütfen parkta gördüğün adamı tarif et."
           ]
         },
         {
@@ -8607,6 +9457,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Gazete, şehrin yeni parkı hakkında önemli haberler yayınlayacak.",
+            "Gelecek yıl çocuklar için ilk hikaye kitabını yayımlamayı umuyor.",
+            "Birçok yeni yazar, kısa hikayelerini internette ücretsiz yayınlamaya çalışıyor."
           ]
         },
         {
@@ -8657,6 +9512,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Öğrenci, önemli okul projesi için çok araştırma yaptı.",
+            "Bilim insanları, yeni hastalıkları anlamak için çok önemli araştırmalar yapar.",
+            "Yeni kitabım, yazmadan önce dikkatli araştırma gerektiriyor."
           ]
         },
         {
@@ -8707,6 +9567,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sunum, fikirleri daha net anlatmak için birçok renkli görsel materyal kullandı.",
+            "O, görsel öğrenmeye çok yatkın biridir; en iyi görerek anlar.",
+            "Sanatçı, yeni film için çarpıcı görsel efektler yarattı."
           ]
         },
         {
@@ -8757,6 +9622,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Doktor, şiddetli bir soğuk algınlığı geçirdiğini ve dinlenmesi gerektiğini söyledi.",
+            "Dün gece şiddetli bir fırtına vardı ve elektrik kesintilerine neden oldu.",
+            "Merdivenlerden düştükten sonra bacağında şiddetli bir ağrı hissetti."
           ]
         },
         {
@@ -8807,6 +9677,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Projenin neden başarısız olduğuna dair tutarlı bir açıklama yaptı.",
+            "Yeterince uyumadan tutarlı bir deneme yazmak zordur.",
+            "Tanık, delillerle uyuşan tutarlı bir hikaye anlattı."
           ]
         },
         {
@@ -8857,6 +9732,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kırsal bir köyde yaşam genellikle huzurludur ve daha yavaş bir tempoya sahiptir.",
+            "Birçok insan sonbaharda kırsal manzaranın sakin güzelliğinin tadını çıkarır.",
+            "Hükümet, kırsal topluluklar için yeni altyapıya yatırım yapıyor."
           ]
         },
         {
@@ -8907,6 +9787,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Proje bütçesi, beklenmedik piyasa düşüşünden sonra neredeyse sıfıra indirildi.",
+            "Haberi duyduktan sonra göreve olan motivasyonu sıfıra düştü.",
+            "Yıldız oyuncuları gol attıktan sonra kazanma şansımız sıfıra indi."
           ]
         },
         {
@@ -8957,6 +9842,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Devrim niteliğindeki yeni enerji cihazı için patent başvurusunda bulundu.",
+            "Şirket, yazılım algoritmaları üzerinde birkaç değerli patente sahip.",
+            "Güçlü bir patent olmadan, rakipler tasarımı kolayca kopyalayabilirler."
           ]
         },
         {
@@ -9007,6 +9897,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet, güncelliğini yitirmiş anlaşmayı derhal feshetmeye karar verdi.",
+            "Yeni mevzuat, çevre korumaya ilişkin önceki düzenlemeleri yürürlükten kaldırabilir.",
+            "Şartlara uyulmaması sözleşmeyi feshedebilir ve ağır cezalara yol açabilir."
           ]
         },
         {
@@ -9057,6 +9952,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kaosa rağmen soğukkanlılığını korudu ve her zorluğun üstesinden sakince geldi.",
+            "Onun olağanüstü soğukkanlılığı, krizi panik yapmadan atlatmasını sağladı.",
+            "Sürekli baskıyla karşılaşan liderler için soğukkanlılık duygusu geliştirmek çok önemlidir."
           ]
         }
       ]
@@ -9111,6 +10011,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen kapıyı açın, bu oda sıcak.",
+            "Dükkan her sabah saat dokuzda açılır.",
+            "Lütfen kitabı onuncu sayfaya açar mısınız?"
           ]
         },
         {
@@ -9161,6 +10066,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her cumartesi yeni partnerimle tenis oynuyorum.",
+            "İş ortağım ve ben gelecek ay yeni bir dükkan açıyoruz.",
+            "Dans dersi için iyi bir partner bul, lütfen."
           ]
         },
         {
@@ -9211,6 +10121,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun olumlu tutumu, her zaman yeni şeyler denemesine yardımcı olur.",
+            "Oyunları kaybettiğinde kötü bir tavrı oluyor.",
+            "İyi bir tutum, İngilizce öğrenmeyi çok daha kolaylaştırır."
           ]
         },
         {
@@ -9261,6 +10176,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tren istasyondan ayrılmadan önce kısa bir gecikme yaşandı.",
+            "Kötü hava, uçuşumuzda büyük bir gecikmeye neden oldu.",
+            "Otobüsün gelmesini beklerken uzun bir gecikme yaşadık."
           ]
         },
         {
@@ -9311,6 +10231,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İşçiler gelecek yıl nehrin üzerine yeni bir köprü inşa edecekler.",
+            "Mimar, binayı hızlı ve güvenli bir şekilde inşa etmek için bir yöntem tasarladı.",
+            "Büyük ve istikrarlı bir demiryolu sistemi inşa etmek uzun yıllar sürer."
           ]
         },
         {
@@ -9361,6 +10286,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yerel pazarda organik sebzelere yüksek talep var.",
+            "İşçiler, daha iyi ücret ve koşullar için adil bir talepte bulundu.",
+            "Müşterinin daha hızlı teslimat talebini karşılamak zorlayıcıydı."
           ]
         },
         {
@@ -9411,6 +10341,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ekip, ana gündem maddelerini görüşmek üzere bir ön toplantı düzenledi.",
+            "Son aşamaya geçmeden önce ön sınavı geçmeniz gerekiyor.",
+            "Ana projeye başlamadan önce bazı ön araştırmaları tamamlamamız gerekiyor."
           ]
         },
         {
@@ -9461,6 +10396,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Parkı erken kapatma kararı birçok ziyaretçiye tamamen keyfi geldi.",
+            "Keyfi bir son tarih belirlemek, ekip için gereksiz baskı yaratabilir.",
+            "Bazı kurallar keyfi gibi görünse de, genellikle tarihi bir nedeni vardır."
           ]
         },
         {
@@ -9511,6 +10451,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sözleşme, şartları ve koşulları ana hatlarıyla belirtir; bunların herhangi bir ihlali cezai yaptırımları beraberinde getirecektir.",
+            "Teklifi sundu ve yönetim kuruluyla bunun fizibilitesini tartıştı.",
+            "Şirket politikası tam uyumluluk gerektirir ve çalışanlar bundan haberdar olmalıdır."
           ]
         },
         {
@@ -9561,6 +10506,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yenilenebilir enerjiye geçiş, yeni bir teknolojik paradigmayı temsil ediyor.",
+            "Bilim insanları, kendi alanlarındaki bilgiyi ilerletmek için sık sık mevcut paradigmalara meydan okur.",
+            "Onun yenilikçi iş modeli, çevrimiçi perakendecilik için yeni bir paradigma oluşturdu."
           ]
         },
         {
@@ -9611,6 +10561,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Cevabını vermeden önce iş teklifini derinlemesine düşünmek için zamana ihtiyacı vardı.",
+            "Birçok filozof, varoluşun ve bilincin doğası üzerine uzun süredir düşünmüşlerdir.",
+            "Yeni bir başlangıç için yurt dışına taşınmayı ciddi ciddi düşünmeye başladılar."
           ]
         },
         {
@@ -9661,6 +10616,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Araştırmacılar, geliştirilmiş terapötik özelliklere sahip yeni bileşikler sentezlemeyi amaçlıyor.",
+            "Komite, farklı bakış açılarını birleştirerek tek bir politika önerisi haline getirmelidir.",
+            "Etkili liderler, bilinçli stratejik kararlar almak için karmaşık bilgileri sentezleyebilirler."
           ]
         }
       ]
@@ -9715,6 +10675,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Evcil kedim bütün gün kanepede uyumayı sever.",
+            "Siyah kedi bahçe duvarına oturdu ve kuşları izledi.",
+            "Evinizde kedi mi köpek mi var?"
           ]
         },
         {
@@ -9765,6 +10730,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kırmızı arabamla şehirde işe giderim.",
+            "Ailemin geziler için büyük mavi bir arabası var.",
+            "Bak! Hızlı sarı bir araba caddede gidiyor."
           ]
         },
         {
@@ -9815,6 +10785,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun en büyük hayali, gelecek yıl dünyayı dolaşmak.",
+            "Ünlü bir futbolcu olmak gibi büyük bir hayali var.",
+            "Benim hayalim, iyi İngilizce öğrenmek ve iyi bir iş bulmak."
           ]
         },
         {
@@ -9865,6 +10840,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mağaza vitrininde satılık yeni kıyafetlerden oluşan güzel bir sergi vardı.",
+            "Müze, antik Roma sikkelerinden oluşan özel bir sergi hazırladı.",
+            "Gece gökyüzünü aydınlatan harika bir havai fişek gösterisi izledik."
           ]
         },
         {
@@ -9915,6 +10895,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Eski işinden ayrıldıktan sonra öğretmen olarak yeni bir kariyere başlamaya karar verdi.",
+            "Onun asıl amacı müzik endüstrisinde başarılı bir kariyer yapmaktır.",
+            "Birçok insan hayatları boyunca kariyer yolunu birkaç kez değiştirir."
           ]
         },
         {
@@ -9965,6 +10950,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Müziğe olan tutkusu, yeni öğrencilere her zaman ilham veriyor gibi görünüyor.",
+            "Güzel manzara, sanatçıya bir başyapıt resmetmesi için ilham verdi.",
+            "Kahramanlık hikayeleri okumak, gençlere cesur olmaya ilham verebilir."
           ]
         },
         {
@@ -10015,6 +11005,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Polis, trafik yasalarını uygulamak ve kamu güvenliğini sağlamak için çalışır.",
+            "Yeni düzenlemeler, belediyenin daha sıkı geri dönüşüm kurallarını uygulamasına yardımcı olacak.",
+            "Bir kuralı kimse bilmiyorsa, onu uygulamak zordur."
           ]
         },
         {
@@ -10065,6 +11060,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümetler, tüketicileri korumak için sektörleri sık sık düzenlemek zorundadır.",
+            "Vücudumuz, sağlığımızı korumak için sıcaklığı doğal olarak düzenler.",
+            "Yeni yasalar, şirketlerin internet üzerinden kişisel veri toplama şeklini düzenleyecek."
           ]
         },
         {
@@ -10115,6 +11115,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kargo gemisi, Atlantik Okyanusu üzerinden ağır sanayi yükü taşıdı.",
+            "Hava kargosu, hızı nedeniyle acil teslimatlar için sıkça kullanılır.",
+            "Demiryolu şirketleri, daha fazla yükü verimli bir şekilde taşımak için yeni altyapıya yatırım yapıyorlar."
           ]
         },
         {
@@ -10165,6 +11170,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Gerçek ve sahte tasarım ürünlerini ayırt etmek genellikle zordur.",
+            "Şirketler, kalabalık bir pazarda öne çıkmak için markalarını farklılaştırmalıdır.",
+            "Çocuklar, çeşitli aktivitelerle küçük yaşta renkleri ayırt etmeyi öğrenirler."
           ]
         },
         {
@@ -10215,6 +11225,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun gündelik kıyafeti, resmi davetle uyumsuzdu.",
+            "Şirketin eylemleri, beyan ettiği çevre politikasıyla çelişiyor gibiydi.",
+            "Onun neşeli tavrı, az önce aldığı kasvetli haberle uyumsuz geldi."
           ]
         },
         {
@@ -10265,6 +11280,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Diplomat, savaşan uluslar arasında barışçıl bir çözüme arabuluculuk etmek için yorulmadan çalıştı.",
+            "İş anlaşmazlığına arabuluculuk etmesi için tarafsız bir üçüncü taraf çağrıldı.",
+            "Sakin tavrı, arkadaşları arasındaki anlaşmazlıklara etkili bir şekilde arabuluculuk etmesine sık sık yardımcı olur."
           ]
         }
       ]
@@ -10319,6 +11339,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şimdi size yeni arkadaşım Sarah'ı tanıtayım.",
+            "Lütfen yeni sınıfa kendini tanıtır mısın?",
+            "Öğretmen bugün yeni eğlenceli bir oyun tanıtacak."
           ]
         },
         {
@@ -10369,6 +11394,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen pencereyi açın, burası sıcak.",
+            "Pencereden dışarı bakın, kedi dışarıda oynuyor.",
+            "Odamda güzel manzaralı büyük bir pencere var."
           ]
         },
         {
@@ -10419,6 +11449,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni okul kuralları hakkında uzun bir tartışma oldu.",
+            "Öğrenciler en sevdikleri sporlar hakkında canlı bir tartışma yaptılar.",
+            "Uzun tartışmalardan sonra parka gitmeye karar verdiler."
           ]
         },
         {
@@ -10469,6 +11504,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yıl İngilizce konuşma becerilerimi geliştirmek istiyorum.",
+            "Düzenli pratik, çizim becerilerini çok geliştirmene yardımcı olacak.",
+            "Hava genellikle ilkbaharda düzelmeye başlar."
           ]
         },
         {
@@ -10519,6 +11559,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, gelecek ay yeni bir müdür atamaya karar verdi.",
+            "Deneyimi nedeniyle komiteye atandı.",
+            "Hükümet, konuyu araştırmak için özel bir ekip atayacak."
           ]
         },
         {
@@ -10569,6 +11614,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Uzun bir tartışmadan sonra, toplantıyı bitirmeye karar verdiler.",
+            "Rapor sayesinde projenin başarılı olduğu sonucuna varıyoruz.",
+            "Kanıtlara dayanarak, deney sonuçlarının umut verici olduğu sonucuna varabiliriz."
           ]
         },
         {
@@ -10619,6 +11669,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet gelecek yıl eski vergi sistemini kaldırmayı planlıyor.",
+            "Birçok insan, dünya genelinde ölüm cezasının kaldırılması gerektiğine inanıyor.",
+            "İş yerindeki ayrımcı uygulamaları yakında tamamen ortadan kaldırmayı umuyorlar."
           ]
         },
         {
@@ -10669,6 +11724,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Odanın ana boyutu etkileyici yüksekliğiydi, bu da onu çok ferah hissettiriyordu.",
+            "Yeni bir ekip üyesi katmak, proje tartışmalarımıza yeni bir boyut kattı.",
+            "Bu politika değişikliğinin tüm sosyal ve ekonomik boyutlarını dikkate almalıyız."
           ]
         },
         {
@@ -10719,6 +11779,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kutu, eski mektuplar ve kırık oyuncaklar dahil olmak üzere çeşitli eşyalar içeriyordu.",
+            "Ofisten ayrılmadan önce birkaç çeşitli işi tamamlaması gerekiyordu.",
+            "Rapor, piyasa eğilimlerinden müşteri geri bildirimlerine kadar çeşitli konuları ele alıyordu."
           ]
         },
         {
@@ -10769,6 +11834,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet, yerli sanayiyi korumak için ithal çeliğe yeni bir tarife uyguladı.",
+            "Tüketiciler, elektronik ürünlere uygulanan artan tarifeler nedeniyle daha yüksek fiyatlarla karşılaşabilir.",
+            "Müzakereler, ticari tarifeleri azaltmayı başaramadı ve bu da ülkeler arasında süregelen ekonomik gerilimlere yol açtı."
           ]
         },
         {
@@ -10819,6 +11889,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Beynin arka kısmı hafızayı ve karmaşık düşünce süreçlerini kontrol eder.",
+            "Dikkatli bir inceleme, dizin arka tarafında küçük bir lezyon olduğunu ortaya çıkardı.",
+            "Mimarlar binayı görkemli bir giriş ve daha işlevsel bir arka cepheyle tasarladı."
           ]
         },
         {
@@ -10869,6 +11944,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dava şu anda devam etmekte olup, kararın gelecek ay çıkması bekleniyor.",
+            "Çok sayıda başvuru, düzenleyici kuruldan onay bekliyor.",
+            "Müzakereler haftalardır devam ediyor, ancak henüz net bir atılım sağlanamadı."
           ]
         }
       ]
@@ -10923,6 +12003,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bugün gökyüzünde yüksekten uçan büyük bir uçak gördüm.",
+            "Ailem gelecek ay büyükannemi ziyaret etmek için uçakla seyahat edecek.",
+            "Birçok insan havaalanından kalkan bir uçağı izlemeyi sever."
           ]
         },
         {
@@ -10973,6 +12058,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen çıkmadan önce kitapları mutfak masasına koyun.",
+            "Her akşam büyük ahşap masada birlikte akşam yemeği yeriz.",
+            "Küçük sehpa her zaman oturma odası kanepesinin önündedir."
           ]
         },
         {
@@ -11023,6 +12113,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sanatçılar genellikle parlak renklerle güzel tablolar oluşturmayı severler.",
+            "Haftaya parti için yeni bir oyun oluşturabiliriz.",
+            "Şef, tüm misafirler için lezzetli bir yemek hazırlayacak."
           ]
         },
         {
@@ -11073,6 +12168,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu eski kitap, birçok insanın tekrar tekrar okumaktan keyif aldığı klasik bir hikayedir.",
+            "Şu araba klasik bir modeldir; eski olduğu için çok güzel ve özel görünüyor.",
+            "Beyaz gömlek ve mavi kot pantolon giymek, asla modası geçmeyen klasik bir tarzdır."
           ]
         },
         {
@@ -11123,6 +12223,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bütün pastayı tek başına sadece on dakikada yedi.",
+            "Takım, projeyi bitirmek için tüm hafta boyunca çok çalıştı.",
+            "Tüm hayatını aynı küçük köyde yaşayarak geçirdi."
           ]
         },
         {
@@ -11173,6 +12278,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İnsanların yeni bir kültüre ve yaşam tarzına uyum sağlaması zaman alır.",
+            "Bitkiler, hayatta kalmak ve iyi gelişmek için farklı iklimlere uyum sağlamalıdır.",
+            "Şirket, yeni ürün için pazarlama stratejisini uyarlamak zorunda kaldı."
           ]
         },
         {
@@ -11223,6 +12333,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Karmaşık görevi nasıl tamamlayacağına dair çok açık talimatlar verdi.",
+            "Sözleşme, ödeme ve teslimat programlarına ilişkin açık hükümler içeriyordu.",
+            "Onaylamaması açıktı; başını kesin bir şekilde sallayarak bunu ifade etti."
           ]
         },
         {
@@ -11273,6 +12388,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Doktorunun onu iyileştirebileceğine dair tam bir inancı vardı.",
+            "Olumlu bir bakış açısını korumak, işlerin düzeleceğine dair güçlü bir inanç gerektirir.",
+            "Birçok insan, dini inançları aracılığıyla teselli ve güç bulur."
           ]
         },
         {
@@ -11323,6 +12443,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hücrenin dış zarı, hangi maddelerin girip çıkabileceğini kontrol eder.",
+            "Yarı geçirgen bir zar, sadece belirli moleküllerin içinden geçmesine izin verir.",
+            "Mühendisler, su arıtma sistemleri için yeni bir sentetik zar geliştirdi."
           ]
         },
         {
@@ -11373,6 +12498,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni ceket, soğuğa karşı mükemmel termal yalıtım sağlar.",
+            "Mühendisler, gerilim altındaki malzemelerin termal genleşmesini inceliyorlar.",
+            "Kaplıca, doğal mineralli sularla çeşitli termal banyolar sunar."
           ]
         },
         {
@@ -11423,6 +12553,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Anahtarı dikkatlice kilide sokun ve kapıyı açmak için yavaşça çevirin.",
+            "Editör, açıklık sağlamak için makaleye ek bir paragraf eklemeye karar verdi.",
+            "Başlamadan önce, hafıza kartını kamera yuvasına takmayı unutmayın."
           ]
         },
         {
@@ -11473,6 +12608,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Film, çarpıcı görselleri ve sürükleyici hikayesiyle yaygın uluslararası beğeni topladı.",
+            "Son romanı eleştirel beğeni topladı ve onu usta bir hikaye anlatıcısı olarak ününü pekiştirdi.",
+            "Başlangıçtaki şüpheciliğe rağmen, yeni politika olumlu etkisi nedeniyle sonunda halkın beğenisini kazandı."
           ]
         }
       ]
@@ -11527,6 +12667,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni İngilizce öğretmenim tüm öğrencilere karşı çok nazik ve arkadaş canlısı.",
+            "Matematik öğretmeni tahtaya bize sayılar yazar.",
+            "Tarih öğretmenimiz geçmişle ilgili ilginç hikayeler anlatır."
           ]
         },
         {
@@ -11577,6 +12722,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Küçük kardeşim her sabah ilkokula gider.",
+            "Çocuklar büyük okul bahçesinde oyun oynar.",
+            "Yeni okulumu seviyorum, öğretmenler çok nazik."
           ]
         },
         {
@@ -11627,6 +12777,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni patronunu sıkı çalışmasıyla etkilemeye çalıştı.",
+            "Küçük çocuk, büyük, renkli balonlardan etkilendi.",
+            "İnsanlar birçok dili akıcı bir şekilde konuştuğunda seni etkiler mi?"
           ]
         },
         {
@@ -11677,6 +12832,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "En sevdiği şarkıyı söylemesi için özel bir istekte bulundu.",
+            "Öğretmen, her öğrencinin yardım isteğine yanıt verdi.",
+            "Arkadaşım bana çevrimiçi bir oyun isteği gönderdi."
           ]
         },
         {
@@ -11727,6 +12887,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yılki yeni moda akımı, yazlık kıyafetlerde parlak renkler.",
+            "İnsanların daha sık evden çalışması yönünde artan bir eğilim var.",
+            "Geçen ay müşteri harcamalarında şaşırtıcı bir eğilim fark ettik."
           ]
         },
         {
@@ -11777,6 +12942,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu, sıkı çalışmanın başarıya nasıl yol açabileceğinin açık bir örneğidir.",
+            "Bazı durumlarda, insanlar bir takımda çalışmaktansa yalnız çalışmayı tercih eder.",
+            "Öğretmen, zor dil bilgisi kuralını açıklamak için bir örnek verdi."
           ]
         },
         {
@@ -11827,6 +12997,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İyi iletişim, başarılı ekip çalışması ve projelerde kilit bir etkendir.",
+            "Akaryakıt fiyatı, bir ailenin aylık bütçesinde önemli bir faktördür.",
+            "Uykusuzluk, konsantrasyonu ve ruh halini etkileyen önemli bir faktör olabilir."
           ]
         },
         {
@@ -11877,6 +13052,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Radyo dalgaları bilgiyi çok uzak mesafelere çok hızlı iletebilir.",
+            "Bazı böceklerin ısırıklarıyla insanlara hastalık bulaştırdığı bilinmektedir.",
+            "Uydu, etkinliğin canlı görüntülerini ekranlarımıza iletecek."
           ]
         },
         {
@@ -11927,6 +13107,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bilimsel yöntem, veri toplama ve analizde titiz bir yaklaşım gerektirir.",
+            "Öğrenciler, sertifika almadan önce yoğun bir eğitim programını tamamlamalıdır.",
+            "Şirket, tüm ürünlerine sıkı kalite kontrol denetimleri uygular."
           ]
         },
         {
@@ -11977,6 +13162,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Birçok işlenmiş gıda yüksek miktarda sodyum içerir ve bu durum sağlık sorunlarına yol açabilir.",
+            "Sofra tuzu, temel olarak hayati bir mineral olan sodyum klorürden oluşur.",
+            "Sporcular, hayati öneme sahip sodyum da dahil olmak üzere elektrolit dengelerini sık sık yenilemeye ihtiyaç duyarlar."
           ]
         },
         {
@@ -12027,6 +13217,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "CEO'nun açıklaması, birleşme teklifinin tartışmasız bir reddiydi.",
+            "Final turundaki performansı, yeteneğinin tartışmasız kanıtını sundu.",
+            "Sunulan bilimsel veriler, yeni teoriye tartışmasız destek sağladı."
           ]
         },
         {
@@ -12077,6 +13272,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Önerilen yeni vergi politikası oldukça tartışmalı bir konu oldu.",
+            "Şirketin geleceği hakkındaki tartışmalar, yönetim kurulu üyeleri arasında giderek daha tartışmalı hale geldi.",
+            "Onun tartışmalı açıklamaları, siyasette onu sık sık tartışmalı bir figür haline getirdi."
           ]
         }
       ]
@@ -12131,6 +13331,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Küçük bir kedim var, yatağımda uyumayı sever.",
+            "Arabam beş kişinin rahatça oturması için çok küçük.",
+            "Küçük bir kahve alabilir miyim lütfen, büyük boy olmasın?"
           ]
         },
         {
@@ -12143,7 +13348,7 @@
           "frequencyBand": 1,
           "definition": "A separate area inside a building with walls, a floor, and a ceiling.",
           "examples": [
-            "My bedroom is very big and has a nice window.",
+            "This room is very big and has a nice window.",
             "There is not enough room for everyone in this small area.",
             "The hotel has many clean rooms for people to sleep."
           ],
@@ -12181,6 +13386,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu oda çok büyük ve güzel bir penceresi var.",
+            "Bu küçük alanda herkes için yeterli yer yok.",
+            "Otelde insanların uyuması için birçok temiz oda var."
           ]
         },
         {
@@ -12231,6 +13441,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Taze meyve ve sebze almak için yerel pazara gideriz.",
+            "Her cumartesi sabahı şehirde büyük bir açık hava pazarı kurulur.",
+            "Annem Noel pazarında güzel el yapımı ürünler satar."
           ]
         },
         {
@@ -12281,6 +13496,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "O çok çalıştı ve sınavlarında kesinlikle başarılı olacak.",
+            "Elinden gelenin en iyisini yaparsan, yeni şeylerde genellikle başarılı olursun.",
+            "Bu sabah kayıp anahtarlarını bulabildin mi?"
           ]
         },
         {
@@ -12331,6 +13551,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen metindeki ana fikirlerin altını kırmızı bir kalemle çizin.",
+            "Öğretmen öğrencilerden kitaplarındaki yeni kelimelerin altını çizmelerini istedi.",
+            "Bazen insanlar takvimlerindeki önemli tarihlerin altını çizmeyi severler."
           ]
         },
         {
@@ -12381,6 +13606,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lezzetli bir pasta yapmak için bu malzemeleri karıştırmamız gerekiyor.",
+            "Sanat tutkusunu öğretmenlik sevgisiyle birleştirmeye karar verdi.",
+            "İki şirket, yeni bir ürün yaratmak için kaynaklarını birleştirmeyi planlıyor."
           ]
         },
         {
@@ -12431,6 +13661,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Trenle seyahat, birçok işe gidip gelen için verimli bir ulaşım aracıdır.",
+            "Burs kazanmak, onun yurt dışında üniversiteye gitmesinin tek yoluydu.",
+            "Şirket, enerji tüketimini azaltmak için her türlü olası yolu araştırdı."
           ]
         },
         {
@@ -12481,6 +13716,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni pazarlama planı, markaya genç müşterileri çekmeyi hedefliyor.",
+            "Polis, yaşlıları birikimlerinden dolandırmak için karmaşık bir dolandırıcılık planını ortaya çıkardı.",
+            "Hükümet, işsizlere yeni iş bulmaları konusunda yardımcı olacak bir program başlattı."
           ]
         },
         {
@@ -12531,6 +13771,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Modern sulama sistemleri, kurak bölgelerde sürdürülebilir tarım için çok önemlidir.",
+            "Çiftçiler, su tasarrufu yapmak ve mahsul verimini en üst düzeye çıkarmak için damla sulamayı kullanır.",
+            "Etkili sulama planlaması, su kaynaklarını sorumlu bir şekilde yönetmek için çok önemlidir."
           ]
         },
         {
@@ -12581,6 +13826,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Grup, yerli müzik ve tarzlarını kültürel olarak sahiplenmeleri yüzünden eleştirildi.",
+            "Hükümet, yeni halk sağlığı girişimi için önemli miktarda fon ayrılmasını onayladı.",
+            "Ekibin başarısını pervasızca sahiplenmesi, meslektaşlarını çok sinirlendirdi."
           ]
         },
         {
@@ -12631,6 +13881,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Toplantı sırasında yaptığı istemeden yorum, büyük bir mahcubiyete neden oldu.",
+            "Sistemin güvenlik açığı, farkında olmadan yapılan bir gözden kaçırmaydı ve şu anda düzeltiliyor.",
+            "Dikkatli planlamasına rağmen, yanlışlıkla yapılan bir hata projenin gecikmesine yol açtı."
           ]
         },
         {
@@ -12681,6 +13936,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, konsolide finansal tablolarını hissedarlara sundu.",
+            "Yıllarca süren çabaların ardından, ekibin proje üzerindeki konumu pekişti.",
+            "Yeni mevzuat, tüm kamu kayıtları için birleştirilmiş bir veri tabanı oluşturmayı hedefledi."
           ]
         }
       ]
@@ -12735,6 +13995,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şimdi parka gitmek istediğine emin misin?",
+            "Bugün evde olup olmadığından emin değilim.",
+            "Lütfen çıkmadan önce kapının kilitli olduğundan emin ol."
           ]
         },
         {
@@ -12785,6 +14050,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu matematik problemini çözmeme yardım edebilir misin, lütfen?",
+            "Hazineyi bulmak için bulmacayı çözmemiz gerekiyor.",
+            "Polis, gizemi hızlıca çözmeye çalışıyor."
           ]
         },
         {
@@ -12835,6 +14105,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu gömlek yumuşak ve rahat bir kumaştan yapılmış.",
+            "Yeni evi bitirmek için daha fazla inşaat malzemesine ihtiyaçları var.",
+            "Lütfen ders için tüm ders materyallerini getirin."
           ]
         },
         {
@@ -12885,6 +14160,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Okul, yaz partisiyle ilgili panoya bir duyuru astı.",
+            "Park bankındaki 'Boyalı' yazısını gördün mü?",
+            "Ev sahibim, daireyi boşaltmam için bana iki aylık bir ihtar verdi."
           ]
         },
         {
@@ -12935,6 +14215,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bilim insanları hipotezlerini test etmek için genellikle ampirik veriler toplar.",
+            "Bu rapor, en son çalışmamızdan elde edilen ampirik bulguları sunmaktadır.",
+            "Argümanını desteklemek için ampirik kanıtlar sunman gerekiyor."
           ]
         },
         {
@@ -12985,6 +14270,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Uzun yolculuğundan yorgun olduğu oldukça belliydi.",
+            "Üzerinde düşündükten sonra matematik sorusunun cevabı belli oldu.",
+            "Parti sırasında yüksek sesle gülüp kahkaha atarken mutluluğu belliydi."
           ]
         },
         {
@@ -13035,6 +14325,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dilbilgisini anlamak, herhangi bir yeni dili etkili bir şekilde öğrenmenin temel bir parçasıdır.",
+            "Temiz su ve gıda, herkesin erişebilmesi gereken temel insan haklarıdır.",
+            "Takımın performanslarını geliştirebilmeleri için önce bazı temel sorunları ele alması gerekiyor."
           ]
         },
         {
@@ -13085,6 +14380,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ekip, karmaşık yazılım geliştirme projesini zamanında tamamlamak için çok çalıştı.",
+            "Üniversitedeki son sınıf projesi sürdürülebilir kentsel planlama üzerine odaklandı.",
+            "Yeni bir ürün piyasaya sürmek büyük bir girişimdir ve dikkatli proje yönetimi gerektirir."
           ]
         },
         {
@@ -13135,6 +14435,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ekonomistler, kesin veriler olmadan gelecekteki piyasa eğilimleri hakkında sık sık tahmin yürütürler.",
+            "Onların ani ayrılışının arkasındaki nedenler hakkında sadece tahmin yürütebiliriz.",
+            "Gazeteciler, ünlü ilişkileri ve olası skandallar hakkında spekülasyon yapmayı severler."
           ]
         },
         {
@@ -13185,6 +14490,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ayrıntılı finansal tahminler için lütfen 3.2. alt bölüme bakınız.",
+            "Yasal belge, her birinin kendi alt bölümü olan birkaç ana bölüme ayrılmıştı.",
+            "Bu özel politika değişikliği, yeni yönetmeliklerin belirli bir alt bölümünde ele alınmaktadır."
           ]
         },
         {
@@ -13235,6 +14545,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tüm hüküm ve koşullar, incelemeniz için bu belgede açıkça belirtilmiştir.",
+            "Veri gizliliğini düzenleyen özel yönetmelikler bu belgede detaylandırılmıştır.",
+            "Bu sözleşmede yapılacak herhangi bir değişiklik, burada açıkça belirtilmelidir."
           ]
         },
         {
@@ -13285,6 +14600,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hukuk sistemi, iddia ve savunma makamları arasında genellikle çekişmeli bir süreci barındırır.",
+            "Onların uzun süredir devam eden iş ilişkisi son yıllarda giderek daha hasmane bir hal almıştı.",
+            "Siyasetçiler, her biri diğerinin önerilerini baltalamaya kararlı bir şekilde çekişmeli bir münazara yürüttüler."
           ]
         }
       ]
@@ -13339,6 +14659,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Öğle yemeğinde her gün sağlıklı yemek yemeyi severim.",
+            "Pazardan biraz taze yiyecek almak ister misin?",
+            "Köpeğim özel kuru mamasını çok sever."
           ]
         },
         {
@@ -13389,6 +14714,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni bir kültürün yemeklerini ve müziğini öğrenmeyi severim.",
+            "Japonya'nın birçok eski geleneği olan çok ilginç bir kültürü var.",
+            "Ailemin kültürü benim için önemli, özel bayramlarımız var."
           ]
         },
         {
@@ -13439,6 +14769,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Spor yapmak, fiziksel sağlığınız ve güçlü bir vücut için faydalıdır.",
+            "Bacağı incindi, bu yüzden fazla fiziksel aktivite yapamaz.",
+            "Kitap fiziksel bir nesnedir, sadece ekrandaki bir resim değil."
           ]
         },
         {
@@ -13489,6 +14824,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şehir merkezinde yeni bir okul kurmaya karar verdiler.",
+            "Adil oynamak için oyun için net kurallar belirlememiz gerekiyor.",
+            "Küçük kafe 1995'te bir aile tarafından kuruldu."
           ]
         },
         {
@@ -13539,6 +14879,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bugün ilerleyen saatlerde yağmur yağacağına dair garip bir hissim var.",
+            "Çocukların dünyanın nasıl işlediği hakkında komik bir fikri vardı.",
+            "Her gece geç saatlere kadar çalışma fikrini sevmedi."
           ]
         },
         {
@@ -13589,6 +14934,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Öğrenciler törenden sonra kendi sınıflarına döndüler.",
+            "Toplantıdan sonra herkes kendi masalarına geri döndü.",
+            "İki takım el sıkıştı ve kendi soyunma odalarına gittiler."
           ]
         },
         {
@@ -13639,6 +14989,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, yeni pozisyon için çok sayıda iş başvurusu aldı.",
+            "Trafik kazasında birden fazla yara aldı ama iyi iyileşiyor.",
+            "Bu karmaşık matematik problemini çözmek için birden çok yol var."
           ]
         },
         {
@@ -13689,6 +15044,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şaşırtıcı habere ilk tepkisi, inanamaz bir bakış oldu.",
+            "Projenin ilk bütçesi, nihai harcamadan çok daha küçüktü.",
+            "Bazı başlangıçtaki zorluklara rağmen, ekip görevi zamanında tamamlamayı başardı."
           ]
         },
         {
@@ -13739,6 +15099,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Etkili drenaj, şiddetli yağışlarda kentsel alanlarda sel baskınlarını önlemek için çok önemlidir.",
+            "Tarım arazisi, su birikintisini önlemek ve mahsul verimini artırmak için daha iyi drenaja ihtiyaç duyuyordu.",
+            "Mülkün drenaj sistemindeki sorunlar, bodrum katında önemli su hasarına yol açtı."
           ]
         },
         {
@@ -13789,6 +15154,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kariyer hedeflerini aile sorumluluklarıyla bağdaştırmakta zorlandı.",
+            "Komite, üyeleri arasındaki farklı görüşleri uzlaştırmaya çalıştı.",
+            "Şirketin iddialarını gerçek performansıyla bağdaştırmak zor."
           ]
         },
         {
@@ -13839,6 +15209,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Felsefi tartışma, bilimsel gerçeğin epistemik temellerine odaklandı.",
+            "Onun argümanı, anlayışı nasıl edindiğimize dair yeni bir epistemik bakış açısı sundu.",
+            "Öznel deneyimleri doğru bir şekilde doğrulamada önemli epistemik zorluklar bulunmaktadır."
           ]
         },
         {
@@ -13889,6 +15264,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Hükümet, kamu eğitimi ve sağlığına daha fazla fon tahsis etme kararı aldı.",
+            "Proje yöneticileri, verimli bir iş akışı sağlamak için ekip üyelerini dikkatlice görevlendirmelidir.",
+            "Nihai bir karar vermeden önce araştırma için yeterli zaman ayırmak çok önemlidir."
           ]
         }
       ]
@@ -13943,6 +15323,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu akşamki ödeviniz için kitabın bu bölümünü okuyun lütfen.",
+            "Mağazadaki oyuncak reyonu çok büyük.",
+            "Evimde birçok çiçeğin olduğu küçük bir bahçe kısmı var."
           ]
         },
         {
@@ -13993,6 +15378,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bugün güneşli bir gün, hadi parka gidelim.",
+            "Pazartesiden Cumaya her gün saat 9'da işe başlarım.",
+            "Doğum günüm benim ve ailem için özel bir gün."
           ]
         },
         {
@@ -14043,6 +15433,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kalp, sevgi ve dostluğun yaygın bir sembolüdür.",
+            "Beyaz güvercin, birçok kültürde sık sık barışın bir sembolüdür.",
+            "Bayrak, bir ülke için önemli bir ulusal semboldür."
           ]
         },
         {
@@ -14093,6 +15488,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Uçakta ilk kez bulunmam yeni ve heyecan verici bir deneyimdi.",
+            "Çok fazla iş tecrübesi var, bu yüzden birçok şey biliyor.",
+            "Dağlara çıkmak tüm aile için harika bir deneyimdi."
           ]
         },
         {
@@ -14143,6 +15543,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mürettebat, şiddetli fırtına sırasında gemiyi terk etmek zorunda kaldı.",
+            "Hayallerinden vazgeçme, gerçekleştirmesi zor görünse bile.",
+            "Birçok insan, yeni bir daireye taşındığında eski mobilyalarını bırakır."
           ]
         },
         {
@@ -14193,6 +15598,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her gece yatmadan önce kişisel günlüğüne yazar.",
+            "Bilim insanı yeni araştırmasını ünlü bir akademik dergide yayımladı.",
+            "Seyahat günlüğü tutmak, ziyaret ettiğim tüm yerleri hatırlamama yardımcı olur."
           ]
         },
         {
@@ -14243,6 +15653,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, artan satışlar sayesinde bu çeyrekte kayda değer bir kâr elde ettiğini bildirdi.",
+            "Ekonomik durgunluk sırasında birçok küçük işletme kâr elde etmekte zorlandı.",
+            "El yapımı ürünleri internetten satmak, yaratıcı kişiler için iyi bir kâr getirebilir."
           ]
         },
         {
@@ -14293,6 +15708,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, birkaç yıl içinde daha sürdürülebilir uygulamalara doğru kademeli bir geçiş yaptı.",
+            "Haftalar süren düzenli terapinin ardından sağlığında kademeli bir iyileşme görüldü.",
+            "Yeni bir dil öğrenmek, genellikle günlük çaba gerektiren kademeli bir süreçtir."
           ]
         },
         {
@@ -14343,6 +15763,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Deneyimli ve yeni çalışanlar arasındaki maaş farkı kayda değerdi.",
+            "Deneysel düzenekte belirgin bir sıcaklık farkı gözlemlediler.",
+            "Gerilim farkını anlamak, güvenli elektrik devreleri tasarlamak için çok önemlidir."
           ]
         },
         {
@@ -14393,6 +15818,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni köprü, sağlam temelleri için tonlarca yüksek kaliteli çimentoya ihtiyaç duydu.",
+            "Hasarlı kaldırımı hızlıca onarmak için özel hızlı priz alan bir çimento kullandılar.",
+            "Mecazi olarak, paylaşılan deneyimler genellikle bireyler ve gruplar arasındaki ilişkileri pekiştirir."
           ]
         },
         {
@@ -14443,6 +15873,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Birçok zorluğa rağmen, şirket oldukça dirençli olduğunu kanıtladı ve pazar payını hızla geri kazandı.",
+            "Çocuklar genellikle inanılmaz derecede dirençlidir; küçük yaralanmalardan veya hayal kırıklıklarından kolayca toparlanırlar.",
+            "Yeni malzeme oldukça esnektir; önemli sıkıştırmadan sonra bile formunu korur."
           ]
         },
         {
@@ -14493,6 +15928,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çevirmen, orijinal şiirin her ince nüansını yakalamakta zorlandı.",
+            "Performansı, karakterin duygusal nüanslarına dair derin bir anlayış sergiledi.",
+            "Kültürel nüansları anlamak, etkili uluslararası iletişim için çok önemlidir."
           ]
         }
       ]
@@ -14547,6 +15987,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "O çok iyi bir arkadaş ve bana her zaman yardım eder.",
+            "Bu restorandaki yemekler çok iyi, beğeniyorum.",
+            "Her gün su içmek iyi bir fikirdir."
           ]
         },
         {
@@ -14597,6 +16042,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yılki ana hedefim İngilizce'yi iyi öğrenmek.",
+            "Futbol maçında bir gol attı! Çok heyecanlıydı.",
+            "Hedefi yeni bir bisiklet için para biriktirmek."
           ]
         },
         {
@@ -14647,6 +16097,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Sessiz, özel bir yerde kitap okumayı sever.",
+            "Kardeşimin özel bir odası var, bu yüzden başka kimse giremez.",
+            "Bu özel bir konuşma, bu yüzden lütfen dinlemeyin."
           ]
         },
         {
@@ -14697,6 +16152,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her sabah otobüse belli bir saatte biner.",
+            "Her akşam parkın etrafında düzenli bir yürüyüşe çıkar.",
+            "Her pazartesi ekibimizle düzenli bir toplantı yaparız."
           ]
         },
         {
@@ -14747,6 +16207,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni bina planlarına karşı yapılan barışçıl protestoya birçok kişi katıldı.",
+            "Öğrenciler, artan harçlara karşı küçük bir protesto düzenledi.",
+            "Geçen hafta sonu şehir merkezinde büyük bir protesto yapıldı."
           ]
         },
         {
@@ -14797,6 +16262,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bisiklete binerken başınızı korumak için kask takın.",
+            "Ebeveynler her zaman çocuklarını kötü şeylerden korumaya çalışırlar.",
+            "Bu özel krem cildinizi yakıcı güneşten koruyacak."
           ]
         },
         {
@@ -14847,6 +16317,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Parfümünün zar zor fark edilen, ince bir kokusu vardı.",
+            "Tasarımda ince bir değişiklik yaptı, sadece rengi hafifçe değiştirerek.",
+            "Sesinde, neredeyse kaçırdığım ince bir alay tonu vardı."
           ]
         },
         {
@@ -14897,6 +16372,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, yerel kaynakları çevresel açıdan kötüye kullandığı için yoğun eleştiri aldı.",
+            "Birçok kampanya, sirklerde ve hayvanat bahçelerinde hayvan istismarını önlemeyi amaçlıyor.",
+            "Eski patronundan yaşadığı duygusal istismarı bildirdi."
           ]
         },
         {
@@ -14947,6 +16427,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Daha fazla verimlilik elde etmek için süreçlerimizi sürekli iyileştirmeliyiz.",
+            "Şef, imza sos tarifini mükemmelleştirmek için yıllarını harcadı.",
+            "Bilim insanları, yeni deneysel verilere dayanarak teorileri geliştirmek için çalışır."
           ]
         },
         {
@@ -14997,6 +16482,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çalışma, karmaşık tasarımı nedeniyle önemli metodolojik zorluklarla karşılaştı.",
+            "Veri analizine yaklaşımı son derece metodolojik ve inanılmaz derecede kesindi.",
+            "Uzmanlar, son ekonomik raporun metodolojik sağlamlığını tartıştılar."
           ]
         },
         {
@@ -15047,6 +16537,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Antibiyotiğe dirençli bakterilerin hızla yayılması, önemli bir küresel sağlık sorunu teşkil etmektedir.",
+            "Bağırsaktaki faydalı bakteriler, sindirim sağlığının ve bağışıklığın korunmasında kilit rol oynar.",
+            "Bilim insanları, kirliliğe karşı yeni biyoremediasyon stratejileri geliştirmek amacıyla belirli bakterileri inceliyor."
           ]
         },
         {
@@ -15097,6 +16592,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bilim insanları kontamine örnekten yeni bir bakteri suşunu izole etmeyi başardı.",
+            "Ağır eleştiri, onun meslektaşlarından tamamen izole edilmiş hissetmesine neden oldu.",
+            "Hassas ekipmanı dış titreşimlerden yeterli düzeyde yalıtmak çok önemlidir."
           ]
         }
       ]
@@ -15151,6 +16651,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tatillerimde yeni ülkelere seyahat etmeyi severim.",
+            "Arkadaşım ailesini ziyaret etmek için sık sık trenle seyahat eder.",
+            "Gençken çok seyahat ettin mi?"
           ]
         },
         {
@@ -15201,6 +16706,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her gece odama gider ve yatağımda uyurum.",
+            "Kedi, sıcak güneşte yatağımda uyumayı sever.",
+            "Sabah evden çıkmadan önce lütfen yatağını topla."
           ]
         },
         {
@@ -15251,6 +16761,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dağlarda kamp yapmak bizim için gerçek bir maceraydı.",
+            "Çocuklar, maceraya atılan cesur şövalyeler hakkındaki hikayeleri okumayı çok severdi.",
+            "Arkadaşım dünyayı gezmek istiyor; bu büyük bir macera olacak."
           ]
         },
         {
@@ -15301,6 +16816,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Parlak kırmızı elma, yeşil yapraklarla belirgin bir zıtlık oluşturuyordu.",
+            "Şehir hayatı ile köy hayatı arasında büyük bir zıtlık vardır.",
+            "Koyu saçları, açık teniyle hoş bir zıtlık oluşturuyor."
           ]
         },
         {
@@ -15351,6 +16871,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu sabah dağın zirvesi otel penceremizden net bir şekilde görünüyordu.",
+            "Yağmurdan sonra gökyüzünde güzel bir gökkuşağı belirdi.",
+            "Gece sürücülerin sizi görmesi için parlak renkli kıyafetler giymeyi unutmayın."
           ]
         },
         {
@@ -15401,6 +16926,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tatil bütçesini nasıl harcayacağımız konusunda fikirlerimiz uyuşmuyor.",
+            "Bu iki telefon başlıca ekran boyutu ve pil ömrüyle birbirinden ayrılır.",
+            "Çocuklar genellikle müzik zevki konusunda ebeveynlerinden farklılık gösterir."
           ]
         },
         {
@@ -15451,6 +16981,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Boş zamanını hayvan barınağında gönüllü çalışmaya adamaya karar verdi.",
+            "Birçok bilim insanı, hayatlarını hastalıklara çare bulma araştırmalarına adar.",
+            "Sanatçı, eşsiz resim tarzını mükemmelleştirmeye yıllarını adadı."
           ]
         },
         {
@@ -15501,6 +17036,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni bir cihaza bu kadar çok para harcamayı haklı çıkarmak zor.",
+            "Şirketten bu kadar aniden ayrılma kararını haklı çıkarabilir misin?",
+            "Onun mükemmel performansı, takımın ona duyduğu ilk güveni haklı çıkarmaya yardımcı oldu."
           ]
         },
         {
@@ -15551,6 +17091,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Rapor, her bir ekip üyesinin sorumluluklarını açıkça belirtiyor.",
+            "Haritalar genellikle farklı renkler ve çizgiler kullanarak ulusal sınırları çizer.",
+            "Herhangi bir işe başlamadan önce projenin kapsamını belirlemek önemlidir."
           ]
         },
         {
@@ -15601,6 +17146,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Birçok antik el yazması artık mevcut değil, ancak birkaçı hala varlığını sürdürüyor.",
+            "Şehrin bilinen en eski fotoğrafı arşivlerde hala mevcut.",
+            "Yüzyıllar süren değişimlere rağmen, bazı ortaçağ gelenekleri kırsal bölgelerde hala varlığını sürdürüyor."
           ]
         },
         {
@@ -15651,6 +17201,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Eleştirmenler, yeni politikayı hatalı uygulamasını vurgulayarak itibarsızlaştırmaya çalıştı.",
+            "Dezenformasyon yaymak, bir adayın bütün seçim kampanyasını hızla itibarsızlaştırabilir.",
+            "Tarihsel revizyonizm, siyasi çıkar sağlamak için genellikle geçmiş başarıları itibarsızlaştırmaya çalışır."
           ]
         },
         {
@@ -15701,6 +17256,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Orta çağ şövalyesinin akıllı telefon kullanması bariz bir anakronizm olurdu.",
+            "Yönetmen, dönem dramasındaki tarihi anakronizmler yüzünden eleştirildi.",
+            "Bugün pudralı peruk takmak eğlenceli bir anakronizm olarak kabul edilirdi."
           ]
         }
       ]
@@ -15755,6 +17315,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Babamın hastanede yeni bir işi var; o bir doktor.",
+            "İşin ne? Büyük bir okulda öğretmenim.",
+            "İyi bir iş bulmak bazen zor olabilir ama pes etme."
           ]
         },
         {
@@ -15805,6 +17370,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Küçük çocuk topuyla sokakta oynuyor.",
+            "Evim çok ağaçlı sakin bir sokakta.",
+            "Ana caddeden dükkana yürüyelim."
           ]
         },
         {
@@ -15855,6 +17425,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu yeni kahve makinesini nasıl çalıştıracağımı gösterir misin, lütfen?",
+            "Hastane yarın sabah hastayı ameliyat edecek.",
+            "Birçok küçük işletme bu günlerde evden çalışıyor."
           ]
         },
         {
@@ -15905,6 +17480,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Dün çok fazla pasta yediğime pişmanım, şimdi karnım ağrıyor.",
+            "Haftaya sınavı için çalışmadığına pişman olacak.",
+            "Ona sırrını söylediğine pişman mısın? Herkese anlattı."
           ]
         },
         {
@@ -15955,6 +17535,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Gelecek nesillerin de onlardan faydalanabilmesi için eski binaları korumalıyız.",
+            "Yiyecekleri dondurmak, tazeliğini aylarca korumasına yardımcı olur.",
+            "Farklı ülkeler arasında barışı korumak önemlidir."
           ]
         },
         {
@@ -16005,6 +17590,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu talimatları herkesin daha iyi anlaması için basitleştirebilir misiniz?",
+            "Üniversiteye başvuru sürecini basitleştirmemiz gerekiyor.",
+            "Öğretmen bizden denememizi anlaşılırlık için basitleştirmemizi istedi."
           ]
         },
         {
@@ -16055,6 +17645,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni fabrika maalesef birçok yerel işçiyi işlerinden edecek.",
+            "Yükselen deniz seviyeleri, kıyı bölgelerinde yaşayan binlerce insanı yerinden edebilir.",
+            "Yeni teknoloji genellikle eski yöntemlerin yerini alarak onları geçersiz kılar."
           ]
         },
         {
@@ -16105,6 +17700,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Avukat, argümanını desteklemek için belirli bir yasal emsale başvurmaya karar verdi.",
+            "Sistem arızalanmaya başlarsa, acil durum protokolünü devreye sokabilirsiniz.",
+            "Birçok kültür, korunma ve iyi şans için antik ruhları çağırır."
           ]
         },
         {
@@ -16155,6 +17755,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Güçlü rüzgar binadaki metal tabelayı yamultmaya başladı.",
+            "Siyasi propaganda genellikle karmaşık konular hakkındaki kamuoyu algısını çarpıtabilir.",
+            "Eski hoparlörler müziği bozarak kulağa hoş gelmeyen bir hale getirirdi."
           ]
         },
         {
@@ -16205,6 +17810,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İşbu toplantının tüm katılımcılar için derhal geçerli olmak üzere resmen sona erdiğini ilan ederim.",
+            "Şirket, işbu belgeyle tüm hissedarları yönetim kurulundaki yaklaşan değişiklikler hakkında bilgilendirir.",
+            "İşbu belgeyle, kısıtlı belgelere erişmeniz için size tam yetki veriyoruz."
           ]
         },
         {
@@ -16255,6 +17865,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İlerici görüşleri, muhafazakar partinin temel ilkeleriyle taban tabana zıttı.",
+            "Mutlak özgürlük kavramı, genellikle toplumsal düzen ve kolektif sorumlulukla çelişir.",
+            "Onların lüks yaşam tarzı, savundukları tasarruf anlayışıyla taban tabana zıttı."
           ]
         },
         {
@@ -16305,6 +17920,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ağır cezalar, gelecekteki ihlallere karşı güçlü bir caydırıcı görevi gördü.",
+            "Yüksek fiyatlar, potansiyel alıcılar için genellikle önemli bir caydırıcı olabilir.",
+            "Güvenlik kameraları, kentsel alanlarda yaygın bir suç caydırıcısıdır."
           ]
         }
       ]
@@ -16359,6 +17979,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Size tren tarifesi hakkında bir soru sorabilir miyim?",
+            "Dersi anlamazsanız lütfen öğretmeninize sorun.",
+            "Ağır çantası için yardım istemek istiyor."
           ]
         },
         {
@@ -16409,6 +18034,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Okula gitmeden önce elmamı küçük kırmızı çantaya koydum.",
+            "Her gün kitaplarını büyük mavi bir çantada taşır.",
+            "Lütfen alışveriş çantasını arabadan mutfağa götür."
           ]
         },
         {
@@ -16459,6 +18089,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen hayır demeden önce teklifimi değerlendirin.",
+            "Haftaya proje için yeni fikirleri değerlendirecekler.",
+            "Bir plan seçmeden önce tüm seçenekleri düşünmeliyiz."
           ]
         },
         {
@@ -16509,6 +18144,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kahven için fazladan bir kaşık ister misin?",
+            "Otel odasında misafirler için ekstra bir yatak var.",
+            "Hava soğuyabilir diye fazladan bir ceket getirdim."
           ]
         },
         {
@@ -16559,6 +18199,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen televizyonun sesini kıs; çok yüksek.",
+            "Uzun kuraklık boyunca depodaki su miktarı azaldı.",
+            "Yeni reklam kampanyasından sonra satış hacmi önemli ölçüde arttı."
           ]
         },
         {
@@ -16609,6 +18254,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Düzenli egzersiz, her yaştan insana birçok sağlık faydası sağlar.",
+            "Yeni halk parkı, tüm topluluk için büyük bir fayda olacak.",
+            "Bir dil öğrenmenin açık bir faydası, seyahat deneyimlerini geliştirmesidir."
           ]
         },
         {
@@ -16659,6 +18309,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şantiye alanından gelen sürekli gürültü, odaklanmayı zorlaştırdı.",
+            "Zor zamanlarda ailesinden sürekli destek alıyor.",
+            "Onun sürekli çabası, geçen yıl boyunca becerilerini önemli ölçüde geliştirdi."
           ]
         },
         {
@@ -16709,6 +18364,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Şirket, çalışanları fazla mesai yapmaya teşvik etmek amacıyla bir prim teklif etti.",
+            "Yeni bir dil öğrenmek, daha fazla seyahat etmek için harika bir teşvik olabilir.",
+            "Düşük vergiler, işletmelerin bölgeye yatırım yapması için bir teşvik sağlar."
           ]
         },
         {
@@ -16759,6 +18419,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Tesisatçı, mutfak lavabosundaki arızalı vanayı değiştirmek zorunda kaldı.",
+            "Kalp cerrahları genellikle kalpteki hasarlı kapakçıkları tamir eder veya değiştirir.",
+            "Gaz vanasını ayarlamak alevin şiddetini kontrol eder."
           ]
         },
         {
@@ -16809,6 +18474,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bitkilerin güçlü ve sağlıklı büyümesi için toprakta azota ihtiyacı vardır.",
+            "Bilim insanı, örnekte ne kadar azot bulunduğunu ölçtü.",
+            "Sıvı azot, laboratuvarda aşırı düşük sıcaklıklarda saklanır."
           ]
         },
         {
@@ -16859,6 +18529,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni iş, haftada en az iki kez geç saatlere kadar çalışmayı gerektirecek.",
+            "Köprüyü inşa etmek, büyük maliyetler ve dikkatli bir planlama gerektirecek.",
+            "Teklifi kabul etmek, gelecek yıl başka bir şehre taşınmayı gerektirebilir."
           ]
         },
         {
@@ -16909,6 +18584,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Kırsal bölgelerdeki yoksulluğu gidermek için yeni politikalar getirildi.",
+            "Doktor, nazik bakımıyla hastanın ağrısını hafifletmeye çalıştı.",
+            "Ek finansman, okulun personel sorunlarından bazılarını giderebilir."
           ]
         }
       ]
@@ -16963,6 +18643,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yatak odası duvarları için en sevdiğin renk ne?",
+            "Ülkenin bu bölgesinde yapraklar her sonbahar renk değiştirir.",
+            "Kalabalıkta göze çarpan parlak bir renk giydi."
           ]
         },
         {
@@ -17013,6 +18698,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Çocuklar okul gezisini duyduklarında mutlu oldular.",
+            "Ailesinden iyi haber aldıktan sonra mutlu görünüyordu.",
+            "Güneşte kısa bir yürüyüş beni tekrar mutlu edebilir."
           ]
         },
         {
@@ -17063,6 +18753,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Takım, bu yıl daha fazla müşteri kazanmak için yeni bir strateji görüştü.",
+            "Onun pazarlama stratejisi sosyal medya ve kısa videolara odaklandı.",
+            "Net bir strateji olmadan, proje hızla yönünü kaybetti."
           ]
         },
         {
@@ -17113,6 +18808,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Öğretmen sınav sırasında telefonlara izin vermez.",
+            "Bu bilet müzeye bir kez girmenizi sağlayacak.",
+            "Ebeveynler çocuklara her gün dışarıda oynamaları için zaman tanımalıdır."
           ]
         },
         {
@@ -17163,6 +18863,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen hafta sonundan önce e-postama yanıt verin.",
+            "Hasta, ilk ilaç türüne iyi gelmedi.",
+            "Şirket, müşteri şikayetine ne kadar hızlı yanıt verdi?"
           ]
         },
         {
@@ -17213,6 +18918,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Vakfın misyonu, kırsal köylere temiz su sağlamaktır.",
+            "Savaş sırasında düşman hatlarının gerisinde tehlikeli bir görevi kabul etti.",
+            "Okulumuzun misyonu yaratıcılık, saygı ve yaşam boyu öğrenmeye odaklanmaktadır."
           ]
         },
         {
@@ -17263,6 +18973,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "O şehir hayatını sever, oysa erkek kardeşi sakin kırsalı tercih eder.",
+            "Kuzey kurudur, oysa güney her yıl yoğun yağış alır.",
+            "O para biriktirmek istedi, oysa ortağı onu harcamayı tercih etti."
           ]
         },
         {
@@ -17313,6 +19028,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Yeni işin stresiyle başa çıkması biraz zamanını aldı.",
+            "Bebekleri uyumadığında genç ebeveynler genellikle başa çıkmakta zorlanırlar.",
+            "Hastane, kış gribi sezonuyla başa çıkmaya yardımcı olmak için ek personel bulunduruyor."
           ]
         },
         {
@@ -17363,6 +19083,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Temyiz eden, ilk yargılamanın haksız olduğunu savundu.",
+            "Temyiz edenin avukatları dün mahkemeye yeni belgeler sundu.",
+            "Hakim, temyiz edenin temyiz gerekçelerini dikkatle dinledi."
           ]
         },
         {
@@ -17413,6 +19138,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Raporun ekinde tüm ham anket verileri yer almaktadır.",
+            "Referans ve kaynakların tam listesi için lütfen eke bakınız.",
+            "Metinde geçen teknik terimleri açıklayan bir ek ekledi."
           ]
         },
         {
@@ -17463,6 +19193,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Onun sakin liderliği, şirketimizin benimsemek istediği değerleri temsil ediyor.",
+            "Bu vaka, yeterli araştırma yapmadan yatırım yapmanın risklerini gözler önüne seriyor.",
+            "Şiir, on dokuzuncu yüzyılda popüler olan yazım tarzını örneklendiriyor."
           ]
         },
         {
@@ -17513,6 +19248,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Ekstra bir ücret ödemek, paketinizin teslimatını hızlandırabilir.",
+            "Yönetici, personelden acil başvuruların incelenmesini hızlandırmalarını istedi.",
+            "Ekip genelinde veri girişini hızlandırmak için yeni bir yazılım kullanıma sunuldu."
           ]
         }
       ]
@@ -17567,6 +19307,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İngilizce dersimiz her Pazartesi sabahı saat dokuzda başlar.",
+            "Öğretmen, tüm sınıftan kitaplarını sayfa ona açmalarını istedi.",
+            "Yeni okulda ilk sınıfında birçok arkadaş edindi."
           ]
         },
         {
@@ -17617,6 +19362,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İyi iletişim, hemen hemen her işte önemli bir beceridir.",
+            "Her hafta sonu tarifleri uygulayarak yemek yapma becerisini geliştirdi.",
+            "Yeni bir dil öğrenmek zaman, sabır ve gerçek beceri ister."
           ]
         },
         {
@@ -17667,6 +19417,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her ay para biriktirerek küçük bir acil durum fonu oluşturdu.",
+            "Şirket maliyetleri kısarak hayatta kalma şansını artırdı.",
+            "İçtenlikle özür dileyerek odadaki gerilimi hafifletti."
           ]
         },
         {
@@ -17717,6 +19472,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu deneyimden ne öğrendiğini düşünmek için kendine biraz zaman ayır.",
+            "Göl o kadar sakindi ki dağlar suda yansıyor gibiydi.",
+            "Makalesi, konuya dair derin bir anlayışı yansıtıyor."
           ]
         },
         {
@@ -17767,6 +19527,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mağaza, tüm elektronik ürünlerde iki yıllık garanti veriyor.",
+            "Trenin bugün zamanında geleceğini garanti edemem.",
+            "Sözleşme, tamiratların bir hafta içinde yapılacağına dair bir garanti içeriyor."
           ]
         },
         {
@@ -17817,6 +19582,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Üniversiteyi bitirdikten sonra seyahat etme arzusu güçlendi.",
+            "Seçmenler arasında daha dürüst politikacılara yönelik artan bir arzu var.",
+            "Kendi işini kurma arzusundan açıkça bahsetti."
           ]
         },
         {
@@ -17867,6 +19637,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen ödevinizi Cuma gece yarısından önce teslim edin.",
+            "Anlaşmazlıktan sonra istifasını sunmaya karar verdi.",
+            "Tüm adaylar formlarını son teslim tarihine kadar çevrimiçi olarak sunmak zorundadır."
           ]
         },
         {
@@ -17917,6 +19692,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İki departman, yeni pazarlama projesinde iş birliği yapmaya anlaştı.",
+            "Çocuklar, okulda takım sporları yaparken iş birliği yapmayı öğrenirler.",
+            "Tanıklar, soruşturma sırasında polisle iş birliği yapmayı reddetti."
           ]
         },
         {
@@ -17967,6 +19747,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Arz sonunda talebi karşıladığında piyasa dengeye ulaştı.",
+            "Yoga, stresten sonra zihinsel dengeyi yeniden sağlamaya yardımcı olabilir.",
+            "Bilim insanları, ekosistemin doğal dengesini nasıl koruduğunu inceledi."
           ]
         },
         {
@@ -18017,6 +19802,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Süngerin suyu emmesi şaşırtıcı derecede hızlı ve derinlemesineydi.",
+            "Bazı yiyecekleri birlikte yediğinizde vitamin emilimi gelişir.",
+            "Romana kendini tamamen kaptırması, otobüs durağını kaçırmasına neden oldu."
           ]
         },
         {
@@ -18067,6 +19857,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "1990'larda fast-food restoranları şehir genelinde çoğalmaya başladı.",
+            "Bir kriz sırasında söylentiler sosyal medyada hızla yayılma eğilimindedir.",
+            "Bazı bakteriler sıcak, nemli ortamlarda saatler içinde üreyebilir."
           ]
         },
         {
@@ -18117,6 +19912,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İmparatorluk, ticaret yolları üzerindeki hegemonyasını yüzyıllarca sürdürdü.",
+            "Eleştirmenler, kültürel hegemonyanın küçük ulusların seslerini susturabileceği konusunda uyardılar.",
+            "Tartışma, ekonomik hegemonyanın kalıcı barışa yol açıp açmadığına odaklandı."
           ]
         }
       ]
@@ -18171,6 +19971,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İngilizce dersimiz her Pazartesi sabahı saat dokuzda başlar.",
+            "Öğretmen, tüm sınıftan kitaplarını sayfa ona açmalarını istedi.",
+            "Yeni okulda ilk sınıfında birçok arkadaş edindi."
           ]
         },
         {
@@ -18221,6 +20026,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İyi iletişim, hemen hemen her işte önemli bir beceridir.",
+            "Her hafta sonu tarifleri uygulayarak yemek yapma becerisini geliştirdi.",
+            "Yeni bir dil öğrenmek zaman, sabır ve gerçek beceri ister."
           ]
         },
         {
@@ -18271,6 +20081,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Her ay para biriktirerek küçük bir acil durum fonu oluşturdu.",
+            "Şirket maliyetleri kısarak hayatta kalma şansını artırdı.",
+            "İçtenlikle özür dileyerek odadaki gerilimi hafifletti."
           ]
         },
         {
@@ -18321,6 +20136,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Bu deneyimden ne öğrendiğini düşünmek için kendine biraz zaman ayır.",
+            "Göl o kadar sakindi ki dağlar suda yansıyor gibiydi.",
+            "Makalesi, konuya dair derin bir anlayışı yansıtıyor."
           ]
         },
         {
@@ -18371,6 +20191,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Mağaza, tüm elektronik ürünlerde iki yıllık garanti veriyor.",
+            "Trenin bugün zamanında geleceğini garanti edemem.",
+            "Sözleşme, tamiratların bir hafta içinde yapılacağına dair bir garanti içeriyor."
           ]
         },
         {
@@ -18421,6 +20246,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Üniversiteyi bitirdikten sonra seyahat etme arzusu güçlendi.",
+            "Seçmenler arasında daha dürüst politikacılara yönelik artan bir arzu var.",
+            "Kendi işini kurma arzusundan açıkça bahsetti."
           ]
         },
         {
@@ -18471,6 +20301,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Lütfen ödevinizi Cuma gece yarısından önce teslim edin.",
+            "Anlaşmazlıktan sonra istifasını sunmaya karar verdi.",
+            "Tüm adaylar formlarını son teslim tarihine kadar çevrimiçi olarak sunmak zorundadır."
           ]
         },
         {
@@ -18521,6 +20356,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İki departman, yeni pazarlama projesinde iş birliği yapmaya anlaştı.",
+            "Çocuklar, okulda takım sporları yaparken iş birliği yapmayı öğrenirler.",
+            "Tanıklar, soruşturma sırasında polisle iş birliği yapmayı reddetti."
           ]
         },
         {
@@ -18571,6 +20411,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Arz sonunda talebi karşıladığında piyasa dengeye ulaştı.",
+            "Yoga, stresten sonra zihinsel dengeyi yeniden sağlamaya yardımcı olabilir.",
+            "Bilim insanları, ekosistemin doğal dengesini nasıl koruduğunu inceledi."
           ]
         },
         {
@@ -18621,6 +20466,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "Süngerin suyu emmesi şaşırtıcı derecede hızlı ve derinlemesineydi.",
+            "Bazı yiyecekleri birlikte yediğinizde vitamin emilimi gelişir.",
+            "Romana kendini tamamen kaptırması, otobüs durağını kaçırmasına neden oldu."
           ]
         },
         {
@@ -18671,6 +20521,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "1990'larda fast-food restoranları şehir genelinde çoğalmaya başladı.",
+            "Bir kriz sırasında söylentiler sosyal medyada hızla yayılma eğilimindedir.",
+            "Bazı bakteriler sıcak, nemli ortamlarda saatler içinde üreyebilir."
           ]
         },
         {
@@ -18721,6 +20576,11 @@
               ],
               "correctAnswerIndex": 0
             }
+          ],
+          "exampleTranslationsTr": [
+            "İmparatorluk, ticaret yolları üzerindeki hegemonyasını yüzyıllarca sürdürdü.",
+            "Eleştirmenler, kültürel hegemonyanın küçük ulusların seslerini susturabileceği konusunda uyardılar.",
+            "Tartışma, ekonomik hegemonyanın kalıcı barışa yol açıp açmadığına odaklandı."
           ]
         }
       ]

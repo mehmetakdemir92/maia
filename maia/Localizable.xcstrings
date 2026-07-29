@@ -548,6 +548,9 @@
         }
       }
     },
+    "App language applies immediately; System follows your device language. Example translations appear under EN/DE sentences (Turkish recommended for Turkish app language). Learning language and level are on the Today tab." : {
+
+    },
     "App language applies immediately. System follows your device language." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -604,6 +607,9 @@
           }
         }
       }
+    },
+    "Automatic" : {
+
     },
     "Back" : {
       "localizations" : {
@@ -1742,6 +1748,7 @@
       }
     },
     "Daily words, quizzes, and pronunciation use the learning language. App language applies immediately; System follows your device language." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2234,6 +2241,7 @@
       }
     },
     "English level" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2260,9 +2268,6 @@
           }
         }
       }
-    },
-    "English: %@" : {
-
     },
     "Enjoy an ad-free experience, AI sentence correction, extra example sentences, and full profile stats." : {
       "localizations" : {
@@ -2386,6 +2391,9 @@
           }
         }
       }
+    },
+    "Example translations" : {
+
     },
     "Fill in the blank:" : {
       "localizations" : {
@@ -2787,6 +2795,7 @@
       }
     },
     "I'm learning" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3516,6 +3525,9 @@
           }
         }
       }
+    },
+    "Off" : {
+
     },
     "OK" : {
       "localizations" : {
@@ -5327,6 +5339,7 @@
       }
     },
     "Today's words target: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

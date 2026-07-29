@@ -1318,5 +1318,2095 @@
       "The criticism was harsh, but remained factual.",
       "He knew the dangers and still dared to try."
     ]
+  },
+  {
+    "word": "Erörterung",
+    "cefrLevel": "c1",
+    "phonetic": "/ɛɐ̯ˈœʁtəʁʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "A detailed discussion or analysis of a specific topic or problem.",
+    "examples": [
+      "Die Erörterung der neuen Gesetzesvorschläge dauerte den ganzen Vormittag.",
+      "In seiner schriftlichen Erörterung legte er seine Argumente überzeugend dar.",
+      "Eine gründliche Erörterung der Vor- und Nachteile ist für eine fundierte Entscheidung unerlässlich."
+    ],
+    "exampleTranslations": [
+      "The discussion of the new legislative proposals lasted the entire morning.",
+      "In his written analysis, he presented his arguments convincingly.",
+      "A thorough deliberation of the pros and cons is essential for a well-founded decision."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Erörterung\" mean?",
+        "options": [
+          "A detailed discussion or analysis of a specific topic or problem.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ der neuen Gesetzesvorschläge dauerte den ganzen Vormittag.",
+        "options": [
+          "Erörterung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In seiner schriftlichen _____ legte er seine Argumente überzeugend dar.",
+        "options": [
+          "Erörterung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Implikation",
+    "cefrLevel": "c1",
+    "phonetic": "/ɪmplikaˈt͡sjoːn/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "A suggestion or consequence that is not explicitly stated but understood.",
+    "examples": [
+      "Die politische Aussage hatte eine klare Implikation für die zukünftige Wirtschaftspolitik.",
+      "Man muss die Implikationen dieser Entscheidung sorgfältig abwägen.",
+      "Er verstand die volle Implikation ihrer Worte erst viel später."
+    ],
+    "exampleTranslations": [
+      "The political statement had a clear implication for future economic policy.",
+      "One must carefully weigh the implications of this decision.",
+      "He only much later understood the full implication of her words."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Implikation\" mean?",
+        "options": [
+          "A suggestion or consequence that is not explicitly stated but understood.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die politische Aussage hatte eine klare _____ für die zukünftige Wirtschaftspolitik.",
+        "options": [
+          "Implikation",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man muss die _____en dieser Entscheidung sorgfältig abwägen.",
+        "options": [
+          "Implikation",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Konzeption",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌkɔnt͡sɛpt͡si̯oːn/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The overall plan or design for something, especially a project or idea.",
+    "examples": [
+      "Die Konzeption des neuen Projekts wurde von einem Expertenteam entwickelt.",
+      "Vor dem Start der Kampagne muss die Konzeption sorgfältig durchdacht werden.",
+      "Die gesamte Konzeption des Festivals war darauf ausgelegt, ein breites Publikum anzusprechen."
+    ],
+    "exampleTranslations": [
+      "The conception of the new project was developed by a team of experts.",
+      "Before the campaign starts, the conception must be carefully thought through.",
+      "The entire concept of the festival was designed to appeal to a broad audience."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Konzeption\" mean?",
+        "options": [
+          "The overall plan or design for something, especially a project or idea.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ des neuen Projekts wurde von einem Expertenteam entwickelt.",
+        "options": [
+          "Konzeption",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Vor dem Start der Kampagne muss die _____ sorgfältig durchdacht werden.",
+        "options": [
+          "Konzeption",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Paradigma",
+    "cefrLevel": "c1",
+    "phonetic": "/paʁaˈdɪɡma/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "A typical example or pattern of something; a framework of ideas.",
+    "examples": [
+      "Die neue Theorie stellte das alte Paradigma der Wissenschaft infrage.",
+      "Ein Paradigma ist ein grundlegendes Muster oder Modell, das etwas erklärt.",
+      "Der Wandel des Paradigmas hatte weitreichende Auswirkungen auf die Gesellschaft."
+    ],
+    "exampleTranslations": [
+      "The new theory questioned the old paradigm of science.",
+      "A paradigm is a fundamental pattern or model that explains something.",
+      "The shift of the paradigm had far-reaching effects on society."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Paradigma\" mean?",
+        "options": [
+          "A typical example or pattern of something; a framework of ideas.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die neue Theorie stellte das alte _____ der Wissenschaft infrage.",
+        "options": [
+          "Paradigma",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ein _____ ist ein grundlegendes Muster oder Modell, das etwas erklärt.",
+        "options": [
+          "Paradigma",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Diskurs",
+    "cefrLevel": "c1",
+    "phonetic": "/dɪsˈkʊrs/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "A formal discussion or debate on a specific topic within a particular field.",
+    "examples": [
+      "Der öffentliche Diskurs über Klimawandel ist oft von starken Emotionen geprägt.",
+      "In akademischen Kreisen wird dieser Diskurs intensiv geführt.",
+      "Es ist wichtig, einen offenen Diskurs über kontroverse Themen zu fördern."
+    ],
+    "exampleTranslations": [
+      "The public discourse on climate change is often characterized by strong emotions.",
+      "In academic circles, this discourse is intensely conducted.",
+      "It is important to foster an open discourse on controversial topics."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Diskurs\" mean?",
+        "options": [
+          "A formal discussion or debate on a specific topic within a particular field.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der öffentliche _____ über Klimawandel ist oft von starken Emotionen geprägt.",
+        "options": [
+          "Diskurs",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In akademischen Kreisen wird dieser _____ intensiv geführt.",
+        "options": [
+          "Diskurs",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Kohärenz",
+    "cefrLevel": "c1",
+    "phonetic": "/koheˈrɛnt͡s/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "The quality of being logical, consistent, and easy to understand.",
+    "examples": [
+      "Die Kohärenz eines Textes ist entscheidend für seine Verständlichkeit und Überzeugungskraft.",
+      "Es fehlte dem Vortrag an innerer Kohärenz, was die Zuhörer verwirrte.",
+      "Um die Kohärenz des Forschungsprojekts zu gewährleisten, wurden alle Teilaspekte sorgfältig aufeinander abgestimmt."
+    ],
+    "exampleTranslations": [
+      "The coherence of a text is crucial for its comprehensibility and persuasiveness.",
+      "The presentation lacked internal coherence, which confused the audience.",
+      "To ensure the coherence of the research project, all sub-aspects were carefully coordinated."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Kohärenz\" mean?",
+        "options": [
+          "The quality of being logical, consistent, and easy to understand.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ eines Textes ist entscheidend für seine Verständlichkeit und Überzeugungskraft.",
+        "options": [
+          "Kohärenz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es fehlte dem Vortrag an innerer _____, was die Zuhörer verwirrte.",
+        "options": [
+          "Kohärenz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Relevanz",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌʁeləˈvants/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The quality of being closely connected and appropriate to the matter at hand.",
+    "examples": [
+      "Die Studie hat eine hohe Relevanz für die aktuelle politische Debatte.",
+      "Die Ergebnisse der Forschung sind von großer Relevanz für die Entwicklung neuer Technologien.",
+      "Man muss die Relevanz dieser Argumente im Kontext der Diskussion bewerten."
+    ],
+    "exampleTranslations": [
+      "The study has high relevance for the current political debate.",
+      "The research results are of great relevance for the development of new technologies.",
+      "One must assess the relevance of these arguments in the context of the discussion."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Relevanz\" mean?",
+        "options": [
+          "The quality of being closely connected and appropriate to the matter at hand.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Studie hat eine hohe _____ für die aktuelle politische Debatte.",
+        "options": [
+          "Relevanz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Ergebnisse der Forschung sind von großer _____ für die Entwicklung neuer Technologien.",
+        "options": [
+          "Relevanz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Validität",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌvaliˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "The quality of being logically or factually sound, applicable, or well-founded.",
+    "examples": [
+      "Die Validität einer Studie ist entscheidend für die Glaubwürdigkeit ihrer Ergebnisse.",
+      "Um die Validität der Umfrageergebnisse zu gewährleisten, wurden verschiedene Kontrollmechanismen eingesetzt.",
+      "Experten bezweifeln die Validität der Daten, da die Erhebungsmethoden fehlerhaft waren."
+    ],
+    "exampleTranslations": [
+      "The validity of a study is crucial for the credibility of its results.",
+      "To ensure the validity of the survey results, various control mechanisms were employed.",
+      "Experts doubt the validity of the data because the collection methods were flawed."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Validität\" mean?",
+        "options": [
+          "The quality of being logically or factually sound, applicable, or well-founded.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ einer Studie ist entscheidend für die Glaubwürdigkeit ihrer Ergebnisse.",
+        "options": [
+          "Validität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um die _____ der Umfrageergebnisse zu gewährleisten, wurden verschiedene Kontrollmechanismen eingesetzt.",
+        "options": [
+          "Validität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Plausibilität",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌplaʊzibiliˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The quality of seeming reasonable or probable, making it easy to believe.",
+    "examples": [
+      "Die Plausibilität seiner Argumente wurde von den Zuhörern sofort erkannt.",
+      "Vor der Veröffentlichung muss die Plausibilität der Studienergebnisse sorgfältig geprüft werden.",
+      "Es mangelt der gesamten Theorie an jeglicher Plausibilität, was ihre Akzeptanz erschwert."
+    ],
+    "exampleTranslations": [
+      "The plausibility of his arguments was immediately recognized by the listeners.",
+      "Before publication, the plausibility of the study results must be carefully checked.",
+      "The entire theory lacks any plausibility, which makes its acceptance difficult."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Plausibilität\" mean?",
+        "options": [
+          "The quality of seeming reasonable or probable, making it easy to believe.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ seiner Argumente wurde von den Zuhörern sofort erkannt.",
+        "options": [
+          "Plausibilität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Vor der Veröffentlichung muss die _____ der Studienergebnisse sorgfältig geprüft werden.",
+        "options": [
+          "Plausibilität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Souveränität",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈzuːvəʁɛniˌtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The supreme authority of a state to govern itself without external interference.",
+    "examples": [
+      "Die Souveränität eines Staates ist ein Grundprinzip des Völkerrechts.",
+      "Nach langen Verhandlungen erlangte das Land seine volle Souveränität zurück.",
+      "Die Wahrung der nationalen Souveränität ist eine Kernaufgabe jeder Regierung."
+    ],
+    "exampleTranslations": [
+      "The sovereignty of a state is a fundamental principle of international law.",
+      "After long negotiations, the country regained its full sovereignty.",
+      "The preservation of national sovereignty is a core task of every government."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Souveränität\" mean?",
+        "options": [
+          "The supreme authority of a state to govern itself without external interference.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ eines Staates ist ein Grundprinzip des Völkerrechts.",
+        "options": [
+          "Souveränität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Nach langen Verhandlungen erlangte das Land seine volle _____ zurück.",
+        "options": [
+          "Souveränität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Legitimität",
+    "cefrLevel": "c1",
+    "phonetic": "/leɡitimiˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The state of being accepted as right, fair, or lawful by the public.",
+    "examples": [
+      "Die Regierung musste die Legitimität ihrer Entscheidungen nach den Protesten verteidigen.",
+      "Ohne die Zustimmung des Volkes fehlt einer Herrschaft die nötige Legitimität.",
+      "Die Frage nach der Legitimität von KI-Entscheidungen wird zunehmend diskutiert."
+    ],
+    "exampleTranslations": [
+      "The government had to defend the legitimacy of its decisions after the protests.",
+      "Without the consent of the people, a rule lacks the necessary legitimacy.",
+      "The question of the legitimacy of AI decisions is increasingly being discussed."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Legitimität\" mean?",
+        "options": [
+          "The state of being accepted as right, fair, or lawful by the public.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Regierung musste die _____ ihrer Entscheidungen nach den Protesten verteidigen.",
+        "options": [
+          "Legitimität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ohne die Zustimmung des Volkes fehlt einer Herrschaft die nötige _____.",
+        "options": [
+          "Legitimität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Autorität",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌaʊ̯toʁiˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The power or right to give orders, make decisions, and enforce obedience.",
+    "examples": [
+      "Die neue Chefin hat schnell ihre Autorität im Team etabliert.",
+      "Eltern müssen lernen, ihre elterliche Autorität auf eine positive Weise auszuüben.",
+      "Die Autoritäten haben die Bevölkerung aufgefordert, zu Hause zu bleiben."
+    ],
+    "exampleTranslations": [
+      "The new boss quickly established her authority within the team.",
+      "Parents must learn to exercise their parental authority in a positive way.",
+      "The authorities have urged the population to stay at home."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Autorität\" mean?",
+        "options": [
+          "The power or right to give orders, make decisions, and enforce obedience.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die neue Chefin hat schnell ihre _____ im Team etabliert.",
+        "options": [
+          "Autorität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Eltern müssen lernen, ihre elterliche _____ auf eine positive Weise auszuüben.",
+        "options": [
+          "Autorität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Hierarchie",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈhiːraʁˌçiː/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "An organizational structure where people or things are arranged by rank or importance.",
+    "examples": [
+      "In vielen Unternehmen gibt es eine klare Hierarchie, die die Verantwortlichkeiten festlegt.",
+      "Die flachen Hierarchien in Start-ups fördern oft eine offene Kommunikationskultur.",
+      "Es ist wichtig, die Hierarchie in einer Organisation zu verstehen, um effektiv arbeiten zu können."
+    ],
+    "exampleTranslations": [
+      "In many companies, there is a clear hierarchy that defines responsibilities.",
+      "The flat hierarchies in start-ups often promote an open communication culture.",
+      "It is important to understand the hierarchy in an organization to be able to work effectively."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Hierarchie\" mean?",
+        "options": [
+          "An organizational structure where people or things are arranged by rank or importance.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: In vielen Unternehmen gibt es eine klare _____, die die Verantwortlichkeiten festlegt.",
+        "options": [
+          "Hierarchie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die flachen _____n in Start-ups fördern oft eine offene Kommunikationskultur.",
+        "options": [
+          "Hierarchie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Kompetenz",
+    "cefrLevel": "c1",
+    "phonetic": "/kɔmpeˈtɛnts/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The ability to do something successfully or efficiently, acquired through training and experience.",
+    "examples": [
+      "Für diese anspruchsvolle Position ist eine hohe soziale Kompetenz unerlässlich.",
+      "Durch kontinuierliche Weiterbildung kann man seine berufliche Kompetenz stetig erweitern.",
+      "Die neue Mitarbeiterin beeindruckte alle mit ihrer fachlichen Kompetenz und schnellen Auffassungsgabe."
+    ],
+    "exampleTranslations": [
+      "For this demanding position, a high level of social competence is essential.",
+      "Through continuous professional development, one can constantly expand their professional competence.",
+      "The new employee impressed everyone with her professional competence and quick grasp."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Kompetenz\" mean?",
+        "options": [
+          "The ability to do something successfully or efficiently, acquired through training and experience.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Für diese anspruchsvolle Position ist eine hohe soziale _____ unerlässlich.",
+        "options": [
+          "Kompetenz",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Durch kontinuierliche Weiterbildung kann man seine berufliche _____ stetig erweitern.",
+        "options": [
+          "Kompetenz",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Diversität",
+    "cefrLevel": "c1",
+    "phonetic": "/diˌvɛrziˈtɛːt/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The state of having a wide range of different things or people.",
+    "examples": [
+      "Die Förderung von Diversität am Arbeitsplatz ist entscheidend für den Erfolg eines Unternehmens.",
+      "Kulturelle Diversität bereichert eine Gesellschaft und fördert gegenseitiges Verständnis.",
+      "Die biologische Diversität unserer Erde muss unbedingt geschützt werden."
+    ],
+    "exampleTranslations": [
+      "The promotion of diversity in the workplace is crucial for a company's success.",
+      "Cultural diversity enriches a society and fosters mutual understanding.",
+      "The biological diversity of our Earth must absolutely be protected."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Diversität\" mean?",
+        "options": [
+          "The state of having a wide range of different things or people.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Förderung von _____ am Arbeitsplatz ist entscheidend für den Erfolg eines Unternehmens.",
+        "options": [
+          "Diversität",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Kulturelle _____ bereichert eine Gesellschaft und fördert gegenseitiges Verständnis.",
+        "options": [
+          "Diversität",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Inklusion",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈɪnkluˌzi̯oːn/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The practice of ensuring all individuals, regardless of differences, have equal participation and access.",
+    "examples": [
+      "Die Schule setzt sich aktiv für die Inklusion von Kindern mit besonderen Bedürfnissen ein.",
+      "Eine erfolgreiche Inklusion erfordert oft strukturelle Anpassungen und ein Umdenken in der Gesellschaft.",
+      "Das Ziel der Inklusion ist es, eine Gesellschaft zu schaffen, in der jeder Mensch dazugehört."
+    ],
+    "exampleTranslations": [
+      "The school actively advocates for the inclusion of children with special needs.",
+      "Successful inclusion often requires structural adjustments and a shift in societal thinking.",
+      "The goal of inclusion is to create a society where every person belongs."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Inklusion\" mean?",
+        "options": [
+          "The practice of ensuring all individuals, regardless of differences, have equal participation and access.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Schule setzt sich aktiv für die _____ von Kindern mit besonderen Bedürfnissen ein.",
+        "options": [
+          "Inklusion",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Eine erfolgreiche _____ erfordert oft strukturelle Anpassungen und ein Umdenken in der Gesellschaft.",
+        "options": [
+          "Inklusion",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Exklusion",
+    "cefrLevel": "c1",
+    "phonetic": "/ɛkskluˈzi̯oːn/",
+    "partOfSpeech": "noun",
+    "domainTag": "social",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The act of deliberately keeping someone or something out from a group or place.",
+    "examples": [
+      "Die Exklusion bestimmter Gruppen aus dem Arbeitsmarkt ist ein ernstes gesellschaftliches Problem.",
+      "Viele Organisationen kämpfen gegen die soziale Exklusion und für mehr Inklusion.",
+      "Eine Politik der Exklusion führt oft zu Spannungen und Unzufriedenheit in der Bevölkerung."
+    ],
+    "exampleTranslations": [
+      "The exclusion of certain groups from the labor market is a serious social problem.",
+      "Many organizations fight against social exclusion and for more inclusion.",
+      "A policy of exclusion often leads to tensions and dissatisfaction among the population."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Exklusion\" mean?",
+        "options": [
+          "The act of deliberately keeping someone or something out from a group or place.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ bestimmter Gruppen aus dem Arbeitsmarkt ist ein ernstes gesellschaftliches Problem.",
+        "options": [
+          "Exklusion",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Viele Organisationen kämpfen gegen die soziale _____ und für mehr Inklusion.",
+        "options": [
+          "Exklusion",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Marginalisierung",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌmarɡinaliˈziːrʊŋ/",
+    "partOfSpeech": "noun",
+    "domainTag": "social",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "The process of pushing a group or individual to the fringes of society.",
+    "examples": [
+      "Die Marginalisierung bestimmter Bevölkerungsgruppen ist ein ernstes gesellschaftliches Problem.",
+      "Um soziale Gerechtigkeit zu fördern, müssen wir aktiv gegen jede Form von Marginalisierung vorgehen.",
+      "Die Folgen von Marginalisierung können Isolation und mangelnde Teilhabe am öffentlichen Leben sein."
+    ],
+    "exampleTranslations": [
+      "The marginalization of certain population groups is a serious societal problem.",
+      "To promote social justice, we must actively combat every form of marginalization.",
+      "The consequences of marginalization can be isolation and lack of participation in public life."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Marginalisierung\" mean?",
+        "options": [
+          "The process of pushing a group or individual to the fringes of society.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die _____ bestimmter Bevölkerungsgruppen ist ein ernstes gesellschaftliches Problem.",
+        "options": [
+          "Marginalisierung",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um soziale Gerechtigkeit zu fördern, müssen wir aktiv gegen jede Form von _____ vorgehen.",
+        "options": [
+          "Marginalisierung",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "Empathie",
+    "cefrLevel": "c1",
+    "phonetic": "/ɛmpaˈtiː/",
+    "partOfSpeech": "noun",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "The ability to understand and share the feelings of another person.",
+    "examples": [
+      "Für eine erfolgreiche Kommunikation ist Empathie unerlässlich.",
+      "Ihre ausgeprägte Empathie half ihr, die Bedürfnisse ihrer Patienten zu erkennen.",
+      "Manche Menschen entwickeln im Laufe ihres Lebens mehr Empathie für andere."
+    ],
+    "exampleTranslations": [
+      "For successful communication, empathy is essential.",
+      "Her strong empathy helped her recognize her patients' needs.",
+      "Some people develop more empathy for others throughout their lives."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"Empathie\" mean?",
+        "options": [
+          "The ability to understand and share the feelings of another person.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Für eine erfolgreiche Kommunikation ist _____ unerlässlich.",
+        "options": [
+          "Empathie",
+          "Tisch",
+          "Fenster",
+          "Garten"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ihre ausgeprägte _____ half ihr, die Bedürfnisse ihrer Patienten zu erkennen.",
+        "options": [
+          "Empathie",
+          "Fenster",
+          "Garten",
+          "Tisch"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "subtil",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈzʊptɪl/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Something is delicate and not immediately obvious, requiring careful observation or thought.",
+    "examples": [
+      "Die Unterschiede zwischen den beiden Weinen waren so subtil, dass nur ein Kenner sie bemerken konnte.",
+      "Sie bemerkte eine subtile Veränderung in seiner Stimmung, die anderen entging.",
+      "Sein Humor war sehr subtil und nicht für jeden sofort verständlich."
+    ],
+    "exampleTranslations": [
+      "The differences between the two wines were so subtle that only a connoisseur could notice them.",
+      "She noticed a subtle change in his mood that others missed.",
+      "His humor was very subtle and not immediately understandable for everyone."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"subtil\" mean?",
+        "options": [
+          "Something is delicate and not immediately obvious, requiring careful observation or thought.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Unterschiede zwischen den beiden Weinen waren so _____, dass nur ein Kenner sie bemerken konnte.",
+        "options": [
+          "subtil",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sie bemerkte eine _____e Veränderung in seiner Stimmung, die anderen entging.",
+        "options": [
+          "subtil",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "nuancenreich",
+    "cefrLevel": "c1",
+    "phonetic": "/nuˈaŋsn̩ˌʁaɪ̯ç/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Describing something that has many subtle differences and fine distinctions.",
+    "examples": [
+      "Sein Vortrag war sehr nuancenreich und bot tiefe Einblicke in das Thema.",
+      "Die Künstlerin verwendet eine nuancenreiche Farbpalette, um Emotionen auszudrücken.",
+      "Für eine präzise Analyse ist es wichtig, die nuancenreichen Aspekte der Situation zu berücksichtigen."
+    ],
+    "exampleTranslations": [
+      "His lecture was very nuanced and offered deep insights into the topic.",
+      "The artist uses a nuanced color palette to express emotions.",
+      "For a precise analysis, it is important to consider the nuanced aspects of the situation."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"nuancenreich\" mean?",
+        "options": [
+          "Describing something that has many subtle differences and fine distinctions.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sein Vortrag war sehr _____ und bot tiefe Einblicke in das Thema.",
+        "options": [
+          "nuancenreich",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Künstlerin verwendet eine _____e Farbpalette, um Emotionen auszudrücken.",
+        "options": [
+          "nuancenreich",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "diffizil",
+    "cefrLevel": "c1",
+    "phonetic": "/dɪfiˈt͡siːl/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 2,
+    "definition": "Describing something very complex or delicate, requiring careful handling or thought.",
+    "examples": [
+      "Die Verhandlungen waren sehr diffizil und erforderten viel Fingerspitzengefühl.",
+      "Es ist eine diffizile Aufgabe, alle Interessen unter einen Hut zu bringen.",
+      "Manchmal sind die menschlichen Beziehungen so diffizil, dass man kaum weiß, wie man damit umgehen soll."
+    ],
+    "exampleTranslations": [
+      "The negotiations were very delicate and required a lot of tact.",
+      "It is a delicate task to reconcile all interests.",
+      "Sometimes human relationships are so intricate that one hardly knows how to deal with them."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"diffizil\" mean?",
+        "options": [
+          "Describing something very complex or delicate, requiring careful handling or thought.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Verhandlungen waren sehr _____ und erforderten viel Fingerspitzengefühl.",
+        "options": [
+          "diffizil",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist eine _____e Aufgabe, alle Interessen unter einen Hut zu bringen.",
+        "options": [
+          "diffizil",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "prekär",
+    "cefrLevel": "c1",
+    "phonetic": "/preˈkɛːɐ̯/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Describing a situation or condition that is uncertain, difficult, and potentially dangerous.",
+    "examples": [
+      "Die finanzielle Lage vieler Studierender ist oft sehr prekär.",
+      "Die Situation im Krisengebiet bleibt prekär, eine schnelle Lösung ist nicht in Sicht.",
+      "Viele Menschen leben unter prekären Arbeitsbedingungen, was ihre Existenz bedroht."
+    ],
+    "exampleTranslations": [
+      "The financial situation of many students is often very precarious.",
+      "The situation in the crisis area remains precarious; a quick solution is not in sight.",
+      "Many people live under precarious working conditions, which threatens their existence."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"prekär\" mean?",
+        "options": [
+          "Describing a situation or condition that is uncertain, difficult, and potentially dangerous.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die finanzielle Lage vieler Studierender ist oft sehr _____.",
+        "options": [
+          "prekär",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Situation im Krisengebiet bleibt _____, eine schnelle Lösung ist nicht in Sicht.",
+        "options": [
+          "prekär",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "volatil",
+    "cefrLevel": "c1",
+    "phonetic": "/voˌlaˈtiːl/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Describing something that changes quickly and unpredictably, often in a negative way.",
+    "examples": [
+      "Der Aktienmarkt kann sehr volatil sein, was Investoren oft beunruhigt.",
+      "Die politische Lage in der Region ist derzeit äußerst volatil und schwer vorhersehbar.",
+      "Aufgrund der volatilen Wetterbedingungen mussten wir unsere Wanderung verschieben."
+    ],
+    "exampleTranslations": [
+      "The stock market can be very volatile, which often worries investors.",
+      "The political situation in the region is currently extremely volatile and difficult to predict.",
+      "Due to the volatile weather conditions, we had to postpone our hike."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"volatil\" mean?",
+        "options": [
+          "Describing something that changes quickly and unpredictably, often in a negative way.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der Aktienmarkt kann sehr _____ sein, was Investoren oft beunruhigt.",
+        "options": [
+          "volatil",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die politische Lage in der Region ist derzeit äußerst _____ und schwer vorhersehbar.",
+        "options": [
+          "volatil",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "resilient",
+    "cefrLevel": "c1",
+    "phonetic": "/reziˈli̯ɛnt/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Able to quickly recover from difficulties or adapt to change effectively.",
+    "examples": [
+      "Trotz der Rückschläge blieb das Team resilient und erreichte seine Ziele.",
+      "Es ist wichtig, resilient zu sein, um mit den Herausforderungen des modernen Lebens umzugehen.",
+      "Eine resiliente Gesellschaft kann Krisen besser bewältigen und gestärkt daraus hervorgehen."
+    ],
+    "exampleTranslations": [
+      "Despite the setbacks, the team remained resilient and achieved its goals.",
+      "It is important to be resilient to deal with the challenges of modern life.",
+      "A resilient society can better overcome crises and emerge stronger from them."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"resilient\" mean?",
+        "options": [
+          "Able to quickly recover from difficulties or adapt to change effectively.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Trotz der Rückschläge blieb das Team _____ und erreichte seine Ziele.",
+        "options": [
+          "resilient",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist wichtig, _____ zu sein, um mit den Herausforderungen des modernen Lebens umzugehen.",
+        "options": [
+          "resilient",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "innovativ",
+    "cefrLevel": "c1",
+    "phonetic": "/ɪnnovaˈtiːf/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 4,
+    "definition": "Introducing new ideas, methods, or products; characterized by originality and creativity.",
+    "examples": [
+      "Die neue Software ist sehr innovativ und hat viele Funktionen, die es vorher nicht gab.",
+      "Sein Denken ist stets innovativ und zukunftsorientiert.",
+      "Das Unternehmen setzt auf innovative Technologien, um wettbewerbsfähig zu bleiben."
+    ],
+    "exampleTranslations": [
+      "The new software is very innovative and has many features that did not exist before.",
+      "His thinking is always innovative and future-oriented.",
+      "The company relies on innovative technologies to remain competitive."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"innovativ\" mean?",
+        "options": [
+          "Introducing new ideas, methods, or products; characterized by originality and creativity.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die neue Software ist sehr _____ und hat viele Funktionen, die es vorher nicht gab.",
+        "options": [
+          "innovativ",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Sein Denken ist stets _____ und zukunftsorientiert.",
+        "options": [
+          "innovativ",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "transformativ",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌtʁansfɔʁmaˈtiːf/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Causing a significant and fundamental change in something, leading to a new state.",
+    "examples": [
+      "Die Einführung dieser neuen Technologie war ein transformativer Moment für die gesamte Branche.",
+      "Ihre Forschung hat das Potenzial, einen transformativen Einfluss auf die Medizin zu haben.",
+      "Wir streben nach transformativen Lösungen, die nachhaltige Veränderungen bewirken."
+    ],
+    "exampleTranslations": [
+      "The introduction of this new technology was a transformative moment for the entire industry.",
+      "Her research has the potential to have a transformative impact on medicine.",
+      "We strive for transformative solutions that bring about sustainable changes."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"transformativ\" mean?",
+        "options": [
+          "Causing a significant and fundamental change in something, leading to a new state.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Einführung dieser neuen Technologie war ein _____er Moment für die gesamte Branche.",
+        "options": [
+          "transformativ",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Ihre Forschung hat das Potenzial, einen _____en Einfluss auf die Medizin zu haben.",
+        "options": [
+          "transformativ",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "konstitutiv",
+    "cefrLevel": "c1",
+    "phonetic": "/kɔnstituˈtiːf/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "Essential for the existence or nature of something; a fundamental component.",
+    "examples": [
+      "Diese Eigenschaft ist konstitutiv für das System.",
+      "Die Menschenrechte sind konstitutive Elemente einer modernen Demokratie.",
+      "Für die Identität einer Kultur sind bestimmte Werte konstitutiv."
+    ],
+    "exampleTranslations": [
+      "This property is constitutive for the system.",
+      "Human rights are constitutive elements of a modern democracy.",
+      "Certain values are constitutive for the identity of a culture."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"konstitutiv\" mean?",
+        "options": [
+          "Essential for the existence or nature of something; a fundamental component.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Diese Eigenschaft ist _____ für das System.",
+        "options": [
+          "konstitutiv",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Menschenrechte sind _____e Elemente einer modernen Demokratie.",
+        "options": [
+          "konstitutiv",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "deskriptiv",
+    "cefrLevel": "c1",
+    "phonetic": "/dɛskrɪpˈtiːf/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Describing something as it is, rather than evaluating or interpreting it.",
+    "examples": [
+      "Seine Darstellung der Ereignisse war sehr deskriptiv und objektiv.",
+      "Die Analyse sollte eher deskriptiv sein als normativ.",
+      "Manchmal ist es besser, einfach deskriptiv zu bleiben, anstatt zu interpretieren."
+    ],
+    "exampleTranslations": [
+      "His depiction of the events was very descriptive and objective.",
+      "The analysis should be more descriptive than normative.",
+      "Sometimes it's better to just remain descriptive instead of interpreting."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"deskriptiv\" mean?",
+        "options": [
+          "Describing something as it is, rather than evaluating or interpreting it.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine Darstellung der Ereignisse war sehr _____ und objektiv.",
+        "options": [
+          "deskriptiv",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Analyse sollte eher _____ sein als normativ.",
+        "options": [
+          "deskriptiv",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "differenziert",
+    "cefrLevel": "c1",
+    "phonetic": "/dɪfɛʁɛnˈtsiːɐ̯t/",
+    "partOfSpeech": "adjective",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "Showing a careful and detailed understanding of complex issues.",
+    "examples": [
+      "Seine Analyse des Problems war sehr differenziert und berücksichtigte viele Aspekte.",
+      "Wir brauchen eine differenzierte Betrachtung der Situation, um eine faire Lösung zu finden.",
+      "Die Meinungen zu diesem Thema sind oft sehr differenziert und selten eindeutig."
+    ],
+    "exampleTranslations": [
+      "His analysis of the problem was very nuanced and considered many aspects.",
+      "We need a differentiated view of the situation to find a fair solution.",
+      "Opinions on this topic are often very nuanced and rarely clear-cut."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"differenziert\" mean?",
+        "options": [
+          "Showing a careful and detailed understanding of complex issues.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Seine Analyse des Problems war sehr _____ und berücksichtigte viele Aspekte.",
+        "options": [
+          "differenziert",
+          "groß",
+          "klein",
+          "neu"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wir brauchen eine _____e Betrachtung der Situation, um eine faire Lösung zu finden.",
+        "options": [
+          "differenziert",
+          "klein",
+          "neu",
+          "groß"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "kontextualisieren",
+    "cefrLevel": "c1",
+    "phonetic": "/kɔntɛkstu̯aliˈziːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To place something within its specific circumstances to understand its full meaning.",
+    "examples": [
+      "Um die historischen Ereignisse vollständig zu verstehen, müssen wir sie kontextualisieren.",
+      "Es ist wichtig, Daten zu kontextualisieren, um Fehlinterpretationen zu vermeiden.",
+      "Der Sprecher versuchte, seine kontroversen Aussagen zu kontextualisieren, um Missverständnisse auszuräumen."
+    ],
+    "exampleTranslations": [
+      "To fully understand historical events, we must contextualize them.",
+      "It is important to contextualize data to avoid misinterpretations.",
+      "The speaker tried to contextualize his controversial statements to clear up misunderstandings."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"kontextualisieren\" mean?",
+        "options": [
+          "To place something within its specific circumstances to understand its full meaning.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um die historischen Ereignisse vollständig zu verstehen, müssen wir sie _____.",
+        "options": [
+          "kontextualisieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist wichtig, Daten zu _____, um Fehlinterpretationen zu vermeiden.",
+        "options": [
+          "kontextualisieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "problematisieren",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌprobləmatiˈziːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To highlight or discuss something as a problem, often with critical intent.",
+    "examples": [
+      "Es ist wichtig, gesellschaftliche Ungleichheiten zu problematisieren, um Lösungen zu finden.",
+      "Manche Experten neigen dazu, jede neue Entwicklung sofort zu problematisieren.",
+      "Die Studie problematisiert die Auswirkungen des Klimawandels auf die Artenvielfalt."
+    ],
+    "exampleTranslations": [
+      "It is important to problematize social inequalities to find solutions.",
+      "Some experts tend to immediately problematize every new development.",
+      "The study problematizes the effects of climate change on biodiversity."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"problematisieren\" mean?",
+        "options": [
+          "To highlight or discuss something as a problem, often with critical intent.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist wichtig, gesellschaftliche Ungleichheiten zu _____, um Lösungen zu finden.",
+        "options": [
+          "problematisieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Manche Experten neigen dazu, jede neue Entwicklung sofort zu _____.",
+        "options": [
+          "problematisieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "operationalisieren",
+    "cefrLevel": "c1",
+    "phonetic": "/ˌopəʁatsi̯onaliˈziːʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "academic",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "To define a theoretical concept by specifying the observable procedures for its measurement.",
+    "examples": [
+      "Bevor man eine Studie beginnt, muss man die relevanten Konzepte klar operationalisieren.",
+      "Die Forscher haben versucht, Glück als messbare Variable zu operationalisieren.",
+      "Es ist eine Herausforderung, abstrakte Ideen in der Forschung präzise zu operationalisieren."
+    ],
+    "exampleTranslations": [
+      "Before starting a study, one must clearly operationalize the relevant concepts.",
+      "The researchers tried to operationalize happiness as a measurable variable.",
+      "It is a challenge to precisely operationalize abstract ideas in research."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"operationalisieren\" mean?",
+        "options": [
+          "To define a theoretical concept by specifying the observable procedures for its measurement.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Bevor man eine Studie beginnt, muss man die relevanten Konzepte klar _____.",
+        "options": [
+          "operationalisieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Die Forscher haben versucht, Glück als messbare Variable zu _____.",
+        "options": [
+          "operationalisieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "synthetisieren",
+    "cefrLevel": "c1",
+    "phonetic": "/zʏnteˈtiːzɪʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To create something, often a complex substance, by combining simpler elements or compounds.",
+    "examples": [
+      "Wissenschaftler versuchen, neue Materialien zu synthetisieren, die bestimmte Eigenschaften aufweisen.",
+      "Im Labor wurde erfolgreich ein Medikament synthetisiert, das vielversprechende Ergebnisse zeigte.",
+      "Der menschliche Körper kann Vitamin D unter Sonneneinstrahlung selbst synthetisieren."
+    ],
+    "exampleTranslations": [
+      "Scientists are trying to synthesize new materials that exhibit specific properties.",
+      "In the lab, a drug was successfully synthesized, showing promising results.",
+      "The human body can synthesize vitamin D itself when exposed to sunlight."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"synthetisieren\" mean?",
+        "options": [
+          "To create something, often a complex substance, by combining simpler elements or compounds.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Wissenschaftler versuchen, neue Materialien zu _____, die bestimmte Eigenschaften aufweisen.",
+        "options": [
+          "synthetisieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "synthetisieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "abwägen",
+    "cefrLevel": "c1",
+    "phonetic": "/ˈapˌvɛːɡn̩/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To carefully consider different factors before making a decision.",
+    "examples": [
+      "Man muss die Vor- und Nachteile sorgfältig abwägen, bevor man eine Entscheidung trifft.",
+      "Nachdem er alle Argumente abgewogen hatte, traf er eine fundierte Entscheidung.",
+      "Es ist wichtig, die Risiken und Chancen genau abzuwägen, um Fehler zu vermeiden."
+    ],
+    "exampleTranslations": [
+      "One must carefully weigh the pros and cons before making a decision.",
+      "After he had weighed all the arguments, he made a well-founded decision.",
+      "It is important to carefully weigh the risks and opportunities to avoid mistakes."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"abwägen\" mean?",
+        "options": [
+          "To carefully consider different factors before making a decision.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Man muss die Vor- und Nachteile sorgfältig _____, bevor man eine Entscheidung trifft.",
+        "options": [
+          "abwägen",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: _____ ist wichtig.",
+        "options": [
+          "abwägen",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "spezifizieren",
+    "cefrLevel": "c1",
+    "phonetic": "/ʃpeziˈfiːtsɪʁən/",
+    "partOfSpeech": "verb",
+    "domainTag": "work",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To state or describe something precisely and in detail, often for a particular purpose.",
+    "examples": [
+      "Bitte spezifizieren Sie die Anforderungen an das neue System genau.",
+      "Der Architekt musste die Materialien für den Bau detailliert spezifizieren.",
+      "Es ist wichtig, die Ziele des Projekts klar zu spezifizieren, um Missverständnisse zu vermeiden."
+    ],
+    "exampleTranslations": [
+      "Please specify the requirements for the new system precisely.",
+      "The architect had to specify the materials for the construction in detail.",
+      "It is important to clearly specify the project goals to avoid misunderstandings."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"spezifizieren\" mean?",
+        "options": [
+          "To state or describe something precisely and in detail, often for a particular purpose.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Bitte _____ Sie die Anforderungen an das neue System genau.",
+        "options": [
+          "spezifizieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der Architekt musste die Materialien für den Bau detailliert _____.",
+        "options": [
+          "spezifizieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "elaborieren",
+    "cefrLevel": "c1",
+    "phonetic": "/elaˌboˈriːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "formal",
+    "frequencyBand": 3,
+    "definition": "To develop or explain something in great detail, often in a structured manner.",
+    "examples": [
+      "Der Wissenschaftler musste seine Hypothese in der Präsentation ausführlich elaborieren.",
+      "Bevor wir eine Entscheidung treffen, sollten wir die verschiedenen Optionen genauer elaborieren.",
+      "Sie hat ihre Argumente sorgfältig elaboriert, um die Jury zu überzeugen."
+    ],
+    "exampleTranslations": [
+      "The scientist had to elaborate his hypothesis extensively in the presentation.",
+      "Before we make a decision, we should elaborate on the different options more precisely.",
+      "She carefully elaborated her arguments to convince the jury."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"elaborieren\" mean?",
+        "options": [
+          "To develop or explain something in great detail, often in a structured manner.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Der Wissenschaftler musste seine Hypothese in der Präsentation ausführlich _____.",
+        "options": [
+          "elaborieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Bevor wir eine Entscheidung treffen, sollten wir die verschiedenen Optionen genauer _____.",
+        "options": [
+          "elaborieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
+  },
+  {
+    "word": "destillieren",
+    "cefrLevel": "c1",
+    "phonetic": "/dɛstɪˈliːrən/",
+    "partOfSpeech": "verb",
+    "domainTag": "general",
+    "registerTag": "neutral",
+    "frequencyBand": 3,
+    "definition": "To purify a liquid by heating and condensing it, separating its components.",
+    "examples": [
+      "Um reines Wasser zu erhalten, muss man es sorgfältig destillieren.",
+      "Es ist üblich, in der Chemie Flüssigkeiten zu destillieren, um Verunreinigungen zu entfernen.",
+      "Um einen besonders milden Geschmack zu erzielen, muss die Brennerei ihren Whisky zweimal destillieren."
+    ],
+    "exampleTranslations": [
+      "To obtain pure water, one must carefully distill it.",
+      "It is common in chemistry to distill liquids to remove impurities.",
+      "To achieve a particularly mild taste, the distillery must distill its whisky twice."
+    ],
+    "quiz": [
+      {
+        "type": "definition",
+        "question": "What does \"destillieren\" mean?",
+        "options": [
+          "To purify a liquid by heating and condensing it, separating its components.",
+          "A rare technical term used only in laboratories.",
+          "A type of furniture found in modern kitchens.",
+          "A sudden noise that startles people outdoors."
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Um reines Wasser zu erhalten, muss man es sorgfältig _____.",
+        "options": [
+          "destillieren",
+          "laufen",
+          "spielen",
+          "denken"
+        ],
+        "correctAnswerIndex": 0
+      },
+      {
+        "type": "blank",
+        "question": "Fill in the blank: Es ist üblich, in der Chemie Flüssigkeiten zu _____, um Verunreinigungen zu entfernen.",
+        "options": [
+          "destillieren",
+          "spielen",
+          "denken",
+          "laufen"
+        ],
+        "correctAnswerIndex": 0
+      }
+    ]
   }
 ]
