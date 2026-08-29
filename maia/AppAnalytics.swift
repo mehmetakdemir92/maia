@@ -95,7 +95,17 @@ final class AppAnalytics {
     private init() {
         loadLocal()
         authListener = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-            guard let self, let user else { return }
+            guard let self else { return }
+
+            // Stamp the Firebase uid onto the Analytics stream. Without it
+            // BigQuery only receives `user_pseudo_id`, which is a per-install
+            // id: one person on two devices counts as two users, a reinstall
+            // starts a new one, and GA4 events can't be joined to that
+            // account's Firestore data (diary, wordProgress, curriculum).
+            // Passing nil on sign-out stops the next account inheriting it.
+            Analytics.setUserID(user?.uid)
+
+            guard let user else { return }
             self.flushRecentEventsToFirestore(userId: user.uid)
         }
         // Seed user properties from local prefs on launch.
