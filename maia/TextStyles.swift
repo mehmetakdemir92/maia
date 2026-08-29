@@ -118,6 +118,11 @@ struct ExampleSentenceRow: View {
         self.learningLanguage = learningLanguage
     }
 
+    /// Translations start hidden: working out the meaning before checking it
+    /// is what makes the example stick. Reading a sentence with the answer
+    /// already underneath it is passive.
+    @State private var isGlossRevealed = false
+
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
             Text("•")
@@ -127,37 +132,67 @@ struct ExampleSentenceRow: View {
                 .padding(.top, 1)
 
             VStack(alignment: .leading, spacing: 3) {
-                highlightedSentence
+                sentenceWithGlossToggle
                     .font(.body.weight(.medium))
                     .italic()
                     .lineSpacing(3)
                     .shadow(color: Color.black.opacity(0.08), radius: 1, x: 0, y: 1)
                     .fixedSize(horizontal: false, vertical: true)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        guard gloss != nil else { return }
+                        withAnimation(.easeInOut(duration: 0.18)) {
+                            isGlossRevealed.toggle()
+                        }
+                    }
+                    .accessibilityElement(children: .ignore)
                     .accessibilityLabel(sentence)
+                    .accessibilityAddTraits(gloss == nil ? [] : .isButton)
+                    .accessibilityHint(
+                        gloss == nil ? Text("")
+                                     : Text(isGlossRevealed ? "Hides the translation"
+                                                            : "Shows the translation")
+                    )
 
-                if let gloss {
+                if let gloss, isGlossRevealed {
                     Text(gloss)
                         .glassCardExampleGloss()
                         .fixedSize(horizontal: false, vertical: true)
                         .accessibilityLabel(gloss)
+                        .transition(.opacity.combined(with: .move(edge: .top)))
                 }
             }
         }
+        // The call site keys its ForEach on the row's position, so this view is
+        // reused when the word changes. Without this, a translation left open
+        // would still be open on the next word's sentence.
+        .onChange(of: sentence) { _, _ in
+            isGlossRevealed = false
+        }
     }
 
-    @ViewBuilder
-    private var highlightedSentence: some View {
+    /// The sentence with the translation toggle riding at the end of its last
+    /// line. Built by concatenating `Text` rather than placing a `Button`
+    /// beside it, so the marker flows with the wrapped text instead of being
+    /// pushed onto its own line.
+    private var sentenceWithGlossToggle: Text {
+        guard gloss != nil else { return sentenceText }
+        return sentenceText
+            + Text("  ")
+            + Text(Image(systemName: isGlossRevealed ? "character.bubble.fill" : "character.bubble"))
+                .foregroundColor(AppColors.primaryButton)
+    }
+
+    private var sentenceText: Text {
         if let highlightWord, !highlightWord.isEmpty,
            let attributed = Self.highlightedText(
             sentence: sentence,
             headword: highlightWord,
             language: learningLanguage
            ) {
-            attributed
-        } else {
-            Text(sentence)
-                .foregroundColor(AppColors.glassCardBody)
+            return attributed
         }
+        return Text(sentence).foregroundColor(AppColors.glassCardBody)
     }
 
     /// Builds `Text` with the headword (and common inflections) in a white→gold gradient.
