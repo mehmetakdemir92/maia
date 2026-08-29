@@ -1385,6 +1385,7 @@
       }
     },
     "Correct answer:" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3053,9 +3054,6 @@
         }
       }
     },
-    "Level %@" : {
-
-    },
     "Loading quiz..." : {
       "localizations" : {
         "de" : {
@@ -3557,9 +3555,6 @@
         }
       }
     },
-    "Only %1$lld words are curated for %2$@. Need 3." : {
-
-    },
     "Only in DEBUG builds. Mimics App Store subscription." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -3609,6 +3604,9 @@
           }
         }
       }
+    },
+    "Our lessons are written for learners who already have some English, starting around B1. At %@ the words and quizzes will feel hard at first." : {
+
     },
     "Password" : {
       "localizations" : {
@@ -3734,6 +3732,7 @@
       }
     },
     "Plans could not be loaded. Check your connection or try again later." : {
+      "extractionState" : "stale",
       "localizations" : {
         "tr" : {
           "stringUnit" : {
@@ -3744,7 +3743,6 @@
       }
     },
     "Plans could not be loaded. In Xcode: Product → Scheme → Edit Scheme → Run → Options → set StoreKit Configuration to MaiaProducts.storekit, then run from Xcode (not an old simulator install)." : {
-      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5061,6 +5059,7 @@
       }
     },
     "Take Quiz" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5087,6 +5086,9 @@
           }
         }
       }
+    },
+    "Take Today's Quiz" : {
+
     },
     "Tap the button in the email to open Maia and verify automatically. If you already verified in the browser, tap “I verified” below." : {
       "extractionState" : "stale",
@@ -5251,6 +5253,9 @@
         }
       }
     },
+    "The word list is missing. Add maia/Curriculum/%@.json and rebuild." : {
+
+    },
     "This action cannot be undone. Are you sure you want to delete your account?" : {
       "localizations" : {
         "de" : {
@@ -5306,9 +5311,6 @@
           }
         }
       }
-    },
-    "Today's words aren't curated yet. Add maia/WordPacks/%@.json and rebuild." : {
-
     },
     "Today's words couldn't be loaded." : {
       "localizations" : {
@@ -5793,6 +5795,7 @@
       }
     },
     "Word of the Day" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5933,6 +5936,7 @@
       }
     },
     "You learned it!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -5987,6 +5991,12 @@
           }
         }
       }
+    },
+    "You've finished every lesson we've written so far. New words are on the way." : {
+
+    },
+    "You've finished today's quiz. Come back tomorrow!" : {
+
     },
     "yr" : {
       "localizations" : {

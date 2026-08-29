@@ -236,6 +236,27 @@ private struct InitialSetupView: View {
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.white.opacity(0.92))
 
+            if CurriculumPlacement.isBelowSpineFloor(userLevel: selectedLevelStep) {
+                HStack(alignment: .top, spacing: 8) {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .foregroundColor(.yellow)
+                    Text("Our lessons are written for learners who already have some English, starting around B1. At \(CEFRLevelMapping.label(for: selectedLevelStep)) the words and quizzes will feel hard at first.")
+                        .font(.footnote)
+                        .foregroundColor(.white.opacity(0.88))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(12)
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(Color.yellow.opacity(0.16))
+                }
+                .overlay {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .strokeBorder(Color.yellow.opacity(0.35), lineWidth: 0.5)
+                }
+                .transition(.opacity)
+            }
+
             VStack(spacing: 10) {
                 ForEach(Array(CEFRLevelMapping.stepLabels.enumerated()), id: \.offset) { index, level in
                     let stepValue = index + 1
@@ -267,5 +288,6 @@ private struct InitialSetupView: View {
                 }
             }
         }
+        .animation(.easeInOut(duration: 0.18), value: selectedLevelStep)
     }
 }

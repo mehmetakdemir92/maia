@@ -5,7 +5,7 @@
 
 import Foundation
 
-/// Daily completed quiz count (Istanbul calendar day). Used for one interstitial on first completion.
+/// Daily completed quiz count (learner's own study day). Used for one interstitial on first completion.
 enum DailyQuizAdTracker {
     private static func dayISO() -> String {
         WordOfTheDayManager.calendarDayISO()

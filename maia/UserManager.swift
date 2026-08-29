@@ -75,9 +75,6 @@ class UserManager: ObservableObject {
             }
         }
 
-        Task { @MainActor in
-            DailyWordUsageStore.shared.resetAll()
-        }
     }
 
     init() {
@@ -441,6 +438,11 @@ class UserManager: ObservableObject {
         changeRequest.photoURL = downloadURL
         try await changeRequest.commitChanges()
 
+        // Seed the disk cache with the bytes already in hand so the very next
+        // view of this photo (Profile tab, Settings row) doesn't re-download
+        // it from Storage — see ProfileImageCache.
+        ProfileImageCache.save(imageData, for: downloadURL)
+
         profileImageURL = downloadURL.absoluteString
     }
 
@@ -450,6 +452,9 @@ class UserManager: ObservableObject {
         }
 
         let ref = Storage.storage().reference().child("users").child(user.uid).child("profile.jpg")
+        if let staleURL = profileImageURL.flatMap({ URL(string: $0) }) {
+            ProfileImageCache.clear(for: staleURL)
+        }
         try? await ref.delete()
 
         // Firebase Auth keeps provider photoURL after `nil` (common with Google Sign-In).

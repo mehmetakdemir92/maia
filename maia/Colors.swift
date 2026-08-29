@@ -102,6 +102,7 @@ enum AppColors {
         endPoint: .top
     )
 
+
     static func animatedFlameGradient(opacity: Double) -> LinearGradient {
         LinearGradient(
             colors: [

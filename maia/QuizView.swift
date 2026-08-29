@@ -9,7 +9,36 @@ import SwiftUI
 import StoreKit
 
 struct QuizView: View {
-    let word: Word
+    /// Legacy single-word quiz (e.g. reviewing one word from the diary).
+    private let singleWord: Word?
+    /// Slot session: today's new words + spaced-repetition reviews, one run.
+    private let sessionItems: [QuizSessionItem]
+    /// Trusted timestamp fetched once when the session was built (see
+    /// `CurriculumStateManager.trustedNow()`), reused for every SM-2 write at
+    /// completion — never `Date()` here, or a clock nudged mid-session could
+    /// bank a spoofed `nextDueAt`.
+    private let sessionNow: Date
+    private let onSessionCompleted: () -> Void
+
+    init(word: Word) {
+        self.singleWord = word
+        self.sessionItems = []
+        self.sessionNow = Date()
+        self.onSessionCompleted = {}
+    }
+
+    init(items: [QuizSessionItem], now: Date, onSessionCompleted: @escaping () -> Void) {
+        self.singleWord = nil
+        self.sessionItems = items
+        self.sessionNow = now
+        self.onSessionCompleted = onSessionCompleted
+    }
+
+    /// The word behind the question currently on screen, for the header.
+    private var currentDisplayWord: Word? {
+        singleWord ?? quizManager.currentSessionItem()?.word
+    }
+
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var streakManager: StreakManager
     @EnvironmentObject var diaryManager: DiaryManager
@@ -39,25 +68,27 @@ struct QuizView: View {
             GlassSceneBackground()
             ScrollView {
             VStack(spacing: 24) {
-                HStack(alignment: .center, spacing: 12) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(word.word)
-                            .font(.title2.weight(.bold))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.6)
-                            .allowsTightening(true)
-                            .foregroundColor(.white)
-                        if let phonetic = word.phonetic {
-                            Text(phonetic)
-                                .font(.subheadline)
-                                .foregroundColor(.white.opacity(0.85))
-                                .italic()
+                if let headerWord = currentDisplayWord, !(quizManager.isSessionMode && quizManager.quizCompleted) {
+                    HStack(alignment: .center, spacing: 12) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(headerWord.word)
+                                .font(.title2.weight(.bold))
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.6)
+                                .allowsTightening(true)
+                                .foregroundColor(.white)
+                            if let phonetic = headerWord.phonetic {
+                                Text(phonetic)
+                                    .font(.subheadline)
+                                    .foregroundColor(.white.opacity(0.85))
+                                    .italic()
+                            }
                         }
+                        Spacer()
+                        PronounceButton(word: headerWord.word, audioURL: headerWord.pronunciationAudioURL, size: 44, languageCode: headerWord.languageCode)
                     }
-                    Spacer()
-                    PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 44, languageCode: word.languageCode)
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
 
                 if !quizManager.quizCompleted {
                     // Quiz in progress
@@ -122,7 +153,7 @@ struct QuizView: View {
 
                             if showingAnswerFeedback {
                                 if currentAnswerWasCorrect != true {
-                                    feedbackCard(for: question)
+                                    feedbackCard()
                                         .padding(.horizontal)
                                 }
                             }
@@ -180,25 +211,27 @@ struct QuizView: View {
                 } else {
                     // Quiz completed - show results
                     VStack(spacing: 24) {
-                        Text(quizManager.hasPassed() ? "🎉 Great Job!" : "Try Again")
+                        Text(quizManager.isSessionMode || quizManager.hasPassed() ? "🎉 Great Job!" : "Try Again")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                        
+
                         Text(String(format: String(localized: "You got %1$lld out of %2$lld correct"), Int64(quizManager.correctAnswers), Int64(quizManager.currentQuiz.count)))
                             .font(.title3)
                             .foregroundColor(.white.opacity(0.9))
-                        
-                        if quizManager.hasPassed() {
+
+                        if quizManager.isSessionMode || quizManager.hasPassed() {
                             Text("Daily streak completed!")
                                 .font(.headline)
                                 .foregroundColor(.green)
                                 .padding()
                                 .background(Color.green.opacity(0.1))
                                 .cornerRadius(10)
-                            
-                            // Show next review date from spaced repetition
-                            nextReviewDateView
-                            
+
+                            // Next review date only makes sense for a single tracked word.
+                            if !quizManager.isSessionMode, let singleWord {
+                                nextReviewDateView(for: singleWord.id)
+                            }
+
                             continueButton
                         } else {
                             retryOrCloseSection
@@ -224,10 +257,9 @@ struct QuizView: View {
             if !userManager.isPremium {
                 QuizInterstitialAdPresenter.shared.preload()
             }
-            print("QuizView appeared for word: \(word.word)")
             // Load quiz when view appears
             quizManager.loadAttemptsForToday()
-            
+
             // Always reset and start a new quiz when view appears
             quizManager.currentQuestionIndex = 0
             quizManager.selectedAnswerIndex = nil
@@ -240,27 +272,39 @@ struct QuizView: View {
             hasCommittedCompletionSideEffects = false
             hasLoggedQuizCompletion = false
             didPresentQuizInterstitial = false
-            
-            // Start quiz
-            let success = quizManager.startQuiz(for: word)
-            print("Quiz start result: \(success), Quiz count: \(quizManager.currentQuiz.count)")
-            if success {
-                var params: [String: String] = [
-                    "quiz_mode": "daily",
-                    "word_id": word.id.uuidString,
-                    "question_count": String(quizManager.currentQuiz.count),
-                    AppAnalyticsParam.learningLanguage: word.learningLanguage.code
-                ]
-                if let cefr = word.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
-                    params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
-                }
-                AppAnalytics.shared.log(AppAnalyticsEventName.quizStarted, params: params)
+
+            let success: Bool
+            if let singleWord {
+                success = quizManager.startQuiz(for: singleWord)
+            } else {
+                success = quizManager.startSession(items: sessionItems)
             }
-            
-            if !success || quizManager.currentQuiz.isEmpty {
-                print("ERROR: Quiz failed to start. Word: \(word.word), Definition: \(word.definition)")
+
+            if success {
+                logQuizStarted()
+            } else {
+                print("ERROR: Quiz failed to start.")
             }
         }
+    }
+
+    private func logQuizStarted() {
+        var params: [String: String] = ["question_count": String(quizManager.currentQuiz.count)]
+        if let singleWord {
+            params["quiz_mode"] = "daily"
+            params["word_id"] = singleWord.id.uuidString
+            params[AppAnalyticsParam.learningLanguage] = singleWord.learningLanguage.code
+            if let cefr = singleWord.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
+                params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
+            }
+        } else {
+            params["quiz_mode"] = "session"
+            params["word_count"] = String(quizManager.sessionWords().count)
+            if let language = sessionItems.first?.word.learningLanguage {
+                params[AppAnalyticsParam.learningLanguage] = language.code
+            }
+        }
+        AppAnalytics.shared.log(AppAnalyticsEventName.quizStarted, params: params)
     }
 
     /// Commits all persistent side effects when the quiz ends (before Continue); ad is shown afterward.
@@ -272,14 +316,19 @@ struct QuizView: View {
 
         if !hasLoggedQuizCompletion {
             var params: [String: String] = [
-                "quiz_mode": "daily",
-                "word_id": word.id.uuidString,
                 "correct_count": String(quizManager.correctAnswers),
-                "question_count": String(quizManager.currentQuiz.count),
-                AppAnalyticsParam.learningLanguage: word.learningLanguage.code
+                "question_count": String(quizManager.currentQuiz.count)
             ]
-            if let cefr = word.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
-                params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
+            if let singleWord {
+                params["quiz_mode"] = "daily"
+                params["word_id"] = singleWord.id.uuidString
+                params[AppAnalyticsParam.learningLanguage] = singleWord.learningLanguage.code
+                if let cefr = singleWord.cefrLevel?.trimmingCharacters(in: .whitespacesAndNewlines), !cefr.isEmpty {
+                    params[AppAnalyticsParam.cefrLevel] = cefr.uppercased()
+                }
+            } else {
+                params["quiz_mode"] = "session"
+                params["word_count"] = String(quizManager.sessionWords().count)
             }
             AppAnalytics.shared.log(AppAnalyticsEventName.quizCompleted, params: params)
             hasLoggedQuizCompletion = true
@@ -294,16 +343,33 @@ struct QuizView: View {
     /// Side effects are committed here immediately instead.
     private func commitCompletionSideEffectsIfNeeded() {
         guard !hasCommittedCompletionSideEffects else { return }
-        guard quizManager.hasPassed() else { return }
-        hasCommittedCompletionSideEffects = true
 
-        let correct = quizManager.getCorrectCount()
-        let total = quizManager.getTotalQuestionsAsked()
+        if let singleWord {
+            guard quizManager.hasPassed() else { return }
+            hasCommittedCompletionSideEffects = true
 
-        progressManager.updateProgress(for: word.id, correct: correct, total: total)
-        statsManager.recordQuizCompletion(correct: correct, total: total)
-        quizEventManager.record(wordId: word.id, correct: correct, total: total, completedAt: Date())
-        diaryManager.markWordAsQuizzed(word, for: Date())
+            let correct = quizManager.getCorrectCount()
+            let total = quizManager.getTotalQuestionsAsked()
+
+            progressManager.updateProgress(for: singleWord.id, correct: correct, total: total)
+            statsManager.recordQuizCompletion(correct: correct, total: total)
+            quizEventManager.record(wordId: singleWord.id, correct: correct, total: total, completedAt: Date())
+            diaryManager.markWordAsQuizzed(singleWord, for: Date())
+        } else {
+            hasCommittedCompletionSideEffects = true
+
+            // Interleaved session: grade each word by its own questions, not
+            // the whole session's score, then advance the slot pointer once.
+            for (wordId, result) in quizManager.sessionResultsByWord() {
+                progressManager.updateProgress(for: wordId, correct: result.correct, total: result.total, now: sessionNow)
+                quizEventManager.record(wordId: wordId, correct: result.correct, total: result.total, completedAt: sessionNow)
+            }
+            statsManager.recordQuizCompletion(correct: quizManager.getCorrectCount(), total: quizManager.getTotalQuestionsAsked())
+            for sessionWord in quizManager.sessionWords() {
+                diaryManager.markWordAsQuizzed(sessionWord, for: Date())
+            }
+            onSessionCompleted()
+        }
 
         let wasFirst = !streakManager.isDayCompleted(Date())
         completionWasFirstQuizOfDay = wasFirst
@@ -367,8 +433,8 @@ struct QuizView: View {
         }
     }
     
-    private var nextReviewDateView: some View {
-        let nextReview = progressManager.nextDueDate(for: word.id)
+    private func nextReviewDateView(for wordId: UUID) -> some View {
+        let nextReview = progressManager.nextDueDate(for: wordId)
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
@@ -485,14 +551,14 @@ struct QuizView: View {
     }
 
     private func handleRetryQuiz() {
-        guard !isRetryingQuiz else { return }
+        guard !isRetryingQuiz, let singleWord else { return }
         isRetryingQuiz = true
 
         Task {
             async let minDelay: Void = Task.sleep(nanoseconds: Self.rippleMinDurationNs)
             await MainActor.run {
                 quizManager.resetQuiz()
-                _ = quizManager.startQuiz(for: word)
+                _ = quizManager.startQuiz(for: singleWord)
                 showingAnswerFeedback = false
                 currentAnswerWasCorrect = nil
                 isAutoAdvancingAfterCorrect = false
@@ -533,20 +599,14 @@ struct QuizView: View {
         }
     }
 
-    private func feedbackCard(for question: QuizQuestion) -> some View {
+    /// Only shown on a wrong answer (see call site) — the correct option is
+    /// already visible highlighted green among the choices above, so this
+    /// doesn't repeat it, just confirms the miss.
+    private func feedbackCard() -> some View {
         VStack(alignment: .leading, spacing: 8) {
             Text((currentAnswerWasCorrect ?? false) ? "Correct ✅" : "Not quite ❌")
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor((currentAnswerWasCorrect ?? false) ? .green : .red)
-
-            Text("Correct answer:")
-                .font(.caption.weight(.semibold))
-                .foregroundColor(AppColors.glassCardMuted)
-
-            Text(question.options[question.correctAnswerIndex])
-                .font(.subheadline)
-                .foregroundColor(AppColors.glassCardTitle)
-                .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(12)

@@ -90,9 +90,7 @@ class StreakManager: ObservableObject {
     
     /// Longest consecutive streak from completed days
     var maxStreak: Int {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        let sortedDates = completedDates.compactMap { formatter.date(from: $0) }.sorted()
+        let sortedDates = completedDates.compactMap { CurriculumStateManager.studyDayStart(fromISO: $0) }.sorted()
         guard !sortedDates.isEmpty else { return 0 }
         
         let calendar = Calendar.current
@@ -131,10 +129,7 @@ class StreakManager: ObservableObject {
     /// Day immediately before the current streak block.
     /// e.g. if 4-5 completed, returns 3.
     func recoverableStreakGapDate() -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-
-        let sortedCompleted = completedDates.compactMap { formatter.date(from: $0) }.sorted()
+        let sortedCompleted = completedDates.compactMap { CurriculumStateManager.studyDayStart(fromISO: $0) }.sorted()
         guard var streakStart = sortedCompleted.last else { return nil }
 
         while true {
@@ -159,11 +154,14 @@ class StreakManager: ObservableObject {
     
     private func updateCurrentStreak() {
         let calendar = Calendar.current
-        let today = calendar.startOfDay(for: Date())
-        
+        // Anchored to the same study-day start the slot gate uses, not plain
+        // midnight — stepping by whole days from here stays on that anchor,
+        // so it must not be re-normalized with calendar.startOfDay below.
+        let today = CurriculumStateManager.studyDayStart(for: Date())
+
         var streak = 0
         var checkDate: Date
-        
+
         // Start from today if completed, otherwise yesterday
         if completedDates.contains(getDateString(today)) {
             checkDate = today
@@ -171,29 +169,30 @@ class StreakManager: ObservableObject {
             // Start from yesterday when today is not completed
             // Resets tomorrow if today remains incomplete
             if let yesterday = calendar.date(byAdding: .day, value: -1, to: today) {
-                checkDate = calendar.startOfDay(for: yesterday)
+                checkDate = yesterday
             } else {
                 currentStreak = 0
                 return
             }
         }
-        
+
         // Count consecutive completed days backward from the anchor date
         while completedDates.contains(getDateString(checkDate)) {
             streak += 1
             guard let previousDay = calendar.date(byAdding: .day, value: -1, to: checkDate) else {
                 break
             }
-            checkDate = calendar.startOfDay(for: previousDay)
+            checkDate = previousDay
         }
-        
+
         currentStreak = streak
     }
-    
+
+    /// Same day boundary as the curriculum slot gate and diary: the learner's
+    /// own timezone, shifted so a new day starts at `dayResetHour` instead of
+    /// midnight.
     private func getDateString(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: date)
+        CurriculumStateManager.studyDayISO(for: date)
     }
     
     private func loadStreakData() {

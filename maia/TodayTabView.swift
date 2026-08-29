@@ -22,10 +22,13 @@ struct TodayTabView: View {
     @State private var navigationPath = NavigationPath()
     @State private var loggedWordIDs: Set<UUID> = []
 
-    /// wordId -> up to 2 extra example sentences from WordPack JSON (no AI).
+    /// wordId -> up to 2 extra example sentences from the curriculum spine (no AI).
     @State private var revealedExtraExamples: [UUID: [String]] = [:]
     @State private var generatingWordIds: Set<UUID> = []
-    @State private var startingQuizWordId: UUID?
+    @State private var isStartingQuiz = false
+    @State private var isShowingQuiz = false
+    @State private var pendingSessionItems: [QuizSessionItem] = []
+    @State private var pendingSessionNow: Date = Date()
 
     private static let revealedExamplesKey = "revealedExtraExampleSentences"
     private static let rippleMinDurationNs: UInt64 = 450_000_000
@@ -66,13 +69,8 @@ struct TodayTabView: View {
                                 WordCardView(
                                     word: word,
                                     isPremium: userManager.isPremium,
-                                    isWordQuizzedToday: diaryManager.isWordQuizzed(word, for: Date()),
                                     generatedExamples: revealedExtraExamples[word.id] ?? [],
                                     isGenerating: generatingWordIds.contains(word.id),
-                                    isStartingQuiz: startingQuizWordId == word.id,
-                                    onQuiz: {
-                                        startQuiz(for: word)
-                                    },
                                     onGenerateMore: {
                                         handleGenerateExample(for: word)
                                     }
@@ -84,6 +82,8 @@ struct TodayTabView: View {
                                     )
                                 }
                             }
+
+                            todaysQuizSection
                         }
                     }
                     .padding()
@@ -99,9 +99,9 @@ struct TodayTabView: View {
                 PremiumPaywallView(placement: AppAnalyticsPlacement.todayGenerateMore)
                     .environmentObject(userManager)
             }
-            .navigationDestination(for: UUID.self) { wordId in
-                if let word = word(for: wordId) {
-                    QuizView(word: word)
+            .navigationDestination(isPresented: $isShowingQuiz) {
+                QuizView(items: pendingSessionItems, now: pendingSessionNow) {
+                    Task { await wordManager.completeCurrentSlot() }
                 }
             }
             .onAppear {
@@ -119,11 +119,6 @@ struct TodayTabView: View {
                     }
                     AppAnalytics.shared.log(AppAnalyticsEventName.dailyWordViewed, params: params)
                     loggedWordIDs.insert(word.id)
-                }
-            }
-            .onChange(of: navigationPath.count) { _, count in
-                if count == 0 {
-                    startingQuizWordId = nil
                 }
             }
             .onChange(of: userManager.selectedCategory) { _, _ in
@@ -153,46 +148,36 @@ struct TodayTabView: View {
     // MARK: - UI Pieces
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 10) {
-                learningLanguageFlags
-                levelPickerPill
+        HStack(spacing: 10) {
+            learningLanguageFlags
 
-                Spacer(minLength: 8)
+            Spacer(minLength: 8)
 
-                Button {
-                    showingSettings = true
-                } label: {
-                    Image(systemName: "gearshape.fill")
-                        .font(.body.weight(.semibold))
-                        .foregroundColor(AppColors.glassCardTitle.opacity(0.92))
-                        .frame(width: 36, height: 36)
-                        .background {
-                            Circle()
-                                .fill(.ultraThinMaterial)
-                                .overlay {
-                                    Circle()
-                                        .strokeBorder(Color.white.opacity(0.28), lineWidth: 0.5)
-                                }
-                                .glassMaterialIgnoresSystemColorScheme()
-                        }
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel(String(localized: "Settings"))
-            }
-
-            HStack(alignment: .center) {
-                Text(Date(), style: .date)
-                    .font(.subheadline)
-                    .foregroundColor(.white.opacity(0.92))
-                    .shadow(color: .black.opacity(0.35), radius: 2, x: 0, y: 1)
-
-                Spacer()
-
+            if !wordManager.isSlotUnlocked {
                 DailyResetCountdownLabel {
                     reloadIfCalendarDayChanged()
                 }
             }
+
+            Button {
+                showingSettings = true
+            } label: {
+                Image(systemName: "gearshape.fill")
+                    .font(.body.weight(.semibold))
+                    .foregroundColor(AppColors.glassCardTitle.opacity(0.92))
+                    .frame(width: 36, height: 36)
+                    .background {
+                        Circle()
+                            .fill(.ultraThinMaterial)
+                            .overlay {
+                                Circle()
+                                    .strokeBorder(Color.white.opacity(0.28), lineWidth: 0.5)
+                            }
+                            .glassMaterialIgnoresSystemColorScheme()
+                    }
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(String(localized: "Settings"))
         }
     }
 
@@ -221,42 +206,41 @@ struct TodayTabView: View {
         }
     }
 
-    /// Compact CEFR step menu (A1 … C2), same row as the flags.
-    private var levelPickerPill: some View {
-        Menu {
-            ForEach(1...CEFRLevelMapping.stepLabels.count, id: \.self) { step in
-                Button {
-                    userManager.setUserLevel(step)
-                } label: {
-                    if userManager.userLevel == step {
-                        Label(CEFRLevelMapping.label(for: step), systemImage: "checkmark")
-                    } else {
-                        Text(CEFRLevelMapping.label(for: step))
-                    }
+    // MARK: - Today's Quiz
+
+    @ViewBuilder
+    private var todaysQuizSection: some View {
+        if wordManager.isSlotUnlocked {
+            RippleLoadingButton(
+                isLoading: isStartingQuiz,
+                cornerRadius: 14,
+                rippleStyle: .onDark,
+                action: startTodaysQuiz
+            ) {
+                HStack {
+                    Image(systemName: "book.fill")
+                    Text(String(localized: "Take Today's Quiz"))
+                        .font(.headline)
                 }
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(AppColors.primaryButtonGradient)
+                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             }
-        } label: {
-            HStack(spacing: 4) {
-                Text(CEFRLevelMapping.label(for: userManager.userLevel))
-                    .font(.caption.weight(.bold))
-                Image(systemName: "chevron.down")
-                    .font(.system(size: 9, weight: .bold))
+        } else {
+            HStack {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.green)
+                Text(String(localized: "You've finished today's quiz. Come back tomorrow!"))
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.9))
             }
-            .foregroundColor(.white.opacity(0.95))
-            .padding(.horizontal, 10)
-            .padding(.vertical, 6)
-            .background {
-                Capsule(style: .continuous)
-                    .fill(.ultraThinMaterial)
-                    .overlay {
-                        Capsule(style: .continuous)
-                            .strokeBorder(Color.white.opacity(0.28), lineWidth: 0.5)
-                    }
-                    .glassMaterialIgnoresSystemColorScheme()
-            }
-            .shadow(color: .black.opacity(0.18), radius: 4, x: 0, y: 1)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.white.opacity(0.08))
+            .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
         }
-        .accessibilityLabel("Level \(CEFRLevelMapping.label(for: userManager.userLevel))")
     }
 
     // MARK: - Data / Actions
@@ -273,12 +257,6 @@ struct TodayTabView: View {
             userLevel: userManager.userLevel,
             force: force
         )
-    }
-
-    /// Resolves a word from currentWords or diary (e.g. when opening quiz from Review).
-    private func word(for wordId: UUID) -> Word? {
-        wordManager.currentWords.first { $0.id == wordId }
-        ?? diaryManager.entries.flatMap { $0.words }.first { $0.id == wordId }
     }
 
     private func loadRevealedExamples() {
@@ -299,7 +277,7 @@ struct TodayTabView: View {
         UserDefaults.standard.set(data, forKey: Self.revealedExamplesKey)
     }
 
-    /// Generate More: reveals 2nd/3rd sentences from WordPack JSON in order.
+    /// Generate More: reveals 2nd/3rd authored sentences in order.
     private func handleGenerateExample(for word: Word) {
         guard userManager.isPremium else {
             showingPremiumPaywall = true
@@ -313,8 +291,7 @@ struct TodayTabView: View {
 
         Task {
             async let minDelay: Void = Task.sleep(nanoseconds: Self.rippleMinDurationNs)
-            let date = WordOfTheDayManager.calendarDayISO()
-            let extras = nextExtraExamples(for: word, date: date, alreadyShown: current)
+            let extras = nextExtraExamples(for: word, alreadyShown: current)
             _ = try? await minDelay
 
             await MainActor.run {
@@ -328,30 +305,52 @@ struct TodayTabView: View {
         }
     }
 
-    private func startQuiz(for word: Word) {
-        guard startingQuizWordId == nil else { return }
-        startingQuizWordId = word.id
+    /// Builds today's session (slot's new words + whatever spaced repetition
+    /// says is due) and navigates once the ripple animation has played.
+    ///
+    /// Uses `trustedNow()`, not the device clock, for both picking which
+    /// reviews are due and (later, in QuizView) stamping their new due dates —
+    /// otherwise a clock pushed forward makes reviews appear due before they
+    /// really are, or a clock pushed forward then back plants a bogus future
+    /// `nextDueAt`. Fetched once here and reused for the whole session so a
+    /// clock change mid-quiz can't affect the write either.
+    private func startTodaysQuiz() {
+        guard !isStartingQuiz, wordManager.isSlotUnlocked else { return }
+        isStartingQuiz = true
 
         Task {
-            // Brief delay so ripple animation is visible before navigation
+            let trustedNow = await CurriculumStateManager.trustedNow()
+
+            let items = QuizSessionBuilder.build(
+                newWords: wordManager.currentWords,
+                reviewCandidates: diaryManager.entries.flatMap(\.words),
+                progress: progressManager,
+                now: trustedNow,
+                seed: "\(wordManager.currentSlotIndex)"
+            )
+            guard !items.isEmpty else {
+                await MainActor.run { isStartingQuiz = false }
+                return
+            }
+
             try? await Task.sleep(nanoseconds: Self.quizRippleLeadNs)
             await MainActor.run {
-                navigationPath.append(word.id)
+                pendingSessionItems = items
+                pendingSessionNow = trustedNow
+                isShowingQuiz = true
             }
             try? await Task.sleep(nanoseconds: 150_000_000)
             await MainActor.run {
-                if startingQuizWordId == word.id {
-                    startingQuizWordId = nil
-                }
+                isStartingQuiz = false
             }
         }
     }
 
-    /// Next extra sentence to reveal: Word.exampleSentence2/3 first, then
-    /// raw WordPack examples from the store (deduplicated).
-    private func nextExtraExamples(for word: Word, date: String, alreadyShown: [String]) -> [String] {
+    /// Next extra sentence to reveal: Word.exampleSentence2/3 first, then the
+    /// remaining authored examples from the spine (deduplicated).
+    private func nextExtraExamples(for word: Word, alreadyShown: [String]) -> [String] {
         let known = ([word.exampleSentence2, word.exampleSentence3].compactMap { $0 })
-            + DailyWordsService.extraExamples(forWord: word.word, date: date)
+            + CurriculumService.extraExamples(forWord: word.word)
         var seen = Set<String>()
         seen.insert(word.exampleSentence.trimmingCharacters(in: .whitespacesAndNewlines).lowercased())
         for shown in alreadyShown {
@@ -372,26 +371,21 @@ struct TodayTabView: View {
 // MARK: - Daily Reset Countdown
 
 /// "Resets in Xh Ym" label, updated every second.
-/// Counts down to Europe/Istanbul midnight; calls onReset at zero.
+/// Counts down to the same study-day boundary that gates the next slot
+/// (the learner's own timezone, shifted to start at `CurriculumStateManager.dayResetHour`).
 private struct DailyResetCountdownLabel: View {
     let onReset: () -> Void
 
     @State private var now: Date = Date()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    private static let calendar: Calendar = {
-        var cal = Calendar(identifier: .gregorian)
-        cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
-        return cal
-    }()
-
-    private var nextMidnight: Date {
-        let startOfToday = Self.calendar.startOfDay(for: now)
-        return Self.calendar.date(byAdding: .day, value: 1, to: startOfToday) ?? now
+    private var nextReset: Date {
+        let todayStart = CurriculumStateManager.studyDayStart(for: now)
+        return Calendar.current.date(byAdding: .day, value: 1, to: todayStart) ?? now
     }
 
     private var remaining: TimeInterval {
-        max(0, nextMidnight.timeIntervalSince(now))
+        max(0, nextReset.timeIntervalSince(now))
     }
 
     private var formatted: String {
@@ -429,7 +423,7 @@ private struct DailyResetCountdownLabel: View {
                 .strokeBorder(Color.white.opacity(0.18), lineWidth: 0.5)
         }
         .onReceive(timer) { value in
-            let target = nextMidnight
+            let target = nextReset
             let previous = now
             now = value
             if previous < target, value >= target {
@@ -448,14 +442,11 @@ private struct WordCardView: View {
 
     let word: Word
     let isPremium: Bool
-    let isWordQuizzedToday: Bool
 
     /// Only AI-generated sentences (up to 2)
     let generatedExamples: [String]
     let isGenerating: Bool
-    let isStartingQuiz: Bool
 
-    let onQuiz: () -> Void
     let onGenerateMore: () -> Void
 
     private var allSentences: [String] {
@@ -482,11 +473,6 @@ private struct WordCardView: View {
                 .background(AppColors.glassCardTitle.opacity(0.15))
 
             examples
-
-            Divider()
-                .background(AppColors.glassCardTitle.opacity(0.15))
-
-            quizSection
         }
         .padding(24)
         .wordCardGlassBackground(cornerRadius: 22)
@@ -654,43 +640,6 @@ private struct WordCardView: View {
         }
     }
 
-    private var quizSection: some View {
-        HStack {
-            Spacer()
-
-            if isWordQuizzedToday {
-                HStack {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(.green)
-                    Text("You learned it!")
-                        .font(.headline)
-                        .foregroundColor(.green)
-                }
-                .padding()
-                .background(Color.green.opacity(0.2))
-                .cornerRadius(10)
-            } else {
-                RippleLoadingButton(
-                    isLoading: isStartingQuiz,
-                    cornerRadius: 10,
-                    rippleStyle: .onDark,
-                    action: onQuiz
-                ) {
-                    HStack {
-                        Image(systemName: "book.fill")
-                        Text("Take Quiz")
-                            .font(.headline)
-                    }
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(AppColors.primaryButtonGradient)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                }
-            }
-
-            Spacer()
-        }
-    }
 }
 
 // MARK: - Preview

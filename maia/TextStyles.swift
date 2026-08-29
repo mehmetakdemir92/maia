@@ -5,6 +5,7 @@
 //  Created by Mehmet Akdemir on 22.01.2026.
 //
 
+import NaturalLanguage
 import SwiftUI
 
 extension View {
@@ -188,7 +189,14 @@ struct ExampleSentenceRow: View {
         return result
     }
 
-    /// Case-insensitive lemma matches, including language-specific inflection suffixes.
+    /// Case-insensitive lemma matches. Tries the OS lemmatizer first (handles
+    /// irregular English inflections like consonant doubling, "commit" ->
+    /// "committed"). The lemmatizer has no German model at all — as of this SDK,
+    /// `NLTagger.availableTagSchemes(for:.word, language: .german)` doesn't
+    /// include `.lemma` (French/Portuguese/English do) — so German falls back to
+    /// suffix-based matching, then to a hand-built verb-conjugation matcher, then
+    /// to separable-prefix-verb handling for verbs like "feststellen" that split
+    /// apart in a main clause ("Sie stellte fest, ...").
     private static func matchRanges(
         in sentence: String,
         headword: String,
@@ -197,7 +205,211 @@ struct ExampleSentenceRow: View {
         let lemma = headword.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !lemma.isEmpty else { return [] }
 
-        let escaped = NSRegularExpression.escapedPattern(for: lemma)
+        let lemmatizerRanges = lemmatizerMatchRanges(in: sentence, headword: lemma, language: language)
+        if !lemmatizerRanges.isEmpty { return lemmatizerRanges }
+
+        let suffixRanges = suffixMatchRanges(in: sentence, headword: lemma, language: language)
+        if !suffixRanges.isEmpty { return suffixRanges }
+
+        guard language == .german else { return [] }
+
+        let verbRanges = germanVerbMatchRanges(in: sentence, infinitive: lemma)
+        if !verbRanges.isEmpty { return verbRanges }
+
+        return separableVerbMatchRanges(in: sentence, headword: lemma)
+    }
+
+    /// German separable-prefix verbs ("feststellen" -> "fest" + "stellen") split
+    /// apart in a main clause ("Sie stellte fest, ..."), so neither the joined
+    /// headword nor the conjugated stem alone matches the sentence as one span.
+    /// Ordered longest-first so a headword picks its longest valid prefix.
+    private static let germanSeparablePrefixes: [String] = [
+        "hinein", "heraus", "hinüber", "herüber", "zusammen", "auseinander",
+        "entgegen", "gegenüber", "zurecht", "vorbei", "weiter", "zurück",
+        "ab", "an", "auf", "aus", "bei", "dar", "ein", "fest", "fort",
+        "her", "hin", "los", "mit", "nach", "statt", "vor", "weg", "zu", "um"
+    ].sorted { $0.count > $1.count }
+
+    /// Fallback for German separable-prefix verbs: splits the headword into its
+    /// prefix and the remaining infinitive (itself a real verb, e.g. "stellen").
+    /// Tries the past participle first, since it fuses into one token with "ge"
+    /// *between* the prefix and stem ("einkaufen" -> "eingekauft", not a split
+    /// "ein" + "gekauft"). Otherwise requires BOTH a conjugated form of the
+    /// remainder AND the bare prefix word to appear somewhere in the sentence
+    /// before highlighting either — so an unrelated word that happens to share
+    /// the prefix's spelling (many are common prepositions: "an", "auf", "zu"...)
+    /// doesn't get highlighted alone.
+    private static func separableVerbMatchRanges(
+        in sentence: String,
+        headword: String
+    ) -> [Range<String.Index>] {
+        let lowerHeadword = headword.lowercased()
+        guard let prefix = germanSeparablePrefixes.first(where: {
+            lowerHeadword.hasPrefix($0) && lowerHeadword.count > $0.count + 1
+        }) else { return [] }
+
+        let remainder = String(headword.dropFirst(prefix.count))
+
+        if let fusedRanges = fusedParticipleMatchRanges(in: sentence, prefix: prefix, remainderInfinitive: remainder),
+           !fusedRanges.isEmpty {
+            return fusedRanges
+        }
+
+        let stemRanges = germanVerbMatchRanges(in: sentence, infinitive: remainder)
+        guard !stemRanges.isEmpty else { return [] }
+
+        let prefixRanges = wholeWordMatchRanges(in: sentence, word: prefix)
+        guard !prefixRanges.isEmpty else { return [] }
+
+        return (stemRanges + prefixRanges).sorted { $0.lowerBound < $1.lowerBound }
+    }
+
+    /// A separable verb's past participle fuses as one token with "ge" inserted
+    /// between the prefix and stem, not appended after the split prefix.
+    private static func fusedParticipleMatchRanges(
+        in sentence: String,
+        prefix: String,
+        remainderInfinitive: String
+    ) -> [Range<String.Index>]? {
+        let lower = remainderInfinitive.lowercased()
+        let stem: String
+        if lower.count > 2, lower.hasSuffix("en") {
+            stem = String(remainderInfinitive.dropLast(2))
+        } else if lower.count > 1, lower.hasSuffix("n") {
+            stem = String(remainderInfinitive.dropLast(1))
+        } else {
+            return nil
+        }
+        guard !stem.isEmpty else { return nil }
+
+        let escapedPrefix = NSRegularExpression.escapedPattern(for: prefix)
+        let escapedStem = NSRegularExpression.escapedPattern(for: stem)
+        let pattern = "\\b\(escapedPrefix)ge\(escapedStem)(?:t|et)\\b"
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else {
+            return nil
+        }
+        let nsRange = NSRange(sentence.startIndex..<sentence.endIndex, in: sentence)
+        return regex.matches(in: sentence, options: [], range: nsRange).compactMap { match in
+            Range(match.range, in: sentence)
+        }
+    }
+
+    /// Matches conjugated/participle forms of a German verb infinitive by
+    /// deriving its stem and applying real conjugation endings, instead of
+    /// (wrongly) appending suffixes after the full infinitive — German present
+    /// and simple-past endings replace the infinitive's trailing "-en", they
+    /// don't follow it ("stellen" -> "stellte", not "stellen" + "te"). Also
+    /// tries an umlauted stem ("fahren" -> "fährt") to catch the common class of
+    /// strong verbs that only vowel-shift; verbs with a full irregular ablaut
+    /// ("nehmen" -> "nahm"/"genommen") aren't covered — that needs a real
+    /// dictionary, not a suffix rule.
+    private static func germanVerbMatchRanges(
+        in sentence: String,
+        infinitive: String
+    ) -> [Range<String.Index>] {
+        let lower = infinitive.lowercased()
+        let stem: String
+        if lower.count > 2, lower.hasSuffix("en") {
+            stem = String(infinitive.dropLast(2))
+        } else if lower.count > 1, lower.hasSuffix("n") {
+            stem = String(infinitive.dropLast(1))
+        } else {
+            return []
+        }
+        guard !stem.isEmpty else { return [] }
+
+        var stems = [stem]
+        if let umlauted = umlautedVariant(of: stem) { stems.append(umlauted) }
+
+        let escapedStems = stems.map { NSRegularExpression.escapedPattern(for: $0) }
+        let stemAlternation = escapedStems.joined(separator: "|")
+        let conjugated = "(?:\(stemAlternation))(?:e|st|t|en|te|test|ten|tet)?"
+        let participles = escapedStems.map { "ge\($0)(?:t|et)" }.joined(separator: "|")
+        let pattern = "\\b(?:\(conjugated)|\(participles))\\b"
+
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else {
+            return []
+        }
+        let nsRange = NSRange(sentence.startIndex..<sentence.endIndex, in: sentence)
+        return regex.matches(in: sentence, options: [], range: nsRange).compactMap { match in
+            Range(match.range, in: sentence)
+        }
+    }
+
+    /// Umlauts the last a/o/u (or "au") in a verb stem, e.g. "fahr" -> "fähr"
+    /// (fährt), "lauf" -> "läuf" (läuft). Covers one common strong-verb pattern;
+    /// not a general German ablaut solver.
+    private static func umlautedVariant(of stem: String) -> String? {
+        if let range = stem.range(of: "au", options: [.backwards, .caseInsensitive]) {
+            var result = stem
+            result.replaceSubrange(range, with: "äu")
+            return result
+        }
+        for (from, to) in [("a", "ä"), ("o", "ö"), ("u", "ü")] {
+            if let range = stem.range(of: from, options: [.backwards, .caseInsensitive]) {
+                var result = stem
+                result.replaceSubrange(range, with: to)
+                return result
+            }
+        }
+        return nil
+    }
+
+    /// Case-insensitive whole-word match, no inflection handling.
+    private static func wholeWordMatchRanges(in sentence: String, word: String) -> [Range<String.Index>] {
+        let escaped = NSRegularExpression.escapedPattern(for: word)
+        let pattern = "\\b\(escaped)\\b"
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else {
+            return []
+        }
+        let nsRange = NSRange(sentence.startIndex..<sentence.endIndex, in: sentence)
+        return regex.matches(in: sentence, options: [], range: nsRange).compactMap { match in
+            Range(match.range, in: sentence)
+        }
+    }
+
+    /// Tags each word in the sentence with its dictionary lemma and compares that
+    /// to the headword, so inflected forms are matched by meaning rather than by
+    /// guessing which suffix was appended. No-ops for languages without a lemma
+    /// model on this SDK (currently German) rather than enumerating for nothing.
+    private static func lemmatizerMatchRanges(
+        in sentence: String,
+        headword: String,
+        language: LearningLanguage
+    ) -> [Range<String.Index>] {
+        let nlLanguage: NLLanguage = language == .german ? .german : .english
+        guard NLTagger.availableTagSchemes(for: .word, language: nlLanguage).contains(.lemma) else {
+            return []
+        }
+
+        let tagger = NLTagger(tagSchemes: [.lemma])
+        tagger.string = sentence
+        tagger.setLanguage(nlLanguage, range: sentence.startIndex..<sentence.endIndex)
+
+        let target = headword.lowercased()
+        var ranges: [Range<String.Index>] = []
+        tagger.enumerateTags(
+            in: sentence.startIndex..<sentence.endIndex,
+            unit: .word,
+            scheme: .lemma,
+            options: [.omitWhitespace, .omitPunctuation]
+        ) { tag, range in
+            if let wordLemma = tag?.rawValue.lowercased(), wordLemma == target {
+                ranges.append(range)
+            }
+            return true
+        }
+        return ranges
+    }
+
+    /// Fallback for words the lemmatizer doesn't recognize: exact lemma plus a
+    /// fixed list of common suffixes appended directly (no spelling changes).
+    private static func suffixMatchRanges(
+        in sentence: String,
+        headword: String,
+        language: LearningLanguage
+    ) -> [Range<String.Index>] {
+        let escaped = NSRegularExpression.escapedPattern(for: headword)
         let suffixAlternation = language.headwordSuffixes
             .map { NSRegularExpression.escapedPattern(for: $0) }
             .joined(separator: "|")

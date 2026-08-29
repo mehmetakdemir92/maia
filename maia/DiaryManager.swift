@@ -90,22 +90,6 @@ class DiaryManager: ObservableObject {
     private static let lastUploadedFingerprintPrefix = "diaryLastUploadedFingerprint."
     private static let diarySchemaVersion = 2
 
-    /// Diary day boundaries use the Istanbul calendar app-wide (matches DiaryView).
-    private var diaryCalendar: Calendar {
-        var cal = Calendar(identifier: .gregorian)
-        cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
-        return cal
-    }
-
-    private lazy var diaryDayFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.calendar = diaryCalendar
-        formatter.timeZone = diaryCalendar.timeZone
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
-
     private func diaryStorageKey(forUserId uid: String?) -> String? {
         guard let uid, !uid.isEmpty else { return nil }
         return "diaryEntries.\(uid)"
@@ -131,13 +115,15 @@ class DiaryManager: ObservableObject {
         lastKnownRemoteFingerprint = nil
     }
 
+    /// Same day boundary the curriculum slot gate and streak use: the
+    /// learner's own timezone, shifted so a new day starts at `dayResetHour`
+    /// instead of midnight.
     private func diaryDayKey(for date: Date) -> String {
-        let day = diaryCalendar.startOfDay(for: date)
-        return diaryDayFormatter.string(from: day)
+        CurriculumStateManager.studyDayISO(for: date)
     }
 
     private func dateFromDiaryDayKey(_ key: String) -> Date? {
-        diaryDayFormatter.date(from: key)
+        CurriculumStateManager.studyDayStart(fromISO: key)
     }
 
     private func stableEntryId(for date: Date) -> UUID {
@@ -163,7 +149,7 @@ class DiaryManager: ObservableObject {
     }
 
     private func normalizedEntry(_ entry: DiaryEntry) -> DiaryEntry {
-        let day = diaryCalendar.startOfDay(for: entry.date)
+        let day = CurriculumStateManager.studyDayStart(for: entry.date)
         return DiaryEntry(
             id: stableEntryId(for: day),
             date: day,
@@ -209,7 +195,7 @@ class DiaryManager: ObservableObject {
             }
         }
 
-        let day = diaryCalendar.startOfDay(for: a.date)
+        let day = CurriculumStateManager.studyDayStart(for: a.date)
         return DiaryEntry(
             id: stableEntryId(for: day),
             date: day,
@@ -471,9 +457,9 @@ class DiaryManager: ObservableObject {
     }
     
     func getOrCreateEntry(for date: Date) -> DiaryEntry {
-        let targetDate = diaryCalendar.startOfDay(for: date)
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
 
-        if let existingEntry = entries.first(where: { diaryCalendar.isDate($0.date, inSameDayAs: targetDate) }) {
+        if let existingEntry = entries.first(where: { CurriculumStateManager.isSameStudyDay($0.date, targetDate) }) {
             return existingEntry
         }
 
@@ -484,12 +470,12 @@ class DiaryManager: ObservableObject {
     }
     
     func getEntry(for date: Date) -> DiaryEntry? {
-        let targetDate = diaryCalendar.startOfDay(for: date)
-        return entries.first(where: { diaryCalendar.isDate($0.date, inSameDayAs: targetDate) })
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
+        return entries.first(where: { CurriculumStateManager.isSameStudyDay($0.date, targetDate) })
     }
     
     func markWordAsQuizzed(_ word: Word, for date: Date) {
-        let targetDate = diaryCalendar.startOfDay(for: date)
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
         
         // Get or create entry
         let entry = getOrCreateEntry(for: targetDate)
@@ -531,10 +517,8 @@ class DiaryManager: ObservableObject {
 
         guard phonetic == nil || partOfSpeech == nil else { return word }
 
-        let dayKey = diaryDayKey(for: date)
         let packEntry = await MainActor.run {
-            WordPackStore.shared.entries(for: dayKey, language: word.learningLanguage)
-                .first { $0.word.lowercased() == word.word.lowercased() }
+            CurriculumStore.shared.entry(forWord: word.word, language: word.learningLanguage)
         }
 
         if phonetic == nil, let packPhonetic = packEntry?.phonetic?.trimmingCharacters(in: .whitespacesAndNewlines),
@@ -653,25 +637,15 @@ class DiaryManager: ObservableObject {
         }
     }
 
-    func isWordQuizzed(_ word: Word, for date: Date) -> Bool {
-        let targetDate = diaryCalendar.startOfDay(for: date)
-        
-        // Check if word exists in the entry for this date
-        if let entry = getEntry(for: targetDate) {
-            return entry.words.contains(where: { $0.id == word.id })
-        }
-        return false
-    }
-    
     func getNotes(for wordId: UUID, on date: Date) -> [Note] {
-        let targetDate = diaryCalendar.startOfDay(for: date)
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
         
         guard let entry = getEntry(for: targetDate) else { return [] }
         return entry.notesByWordId[wordId] ?? []
     }
     
     func addNote(_ text: String, for wordId: UUID, on date: Date) {
-        let targetDate = diaryCalendar.startOfDay(for: date)
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
         
         let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmedText.isEmpty else { return }
@@ -700,7 +674,7 @@ class DiaryManager: ObservableObject {
     }
     
     func updateNote(_ noteId: UUID, text: String, for wordId: UUID, on date: Date, markSuggestionApplied: Bool = false) {
-        let targetDate = diaryCalendar.startOfDay(for: date)
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
         
         let trimmedText = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmedText.isEmpty else { return }
@@ -737,7 +711,7 @@ class DiaryManager: ObservableObject {
     }
     
     func deleteNote(_ noteId: UUID, for wordId: UUID, on date: Date) {
-        let targetDate = diaryCalendar.startOfDay(for: date)
+        let targetDate = CurriculumStateManager.studyDayStart(for: date)
         
         guard let entry = getEntry(for: targetDate),
               let entryIndex = entries.firstIndex(where: { $0.id == entry.id }) else { return }
@@ -859,9 +833,9 @@ class DiaryManager: ObservableObject {
 
         let entryDate: Date
         if let dayFromDocId = dateFromDiaryDayKey(documentId) {
-            entryDate = diaryCalendar.startOfDay(for: dayFromDocId)
+            entryDate = CurriculumStateManager.studyDayStart(for: dayFromDocId)
         } else if let timestamp = data["date"] as? Timestamp {
-            entryDate = diaryCalendar.startOfDay(for: timestamp.dateValue())
+            entryDate = CurriculumStateManager.studyDayStart(for: timestamp.dateValue())
         } else {
             return nil
         }

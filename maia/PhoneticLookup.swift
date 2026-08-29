@@ -2,7 +2,7 @@
 //  PhoneticLookup.swift
 //  maia
 //
-// Free dictionary API + local cache when WordPack has no phonetic.
+// Free dictionary API + local cache when the curriculum has no phonetic.
 //
 
 import Foundation

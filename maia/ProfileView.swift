@@ -123,7 +123,7 @@ struct ProfileView: View {
                                         .frame(width: 110, height: 110)
 
                                     if let imageURL = userManager.profileImageURL {
-                                        AsyncImage(url: URL(string: imageURL)) { image in
+                                        CachedProfileImage(url: URL(string: imageURL)) { image in
                                             image
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fill)
@@ -132,7 +132,6 @@ struct ProfileView: View {
                                                 .font(.system(size: 34))
                                                 .foregroundColor(AppColors.primaryButton)
                                         }
-                                        .id(imageURL)
                                         .clipShape(Circle())
                                         .frame(width: 110, height: 110)
                                     } else {

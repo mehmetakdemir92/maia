@@ -13,12 +13,12 @@ enum LearningLanguage: String, CaseIterable, Identifiable {
     case english
     case german
 
-    static let storageKey = "learningLanguagePreference"
+    nonisolated static let storageKey = "learningLanguagePreference"
 
     var id: String { rawValue }
 
     /// ISO 639-1 code used for backend calls, cache namespaces, and `Word.languageCode`.
-    var code: String {
+    nonisolated var code: String {
         switch self {
         case .english: return "en"
         case .german: return "de"
@@ -49,15 +49,6 @@ enum LearningLanguage: String, CaseIterable, Identifiable {
         }
     }
 
-    /// Bundled monthly pack resource name. English keeps the legacy plain name.
-    /// e.g. en → "2026-07", de → "2026-07.de"
-    func packResourceName(forMonth monthKey: String) -> String {
-        switch self {
-        case .english: return monthKey
-        case .german: return "\(monthKey).de"
-        }
-    }
-
     /// Namespace appended to UserDefaults keys. Empty for English so existing
     /// user data (locked words, used-word history, audio URLs) stays valid.
     var storageSuffix: String {
@@ -68,7 +59,7 @@ enum LearningLanguage: String, CaseIterable, Identifiable {
     }
 
     /// Inflection suffixes accepted when checking that an example sentence
-    /// contains the headword (see DailyWordsService.exampleIncludesHeadword).
+    /// contains the headword (see CurriculumService.exampleIncludesHeadword).
     var headwordSuffixes: [String] {
         switch self {
         case .english:
@@ -78,13 +69,18 @@ enum LearningLanguage: String, CaseIterable, Identifiable {
         }
     }
 
-    static func fromCode(_ code: String?) -> LearningLanguage {
+    nonisolated static func fromCode(_ code: String?) -> LearningLanguage {
         guard let code = code?.lowercased(), !code.isEmpty else { return .english }
         return allCases.first { $0.code == code } ?? .english
     }
 
     /// Currently selected learning language (UserDefaults-backed; defaults to English).
-    static var current: LearningLanguage {
+    ///
+    /// `nonisolated` on purpose: the project builds with
+    /// SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor, so without this every read from
+    /// a nonisolated context warns. It only touches UserDefaults, which is
+    /// thread-safe, so there is nothing to isolate.
+    nonisolated static var current: LearningLanguage {
         let raw = UserDefaults.standard.string(forKey: storageKey) ?? LearningLanguage.english.rawValue
         return LearningLanguage(rawValue: raw) ?? .english
     }

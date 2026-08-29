@@ -1,3 +1,15 @@
+//
+//  WordOfTheDayManager.swift
+//  maia
+//
+// Drives the Today screen off the curriculum spine.
+//
+// The old version resolved words from a calendar date and then LOCKED them in
+// UserDefaults so the day stayed stable. None of that is needed now: a slot is
+// a pure function of its index, so the same index always yields the same five
+// words, offline and across devices. The locking layer is gone.
+//
+
 import Foundation
 import Combine
 
@@ -9,17 +21,28 @@ final class WordOfTheDayManager: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
 
-    private let dailyService = DailyWordsService()
-    /// v3: WordPack-based (no AI/Firestore). Legacy locked cache is invalid.
-    private static let localDayWordsPrefix = "dailyWords.locked.v3."
+    /// 1-based position in the spine the learner is on.
+    @Published private(set) var currentSlotIndex: Int = 1
+    /// Authoring label for the slot, if the spine provides one.
+    @Published private(set) var slotTheme: String?
+    /// False once today's slot is finished — the gate that creates tomorrow's return.
+    @Published private(set) var isSlotUnlocked: Bool = true
 
-    private var lastLoadedDayISO: String?
-    private var lastLoadedUserLevel: Int?
+    /// Where the learner stands. Exposed so views can read progress directly.
+    let curriculumState: CurriculumStateManager
+
+    private let service = CurriculumService()
+    private var lastLoadedSlotIndex: Int?
     private var lastLoadedLanguage: LearningLanguage?
-    private var lastLoadedCategory: VocabularyCategory = .general
+    private var lastLoadedUserLevel: Int?
     private var loadTask: Task<Void, Never>?
 
-    init() {
+    /// `curriculumState` is resolved in the body, not as a default argument:
+    /// default arguments are evaluated in a nonisolated context, and
+    /// CurriculumStateManager's initializer is main-actor isolated.
+    init(curriculumState: CurriculumStateManager? = nil) {
+        self.curriculumState = curriculumState ?? CurriculumStateManager()
+
         NotificationCenter.default.addObserver(
             forName: .pronunciationAudioURLResolved,
             object: nil,
@@ -42,45 +65,20 @@ final class WordOfTheDayManager: ObservableObject {
         }
     }
 
-    private static func normalizedLevel(_ userLevel: Int) -> Int {
-        min(max(userLevel, 1), 11)
+    // MARK: - Day boundary
+
+    /// The learner's own study day. Previously pinned to Europe/Istanbul, which
+    /// meant a user abroad got new words in the middle of their night — the cue
+    /// has to fire on their clock, not Turkey's.
+    static func calendarDayISO(for date: Date = Date()) -> String {
+        CurriculumStateManager.studyDayISO(for: date)
     }
 
-    private static func localDayWordsKey(for dayISO: String, userLevel: Int, language: LearningLanguage) -> String {
-        localDayWordsPrefix + dayISO + ".l\(normalizedLevel(userLevel))" + language.storageSuffix
+    var slotCount: Int {
+        CurriculumStore.shared.slotCount(for: LearningLanguage.current)
     }
 
-    private func loadLockedWords(for dayISO: String, userLevel: Int, language: LearningLanguage) -> [Word]? {
-        let key = Self.localDayWordsKey(for: dayISO, userLevel: userLevel, language: language)
-        guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
-        guard let decoded = try? JSONDecoder().decode([Word].self, from: data) else { return nil }
-        if DailyWordsService.isUsableWordSet(decoded),
-           CEFRLevelMapping.isAcceptableCEFRDistribution(
-               decoded,
-               userLevel: userLevel,
-               poolHasBand: DailyWordsService.poolHasBand
-           ) {
-            return decoded
-        }
-        UserDefaults.standard.removeObject(forKey: key)
-        return nil
-    }
-
-    private func saveLockedWords(_ words: [Word], for dayISO: String, userLevel: Int, language: LearningLanguage) {
-        let key = Self.localDayWordsKey(for: dayISO, userLevel: userLevel, language: language)
-        guard let data = try? JSONEncoder().encode(words) else { return }
-        UserDefaults.standard.set(data, forKey: key)
-    }
-
-    /// Learning language switched in Settings: drop in-memory words and reload.
-    /// Locked words are keyed per language, so switching back restores them.
-    private func reloadForLanguageChange() {
-        guard lastLoadedLanguage != nil, lastLoadedLanguage != LearningLanguage.current else { return }
-        let level = lastLoadedUserLevel ?? 1
-        currentWords = []
-        words = []
-        loadWordsOfTheDay(category: lastLoadedCategory, userLevel: level)
-    }
+    // MARK: - Loading
 
     func loadWordsOfTheDay(category: VocabularyCategory = .general, userLevel: Int = 1, force: Bool = false) {
         loadTask?.cancel()
@@ -89,87 +87,93 @@ final class WordOfTheDayManager: ObservableObject {
         }
     }
 
-    /// Reload when the calendar day changes (or list is empty).
+    /// Re-evaluate on foreground: the gate may have opened, or the level/language changed.
     func reloadIfNewCalendarDay(category: VocabularyCategory = .general, userLevel: Int = 1) {
-        let today = Self.calendarDayISO()
-        let level = Self.normalizedLevel(userLevel)
-        let dayChanged = lastLoadedDayISO != today
-        let levelChanged = lastLoadedUserLevel != nil && lastLoadedUserLevel != level
         let languageChanged = lastLoadedLanguage != nil && lastLoadedLanguage != LearningLanguage.current
+        let levelChanged = lastLoadedUserLevel != nil && lastLoadedUserLevel != userLevel
+        let slotChanged = lastLoadedSlotIndex != curriculumState.currentSlotIndex
+        let gateChanged = isSlotUnlocked != curriculumState.isNextSlotUnlocked
 
-        guard dayChanged || levelChanged || languageChanged || currentWords.isEmpty else { return }
+        guard languageChanged || levelChanged || slotChanged || gateChanged || currentWords.isEmpty else { return }
 
-        loadWordsOfTheDay(
-            category: category,
-            userLevel: level,
-            force: levelChanged && !dayChanged
-        )
-    }
-
-    /// Turkey day boundary (consistent refresh).
-    static func calendarDayISO(for date: Date = Date()) -> String {
-        var cal = Calendar(identifier: .gregorian)
-        cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
-        let y = cal.component(.year, from: date)
-        let m = cal.component(.month, from: date)
-        let d = cal.component(.day, from: date)
-        return String(format: "%04d-%02d-%02d", y, m, d)
+        loadWordsOfTheDay(category: category, userLevel: userLevel)
     }
 
     func loadToday(category: VocabularyCategory = .general, userLevel: Int = 1, force: Bool = false) async {
-        let date = Self.calendarDayISO()
-        let level = Self.normalizedLevel(userLevel)
+        _ = category
         let language = LearningLanguage.current
-        let levelChanged = lastLoadedUserLevel != nil && lastLoadedUserLevel != level
+        let count = CurriculumStore.shared.slotCount(for: language)
 
         isLoading = true
         errorMessage = nil
-        if force || levelChanged {
+
+        // One-time placement: the onboarding CEFR step chooses the entry point.
+        curriculumState.placeIfNeeded(userLevel: userLevel, slotCount: count)
+
+        let slotIndex = curriculumState.currentSlotIndex
+        // The device clock can only make the heuristic wrong in one direction
+        // — a clock pushed forward makes it look unlocked early — so it only
+        // needs a network round-trip to confirm THAT case. A clock nobody
+        // tampered with never disagrees with itself, so the common case (gate
+        // genuinely still closed) costs nothing and stays fully offline.
+        if curriculumState.isNextSlotUnlocked {
+            let trustedNow = await CurriculumStateManager.trustedNow()
+            if Task.isCancelled { isLoading = false; return }
+            isSlotUnlocked = curriculumState.isSlotUnlocked(asOf: trustedNow)
+        } else {
+            isSlotUnlocked = false
+        }
+
+        if force {
             currentWords = []
             words = []
         }
 
-        if Task.isCancelled { return }
-
-        // Hard lock: same day + level + language; fast offline-first display.
-        if !force, !levelChanged,
-           let locked = loadLockedWords(for: date, userLevel: level, language: language), !locked.isEmpty {
-            applyLoadedWords(locked, date: date, userLevel: level, category: category, language: language)
-            return
-        }
+        if Task.isCancelled { isLoading = false; return }
 
         do {
+            let loaded = try await service.words(forSlot: slotIndex, language: language)
             if Task.isCancelled { return }
-
-            let generated = try await dailyService.ensureDailyWords(
-                date: date,
-                category: category.rawValue,
-                userLevel: level
-            )
-
-            if Task.isCancelled { return }
-
-            applyLoadedWords(generated, date: date, userLevel: level, category: category, language: language)
+            currentWords = loaded
+            words = loaded
+            slotTheme = CurriculumStore.shared.slot(at: slotIndex, language: language)?.theme
+            lastLoadedSlotIndex = slotIndex
+            lastLoadedLanguage = language
+            lastLoadedUserLevel = userLevel
+            isLoading = false
+            WordPronunciationService.shared.prefetch(words: loaded)
         } catch {
             if Task.isCancelled { return }
             print("🔥 loadToday error:", error)
             currentWords = []
             words = []
+            slotTheme = nil
             errorMessage = Self.friendlyLoadError(error)
             isLoading = false
         }
     }
 
-    private func applyLoadedWords(_ loaded: [Word], date: String, userLevel: Int, category: VocabularyCategory, language: LearningLanguage) {
-        currentWords = loaded
-        words = loaded
-        saveLockedWords(loaded, for: date, userLevel: userLevel, language: language)
-        lastLoadedDayISO = date
-        lastLoadedUserLevel = userLevel
-        lastLoadedLanguage = language
-        lastLoadedCategory = category
-        isLoading = false
-        WordPronunciationService.shared.prefetch(words: loaded)
+    // MARK: - Progression
+
+    /// Call once the session for this slot is finished. Advances the pointer and
+    /// closes the gate until the learner's next study day.
+    func completeCurrentSlot() async {
+        await curriculumState.completeCurrentSlot(slotCount: slotCount)
+        isSlotUnlocked = curriculumState.isNextSlotUnlocked
+    }
+
+    /// True when the learner has run past the authored spine — reviews only.
+    var hasReachedEndOfSpine: Bool {
+        curriculumState.hasReachedEndOfSpine(slotCount: slotCount)
+    }
+
+    private func reloadForLanguageChange() {
+        guard lastLoadedLanguage != nil, lastLoadedLanguage != LearningLanguage.current else { return }
+        let level = lastLoadedUserLevel ?? 1
+        currentWords = []
+        words = []
+        slotTheme = nil
+        loadWordsOfTheDay(userLevel: level)
     }
 
     private func applyPronunciationAudioURL(_ url: String, lemma: String) {
@@ -184,17 +188,11 @@ final class WordOfTheDayManager: ObservableObject {
         guard updated != currentWords else { return }
         currentWords = updated
         words = updated
-        if let day = lastLoadedDayISO, let level = lastLoadedUserLevel {
-            saveLockedWords(updated, for: day, userLevel: level, language: lastLoadedLanguage ?? .current)
-        }
     }
 
-    /// Simplified user-facing error text.
     private static func friendlyLoadError(_ error: Error) -> String {
-        if let nsError = error as NSError?,
-           nsError.domain == "DailyWordsService",
-           nsError.code == -10 || nsError.code == -11 {
-            return error.localizedDescription
+        if let serviceError = error as? CurriculumService.ServiceError {
+            return serviceError.localizedDescription
         }
         let lower = error.localizedDescription.lowercased()
         if lower.contains("offline") || lower.contains("client is offline") {

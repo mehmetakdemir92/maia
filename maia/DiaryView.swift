@@ -33,9 +33,11 @@ struct DiaryView: View {
         return formatter
     }()
 
+    /// Matches DiaryManager: entry dates are already study-day starts in the
+    /// learner's own timezone, so bucket by month in that same timezone.
     private static let monthCalendar: Calendar = {
         var cal = Calendar(identifier: .gregorian)
-        cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
+        cal.timeZone = .current
         return cal
     }()
     
@@ -228,7 +230,7 @@ struct WordRowView: View {
     @State private var inputText: String = ""
     @FocusState private var isInputFocused: Bool
     @State private var showInputArea: Bool = false
-    
+
     private var savedNotes: [Note] {
         diaryManager.getNotes(for: word.id, on: date)
     }
@@ -328,7 +330,7 @@ struct WordRowView: View {
 
                 wordPhoneticAndTypeRow
             }
-            
+
             Spacer()
 
             PronounceButton(word: word.word, audioURL: word.pronunciationAudioURL, size: 40, languageCode: word.languageCode)
@@ -520,6 +522,9 @@ struct NoteRowView: View {
     @State private var isSuggesting = false
     /// Gemini suggestion shown faintly below the user's sentence (does not replace the note).
     @State private var aiSuggestionText: String?
+    /// Set when `runSuggestion()` fails — otherwise a backend outage looks
+    /// like the button silently did nothing.
+    @State private var suggestionErrorMessage: String?
     
     private let buttonWidth: CGFloat = 120
     
@@ -700,6 +705,10 @@ struct NoteRowView: View {
                                 }
                                 .frame(maxWidth: .infinity)
                             }
+                        } else if let suggestionErrorMessage {
+                            Text(suggestionErrorMessage)
+                                .font(.caption)
+                                .foregroundColor(AppColors.MahoganyRed)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -739,6 +748,7 @@ struct NoteRowView: View {
         }
         .onChange(of: note.text) { _, _ in
             aiSuggestionText = nil
+            suggestionErrorMessage = nil
         }
         .onChange(of: isEditing) { oldValue, newValue in
             if newValue {
@@ -780,6 +790,7 @@ struct NoteRowView: View {
     
     private func runSuggestion() async {
         isSuggesting = true
+        suggestionErrorMessage = nil
         defer { isSuggesting = false }
         do {
             let corrected = try await exampleGenerator.suggestDiarySentenceImprovement(
@@ -791,6 +802,9 @@ struct NoteRowView: View {
             }
         } catch {
             print("Suggestion error: \(error.localizedDescription)")
+            await MainActor.run {
+                suggestionErrorMessage = error.localizedDescription
+            }
         }
     }
     

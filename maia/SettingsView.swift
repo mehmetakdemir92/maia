@@ -274,7 +274,7 @@ struct SettingsView: View {
         Group {
             if let imageURL = userManager.profileImageURL,
                let url = URL(string: imageURL) {
-                AsyncImage(url: url) { image in
+                CachedProfileImage(url: url) { image in
                     image
                         .resizable()
                         .scaledToFill()

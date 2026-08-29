@@ -4,45 +4,106 @@
 //
 //  Created by Mehmet Akdemir on 26.01.2026.
 //
+// SM-2 spaced repetition. In the slot curriculum this is no longer a side
+// feature: the daily session is X new words plus whatever this scheduler says
+// is due, so the numbers here decide how long a session runs.
+//
 
 import Foundation
 import Combine
 import FirebaseFirestore
 import FirebaseAuth
 
-/// Represents the spaced repetition progress for a single word
+/// Spaced repetition progress for a single word.
 struct WordProgress: Identifiable, Codable, Equatable {
     let wordId: UUID
-    var ease: Double // Default 2.5, min 1.3, max 3.5
-    var intervalDays: Int // Default 0
-    var repetitions: Int // Consecutive successful reviews (q >= 3)
+    var ease: Double        // Default 2.5, min 1.3, max 3.5
+    var intervalDays: Int   // Default 0
+    var repetitions: Int    // Consecutive successful reviews (q >= 3)
     var nextDueAt: Date
-    
+    /// Times this word has been failed. Drives leech detection.
+    var lapses: Int
+    /// Retired words are never scheduled again — this is what keeps the daily
+    /// review queue bounded once the learner is hundreds of slots deep.
+    var retired: Bool
+
     var id: UUID { wordId }
-    
-    init(wordId: UUID, ease: Double = 2.5, intervalDays: Int = 0, repetitions: Int = 0, nextDueAt: Date = Date()) {
+
+    init(
+        wordId: UUID,
+        ease: Double = 2.5,
+        intervalDays: Int = 0,
+        repetitions: Int = 0,
+        nextDueAt: Date = Date(),
+        lapses: Int = 0,
+        retired: Bool = false
+    ) {
         self.wordId = wordId
-        self.ease = max(1.3, min(3.5, ease)) // Clamp between 1.3 and 3.5
+        self.ease = max(1.3, min(3.5, ease))
         self.intervalDays = intervalDays
         self.repetitions = repetitions
         self.nextDueAt = nextDueAt
+        self.lapses = lapses
+        self.retired = retired
+    }
+
+    /// Tolerates records written before `lapses` / `retired` existed.
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        wordId = try container.decode(UUID.self, forKey: .wordId)
+        ease = try container.decodeIfPresent(Double.self, forKey: .ease) ?? 2.5
+        intervalDays = try container.decodeIfPresent(Int.self, forKey: .intervalDays) ?? 0
+        repetitions = try container.decodeIfPresent(Int.self, forKey: .repetitions) ?? 0
+        nextDueAt = try container.decodeIfPresent(Date.self, forKey: .nextDueAt) ?? Date()
+        lapses = try container.decodeIfPresent(Int.self, forKey: .lapses) ?? 0
+        retired = try container.decodeIfPresent(Bool.self, forKey: .retired) ?? false
+    }
+
+    /// 1-5, mirroring the SM-2 interval ladder (1 -> 6 -> 16 -> 42 -> 113 days,
+    /// see SpacedRepetitionManager.updateProgress): each successful review
+    /// advances a level, a lapse resets `repetitions` to 0 and drops back to 1.
+    /// Retired words are always 5 even if `repetitions` undercounts them.
+    var masteryLevel: Int {
+        retired ? 5 : min(max(repetitions + 1, 1), 5)
     }
 }
 
-/// SM-2 spaced repetition algorithm implementation
+/// SM-2, tuned for one session per day.
 class SpacedRepetitionManager {
     private let maxEase: Double = 3.5
     private let minEase: Double = 1.3
-    
-    /// Maps correct count (0..10) to quality grade q (0..5)
-    /// - Parameters:
-    ///   - correct: Number of correct answers
-    ///   - total: Total number of questions asked
-    /// - Returns: Quality grade (0-5)
+
+    /// Interval at which a word stops being scheduled.
+    ///
+    /// This is the knob that sets the steady-state review load. The interval
+    /// ladder here runs 1 → 6 → 16 → 42 → 113 days, so a 90-day threshold means
+    /// five reviews per word; at five new words a day that is ~25 review items
+    /// daily (see QuizSessionBuilder.reviewCap). Lowering it to 40 retires after
+    /// four reviews and cuts the daily session by about a fifth, at some cost to
+    /// long-term retention.
+    static let retirementIntervalDays = 90
+
+    /// A word failed this many times is a leech: it is eating session time
+    /// without sticking, and should be surfaced or rested rather than repeated.
+    static let leechThreshold = 6
+
+    /// Maps a word's score inside a session to an SM-2 quality grade (0–5).
     func gradeFromCount(correct: Int, total: Int) -> Int {
         guard total > 0 else { return 0 }
-        
-        // For full 10-question sessions, use the mapping from requirements
+
+        // 1-2 question grading is the DEFAULT path in the slot session: a new
+        // word gets `QuizSessionBuilder.questionsPerNewWord` questions, a
+        // review gets `questionsPerReviewWord`. A full miss on a sample this
+        // small must not be graded q=0 — that drops ease by 0.2 every time,
+        // and after a few misses the word is pinned at ease 1.3 in a
+        // permanent one-day loop (the classic leech spiral). q=2 still counts
+        // as a failure and resets the interval, without wrecking the ease
+        // factor. (A partial miss, e.g. 1/2, already lands on q=2 via the
+        // accuracy branch below on its own — this only needs to catch 0/2.)
+        if total <= 2 {
+            return correct == total ? 4 : 2
+        }
+
         if total == 10 {
             if correct <= 2 {
                 return 0
@@ -54,99 +115,84 @@ class SpacedRepetitionManager {
                 return 3
             } else if correct == 9 {
                 return 4
-            } else { // correct == 10
+            } else {
                 return 5
             }
         }
-        
-        // For adaptive length (early stop or partial sessions), use accuracy ratio
+
         let accuracy = Double(correct) / Double(total)
-        
+
         if accuracy == 1.0 && total >= 3 {
-            return 5 // Perfect score with at least 3 questions
+            return 5
         } else if accuracy >= 0.8 {
-            return 4 // 80-99% accuracy
+            return 4
         } else if accuracy >= 0.67 {
-            return 3 // 67-79% accuracy
+            return 3
         } else if accuracy >= 0.5 {
-            return 2 // 50-66% accuracy
+            return 2
         } else if accuracy >= 0.3 {
-            return 1 // 30-49% accuracy
+            return 1
         } else {
-            return 0 // <30% accuracy
+            return 0
         }
     }
-    
-    /// Updates word progress using SM-2 algorithm
-    /// - Parameters:
-    ///   - progress: Current word progress
-    ///   - quality: Quality grade (0-5)
-    ///   - now: Current date/time
-    /// - Returns: Updated word progress
+
     func updateProgress(_ progress: WordProgress, quality: Int, now: Date = Date()) -> WordProgress {
         var updated = progress
-        
+
         if quality < 3 {
-            // Failed review
             updated.repetitions = 0
             updated.intervalDays = 1
             updated.ease = max(minEase, updated.ease - 0.2)
+            updated.lapses += 1
         } else {
-            // Successful review (q >= 3)
             updated.repetitions += 1
-            
+
             if updated.repetitions == 1 {
                 updated.intervalDays = 1
             } else if updated.repetitions == 2 {
                 updated.intervalDays = 6
             } else {
-                // repetitions >= 3
                 updated.intervalDays = Int(round(Double(updated.intervalDays) * updated.ease))
             }
-            
-            // Update ease based on quality
-            if quality == 3 {
-                // No change to ease
-            } else if quality == 4 {
+
+            if quality == 4 {
                 updated.ease = min(maxEase, updated.ease + 0.05)
             } else if quality == 5 {
                 updated.ease = min(maxEase, updated.ease + 0.10)
             }
         }
-        
-        // Ensure ease stays within bounds
+
         updated.ease = max(minEase, min(maxEase, updated.ease))
-        
-        // Calculate next due date
         updated.nextDueAt = scheduleNext(progress: updated, now: now)
-        
+
+        // Learned for good: stop scheduling so the queue cannot grow forever.
+        if updated.intervalDays >= Self.retirementIntervalDays {
+            updated.retired = true
+        }
+
         return updated
     }
-    
-    /// Calculates the next review date
-    /// - Parameters:
-    ///   - progress: Word progress with updated interval
-    ///   - now: Current date/time
-    /// - Returns: Next due date
+
     func scheduleNext(progress: WordProgress, now: Date = Date()) -> Date {
         let calendar = Calendar.current
         return calendar.date(byAdding: .day, value: progress.intervalDays, to: now) ?? now
     }
-    
-    /// Checks if a word is due for review
-    /// - Parameters:
-    ///   - progress: Word progress
-    ///   - now: Current date/time
-    /// - Returns: True if word is due for review
+
     func isDue(_ progress: WordProgress, now: Date = Date()) -> Bool {
+        guard !progress.retired else { return false }
         return progress.nextDueAt <= now
+    }
+
+    func isLeech(_ progress: WordProgress) -> Bool {
+        progress.lapses >= Self.leechThreshold
     }
 }
 
-/// Manages word progress storage and retrieval (SM-2 + Firestore)
+/// Stores word progress (UserDefaults + Firestore) and answers "what is due".
 class WordProgressManager: ObservableObject {
     @Published var progressMap: [UUID: WordProgress] = [:]
-    
+
     private let spacedRepetition = SpacedRepetitionManager()
     private static let legacyProgressKey = "wordProgressMap"
     private let db = Firestore.firestore()
@@ -156,7 +202,7 @@ class WordProgressManager: ObservableObject {
         guard let uid, !uid.isEmpty else { return nil }
         return "wordProgressMap.\(uid)"
     }
-    
+
     init() {
         loadProgress()
         lastObservedAuthUID = Auth.auth().currentUser?.uid
@@ -165,7 +211,7 @@ class WordProgressManager: ObservableObject {
             syncFromFirestore(userId: userId)
         }
     }
-    
+
     private func setupAuthListener() {
         Auth.auth().addStateDidChangeListener { [weak self] _, user in
             guard let self else { return }
@@ -175,7 +221,6 @@ class WordProgressManager: ObservableObject {
             self.lastObservedAuthUID = uid
 
             if let uid {
-                // Account switch: progress is stored in a global UserDefaults key today.
                 if previous != nil {
                     self.progressMap = [:]
                     if let prev = previous, let oldKey = self.progressStorageKey(forUserId: prev) {
@@ -194,8 +239,8 @@ class WordProgressManager: ObservableObject {
             }
         }
     }
-    
-    /// Get or create progress for a word
+
+    /// Get or create progress for a word.
     func getProgress(for wordId: UUID) -> WordProgress {
         if let existing = progressMap[wordId] {
             return existing
@@ -204,28 +249,60 @@ class WordProgressManager: ObservableObject {
         progressMap[wordId] = newProgress
         return newProgress
     }
-    
-    /// Update progress after a quiz session
-    func updateProgress(for wordId: UUID, correct: Int, total: Int) {
+
+    /// Has this word ever been studied? Used to tell new words from reviews.
+    func hasSeen(_ wordId: UUID) -> Bool {
+        guard let progress = progressMap[wordId] else { return false }
+        return progress.repetitions > 0 || progress.lapses > 0
+    }
+
+    /// Total answered exposures — picks which authored quiz item to show next,
+    /// so a review tests the word rather than a remembered question.
+    func exposureCount(for wordId: UUID) -> Int {
+        guard let progress = progressMap[wordId] else { return 0 }
+        return progress.repetitions + progress.lapses
+    }
+
+    /// Update progress after a session. `total` is the number of questions that
+    /// belonged to THIS word, not the size of the whole session.
+    /// `now` should be a trusted timestamp (see `CurriculumStateManager.trustedNow()`)
+    /// wherever the caller has one — the device clock can be pushed forward to
+    /// bank a bogus `nextDueAt` far in the future, or back to make everything
+    /// look due again.
+    func updateProgress(for wordId: UUID, correct: Int, total: Int, now: Date = Date()) {
         let quality = spacedRepetition.gradeFromCount(correct: correct, total: total)
         let currentProgress = getProgress(for: wordId)
-        let updated = spacedRepetition.updateProgress(currentProgress, quality: quality)
+        let updated = spacedRepetition.updateProgress(currentProgress, quality: quality, now: now)
         progressMap[wordId] = updated
         saveProgress()
         saveWordToFirestoreIfSignedIn(wordId: wordId, progress: updated)
     }
-    
-    /// Check if word is due for review
+
     func isDue(for wordId: UUID) -> Bool {
         let progress = getProgress(for: wordId)
         return spacedRepetition.isDue(progress)
     }
-    
-    /// Get next due date for a word
+
+    func isLeech(_ wordId: UUID) -> Bool {
+        spacedRepetition.isLeech(getProgress(for: wordId))
+    }
+
     func nextDueDate(for wordId: UUID) -> Date {
         return getProgress(for: wordId).nextDueAt
     }
-    
+
+    /// Due words from a candidate pool, most overdue first. Leeches are dropped:
+    /// repeating a word that has failed six times spends session time badly.
+    func dueWords(from candidates: [Word], now: Date = Date()) -> [Word] {
+        candidates
+            .filter { word in
+                let progress = getProgress(for: word.id)
+                guard spacedRepetition.isDue(progress, now: now) else { return false }
+                return !spacedRepetition.isLeech(progress)
+            }
+            .sorted { getProgress(for: $0.id).nextDueAt < getProgress(for: $1.id).nextDueAt }
+    }
+
     private func loadProgress() {
         guard let uid = Auth.auth().currentUser?.uid,
               let key = progressStorageKey(forUserId: uid) else {
@@ -239,8 +316,7 @@ class WordProgressManager: ObservableObject {
             progressMap = [:]
             return
         }
-        
-        // Decode as [String: WordProgress] then convert to [UUID: WordProgress]
+
         if let stringDict = try? JSONDecoder().decode([String: WordProgress].self, from: data) {
             progressMap = Dictionary(uniqueKeysWithValues: stringDict.compactMap { (key, value) in
                 guard let uuid = UUID(uuidString: key) else { return nil }
@@ -250,13 +326,12 @@ class WordProgressManager: ObservableObject {
             progressMap = [:]
         }
 
-        // If we loaded from legacy storage, persist into the per-user key once.
         if defaults.data(forKey: key) == nil, defaults.data(forKey: Self.legacyProgressKey) != nil {
             saveProgress()
             defaults.removeObject(forKey: Self.legacyProgressKey)
         }
     }
-    
+
     private func saveProgress() {
         guard let uid = Auth.auth().currentUser?.uid,
               let key = progressStorageKey(forUserId: uid) else { return }
@@ -266,7 +341,7 @@ class WordProgressManager: ObservableObject {
         guard let encoded = try? JSONEncoder().encode(stringDict) else { return }
         UserDefaults.standard.set(encoded, forKey: key)
     }
-    
+
     private func saveWordToFirestoreIfSignedIn(wordId: UUID, progress: WordProgress) {
         guard let userId = Auth.auth().currentUser?.uid else { return }
         let ref = db.collection("users").document(userId).collection("wordProgress").document(wordId.uuidString)
@@ -274,14 +349,16 @@ class WordProgressManager: ObservableObject {
             "ease": progress.ease,
             "intervalDays": progress.intervalDays,
             "repetitions": progress.repetitions,
-            "nextDueAt": Timestamp(date: progress.nextDueAt)
+            "nextDueAt": Timestamp(date: progress.nextDueAt),
+            "lapses": progress.lapses,
+            "retired": progress.retired
         ], merge: true) { error in
             if let error = error, (error as NSError).code != 7 {
                 print("❌ WordProgress Firestore save error: \(error.localizedDescription)")
             }
         }
     }
-    
+
     private func syncFromFirestore(userId: String) {
         let ref = db.collection("users").document(userId).collection("wordProgress")
         ref.getDocuments { [weak self] snapshot, error in
@@ -302,21 +379,30 @@ class WordProgressManager: ObservableObject {
                 let ease = data["ease"] as? Double ?? 2.5
                 let intervalDays = data["intervalDays"] as? Int ?? 0
                 let repetitions = data["repetitions"] as? Int ?? 0
+                let lapses = data["lapses"] as? Int ?? 0
+                let retired = data["retired"] as? Bool ?? false
                 var nextDueAt = Date()
                 if let ts = data["nextDueAt"] as? Timestamp {
                     nextDueAt = ts.dateValue()
                 }
-                let progress = WordProgress(wordId: wordId, ease: ease, intervalDays: intervalDays, repetitions: repetitions, nextDueAt: nextDueAt)
+                let progress = WordProgress(
+                    wordId: wordId,
+                    ease: ease,
+                    intervalDays: intervalDays,
+                    repetitions: repetitions,
+                    nextDueAt: nextDueAt,
+                    lapses: lapses,
+                    retired: retired
+                )
                 self.progressMap[wordId] = progress
             }
             self.saveProgress()
         }
     }
-    
-    /// Reset progress for a word (for testing)
+
+    /// Reset progress for a word (for testing).
     func resetProgress(for wordId: UUID) {
         progressMap[wordId] = WordProgress(wordId: wordId)
         saveProgress()
     }
 }
-

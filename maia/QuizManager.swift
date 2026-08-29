@@ -66,13 +66,11 @@ class QuizManager: ObservableObject {
         return hash
     }
 
+    /// The learner's own study day (see CurriculumStateManager.studyDayISO).
+    /// Used only for seeding and per-day bookkeeping now that content is
+    /// addressed by slot index rather than by date.
     private func quizDayISO(for date: Date = Date()) -> String {
-        var cal = Calendar(identifier: .gregorian)
-        cal.timeZone = TimeZone(identifier: "Europe/Istanbul") ?? .current
-        let y = cal.component(.year, from: date)
-        let m = cal.component(.month, from: date)
-        let d = cal.component(.day, from: date)
-        return String(format: "%04d-%02d-%02d", y, m, d)
+        CurriculumStateManager.studyDayISO(for: date)
     }
 
     /// Reduces reuse of the same generic template across different word quizzes on one calendar day.
@@ -569,14 +567,13 @@ class QuizManager: ObservableObject {
         return Array(questions.prefix(desiredCount))
     }
 
-    /// Curated quiz questions from WordPack JSON (1 definition + 2 blank, or
-    /// whatever is in the file). On same-day retries, choice order is reshuffled
-    /// to prevent memorizing positions.
+    /// Authored quiz items from the curriculum spine (1 definition + 2 blank).
+    /// On same-day retries, choice order is reshuffled to prevent memorizing
+    /// positions.
     private func curatedQuestions(for word: Word, count: Int, attemptNumber: Int) -> [QuizQuestion]? {
         let date = quizDayISO()
-        guard let presets = DailyWordsService.curatedQuiz(
+        guard let presets = CurriculumService.curatedQuiz(
             forWord: word.word,
-            date: date,
             language: word.learningLanguage
         ), !presets.isEmpty else {
             return nil
@@ -589,7 +586,7 @@ class QuizManager: ObservableObject {
         }
     }
 
-    private func shuffledOptions(for preset: WordPackQuiz, rng: inout SeededGenerator) -> QuizQuestion {
+    private func shuffledOptions(for preset: CurriculumQuiz, rng: inout SeededGenerator) -> QuizQuestion {
         var indexed = Array(preset.options.enumerated())
         rng.shuffle(&indexed)
         let options = indexed.map { $0.element }
@@ -630,7 +627,8 @@ class QuizManager: ObservableObject {
         guard let selectedIndex = selectedAnswerIndex else { return false }
         
         let isCorrect = selectedIndex == currentQuiz[currentQuestionIndex].correctAnswerIndex
-        
+
+        recordSessionAnswer(isCorrect: isCorrect)
         if isCorrect {
             correctAnswers += 1
         }
@@ -657,6 +655,7 @@ class QuizManager: ObservableObject {
     func advanceAfterFeedback() -> Bool {
         guard let isCorrect = isCurrentSelectionCorrect() else { return false }
 
+        recordSessionAnswer(isCorrect: isCorrect)
         if isCorrect {
             correctAnswers += 1
         }
@@ -671,6 +670,69 @@ class QuizManager: ObservableObject {
         }
     }
     
+    // MARK: - Slot session
+    //
+    // One session covers the whole slot: the five new words plus the review
+    // items QuizSessionBuilder pulled in. Questions from different words are
+    // interleaved, so grading has to be bucketed per word — `correctAnswers`
+    // alone is meaningless to SM-2 here.
+
+    @Published private(set) var sessionItems: [QuizSessionItem] = []
+    private var sessionAnswers: [(wordId: UUID, isCorrect: Bool)] = []
+
+    var isSessionMode: Bool { !sessionItems.isEmpty }
+
+    /// Starts a slot session. Returns false when the builder produced nothing
+    /// (missing spine, or no authored quiz items for these words).
+    func startSession(items: [QuizSessionItem]) -> Bool {
+        guard !items.isEmpty else { return false }
+        quizAttemptsToday += 1
+        saveAttemptsForToday()
+
+        var rng = SeededGenerator(seed: stableSeed(for: "session|\(quizDayISO())|a\(quizAttemptsToday)"))
+        sessionItems = items
+        sessionAnswers = []
+        currentQuiz = items.map { shuffledOptions(for: $0.preset, rng: &rng) }
+        currentQuestionIndex = 0
+        selectedAnswerIndex = nil
+        correctAnswers = 0
+        quizCompleted = false
+        return !currentQuiz.isEmpty
+    }
+
+    /// The session item behind the question on screen.
+    func currentSessionItem() -> QuizSessionItem? {
+        guard sessionItems.indices.contains(currentQuestionIndex) else { return nil }
+        return sessionItems[currentQuestionIndex]
+    }
+
+    /// Per-word (correct, total) for the finished session. Feed each entry to
+    /// `WordProgressManager.updateProgress` — one call per word, not one for
+    /// the whole session.
+    func sessionResultsByWord() -> [UUID: (correct: Int, total: Int)] {
+        var results: [UUID: (correct: Int, total: Int)] = [:]
+        for answer in sessionAnswers {
+            var entry = results[answer.wordId] ?? (correct: 0, total: 0)
+            entry.total += 1
+            if answer.isCorrect { entry.correct += 1 }
+            results[answer.wordId] = entry
+        }
+        return results
+    }
+
+    /// The words this session touched, in the order they were introduced.
+    func sessionWords() -> [Word] {
+        var seen = Set<UUID>()
+        return sessionItems.compactMap { item in
+            seen.insert(item.wordId).inserted ? item.word : nil
+        }
+    }
+
+    private func recordSessionAnswer(isCorrect: Bool) {
+        guard sessionItems.indices.contains(currentQuestionIndex) else { return }
+        sessionAnswers.append((wordId: sessionItems[currentQuestionIndex].wordId, isCorrect: isCorrect))
+    }
+
     func canRetry() -> Bool {
         return quizAttemptsToday < maxAttemptsPerDay && correctAnswers < requiredCorrectAnswers
     }
@@ -690,6 +752,8 @@ class QuizManager: ObservableObject {
     }
     
     func resetQuiz() {
+        sessionItems = []
+        sessionAnswers = []
         currentQuiz = []
         currentQuestionIndex = 0
         selectedAnswerIndex = nil
