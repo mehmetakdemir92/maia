@@ -548,7 +548,7 @@
         }
       }
     },
-    "App language applies immediately; System follows your device language. Example translations appear under EN/DE sentences (Turkish recommended for Turkish app language). Learning language and level are on the Today tab." : {
+    "App language applies immediately; System follows your device language. Example translations appear under EN/DE sentences (Turkish recommended for Turkish app language). Learning language is on the Today tab." : {
 
     },
     "App language applies immediately. System follows your device language." : {
@@ -1652,6 +1652,9 @@
         }
       }
     },
+    "Daily reminder" : {
+
+    },
     "Daily streak completed!" : {
       "localizations" : {
         "de" : {
@@ -2377,6 +2380,9 @@
           }
         }
       }
+    },
+    "Five new words and a quick review. Keep your streak alive." : {
+
     },
     "Free trial included" : {
       "localizations" : {
@@ -3441,6 +3447,9 @@
         }
       }
     },
+    "Notifications are turned off for Maia in iOS Settings. Turn them on there to get reminders." : {
+
+    },
     "Off" : {
 
     },
@@ -3471,6 +3480,9 @@
           }
         }
       }
+    },
+    "One reminder a day, skipped once you've finished that day's words." : {
+
     },
     "Only in DEBUG builds. Mimics App Store subscription." : {
       "extractionState" : "stale",
@@ -4091,6 +4103,12 @@
           }
         }
       }
+    },
+    "Remind me at" : {
+
+    },
+    "Reminders" : {
+
     },
     "Remove Photo" : {
 
@@ -5197,6 +5215,9 @@
           }
         }
       }
+    },
+    "Today's words are ready" : {
+
     },
     "Today's words couldn't be loaded." : {
       "localizations" : {
