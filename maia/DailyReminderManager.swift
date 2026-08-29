@@ -32,12 +32,6 @@ final class DailyReminderManager: ObservableObject {
     private static let riskHour = 21
     private static let riskMinute = 30
 
-    /// Days since the last app open on which the copy switches from "today's
-    /// words" to a comeback. Because the whole window is rebuilt every time
-    /// the app opens, an offset IS days-since-last-open: if the learner had
-    /// come back, this request would have been replaced.
-    private static let comebackOffsets: Set<Int> = [3, 7, 14]
-
     private static let identifierPrefix = "daily-reminder-"
     private static let riskIdentifier = "streak-risk-today"
     private static let enabledKey = "dailyReminderEnabled"
@@ -51,11 +45,27 @@ final class DailyReminderManager: ObservableObject {
     /// toggle cannot fix that, so the UI has to point at system Settings.
     @Published private(set) var isBlockedBySystem = false
 
-    /// Supplies the current streak at scheduling time. Injected once by
-    /// MainTabView, which is the only place that holds both this singleton and
-    /// the StreakManager — the scheduler must not recompute a streak from
-    /// stored dates and end up with its own second answer.
-    var streakProvider: (() -> Int)?
+    /// What the copy needs to know about the learner's streak.
+    struct StreakSnapshot {
+        /// Streak as of now. Zero implies yesterday was missed: a completed
+        /// yesterday keeps the count alive until the day rolls over.
+        var current: Int = 0
+        var best: Int = 0
+        /// Whether the day before yesterday was completed. With `current == 0`
+        /// this is the repairable case — finishing today makes yesterday the
+        /// recoverable gap, and the rewarded video can then bridge it.
+        var completedDayBeforeYesterday: Bool = false
+    }
+
+    /// Supplies the streak at scheduling time. Injected by MainTabView, the
+    /// only place holding both this singleton and the StreakManager — the
+    /// scheduler must not recompute a streak from stored dates and end up
+    /// with its own second answer.
+    var streakProvider: (() -> StreakSnapshot)?
+
+    /// A word from today's slot, for the evening nudge. Injected by
+    /// WordOfTheDayManager, which owns the loaded slot.
+    var focusWordProvider: (() -> String?)?
 
     private init() {
         let defaults = UserDefaults.standard
@@ -129,7 +139,7 @@ final class DailyReminderManager: ObservableObject {
 
         let calendar = Calendar.current
         let now = Date()
-        let streak = streakProvider?() ?? 0
+        let streak = streakProvider?() ?? StreakSnapshot()
 
         for offset in 0..<Self.scheduledDays {
             guard let day = calendar.date(byAdding: .day, value: offset, to: now),
@@ -158,13 +168,14 @@ final class DailyReminderManager: ObservableObject {
             )
         }
 
-        // The streak warning is scheduled for TODAY ONLY. Putting one on
-        // tomorrow would be a lie: if the learner does not finish today, the
-        // streak is already gone when the day rolls at 04:00, so an evening
-        // warning about it the next day is warning about nothing. Today's is
-        // cancelled the moment the session is finished, like everything else.
-        if streak >= 2,
-           !skippingToday,
+        // Evening nudge, TODAY ONLY. Naming one of today's words needs the
+        // slot actually loaded, and the streak line above is only true for
+        // today — a request placed on a later day would fire after the streak
+        // has already lapsed. Skipped entirely when no word is available
+        // rather than sending a sentence with a hole in it.
+        if !skippingToday,
+           let word = focusWordProvider?(),
+           !word.isEmpty,
            let riskDate = calendar.date(
             bySettingHour: Self.riskHour, minute: Self.riskMinute, second: 0, of: now
            ),
@@ -172,10 +183,10 @@ final class DailyReminderManager: ObservableObject {
             await add(
                 identifier: Self.riskIdentifier,
                 copy: Copy(
-                    title: String(localized: "Your streak ends tonight"),
+                    title: String(localized: "Today's words are ready"),
                     body: String(
-                        format: String(localized: "%lld days so far. A few minutes keeps it going."),
-                        Int64(streak)
+                        format: String(localized: "Today looks like a great day to lock in the word \"%@\" ☀️"),
+                        word
                     )
                 ),
                 at: riskDate,
@@ -192,34 +203,50 @@ final class DailyReminderManager: ObservableObject {
         let body: String
     }
 
-    /// Wording for a day that far out.
+    /// Wording for the reminder that far out.
     ///
-    /// Only the first couple of days can say anything specific: a local
-    /// notification's text is fixed when it is scheduled, so a request sitting
-    /// twelve days out cannot know what the streak will be by then. Near days
-    /// get the state we actually hold; the rest stay general and true.
-    private func copy(forDayOffset offset: Int, streak: Int) -> Copy {
-        if Self.comebackOffsets.contains(offset) {
-            return Copy(
-                title: String(localized: "Your words are waiting"),
-                body: String(localized: "Pick up where you left off — it only takes a few minutes.")
-            )
+    /// Only offset 0 may mention the streak. `currentStreak` is measured
+    /// against today, so it decays on its own: a five-day streak written into
+    /// tomorrow's request would read "your 5-day streak" on a day the streak
+    /// is already zero. Later days therefore use lines that stay true however
+    /// long the learner stays away, keyed off the best streak rather than the
+    /// live one.
+    private func copy(forDayOffset offset: Int, streak: StreakSnapshot) -> Copy {
+        let title = String(localized: "Today's words are ready")
+
+        guard offset == 0 else {
+            return Copy(title: title, body: rebuildingBody(best: streak.best))
         }
 
-        if offset <= 1, streak >= 2 {
+        if streak.current >= 1 {
             return Copy(
-                title: String(localized: "Today's words are ready"),
+                title: title,
                 body: String(
-                    format: String(localized: "Keep your %lld-day streak going."),
-                    Int64(streak)
+                    format: String(localized: "Your %lld-day streak looks great — protect it with a short quiz ✨💪"),
+                    Int64(streak.current)
                 )
             )
         }
 
-        return Copy(
-            title: String(localized: "Today's words are ready"),
-            body: String(localized: "Five new words and a quick review.")
-        )
+        // current == 0 means yesterday was missed. If the day before it was
+        // done, the run is still rescuable: finishing today makes yesterday
+        // the recoverable gap, which the rewarded video can then bridge.
+        if streak.completedDayBeforeYesterday {
+            return Copy(
+                title: title,
+                body: String(localized: "Finish the short quiz and your streak can still be saved. I believe in you 🥹")
+            )
+        }
+
+        return Copy(title: title, body: rebuildingBody(best: streak.best))
+    }
+
+    /// Someone who has held a streak before is rebuilding one; someone who
+    /// never has is being invited to start. Both stay true over time.
+    private func rebuildingBody(best: Int) -> String {
+        best >= 1
+            ? String(localized: "It's never too late to start a new streak 🙂")
+            : String(localized: "A good day to add a small habit that pays you back 😌")
     }
 
     private func add(identifier: String, copy: Copy, at date: Date, hour: Int, minute: Int) async {

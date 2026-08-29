@@ -58,7 +58,16 @@ struct MainTabView: View {
             // this is the only place holding both it and the StreakManager.
             // Weakly captured: the closure outlives this view on the singleton.
             DailyReminderManager.shared.streakProvider = { [weak streakManager] in
-                streakManager?.currentStreak ?? 0
+                guard let streakManager else { return .init() }
+                let dayBeforeYesterday = Calendar.current.date(
+                    byAdding: .day, value: -2, to: Date()
+                )
+                return .init(
+                    current: streakManager.currentStreak,
+                    best: streakManager.maxStreak,
+                    completedDayBeforeYesterday: dayBeforeYesterday
+                        .map { streakManager.isDayCompleted($0) } ?? false
+                )
             }
         }
         .onChange(of: userManager.isPremium) { _, isPremium in

@@ -42,6 +42,14 @@ final class WordOfTheDayManager: ObservableObject {
     init(curriculumState: CurriculumStateManager? = nil) {
         self.curriculumState = curriculumState ?? CurriculumStateManager()
 
+        // The evening reminder names one of today's words. Read through a
+        // closure rather than pushed on load: refreshSchedule can run before
+        // the slot has finished loading, and this way it simply finds nothing
+        // and skips that notification instead of naming a stale word.
+        DailyReminderManager.shared.focusWordProvider = { [weak self] in
+            self?.currentWords.randomElement()?.word
+        }
+
         NotificationCenter.default.addObserver(
             forName: .pronunciationAudioURLResolved,
             object: nil,
@@ -122,11 +130,6 @@ final class WordOfTheDayManager: ObservableObject {
             isSlotUnlocked = false
         }
 
-        // Re-arm the rolling reminder window now that the gate state is known.
-        // Doing it here rather than in onAppear means we can tell whether today
-        // is already finished, and skip today's reminder if so.
-        await DailyReminderManager.shared.refreshSchedule(skippingToday: !isSlotUnlocked)
-
         if force {
             currentWords = []
             words = []
@@ -146,28 +149,34 @@ final class WordOfTheDayManager: ObservableObject {
             lastLoadedSlotIndex = slotIndex
             lastLoadedLanguage = language
             isLoading = false
-            return
+        } else {
+            do {
+                let loaded = try await service.words(forSlot: slotIndex, language: language)
+                if Task.isCancelled { return }
+                currentWords = loaded
+                words = loaded
+                slotTheme = CurriculumStore.shared.slot(at: slotIndex, language: language)?.theme
+                lastLoadedSlotIndex = slotIndex
+                lastLoadedLanguage = language
+                isLoading = false
+                WordPronunciationService.shared.prefetch(words: loaded)
+            } catch {
+                if Task.isCancelled { return }
+                print("🔥 loadToday error:", error)
+                currentWords = []
+                words = []
+                slotTheme = nil
+                errorMessage = Self.friendlyLoadError(error)
+                isLoading = false
+            }
         }
 
-        do {
-            let loaded = try await service.words(forSlot: slotIndex, language: language)
-            if Task.isCancelled { return }
-            currentWords = loaded
-            words = loaded
-            slotTheme = CurriculumStore.shared.slot(at: slotIndex, language: language)?.theme
-            lastLoadedSlotIndex = slotIndex
-            lastLoadedLanguage = language
-            isLoading = false
-            WordPronunciationService.shared.prefetch(words: loaded)
-        } catch {
-            if Task.isCancelled { return }
-            print("🔥 loadToday error:", error)
-            currentWords = []
-            words = []
-            slotTheme = nil
-            errorMessage = Self.friendlyLoadError(error)
-            isLoading = false
-        }
+        // Re-arm the rolling reminder window at the single exit, AFTER the
+        // slot has loaded. The gate state is needed to know whether to skip
+        // today, and the evening nudge names one of today's words — running
+        // this before the load left `currentWords` empty, so that notification
+        // was silently never scheduled.
+        await DailyReminderManager.shared.refreshSchedule(skippingToday: !isSlotUnlocked)
     }
 
     // MARK: - Progression
