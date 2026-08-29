@@ -54,6 +54,12 @@ struct MainTabView: View {
             if !userManager.isPremium {
                 QuizInterstitialAdPresenter.shared.preload()
             }
+            // The reminder scheduler needs the streak to write its copy, and
+            // this is the only place holding both it and the StreakManager.
+            // Weakly captured: the closure outlives this view on the singleton.
+            DailyReminderManager.shared.streakProvider = { [weak streakManager] in
+                streakManager?.currentStreak ?? 0
+            }
         }
         .onChange(of: userManager.isPremium) { _, isPremium in
             if !isPremium {

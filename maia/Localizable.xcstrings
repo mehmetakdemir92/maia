@@ -1848,6 +1848,9 @@
         }
       }
     },
+    "Debug: replay today's quiz" : {
+
+    },
     "Definition" : {
       "localizations" : {
         "de" : {
@@ -5225,6 +5228,9 @@
         }
       }
     },
+    "Today is open again. Close Settings to reload." : {
+
+    },
     "Today's words are ready" : {
 
     },
@@ -5793,6 +5799,9 @@
           }
         }
       }
+    },
+    "Xcode DEBUG builds only. Steps the slot pointer back, clears today's completion and removes the streak day, so the same five words can be run again." : {
+
     },
     "You got %1$lld out of %2$lld correct" : {
       "localizations" : {
