@@ -126,7 +126,13 @@ class SpacedRepetitionManager {
             return 5
         } else if accuracy >= 0.8 {
             return 4
-        } else if accuracy >= 0.67 {
+        // Two thirds, written as the fraction rather than 0.67: the canonical
+        // case here is 2 of 3 correct, and Double(2)/Double(3) is
+        // 0.6666666666666666 — just under a literal 0.67, so that spelling
+        // graded a 2/3 session as q=2 (a failure that resets the interval)
+        // instead of q=3 (a pass). Dividing the same way on both sides makes
+        // the comparison exact.
+        } else if accuracy >= 2.0 / 3.0 {
             return 3
         } else if accuracy >= 0.5 {
             return 2
