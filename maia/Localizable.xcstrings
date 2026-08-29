@@ -1,31 +1,147 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "A word to practise at your chosen time, and a last call at 21:30. Both stop once you've finished that day's words." : {
+    "Still here for you" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ein Wort zum Üben zu deiner Uhrzeit und ein letzter Anstoß um 21:30. Beide entfallen, sobald du die Wörter des Tages geschafft hast."
+            "value" : "Wir sind noch da"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Una palabra para practicar a la hora que elijas y un último aviso a las 21:30. Ambos se detienen cuando terminas las palabras del día."
+            "value" : "Seguimos aquí"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Un mot à travailler à l'heure que tu choisis, et un dernier rappel à 21h30. Les deux s'arrêtent une fois les mots du jour terminés."
+            "value" : "On est toujours là"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seçtiğin saatte pekiştirilecek bir kelime, 21:30'da son bir hatırlatma. O günün kelimelerini bitirince ikisi de susar."
+            "value" : "Buradayız"
+          }
+        }
+      }
+    },
+    "Yesterday's words are still waiting — a few minutes is all it takes 🙂" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Wörter von gestern warten noch — ein paar Minuten reichen 🙂"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las palabras de ayer siguen esperándote: bastan unos minutos 🙂"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les mots d'hier t'attendent encore — quelques minutes suffisent 🙂"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dünkü kelimelerin hâlâ seni bekliyor, birkaç dakikan yeter 🙂"
+          }
+        }
+      }
+    },
+    "It's been a few days. Picking up where you left off is easier than you think 🌱" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein paar Tage sind vergangen. Weiterzumachen ist leichter, als du denkst 🌱"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Han pasado unos días. Retomarlo es más fácil de lo que crees 🌱"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quelques jours ont passé. Reprendre est plus simple que tu ne crois 🌱"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "birkaç gün oldu, kaldığın yerden devam etmek sandığından kolay 🌱"
+          }
+        }
+      }
+    },
+    "A week away. Even one short quiz is enough to get moving again 💫" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine Woche Pause. Schon ein kurzes Quiz bringt dich wieder in Fahrt 💫"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una semana fuera. Un solo test corto basta para volver a arrancar 💫"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une semaine d'absence. Un seul test rapide suffit à relancer 💫"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bir hafta oldu, tek bir kısa test bile yeniden başlamana yeter 💫"
+          }
+        }
+      }
+    },
+    "Your words will be here whenever you're ready 🤍" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Wörter sind da, wann immer du bereit bist 🤍"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus palabras estarán aquí cuando estés listo 🤍"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tes mots seront là quand tu seras prêt 🤍"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hazır olduğunda kelimelerin burada olacak 🤍"
           }
         }
       }
@@ -1828,9 +1944,6 @@
           }
         }
       }
-    },
-    "Daily reminder" : {
-
     },
     "Daily streak completed!" : {
       "localizations" : {
@@ -3636,9 +3749,6 @@
         }
       }
     },
-    "Notifications are turned off for Maia in iOS Settings. Turn them on there to get reminders." : {
-
-    },
     "Off" : {
 
     },
@@ -4292,12 +4402,6 @@
           }
         }
       }
-    },
-    "Remind me at" : {
-
-    },
-    "Reminders" : {
-
     },
     "Remove Photo" : {
 

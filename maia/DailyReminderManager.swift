@@ -8,6 +8,10 @@
 //
 // Local notifications only: no push server, no FCM, no cost.
 //
+// There is no in-app switch. Permission is the switch: anyone who grants it
+// gets reminders, anyone who declines gets none, and iOS Settings is where
+// that is changed. One preference fewer to store, explain and keep in sync.
+//
 
 import Combine
 import Foundation
@@ -18,33 +22,31 @@ final class DailyReminderManager: ObservableObject {
 
     static let shared = DailyReminderManager()
 
-    /// Reminders are scheduled as this many discrete daily requests rather than
-    /// one repeating trigger. A repeating `UNCalendarNotificationTrigger` cannot
-    /// skip a single occurrence, and skipping is the whole point: once today's
-    /// session is done the learner must not be nagged about it. iOS keeps at
-    /// most 64 pending requests per app, so two weeks is comfortably within
-    /// budget and re-arms on every launch.
-    private static let scheduledDays = 15
+    /// Days after the last app open on which to speak up — not every day.
+    ///
+    /// A daily ping at a fixed hour is what gets notifications switched off:
+    /// it stops carrying information and becomes wallpaper, and someone who
+    /// has drifted away reads fourteen identical nudges as nagging. Backing
+    /// off — tomorrow, then three days, a week, a fortnight — keeps each one
+    /// worth reading, and every step says something different.
+    ///
+    /// The offsets are days-since-last-open for free: the window is rebuilt on
+    /// every open, so a request this far out only survives if nobody came back.
+    private static let scheduleOffsets = [0, 1, 3, 7, 14]
 
-    /// Last call of the day, carrying the streak/state line. The study day
-    /// does not roll over until 04:00, so the true final moment is past
-    /// midnight — an hour nobody should be pushed at. 21:30 still leaves an
-    /// evening to act in.
+    /// Last call of the day, carrying the streak line. The study day does not
+    /// roll over until 04:00, so the true final moment is past midnight — an
+    /// hour nobody should be pushed at. 21:30 still leaves an evening to act in.
     private static let lastCallHour = 21
     private static let lastCallMinute = 30
 
+    /// The quiet daytime prompt that names a word.
+    private static let nudgeHour = 13
+    private static let nudgeMinute = 0
+
     private static let identifierPrefix = "daily-reminder-"
     private static let wordNudgeIdentifier = "word-nudge-today"
-    private static let enabledKey = "dailyReminderEnabled"
-    private static let hourKey = "dailyReminderHour"
-    private static let minuteKey = "dailyReminderMinute"
-
-    @Published private(set) var isEnabled: Bool
-    @Published private(set) var hour: Int
-    @Published private(set) var minute: Int
-    /// True when the user has turned reminders off at the OS level. The in-app
-    /// toggle cannot fix that, so the UI has to point at system Settings.
-    @Published private(set) var isBlockedBySystem = false
+    private static let didAskKey = "dailyReminderDidAskPermission"
 
     /// What the copy needs to know about the learner's streak.
     struct StreakSnapshot {
@@ -64,62 +66,33 @@ final class DailyReminderManager: ObservableObject {
     /// with its own second answer.
     var streakProvider: (() -> StreakSnapshot)?
 
-    /// A word from today's slot, for the evening nudge. Injected by
+    /// A word from today's slot, for the daytime nudge. Injected by
     /// WordOfTheDayManager, which owns the loaded slot.
     var focusWordProvider: (() -> String?)?
 
-    private init() {
-        let defaults = UserDefaults.standard
-        isEnabled = defaults.bool(forKey: Self.enabledKey)
-        let storedHour = defaults.object(forKey: Self.hourKey) as? Int
-        let storedMinute = defaults.object(forKey: Self.minuteKey) as? Int
-        // Daytime nudge, so it defaults to the middle of the day rather
-        // than the evening — the evening belongs to the last call.
-        hour = storedHour ?? 13
-        minute = storedMinute ?? 0
-    }
+    private init() {}
 
-    /// Wall-clock time of the reminder, as a Date for SwiftUI's DatePicker.
-    var reminderTime: Date {
-        var parts = DateComponents()
-        parts.hour = hour
-        parts.minute = minute
-        return Calendar.current.date(from: parts) ?? Date()
-    }
+    // MARK: - Permission
 
-    // MARK: - Toggling
+    /// Asks for notification permission once, after a session has been finished.
+    ///
+    /// Deliberately not at launch. A cold prompt before anyone has seen what
+    /// the app does is the reliable way to be refused, and iOS only allows the
+    /// ask once — a refusal can afterwards only be undone in system Settings.
+    func requestAuthorizationIfNeeded() async {
+        guard !UserDefaults.standard.bool(forKey: Self.didAskKey) else { return }
 
-    /// Turns reminders on, asking for permission the first time. Returns false
-    /// when the learner declines or has denied notifications in system Settings.
-    @discardableResult
-    func enable() async -> Bool {
-        let granted = await requestAuthorizationIfNeeded()
-        guard granted else {
-            isBlockedBySystem = true
-            isEnabled = false
-            UserDefaults.standard.set(false, forKey: Self.enabledKey)
-            return false
+        let center = UNUserNotificationCenter.current()
+        let settings = await center.notificationSettings()
+        guard settings.authorizationStatus == .notDetermined else {
+            UserDefaults.standard.set(true, forKey: Self.didAskKey)
+            return
         }
 
-        isBlockedBySystem = false
-        isEnabled = true
-        UserDefaults.standard.set(true, forKey: Self.enabledKey)
-        await refreshSchedule()
-        return true
-    }
-
-    func disable() {
-        isEnabled = false
-        UserDefaults.standard.set(false, forKey: Self.enabledKey)
-        clearPending()
-    }
-
-    func setTime(hour: Int, minute: Int) async {
-        self.hour = min(max(hour, 0), 23)
-        self.minute = min(max(minute, 0), 59)
-        UserDefaults.standard.set(self.hour, forKey: Self.hourKey)
-        UserDefaults.standard.set(self.minute, forKey: Self.minuteKey)
-        await refreshSchedule()
+        _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
+        UserDefaults.standard.set(true, forKey: Self.didAskKey)
+        // The ask happens right after finishing, so today is already done.
+        await refreshSchedule(skippingToday: true)
     }
 
     // MARK: - Scheduling
@@ -130,21 +103,18 @@ final class DailyReminderManager: ObservableObject {
     ///   so the learner is not reminded to do something they already did.
     func refreshSchedule(skippingToday: Bool = false) async {
         clearPending()
-        guard isEnabled else { return }
 
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         guard settings.authorizationStatus == .authorized
                 || settings.authorizationStatus == .provisional else {
-            isBlockedBySystem = true
             return
         }
-        isBlockedBySystem = false
 
         let calendar = Calendar.current
         let now = Date()
         let streak = streakProvider?() ?? StreakSnapshot()
 
-        for offset in 0..<Self.scheduledDays {
+        for offset in Self.scheduleOffsets {
             guard let day = calendar.date(byAdding: .day, value: offset, to: now),
                   let fireDate = calendar.date(
                     bySettingHour: Self.lastCallHour,
@@ -154,7 +124,7 @@ final class DailyReminderManager: ObservableObject {
                   )
             else { continue }
 
-            // Never schedule in the past — today's time may already have passed.
+            // Never schedule in the past — today's slot may already have gone.
             guard fireDate > now else { continue }
 
             // The study day rolls over at 04:00, not midnight, so "today" for
@@ -174,16 +144,16 @@ final class DailyReminderManager: ObservableObject {
             )
         }
 
-        // Daytime nudge at the learner's chosen hour, TODAY ONLY. Naming one
-        // of today's words needs the slot actually loaded, and the word only
-        // holds while the slot does — placing it on a later day risks naming a
-        // word they have since moved past. Skipped entirely when no word is
-        // available rather than sending a sentence with a hole in it.
+        // Daytime nudge, TODAY ONLY. Naming one of today's words needs the slot
+        // actually loaded, and the word only holds while the slot does —
+        // placing it on a later day risks naming a word already moved past.
+        // Skipped entirely when no word is available rather than sending a
+        // sentence with a hole in it.
         if !skippingToday,
            let word = focusWordProvider?(),
            !word.isEmpty,
            let nudgeDate = calendar.date(
-            bySettingHour: hour, minute: minute, second: 0, of: now
+            bySettingHour: Self.nudgeHour, minute: Self.nudgeMinute, second: 0, of: now
            ),
            nudgeDate > now {
             await add(
@@ -196,10 +166,16 @@ final class DailyReminderManager: ObservableObject {
                     )
                 ),
                 at: nudgeDate,
-                hour: hour,
-                minute: minute
+                hour: Self.nudgeHour,
+                minute: Self.nudgeMinute
             )
         }
+    }
+
+    /// Re-arms the rolling window. Safe to call on every foreground: it only
+    /// rewrites our own requests.
+    func refreshOnForeground() async {
+        await refreshSchedule()
     }
 
     // MARK: - Copy
@@ -213,24 +189,44 @@ final class DailyReminderManager: ObservableObject {
     ///
     /// Only offset 0 may mention the streak. `currentStreak` is measured
     /// against today, so it decays on its own: a five-day streak written into
-    /// tomorrow's request would read "your 5-day streak" on a day the streak
-    /// is already zero. Later days therefore use lines that stay true however
-    /// long the learner stays away, keyed off the best streak rather than the
-    /// live one.
+    /// tomorrow's request would read "your 5-day streak" on a morning it is
+    /// already zero. Every later step gets its own line instead, so someone
+    /// drifting away is not read the same sentence four times.
     private func copy(forDayOffset offset: Int, streak: StreakSnapshot) -> Copy {
-        let title = String(localized: "Today's words are ready")
-
-        guard offset == 0 else {
-            return Copy(title: title, body: rebuildingBody(best: streak.best))
-        }
-
-        if streak.current >= 1 {
+        switch offset {
+        case 0:
             return Copy(
-                title: title,
-                body: String(
-                    format: String(localized: "Your %lld-day streak looks great — protect it with a short quiz ✨💪"),
-                    Int64(streak.current)
-                )
+                title: String(localized: "Today's words are ready"),
+                body: todayBody(streak: streak)
+            )
+        case 1:
+            return Copy(
+                title: String(localized: "Today's words are ready"),
+                body: String(localized: "Yesterday's words are still waiting — a few minutes is all it takes 🙂")
+            )
+        case 3:
+            return Copy(
+                title: String(localized: "Still here for you"),
+                body: String(localized: "It's been a few days. Picking up where you left off is easier than you think 🌱")
+            )
+        case 7:
+            return Copy(
+                title: String(localized: "Still here for you"),
+                body: String(localized: "A week away. Even one short quiz is enough to get moving again 💫")
+            )
+        default:
+            return Copy(
+                title: String(localized: "Still here for you"),
+                body: String(localized: "Your words will be here whenever you're ready 🤍")
+            )
+        }
+    }
+
+    private func todayBody(streak: StreakSnapshot) -> String {
+        if streak.current >= 1 {
+            return String(
+                format: String(localized: "Your %lld-day streak looks great — protect it with a short quiz ✨💪"),
+                Int64(streak.current)
             )
         }
 
@@ -238,19 +234,10 @@ final class DailyReminderManager: ObservableObject {
         // done, the run is still rescuable: finishing today makes yesterday
         // the recoverable gap, which the rewarded video can then bridge.
         if streak.completedDayBeforeYesterday {
-            return Copy(
-                title: title,
-                body: String(localized: "Finish the short quiz and your streak can still be saved. I believe in you 🥹")
-            )
+            return String(localized: "Finish the short quiz and your streak can still be saved. I believe in you 🥹")
         }
 
-        return Copy(title: title, body: rebuildingBody(best: streak.best))
-    }
-
-    /// Someone who has held a streak before is rebuilding one; someone who
-    /// never has is being invited to start. Both stay true over time.
-    private func rebuildingBody(best: Int) -> String {
-        best >= 1
+        return streak.best >= 1
             ? String(localized: "It's never too late to start a new streak 🙂")
             : String(localized: "A good day to add a small habit that pays you back 😌")
     }
@@ -273,33 +260,9 @@ final class DailyReminderManager: ObservableObject {
         try? await UNUserNotificationCenter.current().add(request)
     }
 
-    /// Re-arms the rolling window. Safe to call on every foreground: it only
-    /// rewrites our own requests.
-    func refreshOnForeground() async {
-        guard isEnabled else { return }
-        await refreshSchedule()
-    }
-
-    // MARK: - Private
-
     private func clearPending() {
-        var ids = (0..<Self.scheduledDays).map { "\(Self.identifierPrefix)\($0)" }
+        var ids = Self.scheduleOffsets.map { "\(Self.identifierPrefix)\($0)" }
         ids.append(Self.wordNudgeIdentifier)
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
-    }
-
-    private func requestAuthorizationIfNeeded() async -> Bool {
-        let center = UNUserNotificationCenter.current()
-        let settings = await center.notificationSettings()
-
-        switch settings.authorizationStatus {
-        case .authorized, .provisional:
-            return true
-        case .denied:
-            // Only system Settings can undo this; asking again is a no-op.
-            return false
-        default:
-            return (try? await center.requestAuthorization(options: [.alert, .sound, .badge])) ?? false
-        }
     }
 }

@@ -12,14 +12,11 @@ struct SettingsView: View {
     @EnvironmentObject var languageManager: AppLanguageManager
     @EnvironmentObject var streakManager: StreakManager
     @Environment(\.dismiss) var dismiss
-    @StateObject private var reminders = DailyReminderManager.shared
     @State private var showingSignOutAlert = false
     @State private var showingDeleteAlert = false
     @State private var showingPremiumPaywall = false
     @State private var isRestoringPurchases = false
     @State private var selectedLegalDocument: LegalDocumentType?
-    @State private var reminderToggle = false
-    @State private var reminderTime = Date()
     @State private var didRewindSession = false
     
     private var displayName: String {
@@ -94,58 +91,6 @@ struct SettingsView: View {
                 } footer: {
                     Text(String(localized: "App language applies immediately; System follows your device language. Example translations appear under EN/DE sentences (Turkish recommended for Turkish app language). Learning language is on the Today tab."))
                         .foregroundColor(.white.opacity(0.8))
-                }
-
-                Section {
-                    Toggle(isOn: $reminderToggle) {
-                        HStack {
-                            Image(systemName: "bell.badge.fill")
-                            Text(String(localized: "Daily reminder"))
-                        }
-                    }
-                    .onChange(of: reminderToggle) { _, wantsOn in
-                        Task {
-                            if wantsOn {
-                                // enable() returns false when the learner
-                                // declines, or has denied notifications at the
-                                // OS level — put the switch back rather than
-                                // leaving it on and silently never firing.
-                                let granted = await reminders.enable()
-                                if !granted { reminderToggle = false }
-                            } else {
-                                reminders.disable()
-                            }
-                        }
-                    }
-
-                    if reminderToggle {
-                        DatePicker(
-                            selection: $reminderTime,
-                            displayedComponents: .hourAndMinute
-                        ) {
-                            Text(String(localized: "Remind me at"))
-                        }
-                        .onChange(of: reminderTime) { _, newTime in
-                            let parts = Calendar.current.dateComponents([.hour, .minute], from: newTime)
-                            Task {
-                                await reminders.setTime(
-                                    hour: parts.hour ?? 13,
-                                    minute: parts.minute ?? 0
-                                )
-                            }
-                        }
-                    }
-                } header: {
-                    Text(String(localized: "Reminders"))
-                        .foregroundColor(.white)
-                } footer: {
-                    if reminders.isBlockedBySystem {
-                        Text(String(localized: "Notifications are turned off for Maia in iOS Settings. Turn them on there to get reminders."))
-                            .foregroundColor(.orange)
-                    } else {
-                        Text(String(localized: "A word to practise at your chosen time, and a last call at 21:30. Both stop once you've finished that day's words."))
-                            .foregroundColor(.white.opacity(0.8))
-                    }
                 }
 
                 Section {
@@ -303,14 +248,6 @@ struct SettingsView: View {
                 .scrollContentBackground(.hidden)
             }
             .navigationTitle("Settings")
-            .task {
-                // Seed the controls from stored preferences, and re-check the
-                // OS permission — the learner may have revoked it since.
-                reminderToggle = reminders.isEnabled
-                reminderTime = reminders.reminderTime
-                await reminders.refreshOnForeground()
-                if reminders.isBlockedBySystem { reminderToggle = false }
-            }
             .navigationBarTitleDisplayMode(.inline)
             .toolbarBackground(.ultraThinMaterial, for: .navigationBar)
             .toolbarColorScheme(.light, for: .navigationBar)

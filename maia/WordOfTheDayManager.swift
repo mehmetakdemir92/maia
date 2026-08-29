@@ -186,7 +186,10 @@ final class WordOfTheDayManager: ObservableObject {
     func completeCurrentSlot() async {
         await curriculumState.completeCurrentSlot(slotCount: slotCount)
         isSlotUnlocked = curriculumState.isNextSlotUnlocked
-        // Drop today's reminder: the work it would nag about is done.
+        // Drop today's reminders: the work they would nag about is done.
+        // This is also where permission is asked, the first time — right after
+        // a finished session, when the app has just shown what it is for.
+        await DailyReminderManager.shared.requestAuthorizationIfNeeded()
         await DailyReminderManager.shared.refreshSchedule(skippingToday: true)
     }
 
