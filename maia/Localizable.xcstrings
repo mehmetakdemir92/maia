@@ -3270,6 +3270,9 @@
         }
       }
     },
+    "New words are on the way. Until then, your reviews keep what you've learned from fading." : {
+
+    },
     "Next Question" : {
       "localizations" : {
         "de" : {
@@ -3518,9 +3521,6 @@
           }
         }
       }
-    },
-    "Our lessons are written for learners who already have some English, starting around B1. At %@ the words and quizzes will feel hard at first." : {
-
     },
     "Password" : {
       "localizations" : {
@@ -5821,6 +5821,9 @@
       }
     },
     "You've finished every lesson we've written so far. New words are on the way." : {
+
+    },
+    "You've finished every word we've written." : {
 
     },
     "You've finished today's quiz. Come back tomorrow!" : {
