@@ -162,11 +162,13 @@ final class CurriculumStateManager: ObservableObject {
 
     // MARK: - Progression
 
-    /// One-time placement from the onboarding CEFR step. Never moves a learner
-    /// who has already started.
-    func placeIfNeeded(userLevel: Int, slotCount: Int) {
+    /// Puts a new learner at the start of the spine. Everyone follows the same
+    /// slot order now — CEFR-based placement is gone, because entering partway
+    /// down the spine meant a learner could reach the end after a handful of
+    /// sessions and then be served the same slot forever.
+    func placeIfNeeded(slotCount: Int) {
         guard !state.hasBeenPlaced, state.completedCount == 0 else { return }
-        state.currentSlotIndex = CurriculumPlacement.startSlot(forUserLevel: userLevel, slotCount: slotCount)
+        state.currentSlotIndex = slotCount > 0 ? 1 : 0
         state.hasBeenPlaced = true
         persist()
     }
@@ -179,15 +181,27 @@ final class CurriculumStateManager: ObservableObject {
         let now = await Self.trustedNow()
         state.completedCount += 1
         state.lastCompletedAt = now
-        if slotCount <= 0 || state.currentSlotIndex < slotCount {
+        // Slots are 1-based, so finishing the last one moves the pointer to
+        // slotCount + 1 — a sentinel meaning "spine finished". The old guard
+        // (`currentSlotIndex < slotCount`) clamped the pointer AT the last
+        // slot, which made "sitting on slot 30 with it still to do" and
+        // "finished slot 30" the same state: the learner was handed the same
+        // five words every day forever, with no way for the app to tell.
+        if slotCount <= 0 || state.currentSlotIndex <= slotCount {
             state.currentSlotIndex += 1
         }
         persist()
     }
 
     /// End of the authored spine: no new words left, reviews only.
+    ///
+    /// Deliberately does NOT require `completedCount >= slotCount`. Placement
+    /// used to drop learners partway down the spine by CEFR level, so someone
+    /// entering at slot 26 finished after 5 completions, not 30 — the count
+    /// check meant this never became true for them. Placement is uniform now,
+    /// but the check stays keyed on the pointer, which is what actually moves.
     func hasReachedEndOfSpine(slotCount: Int) -> Bool {
-        slotCount > 0 && state.currentSlotIndex >= slotCount && state.completedCount >= slotCount
+        slotCount > 0 && state.currentSlotIndex > slotCount
     }
 
     /// Developer/testing hook.

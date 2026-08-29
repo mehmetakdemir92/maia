@@ -25,7 +25,6 @@ class UserManager: ObservableObject {
     @Published var following: Int = 0
     /// StoreKit subscription combined with DEBUG/TestFlight test override.
     @Published var isPremium: Bool = false
-    @Published var userLevel: Int = 1 // 1-11 scale (CEFR + intermediate steps)
     @Published var registrationDate: Date = Date()
     @Published var selectedCategory: VocabularyCategory = .general
     @Published var requiresInitialSetup: Bool = false
@@ -126,10 +125,8 @@ class UserManager: ObservableObject {
             pendingNewSignUpUID = nil
 
             // Reset persisted profile prefs so the next account doesn't inherit the previous user's progression prefs.
-            userLevel = 1
             registrationDate = Date()
             selectedCategory = .general
-            UserDefaults.standard.removeObject(forKey: "userLevel")
             UserDefaults.standard.removeObject(forKey: "registrationDate")
             UserDefaults.standard.removeObject(forKey: "vocabularyCategory")
 
@@ -283,18 +280,11 @@ class UserManager: ObservableObject {
         saveUserData()
     }
 
-    func setUserLevel(_ level: Int) {
-        userLevel = min(max(level, 1), 11)
-        saveUserData()
-        AppAnalytics.shared.syncUserProperties(userLevel: userLevel)
-    }
-
-    func completeInitialSetup(name: String, profileImageData: Data?, level: Int) async throws {
+    func completeInitialSetup(name: String, profileImageData: Data?) async throws {
         try await updateDisplayName(name)
         if let profileImageData {
             try await uploadProfilePhoto(imageData: profileImageData)
         }
-        setUserLevel(level)
 
         guard let uid = Auth.auth().currentUser?.uid else { return }
         UserDefaults.standard.set(true, forKey: Self.onboardingCompletedKey(for: uid))
@@ -504,9 +494,6 @@ class UserManager: ObservableObject {
     }
 
     private func loadUserData() {
-        userLevel = UserDefaults.standard.integer(forKey: "userLevel")
-        if userLevel == 0 { userLevel = 1 }
-
         if let savedDate = UserDefaults.standard.object(forKey: "registrationDate") as? Date {
             registrationDate = savedDate
         }
@@ -517,11 +504,10 @@ class UserManager: ObservableObject {
         }
 
         publishPremiumState()
-        AppAnalytics.shared.syncUserProperties(userLevel: userLevel, isPremium: isPremium)
+        AppAnalytics.shared.syncUserProperties(isPremium: isPremium)
     }
 
     private func saveUserData() {
-        UserDefaults.standard.set(userLevel, forKey: "userLevel")
         UserDefaults.standard.set(registrationDate, forKey: "registrationDate")
         UserDefaults.standard.set(selectedCategory.rawValue, forKey: "vocabularyCategory")
     }

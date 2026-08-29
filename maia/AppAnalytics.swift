@@ -73,7 +73,6 @@ enum AppAnalyticsPlacement {
 enum AppAnalyticsParam {
     static let learningLanguage = "learning_language"
     static let cefrLevel = "cefr_level"
-    static let userCefrLevel = "user_cefr_level"
     static let isPremium = "is_premium"
     static let platform = "platform"
     static let appVersion = "app_version"
@@ -124,19 +123,14 @@ final class AppAnalytics {
     /// Pass only the fields that changed; omitted fields are read from local prefs / cache.
     func syncUserProperties(
         learningLanguage: LearningLanguage? = nil,
-        userLevel: Int? = nil,
         isPremium: Bool? = nil
     ) {
         let language = learningLanguage ?? LearningLanguage.current
-        let level = userLevel ?? Self.storedUserLevel()
         if let isPremium {
             cachedIsPremium = isPremium
         }
 
-        let cefr = CEFRLevelMapping.label(for: level)
         Analytics.setUserProperty(language.code, forName: AppAnalyticsParam.learningLanguage)
-        Analytics.setUserProperty(cefr, forName: AppAnalyticsParam.userCefrLevel)
-        Analytics.setUserProperty(cefr, forName: AppAnalyticsParam.cefrLevel)
         Analytics.setUserProperty(cachedIsPremium ? "true" : "false", forName: AppAnalyticsParam.isPremium)
     }
 
@@ -166,19 +160,13 @@ final class AppAnalytics {
 
     /// Dimensions attached to every event. Caller params override these keys.
     private func defaultDimensions() -> [String: String] {
-        let userCefr = CEFRLevelMapping.label(for: Self.storedUserLevel())
+        // No user-level dimension: the app no longer asks for a CEFR level.
+        // `cefr_level` is still attached by word and quiz events, where it
+        // means the band of the WORD being studied, not the learner.
         return [
             AppAnalyticsParam.learningLanguage: LearningLanguage.current.code,
-            AppAnalyticsParam.userCefrLevel: userCefr,
-            // Default cefr_level = user setting; word/quiz events may override with word band.
-            AppAnalyticsParam.cefrLevel: userCefr,
             AppAnalyticsParam.isPremium: cachedIsPremium ? "true" : "false"
         ]
-    }
-
-    private static func storedUserLevel() -> Int {
-        let raw = UserDefaults.standard.integer(forKey: "userLevel")
-        return raw == 0 ? 1 : raw
     }
 
     private func flushRecentEventsToFirestore(userId: String) {

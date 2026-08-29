@@ -50,17 +50,8 @@ struct ContentView: View {
 }
 
 private struct InitialSetupView: View {
-    private enum Step {
-        case profile
-        case level
-    }
-
-    private static let cefrMainLevels: [String] = ["A1", "A2", "B1", "B2", "C1", "C2"]
-
     @EnvironmentObject private var userManager: UserManager
-    @State private var step: Step = .profile
     @State private var name: String = ""
-    @State private var selectedLevelStep = 1
     @State private var selectedPhotoItem: PhotosPickerItem?
     @State private var selectedPhotoData: Data?
     @State private var isSaving = false
@@ -73,60 +64,39 @@ private struct InitialSetupView: View {
                 GlassSceneBackground()
 
                 VStack(alignment: .leading, spacing: 18) {
-                    if step == .profile {
-                        profileStepContent
-                            .padding(.top, 44)
-                        Spacer()
-                    } else {
-                        levelStepContent
-                        Spacer()
-                    }
+                    profileStepContent
+                        .padding(.top, 44)
+                    Spacer()
 
-                    if step == .profile {
-                        Button {
-                            step = .level
-                        } label: {
+                    Button {
+                        Task {
+                            isSaving = true
+                            do {
+                                try await userManager.completeInitialSetup(
+                                    name: name,
+                                    profileImageData: selectedPhotoData
+                                )
+                            } catch {
+                                errorMessage = error.localizedDescription
+                                showingError = true
+                            }
+                            isSaving = false
+                        }
+                    } label: {
+                        HStack {
+                            if isSaving {
+                                ProgressView().progressViewStyle(.circular)
+                            }
                             Text("Continue")
                                 .fontWeight(.semibold)
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 14)
-                                .background(AppColors.primaryButtonGradient)
-                                .cornerRadius(12)
                         }
-                        .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    } else {
-                        Button {
-                            Task {
-                                isSaving = true
-                                do {
-                                    try await userManager.completeInitialSetup(
-                                        name: name,
-                                        profileImageData: selectedPhotoData,
-                                        level: selectedLevelStep
-                                    )
-                                } catch {
-                                    errorMessage = error.localizedDescription
-                                    showingError = true
-                                }
-                                isSaving = false
-                            }
-                        } label: {
-                            HStack {
-                                if isSaving {
-                                    ProgressView().progressViewStyle(.circular)
-                                }
-                                Text("Continue")
-                                    .fontWeight(.semibold)
-                            }
-                            .foregroundColor(.white)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
-                            .background(AppColors.primaryButtonGradient)
-                            .cornerRadius(12)
-                        }
-                        .disabled(isSaving)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 14)
+                        .background(AppColors.primaryButtonGradient)
+                        .cornerRadius(12)
                     }
+                    .disabled(isSaving || name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 18)
@@ -226,68 +196,4 @@ private struct InitialSetupView: View {
         }
     }
 
-    private var levelStepContent: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            Text("Set your English level")
-                .font(.system(size: 30, weight: .bold))
-                .foregroundColor(.white)
-
-            Text("Current level: \(CEFRLevelMapping.label(for: selectedLevelStep))")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.white.opacity(0.92))
-
-            if CurriculumPlacement.isBelowSpineFloor(userLevel: selectedLevelStep) {
-                HStack(alignment: .top, spacing: 8) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .foregroundColor(.yellow)
-                    Text("Our lessons are written for learners who already have some English, starting around B1. At \(CEFRLevelMapping.label(for: selectedLevelStep)) the words and quizzes will feel hard at first.")
-                        .font(.footnote)
-                        .foregroundColor(.white.opacity(0.88))
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .padding(12)
-                .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(Color.yellow.opacity(0.16))
-                }
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .strokeBorder(Color.yellow.opacity(0.35), lineWidth: 0.5)
-                }
-                .transition(.opacity)
-            }
-
-            VStack(spacing: 10) {
-                ForEach(Array(CEFRLevelMapping.stepLabels.enumerated()), id: \.offset) { index, level in
-                    let stepValue = index + 1
-                    Button {
-                        selectedLevelStep = stepValue
-                    } label: {
-                        ZStack {
-                            Text(level)
-                                .font(.body.weight(.semibold))
-                                .foregroundColor(.white)
-                                .frame(maxWidth: .infinity, alignment: .center)
-                        }
-                        .padding(.horizontal, 14)
-                        .padding(.vertical, 12)
-                        .background(
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .fill(
-                                    selectedLevelStep == stepValue
-                                        ? Color.white.opacity(0.34)
-                                        : Color.white.opacity(0.14)
-                                )
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .stroke(Color.white.opacity(selectedLevelStep == stepValue ? 0.6 : 0.2), lineWidth: 1)
-                        )
-                    }
-                    .buttonStyle(.plain)
-                }
-            }
-        }
-        .animation(.easeInOut(duration: 0.18), value: selectedLevelStep)
-    }
 }

@@ -34,7 +34,6 @@ final class WordOfTheDayManager: ObservableObject {
     private let service = CurriculumService()
     private var lastLoadedSlotIndex: Int?
     private var lastLoadedLanguage: LearningLanguage?
-    private var lastLoadedUserLevel: Int?
     private var loadTask: Task<Void, Never>?
 
     /// `curriculumState` is resolved in the body, not as a default argument:
@@ -80,26 +79,25 @@ final class WordOfTheDayManager: ObservableObject {
 
     // MARK: - Loading
 
-    func loadWordsOfTheDay(category: VocabularyCategory = .general, userLevel: Int = 1, force: Bool = false) {
+    func loadWordsOfTheDay(category: VocabularyCategory = .general, force: Bool = false) {
         loadTask?.cancel()
         loadTask = Task { [weak self] in
-            await self?.loadToday(category: category, userLevel: userLevel, force: force)
+            await self?.loadToday(category: category, force: force)
         }
     }
 
-    /// Re-evaluate on foreground: the gate may have opened, or the level/language changed.
-    func reloadIfNewCalendarDay(category: VocabularyCategory = .general, userLevel: Int = 1) {
+    /// Re-evaluate on foreground: the gate may have opened, or the language changed.
+    func reloadIfNewCalendarDay(category: VocabularyCategory = .general) {
         let languageChanged = lastLoadedLanguage != nil && lastLoadedLanguage != LearningLanguage.current
-        let levelChanged = lastLoadedUserLevel != nil && lastLoadedUserLevel != userLevel
         let slotChanged = lastLoadedSlotIndex != curriculumState.currentSlotIndex
         let gateChanged = isSlotUnlocked != curriculumState.isNextSlotUnlocked
 
-        guard languageChanged || levelChanged || slotChanged || gateChanged || currentWords.isEmpty else { return }
+        guard languageChanged || slotChanged || gateChanged || currentWords.isEmpty else { return }
 
-        loadWordsOfTheDay(category: category, userLevel: userLevel)
+        loadWordsOfTheDay(category: category)
     }
 
-    func loadToday(category: VocabularyCategory = .general, userLevel: Int = 1, force: Bool = false) async {
+    func loadToday(category: VocabularyCategory = .general, force: Bool = false) async {
         _ = category
         let language = LearningLanguage.current
         let count = CurriculumStore.shared.slotCount(for: language)
@@ -107,8 +105,8 @@ final class WordOfTheDayManager: ObservableObject {
         isLoading = true
         errorMessage = nil
 
-        // One-time placement: the onboarding CEFR step chooses the entry point.
-        curriculumState.placeIfNeeded(userLevel: userLevel, slotCount: count)
+        // One-time placement: everyone enters the spine at slot 1.
+        curriculumState.placeIfNeeded(slotCount: count)
 
         let slotIndex = curriculumState.currentSlotIndex
         // The device clock can only make the heuristic wrong in one direction
@@ -131,6 +129,21 @@ final class WordOfTheDayManager: ObservableObject {
 
         if Task.isCancelled { isLoading = false; return }
 
+        // Past the last authored slot there is nothing new to hand out. Bail
+        // before asking the service, which would throw slotOutOfRange and get
+        // surfaced as a load failure — the learner has finished the spine,
+        // which is not an error. Reviews still flow through QuizSessionBuilder.
+        if count > 0 && slotIndex > count {
+            currentWords = []
+            words = []
+            slotTheme = nil
+            errorMessage = nil
+            lastLoadedSlotIndex = slotIndex
+            lastLoadedLanguage = language
+            isLoading = false
+            return
+        }
+
         do {
             let loaded = try await service.words(forSlot: slotIndex, language: language)
             if Task.isCancelled { return }
@@ -139,7 +152,6 @@ final class WordOfTheDayManager: ObservableObject {
             slotTheme = CurriculumStore.shared.slot(at: slotIndex, language: language)?.theme
             lastLoadedSlotIndex = slotIndex
             lastLoadedLanguage = language
-            lastLoadedUserLevel = userLevel
             isLoading = false
             WordPronunciationService.shared.prefetch(words: loaded)
         } catch {
@@ -169,11 +181,10 @@ final class WordOfTheDayManager: ObservableObject {
 
     private func reloadForLanguageChange() {
         guard lastLoadedLanguage != nil, lastLoadedLanguage != LearningLanguage.current else { return }
-        let level = lastLoadedUserLevel ?? 1
         currentWords = []
         words = []
         slotTheme = nil
-        loadWordsOfTheDay(userLevel: level)
+        loadWordsOfTheDay()
     }
 
     private func applyPronunciationAudioURL(_ url: String, lemma: String) {

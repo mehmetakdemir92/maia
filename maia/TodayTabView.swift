@@ -48,6 +48,11 @@ struct TodayTabView: View {
                                 .tint(.white)
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .padding()
+                        } else if wordManager.hasReachedEndOfSpine {
+                            // Finishing every authored slot is an achievement,
+                            // not a failure — don't show it as a load error
+                            // with a Try Again button that can't help.
+                            endOfSpineSection
                         } else if wordManager.currentWords.isEmpty {
                             VStack(spacing: 14) {
                                 Text(wordManager.errorMessage ?? String(localized: "Today's words couldn't be loaded."))
@@ -127,11 +132,6 @@ struct TodayTabView: View {
             .onChange(of: userManager.isPremium) { _, _ in
                 reloadWords()
             }
-            .onChange(of: userManager.userLevel) { oldLevel, newLevel in
-                guard oldLevel != newLevel else { return }
-                loggedWordIDs.removeAll()
-                reloadWords(force: true)
-            }
             .onChange(of: learningLanguageManager.selected) { oldLanguage, newLanguage in
                 guard oldLanguage != newLanguage else { return }
                 loggedWordIDs.removeAll()
@@ -206,6 +206,36 @@ struct TodayTabView: View {
         }
     }
 
+    // MARK: - End of the authored spine
+
+    /// Shown once the learner has finished every authored slot. There are no
+    /// new words left, but reviews keep flowing, so the quiz section stays.
+    private var endOfSpineSection: some View {
+        VStack(spacing: 16) {
+            VStack(spacing: 10) {
+                Image(systemName: "checkmark.seal.fill")
+                    .font(.system(size: 34))
+                    .foregroundStyle(.white.opacity(0.92))
+
+                Text(String(localized: "You've finished every word we've written."))
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+
+                Text(String(localized: "New words are on the way. Until then, your reviews keep what you've learned from fading."))
+                    .font(.subheadline)
+                    .foregroundColor(.white.opacity(0.85))
+                    .multilineTextAlignment(.center)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(24)
+            .background(Color.white.opacity(0.08))
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+
+            todaysQuizSection
+        }
+    }
+
     // MARK: - Today's Quiz
 
     @ViewBuilder
@@ -247,14 +277,13 @@ struct TodayTabView: View {
 
     private func reloadIfCalendarDayChanged() {
         let category = userManager.isPremium ? userManager.selectedCategory : .general
-        wordManager.reloadIfNewCalendarDay(category: category, userLevel: userManager.userLevel)
+        wordManager.reloadIfNewCalendarDay(category: category)
     }
 
     private func reloadWords(force: Bool = false) {
         let category = userManager.isPremium ? userManager.selectedCategory : .general
         wordManager.loadWordsOfTheDay(
             category: category,
-            userLevel: userManager.userLevel,
             force: force
         )
     }
