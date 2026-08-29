@@ -1172,7 +1172,7 @@
           "phonetic": "/bəˈdɪŋən/",
           "partOfSpeech": "verb",
           "registerTag": "formal",
-          "definition": "Etwas voraussetzen oder zur Bedingung für etwas anderes machen.",
+          "definition": "Etwas notwendig machen oder zwingend voraussetzen.",
           "examples": [
             "Der eine Faktor bedingt oft den anderen.",
             "Wirtschaftlicher Erfolg ist häufig durch Stabilität bedingt.",
@@ -1193,7 +1193,7 @@
               "type": "definition",
               "question": "Was bedeutet „bedingen“?",
               "options": [
-                "Etwas voraussetzen oder zur Bedingung für etwas anderes machen.",
+                "Etwas notwendig machen oder zwingend voraussetzen.",
                 "Etwas plötzlich und unerwartet auslösen.",
                 "Einen kleinen, zusätzlichen Beitrag leisten.",
                 "Ein direktes Ergebnis eines Vorgangs sein."
@@ -5582,7 +5582,7 @@
           "phonetic": "/ˈaʊ̯sˌɡaːbə/",
           "partOfSpeech": "noun",
           "registerTag": "neutral",
-          "definition": "Geld, das für etwas bezahlt oder ausgegeben wird.",
+          "definition": "Geld, das für einen bestimmten Zweck bezahlt wird.",
           "examples": [
             "Die monatlichen Ausgaben sind zuletzt stark gestiegen.",
             "Diese Ausgabe war eigentlich nicht eingeplant.",
@@ -5603,7 +5603,7 @@
               "type": "definition",
               "question": "Was bedeutet „Ausgabe“?",
               "options": [
-                "Geld, das für etwas bezahlt oder ausgegeben wird.",
+                "Geld, das für einen bestimmten Zweck bezahlt wird.",
                 "Die Geldmenge, die insgesamt zur Verfügung steht.",
                 "Geld, das langfristig in ein Projekt gesteckt wird.",
                 "Der Wert, den etwas für einen persönlich hat."
@@ -8030,7 +8030,7 @@
           "phonetic": "/ˈnaːxˌtaɪ̯l/",
           "partOfSpeech": "noun",
           "registerTag": "neutral",
-          "definition": "Ein Umstand, der einer Person oder Sache schadet oder sie benachteiligt.",
+          "definition": "Ein Umstand, der jemandem schadet oder eine schlechtere Lage schafft.",
           "examples": [
             "Der größte Nachteil dieser Lösung ist der hohe Preis.",
             "Jede Entscheidung hat Vor- und Nachteile.",
@@ -8051,7 +8051,7 @@
               "type": "definition",
               "question": "Was bedeutet „Nachteil“?",
               "options": [
-                "Ein Umstand, der einer Person oder Sache schadet oder sie benachteiligt.",
+                "Ein Umstand, der jemandem schadet oder eine schlechtere Lage schafft.",
                 "Eine Eigenschaft, die eine Sache besonders wertvoll macht.",
                 "Ein kleiner, aber störender Schönheitsfehler.",
                 "Eine bewundernswerte moralische Eigenschaft eines Menschen."
@@ -8888,7 +8888,7 @@
           "phonetic": "/ˈʃlʊsˌfɔlɡɐn/",
           "partOfSpeech": "verb",
           "registerTag": "formal",
-          "definition": "Aus vorliegenden Informationen eine logische Schlussfolgerung ziehen.",
+          "definition": "Aus vorliegenden Informationen logisch ableiten, was zutrifft.",
           "examples": [
             "Aus den Daten lässt sich schlussfolgern, dass die Strategie funktioniert.",
             "Er schlussfolgerte voreilig, dass niemand ihm helfen wolle.",
@@ -8909,7 +8909,7 @@
               "type": "definition",
               "question": "Was bedeutet „schlussfolgern“?",
               "options": [
-                "Aus vorliegenden Informationen eine logische Schlussfolgerung ziehen.",
+                "Aus vorliegenden Informationen logisch ableiten, was zutrifft.",
                 "Etwas nach langem Zögern endlich entscheiden.",
                 "Eine Aufgabe oder ein Ziel vollständig aufgeben.",
                 "Sich fest zu einer bestimmten Handlung verpflichten."
