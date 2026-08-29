@@ -63,3 +63,6 @@ planning/
 
 *.tmp_*.db
 .tmp_*
+
+# Firestore user-data snapshots (real user data, not for git)
+analytics/out/
