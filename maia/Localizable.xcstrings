@@ -2704,6 +2704,9 @@
         }
       }
     },
+    "Hides the translation" : {
+
+    },
     "I verified — continue" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -4474,6 +4477,9 @@
           }
         }
       }
+    },
+    "Shows the translation" : {
+
     },
     "Sign In" : {
       "localizations" : {

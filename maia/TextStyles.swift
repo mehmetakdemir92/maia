@@ -178,7 +178,7 @@ struct ExampleSentenceRow: View {
     private var sentenceWithGlossToggle: Text {
         guard gloss != nil else { return sentenceText }
         return sentenceText
-            + Text("  ")
+            + Text(verbatim: "  ")   // separator, not copy — keep it out of the catalog
             + Text(Image(systemName: isGlossRevealed ? "character.bubble.fill" : "character.bubble"))
                 .foregroundColor(AppColors.primaryButton)
     }
