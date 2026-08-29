@@ -65,20 +65,27 @@ def audit(lang: str) -> list[tuple[str, str, str]]:
 
     # --- Leak: the longest option is the answer ----------------------------
     if defs:
-        longest = sum(
-            1 for _, q in defs
-            if max(range(len(q["options"])), key=lambda i: len(q["options"][i])) == q["correctAnswerIndex"]
-        )
-        share = longest / len(defs)
+        # Both extremes are exploitable. Shortening every answer to kill
+        # "pick the longest" just trains "pick the shortest", so measure the
+        # two separately and fail on whichever is out of hand.
+        for label, pick in (("longest", max), ("shortest", min)):
+            hits = sum(
+                1 for _, q in defs
+                if pick(range(len(q["options"])), key=lambda i: len(q["options"][i])) == q["correctAnswerIndex"]
+            )
+            share = hits / len(defs)
+            sev = "BLOCKER" if share >= LONGEST_BLOCK else "WARN" if share >= LONGEST_WARN else "OK"
+            rows.append((sev, f"{label} tell",
+                         f"{hits}/{len(defs)} ({share:.0%}) of definition answers are the {label} "
+                         f"option (chance is 25%)"))
+
         margins = []
         for _, q in defs:
             ci = q["correctAnswerIndex"]
             others = [len(o) for i, o in enumerate(q["options"]) if i != ci]
             margins.append(len(q["options"][ci]) - statistics.mean(others))
-        detail = (f"{longest}/{len(defs)} ({share:.0%}) of definition items have the answer as the "
-                  f"longest option; mean margin {statistics.mean(margins):+.1f} chars (chance is 25%)")
-        sev = "BLOCKER" if share >= LONGEST_BLOCK else "WARN" if share >= LONGEST_WARN else "OK"
-        rows.append((sev, "length tell", detail))
+        rows.append(("OK", "length margin",
+                     f"answer runs {statistics.mean(margins):+.1f} chars against the distractor mean"))
 
     # --- Leak: the answer is the sentence the learner just read ------------
     verbatim = sum(
