@@ -51,7 +51,6 @@ struct QuizView: View {
     @State private var showingResult = false
     @State private var canRetry = false
     @State private var showStreakCelebration = false
-    @State private var streakScale: CGFloat = 0.5
     @State private var showingAnswerFeedback = false
     @State private var currentAnswerWasCorrect: Bool? = nil
     @State private var isAutoAdvancingAfterCorrect = false
@@ -247,7 +246,7 @@ struct QuizView: View {
         .toolbarBackground(.hidden, for: .navigationBar)
         .overlay {
             if showStreakCelebration {
-                streakCelebrationOverlay
+                StreakCelebrationView(streak: streakManager.currentStreak)
             }
         }
         .onChange(of: quizManager.quizCompleted) { _, completed in
@@ -399,39 +398,6 @@ struct QuizView: View {
 
     // MARK: - Computed Properties
     
-    private var streakCelebrationOverlay: some View {
-        ZStack {
-            Color.black.opacity(0.4)
-                .ignoresSafeArea()
-            VStack(spacing: 16) {
-                Image(systemName: "flame.fill")
-                    .font(.system(size: 64))
-                    .foregroundStyle(AppColors.celebrationFlameGradient)
-                    .scaleEffect(streakScale)
-                Text("Day completed!")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                Text(String(format: String(localized: "%lld day streak"), Int64(streakManager.currentStreak)))
-                    .font(.headline)
-                    .foregroundColor(.orange)
-            }
-            .padding(32)
-            .background(AppColors.Lavender)
-            .cornerRadius(20)
-            .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
-        }
-        .onAppear {
-            withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
-                streakScale = 1.2
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                withAnimation(.easeInOut(duration: 0.2)) {
-                    streakScale = 1.0
-                }
-            }
-        }
-    }
     
     private func nextReviewDateView(for wordId: UUID) -> some View {
         let nextReview = progressManager.nextDueDate(for: wordId)
