@@ -69,6 +69,17 @@ final class CurriculumStateManager: ObservableObject {
         ) { [weak self] _ in
             Task { @MainActor in self?.reloadForLanguageChange() }
         }
+        // The debug rewind is triggered from Settings, which has no handle on
+        // this object. Routing it through a notification means the LIVE
+        // instance does the work — spinning up a second manager just to edit
+        // storage would race with its own Firestore sync writing back.
+        NotificationCenter.default.addObserver(
+            forName: .debugRewindTodaysSession,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            Task { @MainActor in self?.debugRewindLastCompletion() }
+        }
     }
 
     // MARK: - Day gate
@@ -210,6 +221,27 @@ final class CurriculumStateManager: ObservableObject {
         persist()
     }
 
+    /// Developer/testing hook: undo the last completion so today's session can
+    /// be run again.
+    ///
+    /// Deliberately a rewind, not just an unlock. Clearing `lastCompletedAt`
+    /// alone would reopen the gate while leaving the pointer advanced, so each
+    /// test run would march through the spine and hand back a different slot.
+    /// Stepping the pointer and the count back too means re-running the day
+    /// gives the same five words.
+    ///
+    /// Goes through `persist()` rather than touching UserDefaults directly,
+    /// because `syncFromFirestore` refuses to rewind a learner whose remote
+    /// `completedCount` is higher than the local one — a local-only edit would
+    /// simply be undone by the next sync.
+    func debugRewindLastCompletion() {
+        guard BuildFeatures.allowsInternalTestingTools else { return }
+        state.currentSlotIndex = max(1, state.currentSlotIndex - 1)
+        state.completedCount = max(0, state.completedCount - 1)
+        state.lastCompletedAt = nil
+        persist()
+    }
+
     private func reloadForLanguageChange() {
         let language = LearningLanguage.current
         guard language.code != state.languageCode else { return }
@@ -304,4 +336,9 @@ final class CurriculumStateManager: ObservableObject {
                 }
             }
     }
+}
+
+extension Notification.Name {
+    /// Posted by the DEBUG-only Settings tool that replays today's session.
+    static let debugRewindTodaysSession = Notification.Name("debugRewindTodaysSession")
 }

@@ -23,4 +23,15 @@ enum BuildFeatures {
         return false
         #endif
     }
+
+    /// DEBUG builds only: tools that rewind real progress so a flow can be
+    /// run more than once a day. Kept separate from the premium flag because
+    /// these destroy state rather than simulate a purchase.
+    static var allowsInternalTestingTools: Bool {
+        #if DEBUG
+        return true
+        #else
+        return false
+        #endif
+    }
 }

@@ -1779,6 +1779,9 @@
         }
       }
     },
+    "Day completed. %lld day streak" : {
+
+    },
     "Day Streak" : {
       "localizations" : {
         "de" : {

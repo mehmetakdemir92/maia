@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var languageManager: AppLanguageManager
+    @EnvironmentObject var streakManager: StreakManager
     @Environment(\.dismiss) var dismiss
     @StateObject private var reminders = DailyReminderManager.shared
     @State private var showingSignOutAlert = false
@@ -19,6 +20,7 @@ struct SettingsView: View {
     @State private var selectedLegalDocument: LegalDocumentType?
     @State private var reminderToggle = false
     @State private var reminderTime = Date()
+    @State private var didRewindSession = false
     
     private var displayName: String {
         userManager.userName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "User" : userManager.userName
@@ -248,6 +250,33 @@ struct SettingsView: View {
                             .foregroundColor(.white.opacity(0.8))
                     }
                 }
+
+                if BuildFeatures.allowsInternalTestingTools {
+                    Section {
+                        Button {
+                            // The live CurriculumStateManager listens for this
+                            // and rewinds itself; Settings has no handle on it.
+                            NotificationCenter.default.post(name: .debugRewindTodaysSession, object: nil)
+                            streakManager.unmarkDayCompleted(Date())
+                            didRewindSession = true
+                        } label: {
+                            HStack {
+                                Image(systemName: "arrow.counterclockwise")
+                                Text("Debug: replay today's quiz")
+                            }
+                        }
+                        .foregroundColor(.primary)
+
+                        if didRewindSession {
+                            Label("Today is open again. Close Settings to reload.", systemImage: "checkmark.circle.fill")
+                                .font(.caption)
+                                .foregroundColor(.green)
+                        }
+                    } footer: {
+                        Text("Xcode DEBUG builds only. Steps the slot pointer back, clears today's completion and removes the streak day, so the same five words can be run again.")
+                            .foregroundColor(.white.opacity(0.8))
+                    }
+                }
                 
                 Section {
                     Button(action: {
@@ -399,4 +428,5 @@ For questions, please contact support.
     SettingsView()
         .environmentObject(UserManager())
         .environmentObject(AppLanguageManager())
+        .environmentObject(StreakManager())
 }
