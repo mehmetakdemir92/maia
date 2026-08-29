@@ -1384,35 +1384,6 @@
         }
       }
     },
-    "Correct answer:" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Richtige Antwort:"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Respuesta correcta:"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bonne réponse :"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Doğru cevap:"
-          }
-        }
-      }
-    },
     "Correct: %lld" : {
       "localizations" : {
         "de" : {
@@ -1649,34 +1620,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hesap oluştur"
-          }
-        }
-      }
-    },
-    "Current level: %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktuelles Niveau: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nivel actual: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Niveau actuel : %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mevcut seviye: %@"
           }
         }
       }
@@ -2237,35 +2180,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "İngilizce"
-          }
-        }
-      }
-    },
-    "English level" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Englischniveau"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nivel de inglés"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Niveau d'anglais"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İngilizce seviyesi"
           }
         }
       }
@@ -4448,34 +4362,6 @@
         }
       }
     },
-    "Set your English level" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dein Englischniveau festlegen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Establece tu nivel de inglés"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Définissez votre niveau d'anglais"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "İngilizce seviyeni ayarla"
-          }
-        }
-      }
-    },
     "Set your name." : {
       "localizations" : {
         "de" : {
@@ -5340,35 +5226,6 @@
         }
       }
     },
-    "Today's words target: %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tagesziel Wörter: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Objetivo de palabras de hoy: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Objectif de mots du jour : %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bugünün kelimeleri hedefi: %@"
-          }
-        }
-      }
-    },
     "Travel" : {
       "localizations" : {
         "de" : {
@@ -5931,35 +5788,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%2$lld sorudan %1$lld tanesini doğru yaptın"
-          }
-        }
-      }
-    },
-    "You learned it!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Du hast es gelernt!"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Lo aprendiste!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vous l'avez appris !"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Öğrendin!"
           }
         }
       }
