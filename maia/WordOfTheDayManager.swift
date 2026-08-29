@@ -122,6 +122,11 @@ final class WordOfTheDayManager: ObservableObject {
             isSlotUnlocked = false
         }
 
+        // Re-arm the rolling reminder window now that the gate state is known.
+        // Doing it here rather than in onAppear means we can tell whether today
+        // is already finished, and skip today's reminder if so.
+        await DailyReminderManager.shared.refreshSchedule(skippingToday: !isSlotUnlocked)
+
         if force {
             currentWords = []
             words = []
@@ -172,6 +177,8 @@ final class WordOfTheDayManager: ObservableObject {
     func completeCurrentSlot() async {
         await curriculumState.completeCurrentSlot(slotCount: slotCount)
         isSlotUnlocked = curriculumState.isNextSlotUnlocked
+        // Drop today's reminder: the work it would nag about is done.
+        await DailyReminderManager.shared.refreshSchedule(skippingToday: true)
     }
 
     /// True when the learner has run past the authored spine — reviews only.
