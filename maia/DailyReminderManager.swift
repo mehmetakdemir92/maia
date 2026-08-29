@@ -26,14 +26,15 @@ final class DailyReminderManager: ObservableObject {
     /// budget and re-arms on every launch.
     private static let scheduledDays = 15
 
-    /// Evening slot for the streak warning. The study day does not roll over
-    /// until 04:00, so the true last moment is past midnight — an hour nobody
-    /// should be pushed at. 21:30 still leaves an evening to act in.
-    private static let riskHour = 21
-    private static let riskMinute = 30
+    /// Last call of the day, carrying the streak/state line. The study day
+    /// does not roll over until 04:00, so the true final moment is past
+    /// midnight — an hour nobody should be pushed at. 21:30 still leaves an
+    /// evening to act in.
+    private static let lastCallHour = 21
+    private static let lastCallMinute = 30
 
     private static let identifierPrefix = "daily-reminder-"
-    private static let riskIdentifier = "streak-risk-today"
+    private static let wordNudgeIdentifier = "word-nudge-today"
     private static let enabledKey = "dailyReminderEnabled"
     private static let hourKey = "dailyReminderHour"
     private static let minuteKey = "dailyReminderMinute"
@@ -72,7 +73,9 @@ final class DailyReminderManager: ObservableObject {
         isEnabled = defaults.bool(forKey: Self.enabledKey)
         let storedHour = defaults.object(forKey: Self.hourKey) as? Int
         let storedMinute = defaults.object(forKey: Self.minuteKey) as? Int
-        hour = storedHour ?? 20
+        // Daytime nudge, so it defaults to the middle of the day rather
+        // than the evening — the evening belongs to the last call.
+        hour = storedHour ?? 13
         minute = storedMinute ?? 0
     }
 
@@ -144,7 +147,10 @@ final class DailyReminderManager: ObservableObject {
         for offset in 0..<Self.scheduledDays {
             guard let day = calendar.date(byAdding: .day, value: offset, to: now),
                   let fireDate = calendar.date(
-                    bySettingHour: hour, minute: minute, second: 0, of: day
+                    bySettingHour: Self.lastCallHour,
+                    minute: Self.lastCallMinute,
+                    second: 0,
+                    of: day
                   )
             else { continue }
 
@@ -163,25 +169,25 @@ final class DailyReminderManager: ObservableObject {
                 identifier: "\(Self.identifierPrefix)\(offset)",
                 copy: copy(forDayOffset: offset, streak: streak),
                 at: fireDate,
-                hour: hour,
-                minute: minute
+                hour: Self.lastCallHour,
+                minute: Self.lastCallMinute
             )
         }
 
-        // Evening nudge, TODAY ONLY. Naming one of today's words needs the
-        // slot actually loaded, and the streak line above is only true for
-        // today — a request placed on a later day would fire after the streak
-        // has already lapsed. Skipped entirely when no word is available
-        // rather than sending a sentence with a hole in it.
+        // Daytime nudge at the learner's chosen hour, TODAY ONLY. Naming one
+        // of today's words needs the slot actually loaded, and the word only
+        // holds while the slot does — placing it on a later day risks naming a
+        // word they have since moved past. Skipped entirely when no word is
+        // available rather than sending a sentence with a hole in it.
         if !skippingToday,
            let word = focusWordProvider?(),
            !word.isEmpty,
-           let riskDate = calendar.date(
-            bySettingHour: Self.riskHour, minute: Self.riskMinute, second: 0, of: now
+           let nudgeDate = calendar.date(
+            bySettingHour: hour, minute: minute, second: 0, of: now
            ),
-           riskDate > now {
+           nudgeDate > now {
             await add(
-                identifier: Self.riskIdentifier,
+                identifier: Self.wordNudgeIdentifier,
                 copy: Copy(
                     title: String(localized: "Today's words are ready"),
                     body: String(
@@ -189,9 +195,9 @@ final class DailyReminderManager: ObservableObject {
                         word
                     )
                 ),
-                at: riskDate,
-                hour: Self.riskHour,
-                minute: Self.riskMinute
+                at: nudgeDate,
+                hour: hour,
+                minute: minute
             )
         }
     }
@@ -278,7 +284,7 @@ final class DailyReminderManager: ObservableObject {
 
     private func clearPending() {
         var ids = (0..<Self.scheduledDays).map { "\(Self.identifierPrefix)\($0)" }
-        ids.append(Self.riskIdentifier)
+        ids.append(Self.wordNudgeIdentifier)
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ids)
     }
 

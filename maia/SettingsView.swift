@@ -129,7 +129,7 @@ struct SettingsView: View {
                             let parts = Calendar.current.dateComponents([.hour, .minute], from: newTime)
                             Task {
                                 await reminders.setTime(
-                                    hour: parts.hour ?? 20,
+                                    hour: parts.hour ?? 13,
                                     minute: parts.minute ?? 0
                                 )
                             }
@@ -143,7 +143,7 @@ struct SettingsView: View {
                         Text(String(localized: "Notifications are turned off for Maia in iOS Settings. Turn them on there to get reminders."))
                             .foregroundColor(.orange)
                     } else {
-                        Text(String(localized: "One reminder a day, skipped once you've finished that day's words."))
+                        Text(String(localized: "A word to practise at your chosen time, and a last call at 21:30. Both stop once you've finished that day's words."))
                             .foregroundColor(.white.opacity(0.8))
                     }
                 }

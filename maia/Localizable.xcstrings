@@ -1,6 +1,35 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "A word to practise at your chosen time, and a last call at 21:30. Both stop once you've finished that day's words." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Wort zum Üben zu deiner Uhrzeit und ein letzter Anstoß um 21:30. Beide entfallen, sobald du die Wörter des Tages geschafft hast."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una palabra para practicar a la hora que elijas y un último aviso a las 21:30. Ambos se detienen cuando terminas las palabras del día."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un mot à travailler à l'heure que tu choisis, et un dernier rappel à 21h30. Les deux s'arrêtent une fois les mots du jour terminés."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçtiğin saatte pekiştirilecek bir kelime, 21:30'da son bir hatırlatma. O günün kelimelerini bitirince ikisi de susar."
+          }
+        }
+      }
+    },
     "It's never too late to start a new streak 🙂" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -3640,9 +3669,6 @@
           }
         }
       }
-    },
-    "One reminder a day, skipped once you've finished that day's words." : {
-
     },
     "Only in DEBUG builds. Mimics App Store subscription." : {
       "extractionState" : "stale",
