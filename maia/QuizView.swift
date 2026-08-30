@@ -39,6 +39,20 @@ struct QuizView: View {
         singleWord ?? quizManager.currentSessionItem()?.word
     }
 
+    /// Whether the headword may be shown above the question.
+    ///
+    /// In a session it IS the answer: every item is about one word, so a
+    /// fill-in-the-blank asking for that word had it printed in bold at the
+    /// top of the screen, with a button to hear it read aloud. Held back until
+    /// the answer is committed, which is also the better moment to hear it.
+    ///
+    /// Single-word mode is unaffected — the learner opened that word from the
+    /// diary, so there is nothing left to give away.
+    private var revealsHeaderWord: Bool {
+        guard quizManager.isSessionMode else { return true }
+        return showingAnswerFeedback
+    }
+
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var streakManager: StreakManager
     @EnvironmentObject var diaryManager: DiaryManager
@@ -87,6 +101,12 @@ struct QuizView: View {
                         PronounceButton(word: headerWord.word, audioURL: headerWord.pronunciationAudioURL, size: 44, languageCode: headerWord.languageCode)
                     }
                     .padding(.horizontal)
+                    // Kept in the layout but blanked, so revealing it does not
+                    // shove the question down the screen.
+                    .opacity(revealsHeaderWord ? 1 : 0)
+                    .allowsHitTesting(revealsHeaderWord)
+                    .accessibilityHidden(!revealsHeaderWord)
+                    .animation(.easeInOut(duration: 0.2), value: revealsHeaderWord)
                 }
 
                 if !quizManager.quizCompleted {
