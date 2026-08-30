@@ -247,12 +247,9 @@ struct TodayTabView: View {
                 rippleStyle: .onDark,
                 action: startTodaysQuiz
             ) {
-                HStack(spacing: 8) {
-                    Image(systemName: "book.fill")
-                    Text(String(localized: "Start Quiz"))
-                        .font(.headline)
-                }
-                .foregroundColor(.white)
+                Text(String(localized: "Start Quiz"))
+                    .font(.headline)
+                    .foregroundColor(.white)
                 // Sized rather than stretched: a full-width bar reads as one
                 // more row of the page, while a smaller shape with air around
                 // it reads as the thing to press.

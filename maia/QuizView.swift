@@ -39,19 +39,6 @@ struct QuizView: View {
         singleWord ?? quizManager.currentSessionItem()?.word
     }
 
-    /// Whether the headword may be shown above the question.
-    ///
-    /// In a session it IS the answer: every item is about one word, so a
-    /// fill-in-the-blank asking for that word had it printed in bold at the
-    /// top of the screen, with a button to hear it read aloud. Held back until
-    /// the answer is committed, which is also the better moment to hear it.
-    ///
-    /// Single-word mode is unaffected — the learner opened that word from the
-    /// diary, so there is nothing left to give away.
-    private var revealsHeaderWord: Bool {
-        guard quizManager.isSessionMode else { return true }
-        return showingAnswerFeedback
-    }
 
     @EnvironmentObject var userManager: UserManager
     @EnvironmentObject var streakManager: StreakManager
@@ -81,7 +68,7 @@ struct QuizView: View {
             GlassSceneBackground()
             ScrollView {
             VStack(spacing: 24) {
-                if let headerWord = currentDisplayWord, !(quizManager.isSessionMode && quizManager.quizCompleted) {
+                if let headerWord = currentDisplayWord, !quizManager.isSessionMode {
                     HStack(alignment: .center, spacing: 12) {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(headerWord.word)
@@ -101,12 +88,6 @@ struct QuizView: View {
                         PronounceButton(word: headerWord.word, audioURL: headerWord.pronunciationAudioURL, size: 44, languageCode: headerWord.languageCode)
                     }
                     .padding(.horizontal)
-                    // Kept in the layout but blanked, so revealing it does not
-                    // shove the question down the screen.
-                    .opacity(revealsHeaderWord ? 1 : 0)
-                    .allowsHitTesting(revealsHeaderWord)
-                    .accessibilityHidden(!revealsHeaderWord)
-                    .animation(.easeInOut(duration: 0.2), value: revealsHeaderWord)
                 }
 
                 if !quizManager.quizCompleted {
@@ -198,20 +179,25 @@ struct QuizView: View {
                                 Text(buttonTitle)
                                     .font(.headline)
                                     .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
+                                    .frame(width: 190, height: 58)
                                     .background(
                                         Group {
+                                            // The drift only runs once an
+                                            // answer is picked — a disabled
+                                            // control that keeps moving still
+                                            // reads as pressable.
                                             if quizManager.selectedAnswerIndex != nil {
-                                                AppColors.primaryButtonGradient
+                                                AnimatedGradientFill()
                                             } else {
-                                                Color.gray
+                                                Color.white.opacity(0.14)
                                             }
                                         }
                                     )
-                                    .cornerRadius(10)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                    .shadow(color: .black.opacity(0.22), radius: 12, x: 0, y: 6)
                             }
                             .disabled(quizManager.selectedAnswerIndex == nil || isAutoAdvancingAfterCorrect)
+                            .frame(maxWidth: .infinity)
                             .padding(.horizontal)
                         } else {
                             VStack(spacing: 16) {
