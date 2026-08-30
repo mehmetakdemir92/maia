@@ -46,7 +46,6 @@ final class DailyReminderManager: ObservableObject {
 
     private static let identifierPrefix = "daily-reminder-"
     private static let wordNudgeIdentifier = "word-nudge-today"
-    private static let didAskKey = "dailyReminderDidAskPermission"
 
     /// What the copy needs to know about the learner's streak.
     struct StreakSnapshot {
@@ -74,23 +73,25 @@ final class DailyReminderManager: ObservableObject {
 
     // MARK: - Permission
 
-    /// Asks for notification permission once, after a session has been finished.
+    /// Asks for notification permission, after a session has been finished.
     ///
     /// Deliberately not at launch. A cold prompt before anyone has seen what
     /// the app does is the reliable way to be refused, and iOS only allows the
     /// ask once — a refusal can afterwards only be undone in system Settings.
+    ///
+    /// The only gate is the system status. There used to be a
+    /// `dailyReminderDidAskPermission` flag as well, but it was set even on the
+    /// paths where no prompt had been shown, and once set nothing looked again:
+    /// anyone whose status was still notDetermined at that point could never be
+    /// asked. iOS already guarantees the prompt appears at most once per
+    /// install, so the flag only ever cost us reach. It is abandoned rather
+    /// than migrated — reading it is what did the damage.
     func requestAuthorizationIfNeeded() async {
-        guard !UserDefaults.standard.bool(forKey: Self.didAskKey) else { return }
-
         let center = UNUserNotificationCenter.current()
         let settings = await center.notificationSettings()
-        guard settings.authorizationStatus == .notDetermined else {
-            UserDefaults.standard.set(true, forKey: Self.didAskKey)
-            return
-        }
+        guard settings.authorizationStatus == .notDetermined else { return }
 
         _ = try? await center.requestAuthorization(options: [.alert, .sound, .badge])
-        UserDefaults.standard.set(true, forKey: Self.didAskKey)
         // The ask happens right after finishing, so today is already done.
         await refreshSchedule(skippingToday: true)
     }
