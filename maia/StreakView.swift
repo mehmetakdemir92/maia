@@ -9,81 +9,191 @@ import SwiftUI
 import Combine
 import GoogleMobileAds
 
+// MARK: - Shared streak visuals
+
+enum StreakStyle {
+    /// Horizontal warm gradient used for completed-day runs in the calendar.
+    static let runGradient = LinearGradient(
+        colors: [
+            Color(red: 1.00, green: 0.63, blue: 0.24),
+            Color(red: 0.97, green: 0.42, blue: 0.20)
+        ],
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+
+    static let cellHeight: CGFloat = 42
+}
+
 struct StreakView: View {
     @EnvironmentObject var streakManager: StreakManager
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var selectedMonth = Date()
-    @State private var flameScale: CGFloat = 1.0
-    @State private var flameOpacity: Double = 0.4
-    
+    @State private var flamePulse: CGFloat = 1.0
+    @State private var glowOpacity: Double = 0.30
+
+    private let calendar = Calendar.current
+
     var body: some View {
         NavigationStack {
             ZStack {
                 GlassSceneBackground()
                 ScrollView {
-                    VStack(spacing: 24) {
+                    VStack(spacing: 18) {
                         streakHero
+                        statsRow
                         CalendarView(selectedMonth: $selectedMonth)
                             .environmentObject(streakManager)
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 8)
-                    .padding(.top, 12)
-                    .padding(.bottom, 28)
+                    .padding(.horizontal, 16)
+                    .padding(.top, 4)
+                    .padding(.bottom, 48)
                 }
+                .scrollIndicators(.hidden)
             }
             .navigationBarHidden(true)
         }
     }
 
-    private var streakHero: some View {
-        ZStack {
-            Image(systemName: "flame.fill")
-                .font(.system(size: 140))
-                .foregroundStyle(AppColors.animatedFlameGradient(opacity: flameOpacity))
-                .scaleEffect(flameScale)
-                .offset(y: -8)
-                .shadow(color: .orange.opacity(0.5), radius: 10, x: 0, y: 0)
+    // MARK: Hero
 
-            VStack(spacing: 4) {
+    private var streakHero: some View {
+        VStack(spacing: 8) {
+            ZStack {
+                // Soft halo so the flame reads against the blue scene instead of
+                // muddying into it the way a low-opacity symbol did.
+                Circle()
+                    .fill(
+                        RadialGradient(
+                            colors: [
+                                Color.orange.opacity(glowOpacity),
+                                Color.orange.opacity(0)
+                            ],
+                            center: .center,
+                            startRadius: 2,
+                            endRadius: 118
+                        )
+                    )
+                    .frame(width: 236, height: 236)
+                    .blur(radius: 10)
+
+                Image(systemName: "flame.fill")
+                    .font(.system(size: 116))
+                    .foregroundStyle(StreakStyle.runGradient)
+                    .scaleEffect(flamePulse)
+                    .shadow(color: .orange.opacity(0.45), radius: 16, x: 0, y: 4)
+
+                // Sits in the belly of the flame; white on solid orange instead
+                // of orange-on-orange.
                 Text("\(streakManager.currentStreak)")
-                    .font(.system(size: 48, weight: .bold))
-                    .foregroundColor(.orange)
-                Text("Day Streak")
-                    .font(.headline)
-                    .foregroundColor(.white)
+                    .font(.system(size: 50, weight: .heavy, design: .rounded))
+                    .foregroundStyle(.white)
+                    .shadow(color: .black.opacity(0.28), radius: 5, x: 0, y: 2)
+                    .offset(y: 16)
+                    .contentTransition(.numericText())
             }
+            .frame(height: 178)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(
+                Text("\(streakManager.currentStreak)") + Text(" ") + Text("Day Streak")
+            )
+
+            Text("Day Streak")
+                .font(.footnote.weight(.semibold))
+                .textCase(.uppercase)
+                .tracking(1.6)
+                .foregroundStyle(.white.opacity(0.92))
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 8)
         .onAppear {
             streakManager.refreshStreak()
-            flameScale = 1.0
-            flameOpacity = 0.45
+            flamePulse = 1.0
+            glowOpacity = 0.30
             guard !reduceMotion else { return }
-            withAnimation(.easeInOut(duration: 2.2).repeatForever(autoreverses: true)) {
-                flameScale = 1.08
-                flameOpacity = 0.58
+            withAnimation(.easeInOut(duration: 2.4).repeatForever(autoreverses: true)) {
+                flamePulse = 1.05
+                glowOpacity = 0.46
             }
+        }
+    }
+
+    // MARK: Stats
+
+    private var statsRow: some View {
+        HStack(spacing: 10) {
+            StreakStatTile(
+                icon: "trophy.fill",
+                value: "\(streakManager.maxStreak)",
+                label: "Best"
+            )
+            StreakStatTile(
+                icon: "checkmark.seal.fill",
+                value: "\(streakManager.completedDates.count)",
+                label: "Total Days"
+            )
+            StreakStatTile(
+                icon: "calendar",
+                value: "\(completedThisMonth)",
+                label: "This Month"
+            )
+        }
+    }
+
+    private var completedThisMonth: Int {
+        let now = Date()
+        guard let range = calendar.range(of: .day, in: .month, for: now),
+              let firstDay = calendar.date(
+                from: calendar.dateComponents([.year, .month], from: now)
+              )
+        else { return 0 }
+
+        return range.reduce(into: 0) { total, day in
+            guard let date = calendar.date(byAdding: .day, value: day - 1, to: firstDay) else {
+                return
+            }
+            if streakManager.isDayCompleted(date) { total += 1 }
         }
     }
 }
 
-/// Use a single LazyVGrid + ForEach with unique ids; separate ForEach(0…6) collides and mis-matches calendar days.
-private enum StreakCalendarGridItem: Identifiable, Hashable {
-    case weekdayHeader(column: Int, title: String)
-    case leadPadding(index: Int)
-    case day(dayOfMonth: Int, date: Date)
-    case trailPadding(index: Int)
+private struct StreakStatTile: View {
+    let icon: String
+    let value: String
+    let label: LocalizedStringKey
 
-    var id: String {
-        switch self {
-        case .weekdayHeader(let c, _): return "wh-\(c)"
-        case .leadPadding(let i): return "lp-\(i)"
-        case .day(let d, _): return "day-\(d)"
-        case .trailPadding(let i): return "tp-\(i)"
+    var body: some View {
+        VStack(spacing: 3) {
+            Image(systemName: icon)
+                .font(.caption2.weight(.bold))
+                .foregroundStyle(AppColors.primaryButton)
+            Text(value)
+                .font(.system(.title3, design: .rounded).weight(.bold))
+                .foregroundColor(AppColors.glassCardTitle)
+            Text(label)
+                .font(.caption2.weight(.medium))
+                .foregroundColor(AppColors.glassCardMuted)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
         }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 6)
+        .statCardGlassBackground(cornerRadius: 16)
+        .accessibilityElement(children: .combine)
     }
+}
+
+// MARK: - Calendar
+
+private struct StreakDayCell {
+    let dayOfMonth: Int
+    let date: Date
+}
+
+private struct StreakWeek: Identifiable {
+    let id: Int
+    let cells: [StreakDayCell?]
 }
 
 struct CalendarView: View {
@@ -96,18 +206,192 @@ struct CalendarView: View {
 
     private let calendar = Calendar.current
 
+    var body: some View {
+        let bridgeDates = streakManager.bridgeableGapDates()
+
+        return VStack(spacing: 14) {
+            monthHeader
+            weekdayHeaderRow
+
+            VStack(spacing: 6) {
+                ForEach(weeks) { week in
+                    StreakWeekRow(
+                        week: week,
+                        isCompleted: streakManager.isDayCompleted,
+                        isToday: { calendar.isDateInToday($0) },
+                        isFuture: isFuture,
+                        isBridgeGap: { date in
+                            bridgeDates.contains { calendar.isDate($0, inSameDayAs: date) }
+                        }
+                    )
+                }
+            }
+
+            if !bridgeDates.isEmpty {
+                streakBridgeCallout(gapLength: bridgeDates.count)
+                    .padding(.top, 2)
+            }
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 18)
+        .wordCardGlassBackground(cornerRadius: 24)
+        .alert("Ad Error", isPresented: $showAdError) {
+            Button("OK", role: .cancel) {}
+        } message: {
+            Text(adErrorMessage ?? String(localized: "Could not load rewarded ad right now."))
+        }
+    }
+
+    // MARK: Header
+
+    private var monthHeader: some View {
+        HStack(spacing: 8) {
+            monthStepButton(systemName: "chevron.left", enabled: true) {
+                step(by: -1)
+            }
+
+            Spacer(minLength: 0)
+
+            Text(monthTitle(for: selectedMonth))
+                .font(.system(.title3, design: .rounded).weight(.bold))
+                .foregroundColor(AppColors.glassCardTitle)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+
+            Spacer(minLength: 0)
+
+            monthStepButton(systemName: "chevron.right", enabled: canGoToNextMonth) {
+                step(by: 1)
+            }
+        }
+    }
+
+    private func monthStepButton(
+        systemName: String,
+        enabled: Bool,
+        action: @escaping () -> Void
+    ) -> some View {
+        Button(action: action) {
+            Image(systemName: systemName)
+                .font(.footnote.weight(.bold))
+                .foregroundColor(
+                    enabled ? AppColors.primaryButton : AppColors.glassCardMuted.opacity(0.32)
+                )
+                .frame(width: 30, height: 30)
+                .background(
+                    Circle().fill(Color.black.opacity(enabled ? 0.06 : 0.03))
+                )
+        }
+        .buttonStyle(.plain)
+        .disabled(!enabled)
+    }
+
+    private var weekdayHeaderRow: some View {
+        HStack(spacing: 0) {
+            ForEach(Array(weekdayColumnHeaders.enumerated()), id: \.offset) { _, title in
+                Text(title)
+                    .font(.caption2.weight(.bold))
+                    .textCase(.uppercase)
+                    .tracking(0.6)
+                    .foregroundColor(AppColors.glassCardMuted.opacity(0.75))
+                    .frame(maxWidth: .infinity)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
+            }
+        }
+    }
+
+    private func step(by months: Int) {
+        guard let newMonth = calendar.date(byAdding: .month, value: months, to: selectedMonth)
+        else { return }
+        withAnimation(.easeInOut(duration: 0.18)) {
+            selectedMonth = newMonth
+        }
+    }
+
+    /// Paging past the current month only ever shows empty cells, so the
+    /// forward chevron stops there.
+    private var canGoToNextMonth: Bool {
+        guard let next = calendar.date(byAdding: .month, value: 1, to: selectedMonth)
+        else { return false }
+        return calendar.compare(next, to: Date(), toGranularity: .month) != .orderedDescending
+    }
+
+    // MARK: Recovery
+
+    /// Shown only when a real bridge exists: a 1–3 day gap with a completed
+    /// streak on both sides.
+    private func streakBridgeCallout(gapLength: Int) -> some View {
+        Button(action: showBridgeAdIfEligible) {
+            HStack(alignment: .center, spacing: 10) {
+                Image(systemName: "arrow.left.and.right")
+                    .font(.footnote.weight(.bold))
+                    .foregroundColor(.white)
+                    .padding(7)
+                    .background(StreakStyle.runGradient, in: Circle())
+
+                Text(bridgePrompt(gapLength: gapLength))
+                    .font(.footnote)
+                    .fontWeight(.medium)
+                    .foregroundColor(AppColors.glassCardTitle)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                if rewardedAdService.isLoading {
+                    ProgressView()
+                        .tint(AppColors.glassCardTitle)
+                } else {
+                    Text(recoveryButtonLabel)
+                        .font(.footnote.weight(.semibold))
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 7)
+                        .background(StreakStyle.runGradient, in: Capsule())
+                        .fixedSize()
+                }
+            }
+            .padding(12)
+            .background {
+                Group {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .fill(.thinMaterial)
+                }
+                .glassMaterialIgnoresSystemColorScheme()
+            }
+            .overlay {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .strokeBorder(Color.orange.opacity(0.35), lineWidth: 0.8)
+            }
+        }
+        .buttonStyle(.plain)
+        .disabled(rewardedAdService.isLoading)
+        .accessibilityLabel(bridgePrompt(gapLength: gapLength) + ", " + recoveryButtonLabel)
+    }
+
+    private func bridgePrompt(gapLength: Int) -> String {
+        String(
+            localized: "Watch a short ad to fill this \(gapLength)-day gap and reconnect your streak."
+        )
+    }
+
+    private var recoveryButtonLabel: String {
+        return String(localized: "Watch ad")
+    }
+
+    // MARK: Month math
+
     private func monthTitle(for date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM yyyy"
         formatter.locale = locale
         return formatter.string(from: date)
     }
-    
+
     private var days: Int {
-        getDaysInMonth(selectedMonth)
+        calendar.range(of: .day, in: .month, for: selectedMonth)?.count ?? 0
     }
 
-    /// First day of the month (start-of-day normalized).
     private var firstDayOfSelectedMonth: Date {
         let components = calendar.dateComponents([.year, .month], from: selectedMonth)
         return calendar.date(from: components) ?? selectedMonth
@@ -116,204 +400,54 @@ struct CalendarView: View {
     /// Column index of the 1st of the selected month (0 = first weekday column).
     private var leadingEmptyDayCount: Int {
         let weekday = calendar.component(.weekday, from: firstDayOfSelectedMonth)
-        let firstWeekday = calendar.firstWeekday
-        return (weekday - firstWeekday + 7) % 7
-    }
-
-    /// Trailing blank cells (0–6) to pad the last row to 7 columns.
-    private var trailingEmptyDayCount: Int {
-        let used = leadingEmptyDayCount + days
-        return (7 - (used % 7)) % 7
+        return (weekday - calendar.firstWeekday + 7) % 7
     }
 
     /// Weekday short names starting from locale firstWeekday.
     private var weekdayColumnHeaders: [String] {
         let symbols = calendar.shortWeekdaySymbols
-        guard symbols.count == 7 else { return Array(repeating: "–", count: 7) }
+        guard symbols.count == 7 else { return Array(repeating: "-", count: 7) }
         return (0..<7).map { column in
             let weekday = ((calendar.firstWeekday - 1 + column) % 7) + 1
             return symbols[weekday - 1]
         }
     }
 
-    /// Duplicate ForEach ids in LazyVGrid swallow the first week; one list with stable ids is required.
-    private var calendarGridItems: [StreakCalendarGridItem] {
-        var items: [StreakCalendarGridItem] = []
-        for col in 0..<7 {
-            items.append(.weekdayHeader(column: col, title: weekdayColumnHeaders[col]))
-        }
-        for i in 0..<leadingEmptyDayCount {
-            items.append(.leadPadding(index: i))
-        }
+    /// Rows of 7, padded at both ends — a run of completed days can then be
+    /// drawn as one connected bar per row.
+    private var weeks: [StreakWeek] {
+        var cells: [StreakDayCell?] = Array(repeating: nil, count: leadingEmptyDayCount)
         if days > 0 {
-            for d in 1...days {
-                items.append(.day(
-                    dayOfMonth: d,
-                    date: dateFor(dayOffset: d, month: selectedMonth)
-                ))
+            for day in 1...days {
+                cells.append(
+                    StreakDayCell(dayOfMonth: day, date: dateFor(dayOffset: day))
+                )
             }
         }
-        for i in 0..<trailingEmptyDayCount {
-            items.append(.trailPadding(index: i))
-        }
-        return items
-    }
-    
-    var body: some View {
-        VStack(spacing: 16) {
-            HStack {
-                Button(action: {
-                    if let newMonth = calendar.date(byAdding: .month, value: -1, to: selectedMonth) {
-                        selectedMonth = newMonth
-                    }
-                }) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(AppColors.primaryButton)
-                }
-                
-                Spacer()
-                
-                Text(monthTitle(for: selectedMonth))
-                    .font(.title2.weight(.bold))
-                    .foregroundColor(AppColors.glassCardTitle)
-                
-                Spacer()
-                
-                Button(action: {
-                    if let newMonth = calendar.date(byAdding: .month, value: 1, to: selectedMonth) {
-                        selectedMonth = newMonth
-                    }
-                }) {
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(AppColors.primaryButton)
-                }
-            }
-            .padding(.horizontal)
-            .padding(.top, 12)
-            
-            // Week headers aligned to locale firstWeekday
-            let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 7)
-            LazyVGrid(columns: columns, spacing: 14) {
-                ForEach(calendarGridItems) { item in
-                    switch item {
-                    case .weekdayHeader(_, let title):
-                        Text(title)
-                            .font(.caption2.weight(.semibold))
-                            .foregroundColor(AppColors.glassCardMuted)
-                            .frame(maxWidth: .infinity)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                    case .leadPadding, .trailPadding:
-                        StreakCalendarEmptyCell()
-                    case .day(let dayOfMonth, let dayDate):
-                        StreakDayDotView(
-                            date: dayDate,
-                            dayOfMonth: dayOfMonth,
-                            streakManager: streakManager,
-                            showsRecoveryAction: shouldShowRecoveryAction(for: dayDate),
-                            recoveryInProgress: rewardedAdService.isLoading,
-                            onRecoveryTap: showRecoveryAdIfEligible
-                        )
-                    }
-                }
-            }
-            .padding(16)
+        while cells.count % 7 != 0 { cells.append(nil) }
 
-            if streakManager.canRecoverMissedYesterday {
-                streakRecoveryCallout
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 16)
-            }
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 16)
-        .wordCardGlassBackground(cornerRadius: 20)
-        .padding()
-        .alert("Ad Error", isPresented: $showAdError) {
-            Button("OK", role: .cancel) {}
-        } message: {
-            Text(adErrorMessage ?? String(localized: "Could not load rewarded ad right now."))
+        return stride(from: 0, to: cells.count, by: 7).enumerated().map { index, start in
+            StreakWeek(id: index, cells: Array(cells[start..<(start + 7)]))
         }
     }
 
-    private var streakRecoveryCallout: some View {
-        Button(action: showRecoveryAdIfEligible) {
-            HStack(alignment: .center, spacing: 12) {
-                Image(systemName: "play.rectangle.fill")
-                    .font(.title3)
-                    .foregroundColor(AppColors.primaryButton)
-
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Missed yesterday? Watch a short ad to save your streak.")
-                        .font(.subheadline)
-                        .fontWeight(.medium)
-                        .foregroundColor(AppColors.glassCardTitle)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-                if rewardedAdService.isLoading {
-                    ProgressView()
-                        .tint(AppColors.glassCardTitle)
-                } else {
-                    Text(recoveryButtonLabel)
-                        .font(.subheadline)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .background(AppColors.primaryButtonGradient)
-                        .cornerRadius(8)
-                }
-            }
-            .padding(12)
-            .background {
-                Group {
-                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        .fill(.thinMaterial)
-                }
-                .glassMaterialIgnoresSystemColorScheme()
-            }
-            .overlay {
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .strokeBorder(Color.white.opacity(0.18), lineWidth: 0.6)
-            }
-        }
-        .buttonStyle(.plain)
-        .disabled(rewardedAdService.isLoading)
-        .accessibilityLabel(
-            String(localized: "Missed yesterday? Watch a short ad to save your streak.")
-            + ", "
-            + recoveryButtonLabel
-        )
+    /// Cells are anchored at midday, not midnight. The study day starts at
+    /// `CurriculumStateManager.dayResetHour` (04:00), so a midnight instant
+    /// resolves to the *previous* study day and every cell would read its
+    /// neighbour's completion state.
+    private func dateFor(dayOffset: Int) -> Date {
+        let midnight = calendar.date(
+            byAdding: .day, value: dayOffset - 1, to: firstDayOfSelectedMonth
+        ) ?? firstDayOfSelectedMonth
+        return calendar.date(bySettingHour: 12, minute: 0, second: 0, of: midnight) ?? midnight
     }
 
-    private var recoveryButtonLabel: String {
-        return String(localized: "Watch ad")
-    }
-    
-    private func getDaysInMonth(_ date: Date) -> Int {
-        let range = calendar.range(of: .day, in: .month, for: date)
-        return range?.count ?? 0
+    private func isFuture(_ date: Date) -> Bool {
+        calendar.compare(date, to: Date(), toGranularity: .day) == .orderedDescending
     }
 
-    private func dateFor(dayOffset: Int, month: Date) -> Date {
-        let components = calendar.dateComponents([.year, .month], from: month)
-        guard let firstDay = calendar.date(from: components),
-              let d = calendar.date(byAdding: .day, value: dayOffset - 1, to: firstDay) else {
-            return Date()
-        }
-        return d
-    }
-
-    private func shouldShowRecoveryAction(for dayDate: Date) -> Bool {
-        guard let recoverableDate = streakManager.recoverableStreakGapDate() else { return false }
-        return calendar.isDate(dayDate, inSameDayAs: recoverableDate)
-    }
-
-    private func showRecoveryAdIfEligible() {
-        guard streakManager.canRecoverMissedYesterday else { return }
+    private func showBridgeAdIfEligible() {
+        guard streakManager.canBridgeStreakGap else { return }
         presentRecoveryAd()
     }
 
@@ -325,85 +459,131 @@ struct CalendarView: View {
                 return
             }
             if didEarnReward {
-                _ = streakManager.recoverYesterdayIfEligible()
+                _ = streakManager.bridgeStreakGapIfEligible()
             }
         }
     }
 }
 
-/// Calendar cell: date + day-of-month (filled = completed, ring = today).
-private struct StreakCalendarEmptyCell: View {
-    var body: some View {
-        Color.clear
-            .frame(maxWidth: .infinity)
-            .frame(height: 48)
-    }
-}
+// MARK: - Week row
 
-struct StreakDayDotView: View {
-    let date: Date
-    let dayOfMonth: Int
-    @ObservedObject var streakManager: StreakManager
-    let showsRecoveryAction: Bool
-    let recoveryInProgress: Bool
-    let onRecoveryTap: () -> Void
-    
-    private let calendar = Calendar.current
-    
-    private var isCompleted: Bool {
-        streakManager.isDayCompleted(date)
-    }
-    
-    private var isToday: Bool {
-        calendar.isDateInToday(date)
-    }
-    
-    private var isFuture: Bool {
-        calendar.compare(date, to: Date(), toGranularity: .day) == .orderedDescending
-    }
-    
-    var body: some View {
-        VStack(spacing: 4) {
-            ZStack {
-                Circle()
-                    .fill(fillColor)
-                    .overlay(
-                        Circle()
-                            .stroke(isToday ? Color.orange : Color.clear, lineWidth: 2)
-                    )
-                Text("\(dayOfMonth)")
-                    .font(.system(size: 15, weight: isToday || isCompleted ? .semibold : .regular))
-                    .foregroundColor(textColor)
+/// One calendar week. Consecutive completed days in the row are drawn as a
+/// single connected bar so a streak reads as a run rather than loose dots.
+private struct StreakWeekRow: View {
+    let week: StreakWeek
+    let isCompleted: (Date) -> Bool
+    let isToday: (Date) -> Bool
+    let isFuture: (Date) -> Bool
+    let isBridgeGap: (Date) -> Bool
 
-                if showsRecoveryAction {
-                    Button(action: onRecoveryTap) {
-                        Image(systemName: recoveryInProgress ? "hourglass" : "video.fill")
-                            .font(.system(size: 10, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(4)
-                            .background(Color.red.opacity(0.95), in: Circle())
-                    }
-                    .buttonStyle(.plain)
-                    .offset(x: 14, y: -14)
-                    .accessibilityLabel(String(localized: "Recover yesterday streak by watching ad"))
+    private var height: CGFloat { StreakStyle.cellHeight }
+
+    var body: some View {
+        ZStack {
+            HStack(spacing: 0) {
+                ForEach(0..<7, id: \.self) { column in
+                    runSegment(at: column)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: height)
                 }
             }
-            .frame(width: 48, height: 48)
+            HStack(spacing: 0) {
+                ForEach(0..<7, id: \.self) { column in
+                    dayLabel(at: column)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: height)
+                }
+            }
         }
-        .frame(maxWidth: .infinity)
     }
-    
-    private var textColor: Color {
-        if isFuture { return AppColors.glassCardMuted.opacity(0.65) }
-        if isCompleted { return .white }
-        return AppColors.glassCardTitle
+
+    private func completed(_ column: Int) -> Bool {
+        guard column >= 0, column < 7, let cell = week.cells[column] else { return false }
+        return isCompleted(cell.date)
     }
-    
-    private var fillColor: Color {
-        if isFuture { return Color.gray.opacity(0.15) }
-        if isCompleted { return Color.orange.opacity(0.9) }
-        if isToday { return Color.orange.opacity(0.3) }
-        return Color.gray.opacity(0.2)
+
+    @ViewBuilder
+    private func runSegment(at column: Int) -> some View {
+        if completed(column) {
+            let joinsLeft = completed(column - 1)
+            let joinsRight = completed(column + 1)
+            let radius = height / 2
+
+            UnevenRoundedRectangle(
+                topLeadingRadius: joinsLeft ? 0 : radius,
+                bottomLeadingRadius: joinsLeft ? 0 : radius,
+                bottomTrailingRadius: joinsRight ? 0 : radius,
+                topTrailingRadius: joinsRight ? 0 : radius,
+                style: .continuous
+            )
+            .fill(StreakStyle.runGradient)
+            .shadow(color: .orange.opacity(0.30), radius: 5, x: 0, y: 2)
+            .padding(.leading, joinsLeft ? 0 : 3)
+            .padding(.trailing, joinsRight ? 0 : 3)
+        } else {
+            Color.clear
+        }
+    }
+
+    @ViewBuilder
+    private func dayLabel(at column: Int) -> some View {
+        if let cell = week.cells[column] {
+            let done = isCompleted(cell.date)
+            let today = isToday(cell.date)
+            let future = isFuture(cell.date)
+            let markerSize = height - 6
+
+            ZStack {
+                // No disc behind plain days — bare numerals are what let the
+                // orange run read as the only marked thing on the grid.
+                if isBridgeGap(cell.date) {
+                    Circle()
+                        .strokeBorder(
+                            Color.orange.opacity(0.9),
+                            style: StrokeStyle(lineWidth: 1.6, dash: [3.5, 3])
+                        )
+                        .frame(width: markerSize, height: markerSize)
+                }
+
+                if today {
+                    Circle()
+                        .strokeBorder(
+                            done ? Color.white.opacity(0.95) : AppColors.primaryButton,
+                            lineWidth: 2
+                        )
+                        .frame(width: markerSize, height: markerSize)
+                }
+
+                Text("\(cell.dayOfMonth)")
+                    .font(.system(size: 14, weight: done || today ? .bold : .medium, design: .rounded))
+                    .foregroundColor(textColor(done: done, future: future))
+            }
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(accessibilityLabel(for: cell, done: done, today: today))
+        } else {
+            Color.clear
+        }
+    }
+
+    private func textColor(done: Bool, future: Bool) -> Color {
+        if done { return .white }
+        if future { return AppColors.glassCardMuted.opacity(0.35) }
+        return AppColors.glassCardBody.opacity(0.72)
+    }
+
+    private func accessibilityLabel(
+        for cell: StreakDayCell,
+        done: Bool,
+        today: Bool
+    ) -> String {
+        var parts = ["\(cell.dayOfMonth)"]
+        if today { parts.append(String(localized: "Today")) }
+        parts.append(
+            done
+            ? String(localized: "Completed")
+            : String(localized: "Not completed")
+        )
+        return parts.joined(separator: ", ")
     }
 }
 

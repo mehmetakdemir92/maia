@@ -113,43 +113,105 @@ class StreakManager: ObservableObject {
         updateCurrentStreak()
     }
 
-    var canRecoverMissedYesterday: Bool {
-        recoverableStreakGapDate() != nil
+    /// Longest gap the rewarded-video bridge is allowed to close.
+    static let maxBridgeGapLength = 3
+
+    var canBridgeStreakGap: Bool {
+        !bridgeableGapDates().isEmpty
     }
 
-    @discardableResult
-    func recoverYesterdayIfEligible() -> Bool {
-        guard let recoverDate = recoverableStreakGapDate() else {
-            return false
+    /// Number of days the bridge would fill (0 when no bridge is available).
+    var bridgeableGapLength: Int {
+        bridgeableGapDates().count
+    }
+
+    /// Days a rewarded video would fill to join the current streak to the one
+    /// that ended just before it, oldest first. Empty when no bridge applies.
+    ///
+    /// This is deliberately a *bridge*, never a free day. It requires a live
+    /// streak on one side and an already-completed day on the other, so it can
+    /// neither walk the streak backwards one ad at a time nor conjure a streak
+    /// out of nothing. The gap itself is capped at `maxBridgeGapLength` days.
+    func bridgeableGapDates() -> [Date] {
+        Self.bridgeableGap(completedDayKeys: completedDates, asOf: Date())
+    }
+
+    /// Pure form of the rule, so it can be exercised without a Firebase session.
+    static func bridgeableGap(
+        completedDayKeys: Set<String>,
+        asOf now: Date
+    ) -> [Date] {
+        let calendar = Calendar.current
+        let key = { CurriculumStateManager.studyDayISO(for: $0) }
+        guard let streakStart = currentStreakStart(
+            completedDayKeys: completedDayKeys, asOf: now
+        ) else { return [] }
+
+        for gapLength in 1...maxBridgeGapLength {
+            let gapDates: [Date] = (1...gapLength).compactMap {
+                calendar.date(byAdding: .day, value: -$0, to: streakStart)
+            }
+            guard gapDates.count == gapLength,
+                  let dayBeforeGap = calendar.date(
+                    byAdding: .day, value: -(gapLength + 1), to: streakStart
+                  )
+            else { return [] }
+
+            // A completed day inside the window means a shorter gap should
+            // already have matched; nothing to bridge here.
+            guard gapDates.allSatisfy({ !completedDayKeys.contains(key($0)) })
+            else { return [] }
+
+            // The far side must be a real completed day — that is the earlier
+            // streak this bridge connects to.
+            if completedDayKeys.contains(key(dayBeforeGap)) {
+                return gapDates.reversed()
+            }
         }
-        markDayCompleted(recoverDate)
+
+        return []
+    }
+
+    /// Fills the whole gap in one write and merges the two streaks.
+    @discardableResult
+    func bridgeStreakGapIfEligible() -> Bool {
+        let gapDates = bridgeableGapDates()
+        guard !gapDates.isEmpty else { return false }
+
+        for date in gapDates {
+            completedDates.insert(getDateString(date))
+        }
+        saveStreakData()
+        updateCurrentStreak()
+        saveToFirestoreIfSignedIn()
         return true
     }
 
-    /// Day immediately before the current streak block.
-    /// e.g. if 4-5 completed, returns 3.
-    func recoverableStreakGapDate() -> Date? {
-        let sortedCompleted = completedDates.compactMap { CurriculumStateManager.studyDayStart(fromISO: $0) }.sorted()
-        guard var streakStart = sortedCompleted.last else { return nil }
+    /// First day of the live streak block — nil when there is no live streak,
+    /// which is what stops a video from starting a streak from nothing.
+    static func currentStreakStart(
+        completedDayKeys: Set<String>,
+        asOf now: Date
+    ) -> Date? {
+        let calendar = Calendar.current
+        let key = { CurriculumStateManager.studyDayISO(for: $0) }
+        let today = CurriculumStateManager.studyDayStart(for: now)
 
-        while true {
-            guard let previousDay = Calendar.current.date(byAdding: .day, value: -1, to: streakStart) else {
-                break
-            }
-            if completedDates.contains(getDateString(previousDay)) {
-                streakStart = previousDay
-            } else {
-                break
-            }
-        }
-
-        guard let recoverable = Calendar.current.date(byAdding: .day, value: -1, to: streakStart) else {
+        var start: Date
+        if completedDayKeys.contains(key(today)) {
+            start = today
+        } else if let yesterday = calendar.date(byAdding: .day, value: -1, to: today),
+                  completedDayKeys.contains(key(yesterday)) {
+            start = yesterday
+        } else {
             return nil
         }
-        if completedDates.contains(getDateString(recoverable)) {
-            return nil
+
+        while let previousDay = calendar.date(byAdding: .day, value: -1, to: start),
+              completedDayKeys.contains(key(previousDay)) {
+            start = previousDay
         }
-        return recoverable
+        return start
     }
     
     private func updateCurrentStreak() {
