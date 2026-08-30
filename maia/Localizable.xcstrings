@@ -1,292 +1,31 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Still here for you" : {
+    "Start Quiz" : {
       "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wir sind noch da"
+            "value" : "Quiz starten"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seguimos aquí"
+            "value" : "Empezar test"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "On est toujours là"
+            "value" : "Commencer le test"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buradayız"
-          }
-        }
-      }
-    },
-    "Yesterday's words are still waiting — a few minutes is all it takes 🙂" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Die Wörter von gestern warten noch — ein paar Minuten reichen 🙂"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Las palabras de ayer siguen esperándote: bastan unos minutos 🙂"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Les mots d'hier t'attendent encore — quelques minutes suffisent 🙂"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "dünkü kelimelerin hâlâ seni bekliyor, birkaç dakikan yeter 🙂"
-          }
-        }
-      }
-    },
-    "It's been a few days. Picking up where you left off is easier than you think 🌱" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ein paar Tage sind vergangen. Weiterzumachen ist leichter, als du denkst 🌱"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Han pasado unos días. Retomarlo es más fácil de lo que crees 🌱"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quelques jours ont passé. Reprendre est plus simple que tu ne crois 🌱"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "birkaç gün oldu, kaldığın yerden devam etmek sandığından kolay 🌱"
-          }
-        }
-      }
-    },
-    "A week away. Even one short quiz is enough to get moving again 💫" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eine Woche Pause. Schon ein kurzes Quiz bringt dich wieder in Fahrt 💫"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Una semana fuera. Un solo test corto basta para volver a arrancar 💫"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Une semaine d'absence. Un seul test rapide suffit à relancer 💫"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "bir hafta oldu, tek bir kısa test bile yeniden başlamana yeter 💫"
-          }
-        }
-      }
-    },
-    "Your words will be here whenever you're ready 🤍" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deine Wörter sind da, wann immer du bereit bist 🤍"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tus palabras estarán aquí cuando estés listo 🤍"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tes mots seront là quand tu seras prêt 🤍"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hazır olduğunda kelimelerin burada olacak 🤍"
-          }
-        }
-      }
-    },
-    "It's never too late to start a new streak 🙂" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Für einen neuen Lauf ist es nie zu spät 🙂"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nunca es tarde para empezar una nueva racha 🙂"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Il n'est jamais trop tard pour relancer une série 🙂"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "yeniden seri inşa etmeye başlamak için hiç geç değil 🙂"
-          }
-        }
-      }
-    },
-    "A good day to add a small habit that pays you back 😌" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ein guter Tag für eine kleine Gewohnheit, die sich auszahlt 😌"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Un buen día para sumar un pequeño hábito que te devuelve mucho 😌"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Une belle journée pour prendre une petite habitude qui rapporte 😌"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "hayatına yararlı ve küçük bir alışkanlık katmak için güzel bir gün 😌"
-          }
-        }
-      }
-    },
-    "Finish the short quiz and your streak can still be saved. I believe in you 🥹" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mach das kurze Quiz — dein Lauf lässt sich noch retten. Ich glaube an dich 🥹"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Haz el test corto y tu racha aún se puede salvar. Confío en ti 🥹"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fais le test rapide, ta série peut encore être sauvée. Je crois en toi 🥹"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "kısacık testi çözerek serini hala kurtarabilirsin, sana güveniyorum 🥹"
-          }
-        }
-      }
-    },
-    "Your %lld-day streak looks great — protect it with a short quiz ✨💪" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dein %lld-Tage-Lauf sieht großartig aus — schütze ihn mit einem kurzen Quiz ✨💪"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tu racha de %lld días se ve genial: protégela con un test corto ✨💪"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ta série de %lld jours est superbe — protège-la avec un test rapide ✨💪"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld günlük serin mükemmel görünüyor, serini kısacık testi çözerek koru ✨💪"
-          }
-        }
-      }
-    },
-    "Today looks like a great day to lock in the word \"%@\" ☀️" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heute ist ein großartiger Tag, um das Wort „%@“ zu festigen ☀️"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hoy parece un gran día para afianzar la palabra «%@» ☀️"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aujourd'hui semble parfait pour ancrer le mot « %@ » ☀️"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "bugün \"%@\" kelimesini pekiştirmek için harika bir güne benziyor ☀️"
+            "value" : "Teste Başla"
           }
         }
       }
@@ -377,9 +116,6 @@
           }
         }
       }
-    },
-    "%lld days so far. A few minutes keeps it going." : {
-
     },
     "%lld learned words" : {
       "localizations" : {
@@ -632,6 +368,35 @@
         }
       }
     },
+    "A good day to add a small habit that pays you back 😌" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein guter Tag für eine kleine Gewohnheit, die sich auszahlt 😌"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un buen día para sumar un pequeño hábito que te devuelve mucho 😌"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une belle journée pour prendre une petite habitude qui rapporte 😌"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hayatına yararlı ve küçük bir alışkanlık katmak için güzel bir gün 😌"
+          }
+        }
+      }
+    },
     "A new version of Maia is available with new daily words and improvements." : {
       "localizations" : {
         "de" : {
@@ -656,6 +421,35 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Maia'nın yeni sürümü yayında: yeni günlük kelimeler ve iyileştirmeler."
+          }
+        }
+      }
+    },
+    "A week away. Even one short quiz is enough to get moving again 💫" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine Woche Pause. Schon ein kurzes Quiz bringt dich wieder in Fahrt 💫"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una semana fuera. Un solo test corto basta para volver a arrancar 💫"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une semaine d'absence. Un seul test rapide suffit à relancer 💫"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bir hafta oldu, tek bir kısa test bile yeniden başlamana yeter 💫"
           }
         }
       }
@@ -2637,6 +2431,35 @@
         }
       }
     },
+    "Finish the short quiz and your streak can still be saved. I believe in you 🥹" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mach das kurze Quiz — dein Lauf lässt sich noch retten. Ich glaube an dich 🥹"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haz el test corto y tu racha aún se puede salvar. Confío en ti 🥹"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fais le test rapide, ta série peut encore être sauvée. Je crois en toi 🥹"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kısacık testi çözerek serini hala kurtarabilirsin, sana güveniyorum 🥹"
+          }
+        }
+      }
+    },
     "Firestore couldn’t connect. Check your internet connection, then tap Try Again." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2676,9 +2499,6 @@
           }
         }
       }
-    },
-    "Five new words and a quick review." : {
-
     },
     "Free trial included" : {
       "localizations" : {
@@ -3071,8 +2891,63 @@
         }
       }
     },
-    "Keep your %lld-day streak going." : {
-
+    "It's been a few days. Picking up where you left off is easier than you think 🌱" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein paar Tage sind vergangen. Weiterzumachen ist leichter, als du denkst 🌱"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Han pasado unos días. Retomarlo es más fácil de lo que crees 🌱"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quelques jours ont passé. Reprendre est plus simple que tu ne crois 🌱"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "birkaç gün oldu, kaldığın yerden devam etmek sandığından kolay 🌱"
+          }
+        }
+      }
+    },
+    "It's never too late to start a new streak 🙂" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für einen neuen Lauf ist es nie zu spät 🙂"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nunca es tarde para empezar una nueva racha 🙂"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il n'est jamais trop tard pour relancer une série 🙂"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "yeniden seri inşa etmeye başlamak için hiç geç değil 🙂"
+          }
+        }
+      }
     },
     "KULLANIM KOSULLARI\n\nMaia uygulamasini kullanarak bu kosullari kabul etmis sayilirsiniz.\n\n1) Hesap ve guvenlik\n- Hesap bilgilerinizin guvenliginden siz sorumlusunuz.\n- Hesabinizin yetkisiz kullanimini fark etmeniz halinde bize bildirmeniz gerekir.\n\n2) Izin verilen kullanim\n- Uygulama yalnizca hukuka uygun ve egitim amacli kullanilabilir.\n- Sisteme yetkisiz erisim, hizmeti bozma girisimi veya tersine muhendislik yasaktir.\n\n3) Ucretli ozellikler ve abonelik\n- Premium icerikler abonelik kapsaminda sunulabilir.\n- Ucretlendirme, yenileme ve iptal surecleri Apple App Store tarafindan yonetilir.\n\n4) Degisiklik hakki\n- Uygulama ozellikleri ve bu kosullar zaman zaman guncellenebilir.\n- Onemli degisiklikler uygulama icinden duyurulur.\n\n5) Sorumlulugun sinirlandirilmasi\n- Uygulama \"oldugu gibi\" sunulur.\n- Yasal olarak izin verilen olcude, dolayli zararlar ve hizmet kesintilerinden sorumluluk kabul edilmez.\n\n6) Iletisim\n- Hukuki konular icin: support@yourdomain.com" : {
       "extractionState" : "stale",
@@ -3952,9 +3827,6 @@
           }
         }
       }
-    },
-    "Pick up where you left off — it only takes a few minutes." : {
-
     },
     "Plans could not be loaded. Check your connection or try again later." : {
       "extractionState" : "stale",
@@ -5023,6 +4895,35 @@
         }
       }
     },
+    "Still here for you" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir sind noch da"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seguimos aquí"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On est toujours là"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buradayız"
+          }
+        }
+      }
+    },
     "Streak" : {
       "localizations" : {
         "de" : {
@@ -5287,9 +5188,6 @@
         }
       }
     },
-    "Take Today's Quiz" : {
-
-    },
     "Tap the button in the email to open Maia and verify automatically. If you already verified in the browser, tap “I verified” below." : {
       "extractionState" : "stale",
       "localizations" : {
@@ -5514,6 +5412,35 @@
     },
     "Today is open again. Close Settings to reload." : {
 
+    },
+    "Today looks like a great day to lock in the word \"%@\" ☀️" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heute ist ein großartiger Tag, um das Wort „%@“ zu festigen ☀️"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy parece un gran día para afianzar la palabra «%@» ☀️"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aujourd'hui semble parfait pour ancrer le mot « %@ » ☀️"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "bugün \"%@\" kelimesini pekiştirmek için harika bir güne benziyor ☀️"
+          }
+        }
+      }
     },
     "Today's words are ready" : {
 
@@ -6087,6 +6014,35 @@
     "Xcode DEBUG builds only. Steps the slot pointer back, clears today's completion and removes the streak day, so the same five words can be run again." : {
 
     },
+    "Yesterday's words are still waiting — a few minutes is all it takes 🙂" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Wörter von gestern warten noch — ein paar Minuten reichen 🙂"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las palabras de ayer siguen esperándote: bastan unos minutos 🙂"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les mots d'hier t'attendent encore — quelques minutes suffisent 🙂"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dünkü kelimelerin hâlâ seni bekliyor, birkaç dakikan yeter 🙂"
+          }
+        }
+      }
+    },
     "You got %1$lld out of %2$lld correct" : {
       "localizations" : {
         "de" : {
@@ -6152,11 +6108,63 @@
     "You've finished today's quiz. Come back tomorrow!" : {
 
     },
-    "Your streak ends tonight" : {
-
+    "Your %lld-day streak looks great — protect it with a short quiz ✨💪" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein %lld-Tage-Lauf sieht großartig aus — schütze ihn mit einem kurzen Quiz ✨💪"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tu racha de %lld días se ve genial: protégela con un test corto ✨💪"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta série de %lld jours est superbe — protège-la avec un test rapide ✨💪"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld günlük serin mükemmel görünüyor, serini kısacık testi çözerek koru ✨💪"
+          }
+        }
+      }
     },
-    "Your words are waiting" : {
-
+    "Your words will be here whenever you're ready 🤍" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Wörter sind da, wann immer du bereit bist 🤍"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus palabras estarán aquí cuando estés listo 🤍"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tes mots seront là quand tu seras prêt 🤍"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hazır olduğunda kelimelerin burada olacak 🤍"
+          }
+        }
+      }
     },
     "yr" : {
       "localizations" : {

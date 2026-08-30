@@ -243,21 +243,26 @@ struct TodayTabView: View {
         if wordManager.isSlotUnlocked {
             RippleLoadingButton(
                 isLoading: isStartingQuiz,
-                cornerRadius: 14,
+                cornerRadius: 16,
                 rippleStyle: .onDark,
                 action: startTodaysQuiz
             ) {
-                HStack {
+                HStack(spacing: 8) {
                     Image(systemName: "book.fill")
-                    Text(String(localized: "Take Today's Quiz"))
+                    Text(String(localized: "Start Quiz"))
                         .font(.headline)
                 }
                 .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(AppColors.primaryButtonGradient)
-                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                // Sized rather than stretched: a full-width bar reads as one
+                // more row of the page, while a smaller shape with air around
+                // it reads as the thing to press.
+                .frame(width: 190, height: 58)
+                .background(AnimatedGradientFill())
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .shadow(color: .black.opacity(0.22), radius: 12, x: 0, y: 6)
             }
+            // The surrounding stack is leading-aligned, so centre it here.
+            .frame(maxWidth: .infinity)
         } else {
             HStack {
                 Image(systemName: "checkmark.circle.fill")
